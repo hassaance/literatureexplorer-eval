@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.3,
+ "json": {
+  "query": "A Survey of Vibe Coding with Large Language Models",
+  "contexts": [
+   {
+    "text": "A Survey of Vibe Coding with Large Language Models   Yuyao Ge1∗ Lingrui Mei1∗ Zenghao Duan1 Tianhao Li2 Yujia Zheng2   Yiwei Wang3 Lexin Wang1 Jiayu Yao1∗ Tianyu Liu4 Yujun Cai5   Baolong Bi1∗ Fangda Guo1 Jiafeng Guo1∗ Shenghua Liu1†∗ Xueqi Cheng1∗   1Institute of Computing Technology, Chinese Academy of Sciences 2Duke University 3University of California, Merced 4Peking University 5University of Queensland   The advancement of large language models (LLMs) has catalyzed a paradigm shift from code generation assistance to autonomous coding agents, enabling a novel development methodology termed \"Vibe Coding\" where developers validate AI-generated implementations through outcome observation rather than line-by- line code comprehension. Despite its transformative potential, the effectiveness of this emergent paradigm remains under-explored, with empirical evidence revealing unexpected productivity losses and fundamental challenges in human-AI collaboration. To address this gap, this survey provides the first comprehensive and systematic review of Vibe Coding with large language models, establishing both theoretical foundations and practical frameworks for this transformative development approach.",
+    "score": 0.8092984234681848,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Corresponding Author   Keywords: Vibe Coding, Coding Agent, Large Language Models   Date: December 23, 2025 Contact: geyuyao24z@ict.ac.cn, liushenghua@ict.ac.cn Github Repository: https://github.com/YuyaoGe/Awesome-Vibe-Coding   ar X   iv :2   51 0.   12 39   9v 2   [ cs   .A I]   2 1   D ec   2 02   5         mailto:geyuyao24z@ict.ac.cn        mailto:liushenghua@ict.ac.cn        https://github.com/YuyaoGe/Awesome-Vibe-Coding        https://arxiv.org/abs/2510.12399v2Contents 1 Introduction 4   2 Related Work 5 2.1 Related Surveys . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 2.2 Preliminary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+    "score": 0.7648097237213438,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": ". . . . . . . . . 40 9.4.3 Team Collaboration and AI Integration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41 9.4.4 Broader Implications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41   10 Conclusion 41   3A Survey of Vibe Coding with Large Language Models   1 Introduction   Large language models (LLMs) have significantly advanced artificial intelligence through conversational systems capable of fluent natural language understanding and generation [1, 2]. Early adoption in software development positioned LLMs as supplementary assistants—developers employed natural language prompts to generate code snippets, but significant accuracy limitations necessitated manual review and iterative debugging throughout the software development lifecycle [3–7].   The emergence of advanced architectures like GPT-4 [8] and Claude Sonnet 4 [9] enabled qualitative improvements, leading to Coding Agents capable of autonomously completing programming tasks through dynamic environmen- tal interaction via shell commands, file operations, and test execution [10]. These agents have demonstrated rapid progress on real-world programming tasks.",
+    "score": 0.7315589518081661,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Section 8 presents our proposed taxonomy of five development models with analysis of their characteristics and applications. Finally, Section 9 discusses future impacts and open challenges encompassing technical advancement, security considerations, and human-centered design.   4A Survey of Vibe Coding with Large Language Models   V ib   e C   od in   g   L ar   ge L   an gu   ag e   M od   - el   s fo   r C   od in   g (§   4)   Data Foundation of Code LLMs (§ 4.1)   Codex [35], MathPile [36], Arctic-SnowCoder [37], OpenCoder [38], Swal- lowCode [39], WizardCoder [5], OctoPack [40], OpenCodeInstruct [41], CodeArena [42], CodeUltraFeedback [43], Self-Instruct [44], etc.   Pre-training Techniques (§ 4.2) BERT [45], T5 [46], CodeBPE [47], GraphCodeBERT [48], CodeT5 [49], Code Llama [7], Birdie [50], Agent-Q [51], GPT-3 [1], CodeBERT [52], UniXcoder [53], CoDist [54], NatGen [55], PLBART [56], CodeT5+ [57], etc.",
+    "score": 0.7053174563486656,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 4
+   },
+   {
+    "text": "With the advancement of large language models such as GPT-5 Pro [17] and Claude Sonnet 4.5 [9], llm-based coding agent capabilities have achieved significant breakthroughs, giving rise to “Vibe Coding”—a paradigm where developers rely on AI-generated code without line-by-line inspection, engaging instead in iterative cycles of natural language requirement articulation, execution observation, and feedback [18–21]. Coding Agents go beyond code generation—they autonomously configure environments, execute programs, self-diagnose errors, and update implementations. This represents a substantial elevation in human trust and a departure from traditional comprehension mandates toward outcome-oriented validation [22–25].   However, possessing powerful agents proves insufficient. Task complexity exposes fundamental limitations in unstructured natural language instructions, which fail to convey nuanced requirements and architectural constraints [11, 26]. Empirical evidence reveals that experienced developers using Cursor with Claude experienced 19% increased completion time rather than anticipated productivity gains [27]. Effective human-AI collaboration demands systematic prompt engineering and context engineering [28], structured instructions [29, 3, 30, 31], and balanced agency distribution across various distinct interaction types [32, 33].   To address this critical gap, this survey provides the first comprehensive and systematic review of Vibe Coding with Large Language Models.",
+    "score": 0.6958641741387527,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "08ba56c7-253d-4f01-ac57-a6d6f6f287ab",
+  "X-Amzn-Trace-Id": "Root=1-6b080509-6e5920b524b3350507c025ae;Parent=1d0bdb35e72c7e86;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.3
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:09+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A Survey of Vibe Coding with Large Language Models"
+ },
+ "from_cache": false
+}

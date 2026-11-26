@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.268,
+ "json": {
+  "query": "LLM Agents can Autonomously Hack Websites",
+  "contexts": [
+   {
+    "text": "Schematic of using autonomous LLM agents to hack websites.   2022; Handa et al., 2019). Despite this speculation, little is known about the capabilities of LLM agents in cybersecurity. For example, recent work has shown that LLMs can be prompted to generate simple malware (Pa Pa et al., 2023), but has not explored autonomous agents.   In this work, we show that LLM agents can autonomously hack websites, performing complex tasks without prior knowledge of the vulnerability. For example, these agents can perform complex SQL union attacks, which involve a multi-step process (38 actions) of extracting a database schema, extracting information from the database based on this schema, and performing the final hack. Our most capa- ble agent can hack 73.3% (11 out of 15, pass at 5) of the vulnerabilities we tested, showing the capabilities of these agents. Importantly, our LLM agent is capable of finding vulnerabilities in real-world websites.   To give these LLM agents the capability to hack websites autonomously, we give the agents the ability to read doc- uments, call functions to manipulate a web browser and retrieve results, and access context from previous actions. We further provide the LLM agent with detailed system instructions. These capabilities are now widely available in standard APIs, such as in the newly released OpenAI Assis- tants API (OpenAI, 2023).",
+    "score": 0.8740004695797106,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 1
+   },
+   {
+    "text": "In this work, we consider vulnerabilities in websites them- selves. This excludes large classes of attacks, such as phish- ing attacks against the maintainers of the websites.   We now turn to leveraging LLM agents to attack websites autonomously.   3. Leveraging LLM Agents to Hack Websites In order to have LLM agents autonomously hack websites, we must first create these agents. Given an agent, we must   2LLM Agents can Autonomously Hack Websites   then prompt the agent with its goals. We describe these two steps below.   Agent setup. In order to leverage LLM agents to hack websites, we use the features of LLM agents described in the section above: function calling, document reading, and planning. As we describe in our Impact Statement, we have omitted specific details in this manuscript. We will make specific details available to researchers upon request.   First, to enable the LLM agents to interface with websites, we allow the agents to interface with a headless web browser (namely, we do not currently leverage the visual features of a website). We use the Playwright browser testing library (playwright, 2023), which runs a browser in a sandboxed environment and allows programmatic access to functional- ity within a browser, such as clicking on HTML elements. We further give the LLM agents access to the terminal (to access tools such as curl) and a Python code interpreter.",
+    "score": 0.869848038176904,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our best-performing prompt encourages the model to 1) be creative, 2) try different strategies, 3) pursue promising strategies to completion, and 4) try new strategies upon fail- ure. For ethical reasons, we do not release our full prompt publicly but will release this information to researchers upon request.   4. LLM Agents can Autonomously Hack Websites   We now show that LLM agents can autonomously hack websites. We first describe the experimental setup and our choice of metrics.   4.1. Experimental Setup   Vulnerabilities. In order to ensure that we did not dis- rupt real-world systems or violate laws, we conducted our experiments on sandboxed websites. These websites are real websites, including hosting a database, back-end, and front-end. The only difference is the sandboxing.   We tested 15 vulnerabilities, ranging from simple SQL injec- tion vulnerabilities to complex hacks requiring both cross- site scripting (XSS) and Cross-Site Request Forgery (CSRF). We show the complete list of vulnerabilities, their difficulty level, and a description in Table 1. Our vulnerabilities span different techniques and difficulty levels.   Metrics. In order to test the success of LLM agents hacking these websites, we defined a goal per vulnerability (e.g., stealing private user information).",
+    "score": 0.8552633396703672,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 3
+   },
+   {
+    "text": "We further provide the LLM agent with detailed system instructions. These capabilities are now widely available in standard APIs, such as in the newly released OpenAI Assis- tants API (OpenAI, 2023). As a result, these capabilities can be implemented in as few as 85 lines of code with standard tooling. We show a schematic of the agent in Figure 1.   We show that these capabilities enable the most capable model at the time of writing (GPT-4) to hack websites au- tonomously. Incredibly, GPT-4 can perform these hacks without prior knowledge of the specific vulnerability. All components are necessary for high performance, with the   1   ar X   iv :2   40 2.   06 66   4v 3   [ cs   .C R   ] 1   6 Fe   b 20   24LLM Agents can Autonomously Hack Websites   success rate dropping to 13% when removing components. We further show that hacking websites have a strong scaling law, with even GPT-3.5’s success rate dropping to 6.7% (1 out of 15 vulnerabilities). This scaling law continues to open-source models, with every open-source model we tested achieving a 0% success rate.   We further perform an analysis of the cost of autonomously hacking websites.",
+    "score": 0.8286408410509818,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 1
+   },
+   {
+    "text": "This scaling law continues to open-source models, with every open-source model we tested achieving a 0% success rate.   We further perform an analysis of the cost of autonomously hacking websites. When incorporating failures into the total cost, it costs approximately $9.81 to attempt a hack on a website. Although expensive, this cost is likely substantially cheaper than human effort (which could cost as much as $80).   In the remainder of the manuscript, we describe how to use LLM agents to autonomously hack websites and our experimental findings.   2. Overview of LLM Agents and Web Security We first provide an overview of LLM agents and salient points of web security before discussing our methods to use LLM agents to autonomously hack websites.   2.1. LLM Agents   Although there no agreed on formal definition of an LLM agent, they have been described as “a system that can use an LLM to reason through a problem, create a plan to solve the problem, and execute the plan with the help of a set of tools” (Varshney, 2023). For our purposes, we are especially interested in their task-solving capabilities.   One of the most critical capabilities of an LLM agent is the ability to interact with tools and APIs (Yao et al., 2022; Schick et al., 2023; Mialon et al., 2023).",
+    "score": 0.7936373028666059,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "09371473-1d98-477a-afda-c7475ce8992d",
+  "X-Amzn-Trace-Id": "Root=1-6b080504-5e43dea648e66300288ffd63;Parent=5f70a31bd64312bd;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.268
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:04+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "LLM Agents can Autonomously Hack Websites"
+ },
+ "from_cache": false
+}

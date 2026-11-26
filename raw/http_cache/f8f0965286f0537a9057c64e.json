@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.433,
+ "json": {
+  "query": "What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use",
+  "contexts": [
+   {
+    "text": "What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use   QIANOU MA, Human Computer Interaction Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania, USA WEIRUI PENG, Electrical Engineering, Columbia University, New York, New York, USA CHENYANG YANG, Software and Societal Systems Department, Carnegie Mellon University, Pittsburgh, Pennsylvania, USA HUA SHEN, Information School, University of Washington, Seattle, Washington, USA KEN KOEDINGER and TONGSHUANG WU, Human Computer Interaction Institute, Carnegie Mellon University, Pittsburgh, Pennsylvania, USA   Prompting LLMs for complex tasks (e.g., building a trip advisor chatbot) needs humans to clearly articulate customized requirements (e.g., “start the response with a tl;dr”). However, existing prompt engineering instructions often lack focused training on requirement articulation and instead tend to emphasize increasingly automatable strategies (e.g., tricks like adding role-plays and “think step-by-step”). To address the gap, we introduce Requirement-Oriented Prompt Engineering (ROPE), a paradigm that focuses human attention on generating clear, complete requirements during prompting. We implement ROPE through an assessment and training suite that provides deliberate practice with LLM-generated feedback. In a randomized controlled experiment with 30 novices, ROPE significantly outperforms conventional prompt engineering training (20% vs. 1% gains), a gap that automatic prompt optimization cannot close.",
+    "score": 0.7769365305856645,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 1
+   },
+   {
+    "text": "LLMs should explicitly communicate their understandings of user intent, such as translating ambiguous natural language requirements into more formal specifications [33, 34], asking clarifying questions [10, 30, 53], or extracting and refining generated criteria [26, 68, 77]. This is not a perfect solution, as models’ translations may still reflect their biases and models may miss to ask about LLM-hard requirements. Nonetheless, to correctly implement requirements in LLM outputs when what is LLM-hard keeps evolving, humans need to learn when and how to specify requirements with more granularity, and models need to keep communicating what requirements might be LLM-hard or LLM-conflict.   8 Conclusion In this work, we advocate for focusing PE effort on human-centered tasks, ensuring users include all necessary requirements in their prompt to achieve goals. We introduce the ROPE paradigm, and design training materials where prompting novices practice requirement articulation on complex prompting tasks. We also develop aligned assessment metrics capturing both the intrinsic quality of user prompts in terms of requirement quality, as well as the extrinsic quality of prompt effectiveness in achieving intended outcomes. By providing targeted feedback on requirements, our ROPE system helps users produce higher-quality requirements and prompts more effectively than traditional PE training. As we look to the future, it is clear that the demand for LLM-based applications will only grow.",
+    "score": 0.6757503579040296,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 22
+   },
+   {
+    "text": "To answer this question, we present the ROPE paradigm as a future human-LLM partnering strategy (Section 3), and we de- velop requirement-focused training and assessments to (1) help users practice writ- ing complete and correct requirements, and (2) deepen our understanding of how requirements affect the quality of LLM outputs. Specifically, we formalize tasks (Section 4.1) with complex requirements (e.g., game development), and design corresponding assessments (Section 4.2)   ACM Transactions on Computer-Human Interaction, Vol. 32, No. 4, Article 41. Publication date: August 2025.41:4 Q. Ma et al.   that can measure the requirement quality, the LLM output quality, and their correlations. We also design and implement an interactive training mechanism (Section 4.3) that disentangles requirement articulation from other adjacent prompting aspects. Our system supports deliberate practice on requirement refinement by generating immediate feedback grounded on reference requirements.   We conduct a randomized controlled user study (Section 5) with 30 prompting novices, com- paring the prompts users write before and after training, and against a control group that received standard PE training.",
+    "score": 0.6542034398718078,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 3
+   },
+   {
+    "text": "These tasks require significant customization where users must intentionally deviate LLMs from their default behaviors [23, 54, 61], making autofulfillment impossible (e.g., how many rounds of questions should be asked in Figure 2). At the time of writing, tasks that involve multi-step processes, decision-making, or context knowledge are likely more LLM-hard and thus benefit more from explicit requirements. However, this is a dynamic concept that evolves as LLMs improve.   ACM Transactions on Computer-Human Interaction, Vol. 32, No. 4, Article 41. Publication date: August 2025.41:8 Q. Ma et al.   Nowadays, LLMs arewidely used by end-user to create reusable prompt programs, and these prompt programs are often LLM-hard, as users frequently seek customization with various requirements, anticipating diverse inputs and expected outputs. From content creators crafting prompts for creative graphics, educators tailoring LLMs as tutors, to office workers automating workflows with GPT, people across various fields are all building natural language prompt programs.8 We argue that all these potential prompt programmers would benefit from articulating better requirements.9  The Challenge of ROPE and the Call for Requirement-Focused Training. Ideally, we hope LLM users would naturally refine requirements in prompts based on unsatisfactory model outputs. In reality, this is challenging.",
+    "score": 0.6442235144584021,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 7
+   },
+   {
+    "text": "To ensure the training and evaluation process is both realistic and representative, our primary objective is to have users write natural language prompts to instruct LLMs in generating applications. Instead of open-ended tasks—which are difficult to assess and provide consistent 8While a prompt program can output code like traditional natural language programs [22], it can also produce other outputs such as videos or GPTs applications. Note that when we refer to natural language program later in the article, we are generally describing prompt programs. 9In contrast, more ad-hoc interactions with LLMs, such as casual conversations with the model, may require a different set of considerations, which we consider beyond the scope of this discussion.   ACM Transactions on Computer-Human Interaction, Vol. 32, No. 4, Article 41. Publication date: August 2025.Training Humans in Requirement-Oriented Prompt Engineering (ROPE) 41:9   feedback on—we aim to provide clear ground truths for evaluation and training. To this end, users are asked to write prompts to develop an LLM app given examples.   Each task consists of two key components: (1) a set of interaction examples from which users can deduce requirements; and (2) a set of gold requirements that precisely reflect the app’s behavior.",
+    "score": 0.643729739819814,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 8
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "24f3674f-c67f-4eca-b013-3f4fdf8dc689",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f9-6ab90c3172dc9803099f205b;Parent=43c1e49eb7ea9e45;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.433
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:53+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use"
+ },
+ "from_cache": false
+}

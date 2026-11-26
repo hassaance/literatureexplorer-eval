@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.711,
+ "json": {
+  "id": "chatcmpl-6e009d54-6d62-4105-b013-8b6d5e9e2e82",
+  "object": "chat.completion",
+  "created": 1795687469,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "Sorry, I don't know the answer to your question based on the provided context. The context does not contain information about the ReAct paper's conclusion on acting without reasoning on ALFWorld."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1407,
+   "completion_tokens": 42,
+   "total_tokens": 1449
+  },
+  "contexts": [
+   {
+    "text": "Works such as Chain of Thought, ReAct, and others that followed [Wei et al., 2022, Yao et al., 2023, Long, 2023, Yao et al., 2024, Besta et al., 2024, Fu et al., 2024, Aksitov et al., 2023], have argued about the reasoning abilities of LLMs by proposing prompting methods. On the other hand, [Valmeekam et al., 2024, Stechly et al., 2024] have refuted these claims by showing the inability of LLMs to solve deterministic planning and classical reasoning problems.   In particular, for investigating the use of LLMs in solving decision making problems, AlfWorld [Shridhar et al., 2020] is a popular domain that was originally proposed for training text-based Reinforcement Learning agents. Lately, works such as ReAct, Reflexion, and their other variants [Yao et al., 2022, Shinn et al., 2023] have argued on the prowess of LLMs’ reasoning abilities on AlfWorld.",
+    "score": 0.53736690595313,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Results ReAct + Reflexion significantly outperforms ReAct by completing 130 out of 134 tasks using the simple heuristic to detect hallucinations and inefficient planning. Further, ReAct + Reflexion learns to solve additional tasks by learning in 12 consecutive trials. In the ReAct-only approach, we see that performance increase halts between trials 6 and 7.   Analysis A common error in baseline failed AlfWorld trajectories is when an agent thinks that it has possession of an item but does not actually have the item. The agent proceeds to execute several actions in a long trajectory and is not able to backtrack its actions to find the mistake.",
+    "score": 0.5362174645285064,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 5
+   },
+   {
+    "text": "This approach may not scale for domains with a large number of problem instance classes, and it places an undue burden on prompt engineers to provide instance specific examples. Finally, our experiments call into question claims of enhanced “emergent reasoning\" of LLMs with prompt engineering efforts such as ReAct; corroborating contemporary research [Verma et al., 2024, Valmeekam et al., 2024, Stechly et al., 2024, Ullman, 2023, Schaeffer et al., 2023, McCoy et al., 2023] questioning reasoning abilities of LLMs.   22 Preliminaries 2.1 AlfWorld AlfWorld Shridhar et al. [2020] is a synthetic text-based game built on top of a PDDL domain description. ReAct Yao et al. [2022] defines six tasks (or problem classes) within this domain namely - Put, Clean, Heat, Cool, Examine, and PutTwo. Each problem class consists of several problem instances, such as put a spraybottle on toilet (see Fig. 1 is an example instance of Put class. Since AlfWorld is a partially observable environment, each of these problem instances can be solved by navigating and interacting with the environment simulator via text actions.",
+    "score": 0.5347137313655365,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.5266131286161223,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.5266131286161223,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+   "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "6e009d54-6d62-4105-b013-8b6d5e9e2e82",
+  "X-Amzn-Trace-Id": "Root=1-6b08042c-3515f6aa1861ced145d0a201;Parent=62d2f9c0707a761f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.711
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:28+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Why does the ReAct paper conclude that acting without reasoning works best on ALFWorld?"
+   }
+  ]
+ },
+ "from_cache": false
+}

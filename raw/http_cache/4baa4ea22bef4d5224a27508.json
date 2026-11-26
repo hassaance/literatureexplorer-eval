@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.32,
+ "json": {
+  "query": "Agent Design Patterns for Assistance Systems in various Domains – a Survey",
+  "contexts": [
+   {
+    "text": "We not only looked at those aspects separately, but also investigated whether combinations of two or more of these aspects can be identified and whether they can be used for the identification of patterns. For example, there could be similarities of the used agent types of assistance systems with a similar automation level and a similar domain. As sometimes some agents represent multiple agent roles and therefore can be matched to several agent types, we also tried to identify patterns with respect to agents which were assigned to different agent types.   Additionally to patterns in the used agent types we also tried to identify patterns in the architecture of the agent systems with respect to the above mentioned aspects.   Lastly we tried to identify special cases, which cannot be assigned to one of the identified patterns. For those special cases we tried to identify the reason, why they were realized in a completely different way than the other assistance systems.   IV. ANALYSIS OF DIFFERENT AGENT ARCHITECTURES   In this section, the investigated approaches in our literature review are listed in subsection A and have been mapped to different domains. Subsequently in subsection B, we analyze the architecture of these approaches and derive agent types that can be identified in the investigated architectures. Subsection C shows the summarized result of our literature review.   A. Agent-based assistance systems in various domains   In the literature review, approaches from different domains in the field of industrial automation have been considered.",
+    "score": 0.6704326082841418,
+    "source": "035 - Agent Design Patterns for Assistance Systems in various Domains.pdf",
+    "page": 3
+   },
+   {
+    "text": "In many cases, the agent architecture used dedicated agents for the different types, however some architectures included more than one type in one agent. This observation goes hand in hand with the Gaia design methodology which allows to assign multiple roles to one agent. It seems to depend on the application and the preferences of the MAS architect whether to use dedicated agents for one type or to combine them, e.g. for performance reasons.   Based on the literature review of multi-agent assistance systems, patterns for the agent architecture in the investigated domains and the level of automation were identified. Within most domains, it could be observed that some of the agent types are typically used in assistance systems of that domain. This observation could be confirmed by deeper analysis of the assistance function that the assistance system is providing. Regarding the level of automation, no significant patterns could be identified for the levels 3 to 5. However, only low assisted processes (automation level 2) which do not require a narrowing of a complete set of decision or action alternatives, usually do not use dedicated agents for the execution of optimization algorithms since they are not required.   Since only a limited number of papers in the wide field of agent-based assistance systems could be reviewed and summarized in a conference paper, future research will investigate a greater number of approaches to verify our observations. However, the current findings in this paper seem plausible.",
+    "score": 0.6592806078585614,
+    "source": "035 - Agent Design Patterns for Assistance Systems in various Domains.pdf",
+    "page": 5
+   },
+   {
+    "text": "3   Simulation   [38] ● 2/3   [39] ◐ ●,◐ ◐ ● ◐ 4   [40] ● ● 2      V. FINDINGS ON PATTERNS   Based on the literature review, we identified some patterns regarding the used agent types based on the domain and the level of automation in a group discussion. The results and findings are discussed in this section.   Finding 1: The architectural design of the necessary user interface in the multi agent system differs although all   assistance systems need to get input from and provide information to the user. While some architectures include a dedicated UI-Agent, other researchers decided not to depict them specifically or to distribute the user interface over different agents each providing their own interface if necessary. A general statement if a dedicated UI-Agent should be used seems impossible and seems to depend on the use case and the preferences of the system architect.   171   Authorized licensed use limited to: Oulu University. Downloaded on October 15,2026 at 14:05:38 UTC from IEEE Xplore. Restrictions apply.Finding 2: Concerning the Level of Automation, it can be concluded that agent-based assistance systems with automation level 2 (“The computer offers a complete set of decision/action alternatives”, cf.",
+    "score": 0.6361977969114563,
+    "source": "035 - Agent Design Patterns for Assistance Systems in various Domains.pdf",
+    "page": 4
+   },
+   {
+    "text": "   Abstract— The paradigm of multi-agent systems is used in   various application scenarios like manufacturing control or   multi-agent assistance systems that aim at providing assistance   to the user of the system in a specific task or situation. With an   increasing number of applications of multi agent assistance   systems in the industrial automation domain, the different   architectures of these applications can be compared and   differences and similarities can be identified. This paper   presents the results of the literature review of 18 agent-based   assistance systems from different domains. Within the reviewed   architectures, seven different agent types could be identified. In   a further step, design patterns based on the application domain   and the level of automation have been identified and discussed.   These design patterns can be used to facilitate the development   of future multi agent assistance systems.      I. INTRODUCTION   The paradigm of multi-agent systems (MAS) has been a research subject since the 1990s [1]. Numerous architectures and applications based on the agent paradigm have been proposed and implemented in various domains, e.g. control of decentralized production systems [2, 3, 4], resource scheduling [5, 6] or simulation [7, 8].   Although no universally accepted definition of agents exists [9], a consensus about the typical agent properties can be found in the literature. Among the most named properties are: reaction to the environment, autonomy, goal-orientation and persistence [10].",
+    "score": 0.615674623838547,
+    "source": "035 - Agent Design Patterns for Assistance Systems in various Domains.pdf",
+    "page": 1
+   },
+   {
+    "text": "Only one paper per research project was considered in this survey. The papers were categorized into different domains according to the aim of the system and the task that the assistance system is used for. The determined domains in the field of industrial automation are engineering, test management, scheduling, monitoring and simulation. This list of domains does not claim to be complete, however it covers a wide field in industrial automation. It may be extended when further assistance systems with different aims are added to the investigation in the near future. Additionally, the assistance systems were categorized with respect to their level of automation.   After selecting the relevant literature, the papers were analyzed in depth and recurring agent roles were identified. To identify the roles of each agent in the system, the agents were analyzed and their main tasks and intended behaviors were identified. It is also possible that one agent represents the functionality of more than one role which is discussed later. Subsequently, frequently occurring agent types were derived from the identified roles.   With the identified agent types we tried to identify patterns in the investigated assistance systems. Several possible starting points exist for identifying patterns:   Firstly, as each assistance system has an interaction with the user, we researched how the interaction of the systems with the user was realized. Mainly, whether the interaction was realized with a dedicated (centralized) agent for user interaction or whether each agent interacts with the user when needed.",
+    "score": 0.6124079994486683,
+    "source": "035 - Agent Design Patterns for Assistance Systems in various Domains.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5a178e08-5757-492c-83e7-1ac6c34dfbe0",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fd-3502900036578dd84787174b;Parent=296952510f6c0cf3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.32
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agent Design Patterns for Assistance Systems in various Domains – a Survey"
+ },
+ "from_cache": false
+}

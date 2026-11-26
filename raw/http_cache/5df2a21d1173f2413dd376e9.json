@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.262,
+ "json": {
+  "query": "How does G-Eval score summaries?",
+  "contexts": [
+   {
+    "text": "Unlike GPTScore (Fu et al., 2023) which uses the conditional probability of generating the tar- get text as an evaluation metric, G-EVAL directly   performs the evaluation task with a form-filling paradigm. For example, for evaluating coherence in text summarization, we concatenate the prompt, the CoT, the news article, and the summary, and then call the LLM to output a score from 1 to 5 for each evaluation aspect, based on the defined criteria.   However, we notice this direct scoring function has two issues:   1. For some evaluation tasks, one digit usually dominates the distribution of the scores, such as 3 for a 1 - 5 scale. This may lead to the low variance of the scores and the low correlation with human judgments.   2. LLMs usually only output integer scores, even when the prompt explicitly requests decimal values. This leads to many ties in evaluation scores which do not capture the subtle differ- ence between generated texts.   To address these issues, we propose using the probabilities of output tokens from LLMs to nor- malize the scores and take their weighted summa- tion as the final results.",
+    "score": 0.6123453689993061,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 3
+   },
+   {
+    "text": "0.361 0.344 0.339 0.323 0.327 0.288 0.346 0.317 G-EVAL-4 0.582 0.457 0.507 0.425 0.455 0.378 0.547 0.433 0.514 0.418   - Probs 0.560 0.472 0.501 0.459 0.438 0.408 0.511 0.444 0.502 0.446 - CoT 0.564 0.454 0.493 0.413 0.403 0.334 0.538 0.427 0.500 0.407   Table 1: Summary-level Spearman (ρ) and Kendall-Tau (τ ) correlations of different metrics on SummEval bench- mark. G-EVAL without probabilities (italicized) should not be considered as a fair comparison to other metrics on τ , as it leads to many ties in the scores. This results in a higher Kendall-Tau correlation, but it does not fairly reflect the true evaluation ability. More details are in Section 4.   as the backbone model, and G-EVAL-3.5 to indi- cate G-EVAL with GPT-3.5 as the backbone model.",
+    "score": 0.5949913417585982,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 4
+   },
+   {
+    "text": "It gives human ratings for four aspects of each summary: fluency, coherence, consistency and relevance. It is built on the CNN/DailyMail dataset (Hermann et al., 2015)   Topical-Chat (Mehri and Eskenazi, 2020) is a testbed for meta-evaluating different evaluators on dialogue response generation systems that use knowledge. We follow (Zhong et al., 2022) to use its human ratings on four aspects: naturalness, coherence, engagingness and groundedness.   QAGS (Wang et al., 2020) is a benchmark for evaluating hallucinations in the summarization task. It aims to measure the consistency dimension of summaries on two different summarization datasets.   3.3 Baselines   We evaluate G-EVAL against various evaluators that achieved state-of-the-art performance.   BERTScore (Zhang et al., 2019) measures the similarity between two texts based on the contextu- alized embedding from BERT (Devlin et al., 2019).   MoverScore (Zhao et al., 2019) improves BERTScore by adding soft alignments and new aggregation methods to obtain a more robust simi- larity measure.",
+    "score": 0.5915045638200951,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 4
+   },
+   {
+    "text": "correlations of different metrics on SummEval bench- mark. G-EVAL without probabilities (italicized) should not be considered as a fair comparison to other metrics on τ , as it leads to many ties in the scores. This results in a higher Kendall-Tau correlation, but it does not fairly reflect the true evaluation ability. More details are in Section 4.   as the backbone model, and G-EVAL-3.5 to indi- cate G-EVAL with GPT-3.5 as the backbone model. Example prompts for each task are provided in the Appendix.   3.2 Benchmarks   We adopt three meta-evaluation benchmarks to measure the correlation between G-EVAL and human judgments.   SummEval (Fabbri et al., 2021) is a bench- mark that compares different evaluation methods for summarization. It gives human ratings for four aspects of each summary: fluency, coherence, consistency and relevance. It is built on the CNN/DailyMail dataset (Hermann et al., 2015)   Topical-Chat (Mehri and Eskenazi, 2020) is a testbed for meta-evaluating different evaluators on dialogue response generation systems that use knowledge. We follow (Zhong et al., 2022) to use its human ratings on four aspects: naturalness, coherence, engagingness and groundedness.",
+    "score": 0.5816476562054179,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 4
+   },
+   {
+    "text": "The second part shows the results of metrics that use neural networks to learn from human ratings of summary quality. These metrics have much higher correlations than the similarity-based metrics, sug- gesting that they are more reliable for summariza- tion evaluation.   In the last part of Table 1 which corresponds to GPT-based evaluators, GPTScore also uses GPTs for evaluating summarization texts, but relies on GPT’s conditional probabilities of the given tar- get. G-EVAL substantially surpasses all previous state-of-the-art evaluators on the SummEval bench- mark. G-EVAL-4 achieved much higher human correspondence compared with G-EVAL-3.5 on both Spearman and Kendall-Tau correlation, which indicates that the larger model size of GPT-4 is beneficial for summarization evaluation. G-EVAL   also outperforms GPTScore on several dimension, demonstrating the effectiveness of the simple form- filling paradigm.   3.5 Results for Dialogue Generation We use the Topical-chat benchmark from Mehri and Eskenazi (2020) to measure how well differ- ent evaluators agree with human ratings on the quality of dialogue responses. We calculate the Pearson and Spearman correlation for each turn of the dialogue. Table 2 shows that similarity- based metrics have good agreement with humans   on how engaging and grounded the responses are, but not on the other aspects.",
+    "score": 0.5713808138534956,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 5
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c403a5b3-a4d0-4e3f-9b1c-75fcc8b65e9b",
+  "X-Amzn-Trace-Id": "Root=1-6b080627-5198ff702168c7c02c960a6c;Parent=58c7c6e2263db985;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.262
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:55+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "query": "How does G-Eval score summaries?"
+ },
+ "from_cache": false
+}

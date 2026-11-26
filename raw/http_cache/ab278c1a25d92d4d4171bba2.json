@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.345,
+ "json": {
+  "query": "AI Agents That Matter",
+  "contexts": [
+   {
+    "text": "AI Agents That Matter   Sayash Kapoor∗, Benedikt Stroebl∗, Zachary S. Siegel, Nitya Nadgir, Arvind Narayanan   Princeton University July 2, 2024   Abstract   AI agents are an exciting new research direction, and agent development is driven by benchmarks. Our analysis of current agent benchmarks and evaluation practices reveals several shortcomings that hinder their usefulness in real-world applications. First, there is a narrow focus on accuracy without attention to other metrics. As a result, SOTA agents are needlessly complex and costly, and the community has reached mistaken conclusions about the sources of accuracy gains. Our focus on cost in addition to accuracy motivates the new goal of jointly optimizing the two metrics. We design and implement one such optimization, showing its potential to greatly reduce cost while maintaining accuracy. Second, the benchmarking needs of model and downstream developers have been conflated, making it hard to identify which agent would be best suited for a particular application. Third, many agent benchmarks have inadequate holdout sets, and sometimes none at all. This has led to agents that are fragile because they take shortcuts and overfit to the benchmark in various ways. We prescribe a principled framework for avoiding overfitting. Finally, there is a lack of standardization in evaluation practices, leading to a pervasive lack of reproducibility.",
+    "score": 0.6759177750992632,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 1
+   },
+   {
+    "text": "Artificial intelligence (AI) developers are shifting their focus to building agents that can operate independently, with little human intervention. To be an agent is to have the ability to perceive   and act on an environment in a goal-directed and autonomous way1. For example, a digital agent could be programmed to browse the web and make online purchases on behalf of a user — comparing prices, selecting items and completing checkouts. A robot with arms could be an agent if it could pick up objects, open doors or assemble parts without being told how to do each step.   Companies such as the digital-marketing firm Salesforce, based in San Francisco, California, and computer graphics and hardware firm Nvidia, based in Santa Clara, California, are already offering customer-services solutions for businesses, using agents. In the near future, AI assistants might be able to fulfil complex multistep requests, such as ‘get me a better mobile- phone contract’, by retrieving a list of contracts from a price-comparison website, selecting the best option, authorizing the switch, cancelling the old contract, and arranging the transfer of cancellation fees from the user’s bank account.   The rise of more-capable AI agents is likely to have far-reaching political, economic and social consequences.",
+    "score": 0.5491162392793693,
+    "source": "183 - We need a new ethics for a world of AI agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "We found pervasive shortcomings in the reproducibility of WebArena and HumanEval evaluations (Table A6). These errors inflate accuracy estimates and lead to overoptimism about agent capabilities.   The overarching goal of our work is to stimulate the development of agents that are useful in the real world and not just accurate on benchmarks. (1) and (2) above do this by incorporating metrics beyond accuracy into agent evaluation and optimization; (4) and (5) do so by improving precision about what a benchmark aims to measures and ensuring that it actually measures that; and (3) does both.   1.1 What is an AI agent?   In traditional AI, agents are defined as entities that perceive and act upon their environment [40]. In the LLM era, the term is used in a narrower way (a thermostat would qualify as an agent under the traditional definition). Many researchers have tried to formalize the community’s intuitive understanding of what constitutes an agent in the context of language-model-based systems. Many of them view it as a spectrum — sometimes denoted by the term ‘agentic’ [38] — rather than a binary definition of an agent. We agree with this perspective. Since there are already many definitions, we do not provide a new one, but rather identify the factors that cause an AI system to be considered more agentic according to existing definitions. We found three clusters of factors.   • Environment and goals.",
+    "score": 0.5358755895410007,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 2
+   },
+   {
+    "text": "The rise of more-capable AI agents is likely to have far-reaching political, economic and social consequences. On the positive side, they could unlock economic value: the consultancy McKinsey forecasts an annual windfall from generative AI of US$2.6 trillion to $4.4 trillion globally, once AI agents are widely deployed (see go.nature.com/4qeqemh). They might also serve as powerful research assistants and accelerate scientific discovery.   But AI agents also introduce risks. People   We need a new ethics for a world of AI agents Iason Gabriel, Geoff Keeling, Arianna Manzini & James Evans   The deployment of capable AI agents raises fresh questions about safety, human–machine relationships and social coordination.   need to know who is responsible for agents operating ‘in the wild’, and what happens if they make mistakes. For example, in Novem- ber 2022 , an Air Canada chatbot mistakenly decided to offer a customer a discounted bereavement fare, leading to a legal dispute over whether the airline was bound by the promise. In February 2024, a tribunal ruled that it was — highlighting the liabilities that corporations could experience when handing over tasks to AI agents, and the growing need for clear rules around AI responsibility.   Here, we argue for greater engagement by scientists, scholars, engineers and policy makers with the implications of a world increasingly populated by AI agents.",
+    "score": 0.5349845308649128,
+    "source": "183 - We need a new ethics for a world of AI agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "The prospective usefulness of AI agents also makes it plausible that they could soon become our near-constant companions — much like smartphones today. Yet, even as people act through their assistants, the assis- tants act on them, influencing the information and opportunities to which they have access. In this context, it is not enough for AI agents   to be geared towards only short-term, poten- tially sycophantic, preference satisfaction. Three of us (A.M., I.G., G.K.) have argued that relationships with AI agents should benefit the user, respect autonomy, demonstrate appro- priate care and support long-term flourishing7. Respecting autonomy would involve ensuring that users retain meaningful control over the depth and intensity of interactions, and avoid- ing agent behaviours that foster excessive dependence. Care requires that AI assistants and their developers attend to user needs over a sustained period. And flourishing involves building AI agents that integrate well into the architecture of a fulfilling human life — serv- ing as a complement to, not a surrogate for, human relationships.   Moreover, developers need to ensure that AI agents can be properly trusted. Unlike human relationships, human–AI interaction always involves at least one third party: the system’s developer, who might have goals that are, or are not, aligned with the user’s. US science-fiction writer Ted Chiang’s short story ‘The Lifecycle of Software Objects’ (2010) offers a vivid illustration of this tension.",
+    "score": 0.5272921978636848,
+    "source": "183 - We need a new ethics for a world of AI agents.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "770c48aa-5ac5-4d67-b3ba-bdad245fe8ea",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f7-6341acef064044b56ce5f0f8;Parent=28b887802e4aca7c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.345
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:51+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AI Agents That Matter"
+ },
+ "from_cache": false
+}

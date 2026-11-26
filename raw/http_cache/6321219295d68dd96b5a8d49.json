@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.555,
+ "json": {
+  "id": "chatcmpl-afd9ebce-eff4-4ee0-816c-412a7dc09186",
+  "object": "chat.completion",
+  "created": 1795687468,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1396,
+   "completion_tokens": 7,
+   "total_tokens": 1403
+  },
+  "contexts": [
+   {
+    "text": "We make a system-level comparison between VOYAGER and prior Minecraft agents in Table. A.2.   3.3 Evaluation Results   We systematically evaluate VOYAGER and baselines on their exploration performance, tech tree mastery, map coverage, and zero-shot generalization capability to novel tasks in a new world.   Significantly better exploration. Results of exploration performance are shown in Fig. 1. VOYAGER’s superiority is evident in its ability to consistently make new strides, discovering 63 unique items within 160 prompting iterations, 3.3× many novel items compared to its counterparts. On the other hand, AutoGPT lags considerably in discovering new items, while ReAct and Reflexion struggle to make significant progress, given the abstract nature of the open-ended exploration goal that is challenging to execute without an appropriate curriculum.   Consistent tech tree mastery. The Minecraft tech tree tests the agent’s ability to craft and use a hierarchy of tools. Progressing through this tree (wooden tool → stone tool → iron tool → diamond tool) requires the agent to master systematic and compositional skills.",
+    "score": 0.5944332189255151,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 7
+   },
+   {
+    "text": "It can construct an ever-growing skill library of action programs that are reusable, interpretable, and generalizable to novel tasks. We evaluate VOYAGER systematically against other LLM-based agent techniques (e.g., ReAct [29], Reflexion [30], AutoGPT [28]) in MineDojo [23], an open-source Minecraft AI framework. VOYAGER outperforms prior SOTA by obtaining 3.3× more unique items, unlocking key tech tree milestones up to 15.3× faster, and traversing 2.3× longer distances. We further demonstrate that VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other methods struggle to generalize.   2 Method   VOYAGER consists of three novel components: (1) an automatic curriculum (Sec. 2.1) that suggests objectives for open-ended exploration, (2) a skill library (Sec. 2.2) for developing increasingly complex behaviors, and (3) an iterative prompting mechanism (Sec. 2.3) that generates executable code for embodied control. Full prompts are presented in Appendix, Sec. A.   2.1 Automatic Curriculum   Embodied agents encounter a variety of objectives with different complexity levels in open-ended environments.",
+    "score": 0.5506618458582865,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Empirically, VOYAGER shows strong in-context lifelong learning capability and exhibits exceptional proficiency in playing Minecraft. It obtains 3.3× more unique items, travels 2.3× longer distances, and unlocks key tech tree milestones up to 15.3× faster than prior SOTA. VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other techniques struggle to generalize.   Figure 1: VOYAGER discovers new Minecraft items and skills continually by self-driven exploration, significantly outperforming the baselines.",
+    "score": 0.5211149311840205,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": ".   • GUI Manipulation. Tests the agent’s ability to navigate and control graphical user interfaces meaningfully, especially for mouse movement, e.g., clicking options to continue dialogue, reviving characters, and navigating menu systems.   • Game Mechanism. Uses puzzles to examine agents’ understanding of core game mechanics, such as switching to the appropriate elemental character to activate an elemental monument, or using a Pyro character to light a torch.   • Visual Guidance Following. Evaluates the agent’s ability to follow visual directional cues, such as golden quest markers shown in the overworld. Specifically, it tests whether the agent can rotate the camera to center the marker in its view and move forward along the indicated direction.   • Obstacle Avoidance. Evaluates the agent’s spatial awareness and locomotion skills across four aspects: keep following the path road without deviation, avoiding obstacles such as trees and walls, stopping safely at the edge of cliffs or rivers, and deploying a glider promptly during falls.   The evaluation was conducted through human analysis of the models’ gameplay videos, with performance rated on a 5-point scale:   • Score 1: The agent exhibits no task-relevant behavior or intent, resulting in complete failure.   • Score 2: The agent shows initial intent but fails to make meaningful progress or complete the task.   • Score 3: The agent displays relevant behaviors but with significant hesitation and frequent errors, leading to a low success rate.",
+    "score": 0.5185878605019397,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 19
+   },
+   {
+    "text": "This mission evaluates a broad spectrum of agent capabilities, including long-horizon navigation to quest locations, NPC interaction, instruction following, combat, boss fights, puzzle solving, domain exploration, and GUI operations such as character development, map teleportation, and dialog continuation. Completing this mission typically takes human players about one hour. To systematically evaluate agent performance, we divide the mission into five sequential subtasks:   • Task 1: The Traveler follows Paimon across Starfell Lake and through the forest toward Mondstadt. Along the way, they meet Amber, join forces to defeat monsters, and ultimately reach the city.   • Task 2: The Traveler helps defend Mondstadt during Stormterror’s sudden attack, after which they are invited to the Knights of Favonius Headquarters to offer assistance against the escalating dragon threat.   • Task 3: The Traveler teams up with Amber to investigate and clear the Temple of the Falcon.   • Task 4: The Traveler meets Kaeya and explores the Temple of the Wolf under his guidance.   • Task 5: The Traveler joins Lisa in delving into the Temple of the Lion.   As shown in Table 5, thinking models achieve significantly better performance than instruct models, highlighting both the effectiveness and necessity of high-level reasoning. While instruct models can handle certain subtasks, they often fail to complete the full task chain.",
+    "score": 0.518562502791445,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 25
+   }
+  ],
+  "sources": [
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+   "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "afd9ebce-eff4-4ee0-816c-412a7dc09186",
+  "X-Amzn-Trace-Id": "Root=1-6b08042b-5f352fe319a8f3004af49881;Parent=55f6f95b8d0c6e2c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.555
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:27+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Which StarCraft II tasks was the Voyager agent evaluated on?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.315,
+ "json": {
+  "query": "RhinoInsight: Improving Deep Research throughControl Mechanisms for Model Behavior and Context",
+  "contexts": [
+   {
+    "text": "2025-11-25   RhinoInsight: Improving Deep Research through Control Mechanisms for Model Behavior and Context Yu Lei*♡♢, Shuzheng Si*♠♡, Wei Wang*♡⋆, Yifei Wu♡, Gang Chen♡   Fanchao Qi♡♠(�), Maosong Sun♠   ♡ DeepLang AI ♠ Department of Computer Science and Technology, Tsinghua University   ♢ Beijing University of Posts and Telecommunications ⋆ Beijing Jiaotong University   https://research.deeplang.net/   Abstract   Large language models are evolving from single-turn responders into tool- using agents capable of sustained reasoning and decision-making for deep research. Prevailing systems adopt a linear pipeline of plan to search to write to a report, which suffers from error accumulation and context rot due to the lack of explicit control over both model behavior and context. We introduce RhinoInsight, a deep research framework that adds two control mechanisms to enhance robustness, traceability, and overall quality without parameter updates. First, a Verifiable Checklist module transforms user requirements into traceable and verifiable sub-goals, incorporates human or LLM critics for refinement, and compiles a hierarchical outline to anchor subsequent actions and prevent non-executable planning.",
+    "score": 0.7513053633878478,
+    "source": "086 - RhinoInsight Improving Deep Research throughControl Mechanisms for Model Behavior and Context.pdf",
+    "page": 1
+   },
+   {
+    "text": "Thus, in this paper, we introduce RhinoInsight, which involves two mechanisms for both model behavior and context, achieving the state-of-the-art performance in deep research tasks.   7 Conclusion   We address the challenge of open-ended deep research with RhinoInsight, a deep research framework that enhances robustness, traceability, and overall quality by adding two control mechanisms to agentic workflows. The Verifiable Checklist strengthens model behavior by converting user requirements into traceable and acceptance-ready subgoals with critic-driven refinement, while the Evidence Audit strengthens context by structuring, and extracting information, updating outlines iteratively, and binding high-quality evidence to claims and visualizations. RhinoInsight extends ReAct with a five-component loop and workspace reconstruction for execution-time interpretability and cross-step control, yielding state-of-the-art performance on DeepResearch and DeepConsult and competitive results on GAIA, HLE and BrowseComp-ZH. These findings indicate that principled behavior and context control can mitigate error propagation and context rot more effectively than scaling model capacity alone. Future work includes learning adaptive control policies for checklist and audit intensity, integrating multimodal evidence with provenance guarantees, and exploring human-in-the-loop review strategies to further improve reliability and efficiency in real-world research settings.   10References   anthropic. Meet claude, 2025a. URL https://www.anthropic.com/claude.   anthropic. Introducing claude 4, 2025b.",
+    "score": 0.7235794211348587,
+    "source": "086 - RhinoInsight Improving Deep Research throughControl Mechanisms for Model Behavior and Context.pdf",
+    "page": 10
+   },
+   {
+    "text": "These fixed frameworks with one-step generation often lead to incoherent content and hallucinations (Si et al., 2025a;c). Thus, recent works like WriteHere (Xiong et al., 2025), STORM (Shao et al., 2024), SCISAGE (Shi et al., 2025), and WebWeaver (Li et al., 2025b), utilize searched content to generate or refine the outline, allowing better organization and coherence in final reports. However, these methods rely on powerful agent models to carry out each step in a serial manner and easily lead to error accumulation and context rot. In contrast to these approaches, we argue that the key to improving the effectiveness of the deep research framework does not lie in simply enhancing model capability, but rather in how to properly incorporate control mechanisms for both the context and model behavior. Thus, in this paper, we introduce RhinoInsight, which involves two mechanisms for both model behavior and context, achieving the state-of-the-art performance in deep research tasks.   7 Conclusion   We address the challenge of open-ended deep research with RhinoInsight, a deep research framework that enhances robustness, traceability, and overall quality by adding two control mechanisms to agentic workflows.",
+    "score": 0.7124366991772326,
+    "source": "086 - RhinoInsight Improving Deep Research throughControl Mechanisms for Model Behavior and Context.pdf",
+    "page": 10
+   },
+   {
+    "text": "Specifically, different components may face distinct challenges in the absence of proper guidance. (1) Planning lacks executable and checkable anchors, which makes generated goals unclear and easily leads to incorrect actions in subsequent model generation. (2) Search, memory, and drifting modules often generate excessively long contexts that introduce substantial noisy or irrelevant content. As the context grows, the model struggles to maintain effectiveness due to context rot and performs poorly when processing lengthy and disorganized contexts. (3) The writing module operates at the end of the pipeline and is therefore highly sensitive to the cumulative context produced by all preceding modules—including erroneous actions and the noisy content they generate. Without proper intervention, this accumulated noise may propagate into the final information aggregation stage, degrading the final report quality and undermining the reliability of the produced analysis. Therefore, it is necessary to introduce control mechanisms to guide model behavior, e.g., actions, and efficiently organize contextual information, ensuring the entire process remains stable and effective.   In this paper, we introduce RhinoInsight, a deep research framework that involves two control mecha- nisms to drive overall improvement. Specifically, we introduce a verifiable checklist module to supervise and control model behavior, and an evidence audit module to organize the context information across planning, retrieval, memory, outlining, and writing modules.",
+    "score": 0.6785394784510272,
+    "source": "086 - RhinoInsight Improving Deep Research throughControl Mechanisms for Model Behavior and Context.pdf",
+    "page": 2
+   },
+   {
+    "text": "Specifically, we introduce a verifiable checklist module to supervise and control model behavior, and an evidence audit module to organize the context information across planning, retrieval, memory, outlining, and writing modules. Within the proposed verifiable check- list module, we use a checklist generator to produce traceable and verifiable sub-goals, then further incorporate manual efforts (e.g., scenarios where user queries are unclear in real-world applications) or automated LLMs as a critic to check these sub-goals, and then the planning module compiles them into a hierarchical outline. Unlike previous works that utilize a planning module to generate outlines to guide the following steps, our proposed approach can help ensure that each sub-goal is well-defined and prevent an unclear plan from resulting in incorrect actions later on. Meanwhile, to avoid the context rot phenomenon and filter noisy information in the context, we introduce the evidence audit module that dynamically organizes the context via iteratively updating the outlines, effectively structuring the content, and properly preserving useful information. In this way, we can effectively organize the context and ensure the model can fully utilize the context to provide high-quality answers. Finally, combined with two novel modules, we provide control mechanisms for both context and model behavior, and then ensure the deep research agents can achieve better performance without updating parameters.   Our proposed RhinoInsight achieves the new state-of-the-art results in various deep research tasks and shows competitive performance in deep search tasks, shown in Figure 1.",
+    "score": 0.6419086045942878,
+    "source": "086 - RhinoInsight Improving Deep Research throughControl Mechanisms for Model Behavior and Context.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0afcb852-f47a-4077-a886-f101486930c2",
+  "X-Amzn-Trace-Id": "Root=1-6b080506-4eb718fd282202c623754454;Parent=2f6b51231eba6ddc;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.315
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:06+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "RhinoInsight: Improving Deep Research throughControl Mechanisms for Model Behavior and Context"
+ },
+ "from_cache": false
+}

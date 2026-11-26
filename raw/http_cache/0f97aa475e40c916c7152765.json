@@ -1,0 +1,28 @@
+{
+ "status": 404,
+ "latency_s": 0.037,
+ "json": {
+  "error": {
+   "message": "use POST /v1/chat/completions or POST /v1/context"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c39a78d9-88d8-46bf-bb10-6741684e6e50",
+  "X-Amzn-Trace-Id": "Root=1-6b080574-1d99d566379cd37d0ab29f1a;Parent=0565085a3ffee9f9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 404,
+   "latency_s": 0.037
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:56+00:00",
+ "path": "/v1/models",
+ "method": "GET",
+ "tag": "err_unknown_route",
+ "request_body": null,
+ "from_cache": false
+}

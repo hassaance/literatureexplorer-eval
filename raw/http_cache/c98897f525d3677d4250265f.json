@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.665,
+ "json": {
+  "id": "chatcmpl-d114ff70-9e0b-4bc4-b4ba-ce8490a4b63a",
+  "object": "chat.completion",
+  "created": 1795687453,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The main abstractions in DSPy are signatures, modules, and teleprompters. Signatures abstract the input/output behavior of a module, modules replace existing hand-prompting techniques and can be composed in arbitrary pipelines, and teleprompters optimize all modules in the pipeline to maximize a metric."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1624,
+   "completion_tokens": 61,
+   "total_tokens": 1685
+  },
+  "contexts": [
+   {
+    "text": "We argue that this approach, while pervasive, can be brittle and unscalable—conceptually akin to hand-tuning the weights for a classifier. A given string prompt might not generalize to different pipelines or across different LMs, data domains, or even inputs.   Toward a more systematic approach to designing AI pipelines, we introduce the DSPy programming model.1 DSPy pushes building new LM pipelines away from manipulating free-form strings and closer to programming (composing modular operators to build text transformation graphs) where a compiler automatically generates optimized LM invocation strategies and prompts from a program. We draw inspiration from the consensus that emerged around neural network abstractions (Bergstra et al., 2013), where (1) many general-purpose layers can be modularly composed in any complex architecture and (2) the model weights can be trained using optimizers instead of being hand-tuned.   To this end, we propose the DSPy programming model (Sec 3). We first translate string-based prompting techniques, including complex and task-dependent ones like Chain of Thought (Wei et al., 2022) and ReAct (Yao et al., 2022), into declarative modules that carry natural-language typed sig- natures. DSPy modules are task-adaptive components—akin to neural network layers—that abstract any particular text transformation, like answering a question or summarizing a paper.",
+    "score": 0.5136416845981241,
+    "source": "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+    "page": 2
+   },
+   {
+    "text": "DSPy modules are task-adaptive components—akin to neural network layers—that abstract any particular text transformation, like answering a question or summarizing a paper. We then pa- rameterize each module so that it can learn its desired behavior by iteratively bootstrapping useful demonstrations within the pipeline. Inspired directly by PyTorch abstractions (Paszke et al., 2019), DSPy modules are used via expressive define-by-run computational graphs. Pipelines are expressed by (1) declaring the modules needed and (2) using these modules in any logical control flow (e.g., if statements, for loops, exceptions, etc.) to logically connect the modules.   We then develop the DSPy compiler (Sec 4), which optimizes any DSPy program to improve quality or cost. The compiler inputs are the program, a few training inputs with optional labels, and a valida- tion metric. The compiler simulates versions of the program on the inputs and bootstraps example traces of each module for self-improvement, using them to construct effective few-shot prompts or finetuning small LMs for steps of the pipeline. Optimization in DSPy is highly modular: it is conducted by teleprompters,2 which are general-purpose optimization strategies that determine how the modules should learn from data. In this way, the compiler automatically maps the declarative modules to high-quality compositions of prompting, finetuning, reasoning, and augmentation.",
+    "score": 0.5093196988674287,
+    "source": "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+    "page": 2
+   },
+   {
+    "text": "This paper introduces the key concepts in DSPy. For more extensive and up-to-date documentation of the framework, we refer readers to https://github.com/stanfordnlp/dspy.   2We derive the name tele-prompters from the notion of abstracting and automating the task of prompting, in particular, such that it happens at a distance, without manual intervention.   2         https://github.com/stanfordnlp/dspyPreprint   2 RELATED WORK   This work is inspired by the role that Torch (Collobert et al., 2002), Theano (Bergstra et al., 2010; 2011; Al-Rfou et al., 2016), Chainer (Tokui et al., 2015), and others played in the development in deep learning by providing powerful abstractions. A similar transformation is emerging with higher- level pipelines of LMs, and we are seeking to offer a solid conceptual framework and programming abstractions for what we call foundation model programming. We draw on differentiable program- ming (Wang et al., 2018) but applied to LM calls rather than neural networks, and borrow syntactic elements from PyTorch (Paszke et al., 2019).   In-context learning (McCann et al. 2018; Radford et al. 2018; Brown et al. 2020) is a key mechanism for foundation model programming.",
+    "score": 0.4930979809547949,
+    "source": "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+    "page": 2
+   },
+   {
+    "text": "For the current paper, we focus on showing that DSPy and its compiler allow us to build outstanding LM systems without hand-crafted prompt strings, but instead from truly modular units, and that this opens up doors for systematically exploring a rich design space at a very high programmatic level of abstraction.   3 THE DSPY PROGRAMMING MODEL   We present DSPy, which treats LMs as abstract devices for text generation,3 and optimizes their us- age in arbitrary computational graphs. DSPy programs are expressed in Python: each program takes the task input (e.g., a question to answer or a paper to summarize) and returns the output (e.g., an answer or a summary) after a series of steps. DSPy contributes three abstractions toward automatic optimization: signatures, modules, and teleprompters. Signatures abstract the input/output behavior of a module; modules replace existing hand-prompting techniques and can be composed in arbitrary pipelines; and teleprompters optimize all modules in the pipeline to maximize a metric.   3We assume access to one or more LMs, which consume a prompt string and return text completions. This may be a promptable LM capable of in-context learning (e.g., GPT-3.5 or Llama2-7b) or a smaller finetuneable LM (e.g., T5-base).",
+    "score": 0.49209701258106064,
+    "source": "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+    "page": 3
+   },
+   {
+    "text": "DSPy seeks to generalize this space: it offers a rich framework for optimizing arbitrary pipelines from high-level declarative signatures, by bootstrapping high-quality multi-stage demon- strations with constraints. In this framework, DSPy teleprompters may apply optimization using model selection techniques like cross-validation or, in principle, with sophisticated techniques in- volving RL and LM feedback (Hu et al., 2023; Zhao et al., 2023a; Shinn et al., 2023) or learned or Bayesian hyperparameter optimization methods (Bergstra et al., 2013; Akiba et al., 2019).   The present paper seeks to motivate DSPy as a programming model and to report new empirical findings from applying the DSPy compiler. This is inspired by formative work by Bergstra et al. (2010; 2013), Paszke et al. (2019), and Wolf et al. (2020), who support their respective programming models with a mix of benchmark numbers and some qualitative measures.",
+    "score": 0.48831579004967446,
+    "source": "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+    "page": 3
+   }
+  ],
+  "sources": [
+   "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+   "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+   "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+   "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf",
+   "065 - DSPy Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d114ff70-9e0b-4bc4-b4ba-ce8490a4b63a",
+  "X-Amzn-Trace-Id": "Root=1-6b08041c-25af71dd42ee9b7b07e59c04;Parent=1d5e2e5cbdc73df5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.665
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:12+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What are the main abstractions in DSPy?"
+   }
+  ]
+ },
+ "from_cache": false
+}

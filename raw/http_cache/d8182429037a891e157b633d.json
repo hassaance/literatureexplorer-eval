@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.287,
+ "json": {
+  "query": "Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds",
+  "contexts": [
+   {
+    "text": "Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds   ByteDance Seed   See Contributions section for a full author list.   Abstract   We introduce Lumine, the first open recipe for developing generalist agents capable of completing hours-long complex missions in real time within challenging 3D open-world environments. Lumine adopts a human-like interaction paradigm that unifies perception, reasoning, and action in an end-to-end manner, powered by a vision-language model. It processes raw pixels at 5 Hz to produce precise 30 Hz keyboard–mouse actions and adaptively invokes reasoning only when necessary. Trained in Genshin Impact, Lumine successfully completes the entire five-hour Mondstadt main storyline on par with human-level efficiency and follows natural language instructions to perform a broad spectrum of tasks in both 3D open-world exploration and 2D GUI manipulation across collection, combat, puzzle-solving, and NPC interaction. In addition to its in-domain performance, Lumine demonstrates strong zero-shot cross-game generalization. Without any fine-tuning, it accomplishes 100-minute missions in Wuthering Waves and the full five-hour first chapter of Honkai: Star Rail. These promising results highlight Lumine’s effectiveness across distinct worlds and interaction dynamics, marking a concrete step toward generalist agents in open-ended environments.",
+    "score": 0.778819519870934,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 1
+   },
+   {
+    "text": "Lumine demonstrates strong generalization abilities across different games, even as the similarity between game genres decreases. This indicates that despite variations in visual style and gameplay mechanics, the core skills of navigation, combat, and 2D GUI manipulation can transfer across games, making it a promising foundation model across games. Remarkably, even when trained on a single game, Lumine is able to adapt, highlighting its promising scalability for broader applications.   9 Discussion and Future Work   We proposed Lumine, an open recipe that spans the entire lifecycle of developing generalist agents in 3D open world environments, from environment selection, data collection and preprocessing to interaction frequency, model design, training procedures, and inference optimization. Lumine offers a unified framework that organically integrates perception, reasoning, and action. The success of Lumine demonstrates that with only 2400 hours of raw gameplay data and 64 H100 GPUs, a small open-source VLM can be seamlessly and efficiently transformed into a powerful agent capable of following natural language instructions in real time to perform diverse tasks and complete hours-long missions in complex 3D open-worlds, without the need to modify model structures or loss functions. Experimental results also reveal substantial potential for further scaling. Lumine’s remarkable zero-shot generalization to unseen missions and even entirely unseen games suggests that the model acquires transferable meta-skills, such as 3D navigation and 2D manipulation, that can be readily applied to other domains.",
+    "score": 0.7587616176669016,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 31
+   },
+   {
+    "text": "These promising results highlight Lumine’s effectiveness across distinct worlds and interaction dynamics, marking a concrete step toward generalist agents in open-ended environments.   Date: November 13, 2025 Correspondence: weihao001@ntu.edu.sg, shiguang.sg@bytedance.com Project Page: https://www.lumine-ai.org/   Exploration   PlanningInteraction   Strategy   10% attack vs 5% crit. Which one should I pick?   I need to take care of the dragon’s breath.   Exploration   PlanningInteraction   Combat   10% attack vs 5% crit. which one should I pick?   I need to take care of the dragon’s breath.   Figure 1 Lumine, the first AI agent to complete hours-long missions in real time within expansive 3D open worlds.   1   ar X   iv :2   51 1.   08 89   2v 1   [ cs   .A I]   1 2   N ov   2 02   5         mailto:weihao001@ntu.edu.sg        mailto:shiguang.sg@bytedance.com        https://www.lumine-ai.org/        https://arxiv.org/abs/2511.08892v1Contents   1 Introduction . . . . . . . . . . . . . . . . . .",
+    "score": 0.6494753474301903,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 1
+   },
+   {
+    "text": "The ability to operate under strict latency constraints, balancing computational deliberation with timely responses and managing asynchronous interactions to avoid missing critical opportunities [13, 40].   We introduce Lumine, a comprehensive and scalable recipe together with its prototype model for addressing these challenges as a concrete step toward general-purpose agents. We select Genshin Impact, a globally popular 3D open-world game, as our primary testbed. To the best of our knowledge, Lumine is the first agent capable of completing hours-long missions in real time within such an extremely challenging environment. Lumine adopts a human-like interaction paradigm that unifies perception, reasoning and action. Built upon the Qwen2-VL-7B-Base model [77], Lumine perceives the game world directly from raw pixels at 5 Hz, and autoregressively generates textual keyboard and mouse actions at 30 Hz using action chunking [91]. The standardized human-like interface and sufficient interaction frequency enable Lumine to operate seamlessly across a wide range of video game environments. Additionally, Lumine adopts a hybrid thinking strategy, allowing it to adaptively enter a thinking mode to produce inner-monologue reasoning before generating executable actions when necessary, thereby avoiding redundant computation and latency without compromising decision quality.",
+    "score": 0.6154722530396645,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 3
+   },
+   {
+    "text": ".   • Multimodal Perception. The ability to fuse and interpret heterogeneous sensory streams, including embodied 3D vision, 2D graphical user interfaces (GUIs), textual information and other modalities, to construct an actionable understanding of both the external world and the agent’s state [4, 20, 63].   • High-Level Planning. The ability to generate self-motivated, long-horizon plans that adapt as environ- mental dynamics evolve, incorporating reflection and self-revision to refine strategies while balancing competing objectives and environmental feedback [3, 42, 70, 75, 88].   • Low-Level Control. The skill to ground abstract intentions into precise and executable actions that enable coherent behavior across diverse embodiments [12, 93].   • Memory. The capacity to maintain and leverage experience over various timescales, providing context for consistent decision-making to enable coherent exploration and test-time adaptation [15, 28, 30, 56, 75].   • Real-Time Inference. The ability to operate under strict latency constraints, balancing computational deliberation with timely responses and managing asynchronous interactions to avoid missing critical opportunities [13, 40].   We introduce Lumine, a comprehensive and scalable recipe together with its prototype model for addressing these challenges as a concrete step toward general-purpose agents. We select Genshin Impact, a globally popular 3D open-world game, as our primary testbed.",
+    "score": 0.612963023720052,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1cd41403-5674-41bd-9869-89346bf982a4",
+  "X-Amzn-Trace-Id": "Root=1-6b080500-080766b97abca40737eb0e88;Parent=17ac2223df793a90;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.287
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds"
+ },
+ "from_cache": false
+}

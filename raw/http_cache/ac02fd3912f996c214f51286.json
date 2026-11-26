@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.768,
+ "json": {
+  "id": "chatcmpl-3db34405-d6a6-4f95-a8fc-44d57c1b4ca2",
+  "object": "chat.completion",
+  "created": 1795687453,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "ChatDev's chat chain follows three sequential phases when developing software: design, coding, and testing. The coding phase is further subdivided into subtasks of code writing and completion, and the testing phase is segmented into code review (static testing) and system testing (dynamic testing)."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1562,
+   "completion_tokens": 57,
+   "total_tokens": 1619
+  },
+  "contexts": [
+   {
+    "text": "In addition, to alleviate unexpected hallu- cinations, a communicative pattern named commu- nicative dehallucination is devised, wherein agents request more detailed information before respond- ing directly and then continue the next round of communication based on these details.   3.1 Chat Chain Although LLMs show a good understanding of nat- ural and programming languages, efficiently trans-   forming textual requirements into functional soft- ware in a single step remains a significant challenge. ChatDev thus adopts the core principles of the wa- terfall model, using a chat chain (C) with sequential phases (P), each comprising sequential subtasks (T ). Specifically, ChatDev segments the software development process into three sequential phases: design, coding, and testing. The coding phase is further subdivided into subtasks of code writing and completion, and the testing phase is segmented into code review (static testing) and system testing (dynamic testing), as illustrated in Figure 2. In every subtask, two agents, each with their own spe- cialized roles (e.g., a reviewer skilled at identifying endless loops and a programmer adept in GUI de- sign), perform the functions of an instructor (I) and an assistant (A). The instructor agent initiates instructions, instructing (→) the discourse toward the completion of the subtask, while the assistant agent adheres to these instructions and responds with (;) appropriate solutions.",
+    "score": 0.7084485017100385,
+    "source": "073 - ChatDev Communicative Agents for Software Development.pdf",
+    "page": 3
+   },
+   {
+    "text": "guages (Pudlitz et al., 2019; Martín and Abran, 2015; Nahar et al., 2022), along with system de- velopment and debugging in programming lan- guages (Gao et al., 2019; Wang et al., 2016; Wan et al., 2022). Numerous studies employ the wa- terfall model, a particular software development life cycle, to segment the process into discrete phases (e.g., design, coding, testing) and apply deep learning to improve the effectiveness of cer- tain phases (Winkler et al., 2020; Ezzini et al., 2022; Thaller et al., 2019; Zhao et al., 2021; Nijkamp et al., 2023; Wan et al., 2018; Wang et al., 2021).   3 ChatDev   We introduce ChatDev, a :::: chat-powered software-   ::: development framework that integrates multiple \"software agents\" with various social roles (e.g., requirements analysts, professional programmers and test engineers) collaborating in the core phases of the software life cycle, see Figure 1. Technically, to facilitate cooperative communication, ChatDev introduces chat chain to further break down each phase into smaller and manageable subtasks, which guides multi-turn communications between differ- ent roles to propose and validate solutions for each subtask.",
+    "score": 0.6874101491276083,
+    "source": "073 - ChatDev Communicative Agents for Software Development.pdf",
+    "page": 3
+   },
+   {
+    "text": "Technically, ChatDev uses a chat chain to divide each phase into smaller subtasks further, enabling agents’ multi-turn communications to cooperatively pro- pose and develop solutions (e.g., creative ideas or source code). The chain-structured workflow guides agents on what to communicate, foster- ing cooperation and smoothly linking natural- and programming-language subtasks to propel problem- solving. Additionally, to minimize coding halluci- nations, ChatDev includes an communicative de- hallucination mechanism, enabling agents to ac- tively request more specific details before giving direct responses. The communication pattern in- structs agents on how to communicate, enabling precise information exchange for effective solu- tion optimization while reducing coding hallucina- tions. We built a comprehensive dataset containing   software requirement descriptions and conducted comprehensive analyses. The results indicate that ChatDev notably improves the quality of software, leading to improved completeness, executability, and better consistency with requirements. Further investigations reveal that natural-language com- munications contribute to comprehensive system design, while programming-language communica- tions drive software optimization.",
+    "score": 0.6311344941313561,
+    "source": "073 - ChatDev Communicative Agents for Software Development.pdf",
+    "page": 2
+   },
+   {
+    "text": "This approach continues until all subtasks are com- pleted. It’s worth noting that the conceptually simple but empirically powerful chain-style struc- ture guides agents on what to communicate, foster- ing cooperation and smoothly linking natural- and programming-language subtasks. It also offers a transparent view of the entire software development process, allowing for the examination of intermedi- ate solutions and assisting in identifying possible problems.   Agentization To enhance the quality and reduce human intervention, ChatDev implements prompt engineering that only takes place at the start of each subtask round. As soon as the communica- tion phase begins, the instructor and the assistant will communicate with each other in an automated loop, continuing this exchange until the task con- cludes. However, simply exchanging responses cannot achieve effective multi-round task-oriented communication, since it inevitably faces significant challenges including role flipping, instruction re- peating, and fake replies. As a result, there is a failure to advance the progression of productive communications and hinders the achievement of meaningful solutions. ChatDev thus employs in- ception prompting mechanism (Li et al., 2023a) for initiating, sustaining, and concluding agents’ communication to guarantee a robust and efficient workflow. This mechanism is composed of the in- structor system prompt PI and the assistant system prompt PA.",
+    "score": 0.5636173224379695,
+    "source": "073 - ChatDev Communicative Agents for Software Development.pdf",
+    "page": 4
+   },
+   {
+    "text": "cally shows a consistent decrease in errors, steadily moving towards successful software execution.   5 Conclusion   We have introduced ChatDev, an innovative multi- agent collaboration framework for software devel- opment that utilizes multiple LLM-powered agents to integrate fragmented phases of the waterfall model into a cohesive communication system. It features chat chain organizing communication tar- gets and dehallucination for resolving coding hal- lucinations. The results demonstrate its superiority and highlight the benefits of multi-turn communi- cations in software optimization. We aim for the insights to advance LLM agents towards increased autonomy and illuminate the profound effects of \"language\" and its empowering role across an even broader spectrum of applications.   6 Limitations   Our study explores the potential of cooperative autonomous agents in software development, but certain limitations and risks must be considered by researchers and practitioners. Firstly, the capabili- ties of autonomous agents in software production might be overestimated. While they enhance de- velopment quality, agents often implement simple logic, resulting in low information density. With- out clear, detailed requirements, agents struggle to grasp task ideas. For instance, vague guidelines in developing a Snake game lead to basic representa-   tions; in information management systems, agents might retrieve static key-value placeholders instead of external databases. Therefore, it is crucial to clearly define detailed software requirements.",
+    "score": 0.5475421314326356,
+    "source": "073 - ChatDev Communicative Agents for Software Development.pdf",
+    "page": 9
+   }
+  ],
+  "sources": [
+   "073 - ChatDev Communicative Agents for Software Development.pdf",
+   "073 - ChatDev Communicative Agents for Software Development.pdf",
+   "073 - ChatDev Communicative Agents for Software Development.pdf",
+   "073 - ChatDev Communicative Agents for Software Development.pdf",
+   "073 - ChatDev Communicative Agents for Software Development.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "3db34405-d6a6-4f95-a8fc-44d57c1b4ca2",
+  "X-Amzn-Trace-Id": "Root=1-6b08041d-6c69519836620e2e55e58cc6;Parent=2c5b23908dafc66e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.768
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:12+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Which phases does ChatDev's chat chain follow when developing software?"
+   }
+  ]
+ },
+ "from_cache": false
+}

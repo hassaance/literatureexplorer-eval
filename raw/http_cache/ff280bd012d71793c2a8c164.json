@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.454,
+ "json": {
+  "query": "Agent Harness for Large Language Model Agents: A Survey",
+  "contexts": [
+   {
+    "text": "Article Not peer-reviewed version   Agent Harness for Large Language   Model Agents: A Survey   Qianyu Meng , Yanan Wang , Liyi Chen * , Qimeng Wang , Chengqiang Lu , Wei Wu , Yan Gao , Yi Wu , Yao Hu   Posted Date: 7 April 2026   doi: 10.20944/preprints202604.0428.v1   Keywords: agent harness; large language model   Preprints.org is a free multidisciplinary platform providing preprint service   that is dedicated to making early versions of research outputs permanently   available and citable. Preprints posted at Preprints.org appear in Web of   Science, Crossref, Google Scholar, Scilit, Europe PMC.   Copyright: This open access article is published under a Creative Commons CC BY 4.0   license, which permit the free download, distribution, and reuse, provided that the author   and preprint are cited in any reuse.",
+    "score": 0.75713948020203,
+    "source": "043 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Article Not peer-reviewed version   Agent Harness for Large Language   Model Agents: A Survey   Qianyu Meng , Yanan Wang , Liyi Chen * , Qimeng Wang , Chengqiang Lu , Wei Wu , Yan Gao , Yi Wu , Yao Hu   Posted Date: 7 April 2026   doi: 10.20944/preprints202604.0428.v1   Keywords: agent harness; large language model   Preprints.org is a free multidisciplinary platform providing preprint service   that is dedicated to making early versions of research outputs permanently   available and citable. Preprints posted at Preprints.org appear in Web of   Science, Crossref, Google Scholar, Scilit, Europe PMC.   Copyright: This open access article is published under a Creative Commons CC BY 4.0   license, which permit the free download, distribution, and reuse, provided that the author   and preprint are cited in any reuse.",
+    "score": 0.75713948020203,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "This survey makes five contributions: (1) A formal definition of agent harness with labeled-transition-system semantics distinguishing safety and liveness properties of the execution loop. (2) A historical account tracing the harness concept from software test harnesses through reinforcement learning environments to modern LLM agent infrastructure, showing convergence toward a common architectural pattern. (3) An empirically-grounded taxonomy of 22 representative systems validated against a six-component completeness matrix (Execution environment, Tool integration, Context management, Scope negotiation, Loop management, Verification). (4) A systematic analysis of nine cross-cutting technical challenges—from sandboxing and evaluation to protocol standardization and compute economics—including an empirical protocol comparison (MCP vs. A2A) and analysis of ultra-long-context model implications. (5) Identification of emerging research directions where harness- layer infrastructure remains underdeveloped relative to component capabilities. The evidence base is grounded in three peer-reviewed empirical studies (HAL on harness-level reliability, SWE-bench on evaluation infrastructure, and AgencyBench on cross-component coupling), supplemented by practitioner reports from large-scale deployments (OpenAI, Stripe, METR) that corroborate the binding constraint thesis. We scope our analysis to end-to-end agentic systems (excluding single-step language model use) and restrict our taxonomy to systems with public documentation, acknowledging that proprietary harness designs remain largely unstudied.   Keywords: agent harness; large language model   1. Introduction 1.1.",
+    "score": 0.7331068714655207,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "This survey makes five contributions: (1) A formal definition of agent harness with labeled-transition-system semantics distinguishing safety and liveness properties of the execution loop. (2) A historical account tracing the harness concept from software test harnesses through reinforcement learning environments to modern LLM agent infrastructure, showing convergence toward a common architectural pattern. (3) An empirically-grounded taxonomy of 22 representative systems validated against a six-component completeness matrix (Execution environment, Tool integration, Context management, Scope negotiation, Loop management, Verification). (4) A systematic analysis of nine cross-cutting technical challenges—from sandboxing and evaluation to protocol standardization and compute economics—including an empirical protocol comparison (MCP vs. A2A) and analysis of ultra-long-context model implications. (5) Identification of emerging research directions where harness- layer infrastructure remains underdeveloped relative to component capabilities. The evidence base is grounded in three peer-reviewed empirical studies (HAL on harness-level reliability, SWE-bench on evaluation infrastructure, and AgencyBench on cross-component coupling), supplemented by practitioner reports from large-scale deployments (OpenAI, Stripe, METR) that corroborate the binding constraint thesis. We scope our analysis to end-to-end agentic systems (excluding single-step language model use) and restrict our taxonomy to systems with public documentation, acknowledging that proprietary harness designs remain largely unstudied.   Keywords: agent harness; large language model   1. Introduction 1.1.",
+    "score": 0.7331068714655207,
+    "source": "043 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "https://sciprofiles.com/profile/5225475        https://creativecommons.org/licenses/by/4.0/        https://creativecommons.org/licenses/by/4.0/Article   Agent Harness for Large Language Model Agents: A Survey Qianyu Meng 1,2, Yanan Wang 2,3, Liyi Chen 2,*, Qimeng Wang 2, Chengqiang Lu 2, Wei Wu 4, Yan Gao 2, Yi Wu 2 and Yao Hu 2   1 Minzu University of China 2 Xiaohongshu Inc. 3 Dalian University of Technology 4 University of Science and Technology of China * Correspondence: liyichencly@gmail.com   Abstract   The rapid deployment of large language model (LLM) based agents in production environments has surfaced a critical engineering problem: as agent tasks grow longer and more complex, task execution reliability increasingly depends not on the underlying model’s capabilities, but on the infrastructure layer that wraps around it—the agent execution harness. This dependence suggests that the harness, not the model, is the binding constraint for real-world agent system performance. We treat the harness as a unified research object deserving systematic study, distinct from its individual component capabilities.",
+    "score": 0.6725783607142805,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0404b2e6-d558-4f38-bdfc-ebbca08b6ef3",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fe-68dbbc6b3991b10949df2710;Parent=08ad0dedcd1ac2f1;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.454
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:57+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agent Harness for Large Language Model Agents: A Survey"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.368,
+ "json": {
+  "query": "What specific problem does the ChoiceMates system address, and how does its multi‑agent conversational approach differ from existing multi‑agent or web‑search solutions?",
+  "contexts": [
+   {
+    "text": "ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions   Jeongeon Park∗ jep034@ucsd.edu   University of California, San Diego La Jolla, CA, USA   Bryan Min bdmin@ucsd.edu   University of California, San Diego La Jolla, CA, USA   Kihoon Son kihoon.son@kaist.ac.kr   School of Computing, KAIST Daejeon, Republic of Korea   Jean Y. Song jeansong@yonsei.ac.kr   Information and Interaction Design, Yonsei University   Incheon, Republic of Korea   Xiaojuan Ma mxj@cse.ust.hk   Hong Kong University of Science and Technology   Hong Kong, China   Juho Kim juhokim@kaist.ac.kr   School of Computing, KAIST Daejeon, Republic of Korea   juho@skillbench.com SkillBench   Santa Barbara, CA, USA   Figure 1: ChoiceMates is an interactive multi-agent conversational system designed to support online decision-making in unfamiliar domains. In ChoiceMates, the user can converse with any selected set of agents in the conversation space (1) to gather diverse information and perspectives in the domain (supported by features that auto-highlight criteria and options in the conversation history) (2) tomanage and understand the information found.",
+    "score": 0.6745503107758457,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 1
+   },
+   {
+    "text": "We present ChoiceMates, a multi-agent conversational system where the user can navigate the unfamiliar decision-making pro- cess by conversing with a set of agents and constructing the user’s own preference space. In ChoiceMates, each agent is characterized by a unique descriptor (i.e., a single-line description of the agent; a professional photographer in Fig. 3), a set of valued criteria (quality, durability, and battery in Fig. 3), and a single option (Canon EOS 5D Mark IV in Fig. 3) to reflect the unique experience, to support intuitive exploration of diverse perspectives. The user takes full control of the agents, and can converse with any individual or group of agents in the conversation space (Fig.1-1) to explore and expand the information in the decision space. Agents, auto-detected crite- ria, and options from the conversation appear as the conversation         https://doi.org/10.1145/3742413.3789107ChoiceMates IUI ’26, March 23–26, 2026, Paphos, Cyprus   history (Fig.1-2) to help users uncover and keep track of the key information found. The user can save agents, criteria, and options to the preference space (Fig.1-3) with brief notes throughout the conversation to shape the user’s preferences and utilize them when making the final decision.",
+    "score": 0.6561653404295428,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our study comparing ChoiceMates to a web search condition and a multi- agent framework condition reveals that ChoiceMates can support a broader exploration of information in the decision space and a   higher-quality decision compared to MultiAgent, and can better organize and structure the information found, leading to a more satisfied process and confident final decision compared to Web. We describe different strategies used to orchestrate the agents in ChoiceMates for unfamiliar decision-making, then discuss user-side implications of a multi-agent conversational system for information discovery and decision-making support.   9 GenAI Usage Disclosure Other than the large language model used to develop the core functionalities of ChoiceMates, generative AI was not used in any part of the research process other than writing assistance. During the writing process, the authors used generative AI to proofread and detect minor grammar issues and misprints.   Acknowledgments This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korea government (Ministry of Sci- ence and ICT) (No.RS-2025-00557726), and Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No.RS-2024-00443251, Ac- curate and Safe Multimodal, Multilingual Personalized AI Tutors).",
+    "score": 0.6559109908538403,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 17
+   },
+   {
+    "text": "Multiple agents can surface diverse opinions and per- spectives in the domain through distinct viewpoints, allowing users to juxtapose opinions, discover trade-offs, and surface relevant criteria early rather than assembling information from scattered sources sequentially. Conversational interaction can support light- weight exchanges of information needs: users can ask follow-ups, compare options, and focus the search on their context. Together, a conversational set of agents could help users learn key domain knowledge, identify plausible options, and develop personalized standards within a limited time budget.   Many existing multi-agent systems primarily aim to automate the process of solving complex tasks with minimal human inter- vention by assigning agents into different subtasks [43, 88] or roles [25, 81, 81]. However, there is a limited exploration of multi-agent interfaces with interactionswhere the user is assisted or empowered by collaborating with a set of agents. For tasks like information seeking and (unfamiliar) decision-making where human prefer- ences and opinions play a significant role, it is important to keep users in the loop, as full automation may lead the users to naively follow agents’ guidance and lose agency over their decisions.   We present ChoiceMates, a multi-agent conversational system where the user can navigate the unfamiliar decision-making pro- cess by conversing with a set of agents and constructing the user’s own preference space.",
+    "score": 0.6535052194439703,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 2
+   },
+   {
+    "text": "Facilitate users in building preferences relative to the domain. The participants mentioned the difficulty of gain- ing personalized standards (e.g., a travel destination less than 3 hours via flight) that would help them assess the information found. Rather than assuming users can form standards from scratch, the system can use exploration his- tory as a starting point to surface preference candidates, and have the users confirm or revise them. To reduce theChoiceMates IUI ’26, March 23–26, 2026, Paphos, Cyprus   risk of filter bubbles, the system should also surface con- trasting opinions alongside emerging preferences. Identified aspects could then function as evidence for the user to eval- uate later discovered information and gradually clarify their preferences over the decision-making period.   5 ChoiceMates: A Multi-Agent Conversational System   From our findings and the design goals, we designed and developed ChoiceMates, an interactive multi-agent conversational system that assists users in unfamiliar decision-making—situations where users must make a decision in a domain where they lack prior do- main knowledge and well-formed preferences, often under a limited time budget. Note that the scope of unfamiliar decision-making ChoiceMates is designed to support does not include primarily high-stakes or overly complex decision contexts (e.g., those requir- ing extensive verification, long-term deliberation, or multi-stage planning), which we discuss further in Section 7.3.",
+    "score": 0.65039976178548,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 6
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f3f3d342-666d-45d8-b5fa-1089a38af65c",
+  "X-Amzn-Trace-Id": "Root=1-6b080453-746cdf1d5228bc4f7a979d54;Parent=79922d63479cb0c2;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.368
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:07+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What specific problem does the ChoiceMates system address, and how does its multi‑agent conversational approach differ from existing multi‑agent or web‑search solutions?"
+ },
+ "from_cache": false
+}

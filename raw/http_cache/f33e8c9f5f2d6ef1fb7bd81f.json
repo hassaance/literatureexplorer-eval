@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.313,
+ "json": {
+  "query": "Learning from Online Videos at Inference Time for Computer-Use Agents",
+  "contexts": [
+   {
+    "text": "This observation motivates our central research question: How can we enable computer-use agents to learn effectively from online videos at inference time?   1   ar X   iv :2   51 1.   04 13   7v 1   [ cs   .C V   ] 6   N ov   2 02   5         https://github.com/UCSB-NLP-Chang/video_demo        https://arxiv.org/abs/2511.04137v1Answering this question is challenging for two reasons. First, there is a gap between watching videos and completing tasks as computer-use agents. Videos are continuous streams of frames, whereas agents issue actions as individual events, and they only observe sparse screenshots after completion of each action. Moreover, agents need to generate explicit UI actions, but actions performed in the videos are implicit and need to be inferred from screen transitions. Bridging from pixel changes in a video to actionable steps is therefore nontrivial. Second, raw videos are long and often contain digressions. During execution, an agent usually needs only a short, locally relevant snippet that matches its current observation and subgoal, so injecting entire videos can distract more than help.   To address these challenges, we introduce an inference-time learning-from-video framework that turns raw video tutorials into compact, actionable demonstrations the agent can consult step by step. Our approach has three components.",
+    "score": 0.7390003155147589,
+    "source": "059 - Learning from Online Videos at Inference Time for Computer-Use Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Learning from Online Videos at Inference Time for Computer- Use Agents   Yujian Liu1, Ze Wang2, Hao Chen2, Ximeng Sun2, Xiaodong Yu2, Jialian Wu2, Jiang Liu2, Emad Barsoum2, Zicheng Liu2, Shiyu Chang1 1UC Santa Barbara 2Advanced Micro Devices, Inc. {yujianliu,chang87}@ucsb.edu   Abstract   Computer-use agents can operate computers and automate laborious tasks, but despite recent rapid progress, they still lag behind human users, especially when tasks require domain-specific procedural knowledge about particular applications, platforms, and multi- step workflows. Humans can bridge this gap by watching video tutorials: we search, skim, and selectively imitate short segments that match our current subgoal. In this paper, we study how to enable computer-use agents to learn from online videos at inference time effectively. We propose a framework that retrieves and filters tutorial videos, converts them into structured demonstration trajectories, and dynamically selects trajectories as in-context guidance during execution. Particularly, using a VLM, we infer UI actions, segment videos into short subsequences of actions, and assign each subsequence a textual objective. At inference time, a two-stage selection mechanism dynamically chooses a single trajectory to add in context at each step, focusing the agent on the most helpful local guidance for its next decision.",
+    "score": 0.7354655905870033,
+    "source": "059 - Learning from Online Videos at Inference Time for Computer-Use Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Recent works have made rapid progress on a wide range of desktop and web tasks, yet a substantial gap remains between their performance and that of human users (Wang et al., 2025a; Agashe et al., 2025b; Wang et al., 2025b). We argue that a key reason for this gap is the agent’s limited access to domain-specific procedural knowledge: how to operate particular applications, cope with idiosyncratic UI conventions, and execute multi-step workflows that depend on software version and platform. While agents continue to improve, progress on these capabilities is constrained by the scarcity of such data in large language models’ (LLMs) training corpus.   On the contrary, humans are usually not limited by the lack of such domain knowledge. When we encounter unfamiliar applications or platforms, we rarely rely on our general knowledge alone. Instead, we consult online video tutorials and quickly learn useful information from the demonstrations. More specifically, we are able to search, skim, and selectively imitate video segments that match our immediate subgoals. These videos are abundant and richly visual, showcasing concrete UI manipulations that text-only resources frequently omit. This observation motivates our central research question: How can we enable computer-use agents to learn effectively from online videos at inference time?",
+    "score": 0.6648337511028739,
+    "source": "059 - Learning from Online Videos at Inference Time for Computer-Use Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Specifically, we modify our method so that when providing the selected trajectory in context, we only provide the textual information (objective and action sequence), without the screenshot at each step. Table 4 shows that this variant (no visual information) is worse than our original method, which provides the sequence of screenshots in context. This indicates that text-only summaries cannot cover all useful information in the video, and adding visual information can further boost the performance of the agent.   5 Conclusion   We studied how computer-use agents can learn from online videos at inference time, inspired by how humans watch and imitate short segments of tutorials to acquire domain-specific procedural knowledge. We proposed a framework that retrieves and filters tutorial videos, converts them into structured, visually grounded   8demonstration trajectories using a VLM, and dynamically selects a single trajectory as in-context guidance at each step. Experiments show consistent gains over strong base agents and variants using only textual tutorials or transcripts, and analyses highlight the importance of trajectory segmentation and selection, action filtering, and visual information.   6 Acknowledgements   The work of Yujian Liu and Shiyu Chang was partially supported by National Science Foundation (NSF) Grant IIS-2338252, NSF Grant IIS-2207052, and NSF Grant IIS-2302730.   References Saaket Agashe, Jiuzhou Han, Shuyu Gan, Jiachen Yang, Ang Li, and Xin Eric Wang.",
+    "score": 0.6079607002332847,
+    "source": "059 - Learning from Online Videos at Inference Time for Computer-Use Agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "To address these challenges, we introduce an inference-time learning-from-video framework that turns raw video tutorials into compact, actionable demonstrations the agent can consult step by step. Our approach has three components. First, given the task description, the agent generates search queries, searches online videos, and filters them to a small set of relevant tutorials. Second, a processing pipeline converts each filtered video into structured demonstration trajectories. Specifically, an off-the-shelf vision language model (VLM) infers underlying UI actions and synthesizes a concise objective for each subsequence of actions. With additional filtering of low-quality subsequences, this step yields a set of demonstration trajectories, each with a textual objective and a sequence of actions and observations. Third, a dynamic selection method ensures the agent consumes only what matters at the moment of decision. Particularly, before issuing the next action, the agent performs a coarse ranking of demonstrations followed by a detailed inspection of action lists to select a single trajectory that is most helpful for the next action. The selected trajectory is then provided in context to guide the agent’s next decision. This design operationalizes how humans learn from videos: we search, skim, and imitate only the few seconds that matter. By converting videos into short, validated, visually grounded trajectories, the agent receives exactly the local guidance it needs, in the format it can act on.",
+    "score": 0.5835022455000268,
+    "source": "059 - Learning from Online Videos at Inference Time for Computer-Use Agents.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "aeeb3d75-9bd7-4fb1-9510-a484f860b89a",
+  "X-Amzn-Trace-Id": "Root=1-6b080500-48f79c8f52fad1f64a95bccc;Parent=25df4735ab54d1d5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.313
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:00+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Learning from Online Videos at Inference Time for Computer-Use Agents"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.311,
+ "json": {
+  "query": "Multi-Agent Collaboration via Evolving Orchestration",
+  "contexts": [
+   {
+    "text": "Multi-Agent Collaboration via Evolving Orchestration   Yufan Dang⋆† Chen Qian♣† Xueheng Luo⋆ Jingru Fan⋆ Zihao Xie⋆   Ruijie Shi⋆ Weize Chen⋆ Cheng Yang♠ Xiaoyin Che♢ Ye Tian♡   Xuantang Xiong♡ Lei Han♡ Zhiyuan Liu⋆B Maosong Sun⋆B   ⋆Tsinghua University ♣Shanghai Jiao Tong University ♠Beijing University of Posts and Telecommunications   ♢Siemens ♡Tencent Robotics X dangyf25@mails.tsinghua.edu.cn qianc@sjtu.edu.cn   liuzy@tsinghua.edu.cn sms@tsinghua.edu.cn   Abstract   Large language models (LLMs) have achieved remarkable results across diverse downstream tasks, but their monolithic nature restricts scalability and efficiency in complex problem-solving. While recent research explores multi-agent collab- oration among LLMs, most approaches rely on static organizational structures that struggle to adapt as task complexity and agent numbers grow, resulting in coordination overhead and inefficiencies.",
+    "score": 0.7715031547782008,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 1
+   },
+   {
+    "text": "Drawing inspiration from puppet shows—where a central puppeteer skillfully directs multiple puppets behind the scenes—we reconceptualize multi-agent collaboration as a reasoning process orchestrated by a centralized puppeteer who dynamically selects and sequences agent activations based on evolving task states, implicitly coordinating collaboration within the group. As tasks progress, the orchestrator learns to prioritize effective agents and suppress less efficient ones, continually driving the system toward higher overall performance and efficiency.   Specifically, our framework advances multi-agent reasoning by introducing two key innovations: (i) Dynamic Orchestration: Moving beyond static collaboration patterns, we employ a dynamic orchestrator that routing agents at each step based on the current contexts. This process is formulated as a sequential decision problem, effectively yielding an implicit inference graph and supporting flexible, scalable agent coordination. (ii) Adaptive Evolution: To maximize efficiency and minimize redundancy, we employ reinforcement learning to continuously update the orchestrator’s policy by leveraging feedback from completed tasks. Over time, the orchestrator learns to emphasize strong agent trajectories and prune less effective ones, enabling the system to evolve toward greater efficiency progressively.   Empirical results on both closed- and open-domain scenarios demonstrate that our approach consis- tently yields more effective solutions while requiring less computational overhead.",
+    "score": 0.6511199374883231,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 2
+   },
+   {
+    "text": "To address these challenges, recent research has drawn inspiration from human teamwork, exploring multi-agent systems (MAS) comprising diverse LLM-based agents with specialized skills [45, 52], personalized reasoning patterns [70, 76, 43], and external tool integrations [85, 47]. However, many existing approaches rely on predefined or statically generated agent topologies [61, 44] that lack flexibility and scalability. This rigidity often leads to increased coordination overhead, degraded system performance, and inefficiencies as the variety of tasks [81, 23] and the number of agents scale [45]. Especially in large-scale scenarios, the absence of principled and dynamic coordination can further result in redundant computation [77], ineffective communication [13], and diminished collective problem-solving effectiveness [6].1   Can dynamic2 orchestration simultaneously maximize collaborative effectiveness and computational efficiency? Answering this question is crucial for building scalable, robust, and practical collective intelligence suitable for complex real-world settings. To this end, we propose a novel paradigm for constructing flexible and continually evolving multi-agent system. Drawing inspiration from puppet shows—where a central puppeteer skillfully directs multiple puppets behind the scenes—we reconceptualize multi-agent collaboration as a reasoning process orchestrated by a centralized puppeteer who dynamically selects and sequences agent activations based on evolving task states, implicitly coordinating collaboration within the group.",
+    "score": 0.6362633025937076,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 2
+   },
+   {
+    "text": "Instead, inspired by centralized coordination (e.g., a puppeteer managing multiple puppets), we model the system as driven by a centralized orchestrator. This orchestrator dynamically selects which agents to activate in each step, based on the dynamic task state, and delegates reasoning to the selected agents. Such centralization decouples agent selection from internal agent behaviors, greatly enhancing adaptability and scalability without extensive parameter retraining.   Serialized Orchestration Another challenge stems from the combinatorially large space of possible collaboration topologies among agents. Exhaustive search is infeasible, thus prior work focuses only on canonical graphs (e.g., chains, trees, graphs) [76, 70, 2]. Instead, we propose to serialize the collaborative reasoning process: rather than searching the entire topological space, the orchestrator \"unfolds\" the graph into a reasoning sequence guided by a topological traversal strategy. By main- taining a topological ordering, the reasoning steps follow the partial order implied by the problem dependencies. It is important to note that although the orchestration of agents appears to be serialized and \"unfolded\", when this episode is restored through folding, it can be reconstructed as a directed graph (with agents as nodes and orchestration partial order relations as edges).   Building on the two concepts above, we formalize the multi-agent collaboration as a sequential decision process governed by a centralized policy π.",
+    "score": 0.5904921118386178,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 3
+   },
+   {
+    "text": "Beyond LLM-based MAS, classical MARL (Multi Agent Reinforcement Learning) works [26, 65, 34, 63] have long explored coordination and role specialization, offering key inspirations for our RL-driven orchestration in LLM-based multi-agent systems.   5 Conclusion   We proposed a novel framework for adaptive multi-agent LLM collaboration inspired by puppet show orchestration, where a centralized, learnable \"puppeteer\" orchestrator dynamically activated agents within a directed graph-of-thoughts. Unlike previous methods with static or manually designed topologies, our approach incorporated context-sensitive orchestration and reinforcement learning- driven policy adaptation, enabling more principled and efficient collaboration. Experiments on diverse tasks showed that our method achieved superior solution quality and reduced computational cost. Analyses further revealed that the orchestrator promoted compact, cyclic reasoning structures, underpinning the performance improvements. We hope this work can constitute a valuable step toward dynamic and scalable coordination in multi-agent collaboration.   Acknowledgement   The work was supported by the Tencent Rhino-Bird Focused Research Program.",
+    "score": 0.585695296582058,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a554121a-9e69-489d-a691-0a29a120d2c1",
+  "X-Amzn-Trace-Id": "Root=1-6b080504-7742ce4f7999318a7aa7c0da;Parent=3edadd4a64155aaa;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.311
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:04+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Multi-Agent Collaboration via Evolving Orchestration"
+ },
+ "from_cache": false
+}

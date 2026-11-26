@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.657,
+ "json": {
+  "id": "chatcmpl-504ce82c-6541-4198-8980-81c6a7b8486e",
+  "object": "chat.completion",
+  "created": 1795687482,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The text-embedding model used to embed affordance descriptions during the semantic clustering stage in the CreativityBench pipeline is Text-Embedding-3-Large. Typically, this process produces approximately 3.2K–3.7K clusters per scenario."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1680,
+   "completion_tokens": 51,
+   "total_tokens": 1731
+  },
+  "contexts": [
+   {
+    "text": "The scenario is derived from the affordance annotation (a, Cu, Ce, Cr) and potential recipients.   *https://developers.openai.com/api/docs/models/text-embedding-3-large   8Preprint. Under review.   1. Gold Affordance Sampling 2. Task Synthesis 4.Distractor Sampling   Common Affordance   Rare Affordance   Cluster Size   Affordance Typicality Level Normal Emergency   Scenario   Cutting, Wine Bottle Common, Emergency   Use Env. Recipient   Condition   Gold Affordance   ( (   Break Wine Bottle No condition Softer Items < Glass Hardness   Cutting   3. Gold Verification   Intra-Entity Comparison   Cutting   Cutting   Discard Knife From Scene   Inter-Entity Comparison   Scene   Distractor Count   Affordance Similarity   ( (   Dissimilar Similar   Knowledge Base   Sampled Task   Entities in Scene   Scenario   Dissimilar Affordance   Many Distractors   Gold Common,   Emergency   Figure 5: The pipeline for CreativityBench task sampling.   Concretely, the generated task describes a goal such that:   S ⇒ (Cu ∧ Ce ∧ Cr) ∧ a.   The scenario provides an environmental context in a grounded first-person narrative while with- holding the affordance itself. The model must therefore infer the actionable affordance by reasoning over the attributes A(p) of the entities present in the environment.",
+    "score": 0.5821735325326437,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 8
+   },
+   {
+    "text": "To ensure diversity and controllable difficulty, we first cluster affordances within each scenario.   For a scenario s ∈ S, let Fs ⊂ F denote its affordances. Each affordance is embedded using Text- Embedding-3-Large*, and complete-linkage hierarchical clustering is applied over the extracted embeddings to obtain   Fs = Ks⋃   k=1   Ck,   where each Ck contains a set of semantically similar affordances. In practice, this yields approxi- mately 3.5K clusters per scenario.   A gold affordance f ∗ (i.e. ground truth affordance) is then sampled from these clusters under several controllable factors: • Cluster Size: whether f ∗ originates from a large cluster (common affordance) or a small cluster   (rare affordance). • Affordance Typicality Level: whether f ∗ is normal or an emergency affordance of level l. This structured sampling ensures that the benchmark contains a balanced mixture of common and long-tail affordances while enabling controlled analysis of model behavior across different creativity regimes.   Task Synthesis. Given the sampled gold affordance g = (e∗, p∗, f ∗), we generate a natural- language scenario description S whose completion requires executing f ∗. The scenario is derived from the affordance annotation (a, Cu, Ce, Cr) and potential recipients.",
+    "score": 0.5597350219095223,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 8
+   },
+   {
+    "text": "Then output JSON array of 6 diverse and non-overlapping affordances of different levels following the schema and instructions above.   D Task Creation Pipeline Details   D.1 Overview of Sampling Stages   The task creation pipeline is designed to produce rigorous yet creativity-demanding benchmark tasks. For each task, we enforce three properties: (1) a clearly defined gold affordance (entity-part- action) that is truly preferred, (2) distractor entities that are controlled by semantic similarity and decision ambiguity, and (3) a grounded first-person task narrative with judge-checkable solution constraints. We organize the pipeline into conceptual stages as follows.   Stage A: Scenario-wise Semantic Clustering. We first aggregate all annotated affordances (with their part-level physical/state context) and build two lookup spaces: an entity-level lookup and an affordance-level lookup. This allows every sampled affordance to be traced back to its exact scenario, entity, part, and annotation fields. Then, within each scenario, we embed affordance texts using Text-Embedding-3-Large and perform complete-linkage hierarchical clustering with an adaptive distance threshold plus a hard diameter cap. This yields compact semantic bins of affordances and supports structured gold sampling by (i) cluster-size band and (ii) affordance level (Normal 0 or Emergency 1–5). In our current run, this produces roughly 3.2K–3.7K clusters per scenario.",
+    "score": 0.5570488802189997,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 41
+   },
+   {
+    "text": "This framing motivates our benchmark design: to construct creative tool use tasks and trajectories, we treat affordances as the organizing principle and ground them in the attributes of tools and other entities present in the environment. In this section, we describe how we build the affordance knowledge base and sample tasks for CreativityBench. To scale the annotation process, we use an LLM-assisted pipeline and adopt a reverse-engineering procedure that composes high-level creative tasks by chaining lower-level affordances.   At the core of CreativityBench is an affordance knowledge base that explicitly models how ac- tionable possibilities arise from object structure and physical properties. We adopt a top-down annotation pipeline that represents each object as a hierarchy linking entities, parts, attributes, and affordances. Formally, let E denote the set of entities. For each entity e ∈ E , we decompose it into a set of parts P(e), annotate the attributes of A(p) associated with each part p ∈ P(e), and derive the corresponding affordances F(p) enabled by those attributes of the part p. This results in a structured mapping e → P(e) → A(p) → F(p). An overview of our pipeline is shown in Figure 4.   4.1 Affordance Knowledge Base Construction   Entity Decomposition.",
+    "score": 0.5476684630104612,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 6
+   },
+   {
+    "text": "• How to design a benchmark that rigorously evaluates affordance-based creative tool use beyond   coarse object-level reasoning? • How do current state-of-the-art models perform on affordance-based creative intelligence? To address these questions, we introduce CreativityBench, the first large-scale benchmark de- signed to systematically evaluate creative intelligence through affordance-based creative tool use. Our benchmark is enabled by a scalable affordance annotation pipeline that constructs a structured affordance knowledge base (KB) linking objects, their constituent parts, attributes, and associated affordances, grounding model judgments in concrete object properties rather than semantic guessing alone. The resulting KB contains over 4K entities and 150K affordance annota-   2Preprint. Under review.   tions, forming reusable building blocks for task generation, trajectory construction, and evaluation. Using this KB, we generate diverse and physically grounded tasks by reverse-engineering creative solution trajectories, ensuring that each task requires non-obvious, physically grounded affordance reasoning rather than surface-level object matching.   We evaluate multiple proprietary and open-source models on a comprehensive suite of 14K tasks and reveal striking insights about the current limits of model creativity. First, exact physical grounding remains a severe bottleneck: while models can often identify a plausible tool entity, they fail to ground its use at the specific part or attribute level, resulting in a performance drop of over 60%.",
+    "score": 0.5327169471917507,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+   "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+   "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+   "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+   "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "504ce82c-6541-4198-8980-81c6a7b8486e",
+  "X-Amzn-Trace-Id": "Root=1-6b08043a-7fbd9dcb7984703d75ac6b00;Parent=77de73038738c20e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.657
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:42+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the CreativityBench pipeline, which text‑embedding model is used to embed affordance descriptions during the semantic clustering stage, and how many clusters are typically produced per scenario?"
+   }
+  ]
+ },
+ "from_cache": false
+}

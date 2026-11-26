@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.37,
+ "json": {
+  "query": "A Survey on Large Language Model based Autonomous Agents",
+  "contexts": [
+   {
+    "text": "This capability arises from lever- aging comprehensive training datasets alongside a substantial number of model parameters. Build- ing upon this capability, there has been a growing   research area that employs LLMs as central con- trollers to construct autonomous agents to obtain human-like decision-making capabilities [11–17].   Compared to reinforcement learning, LLM-based agents possess more comprehensive internal world knowledge, enabling them to perform informed ac- tions even without training on specific domain data. Furthermore, LLM-based agents can offer natural language interfaces for human interaction, provid- ing greater flexibility and enhanced explainability.   Along this direction, researchers have developed numerous promising models (see Figure 1 for an overview), where the key idea is to equip LLMs with human capabilities such as memory and plan- ning to make them behave like humans and com- plete various tasks effectively. Previously, these models were proposed independently, with limited efforts made to summarize and compare them holis- tically. However, we believe that a systematic sum-Lei Wang et al. A Survey on Large Language Model based Autonomous Agents 3   mary of this rapidly developing field is of great significance for a comprehensive understanding of it and is beneficial in inspiring future research.   In this paper, we conduct a comprehensive sur- vey of the field of LLM-based autonomous agents. We organize our survey around three key aspects: construction, application, and evaluation of LLM- based autonomous agents.",
+    "score": 0.8265860590175439,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Front. Comput. Sci., 2025, 0(0): 1–42 https://doi.org/10.1007/s11704-024-40231-1   REVIEW ARTICLE   A Survey on Large Language Model based Autonomous Agents   Lei Wang, Chen Ma*, Xueyang Feng*, Zeyu Zhang, Hao Yang, Jingsen Zhang, Zhi-Yuan Chen, Jiakai Tang, Xu Chen(B), Yankai Lin(B), Wayne Xin Zhao,   Zhewei Wei, Ji-Rong Wen   Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, 100872, China   © Higher Education Press 2025   Abstract Autonomous agents have long been a research focus in academic and industry commu- nities. Previous research often focuses on training agents with limited knowledge within isolated envi- ronments, which diverges significantly from human learning processes, and makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of web knowledge, large language models (LLMs) have shown poten- tial in human-level intelligence, leading to a surge in research on LLM-based autonomous agents. In this paper, we present a comprehensive survey of these studies, delivering a systematic review of LLM- based autonomous agents from a holistic perspec- tive. We first discuss the construction of LLM-based autonomous agents, proposing a unified framework that encompasses much of previous work.",
+    "score": 0.7479935021659744,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "We first discuss the construction of LLM-based autonomous agents, proposing a unified framework that encompasses much of previous work. Then, we present an overview of the diverse applications of LLM-based autonomous agents in social science, natural science, and engineering. Finally, we delve into the evaluation strategies commonly used for   LLM-based autonomous agents. Based on the pre- vious studies, we also present several challenges and future directions in this field.   Keywords Autonomous agent, Large language model, Human-level intelligence   1 Introduction   “An autonomous agent is a system situated within and a part of an environment that senses that environment and acts on it, over time, in pursuit of its own agenda and so as to effect what it senses in the future.”   Franklin and Graesser (1997)   Autonomous agents have long been recognized as a promising approach to achieving artificial gen- eral intelligence (AGI), which is expected to ac-   Received month dd, yyyy; accepted month dd, yyyy   E-mail: xu.chen@ruc.edu.cn;yankailin@ruc.edu.cn *Both authors contribute equally to this paper.   ar X   iv :2   30 8.   11 43   2v 7   [ cs   .A I]   2 M   ar 2   02 52 Front. Comput.",
+    "score": 0.7221847259488022,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "A Survey on Large Language Model based Autonomous Agents 41   natural language generation. ACM Computing Surveys, 2023, 55(12): 1–38   Lei Wang is a Ph.D. candidate   at Renmin University of China,   Beijing. His research focuses on   recommender systems and agent-   based large language models.   Chen Ma is currently pursuing a   Master’s degree at Renmin Uni-   versity of China, Beijing, China.   His research interests include rec-   ommender system, agent based on   large language model.   Xueyang Feng is currently study-   ing for a Ph.D. degree at Ren-   min University of China, Beijing,   China. His research interests in-   clude recommender system, agent   based on large language model.   Zeyu Zhang is currently pursuing   a Master’s degree at Renmin Uni-   versity of China, Beijing, China.   His research interests include rec-   ommender system, causal infer-   ence, agent based on large lan-   guage model.   Hao Yang is currently studying for   a Ph.D. degree at Renmin Univer-   sity of China, Beijing, China. His   research interests include recom-   mender system, causal inference.",
+    "score": 0.7200468889252596,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 41
+   },
+   {
+    "text": "Re- Prompting [47] involves checking whether each step meets the necessary prerequisites before generating a plan. If a step fails to meet the prerequisites, it introduces a prerequisite error message and prompts the LLM to regenerate the plan. ReWOO [48] intro- duces a paradigm of separating plans from external observations, where the agents first generate plans and obtain observations independently, and then combine them together to derive the final results. HuggingGPT [13] first decomposes the task into many sub-goals, and then solves each of them based on Huggingface. Different from CoT and Zero- shot-CoT, which outcome all the reasoning steps in a one-shot manner, ReWOO and HuggingGPT produce the results by accessing LLMs multiply times. SWIFTSAGE [49], inspired by the dual- process theory of human cognition [50], combines the power of both SWIFT and SAGE modules for planning in complex interactive tasks. The SWIFT module provides quick responses based on learned patterns, while the SAGE module, using large lan- guage models, conducts in-depth planning by ask-Lei Wang et al. A Survey on Large Language Model based Autonomous Agents 11   ing key questions and generating action sequences to ensure successful task completion.   • Multi-path Reasoning. In this strategy, the reasoning steps for generating the final plans are organized into a tree-like structure. Each intermedi- ate step may have multiple subsequent steps.",
+    "score": 0.6766439818209071,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a0134fdb-b030-4935-bfc8-b0af7951394e",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f7-1e8149c965ccc40a3fc2d893;Parent=0a4c96ddc0edfecf;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.37
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:51+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A Survey on Large Language Model based Autonomous Agents"
+ },
+ "from_cache": false
+}

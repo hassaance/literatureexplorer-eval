@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.271,
+ "json": {
+  "query": "Towards autonomous medical artificial intelligence agents",
+  "contexts": [
+   {
+    "text": "1282  |  Nature  |  Vol 655  |  30 July 2026   Article   Towards autonomous medical artificial intelligence agents   Dyke Ferber1,2, Lars Hilgers2,3, Christiane Höper2, Benedict Kinny-Köster4,5, Jan-Niklas Eckardt2,3, Katharina Egger-Heidrich3, Marius Bill3, Martin M. K. Schneider3, Jan Clusmann2,3,6,7, Lejla Kadric8, Marcel Oehme9, Maximilian Mayrhofer-Schmid10,14, Alexander Oeser11, Georg Wölflein2, Isabella C. Wiest2,6, Jan Moritz Middeke2,3, A. John Iafrate12, Daniel Truhn13, Dirk Jäger1 & Jakob Nikolas Kather1,2,3 ✉   Large language models (LLMs) show great potential for clinical decision-making, yet most applications remain narrow, task-specific chat tools rather than systems integrated into clinical workflows1,2.",
+    "score": 0.5482970183150808,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Future iterations of MIRA could incorporate an explicit economic steward sub-agent, inspired by the cost-aware orchestra- tion in MAI-DxO15, that tracks cumulative costs of laboratory, imaging and procedure orders in real time. This sub-agent would sit on top of the current tool-calling policy, double check test requests and sug- gest lower-cost but guideline-concordant alternatives when available with thresholds and guidance that place stricter scrutiny on additional high-cost imaging than on incremental low-marginal-cost blood tests. Finally, even though our evaluation focused on the autonomous decision-making capabilities of MIRA, we emphasize that medical AI agents currently should not be designed to replace healthcare pro- fessionals21. Instead, their optimal role would be within collaborative clinical environments, either by assisting physicians through executing routine tasks under varying levels of human supervision or by providing evidence-based therapeutic recommendations that remain subject to physician approval, thereby augmenting human expertise rather than substituting it. However, our preliminary results indicate that agentic systems today can approach experienced-physician performance on several key tasks within a sandboxed EHR. Next, prospective validation will be essential to confirm whether this potential can be fully realized in real-world clinical settings.",
+    "score": 0.5455181869949319,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 10
+   },
+   {
+    "text": "Berlin, Germany. ✉e-mail: jakob.kather@med.uni-heidelberg.de         https://doi.org/10.1038/s41586-026-10675-5        http://crossmark.crossref.org/dialog/?doi=10.1038/s41586-026-10675-5&domain=pdf        mailto:jakob.kather@med.uni-heidelberg.deNature  |  Vol 655  |  30 July 2026  |  1283   external tools or executing software programs11. This concept holds great potential in healthcare, in which virtual AI copilots could col- laborate with medical professionals on cases under varying levels of supervision.   Several recent studies have explored the use of AI agents in health- care, from task-level agents operating within FHIR-compatible envi- ronments12 to benchmarks simulating clinical decision-making13,14. These include AMIE, a conversational diagnostic system optimized for patient–physician dialogue1, and MAI-DxO15, a multi-agent diag- nostician that improved diagnostic accuracy and cost efficiency on complex case vignettes. In live clinical practice, OpenAI and Penda Health have built a non-autonomous safety-net assistant that is embed- ded in primary-care workflows, which provides suggestions to physi- cians16.",
+    "score": 0.5392233060259365,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Recent studies show that LLM-powered agents are as strong as humans to some extent, as they can act in an environment, have their own memory, and know how to make use of external tools50. These advancements have been further extended to LLM-based multi-agent systems, which enhance reasoning and planning by simulating human activities and optimizing the collective power of multiple agents51.   In the medical domain, various research efforts in recent years have focused on building foundational medical models such as Google’s MedPalm series11, 52. Since 2023, there has also been a growing interest in developing medical agents. For instance, the MedAgents framework employs a multidisciplinary collaborative approach to enhance the performance of LLMs in zero-shot medical reasoning36, which highlights the versatility and utility of LLM agents in handling specialized terminology and complex reasoning in medical applications53. Recent studies are also exploring ways to enable medical agents to accomplish more complex tasks through collaboration38, 39. However, existing work lacks the integration of personalized memory for agents, limiting their capabilities to simple role-playing techniques to activate LLM functionalities. Consequently, these agents struggle to accumulate unique experience and evolve continuously during interactions, unlike human doctors. Compared with these studies, our study provides a new paradigm to train powerful medical agents.",
+    "score": 0.534693417969566,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 9
+   },
+   {
+    "text": ", Germany. 14Present address: Department of Hand-, Replantation-, and Microsurgery, BG Klinikum Unfallkrankenhaus Berlin and Chair of Hand-, Replantation-, and Microsurgery at the Charité Universitätsmedizin Berlin, Berlin, Germany. ✉e-mail: jakob.kather@med.uni-heidelberg.de         https://doi.org/10.1038/s41586-026-10675-5        http://crossmark.crossref.org/dialog/?doi=10.1038/s41586-026-10675-5&domain=pdf        mailto:jakob.kather@med.uni-heidelberg.deNature  |  Vol 655  |  30 July 2026  |  1283   external tools or executing software programs11. This concept holds great potential in healthcare, in which virtual AI copilots could col- laborate with medical professionals on cases under varying levels of supervision.   Several recent studies have explored the use of AI agents in health- care, from task-level agents operating within FHIR-compatible envi- ronments12 to benchmarks simulating clinical decision-making13,14. These include AMIE, a conversational diagnostic system optimized for patient–physician dialogue1, and MAI-DxO15, a multi-agent diag- nostician that improved diagnostic accuracy and cost efficiency on complex case vignettes.",
+    "score": 0.5322905897996961,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "92288de2-75dc-4589-9b65-0a6ec172f5d2",
+  "X-Amzn-Trace-Id": "Root=1-6b080506-42f091b52b62c1963658857f;Parent=26f3cddecf1a2eeb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.271
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:06+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Towards autonomous medical artificial intelligence agents"
+ },
+ "from_cache": false
+}

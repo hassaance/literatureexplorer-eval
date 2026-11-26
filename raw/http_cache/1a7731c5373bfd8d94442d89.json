@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.375,
+ "json": {
+  "query": "How does FlashAttention reduce the number of memory reads and writes on the GPU?",
+  "contexts": [
+   {
+    "text": "Memory efficiency should be understood across the full lifecycle. Con- struction pays cost at write time, management pays cost between interactions, and selection pays cost at inference time. Optimizing one stage in isolation can simply move the burden elsewhere. Over-compression may require later repair, weak maintenance may leave a noisy store, and high-recall retrieval may recreate the long-context cost that memory was meant to avoid.   Trade-off Between Memory Compression and Performance. Although we have repeatedly emphasized that memory extraction can reduce costs such as input token usage, an unavoidable issue is that extraction may lead to the loss of critical information, which can directly degrade the agent’s performance. This problem has also been noted in prior work such as AgentFold [207]. LightMem [23], for instance, explicitly takes the compression rate into account. Its experimental results clearly show that excessive compression leads to poorer accuracy, whereas milder compression better preserves performance but incurs relatively higher cost. Therefore, the key question is not how to maximize compression, but how to preserve decision-relevant information under a budget. This calls for task-aware compression objectives: memories should retain causal facts, constraints, failures, and reusable procedures, rather than merely producing shorter summaries.   When Should Memory Be Updated? Memory updates are costly actions. Regarding memory management strategies, A-MEM[185] exemplifies a purely online system where memory updates occur synchronously during interaction.",
+    "score": 0.4441823033927551,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 24
+   },
+   {
+    "text": "Above, we mainly discuss the internal designs of the memory module. In the following, we turn our focus to memory operations, which are used to interact with external environments.   Memory Operations: The memory module plays a critical role in allowing the agent to acquire, ac- cumulate, and utilize significant knowledge by in- teracting with the environment. The interaction between the agent and the environment is accom- plished through three crucial memory operations: memory reading, memory writing, and memory re- flection. In the following, we introduce these opera-   tions more in detail. • Memory Reading. The objective of mem-   ory reading is to extract meaningful information from memory to enhance the agent’s actions. For example, using the previously successful actions to achieve similar goals [16]. The key of memory read- ing lies in how to extract valuable information from history actions. Usually, there are three commonly used criteria for information extraction, that is, the recency, relevance, and importance [20]. Memories that are more recent, relevant, and important are more likely to be extracted.",
+    "score": 0.4422567525597287,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "Comparable improvements 19 / 70 (27.1%) Selective gains.   Workspace state Checkpoint reuse 436 / 437 (99.8%) Near-complete reuse. Snapshot object reuse 177,234 / 221,925 (79.9%) Snapshot dedup. Storage footprint 2204.6 GiB → 189.2 GiB Storage-covered sources. Storage saving 91.4% Delta footprint.   Resource control   Device-utilization samples 20,075 samples Device samples. Mean utilization 27.5% Observed mean. Active device buckets 42.7% > 10% util. buckets. Guard terminations 202 stops Guarded stops. Low-value early stops 157 stops Low-value stops.   throughput, and cost trade-offs. GLM-5.1 processes the most input context and achieves the highest mean test AUROC of 0.9947, but its $5.81 LLM cost is approximately 60× that of DeepSeek- V4-Flash-Preview.",
+    "score": 0.43423321489067646,
+    "source": "094 - ScienceFlow A long-horizon agent for ML research, scientific discovery and beyond.pdf",
+    "page": 14
+   },
+   {
+    "text": "Other memory base- lines such as Synapse and AWM will greatly increase the computa- tion overhead while achieving less performance gains compared with ReasoningBank, demonstrating the cost-effectiveness of ReasoningBank.   C.3. Pass@k Analysis   36   45   54   63   72   1 2 3 4 5 Scaling factor k   Pa ss   @ k   62.1   58.8 54.5   51.349.7 56.155.1   52.9 50.8   49.7   39.0   47.6 49.7 51.3 52.4   MaTTS w/o memory   MaTTS w/o aggregation   MaTTS   Interpreting Memory: an RL Perspective Sample Efficiency   Figure 14 | Pass@𝑘 under parallel scaling with ReasoningBank.   Memory-aware scaling improves sample efficiency and sus- tains stronger performance gains. Pass@𝑘 analysis under parallel scaling on WebArena-Shopping subset with Gemini- 2.5-flash (Figure 14) reveals two distinct effects. First, MaTTS w/o aggregation (Vanilla TTS) already makes test-time learn- ing behave similarly to RL training: instead of inflating pass@𝑘   at large 𝑘, it improves sample efficiency by guiding exploration.",
+    "score": 0.4313230992874121,
+    "source": "056 - ReasoningBank Scaling Agent Self-Evolving with Reasoning Memory.pdf",
+    "page": 27
+   },
+   {
+    "text": "Its efficiency goal is to retain immediately useful information while preventing the prompt from growing with the full interaction history. In practice, this is often achieved by frequently rewriting or compressing the memory as the process evolves. COMEDY [11] uses an LLM to generate and compress memory: it extracts session-specific memories   from past conversations and then condenses them into a compact representation of key events, the user profile, and relationship changes. MemAgent [208] and MEM1 [240] both process long inputs sequentially by rewriting and updating a compact memory state at each step: MemAgent updates a summarized memory after each chunk, while MEM1 uses reinforcement learning [217] to maintain a fixed-length internal state tagged by <IS></IS> that replaces itself in the next prompt. AgentFold [207] proactively folds interaction history into multi-scale summaries plus the latest full turn, slowing critical information loss while reducing token usage. By retaining a compact memory in the prompt rather than the full history, these methods reduce the   effective context length the LLM needs to attend to, thereby improving long-context performance while decreasing computational cost and increasing efficiency.   Item-based Memory. Item-based memory stores experience as discrete textual units, such as events, insights, profiles, or plan templates. Its efficiency depends on whether each item is compact enough to retrieve and insert cheaply while still preserving the information needed for future decisions.",
+    "score": 0.4309758995687265,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 11
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e2cecc39-d08c-4ff6-9a51-3e3bff8e81d9",
+  "X-Amzn-Trace-Id": "Root=1-6b080426-4e735f212278a27a67edf486;Parent=1ba7432e15835cb6;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.375
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:22+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How does FlashAttention reduce the number of memory reads and writes on the GPU?"
+ },
+ "from_cache": false
+}

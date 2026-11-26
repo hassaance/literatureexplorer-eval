@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.872,
+ "json": {
+  "id": "chatcmpl-1c48d052-2660-460e-97bc-cc122dc05d16",
+  "object": "chat.completion",
+  "created": 1795687447,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The Agentless approach to software engineering tasks consists of three phases: localization, repair, and patch validation. Localization involves identifying the specific part of the code that needs fixing. Repair involves generating potential fixes or patches for the identified issue. Patch validation involves verifying that the generated patch has successfully resolved the issue. This approach is designed to be simple, interpretable, and cost-effective, avoiding the complexity and potential pitfalls of agent-based approaches."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1618,
+   "completion_tokens": 90,
+   "total_tokens": 1708
+  },
+  "contexts": [
+   {
+    "text": "Additionally, on Sept. 12th 2024, OpenAI just released the new o1 model family and also adopted Agentless as the top approach to showcase their performance on SWE-bench [OpenAI 2024c]. In the future, we plan to further address this threat by evaluating Agentless on other benchmarks.   8 Conclusion   We propose Agentless? an agentless approach to automatically tackle software development problems. Agentless uses a simple three phase approach of localization, repair, and patch valida- tion. Compared to prior agent-based approaches, Agentless deliberately disallows the LLM for autonomous tool usage or planning. Our evaluation on the popular SWE-bench Lite benchmark demonstrates that Agentless can achieve the highest performance compared with other open- source techniques while at the same time minimizing the cost. Furthermore, we perform a detailed classification of problems in SWE-bench Lite to not only offer new insights but to construct a more rigorous benchmark of SWE-bench Lite-? after removing problematic problems.   Acknowledgments   This project was supported, in part, by NSF grant CCF-2131943, Kwai Inc, and Two Sigma Invest- ments, LP. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the sponsors. This work was also partly supported by an Amazon Science Ph.D. Fellowship.",
+    "score": 0.5935835775225314,
+    "source": "045 - Agentless.pdf",
+    "page": 20
+   },
+   {
+    "text": "an agentless approach to automatically resolve software development issues. Compared to the verbose and complex setup of agent-based approaches, Agentless employs a simplistic three-phase process of localization, repair, and patch validation,without letting theLLMdecide futureactionsoroperatewithcomplex tools.Our results on thepopular SWE-bench Lite benchmark show that surprisingly the simplistic Agentless is able to achieve both the highest performance (32.00%, 96 correct fixes) and low cost ($0.70) compared with all existing open-source software agents at the time of paper submission! Agentless also achievesmore than 50% solve ratewhen usingClaude 3.5 Sonnet on the new SWE-benchVerified benchmark. In fact,Agentless has already been adopted byOpenAI as the go-to approach to showcase the real-world coding performance of both GPT-4o and the new o1 models; more recently, Agentless has also been used by DeepSeek to evaluate their newest DeepSeek V3 and R1 models. Furthermore, we manually classified the problems in SWE-bench Lite and found problems with exact ground truth patches or insufficient/misleading issue descriptions. As such, we construct SWE-bench Lite-? by excluding such problem- atic issues to performmore rigorous evaluation and comparison. Our work highlights the currently overlooked potential of a simplistic, cost-effective technique in autonomous software development.",
+    "score": 0.5756405518433694,
+    "source": "045 - Agentless.pdf",
+    "page": 1
+   },
+   {
+    "text": ", which removes such problematic problems, and serves as a more rigorous benchmark to evaluate the ability to solve real-world software development challenges. Overall, in an era focused on achieving top placements on leaderboards, our work highlights the overlooked potential of a simplistic, cost-effective technique in autonomous software development. We hope Agentless will help reset the baseline, starting point, and horizon for autonomous software agents, and inspire future work along this crucial direction. Contributions. In this work, we make the following contributions: ? An agentless approach. We propose Agentless, an agentless approach to automatically solve software development problems. Agentless leverages LLM-empowered prompting-based and embedding-based retrieval to perform hierarchical localization. During repair, Agentless samples multiple candidate patches in a simple diff format for efficient patch generation. Agentless then generates reproduction tests to verify that the issue has been resolved. Finally, Agentless lever- ages both regression tests and generated reproduction tests to select the final submission patch.   ? Extensive evaluation.We evaluate Agentless on the popular SWE-bench Lite dataset com- paring against state-of-the-art agent-based approaches. Our results show that Agentless is   Proc. ACM Softw. Eng., Vol. 2, No. FSE, Article FSE037.",
+    "score": 0.5729383628093241,
+    "source": "045 - Agentless.pdf",
+    "page": 3
+   },
+   {
+    "text": "Eng., Vol. 2, No. FSE, Article FSE037. Publication date: July 2025.Demystifying LLM-Based Software Engineering Agents FSE037:3   ? Limited ability to self-reflect. Existing agents struggle with the capability to perform self- reflection [Huang et al. 2024; Olausson et al. 2023]. That is to say they tend to take all informa- tion/feedback and do not know how to filter out or correct irrelevant, incorrect, or misleading information [Shi et al. 2023; Zhang et al. 2023]. The limited ability to self-reflect means that an incorrect step can be easily amplified and negatively affect all future decisions made by the agent. In this paper, we advocate that instead of rushing to develop increasingly complex LLM agent-   based approaches and tools for software development (which can also be non-trivial to use or replicate due to the fully autonomous setup), we should first take a step back and ask the following introspective question: Do we really have to employ complex autonomous software agents? Our work. We set out to answer this important question by building Agentless ? an agentless ap- proach to automatically resolve software development issues. To solve each issue, Agentless follows a simple three phase process: localization, repair, and patch validation.",
+    "score": 0.5587519047925922,
+    "source": "045 - Agentless.pdf",
+    "page": 2
+   },
+   {
+    "text": "Furthermore, SpecRover also attempts to generate reproduction tests to reproduce the original issue used to select the final patch. In addition to these highlighted examples, there has been a plethora of other agent-based approaches developed in both open-source [AppMap 2024; Gauthier 2024; RepoGraph 2024; Zhang et al. 2024d] and close-source/commercial products [Amazon 2024; Bouzenia et al. 2024; Chen et al. 2024; Codestory 2024; Factory 2024; Gru 2024; Honeycomb 2024; IBM 2024; Isoform 2024; Lingma 2024; Liu et al. 2024c; Ma et al. 2024; MentatBot 2024; OpenCSG 2024; SuperCoder 2024].   Compared to these agent-based techniques, Agentless offers a simplistic, interpretable, and cost- effective solution to tackle real-world software engineering issues. Different from agent-based tools, Agentless contains well-defined stages of localization, repair, and patch validation without letting the LLM agent decide future actions or use complex tools. Agentless demonstrates for the first   Proc. ACM Softw. Eng., Vol. 2, No. FSE, Article FSE037.",
+    "score": 0.5461024906308188,
+    "source": "045 - Agentless.pdf",
+    "page": 4
+   }
+  ],
+  "sources": [
+   "045 - Agentless.pdf",
+   "045 - Agentless.pdf",
+   "045 - Agentless.pdf",
+   "045 - Agentless.pdf",
+   "045 - Agentless.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1c48d052-2660-460e-97bc-cc122dc05d16",
+  "X-Amzn-Trace-Id": "Root=1-6b080416-4465e9bc0775bcbe40f6ee86;Parent=5488d8920a126214;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.872
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:06+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What are the phases of the Agentless approach to software engineering tasks?"
+   }
+  ]
+ },
+ "from_cache": false
+}

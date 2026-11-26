@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.369,
+ "json": {
+  "query": "CliffSearch: Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery",
+  "contexts": [
+   {
+    "text": "CliffSearch: Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery   Youssef Mroueh∗, Carlos Fonseca, Brian Belgodere, David Cox   IBM Research https://cliffsearch.ai   April 2, 2026   Abstract   Scientific algorithm discovery is iterative: hypotheses are proposed, implemented, stress- tested, and revised. Current LLM-guided search systems accelerate proposal generation, but often under-represent scientific structure by optimizing code-only artifacts with weak correct- ness/originality gating. We present CliffSearch, an agentic evolutionary framework in which the core evolution operators (pair selection, crossover, mutation, and review) are implemented as LLM agents, and the loop is designed around three principles: (1) each node is a structured scientific artifact, instantiated in either theory+code or code_only mode, (2) reviewer judg- ments of correctness and originality are first-class selection gates alongside optimization of the benchmark metric of interest, and (3) mutation is split into exploration and correction pathways with distinct objectives. Exploration mutation imports ideas from adjacent scientific domains to increase novelty, while correction mutation performs targeted evidence-guided repair using reviewer signals over theory, code, benchmark results, and runtime errors.",
+    "score": 0.8455386635492796,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 1
+   },
+   {
+    "text": "Hence ps = Ls. Seed aggregation and failed-seed handling then follow the shared equations above. The transformer benchmark also uses a fixed shared training recipe rather than per-node hyperpa- rameter tuning, so reported losses should be read as conservative relative-comparison values.   Benchmark primary-metric formulas by task. Table 5 summarizes the exact benchmark primary-metric definitions written to node payloads and consumed by ranking/selection/visualiza- tion.   6 Conclusion This work frames scientific algorithm discovery as an evolutionary process over structured arti- facts rather than code snippets alone. At the conceptual level, CliffSearch couples theory and implementation in each node, so proposed mechanisms can be judged as scientific claims with ex-   20ecutable evidence. At the decision level, reviewer outputs (correctness and originality) are treated as first-class selection constraints, which prevents benchmark score from being the only gate.   At the search-policy level, CliffSearch separates exploration mutation (novelty through adjacent- domain transfer) from correction mutation (evidence-guided repair), giving the loop explicit mech- anisms for both discovery and stabilization. At the systems level, the same runtime can instantiate multiple user-defined tasks as long as task, benchmark, and metric are specified; the transformer study, the matched transformer code_only breakthrough, the optimizer-on-nanoGPT study, and the native-optimizer ablation in this paper are illustrative realizations of that general framework.",
+    "score": 0.6606912623218889,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 20
+   },
+   {
+    "text": "Even in code_only mode, nodes still carry a required summary_md field that records the design principles being proposed, so the mode suppresses formal theory_content rather than eliminating ideation al- together; in practice this also frees more of the agent token budget for executable code. We illustrate the framework on three benchmark-grounded studies: transformer hyper-connection evolution, optimizer discovery on a fixed nanoGPT stack, and a smaller native-optimizer ab- lation. Across these settings, the same loop supports explicit metric direction, reproducible persistence, and reviewer-gated comparison of discoveries under controlled search conditions. The result is a discovery workflow that prioritizes scientific interpretability and correctness while optimizing task metrics under controlled novelty constraints, rather than maximizing can- didate throughput alone. Full run artifacts, interactive visualizations, and exported best nodes for the reported studies are available at https://cliffsearch.ai.   1 Introduction Scientific algorithm discovery rarely comes from a single jump; it comes from a loop in which mathematical ideas and executable implementations co-evolve. Evolutionary computation offers robust search machinery for difficult spaces [38, 20, 24], and LLMs now provide strong proposal engines for symbolic artifacts [54, 4].",
+    "score": 0.6511252947335404,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 1
+   },
+   {
+    "text": "Evolutionary computation offers robust search machinery for difficult spaces [38, 20, 24], and LLMs now provide strong proposal engines for symbolic artifacts [54, 4]. Their combination has produced promising discovery systems   ∗Correspondence: mroueh@us.ibm.com   1   ar X   iv :2   60 4.   01 21   0v 1   [ cs   .L G   ] 1   A pr   2 02   6         https://cliffsearch.ai        https://cliffsearch.ai        https://arxiv.org/abs/2604.01210v1[10, 56, 3], but current workflows still face a practical gap between fast generation and scientifically trustworthy selection.   Three limitations are especially consequential for scientific settings. First, many loops optimize code-only candidates, which weakens traceability between conceptual claims and implementation behavior. Second, benchmark outcomes alone do not guarantee validity: high score can coexist with weak originality or fragile correctness. Third, a single undifferentiated mutation policy conflates two distinct goals, namely broad exploration and targeted repair.   CliffSearch is built to address those gaps directly. The search unit is a structured artifact car- ried in either theory+code or code_only mode, and the evolutionary operators themselves are instantiated as LLM agents (pair selector, crossover, exploration mutation, correction mutation, reviewer).",
+    "score": 0.595888066547661,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 1
+   },
+   {
+    "text": "Parallel progress has also emerged on the Bayesian-optimization side of algorithm discovery, including LLM-enhanced BO [55], acquisition-function evolution [62, 56], and end-to-end BO- algorithm generation [57]. Hybrid BO-EA formulations for scientific design loops are increasingly visible as well [2].   In application literature, high-impact scientific discovery systems are often realized as closed- loop experimental platforms using BO/active learning and autonomous laboratories [1, 9, 8]. Evo- lutionary methods also remain important for inverse design and materials/molecular search [49]. This context motivates our emphasis on scientific reliability signals in addition to performance optimization.   CliffSearch is aligned with these directions but differs in three specific ways: (1) the optimization object is a structured scientific artifact (theory+code, with a compatible code-only mode) rather than code alone; (2) reviewer outputs (correctness and originality) are hard selection gates alongside benchmark metrics; and (3) mutation is explicitly split into exploration (adjacent-domain novelty transfer) and correction (evidence-guided repair).",
+    "score": 0.5780298363190933,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0588d7b4-9bcb-45f6-abf9-1eca928e8ed3",
+  "X-Amzn-Trace-Id": "Root=1-6b0804ff-7b3191604f68539b553c25e6;Parent=4326db39c63e87ff;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.369
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:58+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "CliffSearch: Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery"
+ },
+ "from_cache": false
+}

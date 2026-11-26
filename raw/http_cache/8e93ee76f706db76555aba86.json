@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.338,
+ "json": {
+  "query": "In the study ‘Towards Mutual Theory of Mind in Human‑AI Interaction: How Language Reflects What Students Perceive About a Virtual Teaching Assistant’, which of the three perception measures (anthropomorphism, intelligence, likeability) showed a statistically significant change over time?",
+  "contexts": [
+   {
+    "text": "We also conducted Spearman correlation test, a non-parametric correlation test, to examine the relationship between these three perception mea- sures. Spearman correlation results show that perceived anthro- pomorphism and intelligence have a strong positive relationship (rs = (0.74), p < 0.001), intelligence and likeability have a mod- erately strong positive realtionship (rs = (0.62), p < 0.001), and anthropomorphism and likeability have a low positive correlation (rs = (0.51), p < 0.001). This result suggests that even though the three measures of perception are considered to be somewhat inde- pendent [8], that may not be the case in our data. That is, according to our data, students’ perception of desirability along the three measures are in similar direction, a general increasing trend in one would likely convey in a general increasing trend in the other two.   4.1.5 Summary and Interpretation. Through analyzing students’ bi-weekly self-report of their perception of JW, we conclude that JW’s perceived anthropomorphism and intelligence signifcantly changed over time, but perceived likeability did not signifcantly vary in the long run. Our fndings help us understand how com- munity perceptions of a community-facing CAs change.",
+    "score": 0.6028593570620253,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 7
+   },
+   {
+    "text": "Word embeddings repre- sent words as vectors in a higher dimensional latent space, where lexico-semantically similar words tend to have vectors that are closer [21, 65, 74]. In our case, for each post to JW, we frst obtainTowards Mutual Theory of Mind in Human-AI Interaction CHI ’21, May 8–13, 2021, Yokohama, Japan   Table 3: Coefcients of linear regression between students’ perception (as dependent variable) and language based measures of interaction with JW (as independent variables). Purple bars represent the magnitude of positive coefcients, and Golden bars represent the magnitude of negative coefcients. . p<0.1, * p<0.05, ** p<0.01, *** p<0.001.   Anthropomorphism Intelligence Likeability Measure Coef. p Coef. p Coef. p   Baseline Avg. Num. Words 0.15 *** 0.16 *** 0.13 *** Week 0.06 *** 0.06 *** 0.03 ** Verbosity Num.",
+    "score": 0.5673346399074286,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 8
+   },
+   {
+    "text": "= 2.09   signifcantly over time from S1 through S5: χ2(4) = 9.55,p < 0.05. Post-hoc pairwise comparison found S2 and S5 difer signifcantly: z = −2.82, p < 0.05. This indicates that CAs’ perceived humanlike- ness by the community can vary over time, even when the agent has zero learning ability and adaptability.Towards Mutual Theory of Mind in Human-AI Interaction CHI ’21, May 8–13, 2021, Yokohama, Japan   4.1.2 Intelligence. Intelligence refers to the perceived level of in- telligence of the CA by the community, in other words, how much users perceive the CA as an intelligent being. Even though building artifcially “intelligent” machines has been a unfulflled promise due to various technical and feasibility challenges [8, 87], users tend to expect their CAs to be “smart” [98], thus creating a gap between user expectation and CA’s true intelligence. CA’s knowledge is also one of the key components identifed in people’s mental model of CA [31]. Therefore, perceived intelligence plays an important role in how people perceive, evaluate, and interact with the agent. However, it is unclear whether people’s perception about the CA’s intelligence change over time.",
+    "score": 0.5564330688323089,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 6
+   },
+   {
+    "text": "We are, however, hopeful that language analysis can reveal the diferent dimensions of people’s perceptions about CAs during interactions. Future research should replicate the current study using diferent measurements of the user’s mental model about CA to provide more evidence on the potential of language analysis.   7 CONCLUSION This paper posited Mutual Theory of Mind as the theoretical frame- work for designing adaptive community-facing conversational agents (CAs) as long-term companions. Guided by this framework, we examined the long-term changes of community perception of CA, and measured the feasibility of inferring perceptions through linguistic cues. We deployed a community-facing CA, JW, a virtual teaching assistant designed to answer students’ logistical ques- tions about the class in an online class public discussion forum. Driven by our understanding of Theory of Mind, we measured stu- dents’ perception of JW in terms of perceived anthropomorphism,CHI ’21, May 8–13, 2021, Yokohama, Japan Wang et al.   intelligence, and likeability. We found statistically signifcant long- term changes in student community’s perception of JW in terms of anthropomorphism and intelligence. Then, we extracted theory- driven language features from student-JW interactions over the course of the semester. Regression analyses revealed that linguistic features such as verbosity, diversity, adaptability, and readability explain students’ perception of JW.",
+    "score": 0.54972656231313,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 11
+   },
+   {
+    "text": "These kinds of data can add noise to automated language models, and it opens up more re- search opportunities to examine how language in general-purpose online communities refect the individual and collective perception about a community-facing CA.   Besides helping CAs understand how they are perceived by the users during interactions, language can also potentially indicate user preferences about the CA in a particular context and thus inform future design of CAs. For example, in our regression anal- yses, linguistic measures such as sentiment and diversity refect similar directionality (see Table 3) among the correlation between the three perception measures (section 4.3)— we fnd a positive association between JW’s perceived intelligence and likeability, but weak correlation between anthropomorphism and likeability. In particular, sentiment extracted from the student-JW conversation is signifcantly associated with both intelligence and likeability, yet not signifcantly associated with perceived anthropomorphism. It is thus worth considering whether human-likeness is a more impor- tant factor to consider comparing to an agent’s intelligence demon- strated through providing informational support when designing   virtual teaching assistants like JW.",
+    "score": 0.5470903139684704,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5a3f86ba-8662-4e31-85f7-ab748668e65e",
+  "X-Amzn-Trace-Id": "Root=1-6b08044b-0c2a419468b0a1f6544ab415;Parent=13b1487c3adbecaa;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.338
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the study ‘Towards Mutual Theory of Mind in Human‑AI Interaction: How Language Reflects What Students Perceive About a Virtual Teaching Assistant’, which of the three perception measures (anthropomorphism, intelligence, likeability) showed a statistically significant change over time?"
+ },
+ "from_cache": false
+}

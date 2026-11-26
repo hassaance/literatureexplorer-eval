@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.32,
+ "json": {
+  "query": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "contexts": [
+   {
+    "text": "Besides general applicability and performance boost, the combination of reasoning and acting also contributes to model interpretability, trustworthiness, and diagnosability across all domains, as humans can readily distinguish information from model’s internal knowledge versus external environments, as well as inspect reasoning traces to understand the decision basis of model actions.   To summarize, our key contributions are the following: (1) we introduce ReAct, a novel prompt- based paradigm to synergize reasoning and acting in language models for general task solving; (2) we perform extensive experiments across diverse benchmarks to showcase the advantage of ReAct in a few-shot learning setup over prior approaches that perform either reasoning or action generation in isolation; (3) we present systematic ablations and analysis to understand the importance of acting in reasoning tasks, and reasoning in interactive tasks; (4) we analyze the limitations of ReAct under the prompting setup (i.e. limited support of reasoning and acting behaviors), and perform initial finetuning experiments showing the potential of ReAct to improve with additional training data. Scaling up ReAct to train and operate on more tasks and combining it with complementary paradigms like reinforcement learning could further unlock the potential of large language models.   2 REACT : SYNERGIZING REASONING + ACT ING   Consider a general setup of an agent interacting with an environment for task solving.",
+    "score": 0.8088106728852256,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Besides general applicability and performance boost, the combination of reasoning and acting also contributes to model interpretability, trustworthiness, and diagnosability across all domains, as humans can readily distinguish information from model’s internal knowledge versus external environments, as well as inspect reasoning traces to understand the decision basis of model actions.   To summarize, our key contributions are the following: (1) we introduce ReAct, a novel prompt- based paradigm to synergize reasoning and acting in language models for general task solving; (2) we perform extensive experiments across diverse benchmarks to showcase the advantage of ReAct in a few-shot learning setup over prior approaches that perform either reasoning or action generation in isolation; (3) we present systematic ablations and analysis to understand the importance of acting in reasoning tasks, and reasoning in interactive tasks; (4) we analyze the limitations of ReAct under the prompting setup (i.e. limited support of reasoning and acting behaviors), and perform initial finetuning experiments showing the potential of ReAct to improve with additional training data. Scaling up ReAct to train and operate on more tasks and combining it with complementary paradigms like reinforcement learning could further unlock the potential of large language models.   2 REACT : SYNERGIZING REASONING + ACT ING   Consider a general setup of an agent interacting with an environment for task solving.",
+    "score": 0.8088106728852256,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.7714086360147143,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.7714086360147143,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Published as a conference paper at ICLR 2023   REACT : SYNERGIZING REASONING AND ACTING IN LANGUAGE MODELS   Shunyu Yao∗*,1, Jeffrey Zhao2, Dian Yu2, Nan Du2, Izhak Shafran2, Karthik Narasimhan1, Yuan Cao2   1Department of Computer Science, Princeton University 2Google Research, Brain team   1{shunyuy,karthikn}@princeton.edu 2{jeffreyzhao,dianyu,dunan,izhak,yuancao}@google.com   ABSTRACT   While large language models (LLMs) have demonstrated impressive performance across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments.",
+    "score": 0.7161947730151341,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b74dc05d-03e1-4185-8702-808e092acb89",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f9-1efb028e16e9d5130f667bca;Parent=6faad3d50ec12102;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.32
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:53+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ReAct: Synergizing Reasoning and Acting in Language Models"
+ },
+ "from_cache": false
+}

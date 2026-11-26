@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.386,
+ "json": {
+  "query": "In 'The Ethics of Advanced AI Assistants', what incentives do developers have for increasing AI assistants' access to user context?",
+  "contexts": [
+   {
+    "text": "Broad stakeholder inclusion in the development of these norms can help to ensure the creation of adequate and widely endorsed privacy protections.   • Consider user autonomy when developing AI assistant user experiences   206The Ethics of Advanced AI Assistants   ◦ Developers could consider the implications of different design choices for user autonomy (alongside other considerations such as equity and user well-being). This could include reflection on what elements of the user experience – including notification and consent elements – strike an appropriate balance between respect for user choice and other ethical and practical considerations   • Anticipate and mitigate harms to users in the event of service discontinuation   ◦ Developers can engage in user research to understand how and in what way users depend on AI assistant products and also take steps to mitigate harms that could arise from service discontinuation.   • Promote well-calibrated user trust in AI assistants   ◦ Developers can implement safeguards to encourage well-calibrated trust about the competence and alignment of AI assistants with regard to both users and society. Providing evidence about the capabilities and limitations of AI assistants is an important step toward grounding appropriate levels of trust. To support this goal, policymakers can work with industry and other stakeholders to align on best practices for transparent reporting about assistant capabilities and limitations.   ◦ Human-computer interaction research is also needed to better understand what features of AI assistants increase users’ perception of the technology as competent, aligned and trustworthy – and what steps are needed to ensure user expectations are not disappointed.",
+    "score": 0.5969771929324532,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 212
+   },
+   {
+    "text": "An important debate that is relevant to, but beyond the scope of, the argument made in this section is about the level of ‘openness’ or ‘closedness’ of the method that companies choose to release their models (see Solaiman, 2023). It is also important to note that, as we explore in the discussion of external governance below, most of these practices come with limitations.   128The Ethics of Advanced AI Assistants   the steps they have taken to evaluate AI assistants, certain risks, such as the potential impact of widespread adoption of the technology on employment (see Chapters 14 and 17), cannot be addressed by a single developer acting alone. Developers may also have legitimate interest in keeping certain information secret (including details about internal ethics processes) for safety reasons or competitive advantage (Brundage et al., 2020). Moreover, a deeper challenge is posed by conflicting incentives: corporations may have competing commercial objectives, states have national goals or priorities and independent developers may still seek to create a product, further ideas or accrue reputational capital via the development of AI assistants (see Chapter 5). These factors put pressure on the mechanisms discussed so far. In practice, organisation-level processes may lack real teeth (Nguyen, 2022),11 and failure to adhere to commitments has few concrete repercussions, while signing up to them has immediate reputational benefits (Mittelstadt, 2019).",
+    "score": 0.5943302888630484,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 134
+   },
+   {
+    "text": "More positively, advanced AI assistants have the potential to facilitate and enhance cooperative decision-making between humans. For example, they may identify mutually beneficial solutions that are not apparent to negotiating parties or commit to agreements that would be difficult for humans to implement without AI assistants.   198The Ethics of Advanced AI Assistants   Yet, even if the question of how advanced AI assistants interact with one another can be addressed in a way that generates benefit both for users and society more widely, the challenges of equity and access looms large (see Chapter 15). Three particular challenges stand out. First, situations of differential access may occur, where some people have beneficial access to an assistant but others do not and hence miss out on the opportunity altogether. Such situations could arise due to disparities in the availability of local infrastructure such as data centres or network connectivity or via pricing mechanisms. In these cases, AI assistants risk deepening inequalities insofar as they provide significant benefits to users that are not available to non-users (see Chapters 14 and 15). Second, situations could arise where quality of access is markedly uneven, either because there are significant tiers in model quality for advanced AI assistants or because the standard assistant functions better for some user groups than for others.",
+    "score": 0.5914795396792274,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 204
+   },
+   {
+    "text": "Note, however, that differences in the relationship between users and agents may have important downstream implications for both the degree of autonomy that AI assistants are afforded and the scope of tasks that AI assistants are permitted to perform.   3One additional respect in which the natural language interface of AI assistants is ethically significant is that the ability to receive instructions in natural language broadens access to advanced AI capabilities, in that the specialist technical knowledge that is typically required to engage with advanced AI systems is not required for engaging with AI assistants. However, the extent to which access is widened depends significantly on the extent of the AI assistant’s multilingual capabilities and how access to AI assistants is distributed (see Chapter 15).   4Note that even if the function of AI assistants involves autonomy bounded by user-set goals, this does not preclude malfunctions in which the AI assistant exhibits goal-related failures (see Chapter 7).   16The Ethics of Advanced AI Assistants   Domain specificity vs generality   AI assistants operate across one or more domains. To explain: In general, assistive roles exist on a continuum between specialist and generalist roles. For example, a physician assistant with a specialty in surgery has assistive expertise in a narrow domain, whereas a personal assistant for a CEO is likely to have expertise across multiple domains to meet the CEO’s dynamic needs (see Chapter 4).",
+    "score": 0.5907506616413777,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 22
+   },
+   {
+    "text": "• Develop a continuous monitoring and rapid response infrastructure   ◦ Developers can invest in continuous monitoring of AI assistants’ behaviour, including potential misuse, in complex deployment environments via outcome monitoring.   ◦ Developers can also invest in rapid response infrastructure to disable or limit AI assistants in the event that an unforeseen form of misuse is observed.   • Establish open information channels including incident reporting infrastructure   ◦ Developers and policymakers can adopt structured processes for sharing concerning or noteworthy evaluation results. Incident-reporting infrastructure would enable developers to share safety-critical learnings with one another and with regulators in a timely manner.   203The Ethics of Advanced AI Assistants   • Increase AI literacy among stakeholders   ◦ Policymakers and developers should take active steps to increase AI literacy among the relevant stakeholders, including government officials, regulators and impacted communities, to enable productive dialogue on safety and security.   Human–assistant interaction   In the field of human interaction with advanced AI assistants, we identify the following opportunities:   • AI assistants could help promote user flourishing via personalised coaching   ◦ AI assistants could help users cultivate virtues, such as curiosity, empathy and resilience through appropriate coaching. By acting in line with the user’s deeply-held values, they could contribute to personal development and growth.",
+    "score": 0.5822660906157767,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 209
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fb62b460-9e7a-497a-a4cc-b6fb4cb95395",
+  "X-Amzn-Trace-Id": "Root=1-6b08043e-597fc707743efac13138fc2e;Parent=4a41b9e2e1baceed;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.386
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:46+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In 'The Ethics of Advanced AI Assistants', what incentives do developers have for increasing AI assistants' access to user context?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.309,
+ "json": {
+  "query": "How do the findings of Verma et al. (On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models) about what drives LLM performance compare to the claims of Ma et al. (What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use) regarding the importance of clear requirement articulation?",
+  "contexts": [
+   {
+    "text": "LLMs should explicitly communicate their understandings of user intent, such as translating ambiguous natural language requirements into more formal specifications [33, 34], asking clarifying questions [10, 30, 53], or extracting and refining generated criteria [26, 68, 77]. This is not a perfect solution, as models’ translations may still reflect their biases and models may miss to ask about LLM-hard requirements. Nonetheless, to correctly implement requirements in LLM outputs when what is LLM-hard keeps evolving, humans need to learn when and how to specify requirements with more granularity, and models need to keep communicating what requirements might be LLM-hard or LLM-conflict.   8 Conclusion In this work, we advocate for focusing PE effort on human-centered tasks, ensuring users include all necessary requirements in their prompt to achieve goals. We introduce the ROPE paradigm, and design training materials where prompting novices practice requirement articulation on complex prompting tasks. We also develop aligned assessment metrics capturing both the intrinsic quality of user prompts in terms of requirement quality, as well as the extrinsic quality of prompt effectiveness in achieving intended outcomes. By providing targeted feedback on requirements, our ROPE system helps users produce higher-quality requirements and prompts more effectively than traditional PE training. As we look to the future, it is clear that the demand for LLM-based applications will only grow.",
+    "score": 0.6062107528125006,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 22
+   },
+   {
+    "text": "On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models   Mudit Verma* Siddhant Bhambri* Subbarao Kambhampati   School of Computing and AI Arizona State University   {muditverma, sbhambr1, rao}@asu.edu   Abstract   The reasoning abilities of Large Language Models (LLMs) remain a topic of debate. Some methods such as ReAct-based prompting, have gained popularity for claiming to enhance sequential decision-making abilities of agentic LLMs. However, it is unclear what is the source of improvement in LLM reasoning with ReAct based prompting. In this paper we examine these claims of ReAct based prompting in improving agentic LLMs for sequential decision-making. By introducing systematic variations to the input prompt we perform a sensitivity analysis along the claims of ReAct and find that the performance is minimally influenced by the \"interleaving reasoning trace with action execution\" or the content of the generated reasoning traces in ReAct, contrary to original claims and common usage. Instead, the performance of LLMs is driven by the similarity between input example tasks and queries, implicitly forcing the prompt designer to provide instance-specific examples which significantly increases the cognitive burden on the human.",
+    "score": 0.5940628542771639,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "These tasks require significant customization where users must intentionally deviate LLMs from their default behaviors [23, 54, 61], making autofulfillment impossible (e.g., how many rounds of questions should be asked in Figure 2). At the time of writing, tasks that involve multi-step processes, decision-making, or context knowledge are likely more LLM-hard and thus benefit more from explicit requirements. However, this is a dynamic concept that evolves as LLMs improve.   ACM Transactions on Computer-Human Interaction, Vol. 32, No. 4, Article 41. Publication date: August 2025.41:8 Q. Ma et al.   Nowadays, LLMs arewidely used by end-user to create reusable prompt programs, and these prompt programs are often LLM-hard, as users frequently seek customization with various requirements, anticipating diverse inputs and expected outputs. From content creators crafting prompts for creative graphics, educators tailoring LLMs as tutors, to office workers automating workflows with GPT, people across various fields are all building natural language prompt programs.8 We argue that all these potential prompt programmers would benefit from articulating better requirements.9  The Challenge of ROPE and the Call for Requirement-Focused Training. Ideally, we hope LLM users would naturally refine requirements in prompts based on unsatisfactory model outputs. In reality, this is challenging.",
+    "score": 0.5906983512380194,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 7
+   },
+   {
+    "text": "Depending on the domain and task, prompt designers may provide abstract guidance, task-specific instructions within the same domain, analogical examples, or global reasoning traces. ReAct’s inability to robustly adapt to such variations underscores its limitations in handling diverse input prompts, thereby necessitating a closer examination of its design and implementation. In this work, we systematically evaluate the brittleness of ReAct by studying which potential factors contribute to its performance. This analysis is conducted through variations in input prompts to understand how a ReAct LLM Agent responds to (1) where the guidance is provided, (2) the different types and structure of this guidance, and finally, (3) on varying the resemblance of example prompt to the queried problem. We investigate the research questions :   RQ1: Does the agent performance depend on interleaving reasoning trace with action execution? RQ2: How does the nature of the reasoning trace or guidance information affect the performance of LLM Agents? RQ3: How does the similarity between the example 〈problem, solution〉and the query 〈problem, ? 〉, which are present in the prompt, affect LLM Agent performance?   We conduct extensive experiments on the AlfWorld domain using various LLM Models, including GPT-3.5-turbo, GPT-3.5-instruct, GPT-4 and Claude-Opus.",
+    "score": 0.5653242895191365,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "It is much higher ( 80% for GPT-3.5-Turbo, 90% for Claude-Haiku) for weaker LLM models. This further highlights the inability of LLMs to operationalize its generated thought as also seen in [Roy et al., 2024]. From manual inspection we find that the typical thoughts would enlist all possible locations as next locations to visit for most of the tasks. As demonstrated in Section 5.2, the performance of LLMs actually decreases when provided with foresight guidance, as seen with the base ReAct model. A detailed investigation into the validity of the generated reasoning traces is beyond the scope of this work and is suggested as future research.   6 Conclusion ReAct based prompt engineering methods have been claimed to improve planning abilities of Large Language Models. In this study, we critically examine ReAct along three dimensions, informed by its claims and our hypotheses regarding its performance sources. Contrary to ReAct’s claims, our findings reveal that its performance is neither due to interleaving reasoning trace and guidance information generation with action execution, nor due to the specific nature of the guidance information. Instead, we identify that the true source of LLM performance in sequential decision-making tasks, such as AlfWorld, is the high degree of similarity between exemplar problems (few-shot) and the query task.",
+    "score": 0.5592976749124535,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "758a154d-d101-4643-a5cd-ef67751cb592",
+  "X-Amzn-Trace-Id": "Root=1-6b08045b-740252370238be8518dc3120;Parent=37253ddfbf52e73d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.309
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:15+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How do the findings of Verma et al. (On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models) about what drives LLM performance compare to the claims of Ma et al. (What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use) regarding the importance of clear requirement articulation?"
+ },
+ "from_cache": false
+}

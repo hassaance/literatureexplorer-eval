@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.35,
+ "json": {
+  "query": "In the 'Agents' Last Exam' study, which agent configuration achieved the highest score and how many wall‑clock hours did it take to run?",
+  "contexts": [
+   {
+    "text": ". Corresponding to {sunyiyou,dawnsong}@berkeley.edu. Full affiliations in Appendix A.   ar X   iv :2   60 6.   05 40   5v 3   [ cs   .A I]   9 O   ct 2   02 6         https://agents-last-exam.org        https://github.com/rdi-berkeley/agents-last-exam        https://huggingface.co/datasets/agents-last-exam/agents-last-exam        https://agents-last-exam.org/leaderboard        https://arxiv.org/abs/2606.05405v3Abstract Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains. We argue that this gap is largely an evaluation problem: widely used benchmarks lack sustained performance measurement on real and economically valuable workflows. This paper introduces Agents’ Last Exam (ALE), a benchmark designed to evaluate AI agents on long horizon, economically valuable, real world tasks with verifiable outcomes. Developed in collaboration with 250+ industry experts, ALE covers non-physical industries defined with reference to O*NET / SOC 2018 (the U.S. federal occupational taxonomy). It is organized around a task taxonomy with 55 sub fields grouped into 13 industry clusters covering 1K+ tasks.",
+    "score": 0.5801045142836061,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "Qizheng Zhang, Yuexing Hao, Xiaoming Li, Xiangyi Li, Bingran You, Wenjun Ke   Leading institution: University of California, Berkeley. Corresponding to {sunyiyou,dawnsong}@berkeley.edu. Full affiliations in Appendix A.   ar X   iv :2   60 6.   05 40   5v 3   [ cs   .A I]   9 O   ct 2   02 6         https://agents-last-exam.org        https://github.com/rdi-berkeley/agents-last-exam        https://huggingface.co/datasets/agents-last-exam/agents-last-exam        https://agents-last-exam.org/leaderboard        https://arxiv.org/abs/2606.05405v3Abstract Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains. We argue that this gap is largely an evaluation problem: widely used benchmarks lack sustained performance measurement on real and economically valuable workflows. This paper introduces Agents’ Last Exam (ALE), a benchmark designed to evaluate AI agents on long horizon, economically valuable, real world tasks with verifiable outcomes.",
+    "score": 0.5672228142010316,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "Agents’ Last Exam   �Website §GitHub HuggingFace �Leaderboard   Organization & Execution Team Yiyou Sun*, Xinyang Han*, Weichen Zhang*, Xiang Liu*, Yuanbo Pang*, Tianyu Wang*, Yuhan Cao*, Yixiao Huang*, Zhaowei Zhang, Chris Duroiu, Haoyun Zhang, Jeffrey Lin, Weishu Zhang, Tyler Zeng, Ying Yan, Bo Liu, Hanson Wen, Mingyang Xu, Xiaoyuan Liu, Zimeng Chen, Weiyan Shi, Amanda Dsouza, Vincent Sunn   Chen, Jingxu Xie, Sheldon Huang, Dewen Lei, Hanxuan Zhang, Zonglin Di, Dawn Song * Core contributors.   Advisory Committee Patrick Bryant, Carl Boettiger, Yamini Rangan, Bradley Rothenberg, Kyle Steinfeld, Arvind Rao, Tapio   Schneider, Georgios Yannakakis, Laure Zanna, Kaan Ozbay, Ida Sim, Tarek Zohdi, George Em Karniadakis, Jack Gallant, Teresa Head-Gordon   Data Contributors Chris Yuhao Liu, Rongwang Hu, Yafei Cheng, Aras Bacho, Zengyi Qin, Alan Yuille, Yixiong Chen, Hao Liu, Lin Zeng, Bo Chen, Zhendong Li, Litian Gong, Shashank Muralidhar Bharadwaj,",
+    "score": 0.5184609845903773,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "The best score in each column is in bold.   Agent ALE-Bench MLE-Bench WeatherBench 2 FML-Bench (%)   AIDE0 1536 ± 33 0.678 ± 0.006 0.262 ± 0.205 15.0 ± 0.9 AIDE47 1713 ± 26 0.730 ± 0.005 0.798 ± 0.003 19.7 ± 1.2 AIDE85 1790 ± 9 0.722 ± 0.011 0.793 ± 0.005 19.9 ± 1.1 AIDEhuman 1511 ± 35 0.708 ± 0.007 0.404 ± 0.193 19.6 ± 1.0   Table 2 | Evaluation protocols per task within each benchmark.",
+    "score": 0.5118065574885713,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 24
+   },
+   {
+    "text": "The name carries a dual aspiration. Last as competence threshold: an agent that passes these industry exams demonstrates readiness to carry out sustained, economically valuable work in that profession, not merely to answer questions about it. Last as difficulty frontier: by grounding evaluation in authentic long-horizon workflows that require professional judgment, ALE sits at the boundary of what current systems can reliably accomplish.   Real professional work   Verified technical task completion   Interactive agent environments   Static answer evaluation   1 3 5 14 26 55   Agents’ Last Exam GDP-VAL 16/55   RLI 14/55 XBench 11/55   TheAgentCompany   SWE-Lancer   SWE-bench RE-Bench   MLE-bench   OSWorld WebArena   GAIA WorkArena++   PinchBench AgentBench   Terminal-Bench   MMLU HLE   GPQA MATH   Figure 3: Benchmark positioning map. Prior bench- marks are placed by mapping their published domains onto the ALE domain taxonomy.   ALE is a benchmark of 1K+ task instances spanning 55 subfields and 13 industry clusters, developed in collaboration with 250+ domain experts. To ensure broad and representative industry coverage, expert ad- visory committees map each domain’s workflow land- scape and identify economically meaningful work- flow families, anchored in the O*NET / SOC 2018 occupational taxonomy [38, 46].",
+    "score": 0.5097832952087065,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "18c48c41-8234-46a0-8275-9340d8e94e2f",
+  "X-Amzn-Trace-Id": "Root=1-6b08044c-15592ea60a4a5be36ffef5cc;Parent=46771dc35c176c4d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.35
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:00+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the 'Agents' Last Exam' study, which agent configuration achieved the highest score and how many wall‑clock hours did it take to run?"
+ },
+ "from_cache": false
+}

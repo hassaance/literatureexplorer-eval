@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.267,
+ "json": {
+  "query": "From Generation to Attribution: Music AI Agent Architectures for the Post-Streaming Era",
+  "contexts": [
+   {
+    "text": "From Generation to Attribution: Music AI Agent Architectures for the Post-Streaming Era   Wonil Kim1∗, Hyeongseok Wi1∗, Seungsoon Park1∗, Taejun Kim1∗, Sangeun Keum1∗, Keunhyoung Kim1∗, Taewan Kim1∗, Jongmin Jung1, Taehyoung Kim1, Gaetan Guerrero1,   Mael Le Goff1, Julie Po1, Dongjoo Moon1, Juhan Nam1,2, Jongpil Lee1∗   1MixAudio by Neutune, 2KAIST   Abstract   Generative AI is reshaping music creation, but its rapid growth exposes structural gaps in attribution, rights management, and economic models. Unlike past me- dia shifts—from live performance to recordings, downloads, and streaming—AI transforms the entire lifecycle of music, collapsing boundaries between creation, distribution, and monetization. However, existing streaming systems, with opaque and concentrated royalty flows, are ill-equipped to handle the scale and complexity of AI-driven production. We propose a content-based Music AI Agent architecture that embeds attribution directly into the creative workflow through block-level retrieval and agentic or- chestration.",
+    "score": 0.8493092035327963,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 1
+   },
+   {
+    "text": "This gap collides with the structural limitations of today’s streaming economy. Subscription-based royalty models remain opaque and concentrated among a few artists, while metadata fragmentation and fraudulent practices exacerbate the “black box” of unmatched royalties [5, 7, 8]. As AI dra- matically scales both the volume and diversity of music, these inefficiencies risk being magnified: absent attribution-aware infrastructure, independent artists and cultural communities risk seeing their contributions absorbed into opaque accounting with limited recognition or compensation. In other words, AI could enlarge the very inequities it is often expected to solve.   To overcome these limitations, we argue that AI systems must extend beyond generation to encompass attribution, participation, and monetization. Embedding rights tracking not only into the creative process but also into modes of consumption is essential for building sustainable platforms. This trajectory points toward a post-streaming paradigm: an adaptive, participatory, and collaborative ecosystem where music is no longer a static catalog but a living process of creation and engagement.   In this paper, we propose a Music AI Agent architecture that operationalizes this vision. Built on content-based Retrieval-Augmented Generation (RAG), generative models, and agent-based orchestration, the system embeds attribution directly into the creative workflow. By recording Block- level usage events—where Blocks denote granular musical components such as stems or structural segments—the system directly links creation with transparent provenance.",
+    "score": 0.7787567619592826,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 2
+   },
+   {
+    "text": "These Blocks then serve as context or creative conditions for the diverse generative tools in the agent’s toolset. Crucially, each time a Block is used to generate a new musical layer, it triggers a real-time attribution event, linking the new output to its original creators. The Attribution Layer aggregates these events throughout the session and   3Figure 3: The user interface for a Music AI Agent, showing how a song is built through session-based, interactive layering of musical stems (left), and how a user can then select a specific track to request further modifications (right).   allocates royalties to the original artists under transparent rules, completing the cycle from creation to compensation. By embedding attribution within this iterative RAG pipeline, the architecture ensures that compensation reflects a work’s actual granular use, rather than approximations based on market share. This design provides the foundation for a more equitable AI-driven music economy, which is explored further in the following section.   4 Discussion and Conclusion The introduction of attribution-centered Music AI Agents represents more than a technical innovation. It provides a structural alternative to the existing streaming paradigm and signals the emergence of next-generation AI-driven media platforms.   Transformation of Creative Practice If such an agentic workflow is structured as iterative, session- based stem generation as illustrated in Figure 3, music creation is reframed as a participatory process that lowers barriers to entry and diversifies engagement.",
+    "score": 0.6932051564180749,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 3
+   },
+   {
+    "text": "Such an approach enables explicit reference tracking of samples, facilitating attribution and revenue sharing. Structurally, the mapping aligns with RAG: indexing and parsing correspond to Music Information Retrieval (MIR) [42], while retrieval, language–audio models [43–46], and generative models form the pipeline [19, 47–50].   2.3 AI Agent Architecture containing Media Content Extending content-based RAG with an agent-based orchestration layer and toolsets yields a highly organic user experience in music creation and transformation. Early explorations such as Music AI Agents [51] integrated diverse MIR techniques into toolsets, enabling users not only to generate music but also to isolate and manipulate its components. However, these systems remain algorith- mically toolset-driven [52]. If evolved into agent architectures backed by media-content memory databases—where samples or artist tracks are decomposed into granular musical elements—such systems could further support attribution and enable revenue-sharing mechanisms proportional to original source contributions.   3 Content-based Music AI Agent for Integrated Attribution To address the core challenge of attribution, we introduce an architecture that operationalizes the paradigms of content-based RAG and AI agents. Our system orchestrates a suite of generative tools grounded in a database of musical components, thereby making attribution an intrinsic part of the creative act rather than a post-hoc process.",
+    "score": 0.6570726753283843,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 3
+   },
+   {
+    "text": "Furthermore, fans evolve from passive listeners to active stakeholders who remix, co-create, and directly support artists. This dynamic expands the scope of the “superfan economy” into a broader ecosystem of participatory patronage [54].   Infrastructure and Copyright Integration Event logging through the Attribution Layer establishes infrastructure compatible with global copyright registries such as ISRC, ISWC, and IPI, positioning Music AI Agents as complementary extensions of existing rights management systems that connect creation, AI generation, and distribution. By managing the music lifecycle through transparent contribution records and automated settlements, Music AI Agents help form the foundation of a Fair AI Media Platform and support a more sustainable, interoperable, and collaborative music ecosystem [57].   Post-Streaming Outlook Collectively, these mechanisms signal a shift from centralized streaming platforms toward agentic AI ecosystems where creation, consumption, and settlement converge in real time. In this post-streaming paradigm, AI evolves from a generative tool into a trusted mediator that governs attribution, evaluation, and economic interaction under transparent rules [55, 56].   4Acknowledgements This work was made possible through the support of the following institutions and collaborators. Institutions: Korea Creative Content Agency (KOCCA), National Gugak Center, National Information Society Agency (NIA), Korea Culture Information Service Agency (KCISA), Artificial Intelligence Industry Cluster Agency (AICA), and Electronics and Telecommunications Research Institute (ETRI).",
+    "score": 0.6312256779766364,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b0d8615f-138f-4609-8086-c208d5c2ab72",
+  "X-Amzn-Trace-Id": "Root=1-6b08050f-62577cad24dfe62d7a4c2d60;Parent=2098e8051fdf083e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.267
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:14+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "From Generation to Attribution: Music AI Agent Architectures for the Post-Streaming Era"
+ },
+ "from_cache": false
+}

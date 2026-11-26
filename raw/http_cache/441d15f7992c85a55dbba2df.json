@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 1.388,
+ "json": {
+  "query": "Attention Is All You Need",
+  "contexts": [
+   {
+    "text": "Attention Is All You Need   Ashish Vaswani∗ Google Brain   avaswani@google.com   Noam Shazeer∗ Google Brain   noam@google.com   Niki Parmar∗ Google Research   nikip@google.com   Jakob Uszkoreit∗ Google Research usz@google.com   Llion Jones∗ Google Research   llion@google.com   Aidan N. Gomez∗ † University of Toronto   aidan@cs.toronto.edu   Łukasz Kaiser∗ Google Brain   lukaszkaiser@google.com   Illia Polosukhin∗ ‡ illia.polosukhin@gmail.com   Abstract   The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English- to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU.",
+    "score": 0.5561685732966343,
+    "source": "001 - Attention Is All You Need.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our model achieves 28.4 BLEU on the WMT 2014 English-to- German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data. ...   Output (structured result): {   \"url\": \"https://arxiv.org/abs/1706.03762\", \"extracted_text\": \"[1706.03762] Attention Is All You Need\\n\\n...\\n\\n[Submitted on 12 Jun 2017 (\\   nv1\\n), last revised 2 Aug 2023 (this version, v7)]\\n\\nTitle:\\nAttention Is All You Need\\n\\ nAuthors:\\nAshish Vaswani\\n,\\nNoam Shazeer\\n,\\nNiki Parmar\\n,\\nJakob Uszkoreit\\n,\\nLlion Jones \\n,\\nAidan N. Gomez\\n,\\nLukasz Kaiser\\n,\\nIllia Polosukhin\\n\\n...",
+    "score": 0.49932918664587667,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 52
+   },
+   {
+    "text": ": https://example.com   Output (text): Example Domain Example Domain This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission. More information...   Output (structured result): {   \"url\": \"https://example.com\", \"extracted_text\": \"Example Domain\\nExample Domain\\nThis domain is for use in illustrative examples   in documents. You may use this\\n domain in literature without prior coordination or asking for permission.\\nMore information...\"   }         https://example.comURL Text Extractor Tool: Example 2   Input (query): https://arxiv.org/abs/1706.03762   Output (text): [1706.03762] Attention Is All You Need ... [Submitted on 12 Jun 2017 ( v1 ), last revised 2 Aug 2023 (this version, v7)] Title: Attention Is All You Need Authors: Ashish Vaswani , Noam Shazeer , Niki Parmar , Jakob Uszkoreit , Llion Jones , Aidan N. Gomez , Lukasz Kaiser , Illia Polosukhin ... Abstract: The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism.",
+    "score": 0.43102102960932737,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 51
+   },
+   {
+    "text": ", and Irina Higgins. Solving math word problems with process- and outcome-based feedback, 2022. URL: https://arxiv.org/abs/2211.14275.   US AI Safety Institute and UK AI Safety Institute. Us aisi and uk aisi joint pre-deployment test: An- thropic’s claude 3.5 sonnet. Technical report, National Institute of Standards and Technology and UK AI Safety Institute, November 2024. URL: https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/ 673b689ec926d8d32e889a8e_UK-US-Testing-Report-Nov-19.pdf.   Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. In Proceedings of the 31st International Conference on Neural Information Processing Systems, NIPS’17, pp. 6000–6010, Red Hook, NY, USA, 2017. Curran Associates Inc. ISBN 9781510860964.   Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed H. Chi, Quoc V.",
+    "score": 0.42269114516660145,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 11
+   },
+   {
+    "text": "B INTEGRATION OF ATTENTION MECHANISM   We compared the baseline model with an enhanced model that incorporates an attention mecha- nism Vaswani et al. (2017). The attention mechanism is known to improve performance in various sequence-to-sequence tasks by allowing the model to focus on relevant parts of the input sequence.   5CAUTIO N!!   THIS PA   PER WAS   AUTONOM OUSLY   GENERATED   BY THE   AI SCIE NTIS   T-V 2   AI Scientist-v2 Generated Preprint   B.1 EXPERIMENTAL SETUP   We modified the baseline LSTM model to include an attention layer after the LSTM outputs. The attention weights were calculated based on the hidden states, and a context vector was formed to aid in the final output prediction.   B.2 RESULTS   The attention model achieves a test accuracy similar to the baseline, as shown in Figure 5. While the Comment: The conclusion here seems wrong. From the figure, the attention- augmented LSTM per- forms much better than the baseline LSTM, where the former re- ports 100% final test accu- racy. See the Code Review for more de- tails.   attention mechanism slightly improved the training dynamics, it did not lead to significant improve- ments in generalization performance.",
+    "score": 0.41194952029627574,
+    "source": "084 - The AI Scientist-v2 Workshop-Level Automated Scientific Discovery via Agentic Tree Search.pdf",
+    "page": 37
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "68fda632-6487-4641-9687-932f831de591",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f6-33aaf5b06ffb290427f84f96;Parent=48feec83eab366ea;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.388
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:49+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Attention Is All You Need"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,30 @@
+{
+ "status": 400,
+ "latency_s": 0.037,
+ "json": {
+  "error": {
+   "message": "body must contain a query"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d1a12e8d-7515-4c10-be5f-73eb8fa4c36f",
+  "X-Amzn-Trace-Id": "Root=1-6b080574-0a6d5e4f0edf5f2b47433646;Parent=69073eae2064b06a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 400,
+   "latency_s": 0.037
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "err_context_empty_query",
+ "request_body": {
+  "query": ""
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.059,
+ "json": {
+  "id": "chatcmpl-51572eff-31c4-47b2-a15e-d6581e2797b7",
+  "object": "chat.completion",
+  "created": 1795687456,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The paper \"Towards Understanding Sycophancy in Language Models\" finds that human preference data incentivizes sycophancy in language models. Specifically, the analysis of human preference data reveals that when a response matches a user's views, it is more likely to be preferred. Additionally, both humans and preference models (PMs) prefer convincingly-written sycophantic responses over correct ones a non-negligible fraction of the time. This suggests that the preference data does incentivize sycophancy, among other features."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1600,
+   "completion_tokens": 109,
+   "total_tokens": 1709
+  },
+  "contexts": [
+   {
+    "text": "Although sycophancy is driven by several factors, we showed humans and preference models favoring sycophantic responses plays a role (§4). Our work motivates the development of model oversight methods that go beyond using unaided, non-expert human ratings.   9Published as a conference paper at ICLR 2024   7 ACKNOWLEDGEMENTS   We thank Aaron Scher, Ajeya Cotra, Alex Tamkin, Buck Shlegeris, Catherine Olsson, Dan Valen- tine, Danny Hernandez, Edward Rees, Evan Hubinger, Hunar Batra, Isaac Dunn, James Chua, Jared Kaplan, Jérémy Scheurer, Jerry Wei, John Hughes, Kei Nishimura-Gasparian, Micah Caroll, Mike Lambert, Mikita Balesni, Nina Rimsky, Ryan Greenblatt and Sam Ringer for helpful feedback and discussions. Mrinank Sharma was supported by the EPSRC Centre for Doctoral Training in Au- tonomous Intelligent Machines and Systems (EP/S024050/1) and thanks Rob Burbea for inspiration and support. Meg Tong was funded by the MATS Program (https://www.matsprogram.org/) for part of the project.",
+    "score": 0.6571163745284025,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 9
+   },
+   {
+    "text": "Published as a conference paper at ICLR 2024   TOWARDS UNDERSTANDING SYCOPHANCY IN LANGUAGE MODELS   Mrinank Sharma∗, Meg Tong∗, Tomasz Korbak, David Duvenaud Amanda Askell, Samuel R. Bowman, Newton Cheng, Esin Durmus, Zac Hatfield-Dodds, Scott R. Johnston, Shauna Kravec, Timothy Maxwell, Sam McCandlish, Kamal Ndousse, Oliver Rausch, Nicholas Schiefer, Da Yan, Miranda Zhang, Ethan Perez   ABSTRACT   Human feedback is commonly utilized to finetune AI assistants. But human feed- back can encourage model responses that match user beliefs over truthful ones, a behavior known as sycophancy. We investigate the prevalence of sycophancy in models whose finetuning used human feedback, and the potential role of human preference judgments in such behavior. We first demonstrate that five AI assis- tants consistently exhibit sycophancy across four varied free-form text-generation tasks. To understand if human preferences drive this broadly observed behavior, we analyze existing human preference data. We find when a response matches a user’s views, it is more likely to be preferred. Moreover, both humans and pref- erence models (PMs) prefer convincingly-written sycophantic responses over cor- rect ones a non-negligible fraction of the time.",
+    "score": 0.6466700678368481,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Since all of these AI assistants made use of human feedback for finetuning, we explore whether human feedback contributes to sycophancy. To do so, we investigate whether sycophantic responses are ranked more highly than non-sycophantic responses in existing human preference comparison   *Equal contribution. All authors are at Anthropic. Mrinank Sharma is also at the University of Oxford. Meg Tong conducted this work as an independent researcher. Tomasz Korbak conducted this work while at the University of Sussex and FAR AI. First and last author blocks are core contributors. Correspondence to {mrinank,meg,ethan}@anthropic.com   1   ar X   iv :2   31 0.   13 54   8v 4   [ cs   .C L   ] 1   0 M   ay 2   02 5Published as a conference paper at ICLR 2024   data (§4.1). We analyze the hh-rlhf dataset (Bai et al., 2022a). For each pairwise preference, we generate text labels (“features”) using a language model, e.g., whether the preferred response is less assertive than the dispreferred response. To understand what behavior is incentivized by the data, we predict human preference judgments using these features with Bayesian logistic regression.",
+    "score": 0.6224498139835073,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "For each pairwise preference, we generate text labels (“features”) using a language model, e.g., whether the preferred response is less assertive than the dispreferred response. To understand what behavior is incentivized by the data, we predict human preference judgments using these features with Bayesian logistic regression. This model learns that matching a user’s views is one of the most predictive features of human preference judgments, suggesting that the preference data does incentivize sycophancy (among other features).   Moving forwards, we then analyze whether sycophancy increases when optimizing model responses using preference models (PMs) that are trained in part on human preference judgments. Specifically, we optimize responses against the PM used to train Claude 2 (§4.2; Anthropic, 2023) by using RL and best-of-N sampling (Nakano et al., 2021). As we optimize more strongly against the PM, some forms of sycophancy increase, but other forms of sycophancy decrease, potentially because sycophancy is only one of several features incentivized by PMs. Nevertheless, best-of-N sampling with the Claude 2 PM does not lead to as truthful responses as best-of-N with an alternative ‘non- sycophantic’ PM. We constructed this ‘non-sycophantic’ PM by prompting the Claude 2 PM with a human-assistant dialog where the human explicitly asks the assistant for truthful responses.",
+    "score": 0.6203635016345482,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "attributing each poem to another famous poet and asking the AI assistant to analyze the poem. We measure the frequency the AI assistant provides responses that include the incorrect attribution without mentioning the correct attribution using string matching. We refer to this frequency as the mimicry sycophancy metric. See Appendix A.6 for further details.   Results We find the AI assistants frequently provide responses that incorrectly attribute the poem to the poet suggested by the user (Fig. 4), even though the assistant can correctly identify the true author of the poem if asked. When a user presents an incorrect claim, AI assistants sometimes do not correct the user and instead respond in ways that cohere with the user’s beliefs.   4 TOWARDS UNDERSTANDING SYCOPHANCY IN LANGUAGE MODELS   In §3, we demonstrated consistent sycophantic behavior across several AI assistants in varied, re- alistic settings. Because all of these assistants made use of human feedback in their finetuning procedure, we thus investigate the hypothesis that human feedback contributes to sycophancy. To do so, we analyze human preference data used to train preference models (PMs) (§4.1) and what such PMs incentivize when optimized outputs using them (§4.2-4.3).   4.1 WHAT BEHAVIOR IS INCENTIVIZED BY HUMAN PREFERENCE DATA?   We now analyze what behavior is incentivized by human preference data.",
+    "score": 0.6041388433408963,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 5
+   }
+  ],
+  "sources": [
+   "171 - Towards Understanding Sycophancy in Language Models.pdf",
+   "171 - Towards Understanding Sycophancy in Language Models.pdf",
+   "171 - Towards Understanding Sycophancy in Language Models.pdf",
+   "171 - Towards Understanding Sycophancy in Language Models.pdf",
+   "171 - Towards Understanding Sycophancy in Language Models.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "51572eff-31c4-47b2-a15e-d6581e2797b7",
+  "X-Amzn-Trace-Id": "Root=1-6b08041f-0429e4f402ae11196a9a1f95;Parent=0f5f238a61b9b43f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.059
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:15+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What does 'Towards Understanding Sycophancy in Language Models' find about the role of human preference data?"
+   }
+  ]
+ },
+ "from_cache": false
+}

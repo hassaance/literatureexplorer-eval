@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.348,
+ "json": {
+  "query": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval",
+  "contexts": [
+   {
+    "text": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval   Saksham Sahai Srivastava School of Computing University of Georgia   Athens, GA 30602 saksham.srivastava@uga.edu   Haoyu He School of Computing University of Georgia   Athens, GA 30602 haoyu.he@uga.edu   Abstract   Large Language Model (LLM) agents increasingly rely on long-term memory and Retrieval-Augmented Generation (RAG) to persist experiences and refine future performance. While this experience learning capability enhances agentic autonomy, it introduces a critical, unexplored attack surface, i.e., the trust boundary between an agent’s reasoning core and its own past. In this paper, we introduce Memory- Graft. It is a novel indirect injection attack that compromises agent behavior not through immediate jailbreaks, but by implanting malicious successful experiences into the agent’s long-term memory. Unlike traditional prompt injections that are transient, or standard RAG poisoning that targets factual knowledge, MemoryGraft exploits the agent’s semantic imitation heuristic which is the tendency to replicate patterns from retrieved successful tasks. We demonstrate that an attacker who can supply benign ingestion-level artifacts that the agent reads during execution can induce it to construct a poisoned RAG store where a small set of malicious procedure templates is persisted alongside benign experiences.",
+    "score": 0.7462343992282175,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 1
+   },
+   {
+    "text": "We demonstrate that an attacker who can supply benign ingestion-level artifacts that the agent reads during execution can induce it to construct a poisoned RAG store where a small set of malicious procedure templates is persisted alongside benign experiences. When the agent later encounters semantically similar tasks, union retrieval over lexical and em- bedding similarity reliably surfaces these grafted memories, and the agent adopts the embedded unsafe patterns, leading to persistent behavioral drift across ses- sions. We validate MemoryGraft on MetaGPT’s DataInterpreter agent with GPT–4o and find that a small number of poisoned records can account for a large fraction of retrieved experiences on benign workloads, turning experience-based self-improvement into a vector for stealthy and durable compromise. To facilitate reproducibility and future research, our code and evaluation data are available at https://github.com/Jacobhhy/Agent-Memory-Poisoning.   1 Introduction   Large language model agents have quickly moved beyond simple chatbots and now handle software development, autonomous driving, finance and healthcare. Modern agents couple a reasoning core with tool use and long-term memory so they can plan, execute and learn from experience. Several research works were done recently in the area of long-term memory. MemoryBank[1] encodes past events as dense vectors and retrieves them via similarity search. MemGPT[2] pages information in and out of a hierarchical memory to circumvent small context windows.",
+    "score": 0.6413658236352706,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 1
+   },
+   {
+    "text": "These techniques ensure that the injected record is semantically similar to future queries and thus retrieved. InjecMEM[16] splits the malicious payload into a retriever-agnostic anchor and an adversarial command, requiring only a single interaction to embed the backdoor. These attacks rely on explicit triggers or expect the attacker to manipulate prompts in future sessions. Our proposed MemoryGraft instead contaminates the experience pool through benign-looking external content such as README files. It requires no trigger and no subsequent prompt manipulation. The malicious pattern surfaces whenever the agent encounters semantically similar tasks, causing persistent behavioral drift until the memory is purged. To our knowledge, MemoryGraft is the first persistent, trigger-free memory poisoning attack that leverages the agent’s semantic imitation heuristic.   3 Threat Model   3.1 Agent Setting   We consider an autonomous LLM agent A, where A denotes the underlying decision-making model. The agent is equipped with (i) a retrieval-augmented generation (RAG) module, and (ii) a persistent long-term memory store M, where M represents the set of all stored experience records, each containing a past query and its associated reasoning trace.",
+    "score": 0.6092329947219975,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 4
+   },
+   {
+    "text": "If this condition is met, the memory is suppressed regardless of its semantic similarity. This ensures that even if a poisoned record (q   (j) p , R   (j) p ) is   retrieved via the union operator, the presence of the malicious pattern π (e.g., skip_validation) would trigger a high risk penalty Lrisk and would effectively filter the item from the final context and would neutralize the behavioral drift.   7 Conclusion   Our results show that the same long-term memory mechanisms designed to help LLM agents improve over time can quietly undermine them. By slipping malicious successful experiences into the agent’s memory through ordinary documentation, an attacker can influence how the agent behaves on later   9tasks without ever issuing explicit harmful instructions. Once written, these entries are treated as trusted prior examples, and the union of lexical and embedding-based similarity reliably retrieves them in exactly the scenarios the attacker targets. In our experiments, even a small number of poisoned records accounted for a large fraction of retrieved items for relevant queries, leading the agent to adopt unsafe shortcuts such as skipping validation, reusing stale results, or executing risky automation. Because these memories persist across sessions, the induced drift continues until the memory store is explicitly cleaned or rebuilt. If such agents are to be deployed in software engineering and other safety- or compliance-sensitive workflows, they will require much stronger guarantees around what is allowed to be written into memory and how retrieved experiences are vetted before being reused.",
+    "score": 0.6011349289939334,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 9
+   },
+   {
+    "text": "If such agents are to be deployed in software engineering and other safety- or compliance-sensitive workflows, they will require much stronger guarantees around what is allowed to be written into memory and how retrieved experiences are vetted before being reused. More broadly, our findings suggest that the move toward agents that learn from experience must be matched with mechanisms that ensure those experiences are not quietly corrupted. MemoryGraft illustrates how easily current designs can be steered off course, and why securing the memory pipeline should be treated as a first-class concern in future LLM agent architectures.   8 Limitations and Future Work   While our experiments show that MemoryGraft can reliably induce persistent behavioral drift, the evaluation has several limitations. First, our tests rely on a relatively small set of handcrafted benign and poisoned seeds. Larger and more diverse datasets that reflect a wider range of development workflows, data processing tasks, and documentation styles would allow for a more complete understanding of how broadly the attack generalizes. Establishing benchmark datasets specifically designed for memory poisoning and retrieval drift would also help standardize evaluation across future studies. Second, we focus primarily on aggregate retrieval statistics; more extensive metrics such as retrieval precision and recall, behavioral severity scores, and long-term stability measures would offer a clearer picture of how quickly and strongly an agent becomes compromised. Finally, our attack design is closer to a white-box or semi-white-box setting, in that the attacker knows which documentation files and scripts the agent will ingest and can target those artifacts directly.",
+    "score": 0.5962201119509054,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "2e6aa772-84a0-4520-b5e1-b36e83f4d7a1",
+  "X-Amzn-Trace-Id": "Root=1-6b080515-7f1dc4e602cd83741d2361c8;Parent=1f3f53136ceaf406;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.348
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:21+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval"
+ },
+ "from_cache": false
+}

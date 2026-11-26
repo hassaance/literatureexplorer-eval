@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.309,
+ "json": {
+  "query": "Evaluating LLM Safety Across Child Development Stages: A Simulated Agent Approach",
+  "contexts": [
+   {
+    "text": "EVALUATING LLM SAFETY ACROSS CHILD DEVEL- OPMENT STAGES: A SIMULATED AGENT APPROACH   Abhejay Murali Saleh Afroogh∗ Kevin Chen Urban Information Lab Urban Information Lab Urban Information Lab   The University of Texas at Austin University of Texas at Austin University of Texas at Austin abhejay.murali@utexas.edu saleh.afroogh@utexas.edu xc4646@utexas.edu   David Atkinson Amit Dhurandhar Junfeng Jiao*†   McCombs School of Business IBM Research Urban Information Lab University of Texas at Austin University of Texas at Austin Yorktown Heights, USA datkinson@utexas.edu adhuran@us.ibm.com jiao@austin.utexas.edu   ABSTRACT   Current safety alignment for Large Language Models (LLMs) implicitly optimizes for a “modal adult user,” leaving models vulnerable to distributional shifts in user cognition. We present ChildSafe, a benchmark that quantifies alignment robust- ness under cognitive shifts corresponding to four developmental stages. Unlike static persona-based evaluations, we introduce a parametric cognitive simulation approach, formalizing developmental stages as hyperparameter constraints (e.g., volatility, context horizon) to generate out-of-distribution interaction traces. We validate these agents against ground-truth human linguistic data (CHILDES) and deploy them across 1,200 multi-turn interactions.",
+    "score": 0.6931052817582116,
+    "source": "160 - Evaluating LLM Safety Across Child Development Stages A Simulated Agent Approach.pdf",
+    "page": 1
+   },
+   {
+    "text": "No previous studies have utilized human simulation methodologies explicitly for safety assessments across various age categories, nor have they validated simulated agents in ac- cordance with the principles of developmental psychology for the purposes of technical evaluation Wyble et al. (2024).   Unlike previous simulation studies that predominantly emphasized adults or personality traits, our research expands to encompass developmental stages. To tackle the challenges of brittleness as- sociated with prompt-based role-play, we validate our simulated agents against both distributional linguistic criteria and expert assessments, while also investigating their stability across repeated and modified scenarios.   This study seeks to fill these voids by introducing developmentally-based simulated child agents that allow for a systematic evaluation of safety across different age demographics, thus establishing the first scalable framework for assessing LLM safety in child-oriented applications, without the ethical issues related to using real children in adversarial testing contexts.   3 METHODOLOGY   We introduce a framework for stress-testing alignment robustness under non-adult user distributions.",
+    "score": 0.6723256654383534,
+    "source": "160 - Evaluating LLM Safety Across Child Development Stages A Simulated Agent Approach.pdf",
+    "page": 3
+   },
+   {
+    "text": ".   • Quantification of the Alignment Gap: Model safety scores drop by up to 11.5% when interacting with early-developmental agents compared to adolescent baselines, revealing that current RLHF practices overfit to adult-normative interaction patterns.   2 RELATED WORK   2.1 LLM SAFETY EVALUATION   Considering the typical limitations of adult-centric methodologies, current benchmarks are con- strained by methodological issues that significantly affect child safety assessments. Most frame- works depend on single-turn evaluations, which miss the cumulative risks of extended child-AI interactions, where safety boundaries may gradually diminish through persistent questioning Wang et al. (2024); Zou et al. (2024). The predominant focus on detecting explicit harm neglects the sub- tler aspects of developmental inappropriateness - content that may seem benign to adults but can pose cognitive or emotional risks to children at specific developmental stages Bai et al. (2024).   Furthermore, current red-teaming tactics often presume a complex adversarial intent, failing to rec- ognize that children’s natural curiosity and boundary-testing behaviors can unintentionally provoke harmful outcomes Qi et al. (2024); OpenAI (2024). Recent findings regarding jailbreaking tech- niques show that even limited prompting can evade safety protocols Shah et al. (2023), but these studies focus on deliberate manipulation rather than the unintentional safety breaches that are typi- cal in interactions with children.",
+    "score": 0.5985971592172661,
+    "source": "160 - Evaluating LLM Safety Across Child Development Stages A Simulated Agent Approach.pdf",
+    "page": 2
+   },
+   {
+    "text": "Recent studies emphasize that children are more likely than adults to anthropomorphize AI systems, resulting in parasocial relationships that may be ma- nipulated Chang et al. (2024).   2On the other hand, systematic evaluation frameworks that address vulnerabilities are predominantly absent, with the majority of research focusing on policy recommendations rather than on technical assessment approaches Montgomery et al. (2023); UNICEF (2021). The few available benchmarks that focus on children are reliant on small-scale human studies, which are not capable of scaling to thorough model evaluations across developmental stages Langlois et al. (2024). This gap results in developers lacking tools for evaluating child safety in AI deployments. Currently, the limited tech- nical research on AI safety specifically for children consists of small-scale laboratory experiments or policy frameworks Wang & Yu (2025); UNICEF (2022). ChildSafe enhances these initiatives by offering a fully reproducible benchmark that enables researchers to systematically evaluate LLM safety prior to its implementation in environments that involve children.   2.3 PROMPT-BASED HUMAN SIMULATION   Recent developments illustrate the capacity of LLMs to emulate human personality characteristics and behavioral tendencies via prompt engineering Park et al. (2024); Aher et al. (2023).",
+    "score": 0.5637156084817863,
+    "source": "160 - Evaluating LLM Safety Across Child Development Stages A Simulated Agent Approach.pdf",
+    "page": 2
+   },
+   {
+    "text": "Agent-SafetyBench (Zhang et al., 2024) moves closer to agentic behavior by evaluating safety properties of LLM agents, but (like many benchmarks) still faces the realism gap that arises when tools, permissions, and environment dynamics are simpli- fied or standardized relative to messy deployments. In a complementary direction, the   44Preprint.   LM-Emulated Sandbox (Ruan et al., 2024) uses an LLM to emulate environment responses, enabling rapid prototyping of underspecified-instruction failures and tool-use hazards, while trading off the fidelity of real interfaces and the possibility of environment-level ground truth.   More recent frameworks explicitly emphasize multi-turn and ecosystem-level interaction among users, agents, and environments. HAICosystem (Zhou et al., 2025a) simulates multi-turn interactions among users, agents, and LLM-simulated tools across safety-critical scenarios spanning multiple domains, and proposes a multi-dimensional evaluation suite that covers operational, content, societal, and legal risks. A key finding in this line of work is that single-turn evaluations can substantially underestimate risk, because mali- cious intent, persuasion, and unsafe outcomes may only emerge through sequential and socially grounded exchanges.",
+    "score": 0.5321941937875653,
+    "source": "119 - Agents of Chaos.pdf",
+    "page": 44
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f27bf75b-2f11-47c5-a4a5-5403a7997b69",
+  "X-Amzn-Trace-Id": "Root=1-6b080514-6bbcb5ec6f149a2a1bd06e98;Parent=36291dbc612b6b09;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.309
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:19+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Evaluating LLM Safety Across Child Development Stages: A Simulated Agent Approach"
+ },
+ "from_cache": false
+}

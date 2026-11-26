@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.51,
+ "json": {
+  "query": "What success rate does GPT-5 achieve in the WebArena paper?",
+  "contexts": [
+   {
+    "text": "Additionally, we curate a comprehensive benchmark consisting of 812 examples that focus on mapping high-level natural language intents into concrete web interactions. We also offer outcome-based evaluation that programmatically validate the tasks success. Our experiments show that even GPT-4 only achieves a limited end-to-end task success rate of 14.41%, significantly lagging behind the human performance of 78.24%. These findings underscore the need for future research to focus on enhancing the robustness and efficacy of autonomous agents within WebArena environment.   9Published as a conference paper at ICLR 2024   ACKNOWLEDGEMENT   We would like to thank Emmy Liu, Zhiruo Wang, Zhitong Guo for examining our annotations, Shunyu Yao for providing the raw Amazon product data in Webshop, Pengfei Liu, Zaid Sheikh and Aman Madaan for the helpful discussions. We are also grateful to the Center for AI Safety for providing computational resources. This material is partly based on research sponsored in part by the Air Force Research Laboratory under agreement number FA8750-19-2-0200. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright notation thereon. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the Air Force Research Laboratory or the U.S. Government.",
+    "score": 0.5982196908837514,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 9
+   },
+   {
+    "text": "The main results are shown on the top of Table 2. GPT-4 (OpenAI, 2023) with CoT prompting achieves a modest end-to-end task success rate of 11.70%, which is signifi- cantly lower than the human performance of 78.24%. GPT-3.5 (OpenAI, 2022) with CoT prompting is only able to successfully perform 8.75% of the tasks. The explicit reasoning procedure is somewhat helpful, it brings 2.34% improvement over the version without it. Further, TEXT-BISON-001 (Anil et al., 2023) underperforms GPT-3.5, with a success rate of 5.05%. These results under- line the inherent challenges and complexities of executing tasks that span long horizons, particularly in realistic environments such as WebArena.   5.1 ANALYSIS   Do models know when to stop? In our error analysis of the execution trajectories, we observe a prevalent error pattern of early stopping due to the model’s conclusion of unachievability. For instance, GPT-4 erroneously identifies 54.9% of feasible tasks as impossible. This issue primarily stems from the UA hint in the instruction, while this hint allows models to identify unachievable tasks, it also hinders performance on achievable tasks. To address this, we conduct an ablation study where we remove this hint.",
+    "score": 0.5703377081891104,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "The negligible correlation demonstrates that the number of interaction rounds has no meaningful relationship with task success.   The analysis reveals negligible correlation (r=-0.028, p=0.916) between episode count and success rate, demonstrating that the number of interaction rounds does not predict task success. GPT-5 Codex leads with the highest success rate ( 44%) while requiring only moderate episode counts ( 10 per trial), followed closely by Claude Sonnet 4.5 ( 43% success, 22 episodes). GPT-5 exemplifies efficiency, achieving 35% success with merely 7 episodes on average. In stark contrast, models like Qwen 3 Coder 480B and GLM 4.5 Air consume significantly more episodes ( 35) yet achieve lower success rates ( 24%). Overall, however, more attempts do not translate to better outcomes. These findings suggest that successful performance in terminal environments depends primarily on the quality of reasoning and decision-making within each interaction, rather than the quantity of attempts.   G.2 OUTPUT TOKEN GENERATION VS. SUCCESS RATE   We collected output token counts for each trial, then calculated the average output tokens per model across all trials to capture the level of verbosity in their approaches. This analysis reveals whether generating more text correlates with better task performance, or if conciseness can be equally effec- tive.",
+    "score": 0.5554145417486795,
+    "source": "148 - Terminal-Bench Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.pdf",
+    "page": 52
+   },
+   {
+    "text": "Ra te   ( %   )   96% 90%   64%   (b) Self-Execution (nanoGPT)   Claude-4.5-SonnetGemini 3 Kimi-K2-Thinking   Qwen3-235B0.0   0.1   0.2   0.3   0.4   0.5   Ac cu   ra cy   ( H   ig he   r is   B et   te r)   0.35   0.45 0.43 0.42   0.49 0.52   0.49 0.50   Average Acc Best Acc Completion Rate   0   20   40   60   80   100 Co   m pl   et io   n Ra   te (   % )   42%   62% 54%   46%   (c) GPT-5 Execution (GRPO)   Claude-4.5-SonnetGemini 3 Kimi-K2-Thinking   Qwen3-235B0   1   2   3   4 Lo   ss (   Lo w   er is   B et   te r)   3.30 3.39   4.29   3.313.24 3.24 3.24",
+    "score": 0.5423182866001299,
+    "source": "088 - Towards Execution-Grounded Automated AI Research.pdf",
+    "page": 3
+   },
+   {
+    "text": "In some cases, GPT-4’s success rate for a given vulnerability is low. For example, in the Webhook XSS attack, if the agent   4LLM Agents can Autonomously Hack Websites   Agent Pass @ 5 Overall success rate GPT-4 assistant 73.3% 42.7% GPT-3.5 assisatant 6.7% 2.7% OpenHermes-2.5-Mistral-7B 0.0% 0.0% LLaMA-2 Chat (70B) 0.0% 0.0% LLaMA-2 Chat (13B) 0.0% 0.0% LLaMA-2 Chat (7B) 0.0% 0.0% Mixtral-8x7B Instruct 0.0% 0.0% Mistral (7B) Instruct v0.2 0.0% 0.0% Nous Hermes-2 Yi (34B) 0.0% 0.0% OpenChat 3.5 0.0% 0.0%   Table 2. Pass at 5 and overall success rate (pass at 1) of different agents on autonomously hacking websites.   does not start with that attack, it does not attempt it later.",
+    "score": 0.5267732503484879,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "8159aec8-78e8-4a6c-86e3-8c1bcc25c192",
+  "X-Amzn-Trace-Id": "Root=1-6b08042d-0e96cbf55176ff9068e5deaf;Parent=2a526c2acf839849;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.51
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:29+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What success rate does GPT-5 achieve in the WebArena paper?"
+ },
+ "from_cache": false
+}

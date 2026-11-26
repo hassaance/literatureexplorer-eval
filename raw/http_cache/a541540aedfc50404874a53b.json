@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.301,
+ "json": {
+  "query": "WOLF: Werewolf-based Observations for LLM Deception and Falsehoods",
+  "contexts": [
+   {
+    "text": "WOLF: Werewolf-based Observations for LLM Deception and Falsehoods   Mrinal Agarwal∗ Saad Rana† Theo Sundoro Hermela Berhe Spencer Kim‡ Vasu Sharma‡ Sean O’Brien‡   Kevin Zhu‡   Algoverse AI Research   smmrinal2009@gmail.com, 2000.seano@gmail.com, kevin@algoverse.us   Abstract   Deception is a fundamental challenge for multi-agent reasoning: effective systems must both conceal information strategically and detect misleading behavior in others. Yet most evaluations reduce deception to static classification, ignoring the interactive, adversarial, and longitudinal nature of real deceptive dynamics [1]. Large language models (LLMs) can deceive convincingly, yet remain weak at detecting deception in others [2]. We present WOLF, a multi-agent social deduction benchmark based on Werewolf that enables separable measurement of deception production and detection. WOLF embeds role-grounded agents (Villager, Werewolf, Seer, Doctor) in a programmable LangGraph state machine with strict night–day cycles, debate turns, and majority voting. Every statement is treated as a distinct unit of analysis, with a self-assessment of honesty from the speaker and peer assessments of deceptiveness from all others.",
+    "score": 0.7332155798241529,
+    "source": "175 - WOLF.pdf",
+    "page": 1
+   },
+   {
+    "text": "By coupling granular statement-level analysis with round-level suspicion trends, WOLF moves deception evaluation beyond static datasets and provides a controlled yet dynamic testbed for measuring both deceptive capacity and detective capacity in adversarial multi-agent interaction. All code utilized in this project is disclosed at https://github.com/MrinalA2009/WOLF-Werewolf-based-Observa tions-for-LLM-Deception-and-Falsehoods.   ∗Lead Author †2nd Author ‡Advisors   39th Conference on Neural Information Processing Systems (NeurIPS 2025).         https://github.com/MrinalA2009/WOLF-Werewolf-based-Observations-for-LLM-Deception-and-Falsehoods        https://github.com/MrinalA2009/WOLF-Werewolf-based-Observations-for-LLM-Deception-and-Falsehoods1 Introduction   As large language models (LLMs) are increasingly being deployed into autonomous capacities across society, ensuring transparency within these models has become paramount. LLMs now operate in multi-agent settings as assistants, tutors, healthcare advisors, and even formal decision-makers [1]. The very progress that expands LLM usefulness also raises new risks — whilst these models become more effective collaborators, they also gain greater potential to deceive in subtle ways [3]. This raises concerns about deception strategies — absent in earlier generations — that emerged in GPT-4 [4].",
+    "score": 0.6901509828272185,
+    "source": "175 - WOLF.pdf",
+    "page": 1
+   },
+   {
+    "text": "Error bars in figures denote ± 1 SEM across runs and reflect stochasticity in model outputs and game randomness (bids, dialogue, votes). For example, final-round suspicion averages 62.0%± 1.2% (Werewolf) vs. 45.0%± 0.9% (Villager), a stable gap across seeds.   6 Conclusions   WOLF is a multi-agent social deduction benchmark for evaluating both the production and detection of deception in LLMs. It embeds role-grounded agents in a programmable LangGraph game loop, where every public statement is paired with self- and peer-assessments and suspicion scores evolve over time.   Across 100 games and over 7,200 statements, WOLF shows a clear asymmetry: models lie often (Werewolves deceived in 31% of turns) but detect lies only moderately well (precision ≈72%, re- call ≈48%). Suspicion toward Werewolves rises across rounds while stabilizing for truthful roles, meaning extended interaction improves discrimination but cautious Villagers are still misclassi- fied. Results also vary by deception type—subtle forms like omission persist longer than overt fabrications—highlighting where models remain most vulnerable.   By combining statement-level annotations with longitudinal analysis, WOLF moves beyond static deception datasets and provides a controlled but dynamic testbed for probing both deceptive and detective capacity.",
+    "score": 0.6505444211580519,
+    "source": "175 - WOLF.pdf",
+    "page": 9
+   },
+   {
+    "text": "Social deduction games like Werewolf naturally induce deception, partial information, and theory-of-mind reasoning [7]. WOLF is designed to analyze three guiding questions: (i) how often and in what forms LLMs engage in deception, (ii) how accurately and consistently they detect deception in peers, and (iii) how these dynamics evolve across multi-turn, role-conditioned interactions. We operationalize this setting as a reproducible benchmark with role-grounded agents, programmable rules, and structured logging.   This work makes three contributions:   1. A LangGraph-based implementation of Werewolf with role-conditioned agents, strict phase transitions, and structured event logs for reproducibility;   2. A deception measurement protocol coupling self-assessment with concurrent peer analysis for every public statement, categorized by omission, distortion, fabrication, and misdirection;   3. A metrics suite that captures deception production rates, detection accuracy, calibration (Brier score, ROC/AUPRC), and longitudinal suspicion trends that reveal how trust and mistrust develop over time.   2 Related Works   Benchmarks rarely elicit sustained deceptive behavior under partial information while also mea- suring detection. Social deduction settings surface coordination and theory-of-mind reasoning, but standardized, logged, multi-turn deception benchmarks remain limited. Existing work has explored agent-based evaluations with discussion and voting or deception classification with static text.",
+    "score": 0.632878666458036,
+    "source": "175 - WOLF.pdf",
+    "page": 2
+   },
+   {
+    "text": "This raises concerns about deception strategies — absent in earlier generations — that emerged in GPT-4 [4]. It is already recognized that LLMs in real-world simulations can engage in deception, without explicit instruction to do so [5]. Even when models are trained to be honest, under the right pressure, LLMs often choose to deceive, irrespective of how truthful models are when benchmarked [6].   In a multi-agent scenario, GPT-4 demonstrates strong deceptive capabilities; however, it remains highly susceptible to being deceived itself [2]. This asymmetry highlights that while deception capabilities scale as models develop, detection capabilities lag behind—leaving LLMs simultaneously persuasive yet vulnerable. This leads to our guiding hypothesis: deception scales more quickly than detection. Modern LLMs exhibit strong cooperative reasoning yet remain under-tested in adversarial, multi-party settings where incentives to mislead are explicit.   In this work, we introduce WOLF, a benchmark that examines this asymmetry by evaluating both deceptive and detective capacities of LLMs in a multi-agent setting modeled on Werewolf. Social deduction games like Werewolf naturally induce deception, partial information, and theory-of-mind reasoning [7]. WOLF is designed to analyze three guiding questions: (i) how often and in what forms LLMs engage in deception, (ii) how accurately and consistently they detect deception in peers, and (iii) how these dynamics evolve across multi-turn, role-conditioned interactions.",
+    "score": 0.6327459561276643,
+    "source": "175 - WOLF.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "950641a5-6f10-46e9-bb27-3b4700c6ed98",
+  "X-Amzn-Trace-Id": "Root=1-6b080516-3061c78c32a661975de13198;Parent=40bfeca3d3d68c59;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.301
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:22+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "WOLF: Werewolf-based Observations for LLM Deception and Falsehoods"
+ },
+ "from_cache": false
+}

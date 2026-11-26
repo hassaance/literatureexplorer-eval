@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.271,
+ "json": {
+  "query": "Stop Comparing LLM Agents Without Disclosing the Harness",
+  "contexts": [
+   {
+    "text": "Stop Comparing LLM Agents Without Disclosing the Harness   Yunbei Zhang1 Janet Wang1 Yingqiang Ge2   Weijie Xu3 Jihun Hamm1 Chandan K. Reddy4   1Tulane University 2Rutgers University 3Independent Researcher 4Virginia Tech yzhang111@tulane.edu reddy@cs.vt.edu   Abstract   This position paper argues that, for long-horizon tasks evaluated across models with comparable frontier capability, the agent execution harness, namely the in- frastructure layer that governs context construction, tool interaction, orchestration, and verification around a language model, is often a stronger determinant of agent performance than the model it wraps. We formalize and defend the Binding Con- straint Thesis: in this regime, performance variance is governed more by harness configuration than by model choice, and current evaluation protocols therefore systematically misattribute harness-level gains to model improvements. We sup- port this thesis along three lines. First, a control-theoretic formalization treats the harness as the controller of a closed-loop dynamical system and the LLM as the stochastic policy it governs, which explains why small harness changes can produce performance shifts that exceed those obtained by substituting one model for another. Second, published benchmarks, industry deployments, and a controlled variance decomposition show that harness-induced variance can substantially ex- ceed model-induced variance, including cases of model ranking reversal.",
+    "score": 0.6656833180844867,
+    "source": "145 - Stop Comparing LLM Agents Without Disclosing the Harness.pdf",
+    "page": 1
+   },
+   {
+    "text": "Every benchmark score is jointly produced by a model and a harness, but the harness is rarely disclosed and almost never held constant across comparisons. The phenomenon is not anecdotal: holding the model fixed while changing only the harness raises Terminal-Bench 2 pass@1 from 69.7% to 77.0% [17], and independent third-party benchmark monitoring reports up to 15 percentage points of scaffold-only variation on SWE-bench Verified [4]. On such long-horizon tasks, the same model under a different harness can therefore rank above or below a competitor.   We argue that benchmark scores for LLM agents on long-horizon tasks are not valid for cross- model comparison unless the execution harness is disclosed. Valid comparisons require either a locked-harness protocol, where a single specified harness is applied to all models, or a factorial   Preprint.   ar X   iv :2   60 5.   23 95   0v 1   [ cs   .A I]   7 M   ay 2   02 6         https://arxiv.org/abs/2605.23950v1Inference framing Closed-loop framing   LLM ??   Tool / Output   action   a?   o b se   rv at   io n   while-loop appends observations to the prompt   Harness CH   drift ?? stability V(s?)   lag ?   State s? Context   c(s?)",
+    "score": 0.5811164489791211,
+    "source": "145 - Stop Comparing LLM Agents Without Disclosing the Harness.pdf",
+    "page": 1
+   },
+   {
+    "text": "Second, published benchmarks, industry deployments, and a controlled variance decomposition show that harness-induced variance can substantially ex- ceed model-induced variance, including cases of model ranking reversal. Third, we propose a harness-aware evaluation framework with a disclosure standard and a variance decomposition protocol. Until harness specifications are disclosed, leaderboard comparisons for long-horizon agents should be treated as incomplete and potentially misleading.   1 Introduction   The standard practice in LLM agent evaluation reports a single number per {model, benchmark} pair and attributes it to the model. Leaderboards such as SWE-bench [13], Terminal-Bench [21], AgentBench [18], and GAIA [22] treat agent performance as if it were a property of the model alone, and this convention directs research toward model scaling, fine-tuning for tool use, and prompt-level techniques. The implicit assumption is that agent capability is primarily driven by model capability, and that a sufficiently capable model produces reliable behavior on long-horizon tasks.   This assumption omits the execution harness: the software layer between the model and the task that constructs the context the model sees, mediates its tool calls, validates its outputs, and decides when to retry, escalate, or stop. Every benchmark score is jointly produced by a model and a harness, but the harness is rarely disclosed and almost never held constant across comparisons.",
+    "score": 0.5650770826689011,
+    "source": "145 - Stop Comparing LLM Agents Without Disclosing the Harness.pdf",
+    "page": 1
+   },
+   {
+    "text": "This survey makes five contributions: (1) A formal definition of agent harness with labeled-transition-system semantics distinguishing safety and liveness properties of the execution loop. (2) A historical account tracing the harness concept from software test harnesses through reinforcement learning environments to modern LLM agent infrastructure, showing convergence toward a common architectural pattern. (3) An empirically-grounded taxonomy of 22 representative systems validated against a six-component completeness matrix (Execution environment, Tool integration, Context management, Scope negotiation, Loop management, Verification). (4) A systematic analysis of nine cross-cutting technical challenges—from sandboxing and evaluation to protocol standardization and compute economics—including an empirical protocol comparison (MCP vs. A2A) and analysis of ultra-long-context model implications. (5) Identification of emerging research directions where harness- layer infrastructure remains underdeveloped relative to component capabilities. The evidence base is grounded in three peer-reviewed empirical studies (HAL on harness-level reliability, SWE-bench on evaluation infrastructure, and AgencyBench on cross-component coupling), supplemented by practitioner reports from large-scale deployments (OpenAI, Stripe, METR) that corroborate the binding constraint thesis. We scope our analysis to end-to-end agentic systems (excluding single-step language model use) and restrict our taxonomy to systems with public documentation, acknowledging that proprietary harness designs remain largely unstudied.   Keywords: agent harness; large language model   1. Introduction 1.1.",
+    "score": 0.5305746127822909,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "This survey makes five contributions: (1) A formal definition of agent harness with labeled-transition-system semantics distinguishing safety and liveness properties of the execution loop. (2) A historical account tracing the harness concept from software test harnesses through reinforcement learning environments to modern LLM agent infrastructure, showing convergence toward a common architectural pattern. (3) An empirically-grounded taxonomy of 22 representative systems validated against a six-component completeness matrix (Execution environment, Tool integration, Context management, Scope negotiation, Loop management, Verification). (4) A systematic analysis of nine cross-cutting technical challenges—from sandboxing and evaluation to protocol standardization and compute economics—including an empirical protocol comparison (MCP vs. A2A) and analysis of ultra-long-context model implications. (5) Identification of emerging research directions where harness- layer infrastructure remains underdeveloped relative to component capabilities. The evidence base is grounded in three peer-reviewed empirical studies (HAL on harness-level reliability, SWE-bench on evaluation infrastructure, and AgencyBench on cross-component coupling), supplemented by practitioner reports from large-scale deployments (OpenAI, Stripe, METR) that corroborate the binding constraint thesis. We scope our analysis to end-to-end agentic systems (excluding single-step language model use) and restrict our taxonomy to systems with public documentation, acknowledging that proprietary harness designs remain largely unstudied.   Keywords: agent harness; large language model   1. Introduction 1.1.",
+    "score": 0.5305746127822909,
+    "source": "043 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "cb890072-3057-4936-8630-d0c61946dc27",
+  "X-Amzn-Trace-Id": "Root=1-6b080511-2973a6be1360783c0fae044d;Parent=12e23df6ade17a22;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.271
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:17+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Stop Comparing LLM Agents Without Disclosing the Harness"
+ },
+ "from_cache": false
+}

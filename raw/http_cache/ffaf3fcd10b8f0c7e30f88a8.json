@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.253,
+ "json": {
+  "query": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+  "contexts": [
+   {
+    "text": "Preprint   Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond Meng Chu1†, Xuan Billy Zhang2†q, Kevin Qinghong Lin3†, Lingdong Kong2†, Jize Zhang3†, Teng Tu2†, Weijian Ma2†, Ziqi Huang4, Senqiao Yang5, Wei Huang6, Yeying Jin2, Zhefan Rao1, Jinhui Ye1, Xinyu Lin2, Xichen Zhang1, Qisheng Hu4, Shuai Yang1, Leyang Shen2, Wei Chow2, Yifei Dong7, Fengyi Wu7, Quanyu Long4, Bin Xia5, Shaozuo Yu5, Mingkang Zhu5, Wenhu Zhang1, Jiehui Huang1, Haokun Gui1, Runyi Li8, Chenyu Tang9, Dong Huang2, Xuhang Chen9, Rui Liu5, Chengzu Li9, Shiyi Du10, Xu Huang11, Haoxuan Che1§, Long Chen1§, Qifeng Chen1§, Wenya Wang4§, Wenxuan Zhang12§, Xiaojuan Qi6§, Yang Deng13§, Yanwei Li5§, Mike Zheng Shou2§, Zhi-Qi Cheng7§, See-Kiong Ng2§, Ziwei Liu4§, Philip",
+    "score": 0.7971744930348862,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 1
+   },
+   {
+    "text": "The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate. ⌂ Homepage: https://agentic-world-modeling.xyz   ¹ Repo: https://github.com/matrix-agent/awesome-agentic-world-modeling   u Database: https://agentic-world-modeling.notion.site   ¯ Contact: mchuah@connect.ust.hk, xuanzhang@u.nus.edu   Disclaimer: This is an early-access preprint and has not undergone peer review. The content may be inaccurate or incomplete. The authors reserve the right to update, correct, or retract content without notice.   1   ar X   iv :2   60 4.   22 74   8v 3   [ cs   .A I]   1 6   Ju n   20 26         https://agentic-world-modeling.xyz        https://github.com/matrix-agent/awesome-agentic-world-modeling        https://agentic-world-modeling.notion.site        https://arxiv.org/abs/2604.22748v3Preprint   Agentic World Modeling   §1 Introduction   §1.1 Motivation   §1.2 Scope & Organizing Principle   §1.3 Contributions & Positioning   §2 Preliminaries   §2.1 Epistemology to Capability Hierarchy",
+    "score": 0.6928453417064524,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 1
+   },
+   {
+    "text": "We identify four progressively stronger capabilities, namely rollout, intervention sensitivity, constraint consistency, and closed-loop use, that characterize world models and go beyond generic predictors (formalized in Section 2). Moreover, existing surveys underrepresent the role of world modeling in agentic AI applications, including web agents, tool-use agents, and multi-agent systems, where learned environment dynamics are essential for planning and action selection (Gu et al., 2025b; Zhang et al., 2025c; Wang et al., 2024d; Park et al., 2023). The goal of this paper is to establish a   4Preprint   Figure 3: Schematic illustrations of the four governing-law regimes. Representative scenes for each regime: a humanoid agent manipulating blocks (Physical World), code and UI surfaces (Digital World), a network of interacting agents with speech acts (Social World), and instrumented experimentation with robotic microscope and pipette (Scientific World). Each regime’s formal constraints are discussed in Section 2.5.   capability-based taxonomy with clear boundary conditions, and to use it to connect research communities that currently evaluate world modeling systems with different assumptions, objectives, and metrics.   Figure 2 positions this survey relative to existing work along two axes: scope (domain-specific to cross- domain) and organizing principle (modality-centric to capability-centric).",
+    "score": 0.6206292019647986,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 4
+   },
+   {
+    "text": "Capability-based roadmap for world modeling in agentic AI (L1→L2→L3). We propose a three-level capability hierarchy with testable boundary conditions: L1 Predict World (one- step prediction), L2 Simulate World (long-horizon, action-conditioned rollout with constraint satisfaction), and L3 Modify World (evidence-driven model growth through autonomous data collection and dynamics revision). These are stages of capability, not types of models.   2. Cross-domain synthesis via governing laws. We unify computer vision, language model- ing, model-based RL and robotics, and AI for science into a single capability coordinate system. Different governing laws (Section 2) define the types or partitions of world models, partially independent of the L1→L2→L3 capability axis. This two-dimensional organization (capability level × law regime) reveals shared principles across communities that have developed in isolation, while clarifying domain-specific challenges that make direct transfer non-trivial.   3. L3 as a distinct capability level. Evidence-driven model growth, where a system autonomously collects new evidence and revises its own dynamics model, has appeared in scattered forms across scientific discovery (Lu et al., 2024a), autonomous experimentation, and online adaptation. We argue this capability is qualitatively different from L2 rollout and formalize it as a distinct level, and identifying the open problems that must be resolved to realize this capability at scale.   Positioning.",
+    "score": 0.6037377568528859,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 7
+   },
+   {
+    "text": "We therefore view the development of world models that can discover and manipulate symbolic governing laws from data, rather than merely absorbing them into latent representations, as one of the most important open problems in the field. How to extend this to physical, digital, social, and scientific worlds remains a fundamental challenge.   Key Takeaway   The future of agentic AI lies not in larger predictors, but in models that internalize the governing laws of the world, simulate its dynamics, and continuously evolve themselves through active trial-and-error loops, enabling them to navigate, interpret, and ultimately reshape the world.   52Preprint   References J. Abramson, J. Adler, J. Dunger, R. Evans, T. Green, A. Pritzel, O. Ronneberger, L. Willmore, A. J. Ballard,   J. Bambrick, S. W. Bodenstein, D. A. Evans, C.-C. Hung, M. O’Neill, D. Reiman, K. Tunyasuvunakool, Z. Wu, A. Žemgulyṫė, E. Arvaniti, C. Beattie, O. Bertolli, A. Bridgland, A. Cherepanov, M. Congreve, A. I. Cowen-Rivers, A. Cowie, M. Figurnov, F. B. Fuchs, H.",
+    "score": 0.580184015940763,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 52
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "7462134d-b430-4dd8-8470-8ef3ccbd2d0d",
+  "X-Amzn-Trace-Id": "Root=1-6b080517-73d274c53d70405b0f01b3b7;Parent=2f383e4149e7fecf;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.253
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond"
+ },
+ "from_cache": false
+}

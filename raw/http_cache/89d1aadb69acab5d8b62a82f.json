@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.301,
+ "json": {
+  "query": "Experience-Driven Exploration for Efficient API-Free AI Agents",
+  "contexts": [
+   {
+    "text": "Its reliance on engineered interfaces inherently limits generalization, particularly in closed-source commercial games and proprietary software where internal APIs are inaccessible or undocumented [12], and distances the agent from the rich visual context of genuine human- computer interaction. In pursuit of ultimate generality, a new paradigm has emerged: API-free LLM-based agents that op- erate purely from raw pixel input, interacting through uni- versal human-style interfaces without relying on internal state APIs [12], [13]. Exemplified by systems like CRADLE [12] and the Bottom-Up Agent [13], these agents learn complex skills from scratch via an autonomous trial-and-error loop. This approach has demonstrated tangible progress in open- ended environments, such as multimodal desktop assistants (e.g., UFO [10], CogAgent [11]) and game-playing agents,JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021 3   achieving meaningful in-game progress without game-specific adaptations. However, this promising paradigm introduces a critical challenge: experience siloing. Agents often retrieve memory in a localized and myopic way, relying on the most visually similar past state, and consequently fail to generalize across functionally similar but visually different contexts. This forces them to fall back on inefficient trial-and-error relearning, which hinders systematic knowledge accumulation and long-term strategy formation, underscoring a key obstacle to achieving truly general and flexible AI systems.   III.",
+    "score": 0.5422597768725256,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Such agents have demonstrated the remarkable ability to autonomously acquire skills from scratch in complex games and diverse software applications without any privileged access.   Despite these significant advances, as shown in Fig. 1 (a), the API-free GUI-based agents face two fundamental challenges [12], [13] that obstruct their path toward Artificial   ar X   iv :2   51 0.   15 25   9v 3   [ cs   .A I]   2 5   M ar   2 02   6         https://arxiv.org/abs/2510.15259v3JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021 2   General Intelligence (AGI) [14]: (i) Inefficient Exploration: Without task-specific priors or APIs, skills must be discovered and validated purely through exhaustive trial-and-reasoning. This leads to a sample inefficiency so severe that agents typically require 2-2.5 times more environment interactions to match the progression of prior-assisted baselines. (ii) Limited Long-Horizon Strategic Reasoning: The prevailing reliance on myopic reward signals, e.g., visual changes, fails to incen- tivize the multi-step plans essential for sophisticated gameplay. This inability to value setup actions with delayed gratification severely limits strategic depth.",
+    "score": 0.5359929812244175,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "This inability to value setup actions with delayed gratification severely limits strategic depth. Overcoming these challenges requires methods that accumulate reusable abstractions from experience and reward formulations that capture long-term value, thus enabling robust planning, transfer, and generaliza- tion across diverse tasks.   To overcome these limitations, we introduce SAG-Agent, a novel experience-driven learning framework designed to trans- form an agent’s pixel-based GUI interactions into structured, actionable knowledge. Central to our approach is a persistent, cross-episode State-Action Graph (SAG) that serves as the agent’s long-term memory. This graph organizes raw visual observations into state nodes and models acquired skills as edges between them, thereby converting unstructured pixel- level experience into a coherent network for strategic decision- making in API-free environments. To directly combat inef- ficient exploration, SAG-Agent connects functionally analo- gous yet visually distinct GUI states through similarity edges, forming a rich neighborhood of experience. This enables the agent’s reasoning module to query entire functional neigh- borhoods, generalizing from diverse historically successful strategies rather than relying on isolated, myopic data points. To address limited long-horizon reasoning, we leverage the graph topology to design a novel hybrid intrinsic reward mechanism. This system combines a state value reward (quan- tifying strategic potential based on outgoing connections) with a novelty reward for environmental discovery.",
+    "score": 0.5125656711537455,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "To navigate the stochastic environment, the SAG-Agent employs a UCT-inspired strategy that balances exploitation of high-value skills {σ2, σ3, σ9, σ11} with explo- ration of less-tried options. The resulting utility scores are converted into a probability distribution via temperature-scaled softmax, enabling stochastic sampling. The first sampled skill “Attack and Select Strategy” (Probs. = 9.99e− 01) executes successfully through operations “Clicked at (687, 933)” and “Clicked at (1134, 692)”, yielding a 2.117 reward. This successful execution triggers updates to the skill’s fitness and edge weight in memory, demonstrating SAG-Agent’s capacity for continuous knowledge refinement through both successful and failed experiences.   V. CONCLUSION   In this paper, we propose SAG-Agent to organize pixel- level GUI interactions into a knowledge graph of states and actions, enabling agents to overcome short-sightedness in API-free, open-ended environments. By linking functionally similar yet visually distinct states, the agent generalizes past experiences into coherent long-term strategies. Experiments in Civilization V and Slay the Spire demonstrate that SAG- Agent achieves significant gains in exploration efficiency and strategic depth over state-of-the-art baselines. These results highlight the potential of structuring experience into a graph- based memory, advancing API-free agents toward scalable and general-purpose autonomy.   Limitations and Future Work.",
+    "score": 0.5100149138758628,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 11
+   },
+   {
+    "text": "These agents, such as UFO [10] and CogAgent [11], interact not only through APIs but also by observing and manipulating GUIs in a human-like manner. By integrating visual understanding with reasoning, they provide more gen- eral automated control and a richer, more intuitive mode of interaction. The pursuit of ultimate generality and human-like autonomy takes this progression a final step further, leading to the API-free GUI-based agents, as exemplified by CRADLE [12] and Bottom-Up Agent [13]. This methodology envisions agents that operate exclusively through a universal, human- style interface—using only screen pixels as input and key- board/mouse actions as output. Such agents have demonstrated the remarkable ability to autonomously acquire skills from scratch in complex games and diverse software applications without any privileged access.",
+    "score": 0.5081974214787994,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1471ba7f-6df0-40cf-b4b8-a630e92e00a6",
+  "X-Amzn-Trace-Id": "Root=1-6b080500-0c994c7243cc217d13397833;Parent=5639f7d6c553c36e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.301
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Experience-Driven Exploration for Efficient API-Free AI Agents"
+ },
+ "from_cache": false
+}

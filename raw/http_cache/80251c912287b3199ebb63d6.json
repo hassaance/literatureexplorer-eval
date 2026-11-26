@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.249,
+ "json": {
+  "query": "We need a new ethics for a world of AI agents",
+  "contexts": [
+   {
+    "text": "The rise of more-capable AI agents is likely to have far-reaching political, economic and social consequences. On the positive side, they could unlock economic value: the consultancy McKinsey forecasts an annual windfall from generative AI of US$2.6 trillion to $4.4 trillion globally, once AI agents are widely deployed (see go.nature.com/4qeqemh). They might also serve as powerful research assistants and accelerate scientific discovery.   But AI agents also introduce risks. People   We need a new ethics for a world of AI agents Iason Gabriel, Geoff Keeling, Arianna Manzini & James Evans   The deployment of capable AI agents raises fresh questions about safety, human–machine relationships and social coordination.   need to know who is responsible for agents operating ‘in the wild’, and what happens if they make mistakes. For example, in Novem- ber 2022 , an Air Canada chatbot mistakenly decided to offer a customer a discounted bereavement fare, leading to a legal dispute over whether the airline was bound by the promise. In February 2024, a tribunal ruled that it was — highlighting the liabilities that corporations could experience when handing over tasks to AI agents, and the growing need for clear rules around AI responsibility.   Here, we argue for greater engagement by scientists, scholars, engineers and policy makers with the implications of a world increasingly populated by AI agents.",
+    "score": 0.6372796784964085,
+    "source": "183 - We need a new ethics for a world of AI agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "However, it is not something that would necessarily feature in an ethical evaluation of the technology: the AI system might then be value-aligned but not commercially viable.4   3This is still a simplification. In reality, we live in a world of societies and there are many challenges that arise most forcefully at a global level. We use the term ‘society’ here in a way that potentially includes the claims of different societies, the environment, animal life and the well-being of future generations. We leave the systematic investigation of the claims of society, under this broader interpretation, for future work.   4In this case, there could still be a question about how to incentivise the development of this kind of technology to avoid socially costly ‘market failures’ and achieve real benefit (see Chapter 17).   37The Ethics of Advanced AI Assistants   Alternatively, a technology could favour the user at the expense of the AI agent. For example, a user could use the technology to further their own goal even though it differs from the goal that the agent is trying to get them to pursue. In certain respects, this situation is still more curious than the one outlined above. On the assumption that the agent itself lacks any moral standing, and that the prospective use is not socially harmful, it does not matter morally if the AI assistant is used in a suboptimal way, as judged from the vantage point of the goals it seeks to pursue.",
+    "score": 0.5618125862615837,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 43
+   },
+   {
+    "text": "Although the precise form and capabilities of advanced AI assistants are not yet known, the extent to which tasks may be outsourced to it, the anthropomorphic potential of this technology and the ability to speak to users fluently using human language, all create the possibility of material reliance and unhealthy dependence upon it. The existence of advanced AI assistants may also confer abilities on those who have access to them which are out of reach for those who do not. This could compound the challenge of access and opportunity that we already encounter at the societal level.   Which world we step into is, to a large degree, a product of the choices we make now – and how we choose   3The Ethics of Advanced AI Assistants   to proceed as users of this technology, as developers and as members of the society into which AI assistants may well be received. Yet, given the myriad of challenges and range of interlocking issues involved in creating beneficial AI assistants, we may also wonder how best to proceed. This paper explores a number of deep underlying questions about the ethical and societal implications of advanced AI assistants. By engaging in a practice of robust ethical foresight, our goals are to better anticipate where the tide of technological change may take us and to anchor responsible decision-making as we contribute to, interact with and co-create outcomes in this domain.   The paper starts by considering the technology itself and different types of advanced AI assistant. It then explores questions around AI value alignment, well-being, safety and malicious uses.",
+    "score": 0.5612102503630492,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 9
+   },
+   {
+    "text": "There may also be a disconnect between the preferences of raters used to train AI assistants and what is good for society. Moreover, deference to user intentions must be bounded in certain ways. This is implicitly recognised when developers train models to respect constraints or rules (Bai et al., 2022b; Glaese et al., 2022). However, deeper analysis, monitoring and evaluation is needed – both at the level of the user and society – to ensure that appropriate safeguards and constraints operate across a full range of contexts (see Chapter 19).   Finally, it will be fruitful to continue to explore ways of developing and training AI assistants that are consonant with democratic principles and value pluralism. If advanced AI assistants turn out to be a powerful and pervasive technology that plays an important role in many people’s lives, then the question of justification   43The Ethics of Advanced AI Assistants   and legitimacy will not go away. Rather, a recurrent question will be: Who gave you the right to decide?",
+    "score": 0.5530779726388,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 49
+   },
+   {
+    "text": "What should an AI assistant be aligned with? With user instructions, preferences, interests, values, well-being or something else?   6. What issues need to be addressed for AI assistants to be safe? What does safety mean for this class of   4The Ethics of Advanced AI Assistants   technologies?   7. What new forms of persuasion might advanced AI assistants be capable of? How can we ensure that users remain appropriately in control of the technology?   8. How can people – especially vulnerable users – be protected from AI manipulation and unwanted disclosure of personal information?   9. Is anthropomorphism for AI assistants morally problematic? If so, might it still be permissible under certain conditions?   10. What are the hallmarks of an appropriate relationship between human users and advanced AI assistants? When is a relationship inappropriate and why?   11. How should AI assistants interact with one another? In what ways might interaction failures lead to social harm? Conversely, what kinds of benefit might successful cooperation unlock?   12. How might the introduction of powerful AI assistants affect the relationship between users and non-users? What forms of inequality do we need to countenance and address ahead of time?   13. How are advanced AI assistants likely to affect the information ecosystem and public fora? Will they compound or ameliorate the problem of misinformation and disinformation?   14.",
+    "score": 0.5498345142972503,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "de60fda7-e16c-408e-bc16-66e17bcae68f",
+  "X-Amzn-Trace-Id": "Root=1-6b080518-76813b6a53d921ce30c2c93d;Parent=75f71bf942d0c856;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.249
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:24+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "We need a new ethics for a world of AI agents"
+ },
+ "from_cache": false
+}

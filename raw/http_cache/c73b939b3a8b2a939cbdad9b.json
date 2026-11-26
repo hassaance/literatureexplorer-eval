@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.303,
+ "json": {
+  "query": "Context Engineering for AI Agents in Open-Source Software",
+  "contexts": [
+   {
+    "text": "Therefore, in this paper, we   present the results of a preliminary study investigating the adop-   tion of AI context files in 466 open-source software projects. We   analyze the information that developers provide in AGENTS.md files, how they present that information, and how the files evolve over   time. Our findings indicate that there is no established content   structure yet and that there is a lot of variation in terms of how   context is provided (descriptive, prescriptive, prohibitive, explana-   tory, conditional). Our commit-level analysis provides first insights   into the evolution of the provided context. AI context files provide   a unique opportunity to study real-world context engineering. In   particular, we see great potential in studying which structural or   presentational modifications can positively affect the quality of the   generated content.   Keywords Software Engineering, Generative AI, AI Agents, Open Source   ACM Reference Format: Seyedmoein Mohsenimofidi, Matthias Galster, Christoph Treude, and Se-   bastian Baltes. 2026. Context Engineering for AI Agents in Open-Source   Software. In 23rd International Conference on Mining Software Repositories (MSR ’26), April 13–14, 2026, Rio de Janeiro, Brazil.",
+    "score": 0.7789218666046274,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 1
+   },
+   {
+    "text": "Context Engineering for AI Agents in Open-Source Software Seyedmoein Mohsenimofidi   Heidelberg University   Germany   s.mohsenimofidi@uni-heidelberg.de   Matthias Galster   University of Bamberg   Germany   mgalster@ieee.org   Christoph Treude   Singapore Management University   Singapore   ctreude@smu.edu.sg   Sebastian Baltes   Heidelberg University   Germany   sebastian.baltes@uni-heidelberg.de   Abstract GenAI-based coding assistants have disrupted software develop-   ment. The next generation of these tools is agent-based, operating   with more autonomy and potentially without human oversight.   Like human developers, AI agents require contextual information   to develop solutions that are in line with the standards, policies,   and workflows of the software projects they operate in. Vendors of   popular agentic tools (e.g., Claude Code) recommend maintaining   version-controlled Markdown files that describe aspects such as the   project structure, code style, or building and testing. The content   of these files is then automatically added to each prompt. Recently,   AGENTS.md has emerged as a potential standard that consolidates ex-   isting tool-specific formats. However, little is known about whether   and how developers adopt this format. Therefore, in this paper, we   present the results of a preliminary study investigating the adop-   tion of AI context files in 466 open-source software projects.",
+    "score": 0.7368040130949779,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 1
+   },
+   {
+    "text": "While prompt engineering focuses on how a task is described to   the model (e.g., instructions and output indicators) [6, 28], context   engineering focuses on what task-relevant information the model   has access to, including relevant guidelines, configuration files, doc-   umentation, and exemplary code snippets [22, 29]. An advantage   of agent-based tools compared to conversational tools is that they   allow persistent, structured, and task-specific context to be pro-   vided in a more fine-grained and targeted manner [14]. One way   to “engineer” context is to add machine-readable AI context files to   source code repositories. The AI agents then automatically add the   content of these files to their prompts. While traditional README files are written for humans, AI context files are explicitly designed   for AI agents, providing a central machine-readable source of con-   textual information. Their content can include everything from   the required terminal commands to build and test the project over   documentation links, common workflows, coding conventions, to   instructions for creating pull requests.   AGENTS.md was introduced as an open tool-agnostic convention   for such AI context files [19], and it was recently announced as a   project in the Agentic AI Foundation. OpenAI’s Codex tool relies on   this format [26], while Claude Code by default searches for a file   named CLAUDE.md.",
+    "score": 0.6566916989397953,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 1
+   },
+   {
+    "text": "They are ver-   sioned, reviewed, quality-assured, and tested. Future work needs to   evaluate how their content, structure, and style affect agent behav-   ior and task performance, and how automated feedback loops could   update or refine these files based on observed results. Research   should also investigate the co-evolution of source code and related   AI context files, similar to the co-evolution of source code and com-   ments [8]. Open questions include whether standard schemas could   improve interoperability, whether repositories should maintain one   or multiple AI context files, and how to coordinate instructions for   multiple agents. Beyond technical considerations, this new form   of documentation has the potential to reshape communication, re-   view, and collaboration patterns in software teams as instructions   move from being written for humans to being negotiated between   humans and AI. The systematic study of AI context files has great   potential to provide actionable recommendations to practitioners.         https://github.com/neomjs/neo/commits/dev/AGENTS.md        https://github.com/gofiber/fiber/commits/main/AGENTS.mdContext Engineering for AI Agents in Open-Source Software MSR ’26, April 13–14, 2026, Rio de Janeiro, Brazil   References [1] Anthropic. 2025. Claude 3.7 Sonnet and Claude Code. https://www.anthropic.",
+    "score": 0.6191583665810981,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 4
+   },
+   {
+    "text": "GitHub introduced a similar   AI context file for Copilot named copilot-instructions.md [13].   Since prompts are only rarely preserved after content has been   generated [33], AI context files offer a unique opportunity to study   how developers customize AI agents to their needs, what informa-   tion they consider relevant to include, how they present it, and how   instructions and contextual descriptions evolve. To our knowledge,   we present the first holistic empirical study that analyzes context   files used to guide different AI agents in open-source software (OSS)   projects. We addressed the following research questions:   RQ1 How widely have OSS projects adopted AI context files? RQ2 What information do open-source developers provide in AI   context files and how do they present it? RQ3 How do AI context files evolve over time?   An initial search in October 2025 suggested that tens of thou-   sands of GitHub repositories already contained AI context files [12].   However, there was no systematic analysis focusing on “engineered”   software projects. This paper provides a first step toward filling   this gap by mining GitHub repositories to study how AI context   files are adopted, structured, and maintained, with the overarching   goal of understanding how software teams engage in context engi-   neering in practice. The results of our preliminary study are based   on data collected from 10,000 GitHub repositories (RQ1).",
+    "score": 0.5980252623834584,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e1bb6831-100e-4c17-a21c-0534bff715c8",
+  "X-Amzn-Trace-Id": "Root=1-6b08050d-280c02c05a992bcd0612cb0f;Parent=741ca5b4e1fed85c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.303
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:13+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Context Engineering for AI Agents in Open-Source Software"
+ },
+ "from_cache": false
+}

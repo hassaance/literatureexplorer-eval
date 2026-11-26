@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.262,
+ "json": {
+  "query": "Agent2Agent Threats in Safety-Critical LLM Assistants: A Human-Centric Taxonomy",
+  "contexts": [
+   {
+    "text": "Agent2Agent Threats in Safety-Critical LLM Assistants: A Human-Centric Taxonomy   Lukas Stappen1, Ahmet Erkan Turan1, Johann Hagerer2, and Georg Groh2   1 BMW Group Research, Munich, Germany 2 Technical University Munich, Munich, Germany   Abstract. The integration of Large Language Model (LLM)-based con- versational agents into vehicles creates novel security challenges at the intersection of agentic AI, automotive safety, and inter-agent communi- cation. As these intelligent assistants coordinate with external services via protocols such as Google’s Agent-to-Agent (A2A), they establish at- tack surfaces where manipulations can propagate through natural lan- guage payloads, potentially causing severe consequences ranging from driver distraction to unauthorized vehicle control. Existing AI security frameworks, while foundational, lack the rigorous “separation of con- cerns” standard in safety-critical systems engineering by co-mingling the concepts of what is being protected (assets) with how it is attacked (at- tack paths). This paper addresses this methodological gap by proposing a threat modeling framework called AgentHeLLM (Agent Hazard Explo- ration for LLM Assistants) that formally separates asset identification from attack path analysis.",
+    "score": 0.7793464017068568,
+    "source": "163 - Agent2Agent Threats in Safety-Critical LLM Assistants A Human-Centric Taxonomy.pdf",
+    "page": 1
+   },
+   {
+    "text": "This knowledge might then be used for phishing attacks or social engineering attempts, targeting high-value individuals and exposing their personal and financial information to further risks.   3.2 Specific Threats on Agents Unlike traditional LLMs that directly generate final outputs, LLM agents continuously interact with external environments to form language reasoning traces, which introduces diverse forms of potential attacks against LLM agents [104]. In addition to threats present during the training and configuration steps, LLM agents also face threats in the workflow of performing specific tasks, including perception, thought, and action [96]. Specific threats on LLM agents are categorized in this part based on their objectives into Knowledge Poisoning, Output Manipulation and Functional Manipulation. Figure 10 illustrates the alignment of these threats with different stages of an LLM agent’s workflow and their corresponding consequences. Detailed descriptions of each threat are provided below.   Fig. 10. Specific Threats on LLM Agent: Framework   • Knowledge Poisoning. Knowledge poisoning refers to attackers compromising the training of the LLM engine and the response process of the LLM agent by integrating malicious data into the training dataset or knowledge base. For instance, malicious agents such as FraudGPT and WormGPT [21] are chatbots exclusively designed for offensive activities and are trained on large volumes of data from diverse sources, including illegitimate websites, dark web forums, hacker manuals, malware samples, and phishing templates. These agents utilize   Proc. ACM Meas. Anal.",
+    "score": 0.561275043109597,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 14
+   },
+   {
+    "text": "Given that LLM agents are still in their early stages, their significant commercial and application values make them attractive targets for attackers. In addition, recent studies have quantitatively highlighted the risks faced by LLM agents. For example, SafeAgentBench [111] evaluated 16 representative LLM agents on 2,000 test cases in 349 environments and found that none of the tested LLM agents achieved an overall safety score above 60%, with some agents scoring below 20%. This includes severe vulnerabilities such as misusing tools, and failing to recognize implicit safety risks. These findings highlight significant safety vulnerabilities in present LLM agents. Traditional machine learning (ML) security focuses on well-defined threat models such as adversarial example attacks that perturb inputs to cause mistakes, data poisoning attacks that compromise training datasets, and model extraction attacks that steal model parameters [100]. These threats typically target model prediction accuracy in constrained tasks, with impacts largely limited to misclassification or regression errors. While LLMs as advanced ML models inherit traditional vulnerabilities, they also introduce additional concerns through their generative capabilities and natural language processing. LLM agents, built on   Proc. ACM Meas. Anal. Comput. Syst., Vol. 37, No. 4, Article 111.",
+    "score": 0.5606647338903616,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 2
+   },
+   {
+    "text": "These issues include overlooking permissions, mismanaging tool interactions, and failing to consider implicit safety risks, leading to unsafe task outcomes. Similarly, failures could result in outcomes like leaking sensitive information, spreading misinformation, or even executing harmful actions unintentionally. Depending on the application domain of LLM agents, such attacks could pose serious threats to physical security, financial security, or overall system integrity. This paper categorizes the security threats faced by LLM agents into inherited LLM attacks and unique   agent-specific threats. The threats inherited from LLMs can be further divided into technical vulnerabilities and intentional malicious attacks. Technical vulnerabilities include issues like hallucinations, catastrophic forgetting, and misunderstandings [96], which arise from the initial model creation and are influenced by the model’s structure. These vulnerabilities can cause users to observe incorrect results during prolonged use of LLM agents, affecting user trust and decision-making processes. For instance, AgentBench [52] demonstrated that LLMs achieve low success rates between 12% and 14% across real-world tasks, frequently exhibiting hallucination behaviors in knowledge-intensive scenarios, catastrophic forgetting in multi-turn interactions, and misunderstanding in complex reasoning scenarios. On the other hand, intentional malicious attacks deliberately exploit these vulnerabilities to achieve adversarial goals.",
+    "score": 0.5506211827546498,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 3
+   },
+   {
+    "text": "Comput. Syst., Vol. 37, No. 4, Article 111. Publication date: August 2018.The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies • 111:3   LLMs, further intensify these security challenges by adding complex reasoning, tool usage, and environmental interactions, creating cascading effects that extend beyond simple prediction errors and lead to real-world consequences. LLM agents inherit vulnerabilities from their underlying LLM foundation. For example, jailbreaking attacks   can bypass the security and censorship features of LLMs, generating controversial responses [47]. This threat is inherited by LLM agents, enabling attackers to employ various methods to execute jailbreaking attacks on agents. However, LLM agents possess dynamic capabilities, such that their immediate responses can influence future decisions and actions, thereby posing more widespread risks. Beyond these inherited threats, the unique functionalities of LLM agents, such as their ability to think and utilize tools during task execution, expose them to specific attacks targeting agents. For example, Agent-SafetyBench [121] demonstrated that LLM agents often overlook safety constraints when they attempt tool-based operations, with an average safety score of only 38.5%. These issues include overlooking permissions, mismanaging tool interactions, and failing to consider implicit safety risks, leading to unsafe task outcomes. Similarly, failures could result in outcomes like leaking sensitive information, spreading misinformation, or even executing harmful actions unintentionally.",
+    "score": 0.54572973847889,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a6c56323-de44-4b69-a1b0-7e5cee431d6e",
+  "X-Amzn-Trace-Id": "Root=1-6b080514-62c2182f4431671d770d429d;Parent=3ccea72fb81fb689;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.262
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:20+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agent2Agent Threats in Safety-Critical LLM Assistants: A Human-Centric Taxonomy"
+ },
+ "from_cache": false
+}

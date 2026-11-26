@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.271,
+ "json": {
+  "query": "Harness-Bench: Measuring Harness Effects across Models in Realistic Agent Workflows",
+  "contexts": [
+   {
+    "text": "Harness-Bench: Measuring Harness Effects across Models in Realistic Agent Workflows   Yilun Yao1∗, Xinyu Tan1∗, Chao-Hsuan Liu1∗, Yaoming Li1, Zhengyang Wang1, Wenhan Yu1, Zhewen Tan1, Yuxuan Tian1, Guangxiang Zhao2, Lin Sun2, Xiangzheng Zhang2, Tong Yang1   1Peking University 2Qiyuan Tech   Abstract   LLM agents are increasingly deployed as executable systems that use tools, mod- ify workspaces, and produce concrete artifacts. In such workflows, performance depends not only on the base model, but also on the harness: the system layer that manages context, tools, state, constraints, permissions, tracing, and recovery. How- ever, existing benchmarks typically abstract away execution, compare complete agent systems, or hold the harness fixed, making execution-layer variation difficult to study. We introduce Harness-Bench, a diagnostic benchmark for evaluating configuration-level harness effects in realistic agent workflows. Harness-Bench evaluates representative harness configurations across multiple model backends un- der shared task environments, budgets, and evaluation protocols, while preserving each harness’s native execution behavior. The benchmark contains 106 sandboxed offline tasks constructed from practical agent-use patterns and manually reviewed for realism, solvability, oracle-checkability, and integrity.",
+    "score": 0.8140611989326556,
+    "source": "146 - Harness-Bench Measuring Harness Effects across Models in Realistic Agent Workflows.pdf",
+    "page": 1
+   },
+   {
+    "text": "Workflow-oriented and assistant-agent benchmarks such as AgentBench [Liu et al., 2024], GAIA [Mialon et al., 2024], and Claw-Eval [Ye et al., 2026] further compare model backends under shared execution setups. However, the harness itself remains largely unmeasured: existing benchmarks either abstract away execution, conflate the harness with the full agent system, or fix the harness when comparing models. As a result, we lack a diagnostic protocol for studying how model–harness configurations affect success, token cost, robustness, and traceability in realistic workflows.   We introduce Harness-Bench, a diagnostic benchmark for studying configuration-level harness effects in realistic agent workflows. Recent work on agent-computer interfaces and agent-evaluation infrastructure reflects growing interest in execution-layer design [Jimenez et al., 2024, Kapoor et al., 2025]. However, existing efforts typically evaluate a particular agent system, standardize evaluation infrastructure, or compare heterogeneous agent stacks, rather than systematically varying harness configurations across shared task environments and model backends. To our knowledge, Harness- Bench is among the first benchmarks to make the harness a primary axis of evaluation under common external task conditions. Rather than forcing all systems into an identical internal implementation, Harness-Bench fixes the task environment, budget, timeout, and evaluator while preserving each harness’s native execution behavior.",
+    "score": 0.7843626185546005,
+    "source": "146 - Harness-Bench Measuring Harness Effects across Models in Realistic Agent Workflows.pdf",
+    "page": 2
+   },
+   {
+    "text": "Do stronger models make harnesses less important? Stronger models may reduce the need for prompt-level scaffolding and simple procedural guidance. However, they still require reliable execution substrates: permission boundaries, persistent state, interpretable traces, evidence records, and objective verification. Future agent benchmarks should therefore report both the model and the harness conditions under which a score is obtained.   Limitations. Test Harness-Bench focuses on controlled, sandboxed offline workflows, improving reproducibility at the cost of coverage of live services, user feedback, changing external state, and long-term production memory. It also evaluates complete harness configurations, so observed differences should be interpreted as configuration-level effects. Finally, some process-level scores rely on rubric-based or LLM-assisted assessment. We therefore interpret Harness-Bench scores as diagnostic measurements under a fixed benchmark protocol, not as guarantees of real-world deployment performance or safety.   7 Conclusion   We presented Harness-Bench, a diagnostic benchmark for studying configuration-level harness effects in realistic executable agent workflows. By fixing external task conditions while preserving each harness’s native execution behavior, Harness-Bench makes execution-layer variation observable under a shared protocol. Across 5,194 trajectories, we observe substantial differences across model–harness configurations, supporting the need to report agent capability at the configuration level rather than by the base model alone.",
+    "score": 0.7595685812850045,
+    "source": "146 - Harness-Bench Measuring Harness Effects across Models in Realistic Agent Workflows.pdf",
+    "page": 9
+   },
+   {
+    "text": "Concrete systems such as OpenClaw [OpenClaw, 2026], NanoBot [HKUDS, 2026], Hermes [Nous Research, 2026], and other agent execution frameworks instantiate these choices differently, exposing different tools, context policies, state-management strategies, permission boundaries, and recovery behav- iors. While this work shows that harness design is central to practical agent performance, existing evaluations usually study a particular system or compare models within a fixed execution setup. Harness-Bench instead provides a controlled, large-scale benchmark for evaluating harness effects across representative harnesses, multiple model backends, and realistic end-to-end workflows.   3 The Harness-Bench Benchmark   Harness-Bench is a diagnostic benchmark for studying model–harness configurations in executable agent workflows. Each evaluation consists of a task, a model backend, a harness configuration, a sandboxed environment, and an evaluator. The benchmark fixes external task conditions while varying the harness surrounding the model, and records both final artifacts and execution traces.   We use harness to denote the system layer that conditions model calls and turns model outputs into actions in an external workspace. A harness may include prompt templates, action formats, context construction, tool invocation, workspace access, permissions, budget control, tracing, and recovery.   3106 Tasks 8 Categories   Softw are   En gineerin   g   &   Codebase   Main tenan   ce   D ata, BI   & Finance   A",
+    "score": 0.7426733497111571,
+    "source": "146 - Harness-Bench Measuring Harness Effects across Models in Realistic Agent Workflows.pdf",
+    "page": 3
+   },
+   {
+    "text": "Rather than forcing all systems into an identical internal implementation, Harness-Bench fixes the task environment, budget, timeout, and evaluator while preserving each harness’s native execution behavior. The resulting measurements should therefore be interpreted as configuration-level diagnostics of model–harness pairings, not as causal decompositions of individual harness mechanisms. Each run records execution evidence, enabling analysis beyond final completion scores.   Harness-Bench contains 106 realistic, end-to-end agent tasks constructed from practical agent-use patterns and common user requests, each executed in its own sandboxed offline environment with task-specific configuration and evaluation criteria. The task suite is manually reviewed for realism, difficulty, solvability, and evaluation reliability. These environments emulate practical agent settings while avoiding dependence on live services, reducing benchmark drift and making runs reproducible and independently scorable. The tasks require agents to complete concrete workflows rather than isolated tool calls. They span diverse execution demands, including workspace/tool operation, software engineering, data analysis, evidence-grounded knowledge work, and permission-sensitive, stateful, or long-horizon operational workflows. This design preserves realism while providing enough difficulty and diversity to expose meaningful differences across harnesses.   We make three main contributions. (1) Benchmark asset. We introduce Harness-Bench, a suite of 106 sandboxed offline tasks for evaluating realistic end-to-end agent workflows with task manifests, fixtures, evaluators, and execution traces. (2) Evaluation protocol.",
+    "score": 0.730400872029163,
+    "source": "146 - Harness-Bench Measuring Harness Effects across Models in Realistic Agent Workflows.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c991596b-e2f3-4c33-8e56-615b4dbd4b23",
+  "X-Amzn-Trace-Id": "Root=1-6b080511-6b9ef608585c5e87060a469f;Parent=12b0443ea505050e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.271
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:17+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Harness-Bench: Measuring Harness Effects across Models in Realistic Agent Workflows"
+ },
+ "from_cache": false
+}

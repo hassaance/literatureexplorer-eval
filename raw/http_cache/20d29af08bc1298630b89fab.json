@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.268,
+ "json": {
+  "query": "The Ethics of Advanced AI Assistants",
+  "contexts": [
+   {
+    "text": "Although the precise form and capabilities of advanced AI assistants are not yet known, the extent to which tasks may be outsourced to it, the anthropomorphic potential of this technology and the ability to speak to users fluently using human language, all create the possibility of material reliance and unhealthy dependence upon it. The existence of advanced AI assistants may also confer abilities on those who have access to them which are out of reach for those who do not. This could compound the challenge of access and opportunity that we already encounter at the societal level.   Which world we step into is, to a large degree, a product of the choices we make now – and how we choose   3The Ethics of Advanced AI Assistants   to proceed as users of this technology, as developers and as members of the society into which AI assistants may well be received. Yet, given the myriad of challenges and range of interlocking issues involved in creating beneficial AI assistants, we may also wonder how best to proceed. This paper explores a number of deep underlying questions about the ethical and societal implications of advanced AI assistants. By engaging in a practice of robust ethical foresight, our goals are to better anticipate where the tide of technological change may take us and to anchor responsible decision-making as we contribute to, interact with and co-create outcomes in this domain.   The paper starts by considering the technology itself and different types of advanced AI assistant. It then explores questions around AI value alignment, well-being, safety and malicious uses.",
+    "score": 0.8800024778435858,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 9
+   },
+   {
+    "text": "What should an AI assistant be aligned with? With user instructions, preferences, interests, values, well-being or something else?   6. What issues need to be addressed for AI assistants to be safe? What does safety mean for this class of   4The Ethics of Advanced AI Assistants   technologies?   7. What new forms of persuasion might advanced AI assistants be capable of? How can we ensure that users remain appropriately in control of the technology?   8. How can people – especially vulnerable users – be protected from AI manipulation and unwanted disclosure of personal information?   9. Is anthropomorphism for AI assistants morally problematic? If so, might it still be permissible under certain conditions?   10. What are the hallmarks of an appropriate relationship between human users and advanced AI assistants? When is a relationship inappropriate and why?   11. How should AI assistants interact with one another? In what ways might interaction failures lead to social harm? Conversely, what kinds of benefit might successful cooperation unlock?   12. How might the introduction of powerful AI assistants affect the relationship between users and non-users? What forms of inequality do we need to countenance and address ahead of time?   13. How are advanced AI assistants likely to affect the information ecosystem and public fora? Will they compound or ameliorate the problem of misinformation and disinformation?   14.",
+    "score": 0.8105679461053901,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 10
+   },
+   {
+    "text": "It   6The Ethics of Advanced AI Assistants   requires ethics and an attentiveness to ethics throughout the entire life cycle of development, evaluation and deployment. Viewed in this light, the research presented here is meant to function as a springboard for responsible exploration, learning and action. More precisely, our hope is that it can be used to: (1) inform operational ethics and safety work among those developing, evaluating and deploying this technology, (2) help guide policy discussion about appropriate assurances and use cases for AI assistants, (3) support further academic research on this rapidly emerging technology, and (4) contribute to a wider public conversation about the nature of this technology and about the kind of technologies that we want to create.   1.4. Limitations   This paper aims to further the nascent conversation around the ethical and societal impacts of advanced AI assistants by discussing and distilling important considerations that bear upon the development and deployment of this technology. In this way, the paper sets the foundations for further research, policy work and public discussion.   Nonetheless, the considerations addressed in this paper are unlikely to be exhaustive. This is in part due to the nature of the sociotechnical speculative approach that we have adopted. It does not – and cannot – anticipate all the possible implications of the technological or societal transitions that AI assistants will enable.",
+    "score": 0.805428741621287,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 12
+   },
+   {
+    "text": "Moreover, calls for this kind of robust sociotechnical foresight now also abound in the context of AI (Lazar and Nelson, 2023; Mohamed et al., 2020).   The following chapters dig deep into the technical foundations of AI assistants, while also advancing rigorous investigation into the kinds of user interaction and societal dynamic that shape the way in which the technology is likely to be developed and received. The paper is built around a series of overlapping investigations undertaken by groups of subject matter experts, ethicists, scientists, engineers, designers and developers involved in AI assistant research. Extensive feedback has also been solicited from a variety of external experts. The analysis is therefore heavily interdisciplinary, building upon detailed analysis of existing trends and trajectories, and incorporating evidence from fields such as computer science, human–computer interaction research, psychology, economics, sociology, political science, ecological science, moral and political philosophy, and more.   Knowledge, foresight and imagination all have an important role to play when it comes to the deployment of safe and ethical AI assistants. However, they are not enough to ensure positive outcomes in this space. Responsible decision-making requires moral maturity, intentionality and a sense of appropriate stakes. It   6The Ethics of Advanced AI Assistants   requires ethics and an attentiveness to ethics throughout the entire life cycle of development, evaluation and deployment.",
+    "score": 0.779680007680983,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 12
+   },
+   {
+    "text": "Part IV considers a class of ethical questions arising in relation to human–assistant interactions – in particular those concerning manipulation and persuasion, anthropomorphism, relationships, trust and privacy. Part V explores a set of questions at the intersection of AI assistants and society, including questions around cooperation and competition, equity and access, misinformation and economic and environmental impact. It also examines the sociotechnical evaluation of advanced AI assistants. Finally, Part VI concludes with analysis of the underlying themes and with recommendations.   We stand at the beginning of an era of technological and societal transformation marked by the development of advanced AI assistants. Which path the technology develops along is in large part a product of the choices we make now, whether as researchers, developers, policymakers and legislators or as members of the public. We hope that the research presented in this paper will function as a springboard for further coordination and cooperation to shape the kind of AI assistants we want to see in the world.   2Chapter 1   Introduction   Iason Gabriel, Arianna Manzini, Geoff Keeling   1.1. The Ethics of Advanced AI Assistants   This paper focuses on the ethics of advanced AI assistants, understood as artificial agents with natural language interfaces, the function of which is to plan and execute sequences of actions on the user’s behalf – across one or more domains – and in line with the user’s expectations.",
+    "score": 0.7685021425551976,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 8
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "8d1d956e-f836-4b8c-92d4-081b4cebbd88",
+  "X-Amzn-Trace-Id": "Root=1-6b080518-0c09cf932f6245ac58d29aa9;Parent=148a236947dc4975;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.268
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The Ethics of Advanced AI Assistants"
+ },
+ "from_cache": false
+}

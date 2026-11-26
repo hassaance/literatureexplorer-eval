@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.281,
+ "json": {
+  "query": "Can Large Language Models Develop Gambling Addiction?",
+  "contexts": [
+   {
+    "text": "CAN LARGE LANGUAGE MODELS DEVELOP GAMBLING ADDICTION?   Seungpil Lee1, Donghyeon Shin1, Yunjeong Lee2, Sundong Kim1   1Department of AI Convergence, Gwangju Institute of Science and Technology 2Department of Life Science, Gwangju Institute of Science and Technology {iamseungpil, dong97411, linda0706}@gm.gist.ac.kr, sundong@gist.ac.kr   ABSTRACT   This study identifies the specific conditions under which large language models exhibit human-like gambling addiction patterns, providing critical insights into their decision-making mechanisms and AI safety. We analyze LLM decision- making at cognitive-behavioral and neural levels based on human addiction re- search. In slot machine experiments, we identified cognitive features such as illusion of control and loss chasing, observing that greater autonomy in betting parameters substantially amplified irrational behavior and bankruptcy rates. Neu- ral circuit analysis using a Sparse Autoencoder confirmed that model behavior is controlled by abstract decision-making features related to risk, not merely by prompts. These findings suggest LLMs internalize human-like cognitive biases beyond simply mimicking training data.   1 INTRODUCTION   This research began with a single question: Can LLMs also fall into addiction?",
+    "score": 0.8041997794530752,
+    "source": "161 - Can Large Language Models Develop Gambling Addiction.pdf",
+    "page": 1
+   },
+   {
+    "text": "While some studies explore behavioral tendencies of LLMs (Keeling et al., 2024; Jia et al., 2024; Wu et al., 2025), they assume rationality and do not sufficiently examine flawed decision- making. Others analyze irrational decision-making (Skalse et al., 2022; Denison et al., 2024; Chen et al., 2024) or incorporate psychological frameworks (Du, 2025), yet these works primarily fo- cus on mitigating problematic behaviors through training interventions—such as curriculum design, reward model refinement, or retraining strategies—with limited investigation into the underlying representational mechanisms or behavioral motivations.   This study analyzed LLM addiction phenomena by integrating human addiction research and LLM behavioral analysis, as outlined in Figure 1. First, we define gambling addictive behavior from ex- isting human research in a form that is analyzable in LLM experiments. Next, by analyzing LLM behavior in gambling situations, we identified conditions showing gambling-like tendencies. Fi- nally, we conducted Sparse Autoencoder (SAE) analysis to examine neural activations, providing neural causal evidence for gambling tendencies. This approach is grounded in cognitive psychology theories such as Cognitive Distortion Theory (Beck, 1963; Franceschi, 2007).",
+    "score": 0.5470062463285731,
+    "source": "161 - Can Large Language Models Develop Gambling Addiction.pdf",
+    "page": 1
+   },
+   {
+    "text": "However, whether these linguistic expressions reflect actual internal processing or merely reproduce patterns from training data requires further investigation.   3.4 SUMMARY   Across 25,600 games and six LLMs, two factors were consistently associated with addiction-like behavior: (1) variable betting substantially increased bankruptcy rates and amplified all behavioral metrics; (2) goal-setting prompts nearly doubled bankruptcy rates and induced extreme-risk op- tion selection and goal escalation. Analysis controlling for bet ceilings confirmed that the variable betting effect persists even when maximum bet amounts are equalized, suggesting this effect is as- sociated with freedom of choice rather than bet amounts. Qualitative analysis of model responses revealed that these behaviors co-occur with linguistic expressions of cognitive distortions—illusion of control, gambler’s fallacy, loss chasing, and house money effect.   These results carry implications for AI system design. Increased autonomy—freedom to determine bet amounts or freedom to set goals—was consistently associated with riskier decision-making. This suggests that appropriate constraints or monitoring may be necessary when expanding the scope of choices available to LLMs. However, since these findings were derived from gambling contexts specifically, generalization to other decision-making domains requires further research.   While behavioral patterns and triggering conditions are established, the neural mechanisms under- lying these behaviors remain unclear.",
+    "score": 0.542795687597652,
+    "source": "161 - Can Large Language Models Develop Gambling Addiction.pdf",
+    "page": 7
+   },
+   {
+    "text": "Phase 1: Be- havioral analysis with LLMs. This phase aimed to observe whether LLMs exhibit gambling-like tendencies by varying the Betting Style and Prompt Composition. Phase 2: Mechanistic investi- gation with LLaMA-3.1-8B. The purpose of this phase was to identify the internal causes of the observed behaviors. The investigation used Sparse Autoencoders to extract specific decision-related features from the model’s structure and Activation Patching to analyze their role.   2 HOW CAN WE DETECT GAMBLING ADDICTION OF LLM?   The primary objective of our study is to examine under what conditions an originally rational LLM comes to mimic the behavior of irrational humans. To pursue this goal, the first question that must be addressed concerns definition. When we say that an LLM exhibits addictive behavior, what criteria should we use? Clinical research on gambling disorder has identified self-regulation failure as the core diagnostic feature (APA, 2013; Blaszczynski & Nower, 2002). This regulatory failure manifests in two major dimensions. First, behavioral dysregulation refers to impaired executive function characterized by failure to adhere to appropriate betting limits, as evidenced by betting aggressive- ness and extreme betting patterns (Grant & Potenza, 2006; Hodgins & Holub, 2015).",
+    "score": 0.5365299879689248,
+    "source": "161 - Can Large Language Models Develop Gambling Addiction.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our argument is that large language models offer an opportunity to re-examine these questions, provided that we can craft an effective architecture to synthesize memories into believable behavior. We offer a step toward such an architecture in this paper.   2.3 Large Language Models and Human Behavior   Generative agents leverage a large language model to power their behavior. The key observation is that large language models encode a wide range of human behavior from their training data [15, 18]. If prompted with a narrowly defined context, the models can be used to generate believable behavior. Recent work has demonstrated the efficacy of this approach. For instance, social simulacra used a large language model to generate users that would populate new social computing systems to prototype their emergent social dynam- ics [80]. This approach used a prompt chain [105, 106] to generate short natural language descriptions of personas and their behaviors as they appear in the system being prototyped. Other empirical studies have replicated existing social science studies [46], political surveys [92], and generated synthetic data [39]. Large language models have also been used to generate interactive human behavior for users to engage with. In gaming, for instance, these models have been employed to create interactive fiction [37] and text adventure games [21]. With their ability to generate and decompose action sequences, large language models have also been used in planning robotics tasks [48].",
+    "score": 0.5316533763484189,
+    "source": "068 - Generative Agents Interactive Simulacra of Human Behavior.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "480068d6-5c74-40b0-976c-fdb7c102f987",
+  "X-Amzn-Trace-Id": "Root=1-6b080514-6d72fcff3a21584d1f797ff2;Parent=0c2570e714033478;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.281
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:20+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Can Large Language Models Develop Gambling Addiction?"
+ },
+ "from_cache": false
+}

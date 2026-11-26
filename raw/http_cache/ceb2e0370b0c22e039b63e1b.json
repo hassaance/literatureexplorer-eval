@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.373,
+ "json": {
+  "query": "In the paper \"Ethical Coordination of LLM Multi-Agent Systems\", what ethical challenge for LLM‑powered multi‑agent systems is identified, and how does the proposed constitutional governance layer aim to address it?",
+  "contexts": [
+   {
+    "text": "Conclusions Constitutional governance of LLM influence policies is a practical and effective mech-   anism for ensuring ethical coordination in generative multi-agent systems. Across ad- versarial and benign environments, governed agents consistently achieve ECS = 0.176 against an unconstrained baseline of ECS = 0, with no cooperation cost under benign conditions and full adversarial threat absorption at pviol = 0.65. The framework is modular, model-agnostic, and deployable as a thin coordination layer over any LLM-powered agent population, making it directly applicable to intelligent workflow automation, decision- support systems, and human–AI collaborative platforms. The headline numerical claims rest on multi-seed bootstrap validation (Section 4.6) and a cross-backbone sweep spanning five contemporary LLM families (Section 4.7), placing the empirical ordering on a broader footing than a single-seed, single-backbone evaluation would provide.   Three contributions consolidate the results. Conceptually, we introduce the ECS func- tional as a multiplicative composite of cooperation, autonomy, integrity, and fairness, which acts as a hard gate against engagement-driven but manipulative coordination and makes the integrity invariant structurally visible in the metric itself.",
+    "score": 0.6273655521925559,
+    "source": "172 - Ethical Coordination of LLM Multi-Agent Systems.pdf",
+    "page": 23
+   },
+   {
+    "text": "Whether a system-level filter can hold ethical coordination quality against agents that exercise this kind of independent judgement is therefore the foundational design question for any trustworthy LLM multi-agent stack.   Constitutional artificial intelligence (AI) approaches [12,13] treat alignment as a model- level property, but a live multi-agent pipeline in which the coordinator and the agent population are independently instantiated LLMs, with different capabilities, incentives, and provisioning, needs a layer outside any single model. We position the constitutional governance stage there: a pre-delivery filter that enforces hard and soft constraints on factual integrity, autonomy retention, and subgroup fairness on the policy pipeline, fronted by a grounded agent population whose hybrid decision model separates a game-theoretic base probability from the LLM-evaluated narrative shift attenuated by per-agent resistance. This separation makes the governance–resistance interaction directly measurable under controlled adversarial pressure.   The experimental platform is a 30-agent Barabási–Albert scale-free network [14,15] run- ning iterated interactions over 50 time steps, with Llama-3.3-70B-Instruct served through Nebius AI Studio. Agents are drawn from six archetypes (pragmatist, idealist, skeptic, conformist, strategist, opportunist) chosen to span the decision-maker profiles encountered in organisational and multi-stakeholder coordination [16,17].",
+    "score": 0.594495819855593,
+    "source": "172 - Ethical Coordination of LLM Multi-Agent Systems.pdf",
+    "page": 2
+   },
+   {
+    "text": "The ECS functional weights integrity, autonomy, and fairness equally once cooperation is included; alternative   https://doi.org/10.3390/electronics15112278         https://doi.org/10.3390/electronics15112278Electronics 2026, 15, 2278 23 of 26   weightings may be appropriate in domains where, for example, fairness dominates integrity (resource allocation) or vice versa (information integrity pipelines). Finally, our adversarial model is stylised: real-world compiler compromise may follow correlated, non-stationary, or agent-specific patterns that are not captured by a fixed pviol. Each of these limitations defines a concrete direction for further validation but does not affect the qualitative ordering established in the present results. The evaluation environment is, moreover, synthetic: the archetype population, the fixed pviol, and the resistance priors are deliberate abstractions chosen for controlled attribution rather than calibrated to a deployment, so the present results establish the existence, direction, and cross-condition invariance of the governance effect, together with a microsecond-order mechanism latency, but not effect magnitudes in a fielded human–agent system; a human-in-the-loop and adversarial red-team evaluation on a calibrated population is required before operational claims can be made.   6. Conclusions Constitutional governance of LLM influence policies is a practical and effective mech-   anism for ensuring ethical coordination in generative multi-agent systems.",
+    "score": 0.5917590126749501,
+    "source": "172 - Ethical Coordination of LLM Multi-Agent Systems.pdf",
+    "page": 22
+   },
+   {
+    "text": "We present a constitutional governance layer that filters compiled influence policies before they reach a heterogeneous population of grounded LLM agents whose hybrid decision model combines a game-theoretic base probability with an LLM-evaluated narrative shift attenuated by per-agent resistance. Four experiments on a Barabási–Albert scale-free network of 30 agents powered by Llama-3.3-70B-Instruct show that the filter holds an Ethical Cooperation Score (ECS) of 0.176 (multi-seed mean 0.163, 95% confidence interval (CI) [0.150, 0.174]) against an unconstrained baseline of ECS = 0, en- forced by a hard integrity gate (1.000 vs. 0.000). We surface an autonomy paradox in which unconstrained agents resist manipulation more forcefully (0.856 vs. 0.728) yet collapse to ECS = 0, establishing that system-level integrity cannot be delegated to agent-level defence. The advantage is monotonic in resistance (+0.174 to +0.183), seed-stable (Cliff’s δ = 1.0, complete separation), topology- and backbone-invariant across five contemporary LLMs, robust to alternative ECS formulations, and reproduces at N = 100.",
+    "score": 0.584182415775069,
+    "source": "172 - Ethical Coordination of LLM Multi-Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "Academic Editors: Weibin Wu and   Fernando De la Prieta Pintado   Received: 2 May 2026   Revised: 21 May 2026   Accepted: 21 May 2026   Published: 25 May 2026   Copyright: © 2026 by the authors.   Licensee MDPI, Basel, Switzerland.   This article is an open access article   distributed under the terms and   conditions of the Creative Commons   Attribution (CC BY) license.   Article   Ethical Coordination of LLM Multi-Agent Systems J. de Curtò 1,2,3,* , I. de Zarzà 3,4 and Carlos T.",
+    "score": 0.5564910963234314,
+    "source": "172 - Ethical Coordination of LLM Multi-Agent Systems.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "885be0db-5bab-436b-9a7f-27bf42c04846",
+  "X-Amzn-Trace-Id": "Root=1-6b080455-2bff721f589f2c0f438d9904;Parent=4c66cf06e84fbdbd;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.373
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:09+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper \"Ethical Coordination of LLM Multi-Agent Systems\", what ethical challenge for LLM‑powered multi‑agent systems is identified, and how does the proposed constitutional governance layer aim to address it?"
+ },
+ "from_cache": false
+}

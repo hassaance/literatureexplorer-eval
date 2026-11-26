@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.582,
+ "json": {
+  "id": "chatcmpl-47c8e091-b800-4808-9418-95643bb429fb",
+  "object": "chat.completion",
+  "created": 1795687465,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 807,
+   "completion_tokens": 7,
+   "total_tokens": 814
+  },
+  "contexts": [
+   {
+    "text": "/b2R4UipaRSYyXlKterNxf+8fqrDKy9jIkk1FWR5KEw50jGat4CGTFKi+dQQTCQzWREZY4mJNl2VTAnu6pfXSadecxu1xl290mzkdRThFM7gAly4hCbcQgvaQCCFZ3iFN+vJerHerY/laMHKd07gD6zPH/qvkp8=</latexit>S9",
+    "score": 0.3690958243319214,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 9
+   },
+   {
+    "text": "/b2R4UipaRSYyXlKterNxf+8fqrDKy9jIkk1FWR5KEw50jGat4CGTFKi+dQQTCQzWREZY4mJNl2VTAnu6pfXSadecxu1xl290mzkdRThFM7gAly4hCbcQgvaQCCFZ3iFN+vJerHerY/laMHKd07gD6zPH/qvkp8=</latexit>S9",
+    "score": 0.3690958243319214,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 9
+   },
+   {
+    "text": "3V3xsZjpSaRYGZXKRU695C/M8bpDpsehkTSaqpIKtDYcqRjtGiBTRikhLNZ4ZgIpnJisgES0y06apkSnDXv7xJuvWa26g17uqVVjOvowjncAFX4MI1tOAW2tABAik8wyu8WU/Wi/VufaxGC1a+cwZ/YH3+AO8hkpk=</latexit>S1",
+    "score": 0.3675218846530208,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "3V3xsZjpSaRYGZXKRU695C/M8bpDpsehkTSaqpIKtDYcqRjtGiBTRikhLNZ4ZgIpnJisgES0y06apkSnDXv7xJuvWa26g17uqVVjOvowjncAFX4MI1tOAW2tABAik8wyu8WU/Wi/VufaxGC1a+cwZ/YH3+AO8hkpk=</latexit>S1",
+    "score": 0.3675218846530208,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "3V3xsZjpSaRYGZXKRU695C/M8bpDpsehkTSaqpIKtDYcqRjtGiBTRikhLNZ4ZgIpnJisgES0y06apkSnDXv7xJuvWa26g17uqVVjOvowjncAFX4MI1tOAW2tABAik8wyu8WU/Wi/VufaxGC1a+cwZ/YH3+AO8hkpk=</latexit>S1",
+    "score": 0.3675218846530208,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   }
+  ],
+  "sources": [
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "47c8e091-b800-4808-9418-95643bb429fb",
+  "X-Amzn-Trace-Id": "Root=1-6b080429-1200708a6c3b687833304405;Parent=3ac4e4ca676c385f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.582
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:25+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the weather in Oulu today?"
+   }
+  ]
+ },
+ "from_cache": false
+}

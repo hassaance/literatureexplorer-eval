@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.281,
+ "json": {
+  "query": "Test-Driven AI Agent Definition (TDAD): Compiling Tool-Using Agents from Behavioral Specifications",
+  "contexts": [
+   {
+    "text": "Test-Driven AI Agent Definition (TDAD): Compiling Tool-Using Agents from Behavioral Specifications   Tzafrir Rehan Fiverr Labs   tzafrir@f-labs.io   Abstract We present Test-Driven AI Agent Definition (TDAD), a methodology that treats agent prompts as compiled artifacts: engineers provide behavioral specifications, a coding agent converts them into executable tests, and a second coding agent iteratively refines the prompt until tests pass. Deploying tool- using LLM agents in production requires measurable behav- ioral compliance that current development practices cannot provide. Small prompt changes cause silent regressions, tool misuse goes undetected, and policy violations emerge only after deployment. To mitigate specification gaming, TDAD in- troduces three mechanisms: (1) visible/hidden test splits that withhold evaluation tests during compilation, (2) semantic mutation testing via a post-compilation agent that generates plausible faulty prompt variants, with the harness measuring whether the test suite detects them, and (3) spec evolution scenarios that quantify regression safety when requirements change. We evaluate TDAD on SpecSuite-Core, a benchmark of four deeply-specified agents spanning policy compliance, grounded analytics, runbook adherence, and deterministic en- forcement.",
+    "score": 0.8322763187285569,
+    "source": "150 - Test-Driven AI Agent Definition (TDAD) Compiling Tool-Using Agents from Behavioral Specifications.pdf",
+    "page": 1
+   },
+   {
+    "text": "Sycophancy [15] and emergent misalignment [2] further motivate executable tests that cannot be “pleased.”   3 The TDAD Methodology TDAD treats agent development as a compilation problem: a specification (PRD + decision tree) is the source, behavioral   2https://platform.claude.com/docs/en/agent-sdk/ overview   2         https://platform.claude.com/docs/en/agent-sdk/overview        https://platform.claude.com/docs/en/agent-sdk/overviewtests are the intermediate representation, and the prompt/- configuration is the compiled artifact. We use “compile” as shorthand for iterative test-driven refinement of a prompt un- til it satisfies an executable contract (not compilation in the programming-language sense).   3.1 Specification Format A TDAD specification is a YAML document encoding:   • Tools: Names, schemas, failure modes, and sequencing constraints   • Policies: Behavioral rules with priorities (e.g., “never expose PII” > “be helpful”)   • Decision tree: Branch conditions and required actions at each node   • Response contract: Structured output via a respond tool called once per turn   • Test guidance: Examples clarifying ambiguous policy terms for test generation   • Mutation intents: Failure modes the test suite must detect (used by MutationSmith)   The specification is the single source of truth.",
+    "score": 0.6621169029950646,
+    "source": "150 - Test-Driven AI Agent Definition (TDAD) Compiling Tool-Using Agents from Behavioral Specifications.pdf",
+    "page": 2
+   },
+   {
+    "text": "Agent evaluation often requires bespoke systems disconnected from existing engineering workflows. Teams maintain separate “eval scripts” that don’t integrate with CI/CD, code review, or standard testing practices.   Software engineering solved analogous problems decades ago through test-driven development: define behavior as tests, iterate until tests pass, then treat the test suite as a regression safety net. TDAD applies this discipline to agents, with adap- tations for their unique challenges: stochastic outputs, tool-use traces, and the risk of specification gaming.   1   ar X   iv :2   60 3.   08 80   6v 1   [ cs   .S E   ] 9   M ar   2 02   6         https://github.com/f-labs-io/tdad-paper-code        https://arxiv.org/abs/2603.08806v1TDAD in 60 Seconds Input: Product spec (YAML) with tools, policies, and decision tree. Pipeline: TestSmith generates visible + hidden tests→ Prompt- Smith iterates prompt until visible tests pass→ hidden tests mea- sure generalization (HPR)→ MutationSmith generates faulty prompt variants; harness checks if tests catch them (MS)→ spec evolution measures regression safety (SURS). Output: Compiled prompt + tool descriptions (the agent arti- fact). Key constraint: Only visible tests drive compilation; hidden tests and mutation scores are measurement only.",
+    "score": 0.657987684097501,
+    "source": "150 - Test-Driven AI Agent Definition (TDAD) Compiling Tool-Using Agents from Behavioral Specifications.pdf",
+    "page": 1
+   },
+   {
+    "text": "Key constraint: Only visible tests drive compilation; hidden tests and mutation scores are measurement only.   Glossary Roles: TestSmith (coding agent: test generator), PromptSmith (coding agent: prompt compiler), MutationSmith (coding agent: mutant generator), Built Agent (runtime, not an agent in the pipeline). Test types: MFT (minimum functionality), INV (invariance), DIR (directional expectation). Metrics: VPR (visible pass rate), HPR (hidden pass rate), MS (mutation score), SURS (spec-update regression score), RPR (rule-pair recall).   1.1 Contributions This paper makes the following contributions:   1. A methodology for test-driven agent compilation. We formalize the process of converting product requirements into behavioral tests, then iteratively refining prompts until tests pass. We decompose this into four roles: Test- Smith (test author), PromptSmith (prompt compiler), Mu- tationSmith (test evaluator), and Built Agent (runtime), with explicit interfaces between them (§3).   2. Anti-gaming mechanisms for test-driven optimization. We identify specification gaming as a critical risk when tests become optimization targets and introduce three mitigations: hidden test splits, semantic mutation testing where a coding agent generates plausible faulty prompt variants and evaluates whether the visible test suite de- tects them, and spec evolution scenarios for regression measurement (§4).   3.",
+    "score": 0.5667003692033914,
+    "source": "150 - Test-Driven AI Agent Definition (TDAD) Compiling Tool-Using Agents from Behavioral Specifications.pdf",
+    "page": 2
+   },
+   {
+    "text": "We evaluate TDAD on SpecSuite-Core, a benchmark of four deeply-specified agents spanning policy compliance, grounded analytics, runbook adherence, and deterministic en- forcement. Across 24 independent trials, TDAD achieves 92% v1 compilation success with 97% mean hidden pass rate; evolved specifications compile at 58%, with most failed runs passing all visible tests except 1–2, and show 86–100% mu- tation scores, 78% v2 hidden pass rate, and 97% regression safety scores. The implementation is available as an open benchmark; the repository includes all four specs, the har- ness, and Docker infrastructure, with SupportOps additionally including generated tests, fixtures, and results as a worked example.1   1 Introduction As LLM agents move into production, a common workflow emerges: a product team writes a specification describing the agent’s tools, policies, and decision logic, then hands it to an AI engineer who must deliver an agent that matches the spec. The engineer faces two challenges: developing the agent (translating requirements into a prompt and tool configuration that produces correct behavior) and verifying that the agent fully meets the requirements across all specified scenarios. Today, both tasks are largely manual: prompt editing by trial and error, spot-checking outputs, and hoping that changes don’t break prior behavior.   This gap between capability and engineering discipline cre- ates three concrete problems:   Confidence.",
+    "score": 0.564296327469418,
+    "source": "150 - Test-Driven AI Agent Definition (TDAD) Compiling Tool-Using Agents from Behavioral Specifications.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "085fa6c5-b23e-48d7-82c4-676abca9969b",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-67cd52ec7fe876a4567866bc;Parent=16456ecc20b2ed2c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.281
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Test-Driven AI Agent Definition (TDAD): Compiling Tool-Using Agents from Behavioral Specifications"
+ },
+ "from_cache": false
+}

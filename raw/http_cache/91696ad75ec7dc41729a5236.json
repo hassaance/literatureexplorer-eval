@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.319,
+ "json": {
+  "query": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces",
+  "contexts": [
+   {
+    "text": "TERMINAL-BENCH: BENCHMARKING AGENTS ON HARD, REALISTIC TASKS IN COMMAND LINE INTERFACES   Mike A. Merrill1,*, Alexander G. Shaw2,*, Nicholas Carlini3, Boxuan Li4, Harsh Raj5, Ivan Bercovich6, Lin Shi7, Jeong Yeon Shin1,8, Thomas Walshe9, E. Kelly Buchanan1 Junhong Shen10, Guanghao Ye11, Haowei Lin12, Jason Poulos4, Maoyu Wang4, Marianna Nezhurina13,14, Jenia Jitsev13,14, Di Lu15, Orfeas Menis Mastromichalakis16,17, Zhiwei Xu18, Zizhao Chen7, Yue Liu19,20, Robert Zhang21, Leon Liangyu Chen1, Anurag Kashyap22, Jan-Lucas Uslu1, Jeffrey Li23, Jianbo Wu4, Minghao Yan24, Song Bian24, Vedang Sharma4, Ke Sun4, Steven Dillmann1, Akshay Anand25, Andrew Lanpouthakoun1, Bardia Koopah25, Changran Hu26, Etash Guha1,23, Gabriel H. S. Dreiman4, Jiacheng Zhu4, Karl Krauth1, Li Zhong3, Niklas Muennighoff1,",
+    "score": 0.7925457723893778,
+    "source": "148 - Terminal-Bench Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.pdf",
+    "page": 1
+   },
+   {
+    "text": "S. Dreiman, Jiacheng Zhu, Karl Krauth, Li Zhong, Niklas Muennighoff, Robert Amanfu, Shangyin Tan, Shreyas Pimpalgaonkar, Tushar Aggarwal, Xiangning Lin, Xin Lan, Xuandong Zhao, Yiqing Liang, Yuanli Wang, Zilong Wang, Changzhi Zhou, David Heineman, Hange Liu, Harsh Trivedi, John Yang, Junhong Lin, Manish Shetty, Michael Yang, Nabil Omi, Negin Raoof, Shanda Li, Terry Yue Zhuo, Wuwei Lin, Yiwei Dai, Yuxin Wang, Wenhao Chai, Shang Zhou, Dariush Wahdany, Ziyu She, Jiaming Hu, Zhikang Dong, Yuxuan Zhu, Sasha Cui, Ahson Saiyed, Arinbjörn Kolbeinsson, Jesse Hu, Christopher Michael Rytting, Ryan Marten, Yixin Wang, Alex Dimakis, Andy Konwinski, and Ludwig Schmidt. Terminal-bench: Benchmarking agents on hard, realistic tasks in command line interfaces. In The Fourteenth International Conference on Learning Representations, ICLR 2026, 2026.",
+    "score": 0.7796515290188399,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 12
+   },
+   {
+    "text": "This degree of utility, coupled with its text-based nature, has recently made it a standard tool for AI agents like Cursor, Codex CLI, Claude Code, and Gemini CLI. These agents interact with the environment by directly issuing shell commands like grep, find, and cat, or by invoking more complicated custom tools to search the web, edit files, or execute code. Agents that use the terminal have become exceedingly popular for their simplicity and capability. For example, as of time of writing Anthropic claims that Claude Code drives $1B in run-rate revenue (Anthropic, 2025).   In this paper we introduce Terminal-Bench, a framework to evaluate agents on realistic tasks in command line interfaces. Terminal-Bench evaluates whether agents can perform the kind of high- skill work that professionals are paid to do, including configuring legacy systems, reimplementing research papers, and solving general software engineering problems. Each task consists of (1) a containerized environment initialized with relevant packages and files, (2) an instruction that de- scribes the task to be completed, (3) a set of tests to verify completion, and (4) a reference solution manually written to solve this task. We also introduce the Terminal-Bench 2.0 dataset, a set of 89 challenging tasks that have been manually verified by three human reviewers for correctness. These tasks require extensive domain knowledge, long chains of interdependent actions, and autonomous problem-solving that characterizes valuable technical work.",
+    "score": 0.765779373025697,
+    "source": "148 - Terminal-Bench Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.pdf",
+    "page": 2
+   },
+   {
+    "text": "These tasks require extensive domain knowledge, long chains of interdependent actions, and autonomous problem-solving that characterizes valuable technical work.   The remainder of this paper is structured as follows. First, we describe the process of creating Terminal-Bench 2.0. Then, we benchmark frontier LLMs and agents on the 89 tasks in Terminal- Bench 2.0, and find that frontier models and agents resolve less than 65% of tasks, with smaller models scoring around 15%. Finally, we provide a taxonomy of failure modes to assist future LLM and agent development.   2 TERMINAL-BENCH   Terminal-Bench is a framework for building realistic tasks that can be solved by agents using a terminal. Tasks range from training a machine learning model, to building and running Linux from its source code, to reverse engineering binary files.   2.1 TASK FORMULATION   A Terminal-Bench task consists of an instruction, a Docker image, a set of tests, an example solution, and a time limit (Figure 2). The instruction describes the task that the agent must complete within the specified time limit in the Docker container. The tests verify that all outcomes described in the instruction have been achieved by testing properties of the final container state; they do not test the agent’s commands or console output.",
+    "score": 0.7030823311717368,
+    "source": "148 - Terminal-Bench Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.pdf",
+    "page": 2
+   },
+   {
+    "text": ", long- horizon tasks in diverse domains. Current benchmarks either do not measure real-world tasks, or are not sufficiently difficult to meaningfully measure fron- tier models. To this end, we present Terminal-Bench 2.0: a carefully curated hard benchmark composed of 89 tasks in computer terminal environments inspired by problems from real workflows. Each task features a unique environment, human- written solution, and comprehensive tests for verification. We show that frontier models and agents score less than 65% on the benchmark and conduct an er- ror analysis to identify areas for model and agent improvement.",
+    "score": 0.6794830414422821,
+    "source": "148 - Terminal-Bench Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "172ff572-b1cc-4251-ab81-62fe268fedad",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-5c95baa26a60bb0f660d7c8e;Parent=564014cc7c802b2c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.319
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:17+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.681,
+ "json": {
+  "id": "chatcmpl-1b8a5fb6-2e9a-43fb-ab3a-f399fda347c5",
+  "object": "chat.completion",
+  "created": 1795687464,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The capital of Finland is Helsinki."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1548,
+   "completion_tokens": 8,
+   "total_tokens": 1556
+  },
+  "contexts": [
+   {
+    "text": "They are all flamingos.   What is the difference between these three images?   The first one is a cartoon, the sec- ond one is a real flamingo, and the third one is a 3D model of a flamingo.   This is an apple with a sticker on it.   What does the sticker say?   The sticker says \"iPod\".   Where is the photo taken?   It looks like it’s taken in a backyard.   Do you think it is printed or handwritten?   It looks like it’s handwritten.   What color is the sticker?   It’s white.   This is a cityscape. It looks like Chicago.   What makes you think this is Chicago?   I think it’s Chicago because of the Shedd Aquarium in the back- ground.   What about this one? Which city is this and what famous landmark helped you recognise the city?   This is Tokyo. I think it’s Tokyo because of the Tokyo Tower.",
+    "score": 0.37884151003554656,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 26
+   },
+   {
+    "text": "What about this one? Which city is this and what famous landmark helped you recognise the city?   This is Tokyo. I think it’s Tokyo because of the Tokyo Tower.   Figure 3.1 | Example interaction drawn from a multimodal assistant that can discuss images with a human (from Alayrac et al. (2022))   models (LLMs).1 LLMs such as Chinchilla (Hoffmann et al., 2022), GPT-3 (Brown et al., 2020) and Llama (Touvron et al., 2023) are trained on large amounts of text, primarily scraped from the internet. In particular, generative LLMs are trained autoregressively to predict the next word in a document given the preceding words (e.g. predict whether the word ‘door’ or ‘chair’ is more likely given the preceding phrase ‘Someone opened the. . . ’). As the next word prediction objective does not require any labelling by people, these models are considered to be self-supervised. Another popular option when choosing a self-supervised objective for training is ‘masked’ language modelling, where a word (or phrase) is ‘masked’ (hidden) and predicted from both sides (i.e. ‘bidirectional training’).",
+    "score": 0.374392097668016,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 26
+   },
+   {
+    "text": "Zhang3, Wenyu Liang3, Xiaohu Yu86, Xiao Li77, Xiaoli Yang5, Xin Lan87, Xinyu Wang24, Xuan Liu45, Xuewen Chen3, Xu Pan64, Yan Zhu1, Yicheng Lyu3, Yifan Gu3, Yimin Zhao35, Ying Zhang3, Yin Ren64, Yipu Chen36, Yiren Rong1, Yi Shao57, Yishu Zhu1, Yizhi Zhang88, Yongyi Xiong89, Yuangang Li90, Yuchen Wu35, Yuhaohua Zheng7, Yuhao Wu77, Yunfu Deng24, Yushan Li1, Yu Wu82, Yuzheng Xu91,92, Yuzhou Nie43, Zehao Wang23, Zhehang Du47, Zhengming Yu84, Zhihan Jiang54, Zhi Li93, Zhixu Li23, Zhuoran Yi94, Tao Sun1, Zhun Wang1, Justin Xu40, Helena Casademunt64, Wenjia Chen95, Cheng Cheng6, Nawen   16Deng96, Rao Fu19, Tianfu Fu56, Yifan Han3, Zhenyu He1, Qiao Jin48, Langlang Li1, Yuetai Li35, Sylvia Liu3, Subhabrata Mukherjee46,",
+    "score": 0.36700769920920123,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 16
+   },
+   {
+    "text": "Ô My income comes mainly from my parents’ support and scholarships[...]   G When I travel I usually stay in budget hotels or youth hostels; I value cost-effectiveness, and I also care about whether the place is clean.   ÿ   When traveling I’m used to independent travel and planning my own itinerary, and I’m quite interested in historical and cultural sites, museums and science and technology exhibitions[...]   ♂ Also, I am male.   User condition Q   ª I am an undergraduate computer science student, and I live in Suzhou, Jiangsu.   Ô My income comes mainly from my parents’ support and scholarships[...]   G When I travel I usually stay in budget hotels or youth hostels; I value cost-effectiveness, and I also care about whether the place is clean.   ÿ   When traveling I’m used to independent travel and planning my own itinerary, and I’m quite interested in historical and cultural sites, museums and science and technology exhibitions[...]   ♀ Also, I am female.   Left out of both inputs (shared background exclusions, verbatim)   ; No name is written, since a name may carry gender associations.   ; Sports hobbies such as playing basketball every week or learning yoga off campus are not written: in common perception these carry gender associations and would make one endpoint seem more natural.",
+    "score": 0.3659429841255161,
+    "source": "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+    "page": 14
+   },
+   {
+    "text": "Joey Tianyi Zhou is the Deputy Director and Principal Investigator at the A*STAR Centre for Frontier AI Research (CFAR) and the Centre for Advanced Technologies in Online Safety (CATOS), Singapore. He received his Ph.D. from Nanyang Technological University (NTU) in 2015. Dr Zhou was recognized as one of the World’s Top 2% Scientists (Career Lifetime) and was a finalist for the National Research Foundation Fellowship (NRF-F) in 2020.   Jiawei Du received the Ph.D. degree in computer science from the National University of Singapore, Singapore, in 2023. He is currently a Senior Re- search Scientist with the Center for Frontier AI Research (CFAR) under the Agency for Science, Technology and Research, Singapore. His research primarily focuses on efficient optimization tech- niques in machine learning.   Liangli Zhen received the PhD degree from Sichuan University, in 2018. He is a senior scientist and group manager with the Institute of High Perfor- mance Computing (IHPC), Agency for Science, Technology and Research (A*STAR), Singapore. His research interests include machine learning and optimisation. He has led/co-led multiple projects under major national initiatives, including Singapore Aerospace Programme and AI Singapore Robust AI Grand Challenge.",
+    "score": 0.36478134013420616,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 12
+   }
+  ],
+  "sources": [
+   "182 - The Ethics of Advanced AI Assistants.pdf",
+   "182 - The Ethics of Advanced AI Assistants.pdf",
+   "144 - Agents' Last Exam.pdf",
+   "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+   "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1b8a5fb6-2e9a-43fb-ab3a-f399fda347c5",
+  "X-Amzn-Trace-Id": "Root=1-6b080428-1941ed135df1c7c975a389a5;Parent=0ff4727c5517c07d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.681
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:24+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the capital of Finland?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.248,
+ "json": {
+  "query": "ScienceFlow: A long-horizon agent for ML research, scientific discovery and beyond",
+  "contexts": [
+   {
+    "text": "Technical Report   ScienceFlow: A Long-horizon Agent for ML Research, Scientific Discovery and Beyond   ScienceFlow Team Noah’s Ark Lab, Huawei   Abstract   Enabling LLM agents to sustain productive, stable, and goal-aligned research over extended horizons is a central challenge for autonomous machine learning and scientific discovery, as progress hinges on continuously managing evolving state, exploration decisions, and computa- tional resources. Pioneering autoresearch agents, despite great success, still lack mechanisms for continuity, recovery from dead ends, and value-driven compute allocation, which inherently undermines overall search efficiency, wastes computational resources, and lowers the chance of ultimate success. To bridge this gap, we introduce ScienceFlow, an end-to-end autoresearch agent framework that organizes long-horizon research work into research segments grounded in executable workspaces. It represents research progress as recoverable executable states, enabling efficient exploration, revision, and execution. Transitions between research segments are gov- erned by Executable-State Transition through Re-Anchoring (ESTRA), which selects either the live state or an archived state as the next anchor and determines whether to continue or redirect the research trajectory. An evidence-aware execution controller allocates resources to physical jobs based on resource availability, remaining budget, and validated progress. We evaluate Science- Flow on tasks spanning machine learning, scientific modeling, and mathematical optimization.",
+    "score": 0.7011850447267715,
+    "source": "094 - ScienceFlow A long-horizon agent for ML research, scientific discovery and beyond.pdf",
+    "page": 1
+   },
+   {
+    "text": "We evaluate Science- Flow on tasks spanning machine learning, scientific modeling, and mathematical optimization. Results on diverse long-horizon benchmarks demonstrate its ability to sustain effective research processes, highlighted by a SOTA 70.22% Any-Medal score on the full MLE-bench within a 24-hour budget, and outperforming prior reported results by 4.92 percentage points. The efficacy of ScienceFlow further demonstrates that efficient state management, adaptive exploration, and objective-aligned execution are critical for scaling autonomous research beyond short-horizon interactions.",
+    "score": 0.626018699199369,
+    "source": "094 - ScienceFlow A long-horizon agent for ML research, scientific discovery and beyond.pdf",
+    "page": 1
+   },
+   {
+    "text": "ScienceFlow combines recoverable workspace states, ESTRA-governed transitions between research segments, and evidence-aware execution control, while supporting con- figurable homogeneous research workers with isolated workspaces and synchronization at research- segment boundaries. We evaluated ScienceFlow across machine learning engineering, mathe- matical and engineering optimization, and scientific modeling and design. ScienceFlow achieves 70.22 ± 1.18% Any-Medal on the full 75-task MLE-bench. Across mathematical and engineering optimization, ScienceFlow matches the strongest results on circle packing and ratio minimization, improves the best published Hermite-based uncertainty bound by 2.5%, and ranks third on KTTSP- hard. On SciModelingBench, ScienceFlow achieves the best group-balanced score of 54.41 among the evaluated agents.",
+    "score": 0.6238116748809923,
+    "source": "094 - ScienceFlow A long-horizon agent for ML research, scientific discovery and beyond.pdf",
+    "page": 24
+   },
+   {
+    "text": "ScienceFlow achieves strong performance across all three domains, including a 70.22± 1.18% Any-Medal rate on the full 75-task MLE-bench (Chan et al., 2025) under a 24-hour budget, 4.92 percentage points above the strongest reported baseline, while also attaining the best group-balanced score on SciModelingBench (SciModelingBench, 2026)   3         https://www.noahlab.com.hk/news/212Technical Report   and reaching/improving published frontiers on multiple mathematical optimization problems. Our contributions are summarized as follows:   • We identify that effective long-horizon research depends not simply on extending interaction time or compute, but on jointly maintaining executable state, adapting research trajectories, and aligning execution with validated progress.   • ScienceFlow realizes this principle through recoverable executable workspaces, ESTRA-governed transitions between research segments, and evidence-aware execution control, enabling research to continue, redirect, or recover without losing useful progress.",
+    "score": 0.5983488324145181,
+    "source": "094 - ScienceFlow A long-horizon agent for ML research, scientific discovery and beyond.pdf",
+    "page": 3
+   },
+   {
+    "text": "Multiple homogeneous workers can operate on independent trajectories in parallel, exchanging only compact progress summaries at research-segment boundaries to limit interference while sharing useful evidence. Beneath this research layer, an evidence-aware execution controller manages the physical jobs associated with each trajectory, using both resource conditions and validated progress to admit, monitor, pause, or terminate execution. Scientific decisions remain with the research workers, while the controller provides resource-aware execution and system-level safeguards.   The broader question is whether a common set of long-horizon research abstractions can transfer across substantially different executable tasks. We evaluate this question across machine learning, sci- entific modeling, and mathematical optimization. ScienceFlow achieves strong performance across all three domains, including a 70.22± 1.18% Any-Medal rate on the full 75-task MLE-bench (Chan et al., 2025) under a 24-hour budget, 4.92 percentage points above the strongest reported baseline, while also attaining the best group-balanced score on SciModelingBench (SciModelingBench, 2026)   3         https://www.noahlab.com.hk/news/212Technical Report   and reaching/improving published frontiers on multiple mathematical optimization problems.",
+    "score": 0.5777925070055191,
+    "source": "094 - ScienceFlow A long-horizon agent for ML research, scientific discovery and beyond.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a3af002b-2bbb-4885-a445-2fc47b077ec8",
+  "X-Amzn-Trace-Id": "Root=1-6b080508-75b7cb014a23fbbf607e9b22;Parent=22e2d9bf48a0ff6f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.248
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:07+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ScienceFlow: A long-horizon agent for ML research, scientific discovery and beyond"
+ },
+ "from_cache": false
+}

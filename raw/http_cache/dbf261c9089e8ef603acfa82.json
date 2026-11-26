@@ -1,0 +1,94 @@
+{
+ "status": 200,
+ "latency_s": 0.915,
+ "json": {
+  "id": "chatcmpl-68add46a-1710-44a4-9ac3-d9199a85b41e",
+  "object": "chat.completion",
+  "created": 1795687953,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "ReAct is a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision-making tasks. It prompts large language models (LLMs) to generate both verbal reasoning traces and actions in an interleaved manner, allowing the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interacting with external environments (e.g., Wikipedia) to incorporate additional information into reasoning (act to reason)."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1596,
+   "completion_tokens": 99,
+   "total_tokens": 1695
+  },
+  "contexts": [
+   {
+    "text": "At time step t, an agent receives an observation ot ∈ O from the environment and takes an action at ∈ A following some policy π(at|ct), where ct = (o1, a1, · · · , ot−1, at−1, ot) is the context to the agent. Learning a policy is challenging when the mapping ct 7→ at is highly implicit and requires extensive computation. For example, the agent shown in Figure 1(1c) is unable to generate the correct final action (Act 4) to finish the QA task as it requires complex reasoning over the trajectory context (Question, Act 1-3, Obs 1-3). Similarly, the agent shown in Figure 1(2a) fails to comprehend from the context that sinkbasin 1 does not contain peppershaker 1, thus keep producing hallucinating actions.   The idea of ReAct is simple: we augment the agent’s action space to Â = A ∪ L, where L is the space of language. An action ât ∈ L in the language space, which we will refer to as a thought or a reasoning trace, does not affect the external environment, thus leading to no observation feedback. Instead, a thought ât aims to compose useful information by reasoning over the current context ct, and update the context ct+1 = (ct, ât) to support future reasoning or acting.",
+    "score": 0.6802135138282217,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "At time step t, an agent receives an observation ot ∈ O from the environment and takes an action at ∈ A following some policy π(at|ct), where ct = (o1, a1, · · · , ot−1, at−1, ot) is the context to the agent. Learning a policy is challenging when the mapping ct 7→ at is highly implicit and requires extensive computation. For example, the agent shown in Figure 1(1c) is unable to generate the correct final action (Act 4) to finish the QA task as it requires complex reasoning over the trajectory context (Question, Act 1-3, Obs 1-3). Similarly, the agent shown in Figure 1(2a) fails to comprehend from the context that sinkbasin 1 does not contain peppershaker 1, thus keep producing hallucinating actions.   The idea of ReAct is simple: we augment the agent’s action space to Â = A ∪ L, where L is the space of language. An action ât ∈ L in the language space, which we will refer to as a thought or a reasoning trace, does not affect the external environment, thus leading to no observation feedback. Instead, a thought ât aims to compose useful information by reasoning over the current context ct, and update the context ct+1 = (ct, ât) to support future reasoning or acting.",
+    "score": 0.6802135138282217,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.6067480347848,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.6067480347848,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "RAG’s agility overcomes static limitations, making it a game-changer for tasks requiring up- to-date knowledge. RAG outperformed seq2seq models and task-specific architectures on ODQA benchmarks, achieving exact match scores, reaching up to 56.8% on TriviaQA and 44.5% on Natural Questions.   ReAct Prompting Unlike previous studies that treated reasoning and action sep- arately, ReAct [Yao et al., 2022] enables LLMs to generate reasoning traces and task-specific actions concurrently. This interleaved process enhances synergy between reasoning and action, facilitating the model in inducing, tracking, and updat- ing action plans while handling exceptions. ReAct is applied to diverse language and decision-making tasks, showcasing its effectiveness over state-of-the-art baselines. Notably, in question answering (HotpotQA) and fact verification (Fever), ReAct addresses hallucination and error propagation issues by interacting with a simple Wikipedia API, producing more inter- pretable task-solving trajectories. Additionally, in interactive decision-making benchmarks like ALFWorld and WebShop, ReAct surpasses both imitation and reinforcement learning approaches, achieving notable success rates of 34% and 10%, respectively, with minimal in-context examples.",
+    "score": 0.6042377347567714,
+    "source": "016 - A Systematic Survey of Prompt Engineering in Large Language Models Techniques and Applications.pdf",
+    "page": 7
+   }
+  ],
+  "sources": [
+   "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "016 - A Systematic Survey of Prompt Engineering in Large Language Models Techniques and Applications.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "68add46a-1710-44a4-9ac3-d9199a85b41e",
+  "X-Amzn-Trace-Id": "Root=1-6b080610-6d1fd5a572764bea37b13bc4;Parent=1cb2ea60236aeb98;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.915
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:32+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "err_system_prompt_finnish",
+ "request_body": {
+  "messages": [
+   {
+    "role": "system",
+    "content": "Always answer in Finnish."
+   },
+   {
+    "role": "user",
+    "content": "What is ReAct?"
+   }
+  ]
+ },
+ "from_cache": false
+}

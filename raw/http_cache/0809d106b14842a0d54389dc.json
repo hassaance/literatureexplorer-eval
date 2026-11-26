@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.319,
+ "json": {
+  "query": "The Metacognitive Demands and Opportunities of Generative AI",
+  "contexts": [
+   {
+    "text": "The Metacognitive Demands and Opportunities of Generative AI Lev Tankelevitch∗ Viktor Kewenig∗† Auste Simkute†   Microsoft Research University College London University of Edinburgh Cambridge, United Kingdom London, United Kingdom Edinburgh, United Kingdom   lev.tankelevitch@microsoft.com ucjuvnk@ucl.ac.uk a.simkute@sms.ed.ac.uk   Ava Elizabeth † Scott Advait Sarkar Abigail Sellen University College London Microsoft Research Microsoft Research London, United Kingdom Cambridge, United Kingdom Cambridge, United Kingdom ava.scott.20@ucl.ac.uk advait@microsoft.com asellen@microsoft.com   Sean Rintel Microsoft Research   Cambridge, United Kingdom serintel@microsoft.com   ABSTRACT Generative AI (GenAI) systems ofer unprecedented opportuni- ties for transforming professional and personal work, yet present challenges around prompting, evaluating and relying on outputs, and optimizing workfows. We argue that metacognition—the psy- chological ability to monitor and control one’s thoughts and be- havior—ofers a valuable lens to understand and design for these usability challenges. Drawing on research in psychology and cogni- tive science, and recent GenAI user studies, we illustrate how GenAI systems impose metacognitive demands on users, requiring a high degree of metacognitive monitoring and control.",
+    "score": 0.811998921575548,
+    "source": "024 - The Metacognitive Demands and Opportunities of Generative AI.pdf",
+    "page": 1
+   },
+   {
+    "text": "Request permissions from permissions@acm.org. CHI ’24, May 11–16, 2024, Honolulu, HI, USA © 2024 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 979-8-4007-0330-0/24/05 https://doi.org/10.1145/3613904.3642902   KEYWORDS Generative AI, Metacognition, Human-AI interaction, User Experi- ence Design, System Usability   ACM Reference Format: Lev Tankelevitch, Viktor Kewenig, Auste Simkute, Ava Elizabeth Scott, Advait Sarkar, Abigail Sellen, and Sean Rintel. 2024. The Metacognitive Demands and Opportunities of Generative AI. In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI ’24), May 11– 16, 2024, Honolulu, HI, USA. ACM, New York, NY, USA, 24 pages. https: //doi.org/10.1145/3613904.3642902   1 INTRODUCTION Generative artifcial intelligence (GenAI) systems—using models, like Large Language Models (LLMs), that can generate artefacts by using extensive parameters and training data to model and sample from a feature space [23]—have the potential to transform personal and professional work.",
+    "score": 0.7650803178063597,
+    "source": "024 - The Metacognitive Demands and Opportunities of Generative AI.pdf",
+    "page": 1
+   },
+   {
+    "text": "Users review and discuss the solutions they generated for a task.   Mistakes made during task performance are analyzed to understand metacognitive fexibility.   3 THE METACOGNITIVE DEMANDS OF GENERATIVE AI   As Sarkar et al. [156] notes, programming with GenAI may have “far-reaching impact on [programmers’] attitudes and practices of authoring, information foraging, debugging, refactoring, testing, doc- umentation, code maintenance, learning, and more”. Other domains, such as design [70], writing [132], and data science [74] are likely to be experiencing similar changes with GenAI. We suggest that a core dimension underlying these changes is a greater demand on users’ metacognition that is imposed when users have to (a) prompt GenAI systems, (b) evaluate and decide to rely on GenAI output,   and (c) decide on one’s workfow automation strategy: whether they should automate certain tasks with GenAI and how to automate them most efectively (previously described as “critical integration” [154]; see also [149]).   It is important here to distinguish between metacognitive de- mand—the need for extensive metacognitive monitoring and con- trol for a task—and cognitive load, the total amount of mental efort required for a task [178].",
+    "score": 0.7510606967369257,
+    "source": "024 - The Metacognitive Demands and Opportunities of Generative AI.pdf",
+    "page": 5
+   },
+   {
+    "text": "(d) (e)   Figure 2: Metacognitive demands posed by generative AI at each point in a simplifed user workfow. Often embedded within a workfow with manual tasks, users may frst need to formulate a prompt, requiring metacognitive abilities including self- awareness of task goals and task decomposition (a). Systems that provide automated suggestions such as GitHub Copilot alleviate some of the demands associated with prompting. Depending on the output, iterating on the prompt may be necessary, which requires well-adjusted confdence in one’s prompting ability and metacognitive fexiblity to adapt prompting strategies as necessary (b). Likewise, evaluating the output requires well-adjusted confdence in one’s ability to judge its validity (c). Beyond the local interaction with a GenAI system, there is an overarching demand connected to understanding whether, when, and how to apply GenAI to one’s workfows—one’s ‘automation strategy’. This requires self-awareness of how GenAI applies to and afects one’s workfows, and well-adjusted confdence in the ability to complete tasks manually and with GenAI (d). Finally, it also requires metacognitive fexbility to adapt one’s workfows as necessary (e).",
+    "score": 0.7241118926434317,
+    "source": "024 - The Metacognitive Demands and Opportunities of Generative AI.pdf",
+    "page": 7
+   },
+   {
+    "text": "Metacognitive Demands and Opportunities of Generative AI CHI ’24, May 11–16, 2024, Honolulu, HI, USA   Prompt formulation EvaluationManual work Manual work   (whether, when, how to apply GenAI in workflows) Automation strategy: understanding and adapting workflows   … …   Self-awareness of task goals Task decomposition for prompting   Well-adjusted confidence in evaluation ability   Self-awareness of applicability and impact of GenAI on workflows Well-adjusted confidence in completing task yourself vs. with GenAI   <Automated suggestions>   Prompt iteration   Well-adjusted confidence in prompting ability Metacognitive flexibility to adapt prompting strategy   Metacognitive flexibility to adapt workflow to GenAI   (a)   (b)   (c)   (d) (e)   Figure 2: Metacognitive demands posed by generative AI at each point in a simplifed user workfow. Often embedded within a workfow with manual tasks, users may frst need to formulate a prompt, requiring metacognitive abilities including self- awareness of task goals and task decomposition (a). Systems that provide automated suggestions such as GitHub Copilot alleviate some of the demands associated with prompting. Depending on the output, iterating on the prompt may be necessary, which requires well-adjusted confdence in one’s prompting ability and metacognitive fexiblity to adapt prompting strategies as necessary (b).",
+    "score": 0.6871480316188057,
+    "source": "024 - The Metacognitive Demands and Opportunities of Generative AI.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "30f54a99-ae32-405d-b70f-3c780d0a1b1d",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fa-4e6205e669f38bb15f4a0951;Parent=16308f2d5da21a51;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.319
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:54+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The Metacognitive Demands and Opportunities of Generative AI"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.292,
+ "json": {
+  "query": "What challenge does Surfer 2 aim to solve, and how does its unified visual‑only architecture address this problem?",
+  "contexts": [
+   {
+    "text": "In contrast, this work presents an alternative perspective: with proper orchestration and system design, existing state-of-the-art models can achieve human-level performance and exceed prior systems across multiple benchmarks.   Prior approaches require environment-specific adaptations, such as DOM parsers for web navigation, accessibility trees for mobile interfaces, or specialized APIs for desktop applications, limiting generalization across diverse digital environments. This work introduces Surfer 2, a unified, hierarchical agent architecture designed for complex tasks across desktop, web, and mobile environments using purely visual interaction.   Surfer 2 comprises three components: Orchestrator (optional high-level planner), a Navigator (low- level GUI executor), and a Validator (evaluation module). Surfer 2 integrates third-party frontier models and H Company’s Holo1.5 models [7] in a design that separates long-term strategic planning from short- term tactical execution. A key design insight in Surfer 2 is architectural flexibility. It can enable or bypass the Orchestrator to match task complexity. For long-horizon problems, the Orchestrator runs as a high- level planner in the plan-and-act style [8], where it decomposes the user task into verifiable goals, plans ahead, and delegates targeted subtasks to the Navigator. For simple tasks, the Orchestrator is bypassed and the Navigator is invoked directly.",
+    "score": 0.5939172428377997,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 3
+   },
+   {
+    "text": "performance on WebVoyager, WebArena, OSWorld E2E, and Android- World. Human performance is indicated when available.   21 Introduction   Recent advances in Large Language Models (LLMs) and Vision-Language Models (VLMs) unlocked remark- able reasoning capabilities for agentic use cases [1]. However, turning these capabilities into reliable, general- purpose agents that operate autonomously in Graphical User Interfaces (GUIs) on complex, real-world tasks remains challenging. In recent years, one dominant path has been to train increasingly large models with minimal scaffolding like tool-call [2, 3] to improve agentic capabilities [4, 5, 6]. In contrast, this work presents an alternative perspective: with proper orchestration and system design, existing state-of-the-art models can achieve human-level performance and exceed prior systems across multiple benchmarks.   Prior approaches require environment-specific adaptations, such as DOM parsers for web navigation, accessibility trees for mobile interfaces, or specialized APIs for desktop applications, limiting generalization across diverse digital environments. This work introduces Surfer 2, a unified, hierarchical agent architecture designed for complex tasks across desktop, web, and mobile environments using purely visual interaction.   Surfer 2 comprises three components: Orchestrator (optional high-level planner), a Navigator (low- level GUI executor), and a Validator (evaluation module).",
+    "score": 0.5432360215015988,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Parovic, J. Revelle, G. Richard, M.L. Richter, R. Riochet, M. Santos, R. Savidan,   L. Sifre, M. Theillard, M. Thibault, I. Valentini, T. Wu, L. Yie, K. Yuan, J. Zubovskij   H Company — Alphabetical order   October 2025   Abstract   Building agents that generalize across web, desktop, and mobile environ- ments remains an open challenge, as prior systems rely on environment-specific interfaces that limit cross-platform deployment. We introduce Surfer 2, a unified architecture operating purely from visual observations that achieves state-of-the-art performance across all three environments. Surfer 2 inte- grates hierarchical context management, decoupled planning and execution, and self-verification with adaptive recovery, enabling reliable operation over long task horizons. Our system achieves 97.1% accuracy on WebVoyager, 69.6% on WebArena, 60.1% on OSWorld, and 87.1% on AndroidWorld, out- performing all prior systems without task-specific fine-tuning. With multiple attempts, Surfer 2 exceeds human performance on all benchmarks. These re- sults demonstrate that systematic orchestration amplifies foundation model capabilities and enables general-purpose computer control through visual in- teraction alone, while calling for a next-generation vision language model to achieve",
+    "score": 0.527943464046827,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Instead, our findings highlight that coordination and self-correction at the system level can substitute for learning at the model level. We show that even in-context learning, without any gradient updates, can achieve remarkable performance, similar to previous findings [55, 56].   3 Agent Architecture   We outline the components required to build Surfer 2 as shown in Figure 2.   3.1 Design Philosophy   The design of our architecture follows five core principles. First, we adopt a separation of concerns: high-level planning, managed by the Orchestrator, is decoupled from low-level execution handled by the Navigator, allowing each component to specialize and improve independently. Second, we employ an auto- matic hierarchical context mechanism, giving each component access to relevant global information such as the overarching goal, current plan, completed work, and immediate subtask while maintaining scope- specific focus. Third, we ensure a shared environment state, in which elements like browser sessions or open applications persist across subtasks and components, enabling incremental progress in dynamic en- vironments. Fourth, we emphasize explicit validation through multi-stage verification processes to limit error propagation and promote self-correction. Finally, we employ chain-of-thought reasoning with all modules except the Localizer, reasoning explicitly in natural language for better long-horizon performance.   3.2 Orchestrator   Main roles. The Orchestrator shoulders three key roles simultaneously.",
+    "score": 0.5101649289039575,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 5
+   },
+   {
+    "text": "For simple tasks, the Orchestrator is bypassed and the Navigator is invoked directly. Built on our previous SurferH agent [9], the Navigator follows a ReAct (reason+act) loop [10]. It perceives the environment purely via screenshots, reasons about the next step, and executes constrained keyboard and mouse-level controls with pixel-accurate UI localization from Holo1.5. Upon subtask completion, a Validator inspects the latest screenshots, the execution history, and the proposed answer to assess subtask success in one of two ways: (1) if the Orchestrator is enabled, it leverages the Validator’s report and either advances to the next subgoal or replans accordingly, or (2) if the Orchestrator is disabled, the Validator’s feedback is sent directly to the Navigator, which integrates it into its reasoning and continues the ReAct loop until the task is completed or a termination condition is reached.   Without task-specific fine-tuning, Surfer 2 attains state-of-the-art results on four major benchmarks spanning different Computer Use environments (web browser, desktop, mobile): WebVoyager [11] and We- bArena [12], OSWorld [13], and AndroidWorld [14].",
+    "score": 0.4990501600676013,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "34869517-438a-4bc2-abe3-7540cf19929f",
+  "X-Amzn-Trace-Id": "Root=1-6b080451-3761545667aba05447d69430;Parent=7608fe8a3ea8873e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.292
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:05+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What challenge does Surfer 2 aim to solve, and how does its unified visual‑only architecture address this problem?"
+ },
+ "from_cache": false
+}

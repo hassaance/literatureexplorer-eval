@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.782,
+ "json": {
+  "id": "chatcmpl-9a3e0c21-7246-421d-9921-80a305c54dfa",
+  "object": "chat.completion",
+  "created": 1795687450,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "According to 'Why Do Multi-Agent LLM Systems Fail?', the main categories of failures in multi-agent systems are:\n\n1. **Task Verification**\n2. **System Design Issues**\n3. **Inter-Agent Misalignment**"
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1563,
+   "completion_tokens": 48,
+   "total_tokens": 1611
+  },
+  "contexts": [
+   {
+    "text": "Why Do Multi-Agent LLM Systems Fail?   Mert Cemri1∗ Melissa Z. Pan1∗ Shuyi Yang2∗ Lakshya A Agrawal1 Bhavya Chopra1 Rishabh Tiwari1 Kurt Keutzer1 Aditya Parameswaran1 Dan Klein1   Kannan Ramchandran1 Matei Zaharia1 Joseph E. Gonzalez1 Ion Stoica1   1UC Berkeley 2Intesa Sanpaolo *Equal Contribution   Abstract   Despite enthusiasm for Multi-Agent LLM Systems (MAS), their performance gains on popular benchmarks are often minimal. This gap highlights a critical need for a principled understanding of why MAS fail. Addressing this question requires systematic identification and analysis of failure patterns. We introduce MAST-Data, a comprehensive dataset of 1600+ annotated traces collected across 7 popular MAS frameworks. MAST-Data is the first multi-agent system dataset to outline the failure dynamics in MAS for guiding the development of better future systems. To enable systematic classification of failures for MAST-Data, we build the first Multi-Agent System Failure Taxonomy (MAST). We develop MAST through rigorous analysis of 150 traces, guided closely by expert human annotators and validated by high inter-annotator agreement (κ = 0.88).",
+    "score": 0.7228173062819521,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 1
+   },
+   {
+    "text": "(Tolstoy [1]) “Successful systems all work alike; each failing system has its own problems.” (Berkeley’25)   1 Introduction   Recently, Large Language Model (LLM) based agentic systems have gained significant attention in the AI community [2–4]. Building on this characteristic, multi-agent systems are increasingly explored in various domains, such as software engineering, drug discoveries, scientific simulations, and general-purpose agents [5–11]. In this study, we define an LLM-based agent as an artificial entity with prompt specifications (initial state), conversation trace (state), and ability to interact with the environments such as tool usage (action). A multi-agent system (MAS) is then defined as a collection of agents designed to interact through orchestration, enabling collective intelligence. MAS are structured to coordinate efforts, enabling task decomposition, performance parallelization, context isolation, specialized model ensembling, and diverse reasoning discussions [12–17].   Despite the increasing adoption of MAS, their performance gains often remain minimal compared to single-agent frameworks [18] or simple baselines like best-of-N sampling [19]. Our empirical   1https://github.com/multi-agent-systems-failure-taxonomy/MAST 2https://huggingface.co/datasets/mcemri/MAST-Data   39th Conference on Neural Information Processing Systems (NeurIPS 2025) Track on Datasets and Benchmarks.   ar X   iv :2",
+    "score": 0.6372419420812,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 1
+   },
+   {
+    "text": "System Design Issues   This category includes failures that arise from deficiencies in the design of the system architecture, poor conversation management, unclear task specifications or violation of constraints, and inadequate definition or adherence to the roles and responsibilities of the agents.   We identify five failure modes under this category:   • FM-1.1: Disobey task specification - Failure to adhere to the specified constraints or requirements of a given task, leading to suboptimal or incorrect outcomes.   • FM-1.2: Disobey role specification - Failure to adhere to the defined responsibilities and constraints of an assigned role, potentially leading to an agent behaving like another.   • FM-1.3: Step repetition - Unnecessary reiteration of previously completed steps in a process, potentially causing delays or errors in task completion.   • FM-1.4: Loss of conversation history - Unexpected context truncation, disregarding recent interaction history and reverting to an antecedent conversational state.   • FM-1.5: Unaware of termination conditions - Lack of recognition or understanding of the criteria that should trigger the termination of the agents’ interaction, potentially leading to unnecessary continuation.   A.2 FC2. Inter-Agent Misalignment   This category includes failures arising from ineffective communication, poor collaboration, conflicting behaviors among agents, and gradual derailment from the initial task.",
+    "score": 0.5967305477042353,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 17
+   },
+   {
+    "text": "Why do multi-agent llm systems fail? arXiv preprint arXiv:2503.13657, 2025.   [16] Mingyan Gao, Yanzi Li, Banruo Liu, Yifan Yu, Phillip Wang, Ching-Yu Lin, and Fan Lai. Single- agent or multi-agent systems? why not both? arXiv preprint arXiv:2505.18286, 2025.   [17] Graham Neubig. Don?t sleep on single-agent systems. https://openhands.dev/blog/dont-s leep-on-single-agent-systems, 2024. Accessed: 2026-04-06.   [18] Cognition AI. Don?t build multi-agents. https://cognition.ai/blog/dont-build-multi-a gents, 2025. Accessed: 2026-04-06.",
+    "score": 0.5928204526606614,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 30
+   },
+   {
+    "text": ":2   50 3.   13 65   7v 3   [ cs   .A I]   2 6   O ct   2 02   5         https://github.com/multi-agent-systems-failure-taxonomy/MAST        https://huggingface.co/datasets/mcemri/MAST-Data        https://arxiv.org/abs/2503.13657v3Failure Categories   Task Verification   System Design Issues   Inter-Agent Misalignment   1.1 Disobey Task Specification   2.6 Reasoning-Action Mismatch   1.3 Step Repetition   2.4 Information Withholding   2.5 Ignored Other Agent’s Input   3.1 Premature Termination   3.2 No or Incomplete Verification   3.3 Incorrect Verification   2.2 Fail to Ask for Clarification   1.4 Loss of Conversation History   2.1 Conversation Reset   2.3 Task Derailment   1.2 Disobey Role Specification   1.5 Unaware of Termination Conditions   (15.7%)   (1.50%)   (13.2%)   (8.20%)   (6.20%)   (9.10%)   (1.90%)   (2.80%)   (12.4%)   (6.80%)",
+    "score": 0.5801368499517504,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+   "063 - Towards a Science of Scaling Agent Systems.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9a3e0c21-7246-421d-9921-80a305c54dfa",
+  "X-Amzn-Trace-Id": "Root=1-6b08041a-5ab5517a143face43b9d1bcf;Parent=318237669560287d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.782
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:10+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "According to 'Why Do Multi-Agent LLM Systems Fail?', what are the main categories of failures in multi-agent systems?"
+   }
+  ]
+ },
+ "from_cache": false
+}

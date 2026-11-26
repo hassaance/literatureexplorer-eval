@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.301,
+ "json": {
+  "query": "Self-Compacting Language Model Agents",
+  "contexts": [
+   {
+    "text": "Self-Compacting Language Model Agents   Tianjian Li♠ Jingyu Zhang♠ William Jurayj♠ Xi Wang♠ Chuanyang Jin♠   Mehrdad Farajtabar♡ Eric Nalisnick♠ Daniel Khashabi♠   ♠Johns Hopkins University ♡Apple {tli104, danielk}@jhu.edu   Abstract   Long agent traces composed of chains of thought and tool calls accumulate stale content that anchor subsequent generations, and eventually outgrow the context window. Existing scaffolds mitigate it with fixed-interval compaction triggered at a token threshold. Such triggers pay no heed to trajectory structure, risking discard of partial results mid-derivation or mid-search. We propose SELFCOMPACT, a scaffold that allows the model itself to decide when and how to compact. Specifi- cally, it pairs two inference-time elements: (i) a compaction tool the model invokes to summarize the accumulated context, and (ii) a lightweight rubric specifying when to fire (a sub-task has resolved, or the trajectory is converging) and when to suppress (mid-derivation, or when stuck). Both are needed. The tool alone is unevenly used across open-weight models, often invoked at unhelpful moments or not at all; the rubric alone cannot act. Together, they elicit effective adaptive compaction without any fine-tuning or external supervision.",
+    "score": 0.7671812000636437,
+    "source": "042 - Self-Compacting Language Model Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "A broad line of work addresses this through periodic compaction, sharing a common paradigm: generate an extended sequence of thoughts or actions, summarize the accumulated context, resume from the compressed state, and repeat [Shao et al., 2025, Sun et al., 2025]. The majority of these methods train models to perform compaction (via SFT, RL, or both) in order to encode the when-to-compact decision implicitly in teacher demonstrations or rewards [Kontonis et al., 2026, Yang et al., 2026, Yan et al., 2026, Cassano and Rush, 2026, Mitra and Ulukus, 2025, Aghajohari et al., 2025, Wu et al., 2026a, Sun et al., 2025, Ye et al., 2025, Shao et al., 2025, Wu et al., 2026b]. Our approach is entirely training-free. We draw on recent advances in tool-using models [GLM Team et al., 2025, MiniMax Team, 2026], which have unlocked the ability to invoke external tools mid-generation, and show that off-the-shelf models can self-compact effectively if scaffolded correctly. A lightweight rubric specifying when to invoke the compaction tool is sufficient to elicit reliable adaptive compaction without any parameter updates.",
+    "score": 0.5834145079413874,
+    "source": "042 - Self-Compacting Language Model Agents.pdf",
+    "page": 9
+   },
+   {
+    "text": "These scaffolds help, but they leave substantial headroom. The right time to compact heavily depends on what the model is doing, not just on how many tokens have passed. Figure 1 shows this concretely: fixed-interval compression wipes four already-verified facts mid-trajectory, and the model falls back to a guess. In this work, we ask the following research question:   Can the LM agent itself recognize its own context rot without training, and compact accordingly?   To answer the research question, we hand the decision of when to compact back to the LM agent itself. We propose SELFCOMPACT, a scaffold that pairs two inference-time elements: an inline compaction tool the model invokes itself, and a lightweight rubric specifying when to fire (a sub-task has resolved, or the trajectory is converging) and when to suppress (mid-derivation, or when stuck). The model emits <summarize> when it wants to compact, the scaffold runs the summarization, and generation resumes from the summarized prefix. Both the rubric judge and summarizer is the same model: no external verifier, no fine-tuning.   2https://huggingface.co/MiniMaxAI/MiniMax-M2.5   2         https://huggingface.co/MiniMaxAI/MiniMax-M2.5Both elements are needed.",
+    "score": 0.5257292538914651,
+    "source": "042 - Self-Compacting Language Model Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": ".   • Across seven open-weight models on competition math (four reasoning models) and agentic search (three deployed agents), SELFCOMPACT matches or exceeds fixed-interval summarization at substantially lower token cost.   • Ablations find that the rubric is crucial for effective self-compaction: offering the tool alone yields uneven behavior, while a paragraph of guidance closes the gap. Our findings imply that knowing when to perform compaction can be supplied as a meta-cognitive capability at inference time, rather than baked into weights.   To the best of our knowledge, our work is the first to introduce and evaluate rubric-based adaptive compaction timing in a training-free setting.   2 Preliminaries   Context management in long-horizon agents. LM agents on long-horizon tasks accumulate tokens in a single rolling context: prior thoughts, tool calls, and observations. A single coding-agent session on SWE-bench-style tasks routinely spans millions of tokens and well over a hundred turns. e.g., Qwen3-Coder-Next averages 8M tokens and 154 turns per problem on SWE-rebench [Badertdinov et al., 2026]. Deep-research agents on BrowseComp scale to hundreds of tool calls per query [Wei et al., 2025, MiroMind Team et al., 2026].",
+    "score": 0.49706631840573445,
+    "source": "042 - Self-Compacting Language Model Agents.pdf",
+    "page": 3
+   },
+   {
+    "text": "Language Agent: A language agent is a sophisticated software program designed to interact autonomously with its environ- ment, capable of understanding and generating natural language to accomplish specific goals [34], [35], [36], [37]. This concept was originally proposed by Allen Newell in 1959 [38], and has received increasing attention because LLM can integrate and   Authorized licensed use limited to: Oulu University. Downloaded on October 15,2026 at 14:10:21 UTC from IEEE Xplore. Restrictions apply.         https://github.com/QuirkShark/RedAgent        https://github.com/QuirkShark/RedAgentXU et al.: REDAGENT: AN AUTONOMOUS AGENT FOR CONTEXT-AWARE RED TEAMING OF LLM JAILBREAKS 6509   perform complex tasks without the need for users to explicitly define rules. These LLM-based agents leverage the extensive language understanding and generation capabilities of LLM to perform complex tasks, interact in a human-like manner, and make decisions based on a variety of inputs. Building on prior work, LLM-based agents are often organized into three core modules: memory, planning, and action. The memory mod- ule [39], [40] allows the agent to recall past actions. The planning module [41], [42], [43], [44] enables the agent to design future actions.",
+    "score": 0.48375869641440145,
+    "source": "118 - RedAgent.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5be68bd6-02f7-4c6f-8710-26b37ea2243b",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fd-4a899a9c13fef04c43c1fa25;Parent=6b15b3a1d92bddcb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.301
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:57+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Self-Compacting Language Model Agents"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.269,
+ "json": {
+  "query": "In the WOLF paper, how many speaker statements were self‑labeled as omission, and what was the average suspicion percentage for that deception type?",
+  "contexts": [
+   {
+    "text": "Suspicion (%) Avg. Flagged (%) none 426 57.1% 51.4% omission 129 61.9% 57.5% distortion 76 50.3% 35.5% misdirection 51 54.6% 45.5% fabrication 28 51.7% 40.1%   WOLF reveals not only whether deception is detected but also which types succeed in multi-agent interaction. Omissions and hedges often slip by because they resemble natural uncertainty, while fabrications are flagged more reliably as they conflict with accumulated context. This asymmetry mirrors real-world risks as subtle, low-effort lies persist longer, whereas overt falsehoods are eventu- ally exposed. By separating deception types, WOLF pinpoints where LLMs are most vulnerable and where they remain resilient, informing both model improvement and safeguard design.   5.9 Statistical Variability   All metrics are means over 100 independent games. We report variability as standard error of the mean (SEM); 95% confidence intervals use the normal approximation: x̄± 1.96 SEM. Error bars in figures denote ± 1 SEM across runs and reflect stochasticity in model outputs and game randomness (bids, dialogue, votes).",
+    "score": 0.6091142386907056,
+    "source": "175 - WOLF.pdf",
+    "page": 9
+   },
+   {
+    "text": "Error bars in figures denote ± 1 SEM across runs and reflect stochasticity in model outputs and game randomness (bids, dialogue, votes). For example, final-round suspicion averages 62.0%± 1.2% (Werewolf) vs. 45.0%± 0.9% (Villager), a stable gap across seeds.   6 Conclusions   WOLF is a multi-agent social deduction benchmark for evaluating both the production and detection of deception in LLMs. It embeds role-grounded agents in a programmable LangGraph game loop, where every public statement is paired with self- and peer-assessments and suspicion scores evolve over time.   Across 100 games and over 7,200 statements, WOLF shows a clear asymmetry: models lie often (Werewolves deceived in 31% of turns) but detect lies only moderately well (precision ≈72%, re- call ≈48%). Suspicion toward Werewolves rises across rounds while stabilizing for truthful roles, meaning extended interaction improves discrimination but cautious Villagers are still misclassi- fied. Results also vary by deception type—subtle forms like omission persist longer than overt fabrications—highlighting where models remain most vulnerable.   By combining statement-level annotations with longitudinal analysis, WOLF moves beyond static deception datasets and provides a controlled but dynamic testbed for probing both deceptive and detective capacity.",
+    "score": 0.5674225777638285,
+    "source": "175 - WOLF.pdf",
+    "page": 9
+   },
+   {
+    "text": "Every statement is treated as a distinct unit of analysis, with a self-assessment of honesty from the speaker and peer assessments of deceptiveness from all others. Deception is categorized using a standardized taxonomy (omission, distortion, fabrication, misdirection), while suspicion scores are aggregated longitudinally via exponential smoothing to capture both immediate judgments and evolving trust dynamics. Structured logs preserve prompts, raw outputs, and state transitions for full reproducibility and analysis. Across 100 simulated games and 7,230 analyzed statements, WOLF produces rich interaction traces, per-player deception histories, and cross-perception matrices. Results show that Werewolves generate deceptive statements in 31% of their turns, while peer detection reaches only 71–73% precision, with overall accuracy around 52%. Precision is higher for detecting Werewolves, but there are more false positives against Villagers. Suspicion toward Werewolves rises from about 52% to over 60% across rounds, while suspicion toward Villagers and the Doctor stabilizes near 44–46%. This growing separation demonstrates that extended interaction improves recall against liars without compounding errors against truthful roles. By coupling granular statement-level analysis with round-level suspicion trends, WOLF moves deception evaluation beyond static datasets and provides a controlled yet dynamic testbed for measuring both deceptive capacity and detective capacity in adversarial multi-agent interaction.",
+    "score": 0.5541010612895193,
+    "source": "175 - WOLF.pdf",
+    "page": 1
+   },
+   {
+    "text": "Social deduction games like Werewolf naturally induce deception, partial information, and theory-of-mind reasoning [7]. WOLF is designed to analyze three guiding questions: (i) how often and in what forms LLMs engage in deception, (ii) how accurately and consistently they detect deception in peers, and (iii) how these dynamics evolve across multi-turn, role-conditioned interactions. We operationalize this setting as a reproducible benchmark with role-grounded agents, programmable rules, and structured logging.   This work makes three contributions:   1. A LangGraph-based implementation of Werewolf with role-conditioned agents, strict phase transitions, and structured event logs for reproducibility;   2. A deception measurement protocol coupling self-assessment with concurrent peer analysis for every public statement, categorized by omission, distortion, fabrication, and misdirection;   3. A metrics suite that captures deception production rates, detection accuracy, calibration (Brier score, ROC/AUPRC), and longitudinal suspicion trends that reveal how trust and mistrust develop over time.   2 Related Works   Benchmarks rarely elicit sustained deceptive behavior under partial information while also mea- suring detection. Social deduction settings surface coordination and theory-of-mind reasoning, but standardized, logged, multi-turn deception benchmarks remain limited. Existing work has explored agent-based evaluations with discussion and voting or deception classification with static text.",
+    "score": 0.5180800091503541,
+    "source": "175 - WOLF.pdf",
+    "page": 2
+   },
+   {
+    "text": "Peer analysis. Observers annotate the same fields and additionally assign a continuous suspicion score s ∈ [0, 1], where 0 denotes full trust and 1 denotes certainty of deception. Unlike the binary deception flag, this score captures gradations of distrust: for example, s = 0.2 may reflect mild doubt, whereas s = 0.9 indicates near-certainty of dishonesty. The suspicion score serves as the core signal in our longitudinal update rule (see Section 4.1), enabling us to track how trust fluctuates over the course of play.   44.3 Agents and Prompts   Role-grounded prompts. Agents in WOLF are explicitly bound to their roles and objectives. Werewolves must conceal their identities and mislead others while coordinating at night. Villagers are expected to stay transparent, cooperate, and flag suspicious behavior. The Seer decides when to reveal or withhold investigative results, and the Doctor protects chosen players from elimination. These prompts ensure that deception emerges naturally from role incentives rather than arbitrary instructions.   Private scratchpads. Agents also keep private scratchpads where they reason with chain-of-thought. For example, a Werewolf might note “Emma is defending me; likely a Villager” while publicly saying   “Raj’s hesitation is suspicious.” This separation ensures deception arises from role-based incentives rather than leaking privileged knowledge.",
+    "score": 0.5073084189253448,
+    "source": "175 - WOLF.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c9997535-ec9f-4223-b95f-4854cb7d6846",
+  "X-Amzn-Trace-Id": "Root=1-6b08044a-77fc66af6e194bdc6d2079b5;Parent=62c3dccf18345ae2;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.269
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:58+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the WOLF paper, how many speaker statements were self‑labeled as omission, and what was the average suspicion percentage for that deception type?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.375,
+ "json": {
+  "query": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+  "contexts": [
+   {
+    "text": "Published as a conference paper at ICLR 2026   AGENTIC CONTEXT ENGINEERING: EVOLVING CON- TEXTS FOR SELF-IMPROVING LANGUAGE MODELS   Qizheng Zhang1∗, Changran Hu2∗, Shubhangi Upasani2, Boyuan Ma2, Fenglu Hong2, Vamsidhar Kamanuru2, Jay Rainton2, Chen Wu2, Mengmeng Ji2, Hanchen Li3, Urmish Thakker2, James Zou1, Kunle Olukotun1   1Stanford University 2SambaNova Systems, Inc. 3UC Berkeley   {qizhengz,kunle}@stanford.edu changran_hu@berkeley.edu   § ace-agent/ace � ace-agent.github.io ∗Equal contribution.   ABSTRACT   Large language model (LLM) applications such as agents and domain-specific reasoning increasingly rely on context adaptation: modifying inputs with instruc- tions, strategies, or evidence, rather than weight updates. Prior approaches im- prove usability but often suffer from brevity bias, which drops domain insights for concise summaries, and from context collapse, where iterative rewriting erodes details over time.",
+    "score": 0.7793373511325493,
+    "source": "051 - Agentic Context Engineering Evolving Contexts for Self-Improving Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Glm-5.1, April 2026. URL https://huggingface.co/zai-org/GLM-5.1.   [45] Qizheng Zhang, Changran Hu, Shubhangi Upasani, Boyuan Ma, Fenglu Hong, Vamsidhar Kamanuru, Jay Rainton, Chen Wu, Mengmeng Ji, Hanchen Li, Urmish Thakker, James Zou, and Kunle Olukotun. Agentic context engineering: Evolving contexts for self-improving language models. In The Fourteenth International Conference on Learning Representations, 2026. URL https://openreview.net/forum?id=eC4ygDs02R.",
+    "score": 0.6511708096036697,
+    "source": "145 - Stop Comparing LLM Agents Without Disclosing the Harness.pdf",
+    "page": 12
+   },
+   {
+    "text": "We introduce ACE (Agentic Context Engineering), a frame- work that treats contexts as evolving playbooks that accumulate, refine, and orga- nize strategies through a modular process of generation, reflection, and curation. ACE prevents collapse with structured, incremental updates that preserve detailed knowledge and scale with long-context models. Across agent and domain-specific benchmarks, ACE optimizes contexts both offline (e.g., system prompts) and on- line (e.g., agent memory), consistently outperforming strong baselines: +10.6% on agents and +8.6% on finance, while significantly reducing adaptation latency and rollout cost. Notably, ACE could adapt effectively without labeled supervision and instead by leveraging natural execution feedback. On the AppWorld leader- board, ACE matches the top-ranked production-level agent on the overall average and surpasses it on the harder test-challenge split, despite using a smaller open- source model.",
+    "score": 0.60273709605243,
+    "source": "051 - Agentic Context Engineering Evolving Contexts for Self-Improving Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Thus, instead of compressing away domain-specific heuristics and tactics, contexts should preserve them, allowing the model to decide what matters during inference time.   To address these limitations, we introduce ACE (Agentic Context Engineering), a framework for comprehensive context adaptation in both offline settings (e.g., system prompt optimization) and online settings (e.g., test-time memory adaptation). Rather than compressing contexts into distilled summaries, ACE treats them as evolving playbooks that accumulate and organize strategies over time. By design, ACE incorporates a modular workflow of generation, reflection, and curation, while adding structured, incremental updates guided by a grow-and-refine principle. This design preserves detailed, domain-specific knowledge, prevents context collapse, and yields contexts that remain comprehensive and scalable throughout adaptation.   We evaluate ACE on two categories of LLM applications that most benefit from comprehensive, evolving contexts: (1) agents (Trivedi et al., 2024), which require multi-turn reasoning, tool use, and environment interaction, where accumulated strategies can be reused across episodes; and (2) domain-specific benchmarks, which demand specialized tactics and knowledge, like financial anal- ysis (Loukas et al., 2022; Wang et al., 2025a). Our key findings are:   • ACE consistently outperforms strong baselines, yielding average gains of 10.6% on agents and 8.6% on domain-specific benchmarks, across both offline and online adaptation settings.",
+    "score": 0.5737851255893346,
+    "source": "051 - Agentic Context Engineering Evolving Contexts for Self-Improving Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "As the context grows large, the model tends to compress it into much shorter, less informative summaries, causing a dramatic loss of information. For instance, at step 60 the context contained 18,282 tokens and achieved an accuracy of 66.7, but at the very next step it collapsed to just 122 tokens, with accuracy dropping to 57.1—worse than the baseline accuracy of 63.7 without adaptation. While we highlight this through Dynamic Cheat-   3Published as a conference paper at ICLR 2026   sheet (Suzgun et al., 2025), the issue is not specific to that method; rather, it reflects a fundamental risk of end-to-end context rewriting with LLMs, where accumulated knowledge can be abruptly erased instead of preserved.   Figure 3: Example ACE-Generated Context on the AppWorld Benchmark (partially shown). ACE-generated contexts contain detailed, domain-specific insights along with tools and code that are readily usable, serving as a comprehensive playbook for LLM applications.   3 AGENTIC CONTEXT ENGINEERING (ACE)   We present ACE (Agentic Context Engineering), a framework for scalable and efficient context adaptation in both offline (e.g., system prompt optimization) and online (e.g., test-time memory adaptation) scenarios.",
+    "score": 0.5571562859550802,
+    "source": "051 - Agentic Context Engineering Evolving Contexts for Self-Improving Language Models.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "62881dd1-8a2a-4e7a-836e-5d01c21a6b1a",
+  "X-Amzn-Trace-Id": "Root=1-6b0804ff-15b0498e243ad1934eed12bb;Parent=50cef5a0f9af2c0e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.375
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
+ },
+ "from_cache": false
+}

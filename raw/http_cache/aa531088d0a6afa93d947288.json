@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.348,
+ "json": {
+  "query": "According to the PARNESS paper, how does PARNESS represent a scientific workflow and what are the elements of the contract it uses?",
+  "contexts": [
+   {
+    "text": "PARNESS attacks all five (and the two corollaries) by inverting the relationship between the framework and the agents. The framework is a thin DAG runtime: ∼600 lines of GraphRunner that does topological scheduling, input/output mapping, and process-pool execution. Every domain decision — whether an idea continues to the next round, whether to fan out to parallel reviewers, when to terminate iterative refinement — is encoded by a module returning four reserved fields (§6.2). On top of this kernel we ship 130+ registered modules organised into 50 YAML pipelines covering the full life-cycle: research/crawler, full-PDF parser, code-link extractor, ideation (six cognitive roles + twelve specialty agents), experiment runner/verifier CLI, writing/review, and a Knowledge-Graph subsystem (17 adapters, 4 pipelines, 52 passing tests) that indexes papers, ideas, experiments and code repositories as typed graph nodes. The framework deliberately exposes its modules as drop-in slots that any GUI/TUI coding agent (Claude Code, Cursor, Copilot, OpenCode, Kilo Code) can rewrite, replace, or compose into a custom pipeline.   Contributions. We make four contributions, mapped one-to-one with the limitations above and elaborated as the four pillars of §5:   3parness: A Paper Harness for Automated Research A Preprint   1.",
+    "score": 0.598299840397183,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 3
+   },
+   {
+    "text": "PARNESS asks: how do we build the research process upstream of those inputs — including the inputs themselves — as a composable, accumulating, multi-discipline kernel? The answer is a four-field contract, a YAML DAG, and a typed knowledge substrate. We expect future systems to combine the two: PaperOrchestra as a single PARNESS module called when the upstream pipeline has populated (I, E, T,G, F ).   18parness: A Paper Harness for Automated Research A Preprint   10 Conclusion   We presented PARNESS, an open-source declarative DAG framework for autonomous research that occupies a previously-uncovered point in the design space: full life-cycle coverage plus pipeline-as-data plus agent-driven routing plus cross-run knowledge persistence plus multi-discipline workflow shape. The framework is a thin kernel; all interesting decisions live in modules, and modules communicate with the runner through a four-field contract. We released the reference implementation (130+ modules, 50 pipelines, broad development-test coverage, full KG harness) and showed that it runs end-to-end on real document collections within a single-node hour-scale budget. The natural next step is a quantitative head-to-head benchmark against PaperOrchestra (writing only), AI-Scientist v2 and InternAgent (full pipeline), with and without the cross-run KG populated (§9). The arXiv v1 of this paper is intended as a stable reference for that comparison.",
+    "score": 0.581163110054498,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 18
+   },
+   {
+    "text": "None target the research life-cycle directly. PARNESS can wrap any of them as a single module under a four-field contract; we use AutoGen and DSPy idioms internally for some adapters but neither is a dependency.   Where PARNESS sits. PARNESS is closest in spirit to AI-Scientist (full life-cycle, open-source) and Paper- Orchestra (declarative skill-style composition) but differs structurally on four axes simultaneously: (i) the pipeline shape is data, not code or a fixed recipe; (ii) routing decisions live in agents, not the runner; (iii) knowledge persists across runs in SQLite and Neo4j, not just per-run files; (iv) the runtime supports multi-discipline workflow shapes (lab-loop, survey, simulation, ablation, meta-analysis) by composition, not by forking. To our knowledge no prior open-source system simultaneously satisfies all four.   3 Motivation: Why a Harness, Not a Pipeline   This section grounds the abstract limitations (L1)–(L5) of §1 in five concrete observations from running prior systems and our own predecessors at scale. Each observation is mirrored by a design move in PARNESS, summarised at the end of each subsection and elaborated in the Method section (§5).   3.1 Research workflows are dynamic and discipline-specific   A research process is much more than “ideate, experiment, write”.",
+    "score": 0.5807105040167918,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 5
+   },
+   {
+    "text": "We argue that this rigidity has five structural roots: (1) research workflows are dynamic and discipline-specific (lab experiments, surveys, simulations, theory, ablations all loop differently and discuss differently); (2) ideation is bounded by LLM context [14] and cross-domain ideation depends on accumulated knowledge a single context cannot hold; (3) relying on paper summaries alone misses what is in the body, yet legal full-text access is uneven — so the cumulative corpus, not the instant corpus, must do the work; (4) a paper’s open-source repository (typically on GitHub) is often the only complete specification of its experimental scheme, and the paper↔code correspondence is a first-class research artefact that current systems neglect; (5) no existing tool persists cross-run knowledge in a form that can be retrieved into a finite LLM context. We present PARNESS3, an open-source framework built on four design moves that map directly onto these five roots. (i) A thin DAG kernel with a four-field Agent contract decouples scheduling from domain semantics, so any discipline’s loop and discussion mode is expressible as user-editable YAML rather than orchestrator code. (ii) A full-text PDF-parsing and literature-library subsystem indexes paper bodies, figures and tables as typed objects, with graceful abstract-only fall-back so the system’s reading capability grows monotonically with use.",
+    "score": 0.5684161724499001,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 1
+   },
+   {
+    "text": "Source code and pipeline configurations: https://github.com/gtrhythm/PARNESS.   ar X   iv :2   60 5.   05 25   8v 1   [ cs   .S E   ] 6   M ay   2 02   6         https://github.com/gtrhythm/PARNESS        https://arxiv.org/abs/2605.05258v1parness: A Paper Harness for Automated Research A Preprint   Figure 1: PARNESS as a paper harness. A single thin DAG kernel (centre) drives many different research scenarios as parallel lanes: wet-lab biology, social-science surveys, ML systems benchmarks, and theoretical/simulation studies. Each lane is a chain of pluggable agent modules that the user can swap, extend, or re-wire through ordinary YAML and through any GUI/TUI coding agent. A typed knowledge graph below the kernel feeds every lane. The contribution of this work is the kernel inside the machine: a thin runtime plus a four-field contract that lets disciplines, scenarios and discussion modes be expressed as data rather than orchestrator code, and a knowledge layer that lets every run accumulate into a long-lived corpus.   1 Introduction   The past two years have produced a wave of autonomous research systems that aspire to take a research question — or even a research area — and return reviewed scientific output without human intervention.",
+    "score": 0.5649240078062691,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0e806c69-c43c-4694-949b-953277e9786a",
+  "X-Amzn-Trace-Id": "Root=1-6b08044d-139ea49853b80c1161af67a5;Parent=2bc64197855cf9e4;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.348
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:01+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "According to the PARNESS paper, how does PARNESS represent a scientific workflow and what are the elements of the contract it uses?"
+ },
+ "from_cache": false
+}

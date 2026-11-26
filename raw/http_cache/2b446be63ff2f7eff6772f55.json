@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.242,
+ "json": {
+  "query": "EduAgentQG: A Multi-Agent Workflow Framework for Personalized Question Generation",
+  "contexts": [
+   {
+    "text": "Currently, because plans are likely to change from the agent’s initial version, we only gener- ate the high-level plan in advance and then recursively decompose the near future into the moment-to-moment action plan just in time. Another optimization might be to batch dialogue generation as a joint prompt rather than iterating back and forth between the agents, and re-planning could be architected to only invalidate and update parts of plans that strictly require adjustment. Our cur- rent architecture runs sequentially in roughly real-time game time (where one second real time is one minute game time), but it may be parallelized such that each agent runs in parallel.   B AGENT INTERVIEW QUESTIONS To evaluate generative agents, we conducted individual interviews by asking 25 questions that explore their abilities in five key areas: 1) self-knowledge, 2) memory, 3) planning, 4) reactions, and 5) re- flections. Below, we have listed the interview questions utilized in our evaluation study and included a sample of responses from one of our simulated agents, Klaus Mueller.   B.1 Self-Knowledge The questions on agents’ self-knowledge probe the agents’ ability to retrieve relevant information about themselves and demonstrate coherence and consistency in their character.   • Give an introduction of yourself. Hello, my name is Klaus Mueller. I’m 20 years old and a student at Oak Hill College, studying sociology.",
+    "score": 0.49397282592629976,
+    "source": "068 - Generative Agents Interactive Simulacra of Human Behavior.pdf",
+    "page": 21
+   },
+   {
+    "text": "Research has shown that organizing multiple agents into a Multi-agent System (MAS) can effectively raise the ceiling on problem-solving capabilities through well-designed interaction and collabo- ration mechanisms [33]. Early representative works, such as AutoGen [36], LLM-Debate [8], and AgentVerse [5], ex- plored different collaborative models like role-playing and multi-round debates, validating the immense potential of multi-agent collaboration. However, these systems typi- cally require tedious manual configuration by domain ex- perts, which limits their generality and scalability, creating a strong impetus for automation.   2.2. Automation of Agentic Workflows To reduce manual effort and enhance system adaptability, automating the construction of agentic workflows has be- come a research hotspot. Research in this area can be broadly categorized into: (I) Prompt Optimization, where methods like PromptBreeder [9] and DsPy [14] use algo- rithms to automatically generate or refine prompts; (II) Inter-Agent Communication Optimization, where frame- works like GPTSwarm [44] and DyLAN [17] focus on opti- mizing the interaction structure; and (III) Agent Role/Pro- file Evolution, where approaches like EvoAgent [38] and AutoAgents [3] use evolutionary algorithms to generate agent profiles.   More recently, research has moved towards more comprehensive, end-to-end automation.",
+    "score": 0.4736204404915449,
+    "source": "040 - RAAS LLM Agentic System Architecture Search with GRPO.pdf",
+    "page": 3
+   },
+   {
+    "text": "We in- cludedMultiAgent as one of the conditions to observe the strengths and limitations of existing multi-agent frameworks in supporting decision-making8. Among existing multi-agent frameworks avail- able for use, we selected the Multiagent Wizard for its low learning curve being a ChatGPT interface, and for its characteristic of au- tomatically creating the agents to support the process—which is a common design for many existing multi-agent frameworks. In MultiAgent, the participants were restricted from accessing other websites. We did not include a separate single-agent-only condition because it would add a fourth within-subject decision task and increase participant fatigue.   For both conditions, we additionally provided a preference space via Google Docs for the participants to save their preferred criteria, options, and thoughts along the process. We asked them to keep the space open on the side during the sessions to match the preference space in ChoiceMates.   6.1.3 Procedure. We selected three decision domains for the study: purchasing climbing shoes, a fabric shaver, or a robot vacuum ma- chine, where each participant experienced the same three domains. The domains were equally assigned to the conditions. We employed counterbalancing to ensure that an equal number of participants were assigned to each condition-domain pair. The study lasted for 2 hours, and consisted of the following parts:   Introduction (10 minutes). The participants were first provided a brief introduction to the study and the scenario assigned.",
+    "score": 0.4695983948377926,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 12
+   },
+   {
+    "text": "Agent Customization:   Program Execution   Plot a chart of META and TESLA stock price change YTD.   Execute the following code…   send   receive   receive   Conversation-Centric Computation   generate_reply Error: package yfinance is not installed   send generate_reply   Sorry! Please first pip install yfinance and then execute   Conversation-Driven Control Flow generate_reply   The Resulting Automated Agent Chat: …   1.2 Register a Custom Reply Func: 1.1 Define Agents:   Unified Conversation Interfaces: • send • receive • generate_reply   Figure 2: Illustration of how to use AutoGen to program a multi-agent conversation. The top sub- figure illustrates the built-in agents provided by AutoGen, which have unified conversation interfaces and can be customized. The middle sub-figure shows an example of using AutoGen to develop a two-agent system with a custom reply function. The bottom sub-figure illustrates the resulting automated agent chat from the two-agent system during program execution.   By allowing custom agents that can converse with each other, conversable agents in AutoGen serve as a useful building block.",
+    "score": 0.4692390191735805,
+    "source": "064 - AutoGen Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework.pdf",
+    "page": 4
+   },
+   {
+    "text": "AutoGen coordinates agents through programmable conversations (Wu et al., 2023); MetaGPT and ChatDev organize specialized roles around structured software-development workflows (Hong et al., 2023; Qian et al., 2023); and AgentVerse studies collabo- rative groups and emergent behavior (Chen et al., 2023). Multi-agent debate instead uses independent solutions and critique to improve reasoning or factuality (Du et al., 2023; Liang et al., 2023). More recent scientific systems demonstrate dynamic task allocation and asynchronous execution for hypothesis generation (Gottweis et al., 2025). These results also caution that additional agents are not uniformly beneficial: collaboration is most useful when work can be decomposed and information can be integrated reliably. Apodex’s Agent Team is designed around staged result return, shared task state, subagent execution control, and user intervention rather than a fixed dialogue graph or majority-vote ensemble.   Verification and process supervision. Self-Refine iterates generation and self-feedback (Madaan et al., 2023), and Reflexion stores verbal feedback from prior attempts to guide later decisions (Shinn et al., 2023). Chain-of-Verification generates targeted verification questions before revising an answer (Dhuliawala et al., 2023), while process-supervision work trains reward models to assess intermediate reasoning steps (Lightman et al., 2023).",
+    "score": 0.4639608779021241,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 29
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b5a64bcb-8195-41dc-8f6d-e204865ff315",
+  "X-Amzn-Trace-Id": "Root=1-6b08050c-6b85bb22463406f257c6fef4;Parent=0c0e4d8b64c23567;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.242
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:11+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "EduAgentQG: A Multi-Agent Workflow Framework for Personalized Question Generation"
+ },
+ "from_cache": false
+}

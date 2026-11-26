@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.316,
+ "json": {
+  "query": "Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation",
+  "contexts": [
+   {
+    "text": "Holistic Agent Leaderboard   HOLISTIC AGENT LEADERBOARD: THE MISSING INFRASTRUCTURE FOR AI AGENT EVALUATION   Sayash Kapoor*# Benedikt Stroebl* Peter Kirgis Nitya Nadgir Zachary S Siegel Boyi Wei Tianci Xue Ziru Chen Felix Chen Saiteja Utpala Franck Ndzomga Dheeraj Oruganty Sophie Luskin Kangheng Liu Botao Yu Amit Arora Dongyoon Hahm Harsh Trivedi Huan Sun Juyong Lee Tengjun Jin Yifan Mai Yifei Zhou Yuxuan Zhu Rishi Bommasani Daniel Kang Dawn Song Peter Henderson Yu Su Percy Liang Arvind Narayanan#   ABSTRACT   AI agents have been developed for complex real-world tasks from coding to cus- tomer service. But AI agent evaluations suffer from many challenges that under- mine our understanding of how well agents really work (Figure 1). We introduce the Holistic Agent Leaderboard (HAL) to address these challenges. We make three main contributions. First, we provide a standardized evaluation harness that orchestrates parallel evaluations across hundreds of VMs, reducing evalua- tion time from weeks to hours while eliminating common implementation bugs. Second, we conduct three-dimensional analysis spanning models, scaffolds, and benchmarks.",
+    "score": 0.8815720512521642,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 1
+   },
+   {
+    "text": "* Equal contribution. #Contact: {sayashk,arvindn}@princeton.edu. Author affiliations and a link to our repository are available on hal.cs.princeton.edu   1   ar X   iv :2   51 0.   11 97   7v 1   [ cs   .A I]   1 3   O ct   2 02   5         https://arxiv.org/abs/2510.11977v1Holistic Agent Leaderboard   1 INTRODUCTION   AI agents are being developed across domains from software engineering (Anthropic, 2025) to web task automation (OpenAI, 2025a). AI agent benchmarks have also proliferated (Zhou et al., 2024; Xie et al., 2024; Abhyankar et al., 2025; Deng et al., 2023; Zhang et al., 2024; Huang et al., 2024; Zhu et al., 2025b). Yet there are many challenges for proper evaluation (Figure 1). First, evaluation infrastructure is non-standardized, prohibitively slow, and error-prone. A single benchmark could take weeks to run serially, and as a result, leaderboards are often not updated with the latest models (Challenges #1-#3.",
+    "score": 0.8042661173355803,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 1
+   },
+   {
+    "text": "HAL. ✓rep- resents model-benchmark pairs evaluated with some scaffold; ∗represents model-benchmark pairs evaluated solely as language models without agent scaffolds (i.e., without any access to tools); ✗rep- resents model-benchmark pairs never evaluated in prior work. Even when prior work has evaluated some of these models, it is often not an apples-to-apples comparison. We found that only 2 of these benchmarks were ever evaluated with the same agent scaffold for 4 or more models from this list, making cross-model comparison hard (Section A9).   2Holistic Agent Leaderboard   els, and benchmarks, revealing previously hidden interactions between these factors (Challenge #6). While some prior work develops leaderboards for a single domain (e.g., web agent evalua- tion (Chezelles et al., 2025) or tool use (Bhavsar & Bronsdon, 2025)), we implement standardized evaluation for 9 challenging agent benchmarks across domains (Challenge #5), spanning web navigation (Online Mind2Web, AssistantBench, GAIA), coding (SWE-bench Verified Mini, US- ACO), scientific research (CORE-Bench Hard, ScienceAgentBench, Scicode), and customer ser- vice (TAU-bench Airline).",
+    "score": 0.636713787004314,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 2
+   },
+   {
+    "text": "A single benchmark could take weeks to run serially, and as a result, leaderboards are often not updated with the latest models (Challenges #1-#3. Second, agents vary widely in costs, but evaluations rarely report these costs. Scaffolds dramatically impact both accuracy and cost, yet comparisons across scaffolds are rare (Challenges #4-#6). Third, agents can exploit shortcuts that inflate benchmark scores and take actions that would be catastrophic in deployment. Yet, current evaluations rarely detect or penalize such behavior (Challenges #7-#8).   To address these shortcomings, we develop HAL, the Holistic Agent Leaderboard. It is a unified evaluation framework for reproducible, cost-controlled agent benchmarking with automated agent log analysis. Existing evaluation frameworks like HELM (Liang et al., 2023) and LM Evaluation Harness (Biderman et al., 2024) have standardized language model benchmarking, but agent evalu- ation poses fundamentally different challenges. While LLMs respond to prompts with text, agents navigate complex environments over extended time horizons, using tools from browsers to bash shells, often consuming hundreds of thousands of tokens per rollout. They can fail catastrophically or get trapped in loops in ways that simple text generation cannot. These unique characteristics demand purpose-built infrastructure that tracks not just what agents output, but how they achieve it, what they cost, and where they break. HAL provides this infrastructure.",
+    "score": 0.624574689173204,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 2
+   },
+   {
+    "text": "These unique characteristics demand purpose-built infrastructure that tracks not just what agents output, but how they achieve it, what they cost, and where they break. HAL provides this infrastructure.   HAL contains three main components:   1. Unified evaluation harness with distributed orchestration: We develop an open source har- ness that standardizes agent evaluation across diverse benchmarks. The harness is framework- agnostic, requiring light-weight modifications to integrate scaffolds, while automatically instru- menting cost tracking, logging all API calls, and capturing complete execution traces (Sec- tion 2). Through orchestration across hundreds of virtual machines, we reduce evaluation time from weeks to hours (Challenge #1). The system handles heterogeneous execution environ- ments, from web browsers to code repositories (Challenge #2), through a unified interface that researchers can invoke with a single command to update leaderboards (Challenge #3).   2. Multidimensional leaderboard with large-scale evaluation results: We conduct 21,730 agent rollouts spanning 9 benchmarks and 9 models, costing about $40,000 in compute (Sections 3 and 4.1). Our leaderboard tracks performance across three dimensions: agent scaffolds, mod-   Evaluations conducted in prior work Evaluations conducted in the Holistic Agent Leaderboard   Benchmark Clau de Opus 4.1   Clau de Opus 4.1   High   Clau de-3   .7 Son   net   Clau",
+    "score": 0.6218400981588107,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ab4d9d87-722c-41b6-8510-02cee989f5d3",
+  "X-Amzn-Trace-Id": "Root=1-6b080510-36fca4d8709292662e7b1d81;Parent=7306168924e1474f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.316
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:16+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.998,
+ "json": {
+  "id": "chatcmpl-f05c029b-4f4e-427c-abd3-d8580688b1ca",
+  "object": "chat.completion",
+  "created": 1795688015,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The Voyager paper proposes VOYAGER, an LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. It consists of three key components: 1) an automatic curriculum that maximizes exploration, 2) an ever-growing skill library of executable code for storing and retrieving complex behaviors, and 3) a new iterative prompting mechanism that incorporates environment feedback, execution errors, and self-verification for program improvement."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1623,
+   "completion_tokens": 100,
+   "total_tokens": 1723
+  },
+  "contexts": [
+   {
+    "text": ".   [90] Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, and John Schulman. Training verifiers to solve math word problems. arXiv preprint arXiv: Arxiv- 2110.14168, 2021.   [91] Ansong Ni, Srini Iyer, Dragomir Radev, Ves Stoyanov, Wen tau Yih, Sida I. Wang, and Xi Victoria Lin. Lever: Learning to verify language-to-code generation with execution. arXiv preprint arXiv: Arxiv-2302.08468, 2023.   [92] Marta Skreta, Naruki Yoshikawa, Sebastian Arellano-Rubach, Zhi Ji, Lasse Bjørn Kristensen, Kourosh Darvish, Alán Aspuru-Guzik, Florian Shkurti, and Animesh Garg. Errors are useful prompts: Instruction guided task programming with verifier-assisted iterative prompting. arXiv preprint arXiv: Arxiv-2303.14100, 2023.   18A Method   A.1 VOYAGER Algorithm   Pseudocode 1: VOYAGER algorithm. def voyager(",
+    "score": 0.4884538644276589,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 18
+   },
+   {
+    "text": "VOYAGER exhibits superior performance in discovering novel items, unlocking the Minecraft tech tree, traversing diverse terrains, and applying its learned skill library to unseen tasks in a newly instantiated world. VOYAGER serves as a starting point to develop powerful generalist agents without tuning the model parameters.   7 Broader Impacts   Our research is conducted within Minecraft, a safe and harmless 3D video game environment. While VOYAGER is designed to be generally applicable to other domains, such as robotics, its application to physical robots would require additional attention and the implementation of safety constraints by humans to ensure responsible and secure deployment.   8 Acknowledgements   We are extremely grateful to Ziming Zhu, Kaiyu Yang, Rafał Kocielnik, Colin White, Or Sharir, Sahin Lale, De-An Huang, Jean Kossaifi, Yuncong Yang, Charles Zhang, Minchao Huang, and many other colleagues and friends for their helpful feedback and insightful discussions. This work is done during Guanzhi Wang’s internship at NVIDIA. Guanzhi Wang is supported by the Kortschak fellowship in Computing and Mathematical Sciences at Caltech.   References [1] Eric Kolve, Roozbeh Mottaghi, Winson Han, Eli VanderBilt, Luca Weihs, Alvaro Herrasti,   Daniel Gordon, Yuke Zhu, Abhinav Gupta, and Ali Farhadi.",
+    "score": 0.4879876366810264,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 11
+   },
+   {
+    "text": "It can construct an ever-growing skill library of action programs that are reusable, interpretable, and generalizable to novel tasks. We evaluate VOYAGER systematically against other LLM-based agent techniques (e.g., ReAct [29], Reflexion [30], AutoGPT [28]) in MineDojo [23], an open-source Minecraft AI framework. VOYAGER outperforms prior SOTA by obtaining 3.3× more unique items, unlocking key tech tree milestones up to 15.3× faster, and traversing 2.3× longer distances. We further demonstrate that VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other methods struggle to generalize.   2 Method   VOYAGER consists of three novel components: (1) an automatic curriculum (Sec. 2.1) that suggests objectives for open-ended exploration, (2) a skill library (Sec. 2.2) for developing increasingly complex behaviors, and (3) an iterative prompting mechanism (Sec. 2.3) that generates executable code for embodied control. Full prompts are presented in Appendix, Sec. A.   2.1 Automatic Curriculum   Embodied agents encounter a variety of objectives with different complexity levels in open-ended environments.",
+    "score": 0.4876990210506408,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "VOYAGER: An Open-Ended Embodied Agent with Large Language Models   Guanzhi Wang1 2#, Yuqi Xie3, Yunfan Jiang4∗, Ajay Mandlekar1∗, Chaowei Xiao1 5, Yuke Zhu1 3, Linxi “Jim” Fan1†#, Anima Anandkumar1 2†   1NVIDIA, 2Caltech, 3UT Austin, 4Stanford, 5UW Madison ∗Equal contribution †Equal advising # Corresponding authors   https://voyager.minedojo.org   Abstract   We introduce VOYAGER, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. VOYAGER consists of three key components: 1) an automatic curriculum that maximizes exploration, 2) an ever-growing skill library of executable code for storing and retrieving complex behaviors, and 3) a new iterative prompting mechanism that incorporates environ- ment feedback, execution errors, and self-verification for program improvement. VOYAGER interacts with GPT-4 via blackbox queries, which bypasses the need for model parameter fine-tuning. The skills developed by VOYAGER are temporally extended, interpretable, and compositional, which compounds the agent’s abilities rapidly and alleviates catastrophic forgetting.",
+    "score": 0.47444548536870473,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "X-axis denotes the number of prompting iterations.   1   ar X   iv :2   30 5.   16 29   1v 2   [ cs   .A I]   1 9   O ct   2 02   3         https://voyager.minedojo.orgMine Wood Log   Make Crafting Table   Craft Stone Sword   Craft Shield   Make Furnace   Cook Steak   Combat Zombie Mine Wood Log   Make Crafting Table   Combat Zombie   Mine Diamond   New Task   Code as Actions   Refine ProgramEnv Feedback Execution Errors   Update Exploration Progress   Skill Retrieval   Add New Skill   Automatic Curriculum Iterative Prompting Mechanism Skill Library   Environment Self-Verification   Figure 2: VOYAGER consists of three key components: an automatic curriculum for open-ended exploration, a skill library for increasingly complex behaviors, and an iterative prompting mechanism that uses code as action space.   1 Introduction   Building generally capable embodied agents that continuously explore, plan, and develop new skills in open-ended worlds is a grand challenge for the AI community [1–5]. Classical approaches employ reinforcement learning (RL) [6, 7] and imitation learning [8–10] that operate on primitive actions, which could be challenging for systematic exploration [11–15], interpretability [16–18], and generalization [19–21].",
+    "score": 0.4732392395662062,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+   "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f05c029b-4f4e-427c-abd3-d8580688b1ca",
+  "X-Amzn-Trace-Id": "Root=1-6b08064e-2f8b39491b35bbf8257a93f0;Parent=234a4e219f11dfd8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.998
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:34+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "mt",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What does the Voyager paper propose?"
+   }
+  ]
+ },
+ "from_cache": false
+}

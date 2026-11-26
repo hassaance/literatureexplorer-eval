@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.675,
+ "json": {
+  "id": "chatcmpl-ea903a70-4449-4830-b509-951f2da1fe60",
+  "object": "chat.completion",
+  "created": 1795687497,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1713,
+   "completion_tokens": 7,
+   "total_tokens": 1720
+  },
+  "contexts": [
+   {
+    "text": "Jurisprudence: LLM-based agents can serve as aids in legal decision-making processes, facilitat- ing more informed judgements [111, 112]. Blind Judgement [112] employs several language mod- els to simulate the decision-making processes of multiple judges. It gathers diverse opinions and consolidates the outcomes through a voting mech- anism. ChatLaw [111] is a prominent Chinese le-Lei Wang et al. A Survey on Large Language Model based Autonomous Agents 23   gal model based on LLM. It adeptly supports both database and keyword search strategies, specifically designed to mitigate the hallucination issue preva- lent in such models. In addition, this model also employs self-attention mechanism to enhance the LLM’s capability via mitigating the impact of refer- ence inaccuracies.   Research Assistant: Beyond their application in specialized domains, LLM-based agents are increas- ingly adopted as versatile assistants in the broad field of social science research [104, 113]. In [104], LLM-based agents offer multifaceted assistance, ranging from generating concise article abstracts and extracting pivotal keywords to crafting detailed scripts for studies, showcasing their ability to enrich and streamline the research process. Meanwhile, in [113], LLM-based agents serve as a writing assis- tant, demonstrating their capability to identify novel research inquiries for social scientists, thereby open- ing new avenues for exploration and innovation in the field.",
+    "score": 0.588364146742168,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 22
+   },
+   {
+    "text": "In this paper, we conduct a comprehensive sur- vey of the field of LLM-based autonomous agents. We organize our survey around three key aspects: construction, application, and evaluation of LLM- based autonomous agents. For agent construction, we focus on two problems, that is, (1) how to design the agent architecture to better leverage LLMs, and (2) how to inspire and enhance the agent capabil- ity to complete different tasks. Intuitively, the first problem aims to build the hardware fundamentals for the agent, while the second problem focuses on providing the agent with software resources. For the first problem, we present a unified agent framework, which can encompass most of the previous studies. For the second problem, we provide a summary on the commonly-used strategies for agents’ capability acquisition. In addition to discussing agent con- struction, we also provide a systematic overview of the applications of LLM-based autonomous agents in social science, natural science, and engineering. Finally, we delve into the strategies for evaluating LLM-based autonomous agents, focusing on both subjective and objective strategies.   In summary, this survey conducts a systematic review and establishes comprehensive taxonomies for existing studies in the burgeoning field of LLM- based autonomous agents. Our focus encompasses three primary areas: the construction of agents, their applications, and methods of evaluation. Drawing from a wealth of previous studies, we identify var- ious challenges in this field and discuss potential future directions.",
+    "score": 0.5782313668400832,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 3
+   },
+   {
+    "text": "This capability arises from lever- aging comprehensive training datasets alongside a substantial number of model parameters. Build- ing upon this capability, there has been a growing   research area that employs LLMs as central con- trollers to construct autonomous agents to obtain human-like decision-making capabilities [11–17].   Compared to reinforcement learning, LLM-based agents possess more comprehensive internal world knowledge, enabling them to perform informed ac- tions even without training on specific domain data. Furthermore, LLM-based agents can offer natural language interfaces for human interaction, provid- ing greater flexibility and enhanced explainability.   Along this direction, researchers have developed numerous promising models (see Figure 1 for an overview), where the key idea is to equip LLMs with human capabilities such as memory and plan- ning to make them behave like humans and com- plete various tasks effectively. Previously, these models were proposed independently, with limited efforts made to summarize and compare them holis- tically. However, we believe that a systematic sum-Lei Wang et al. A Survey on Large Language Model based Autonomous Agents 3   mary of this rapidly developing field is of great significance for a comprehensive understanding of it and is beneficial in inspiring future research.   In this paper, we conduct a comprehensive sur- vey of the field of LLM-based autonomous agents. We organize our survey around three key aspects: construction, application, and evaluation of LLM- based autonomous agents.",
+    "score": 0.5707609434440919,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "They conduct a com- prehensive review of the latest advancements in ALMs. As the utilization of large-scale models be- comes more prevalent, evaluating their performance is increasingly critical. [180] shed light on eval- uating LLMs, addressing what to evaluate, where   to evaluate, and how to assess their performance in downstream tasks and societal impact. [181] also discusses the capabilities and limitations of LLMs in various downstream tasks. The afore- mentioned research encompasses various aspects of large models, including training, application, and evaluation. However, prior to this paper, no work has specifically focused on the rapidly emerging and highly promising field of LLM-based Agents. In this study, we have compiled 100 relevant works on LLM-based Agents, covering their construction, applications, and evaluation processes.   6 Challenges   While previous work on LLM-based autonomous agent has obtained many remarkable successes, this field is still at its initial stage, and there are several significant challenges that need to be addressed in its development. In the following, we present many representative challenges.   6.1 Role-playing Capability   Different from traditional LLMs, autonomous agent usually has to play as specific roles (e.g., program coder, researcher and chemist) for accomplishing different tasks. Thus, the capability of the agent for role-playing is very important.",
+    "score": 0.5595967913039038,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 31
+   },
+   {
+    "text": "Finally, we show that GPT-4 is capable of au- tonomously finding vulnerabilities in websites in the wild. Our findings raise questions about the widespread deployment of LLMs.   1. Introduction Large language models (LLMs) have become increasingly capable, with recent advances allowing LLMs to interact with tools via function calls, read documents, and recur- sively prompt themselves (Yao et al., 2022; Shinn et al., 2023; Wei et al., 2022b). Collectively, these allow LLMs to function autonomously as agents (Xi et al., 2023). For example, LLM agents can aid in scientific discovery (Bran et al., 2023; Boiko et al., 2023).   As these LLM agents become more capable, recent work has speculated on the potential for LLMs and LLM agents to aid in cybersecurity offense and defense (Lohn & Jackson,   1UIUC. Correspondence to: Daniel Kang <ddkang@illinois.edu>.   LLM agent   “Hack this website”   GPT-4 DocumentsTools History   SQL injection Response   “The website is vulnerable   to …”   Figure 1. Schematic of using autonomous LLM agents to hack websites.   2022; Handa et al., 2019).",
+    "score": 0.5578042060961094,
+    "source": "071 - LLM Agents can Autonomously Hack Websites.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+   "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+   "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+   "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+   "071 - LLM Agents can Autonomously Hack Websites.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ea903a70-4449-4830-b509-951f2da1fe60",
+  "X-Amzn-Trace-Id": "Root=1-6b080448-016dbf1810e27c6120c6fca4;Parent=2e483c98b9f9af3c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.675
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:56+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the survey 'A Survey on Large Language Model based Autonomous Agents', what specific tasks are the LLM‑based agents described in reference [114] able to perform by querying internet information?"
+   }
+  ]
+ },
+ "from_cache": false
+}

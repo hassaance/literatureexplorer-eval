@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.367,
+ "json": {
+  "query": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+  "contexts": [
+   {
+    "text": "For evaluation, many environments focus on comparing the textual surface form of the predicted   ∗Lead contributors. †Equal contribution.   1   ar X   iv :2   30 7.   13 85   4v 4   [ cs   .A I]   1 6   A pr   2 02   4         https://webarena.dev/Published as a conference paper at ICLR 2024   Tell me how much I spent on food purchase in March 2023   15   WebArena Environment   ”   ”   “   “ Create a ‘NolanFans' repo, listing Nolan's Oscar-winning films in a README file   Action   Feedback   AI Agent   Tool Sites Knowledge resources   Web applications from popular domains   check_repo check_readme check_answer   Functional Success   Functional Failure   Figure 1: WebArena is a standalone, self-hostable web environment for building autonomous agents. WebArena creates websites from four popular categories with functionality and data mimicking their real-world equivalents. To emulate human problem-solving, WebArena also embeds tools and knowledge resources as independent websites. WebArena introduces a benchmark on interpreting high-level realistic natural language command to concrete web-based interactions. We provide validators to programmatically validate the functional correctness of each task.",
+    "score": 0.7631554198518701,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Published as a conference paper at ICLR 2024   WEBARENA: A REALISTIC WEB ENVIRONMENT FOR BUILDING AUTONOMOUS AGENTS   Shuyan Zhou∗ Frank F. Xu∗   Hao Zhu † Xuhui Zhou† Robert Lo† Abishek Sridhar† Xianyi Cheng Tianyue Ou Yonatan Bisk Daniel Fried Uri Alon Graham Neubig   Carnegie Mellon University {shuyanzh, fangzhex, gneubig}@cs.cmu.edu   ABSTRACT   With advances in generative AI, there is now potential for autonomous agents to manage daily tasks via natural language commands. However, current agents are primarily created and tested in simplified synthetic environments, leading to a disconnect with real-world scenarios. In this paper, we build an environment for language-guided agents that is highly realistic and reproducible. Specifically, we focus on agents that perform tasks on the web, and create an environment with fully functional websites from four common domains: e-commerce, social forum discussions, collaborative software development, and content management. Our environment is enriched with tools (e.g., a map) and external knowledge bases (e.g., user manuals) to encourage human-like task-solving. Building upon our environment, we release a set of benchmark tasks focusing on evaluating the functional correctness of task completions.",
+    "score": 0.7366986375795426,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "We provide validators to programmatically validate the functional correctness of each task.   action sequences with reference action sequences, disregarding the functional correctness of the executions and possible alternative solutions (Puig et al., 2018; Jernite et al., 2019; Xu et al., 2021; Li et al., 2020; Deng et al., 2023). These limitations often result in a discrepancy between simulated environments and the real world, and can potentially impact the generalizability of AI agents to successfully understand, adapt, and operate within complex real-world situations.   We introduce WebArena, a realistic and reproducible web environment designed to facilitate the development of autonomous agents capable of executing tasks (§2). An overview of WebArena is in Figure 1. Our environment comprises four fully operational, self-hosted web applications, each representing a distinct domain prevalent on the internet: online shopping, discussion forums, collaborative development, and business content management. Furthermore, WebArena incorporates several utility tools, such as map, calculator, and scratchpad, to best support possible human-like task executions. Lastly, WebArena is complemented by an extensive collection of documentation and knowledge bases that vary from general resources like English Wikipedia to more domain-specific references, such as manuals for using the integrated development tool (Fan et al., 2022). The content populating these websites is extracted from their real-world counterparts, preserving the authenticity of the content served on each platform.",
+    "score": 0.7007685130804192,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "[66] Shuyan Zhou, Frank F. Xu, Hao Zhu, Xuhui Zhou, Robert Lo, Abishek Sridhar, Xianyi Cheng, Tianyue Ou, Yonatan Bisk, Daniel Fried, Uri Alon, and Graham Neubig. WebArena: A Realistic Web Environment for Building Autonomous Agents, April 2024.",
+    "score": 0.6575878872122536,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 17
+   },
+   {
+    "text": "Existing works (Huang et al., 2022; Madaan et al., 2022; Li et al., 2023) observe LLMs could break a task into more manageable sub-tasks (Zhou et al., 2022b). This process can be further refined by representing task executions as programs, a technique that aids sub-task management and skill reuse (Zhou et al., 2022a; Liang et al., 2023; Wang et al., 2023; Gao et al., 2023). Meanwhile, search and backtracking methods introduce a more structured approach to planning while also allowing for decision reconsideration (Yao et al., 2023; Long, 2023). Existing works also incorporate failure recovery, self-correction (Shinn et al., 2023; Kim et al., 2023), observation summarization (Sridhar et al., 2023) to improve execution robustness. The complexity of WebArena presents a unique challenge and opportunity for further testing and improvement of these methods.   7 CONCLUSION   We present WebArena, a highly-realistic, standalone, and reproducible web environment designed for the development and testing of autonomous agents. WebArena includes fully functional web applications and organic data from popular domains. Additionally, we curate a comprehensive benchmark consisting of 812 examples that focus on mapping high-level natural language intents into concrete web interactions.",
+    "score": 0.6425642614395897,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e8238ecd-ca5b-428d-9c3f-e3636c6d18d3",
+  "X-Amzn-Trace-Id": "Root=1-6b080513-72efe81845c35a5e6096d8aa;Parent=6b2907a2aeb82891;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.367
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:19+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+ },
+ "from_cache": false
+}

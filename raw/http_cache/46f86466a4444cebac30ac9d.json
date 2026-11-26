@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.338,
+ "json": {
+  "query": "In the ShadAR paper, who determines whether a nudity‑related shader is generated, and what governance issue does this raise for AR systems that rely on third‑party generative models?",
+  "contexts": [
+   {
+    "text": "In our example above, the refusal to generate a shader for nudity was not decided by the wearer, the affected bystanders, or any official legal process, but by the content policy of the LLM provider. This reveals how much normative power is currently delegated to platform operators in systems that rely on third-party generative models. We there- fore argue that future systems cannot rely solely on provider-side moderation but require consent architectures that give control to both wearers and bystanders and make explicit which kinds of augmentations are permitted, by whom, and in which contexts.   8 Limitations and Future Work We recognize several limitations of ShadAR and outline potential future work.   Monoscopic View. For the current monoscopic prototype, the 2D canvas rendering cannot offer binocular depth perception. Addi- tionally, it introduces a slight depth distortion where users perceive the world as closer than it physically is, because we place the canvas closer to the user’s eyes to maintain a plausible field of view, due to the limited image scope captured by the Passthrough API. For future stereoscopic implementation, we consider two directions: Generating vertex shaders: this requires a 3D scene reconstruction (e.g., mesh) with labeled object segmentation, allowing visual effects to be applied in world space via vertex shaders on the scene ge- ometry.",
+    "score": 0.5451254722835518,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 10
+   },
+   {
+    "text": "To improve rendering efficiency when handling multiple objects in one frame, all individual masks of each detected object are packed into a single mask atlas – a 2D texture organized as a 4 × 4 grid, where each cell stores one mask. Shaders can access this atlas to retrieve relevant masks.   4https://docs.ultralytics.com/models/yolo26/         https://docs.ultralytics.com/models/yolo26/ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality UIST ’26, November 02–05, 2026, Detroit, MI, USA   Figure 3: The technical pipeline of ShadAR.   4.3 Shader Generator We use ChatGPT 5.2 with a designed system prompt as the Shader Generator. It receives the transcribed prompt and one frame of the user’s AR view, interprets the user’s intent, and then generates the shader script.   4.3.1 Shader Generation Scaffolding. Goal: We need to ensure the LLM can (1) translate the user’s intent into low-level shader code and (2) reduce syntax errors. Also, the resulting shader can (3) directly modify the AR passthrough and (4) can read and use YOLO results for selective rendering.",
+    "score": 0.49166466656644187,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 4
+   },
+   {
+    "text": "In Fig. 6, we illustrate different results produced by a style transfer prompt “See the world in the style of Van Gogh”, when using shader generation compared to our ongoing image generation pipeline.   Generalizability with more shading languages The current ShadAR prototype targets HLSL because Unity is the development engine. However, the pipeline can be extended to other languages (e.g., GLSL) by changing the LLM system prompt and shader com- piler accordingly. This makes the overall approach broadly general- izable.   9 Conclusion In this paper, we introduce ShadAR, an AR system that allows users to verbalize expected visual augmentations to alter their vision in real time.We elaborate on the interaction and technical architecture of ShadAR. To understand the motivation and usage patterns of ShadAR, we conducted a workshop with 21 HCI researchers. We identified four application scenarios (Design, Health, Productiv- ity, and Social Interaction) and two prompt-framing patterns: (1) procedural prompts, specifying what to transform and how; and (2) end-goal prompts, conveying an expected internal state. We find that end-goal prompts can lead to indeterministic results, and discuss design challenges.",
+    "score": 0.491622309291123,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 11
+   },
+   {
+    "text": "ShadAR runs on the Quest 3 with a connected desktop server and can render and graphically manipulate the AR passthrough feed via shader injection. When receiving user prompts, the system transcribes audio viaWhisper, uses an LLM (GPT-5.2) to interpret user intent and generate pixel shader code, and segments relevant objects in the user’s view using YOLOv26. It then compiles the shader code at runtime and applies it to the targeted region of the AR passthrough feed, modifying the user’s view as requested. Therefore, the system enables users to create visual augmentations without writing shader code themselves.   First, we conducted a technical evaluation of ShadAR using 30 prompts under low and high reasoning settings of GPT-5.2. The overall duration from speech completion to shader deployment was 32.67± 10.13 seconds with low reasoning and 42.66± 13.80 seconds with high reasoning. Once generated, the shaders ran at 44.1 FPS and 45.5 FPS, respectively. Of the 30 generated shaders, 26 were syntactically correct after a single prompt with low reasoning, and 28 with high reasoning.   Next, to understand the application and usage patterns of ShadAR, we conducted an ideation workshop with HCI researchers (N = 21) to identify potential application scenarios and to analyze how users phrase requests for on-demand visual augmentation.",
+    "score": 0.4834793233624391,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 2
+   },
+   {
+    "text": "For future stereoscopic implementation, we consider two directions: Generating vertex shaders: this requires a 3D scene reconstruction (e.g., mesh) with labeled object segmentation, allowing visual effects to be applied in world space via vertex shaders on the scene ge- ometry. Generating stereo images from mono: this approach takes image for one eye to generates the image for the other eye, with mono-to-scopic generation model such as Eye2Eye[7]. It can work for both the shader and image-generation pipeline.   Shader generation latency. Shader generation currently relies on a GPT-5.2 API call via a web request. The speed of shader gener- ation could be improved by running models locally, or by training smaller models specifically optimized for writing shader scripts, rather than relying on large general-purpose models.   Object Consistency. ShadAR currently treats object references as class labels rather than individual object instances. As a result, the system cannot track a specific object over time. For example, if a user says “highlight this person in red,” and another person later en- ters the view, the system cannot tell which person was originally re- ferred to, and highlights both. To address this, we are considering in- tegrating an instance-aware segmentation model (e.g., SAM 3 [21]) to assign persistent, instance-level IDs (e.g., helmet 1/2/3).",
+    "score": 0.4827561004398298,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "88bd4bc8-992c-45bd-a841-2ca2aea61033",
+  "X-Amzn-Trace-Id": "Root=1-6b08043a-72a8c7c22b8d9b7c29680a60;Parent=33e46f0939c46f58;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.338
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:41+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the ShadAR paper, who determines whether a nudity‑related shader is generated, and what governance issue does this raise for AR systems that rely on third‑party generative models?"
+ },
+ "from_cache": false
+}

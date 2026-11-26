@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.313,
+ "json": {
+  "query": "How many papers in the knowledge base are about retrieval-augmented generation, and what are they?",
+  "contexts": [
+   {
+    "text": "Available: https://​arxiv.​org/​pdf/​2312.​10997.​pdf.   28. Gao T, Min D, Guo X, Zhao H, Lin J. “A Systematic Survey of Retrieval-Augmented Generation,” arXiv preprint arXiv:​2405.​ 07437, 2024. [Online]. Available: https://​arxiv.​org/​abs/​2405.​ 07437   Publisher's Note  Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+    "score": 0.6717193038199705,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 15
+   },
+   {
+    "text": "Language models (mostly) know what they know. arXiv preprint arXiv:2207.05221, 2022.   Satyapriya Krishna, Kalpesh Krishna, Anhad Mohananey, Steven Schwarcz, Adam Stambler, Shyam Upadhyay, and Manaal Faruqui. Fact, fetch, and reason: A unified evaluation of retrieval-augmented generation. arXiv preprint arXiv:2409.12941, 2024.   Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, et al. Retrieval-augmented generation for knowledge- intensive nlp tasks. Advances in Neural Information Processing Systems, 33:9459–9474, 2020.   Moxin Li, Wenjie Wang, Fuli Feng, Fengbin Zhu, Qifan Wang, and Tat-Seng Chua. Think twice before assure: Confidence estimation for large language models through reflection on multiple answers. arXiv preprint arXiv:2403.09972, 2024.   Nelson F.",
+    "score": 0.6319636919930662,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 12
+   },
+   {
+    "text": "Rocktäschel, S. Riedel, and D. Kiela. Retrieval-Augmented Generation for Knowledge- Intensive NLP Tasks. In: Advances in Neural Information Processing Systems (NeurIPS). 2020.   6         https://www.suno.ai/        https://www.udio.com/        https://www.riffusion.com/        https://www.musicbusinessworldwide.com/major-record-companies-sue-ai-music-generators-suno-udio-for-mass-infringement-of-copyright/        https://www.musicbusinessworldwide.com/major-record-companies-sue-ai-music-generators-suno-udio-for-mass-infringement-of-copyright/        https://www.musicbusinessworldwide.com/major-record-companies-sue-ai-music-generators-suno-udio-for-mass-infringement-of-copyright/        https://elevenlabs.io/        https://www.kobaltmusic.com/        https://www.merlinnetwork.org/        https://www.beatoven.ai/        https://www.musical.ai/        https://splice.com/        https://moises.ai/[38] Y. Mao et al. Multi-RAG: A Multimodal Retrieval-Augmented Generation System for Adaptive Video Understanding. In: arXiv preprint arXiv:2505.23990 (2025).",
+    "score": 0.6256564236153712,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 6
+   },
+   {
+    "text": "Retrieval-augmented genera- tion for knowledge-intensive nlp tasks.",
+    "score": 0.6138574120928683,
+    "source": "142 - SkillsBench Benchmarking How Well Agent Skills Work Across Diverse Tasks.pdf",
+    "page": 10
+   },
+   {
+    "text": "“Towards a cyber aware chatbot service,” 2021 IEEE International Conference on Big Data (Big Data), pp. 6040–6042, Dec. 2021, https://​doi.​org/​10.​1109/​bigda​ta525​89.​ 2021.​96717​75.   26. Shah D. “Evolution of RAG in Generative AI,” Coralogix AI Blog, Jul. 04, 2024. [Online]. Available: https://​coral​ogix.​com/​ ai-​blog/​evolu​tion-​of-​rag-​in-​gener​ative-​ai/   27. Yu, H Gan A, Zhang K, Tong S, Liu Q, Liu Z. “Evaluation of Retrieval-Augmented Generation: A Survey,” arXiv preprint arXiv:​2405.​07437​v1, May 2024.Y. Gao et al., “Retrieval-Aug- mented Generation for Large Language Models: A survey,” Mar. 2024. [Online]. Available: https://​arxiv.​org/​pdf/​2312.​10997.​pdf.   28. Gao T, Min D, Guo X, Zhao H, Lin J.",
+    "score": 0.6062731862087906,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 15
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9727dc28-4bac-4bac-94f2-9c9d8caab747",
+  "X-Amzn-Trace-Id": "Root=1-6b080424-548c25bd44a333645ebe7e0d;Parent=100e7afda60cef78;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.313
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:20+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How many papers in the knowledge base are about retrieval-augmented generation, and what are they?"
+ },
+ "from_cache": false
+}

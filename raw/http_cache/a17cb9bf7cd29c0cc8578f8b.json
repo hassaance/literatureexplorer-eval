@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.283,
+ "json": {
+  "query": "What is the main finding of 'On the Theoretical Limitations of Embedding-Based Retrieval'?",
+  "contexts": [
+   {
+    "text": "Published as a conference paper at ICLR 2026   ON THE THEORETICAL LIMITATIONS OF EMBEDDING-BASED RETRIEVAL   Orion Weller1,2 Michael Boratko1 Iftekhar Naim1 Jinhyuk Lee1   1Google DeepMind, 2Johns Hopkins University   oweller@cs.jhu.edu,jinhyuklee@google.com   ABSTRACT   Vector embeddings have been tasked with an ever-increasing set of retrieval tasks over the years, with a nascent rise in using them for reasoning, instruction-following, coding, and more. These new benchmarks push embeddings to work for any query and any notion of relevance that could be given. While prior works have pointed out theoretical limitations of vector embeddings, there is a common assumption that these difficulties are exclusively due to unrealistic queries, and those that are not can be overcome with better training data and larger models. In this work, we demonstrate that we may encounter these theoretical limitations in realistic settings with extremely simple queries. We connect known results in learning theory, showing that the number of top-k subsets of documents capable of being returned as the result of some query is limited by the dimension of the embedding. We empirically show that this holds true even if we directly optimize on the test set with free parameterized embeddings.",
+    "score": 0.6932317801999694,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 1
+   },
+   {
+    "text": "We empirically show that this holds true even if we directly optimize on the test set with free parameterized embeddings. We then create a realistic dataset called LIMIT that stress tests embedding models based on these theoretical results, and observe that even state-of-the-art models fail on this dataset despite the simple nature of the task. Our work shows the limits of embedding models under the existing single vector paradigm and calls for future research to develop new techniques that can resolve this fundamental limitation.   1 INTRODUCTION   Over the last two decades, information retrieval (IR) has moved from models dominated by sparse techniques (such as BM25 Robertson et al. (1995)) to those that use neural language models (LM) as their backbones (Lee et al., 2019; Craswell et al., 2020; Izacard et al., 2021; Wang et al., 2022). These neural models are predominantly used in a single vector capacity, where they output a single embedding representing the entire input (also known as dense retrieval). These embedding models are capable of generalizing to new retrieval datasets and have been tasked with solving increasingly complicated retrieval problems (Thakur et al., 2021; Enevoldsen et al., 2025; Lee et al., 2025).",
+    "score": 0.5933118416014638,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 1
+   },
+   {
+    "text": "We note that all of these options have various trade-offs and none provide a clear path to solving this problem as-is. We leave it to future work to develop new techniques to mitigate these issues: perhaps through one of these alterative categories or through new ideas around single-vector models that can resolve the underlying issue (potentially through techniques such as hyperencoders (Killingback et al., 2025) or other future work on single vector architectures yet to be developed).   6 CONCLUSION   We introduce the LIMIT dataset, which highlights a fundamental limitation of embedding models. We provide a theoretical connection which shows that, for a fixed embedding dimension there will be some set of documents such that certain sets are unattainable as top-k sets. We show these theoretical results hold empirically, through best case optimization of the vectors themselves, and make a practical connection to existing state-of-the-art models by creating a realistic and simple instantiation of the theory, called LIMIT, that these models cannot solve. Our results imply that the community should reconsider how instruction-based retrieval will impact future retrievers.   LIMITATIONS   Although our experiments provide theoretical insight for the most common type of embedding model (single vector) they do not hold necessarily for other architectures, such as multi-vector models. Although we showed initial empirical results with non-single vector models, we leave it to future work to extend our theoretical connections to these settings.",
+    "score": 0.5903157999330559,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 10
+   },
+   {
+    "text": "We find that there exists a crucial point for each embedding dimension (d) where the number of documents is too large for the embedding dimension to encode all combinations. We then gather these crucial points for a variety of d and show that this relationship can be modeled empirically with a polynomial function.   We also go one step further and construct a realistic but simple dataset based on these theoretical limitations (called LIMIT).1 Despite the simplicity of the task (e.g., who likes Apples? and Jon likes Apples, ...), we find it is very difficult for even state-of-the-art embedding models (Lee et al., 2025; Zhang et al., 2025) on MTEB (Enevoldsen et al., 2025), and practically impossible for models with small embedding dimensions using standard optimization techniques.   Overall, our work contributes: (1) a theoretical basis for the fundamental limitations of embedding models, (2) a best-case empirical analysis showing that this proof holds for any dataset instantiation (by free embedding optimization), and (3) a simple real-world natural language instantiation called LIMIT that even state-of-the-art embedding models cannot solve.   These results imply interesting findings for the community: on one hand we see neural embedding models becoming immensely successful. However, academic benchmarks test only a small amount of the queries that could be issued (and these queries are often overfitted to), hiding these limitations.",
+    "score": 0.5821845425938661,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 2
+   },
+   {
+    "text": "Although models cannot solve these benchmarks yet, the community has proposed these problems in order to push the boundaries of what dense retrievers are capable of—which is now implicitly every task that could be defined.   Rather than proposing empirical benchmarks to gauge what embedding models can achieve, we seek to understand at a more fundamental level what the limitations are. Since embedding models use   1   ar X   iv :2   50 8.   21 03   8v 2   [ cs   .I R   ] 1   2 M   ar 2   02 6         https://arxiv.org/abs/2508.21038v2Published as a conference paper at ICLR 2026   d1 d2 d3 d4 d5 d6 d7 d8 d9   …   …   …   q1 q2 q3   Jo n   Query-Document Relevance LIMIT: A real-world instantiation   Quokkas   Random Attributes   Apples   Can embeddings represent all combinations of relevance?   Who likes Quokkas?   O vi d   Jon Durben likes Quokkas and Apples.   Ovid Rahm likes Quokkas and Rabbits.   Leslie Laham likes Apples and Candy.   … Le sl ie   Figure 1: A depiction of the LIMIT dataset creation process, based on theoretical limitations.",
+    "score": 0.5773899193636507,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f6d6a95e-7a41-413e-af5a-723df9e5514f",
+  "X-Amzn-Trace-Id": "Root=1-6b08041c-1965316d2b6e19207187a903;Parent=3eb6698d43949f1b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.283
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:12+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What is the main finding of 'On the Theoretical Limitations of Embedding-Based Retrieval'?"
+ },
+ "from_cache": false
+}

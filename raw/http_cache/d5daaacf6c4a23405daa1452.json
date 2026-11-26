@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.171,
+ "json": {
+  "id": "chatcmpl-e3d61d36-4084-48be-9d8e-de308b0898a7",
+  "object": "chat.completion",
+  "created": 1795688004,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The main problem addressed in the paper is the growing fear that artificial intelligence (AI) will replace many humans in decision-making processes within organizations. The paper proposes to handle this problem by highlighting the complementarity of humans and AI, suggesting that AI and humans can bring their own strengths to organizational decision-making processes. Specifically, AI can extend humans' cognition when addressing complexity through its analytical approach, while humans can offer a more holistic, intuitive approach in dealing with uncertainty and equivocality in organizational decision making. The paper emphasizes the idea of intelligence augmentation, stating that AI systems should be designed with the intention of augmenting, not replacing, human contributions. It advocates for a long-term partnership between humans and AI, where both parties can make each other smarter over time through collaboration and mutual learning."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1679,
+   "completion_tokens": 159,
+   "total_tokens": 1838
+  },
+  "contexts": [
+   {
+    "text": "Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making   Mohammad Hossein Jarrahi   School of Information & Library Sciences, University of North Carolina, Chapel Hill, 200 Manning Hall, Chapel Hill, NC 27599, U.S.A.   Business Horizons (2018) 61, 577—586   Available online at www.sciencedirect.com   ScienceDirect www.elsevier.com/locate/bushor   KEYWORDS Artificial intelligence; Organizational decision making; Human-machine symbiosis; Human augmentation; Analytical and intuitive decision making   Abstract Artificial intelligence (AI) has penetrated many organizational processes, resulting in a growing fear that smart machines will soon replace many humans in decision making. To provide a more proactive and pragmatic perspective, this article highlights the complementarity of humans and AI and examines how each can bring their own strength in organizational decision-making processes typically character- ized by uncertainty, complexity, and equivocality. With a greater computational information processing capacity and an analytical approach, AI can extend humans’ cognition when addressing complexity, whereas humans can still offer a more holistic, intuitive approach in dealing with uncertainty and equivocality in organiza- tional decision making. This premise mirrors the idea of intelligence augmentation, which states that AI systems should be designed with the intention of augmenting, not replacing, human contributions. # 2018 Kelley School of Business, Indiana University. Published by Elsevier Inc.",
+    "score": 0.7550790926952855,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 1
+   },
+   {
+    "text": "Moreover, anal- ysis in many cases may result in multiple alternate routes with almost equal factual supports; humans can help in choosing the one that appears to be more intuitively sensible. Consequently, the part- nership between human decision makers and AI and can play out in two ways:   1. Humans and AI technologies can collaborate to deal with different aspects of decision making. AI is likely to be well positioned to tackle com- plexity issues (using analytical approaches).Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making 583   Humans can focus more on uncertainty and equivocality, using more creative and intuitive approaches.   2. Even the most complex decisions–—of which AI has a comparative edge–—are likely to require elements of uncertainty and equivocality, which compels human involvement. Therefore, hu- mans and AI will play a combined role in almost all complex decision making (see Figure 1).   5. Implications for managers and organizations   In AI-enabled business investments, the way many managers justify return on investment (ROI) in cog- nitive technologies centers on significant and imme- diate headcount reduction (Davenport & Faccioli, 2017). My premise in this article is that most benefits of AI are likely to materialize only in long-term partnership with unique human capabilities.",
+    "score": 0.6302613201019104,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 6
+   },
+   {
+    "text": "Procter & Gamble and American Express provide useful examples. Both firms have engaged with AI for years now, but their overall strategies have not been to just automate processes or eliminate hu- man jobs. Instead, they view and employ AI as a tool from which employees can draw to do their work (Davenport & Bean, 2017). This is in contrast to a prevalent modern-day Taylorism embodied in many forms of algorithmic management, which intentionally or unintentionally aspires to deskill workers, treating them as “programmable cogs in machines,” or removing them altogether from or- ganizational processes for the sake of efficiency (Frischmann & Selinger, 2017).   Human-AI symbiosis means interactions be- tween humans and AI can make both parties smar- ter over time. Most AI algorithms can learn and accelerate their utility with more exposure to data and interaction with human partners. Likewise, human decision makers are also likely to develop, over time, a more nuanced understanding of cog- nitive machines–—how they operate and how they can contribute to decision making. Cognitive tech- nologies can also provide support for humans to develop greater analytical skills. For example, a recent experiment at Yale University involving an online game suggested that smart bots helped teams of human players boost their performance (Shirado & Christakis, 2017).",
+    "score": 0.5365044579950111,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 7
+   },
+   {
+    "text": "Given the substantial improvement in AI ca- pabilities in recent years, this article goes beyond this simple vision and advances the notion of human-machine collaboration by focusing on the comparative advantages held by humans and ma- chines in relation to the three characteristics that affect almost all organizational decision making. Although AI capabilities help humans overcome complexity through a superior analytical approach, the role of human decision makers and their intui- tion in dealing with the uncertainty and equivocali- ty of decision making remains unquestionable. Machines depend upon humans when subconscious decision heuristics are necessary to evaluate and facilitate the outcomes of decisions.   AI solutions have already overtaken humans in accomplishing some quantitative targets with com- putable criteria (Parry et al., 2016), thus alleviating the complexity of decision making. Humans will likely outperform AI in evaluating subjective, quali- tative matters (e.g., norms, intangible political interests, and other complicated social, contextual factors). Past experience, insight, and holistic vision are, and will remain, human capitals; these are internalized as subconscious, automatic, and intui- tive thinking processes that still offer humans unique positions in handling ambiguous and equivo- cal situations. Due to their intuitive capabilities, humans continue to perform better at big-picture thinking. Davenport (2016) attested that broader strategic questions require a holistic approach, which cannot be captured by data alone.",
+    "score": 0.5267039581369769,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 8
+   },
+   {
+    "text": "My premise in this article is that most benefits of AI are likely to materialize only in long-term partnership with unique human capabilities. As such, appraising the business value of AI adoption takes patience and a long-term perspective rather than relying on short-term ROI consideration for assessing immediate financial impacts. Viewing and approach- ing AI as a panacea is shortsighted. Decades of re- search outlines the ways in which organizations are complicated sociotechnical systems and technologi- cal breakthroughs prevail only if they are judiciously integrated into the social fabrics of an organization (Sawyer & Jarrahi, 2014). AI is no exception.   Studies of previous technology-centered initia- tives (i.e., business process reengineering) suggest that short-term financial gains from replacing humans can be ephemeral and thwarted by more profound and less visible effects such as a   Figure 1. Complementarity of humans and AI in decisio tainty, complexity, and equivocality   demoralized workforce (Mumford, 1994). The vi- sion of human-AI symbiosis set forth in this article calls for proactively identifying areas in which AI can augment rather than simply replace humans in decision making or manage them algorithmically. Procter & Gamble and American Express provide useful examples. Both firms have engaged with AI for years now, but their overall strategies have not been to just automate processes or eliminate hu- man jobs.",
+    "score": 0.5221555331200979,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 7
+   }
+  ],
+  "sources": [
+   "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+   "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+   "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+   "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+   "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e3d61d36-4084-48be-9d8e-de308b0898a7",
+  "X-Amzn-Trace-Id": "Root=1-6b080642-6a811d346fcfae0a359befd1;Parent=01ee575fa107866f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.171
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:22+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "rep1",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What main problem does the paper *Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making* address, and how does it propose to handle the role of AI in organizational decision making?"
+   }
+  ]
+ },
+ "from_cache": false
+}

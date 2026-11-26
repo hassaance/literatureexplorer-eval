@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.664,
+ "json": {
+  "id": "chatcmpl-a99f08e3-19e1-452d-9af0-ef0b54752401",
+  "object": "chat.completion",
+  "created": 1795687956,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 507,
+   "completion_tokens": 7,
+   "total_tokens": 514
+  },
+  "contexts": [
+   {
+    "text": "The population conditions on attributes including age, region, income, employment, and health, so it can be turned to uses the release does not sanction: impersonating a named individual, attributing opinions or behavior to a real person or an identifiable community, assembling profiles that target individuals, or scripting persuasion, exclusion, or price discrimination aimed at a protected group. None of these are supported uses. Nor does running a simulated cohort discharge the obligation to consult the people a product actually affects, particularly where a decision carries consequences for them in health, finance, employment, or other regulated settings. The volunteer instrument that grounds part of the population asks for no name, contact detail, or account identifier and carries a decline option on all 1,290 items. Work built on the release is expected to preserve that posture rather than attempt re- identification. Human-referenced deployment studies remain the appropriate standard for consequential claims, including evaluations of patient-facing, EHR-integrated agents (Hao et al., 2025).   The public artifact is the Persona 1M coreset rather than the full internal population. Records enter the coreset only after the filtering, provenance, and deduplication checks of section 3.4. Its synthetic component is calibrated toward four supported marginals, and the release ships with a manifest, an audit of achieved shares and infeasible residuals, and per-file hashes.",
+    "score": 0.38805992658020144,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 46
+   },
+   {
+    "text": "= ?1 <latexit",
+    "score": 0.38674927416000393,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "= ?1 <latexit",
+    "score": 0.38674927416000393,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "= ?1 <latexit",
+    "score": 0.38674927416000393,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "= ?1 <latexit",
+    "score": 0.38674927416000393,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   }
+  ],
+  "sources": [
+   "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+   "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a99f08e3-19e1-452d-9af0-ef0b54752401",
+  "X-Amzn-Trace-Id": "Root=1-6b080614-05ab8cd27922f85374306be7;Parent=79494d6c53d68fb0;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.664
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:36+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "err_single_char_query",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "?"
+   }
+  ]
+ },
+ "from_cache": false
+}

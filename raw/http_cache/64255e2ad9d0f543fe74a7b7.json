@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.306,
+ "json": {
+  "query": "In the Confucius Code Agent paper, how does the find_author() function treat asterisk wildcards differently for exact/alternate name matching compared to surname matching, and what is the order in which these queries are attempted?",
+  "contexts": [
+   {
+    "text": "For example, searching for an author named \"John*\" would match \"John Smith\", \"Johnny\", etc., rather than the literal name \"John*\".   ## The Solution   Escape asterisks in name fields using a backslash when performing exact or alternate name matches, but **intentionally preserve wildcards for surname matching queries**.   ### Code Example   ‘‘‘python # In find_author() function:   # Escape asterisks for exact name matching escaped_name = author[\"name\"].replace(\"*\", r\"\\*\")   queries = [ # Use escaped name for exact match {\"type\": \"/type/author\", \"name~\": escaped_name}, # Use escaped name for alternate names {\"type\": \"/type/author\", \"alternate_names~\": escaped_name},   ]   # For surname matching, intentionally use wildcards if birth_year and death_year:   surname = author[’name’].split()[-1] queries.append({   \"type\": \"/type/author\", \"name~\": f\"* {surname}\", # Wildcard intentional here \"birth_date~\": f\"*{birth_year}*\", \"death_date~\": f\"*{death_year}*\",   }) ‘‘‘   ## Key Insights   1. **Context-Dependent Escaping**: Wildcards need to be escaped in some query contexts (exact/alternate name matching) but preserved in others (surname matching).   2.",
+    "score": 0.5689146230776362,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 22
+   },
+   {
+    "text": "**Backslash Escaping**: In Infobase queries, use ‘r\"\\*\"‘ to escape asterisks. The raw string ‘r‘ prefix prevents Python from interpreting the backslash.   3. **Query Order Matters**: The queries are tried in sequence. Exact matches (with escaped wildcards) are tried first, then alternate names, then surname matching (with intentional wildcards).   4. **Creating New Records**: When no match is found and a new author record must be created, preserve the original name including any asterisks exactly as provided - don’t use the escaped version.   ## Related Files   - ‘/app/openlibrary/catalog/add_book/load_book.py‘ - ‘find_author()‘ function - ‘/app/openlibrary/catalog/add_book/tests/test_load_book.py‘ - Tests for wildcard behavior   These insights saves the agent a lot of effort to rediscover the issue in Run 2. Here are the insights from prefix_removal_empty_string_edge_case.md.   22--- id: prefix_removal_empty_string_edge_case title: Prefix Removal Empty String Edge Case description: How to handle the edge case where removing a prefix leaves an empty string keywords:   - string - manipulation - edge - case - prefix - validation   ---   # Prefix Removal Empty String Edge Case   ## Problem   When removing a prefix from a string, you may end up with an empty string if the input consists only of the prefix.",
+    "score": 0.46549891951925015,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 22
+   },
+   {
+    "text": "Here are some insights from \"escaping_wildcards_in_infobase_queries.md\".   21--- id: escaping_wildcards_in_infobase_queries title: Escaping Wildcards in Infobase Queries description: How to handle asterisk characters in \\\\ Infobase queries to prevent unintended wildcard matching keywords:   - infobase - queries - wildcards - escaping - openlibrary   ---   # Escaping Wildcards in Infobase Queries   ## Problem Context   When searching for authors by name in OpenLibrary’s Infobase, asterisk characters (‘*‘) in author names can cause unexpected behavior because they are treated as wildcards by the query system.",
+    "score": 0.45202986737376805,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 21
+   },
+   {
+    "text": "CCA achieves strong performance compared with prior coding agents, demonstrating how principled scaffolding can substantially amplify the effectiveness of the same underlying LLM. We also evaluate CCA on a custom PyTorch-Bench targeting debugging workflows on larger-scale codebases. Ablations isolate the contributions of each crucial mechanism, and analyses categorize remaining failure cases. In summary, our contributions are:   • We present the Confucius Code Agent (CCA), a coding agent designed for large-scale software engineering.   • We present the ConfuciusSDK, a principled AX/UX/DX-balanced agent development platform with advanced context management, extensions, and long-term memory.   • We provide evaluations across multiple benchmarks, supported by ablations and case studies. Notably, on SWE-Bench-Pro, CCA reaches a Resolve@1 performance of 59%, exceeding prior research baselines and commercial results, under identical repositories, model backend, and tool access.   • We empirically show that agent scaffolding, not just model capability, is also a primary determinant of agent performance, with appropriate orchestration and memory structures outperforming stronger models.   2 Method   In this section, we describe both the algorithmic design of agentic reasoning and the system design of the Confucius SDK that supports it.",
+    "score": 0.43540815959490253,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 3
+   },
+   {
+    "text": "Instead of predefined workflows, users provide a list of tool-use functions to the Confucius Orches- trator, such as executing Python or SQL code on specific databases. These tools are represented as customizable agents. Leveraging ad- vanced models like Claude 3.7 Sonnet, the Confucius Orchestrator acts as an intelligent supervisor, performing \"thinking\" steps to de- termine which agent tools to call and what arguments to pass. This architecture offers flexibility, allowing the Orchestrator to decide the next step based on conversation history and available tools, rather than following a fixed workflow.   6 Implementation Confucius is developed in Python, allowing it to utilize a wide range of reusable external systems and internal Python-based services. Its engineering components are also shown in Figure 4. The core abstraction class, the Analect, serves as a lightweight wrapper for LangChain’s Runnable. Each Analect is strongly typed and requires a Pydantic Input, Pydantic Output, and an implmethod. Pydantic [2] is a Python schema language that offers several essential features used throughout Confucius, such as type validation, serialization, generics, and inheritance. Using the base class Analect, we define all other primitives mentioned before, including Translator, Selector, Collector, Ensemble, and Orchestrator. For developer convenience, we also define a specialized Analect called an Entry.",
+    "score": 0.43153406752596835,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "aaa8df4e-4ab8-466a-9b81-d4e58c2855b0",
+  "X-Amzn-Trace-Id": "Root=1-6b08043c-330272d062a99945557a8739;Parent=017aa3ce97440c26;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.306
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:44+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the Confucius Code Agent paper, how does the find_author() function treat asterisk wildcards differently for exact/alternate name matching compared to surname matching, and what is the order in which these queries are attempted?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.371,
+ "json": {
+  "query": "In the paper *Building effective agents*, what are the two key variations of the parallelization workflow for LLMs and how are they defined?",
+  "contexts": [
+   {
+    "text": "For complex tasks with multiple considerations, LLMs   generally perform better when each consideration is handled by a separate LLM call,   allowing focused attention on each specific aspect.   Examples where parallelization is useful:   Sectioning:   Implementing guardrails where one model instance processes user queries   while another screens them for inappropriate content or requests. This tends to   perform better than having the same LLM call handle both guardrails and the   core response.   Automating evals for evaluating LLM performance, where each LLM call   evaluates a different aspect of the model’s performance on a given prompt.   Voting:   Reviewing a piece of code for vulnerabilities, where several different prompts   review and flag the code if they find a problem.   Evaluating whether a given piece of content is inappropriate, with multiple   prompts evaluating different aspects or requiring different vote thresholds to   balance false positives and negatives.   Workflow: Orchestrator-workersIn the orchestrator-workers workflow, a central LLM dynamically breaks down tasks,   delegates them to worker LLMs, and synthesizes their results.   The orchestrator-workers workflow   When to use this workflow: This workflow is well-suited for complex tasks where you   can’t predict the subtasks needed (in coding, for example, the number of files that   need to be changed and the nature of the change in each file likely depend on the   task).",
+    "score": 0.5714188791478765,
+    "source": "034 - Building effective agents.pdf",
+    "page": 7
+   },
+   {
+    "text": "The integration of tools assists the LLM agent in enhancing its capabilities to execute more complex tasks, such as computation or data analysis [96].   • Knowledge is the database of information utilized by the LLM agent. It extends the content embedded in the model’s parameters and can include commonsense knowledge, specialized knowledge, and other forms of information, enhancing the agent’s understanding and discussion capabilities in specific tasks [128].   • Memory enables the LLM agent to store and recall information from past interactions. This capability is particularly beneficial in future tasks, helping to retain context and ensure consistency and continuity in interactions, thereby enhancing the overall effectiveness of LLM agents in various applications [127].   2.3 Workflow of LLM Agent The fundamental workflow of an LLM Agent consists of a cyclic process comprising Perception, Thought, and Action [96]. During the Perception phase, the Agent collects and processes information, converting raw data from environmental states and user inputs into Agent-readable formats. In the Thought phase, the Agent analyzes the perceived information and devises potential solutions and corresponding action plans. The Action phase executes specific operations, which may include generating interactive responses, invoking external tools, or performing other relevant tasks. Once these actions are completed, the Agent observes the results through a renewed Perception phase, followed by another round of Thought and Action, as illustrated in Figure 4.   Fig. 4.",
+    "score": 0.560515444395459,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 6
+   },
+   {
+    "text": ".   • Tailored Text Generation. LLM agents excel in generating customized text for specific purposes, such as emails, reports, and marketing materials, by integrating contextual understanding and goal-oriented language production skills [91].   • Levels of Autonomy. These agents vary in autonomy, ranging from fully autonomous to semi-autonomous, with the degree of user interaction tailored to the task at hand [86].   • Integration with Other AI Systems. LLM agents can also be integrated with different AI systems, like image generators, to offer a more comprehensive set of capabilities, demonstrating their versatility in various applications [95].   2.5 Case Study on the Structure, Workflow and Capability of LLM Agent   (a) Overview of the pixelated virtual town (b) An Example of LLM agent Eva’s components   Fig. 5. Simulation Environment and LLM Agent Components   To better understand the structure, workflow, and capabilities of LLM agents, we employ the town scenario composed of LLM agents, as proposed by [48], for a more detailed introduction. Within this virtual town, each LLM agent consists of multiple key components that define its behavior and operational capabilities. As shown in   Proc. ACM Meas. Anal. Comput. Syst., Vol. 37, No. 4, Article 111.",
+    "score": 0.5371489058961618,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 7
+   },
+   {
+    "text": "To address these problems, we perform a comprehensive literature review of publications from NeurIPS, ICML, and ICLR over the past three years. The review focuses on papers with the key- words “LLM”, “Agent”, or “Large Language Model” in their titles while excluding works related to multi-agent systems or agents that require additional training. Note that our aim is not to propose the most comprehensive, one-for-all LLM agent design space, but to offer a standardized framework   3Preprint   that enables the recombination of existing agents and facilitates the discovery of new ones. As a result, we sort out 16 popular LLM agents and abstract a modular design space with 1050 possible combinations, which can be easily extended when new modules are discovered. Below, we describe the agentic workflow and the function of four modules in our design space.   2.2 WORKFLOW OVERVIEW   The proposed agent workflow operates through an iterative process with the interconnection of the above four modules, as shown in Figure 2. Upon receiving a task d, the agent starts with the planning module, decomposing it into n sub-tasks{s1, s2, . . . , sn}. Next, these sub-tasks are passed to the reasoning module sequentially. Taking the sub-task si description as input, the reasoning module explores to prompt LLMs to give the result.",
+    "score": 0.5329752636203337,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 3
+   },
+   {
+    "text": "From the experimental results, CoA performs better while reducing more than 30% inference time than Toolformer.   Parallel Tool Calling. For a complex tasks that incorporates multiple tools, traditional sequential style calling may hurt efficiency since LLMs have to wait for the latest tool call’s response. However, there are multiple tasks that could be done in parallel [224]. For example, when collecting weather information for all cities in a province, an agent does not need to invoke a weather-query tool sequentially for each city. Instead, these independent tool calls can be executed in parallel, which significantly reduces the overall task-solving time. LLMCompiler [61] introduces a compiler-inspired framework that formulates execution plans, dispatches tasks, and executes functions in parallel. This achieves improvements in latency, cost, and overall accuracy against the traditional sequential tool execution approach. Building on this parallelization paradigm, LLM-Tool Compiler [135] further optimizes efficiency by selectively fusing similar tool operations at runtime, which increases parallel tool calls while reducing token consumption and latency. W&D [79] extends this idea to deep research agents by scaling width through parallel tool calling, allowing multiple tools to be invoked within a single reasoning step to improve information-gathering efficiency and reduce interaction turns. Complementing with the above methods, CATP-LLM [170] addresses the execution cost by incorporating cost-awareness into the planning process.",
+    "score": 0.5294789453957922,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 29
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f3dc1b6a-97bd-4a39-8439-8d4bf15792b7",
+  "X-Amzn-Trace-Id": "Root=1-6b08044b-526edb56026451b05d58d093;Parent=7622dba2fa98f761;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.371
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper *Building effective agents*, what are the two key variations of the parallelization workflow for LLMs and how are they defined?"
+ },
+ "from_cache": false
+}

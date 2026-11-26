@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.278,
+ "json": {
+  "query": "Simulating Teams with LLM Agents: Interactive 2D Environments for Studying Human-AI Dynamics",
+  "contexts": [
+   {
+    "text": "Simulating Teams with LLMAgents: Interactive 2D Environments for Study- ing Human–AI Dynamics. In Proceedings of Make sure to enter the correct   conference title from your rights confirmation email (Conference acronym ’XX).   ACM, New York, NY, USA, 29 pages. https://doi.org/XXXXXXX.XXXXXXX   1 Introduction   Teams are central to solving society’s most complex problems, from disaster response to healthcare and scientific discovery [10, 91, 100]. Understanding how teams collaborate, adapt, and achieve shared goals has long been a priority for researchers in organizational science and human-computer interaction [24, 36, 40, 61]. Yet, study- ing real-world teams in action is difficult: access to real teams is hard, field settings are unpredictable, experiments are costly, testing counterfactual factors is unrealistic, and ethical constraints often limit what researchers can observe [62, 63, 80]. Simulations offer an alternative by recreating team dynamics in safe and controlled environments, allowing researchers to evaluate hypotheses and conditions that are otherwise infeasible to test in real life. Yet, build- ing simulations that capture the nuance of real teamwork (e.g., communication patterns, shifting roles, relationships) remains a major challenge.",
+    "score": 0.7372796778001408,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 2
+   },
+   {
+    "text": "Simulating Teams with LLM Agents: Interactive 2D Environments for Studying Human–AI Dynamics   Mohammed Almutairi University of Notre Dame Notre Dame, Indiana, USA   Charles Chiang University of Notre Dame Notre Dame, Indiana, USA   Haoze Guo University of Notre Dame Notre Dame, Indiana, USA   Matthew Belcher University of Notre Dame Notre Dame, Indiana, USA   Nandini Banerjee University of Notre Dame Notre Dame, Indiana, USA   Maria Milkowski University of Notre Dame Notre Dame, Indiana, USA   Svitlana Volkova Aptima, Inc.   Woburn, Massachusetts, USA   Daniel Nguyen Aptima, Inc.   Woburn, Massachusetts, USA   Tim Weninger University of Notre Dame Notre Dame, Indiana, USA   Michael Yankoski William and Mary   Williamsburg, Virginia, USA   Trenton W. Ford William and Mary   Williamsburg, Virginia, USA   Diego Gómez-Zará University of Notre Dame Notre Dame, Indiana, USA   Simulated Scenario Description   Create Agents (Demographics information, Role, personality, Background story, ..)   Create entities (Name, type, ….)   Create Environment (Map, size, complexity)   Initialization Module   Generation   Request agents' Next Decision   Agent – Environment Interface   Update agents and environment   Simulation Manager (Time, Location, Actions, Comm.)",
+    "score": 0.6963730975986271,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 1
+   },
+   {
+    "text": "Unlike prior frameworks that restrict scenarios to predefined or static tasks, our approach enables users to build scenarios, assign roles, and observe how agents coordinate, move, and adapt over time. By bridging team cognition behaviors with scalable agent-based modeling, our system provides a testbed for investigating how environments influ- ence coordination, collaboration, and emergent team behaviors. We demonstrate its utility by aligning simulated outcomes with empir- ical evaluations and a user study, underscoring the importance of customizable environments for advancing research on multi-agent simulations. This work contributes to making simulations accessi- ble to both technical and non-technical users, supporting the design, execution, and analysis of complex multi-agent experiments.   CCS Concepts   • Computing methodologies→ Multi-agent systems; • Ap- plied computing→ Simulation evaluation; • Human-centered   computing→ Collaborative and social computing systems and tools.   Keywords   AI agent, large language models, multi-agent simulation, team sim- ulation   ACM Reference Format:   Mohammed Almutairi, Charles Chiang, Haoze Guo, Matthew Belcher, Nan- dini Banerjee, Maria Milkowski, Svitlana Volkova, Daniel Nguyen, Tim Weninger, Michael Yankoski, TrentonW. Ford, and Diego Gómez-Zará. 2018. Simulating Teams with LLMAgents: Interactive 2D Environments for Study- ing Human–AI Dynamics.",
+    "score": 0.689191594254795,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 2
+   },
+   {
+    "text": "• If you weren’t using this system, how would you simulate or analyze a multi-agent team?   (7) Closing • Is there anything important we didn’t cover that you would like to share?Simulating Teams with LLM Agents: Interactive 2D Environments for Studying Human–AI Dynamics Conference acronym ’XX, June 03–05, 2018, Woodstock, NY   A Appendix   A.1 Environment Generation Prompt   Environment Generation Prompt   Rooms: You are a helpful assistant. The user is asking for a list of ideas for rooms to populate an adventure game. Respond with a list of ideas for rooms on different lines with 2 to 4 words per room. Each room should be unique and thematically appropriate. DO NOT prefix the names with numbers or other special characters.   Objects: You are a helpful assistant. The user is asking for a list of ideas for objects to populate an adventure game. Respond with a list of names for objects on different lines with 1 or 2 words per object. The user will provide a description of the room where the object will be placed. The object should be appropriate for the room.   A.2 Mission Prompt   Mission System Prompt   You have access to other agents. You can ask them for directions from your location to another location or the assistant with objects. Say \"Ask Agent\" to get help from the other agent.",
+    "score": 0.6259641839822242,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 24
+   },
+   {
+    "text": "By leveraging LLMs, the system generates simulations capable of more sophisticated behaviors, spatial awareness, and communication patterns than those produced by traditional rule- based systems. Moreover, the system lowers the technical barriers associated with traditional simulation tools, providing an accessible, web-based interface to a wide range of users. In the following sections, we discuss the implications of our findings, reflecting on how VirT-Lab advances the design of human–AI systems and identifying key opportunities for future development and ethical considerations.   6.1 Approximating vs. Emulating Human Team   Dynamics   Our ground-truth validation highlights both the potential and limi- tations of using LLM-based agents to model human team dynamics. VirT-Lab’s agents demonstrated several realistic team behaviors, such as coordinating to accomplish shared goals, communicating intentions, and even developing a degree of trust among teammates.   These findings suggest that LLM-based agents can capture impor- tant aspects of real human teams. However, we found that these behaviors, particularly coordination and emerging leadership, were noticeably weaker in LLM-based agents compared to human teams. This finding aligns with previous work that shows a gap between LLM-agent behavior and real human behavior. For example, [75] found that LLM-based agents were not fully replicating human responses.",
+    "score": 0.621327720655068,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 18
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fe853042-5967-4850-8648-80e350732913",
+  "X-Amzn-Trace-Id": "Root=1-6b080504-1753dd1356aebcaa68e317ec;Parent=796054219679237b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.278
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:04+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Simulating Teams with LLM Agents: Interactive 2D Environments for Studying Human-AI Dynamics"
+ },
+ "from_cache": false
+}

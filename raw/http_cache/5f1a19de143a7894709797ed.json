@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.293,
+ "json": {
+  "query": "A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics",
+  "contexts": [
+   {
+    "text": "This will   consequently split intelligent agents from standard algorithms like projections that, in some systems, are used to state   that mixed-initiative is prevalent. Moreover, we encourage the development of systems that have been identified as   lacking within the opportunities section to broaden the domain of mixed-initiative VA. Finally, we encourage the use of   a unified understanding and terminology of agent-based systems within the context of mixed-initiative VA, based on   the provided design space.   Research Community. We call to the larger research community to create a venue for mixed-initiative systems.   Moreover, it’s crucial to note that new systems don’t need to explore every unexplored aspect of agents within the   design space at once, as more foundational work should be conducted to examine how specific agent configurations   influence the mixed-initiative setting properly. Lastly, it is vital to value accurate reporting of system capabilities,   particularly the presence and limitations of agents within mixed-initiative systems. The inherent complexity of theseA Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics 29   systems and the dynamics of human-AI collaboration are significantly amplified by their potential. Further research is   needed to systematically investigate the impact of these systems on the Human-AI interaction, ensuring that human   agents can effectively leverage the benefits of mixed-initiative operation.   8 Conclusion   This work introduces a comprehensive design space to systematically describe the components of intelligent agents in   mixed-initiative VA systems.",
+    "score": 0.8955263252499382,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 28
+   },
+   {
+    "text": "A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics   TOBIAS STÄHLE, ETH Zürich, Switzerland   MATTHIJS JANSEN OP DE HAAR, ETH Zürich, Switzerland   SOPHIA BOYER, ETH Zürich, Switzerland   RITA SEVASTJANOVA, ETH Zürich, Switzerland   ARPIT NARECHANIA, The Hong Kong University of Science and Technology, Hong Kong SAR   MENNATALLAH EL-ASSADY, ETH Zürich, Switzerland   Environment   Configuration and Logic   Initial Modules Dynamic Modules   Agent’s thinking and decision making   World Model Agent’s knowledge of the environment and agents   Observations Agent’s sensory capacity of the environment   Communication Agent’s transmissions to and from other agents   Actions Agent’s exertion upon the environment   Agent   Action Module   Communication Module   Observation Module   Configuration Module   Infrastructure   Exert   Talk   View   Ground   InfrastructureAgent   Dim 1   Dim 6   Dim 5   Dim 4   Dim 2   Dim 3   Fig. 1. To investigate the design space of intelligent agents, a mixed-initiative visual analytics system is partitioned into three components: Agent, Infrastructure, and Environment.",
+    "score": 0.8911402856160267,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 1
+   },
+   {
+    "text": "We further emphasize that systems could benefit from incorporating mechanisms   for sharing agent availability information, for example, by allowing a human agent to convey their availability to a   software agent, in order to reduce their cognitive load.   In summary, our work contributes a unified design space that describes and reconciles the design diversity of   intelligent agents in mixed-initiative VA systems. Beyond our survey contribution, we distill current best practicesA Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics 3   and research gaps, thus encouraging a broader discussion of future opportunities. An interactive overview of our   design space, along with the categorization results of the reviewed systems and individual agents, is available at:   https://dsagentmi.github.io/?p=AgentDSCHI26.   2 Background and Related Work   In this section, we review foundational works on intelligent agents in mixed-initiative VA systems. Additionally, we   provide background information on the frameworks that underpin our design space.   2.1 Mixed-Initiative in VA Systems   The concept of human and software agents jointly contributing to tasks, i.e., mixed-initiative interactions, is deeply   rooted in HCI. Horvitz’s work [48] laid out initial principles for designing mixed-initiative interfaces, emphasizing   bidirectional collaboration between the user (human) and the (software) agent.",
+    "score": 0.8506913648104185,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 2
+   },
+   {
+    "text": "Focusing on the agent, the design space characterizes how agents interact with the environment and other agents, given the five dimensions of the agent (Dim 1–5) – Configuration and Logic, World Model, Observations, Communication, and Actions – and the description of the Infrastructure (Dim 6).   Mixed-initiative visual analytics (VA) systems, where human and artificial intelligence (AI) agents collaborate as equal partners during   analysis, represented a paradigm shift in human-computer interaction. With recent advances in AI, these systems have seen an increase   in sophisticated software agents that have improved task planning, reasoning, and completion capabilities. However, while existing   work characterizes agent interplay and communication strategies, there is a limited understanding of the overarching design principles   for intelligent agents. Through a systematic review of 90 systems (and 207 unique agents), we propose a design space of intelligent   agents comprising six dimensions that collectively characterize an agent’s perception, environmental understanding, action capability,   and communication strategies. We contribute a novel framework for researchers and designers to explore various design choices for   new systems and to situate a system in the current landscape. We conclude with future research opportunities for intelligent agents in   mixed-initiative VA systems.   CCS Concepts: • Human-centered computing→ Interactive systems and tools.",
+    "score": 0.8274461391382805,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 1
+   },
+   {
+    "text": "The robotic agent is able to observe the environment and recognize other (human) agents   within said environment. Human agents can then begin a trivia game with the robotic agent. However, in addition to   the system not being within the visual analytics domain, the described robotic agent is physical in nature, and our scope   focuses only on human, wizard, and software agents. Thus, this paper was not considered within the scope of this work.   B.4 No System Described   Ceneda et al. [16] describe a framework for guidance inside the visual analytics domain, where guidance can be a form   of mixed-initiative. The paper details multiple components and even provides examples of guidance-based systems and   how the framework would apply in these cases. However, no single system is described inside the paper with sufficient   detail for it to be coded within the design space. Thus, this paper was excluded from the literature corpus.A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics 37   C Use Case Scenarios   This section presents two compelling use cases that demonstrate the practical application of our design space. These   scenarios illustrate the design space’s adaptability and value for diverse stakeholders – including researchers and system   designers – while highlighting the complex relationships and trade-offs among different dimensions and codes.   Active Learning Scenario. A research team from an intelligence company wants to create a system to classify whether   a specific image contains a threat, such as a weapon.",
+    "score": 0.7667087177319387,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 36
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9c751f36-e3ea-4ec9-8fda-5963a23d29cd",
+  "X-Amzn-Trace-Id": "Root=1-6b08050c-7163c56d32eb7fd3711ed67c;Parent=14451e525823c27d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.293
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:12+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics"
+ },
+ "from_cache": false
+}

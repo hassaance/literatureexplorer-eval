@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 2.315,
+ "json": {
+  "id": "chatcmpl-4b09f783-2aa8-4a48-8f78-c146cf9350c8",
+  "object": "chat.completion",
+  "created": 1795687993,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The Agent Swarm framework in Kimi K2.5 (Paper A) and the Agent Forest method in More Agents Is All You Need (Paper B) both leverage multiple agents but differ in their approach and claimed benefits. \n\n1. **Approach**:\n   - **Agent Swarm (Paper A)**: This framework uses a dynamic task decomposition strategy where a trainable orchestrator dynamically creates specialized sub-agents and schedules parallel subtasks. The orchestrator learns to parallelize tasks through reinforcement learning, optimizing its strategy based on environmental feedback. This approach allows for the concurrent execution of heterogeneous sub-tasks, transforming task complexity from linear scaling to parallel processing.\n   - **Agent Forest (Paper B)**: This method employs a two-phase process: sampling and voting. Multiple LLM agents are used to generate responses to a query, and a voting mechanism is applied to select the best answer. This approach focuses on the interaction structures between LLM agents rather than the relationship between the number of agents and performance.\n\n2. **Benefits**:\n   - **Agent Swarm (Paper A)**: The primary benefits claimed are reduced inference latency and improved performance on complex tasks. By enabling parallel execution of sub-tasks, Agent Swarm can handle more complex scenarios that would otherwise bottleneck sequential systems. It also introduces a proactive context management strategy that preserves task-level coherence while maintaining sub-agent context efficiency.\n   - **Agent Forest (Paper B)**: The benefit claimed is enhanced reasoning and task-solving capabilities through multiple rounds of dynamic interaction among LLM agents. This method aims to improve the quality of responses by leveraging the collective intelligence of multiple agents through a voting mechanism.\n\nIn summary, Agent Swarm focuses on parallel task execution and dynamic context management, while Agent Forest emphasizes the interaction and collective decision-making among multiple agents."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1636,
+   "completion_tokens": 365,
+   "total_tokens": 2001
+  },
+  "contexts": [
+   {
+    "text": "To overcome the latency and scalability limits of sequential agent execution, Kimi K2.5 introduces Agent Swarm, a dynamic framework for parallel agent orchestration. We propose a Parallel-Agent Reinforcement Learning (PARL) paradigm that departs from traditional agentic RL [2]. In addition to optimizing tool execution via verifiable rewards, the model is equipped with interfaces for sub-agent creation and task delegation. During training, sub-agents are frozen and their execution trajectories are excluded from the optimization objective; only the orchestrator is updated via reinforcement learning. This decoupling circumvents two challenges of end-to-end co-optimization: credit assignment ambiguity and training instability. Agent Swarm enables complex tasks to be decomposed into heterogeneous sub- problems executed concurrently by domain-specialized agents, transforming task complexity from linear scaling to parallel processing. In wide-search scenarios, Agent Swarm reduces inference latency by up to 4.5× while improving item-level F1 from 72.8% to 79.0% compared to single-agent baselines.   Kimi K2.5 represents a unified architecture for general-purpose agentic intelligence, integrating vision and language, thinking and instant modes, chats and agents. It achieves strong performance across a broad range of agentic and frontier benchmarks, including state-of-the-art results in visual-to-code generation (image/video-to-code) and real- world software engineering in our internal evaluations, while scaling both the diversity of specialized agents and the degree of parallelism.",
+    "score": 0.5595040597454735,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 2
+   },
+   {
+    "text": "Du et al. (2023); Liang et al. (2023); Xiong et al. (2023) explore various multiple LLM agents interaction architectures, with employing static debate-style engagements among LLMs for enhanced reasoning . Liu et al. (2023) enables agents to interact for multiple rounds in a dynamic architecture. Li et al. (2023a); Hong et al. (2023); Wu et al. (2023); Chen et al. (2023c;a) offer several multi-agent frameworks that enable the development of LLM applications or enhance task-solving capabilities. However, these methods primarily focus on the interaction structures between LLM agents, rather than the relationship between the number of agents and performance. We also select representative methods Du et al. (2023); Shinn et al. (2023) to combine with our method, achieving further enhancements.   3 Method   In this section, we introduce Agent Forest, which is implemented through a two-phase process: sampling and voting. The overview of our method is shown in Figure 2.   3Published in Transactions on Machine Learning Research (10/2024)   Prompts   Query   or   Query   Sampling   Majority Voting   …   LLM Agent Answer   Voting LLM   Multiple LLM collaboration framework   Figure 2: Illustration of Agent Forest.",
+    "score": 0.5255888488254946,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 3
+   },
+   {
+    "text": "rather than context truncation, allowing the system to scale effective context length along an additional architectural dimension while preserving modularity, information locality, and reasoning integrity.   As shown in Figure 7, this proactive strategy outperforms Discard-all in both efficiency and accuracy on BrowseComp. By preserving task-level coherence at the orchestrator level while keeping subagent contexts tightly bounded, Agent Swarm enables parallel execution with selective context persistence, retaining only high-level coordination signals or essential intermediate results. Consequently, Agent Swarm operates as an active, structured context manager, achieving higher accuracy with substantially fewer critical steps than uniform context truncation.   6 Conclusions   Kimi K2.5 shows that scalable and general agentic intelligence can be achieved through joint optimization of text and vision together with parallel agent execution. By unifying language and vision across pre-training and reinforcement learning, the model achieves strong cross-modal alignment and visual–text reasoning. Agent Swarm enables con- current execution of heterogeneous sub-tasks, reducing inference latency while improving performance on complex agentic workloads. Grounded in vision–text intelligence and agent swarms, Kimi K2.5 demonstrates strong perfor- mance on benchmarks and real-world tasks.",
+    "score": 0.5125131700778276,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 15
+   },
+   {
+    "text": "Bold denotes the best result per benchmark.   Benchmark K2.5 Agent Swarm Kimi K2.5 Claude Opus 4.5 GPT-5.2 GPT-5.2 Pro   BrowseComp 78.4 60.6 37.0 65.8 77.9 WideSearch 79.0 72.7 76.2 - -   In-house Swarm Bench 58.3 41.6 45.8 - -   Figure 6: The word cloud visualizes heterogeneous K2.5-based sub-agents dynamically instantiated by the Orchestrator across tests.   Figure 7: Comparison of Kimi K2.5 performance un- der Agent Swarm and Discard-all context management in BrowseComp.   (60.6%) and surpassing even GPT-5.2 Pro (77.9%). Similarly, WideSearch sees a 6.3% improvement (72.7% → 79.0%) on Item-F1, enabling K2.5 Agent Swarm to outperform Claude Opus 4.5 (76.2%) and establish a new state- of-the-art. The gains are most pronounced on In-house Swarm bench (16.7%), where tasks are explicitly designed to reward parallel decomposition.",
+    "score": 0.5053251981953463,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 14
+   },
+   {
+    "text": "While this structure may be effective for simpler, short-horizon tasks, it becomes inadequate as the complexity of the task increases and the accumulated context grows. As tasks evolve to contain broad information gathering and intricate, multi-branch reasoning, sequential systems often encounter significant bottlenecks [5, 6, 7].   4Kimi K2.5 TECHNICAL REPORT   Figure 3: An agent swarm has a trainable orchestrator that dynamically creates specialized frozen subagents and decomposes complex tasks into parallelizable subtasks for efficient distributed execution.   The limited capacity of a single agent working through each step one by one can lead to the exhaustion of practical reasoning depth and tool-call budgets, ultimately hindering the system’s ability to handle more complex scenarios.   To address this, we introduce Agent Swarm and Parallel Agent Reinforcement Learning (PARL). Instead of exe- cuting a task as a reasoning chain or relying on pre-specified parallelization heuristics, K2.5 initiates an Agent Swarm through dynamic task decomposition, subagent instantiation, and parallel subtask scheduling. Importantly, parallelism is not presumed to be inherently advantageous; decisions regarding whether, when, and how to parallelize are explic- itly learned through environmental feedback and RL-driven exploration. As shown in Figure 4, the progression of performance demonstrates this adaptive capability, with the cumulative reward increasing smoothly as the orchestrator optimizes its parallelization strategy throughout training.",
+    "score": 0.5049066684049414,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 4
+   }
+  ],
+  "sources": [
+   "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+   "002 - More Agents Is All You Need.pdf",
+   "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+   "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+   "014 - Kimi K2.5 Visual Agentic Intelligence.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4b09f783-2aa8-4a48-8f78-c146cf9350c8",
+  "X-Amzn-Trace-Id": "Root=1-6b080637-1caef5b64596d9b0582dab4c;Parent=782a0097deb76d46;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 2.315
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:11+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "rep1",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How do the Agent Swarm framework in Kimi K2.5 (Paper A) and the Agent Forest method in More Agents Is All You Need (Paper B) differ in their approach to leveraging multiple agents, and what distinct benefits does each method claim?"
+   }
+  ]
+ },
+ "from_cache": false
+}

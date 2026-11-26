@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.28,
+ "json": {
+  "query": "AgentSquare: Automatic LLM Agent Search in Modular Design Space",
+  "contexts": [
+   {
+    "text": "It is important to note that our goal is not to propose the most comprehensive, one-size- fits-all LLM agent design space, but rather to demonstrate that our modular design space enables researchers and intelligent search algorithms to fully exploit the potential of prior successful designs. MoLAS is a guided and constrained searching problem in the modular design space, which is a subset of the entire code search proposed in ADAS (Hu et al., 2024). However, MoLAS has a nice feature of providing standardized IO interfaces for agent modules, facilitating easy recombination of modules from different agentic systems and hence enabling efficient search for novel agents. Our design space is also highly extensible, allowing new agentic systems to be integrated as plug- in modules. Therefore, it provides a platform to consolidate the collective efforts of the research community on LLM agents. The overview of this work is illustrated in Figure 1.   Building on this modular design space, we propose a novel LLM agent search framework called AgentSquare. Specifically, AgentSquare optimizes LLM agents through the mechanisms of module evolution and recombination. The module evolution mechanism leverages an evolutionary meta- prompt to explore new modules through prompt-level optimization, which jointly models task de- scriptions, existing modules, and the performance of evaluated modules. Besides, the module re- combination mechanism performs module-level optimization by leveraging the reasoning power of LLMs to strategically search for promising module combinations.",
+    "score": 0.8151439028463203,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 2
+   },
+   {
+    "text": ".   • We design the AgentSquare framework that efficiently searches for novel and good- performing LLM agents via the novel mechanism of module evolution, module recom- bination, and performance predictor.   • Experiments across six diverse tasks show that our method discovers novel LLM agents that outperform all known human designs. Besides, AgentSqaure can generate human interpretable design insights for these novel agents.   2 A MODULAR DESIGN SPACE OF LLM AGENTS   2.1 BACKGROUND   Using LLMs for automatic optimization has been a widely explored topic, such as applications in code generation (Lehman et al., 2023; Romera-Paredes et al., 2024) and neural architecture search (Nasir et al., 2024; Chen et al., 2024a). There are several recent studies that explore the problem of prompting LLMs to design LLM agentic systems. OPRO (Yang et al., 2024) and Prompt- breeder (Fernando et al., 2024) can be viewed as leveraging the reasoning power of LLMs to improve the prompt of LLM agents. More importantly, ADAS introduces the idea of searching the entire agentic system defined in code space, and propose a Meta Agent Search algorithm that discovers LLM agents outperforming state-of-the-art human designs (Hu et al., 2024).",
+    "score": 0.8099749567339201,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 3
+   },
+   {
+    "text": "Preprint   AGENTSQUARE: AUTOMATIC LLM AGENT SEARCH IN MODULAR DESIGN SPACE   Yu Shang1∗ Yu Li2∗ Keyu Zhao1 Likai Ma1 Jiahe Liu1 Fengli Xu1† Yong Li1†   1Department of Electronic Engineering, Tsinghua University 2Shenzhen International Graduate School, Tsinghua University   ABSTRACT   Recent advancements in Large Language Models (LLMs) have led to a rapid growth of agentic systems capable of handling a wide range of complex tasks. However, current research largely relies on manual, task-specific design, limiting their adaptability to novel tasks. In this paper, we introduce a new research prob- lem: Modularized LLM Agent Search (MoLAS). We propose a modular design space that abstracts existing LLM agent designs into four fundamental modules with uniform IO interface: Planning, Reasoning, Tool Use, and Memory. Build- ing on this design space, we present a novel LLM agent search framework called AgentSquare, which introduces two core mechanisms, i.e., module evolution and recombination, to efficiently search for optimized LLM agents. To further ac- celerate the process, we design a performance predictor that uses in-context sur- rogate models to skip unpromising agent designs.",
+    "score": 0.7592174129116163,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 1
+   },
+   {
+    "text": "OPRO (Yang et al., 2024) and Promptbreeder (Fernando et al., 2024) can be considered as using LLMs to optimize LLM agent defined on prompt space. More relevantly, ADAS (Hu et al., 2024) proposes to search the entire agentic system defined on code space, enabling the search for LLM agents with more flexible prompts, tool uses, control flows and more.   6 CONCLUSION   In this work, we introduce a novel modular design space for LLM agents, allowing researchers to build upon successful prior designs and collectively accumulate new insights. Based on this, we pro- pose a novel research problem, Modularized LLM Agent Search (MoLAS), which aims to automat- ically optimize LLM agent designs by leveraging the knowledge gained from previously published or evaluated modules. To address the challenge of vast search spaces, we present AgentSquare, an automatic search framework to optimize LLM agents through module evolution and recombination. We further introduce a performance predictor as an in-context surrogate model for evaluating novel LLM agents to accelerate the search process. Overall, our work offers a transition from studying individual LLM agent designs to studying LLM agents within a modular design space, further con- solidating the collective efforts of the research community.",
+    "score": 0.7552849344046834,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 10
+   },
+   {
+    "text": "To tackle these issues, we introduce AgentSquare, an automatic search framework to optimize LLM agents within the modular design space. Facing the vast search space of MoLAS, we propose module recombination operation utilizing LLMs to strategically reason to identify more promising module combinations. Such operation broadens the coverage of child samples, overcom- ing the limitations of prompt rewrite methods that explore only a restricted space. However, only searching in the existing module combinations also narrows the search space, thus we propose mod- ule evolution operation which employs an evolutionary meta-prompt to search new modules through code-level optimization. This operation, combined with module recombination, enables the search of any module combination in the open-ended solution space. Finally, to mitigate the high costs of frequent evaluations of searched agents, we design a performance predictor as an in-context surro- gate model for evaluating searched agents, significantly accelerating the search process and reducing real-valued costs.   The overall framework of AgentSquare is illustrated in Figure 3 and the algorithm is presented in Algorithm 1. Next, we detail the key components of the AgentSquare search process.   3.3 INITIALIZATION   Insights from existing AutoML studies indicate that a well-chosen initialization enhances warm-up and improves search efficiency by avoiding unpromising populations (So et al., 2019; Yuan et al., 2024).",
+    "score": 0.7388883232044501,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 5
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "387202a6-6809-499c-a645-d6bb3262f237",
+  "X-Amzn-Trace-Id": "Root=1-6b0804ff-3dec249438473a45348e5b5b;Parent=323b40bda13f7de9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.28
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AgentSquare: Automatic LLM Agent Search in Modular Design Space"
+ },
+ "from_cache": false
+}

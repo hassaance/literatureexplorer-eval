@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.28,
+ "json": {
+  "query": "EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law",
+  "contexts": [
+   {
+    "text": "EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law   Ilija Lichkovski AI Safety Initiative Groningen   ilija@aisig.org   Alexander Müller AI Safety Initiative Groningen   alexander@aisig.org   Mariam Ibrahim AI Safety Initiative Groningen   mariam@aisig.org   Tiwai Mhundwa AI Safety Initiative Groningen   tiwai@aisig.org   Abstract   Large language models (LLMs) are increasingly deployed as agents in various contexts by providing tools at their disposal. However, LLM agents can exhibit un- predictable behaviors, including taking undesirable and/or unsafe actions. In order to measure the latent propensity of LLM agents for taking illegal actions under an EU legislative context, we introduce EU-Agent-Bench, a verifiable human-curated benchmark that evaluates an agent’s alignment with EU legal norms in situations where benign user inputs could lead to unlawful actions. Our benchmark spans scenarios across several categories, including data protection, bias/discrimination, and scientific integrity, with each user request allowing for both compliant and non-compliant execution of the requested actions. Comparing the model’s function calls against a rubric exhaustively supported by citations of the relevant legislature, we evaluate the legal compliance of frontier LLMs, and furthermore investigate the compliance effect of providing the relevant legislative excerpts in the agent’s system prompt along with explicit instructions to comply.",
+    "score": 0.7756515941984763,
+    "source": "147 - EU-Agent-Bench Measuring Illegal Behavior of LLM Agents Under EU Law.pdf",
+    "page": 1
+   },
+   {
+    "text": "Conclusion We presented EU-Agent-Bench, the first verifiable benchmark that probes the intrinsic propensity of LLM agents to violate EU law when faced with benign, real-world requests. Spanning 600 hand-curated categories across six legal domains, the suite evaluates concrete tool calls against rubric-backed ground truth, enabling fine-grained, automatically checkable compliance measurements. Experiments with seven popular models reveal a concerning picture: even the best system, Gemini 2.5 Flash, complies with EU legislation in only around 55% of runs, while the worst, Qwen 3 14B, complies with EU legislation in only around 38%. We find legality rate does not scale with model   4size, and providing the text of the relevant regulation, though helpful, still does not guarantee total compliance. These findings highlight the gap between current alignment techniques and the legal reliability required for trustworthy agentic AI. By releasing a public preview set, maintaining a private hold-out, and providing an open evaluation protocol, we aim to establish EU-Agent-Bench as a living benchmark for model developers, auditors, and policymakers. Future research should target multi-turn, causal tool chains, continuous argument spaces, and additional jurisdictions, paving the way toward LLM agents that are not only capable but also consistently lawful.",
+    "score": 0.7583239868027923,
+    "source": "147 - EU-Agent-Bench Measuring Illegal Behavior of LLM Agents Under EU Law.pdf",
+    "page": 4
+   },
+   {
+    "text": "While some agent benchmarks Zhang et al. [2025b] and text-only benchmarks Hui et al. [2025] include a subcategory testing legal violations, these are often jurisdiction-agnostic. An overview of the related work can be found in Appendix A.   To fill the gap and provide an (i) agentic function-calling benchmark, (ii) grounded in EU law, (iii) with verifiable rubrics for evaluation, (iv) featuring benign user requests to estimate the intrinsic propensity for illegality in LLM agents, we introduce EU-Agent-Bench, a benchmark consisting of 600 augmented test samples across six legal categories, which monitors function calls and compares them to an EU-legislation-based rubric. We further study the effects of including the relevant regulation content in-context, and the effect of model size on legality rate. A comprehensive overview of how our work fits among other agentic benchmarks can be seen in Table 1.   2 EU-Agent-Bench   In order to determine the base rate of illegality of AI agents deployed in an EU regulatory context, we center our benchmark around six scenarios where the LLM agent is deployed in an organization located in the EU. The scenarios correspond to six categories of illegality: data protection, scientific misconduct, copyright, competition, bias and discrimination, and consumer protection.",
+    "score": 0.7367527451283528,
+    "source": "147 - EU-Agent-Bench Measuring Illegal Behavior of LLM Agents Under EU Law.pdf",
+    "page": 2
+   },
+   {
+    "text": "Agent-SafetyBench does include benign prompts, but the legal subcategory only includes malicious requests.   remains imperfect Guha et al. [2023], Fei et al. [2023], it is expected that their agentic behavior will be similarly limited. What remains critical, yet insufficiently studied in the existing literature, is the jurisdiction-specific illegality of LLM agents. While some agent benchmarks Zhang et al. [2025b] and text-only benchmarks Hui et al. [2025] include a subcategory testing legal violations, these are often jurisdiction-agnostic. An overview of the related work can be found in Appendix A.   To fill the gap and provide an (i) agentic function-calling benchmark, (ii) grounded in EU law, (iii) with verifiable rubrics for evaluation, (iv) featuring benign user requests to estimate the intrinsic propensity for illegality in LLM agents, we introduce EU-Agent-Bench, a benchmark consisting of 600 augmented test samples across six legal categories, which monitors function calls and compares them to an EU-legislation-based rubric. We further study the effects of including the relevant regulation content in-context, and the effect of model size on legality rate.",
+    "score": 0.7335545030493473,
+    "source": "147 - EU-Agent-Bench Measuring Illegal Behavior of LLM Agents Under EU Law.pdf",
+    "page": 2
+   },
+   {
+    "text": "However, the deployment of LLM agents in real-world contexts introduces safety challenges, helpfulness can be at odds with avoiding harm and refusing malicious requests Askell et al. [2021]. A growing body of research demonstrates advanced models can fake alignment Greenblatt et al. [2024], strategically underperform on benchmarks van der Weij et al. [2025], and blackmail Lynch et al. [2025]. Although previous evaluations have focused on text-generation tasks Hartvigsen et al. [2022], Chalkidis et al. [2022]; there is increased focus on evaluating performance on agentic tasks Andriushchenko et al. [2025], Zhang et al. [2025a,b].   We find particular value in studying illegality in LLM agent systems within the legal framework of the European Union (EU). As the performance of LLMs on knowledge benchmarks in the legal domain   Workshop on Regulatable ML at the 39th Conference on Neural Information Processing Systems (NeurIPS 2025).   ar X   iv :2   51 0.   21 52   4v 1   [ cs   .A I]   2 4   O ct   2 02   5         https://github.com/ilijalichkovski/eu-agent-bench        https://arxiv.org/abs/2510.21524v1Benchmark Benign Evaluation Multi-step Region",
+    "score": 0.7003665971388074,
+    "source": "147 - EU-Agent-Bench Measuring Illegal Behavior of LLM Agents Under EU Law.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ca4aad3d-8479-4599-9fb8-d7fc6d00a167",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-121620ed238d7cff56e9b04a;Parent=01f09ab85ef1660a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.28
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:17+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law"
+ },
+ "from_cache": false
+}

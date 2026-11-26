@@ -1,0 +1,14 @@
+ragas==0.4.4
+openai>=1.40
+python-dotenv>=1.0
+requests>=2.31
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+rapidfuzz>=3.5
+pypdf>=4.0
+tqdm>=4.66
+openpyxl>=3.1
+# optional, faster and cleaner PDF text extraction:
+pymupdf>=1.24

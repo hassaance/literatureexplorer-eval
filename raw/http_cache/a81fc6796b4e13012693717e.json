@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 2.013,
+ "json": {
+  "id": "chatcmpl-5839ff9c-5edd-4484-ac21-6710c7442af2",
+  "object": "chat.completion",
+  "created": 1795687458,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The papers in the knowledge base that deal with prompt injection attacks are:\n\n1. \"Automatic and Universal Prompt Injection Attacks against Large Language Models\" (arXiv:2403.04957)\n2. \"Prompt Injection attack against LLM-integrated Applications\" (arXiv:2306.05499)\n3. \"Formalizing and Benchmarking Prompt Injection Attacks and Defenses\" (arXiv:2310.12815)\n4. \"Agentdojo: A dynamic environment to evaluate prompt injection attacks and defenses for llm agents\" (NeurIPS 2024)\n5. \"Defending against indirect prompt injection attacks with spotlighting\" (arXiv:2403.14720)\n6. \"Attention tracker: Detecting prompt injection attacks in llms\" (arXiv:2411.00348)\n7. \"Neural Exec: Learning (and Learning from) Execution Triggers for Prompt Injection Attacks\" (arXiv: 2403.03792)\n8. \"Ignore previous prompt: Attack techniques for language models\" (arXiv:2211.09527)\n9. \"Fine-Tuned DeBERTa-v3-base for Prompt Injection Detection\" (Hugging Face)\n10. \"Llama guard: LLM-based input-output safeguard for human-AI conversations\" (arXiv:2312.06674)\n11. \"The task shield: Enforcing task alignment to defend against indirect prompt injection in llm agents\" (arXiv:2412.16682)\n12. \"Environmental injection attack on generalist web agents for privacy leakage\" (arXiv:2409.11295)"
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1712,
+   "completion_tokens": 383,
+   "total_tokens": 2095
+  },
+  "contexts": [
+   {
+    "text": "Automatic and Uni- versal Prompt Injection Attacks against Large Language Models, March 2024a. URL http: //arxiv.org/abs/2403.04957. arXiv:2403.04957 [cs].   Yi Liu, Gelei Deng, Yuekang Li, Kailong Wang, Zihao Wang, Xiaofeng Wang, Tianwei Zhang, Yepang Liu, Haoyu Wang, Yan Zheng, and Yang Liu. Prompt Injection attack against LLM- integrated Applications, March 2024b. URL http://arxiv.org/abs/2306.05499. arXiv:2306.05499 [cs].   Yupei Liu, Yuqi Jia, Runpeng Geng, Jinyuan Jia, and Neil Zhenqiang Gong. Formalizing and Bench- marking Prompt Injection Attacks and Defenses, June 2024c. URL http://arxiv.org/ abs/2310.12815. arXiv:2310.12815 [cs].   11         http://arxiv.org/abs/2402.08567        https://arxiv.org/abs/2402.01680v2        http://arxiv.org/abs/2403.14720        http://arxiv.org/abs/2311.17227        http://arxiv.org/abs/2408.00989",
+    "score": 0.6686600932875832,
+    "source": "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+    "page": 11
+   },
+   {
+    "text": "Debenedetti, E., Zhang, J., Balunovic, M., Beurer-Kellner, L., Fischer, M., and Tramèr, F. Agentdojo: A dynamic environment to evaluate prompt injection attacks and de- fenses for llm agents. In The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track, 2024.   DeepSeek. Deepseek function calling guide. https://api-docs.deepseek.com/guides/ function_calling, 2025.   Hines, K., Lopez, G., Hall, M., Zarfati, F., Zunger, Y., and Kiciman, E. Defending against indirect prompt injection attacks with spotlighting. arXiv preprint arXiv:2403.14720, 2024.   Hung, K.-H., Ko, C.-Y., Rawat, A., Chung, I., Hsu, W. H., Chen, P.-Y., et al. Attention tracker: Detecting prompt in- jection attacks in llms. arXiv preprint arXiv:2411.00348, 2024.",
+    "score": 0.631175832292454,
+    "source": "165 - MELON.pdf",
+    "page": 10
+   },
+   {
+    "text": "John- son, J. Meng, and B. Tivnan. Abrupt rise of new machine ecology beyond human response time. Scientific reports, 3(1):2627, 2013.   S. Johnson, V. Pham, and T. Le. Manipulating llm web agents with indirect prompt injection attack via html accessibility tree. arXiv preprint arXiv:2507.14799, 2025.   J. Kang, M. Ji, Z. Zhao, and T. Bai. Memory os of ai agent. In Proceedings of the 2025 Confer- ence on Empirical Methods in Natural Language Processing, pages 25972–25981, 2025.   J. Keuper. Prompt injection attacks on llm gen- erated reviews of scientific publications. arXiv preprint arXiv:2509.10248, 2025.   N. M. Kirch, C. N. Weisser, S. Field, H. Yan- nakoudakis, and S. Casper. What features in prompts jailbreak llms? investigating the mech- anisms behind attacks. In Proceedings of the 8th BlackboxNLP Workshop: Analyzing and In- terpreting Neural Networks for NLP, pages 480– 520, 2025.   A. Kirilenko, A. S. Kyle, M.",
+    "score": 0.621551898452242,
+    "source": "164 - AI Agent Traps.pdf",
+    "page": 21
+   },
+   {
+    "text": ".   [42] Dario Pasquini, Martin Strohmeier, and Carmela Troncoso. Neural Exec: Learning (and Learning from) Execution Triggers for Prompt Injection Attacks. 2024. arXiv: 2403.03792 [cs.CR].   [43] Shishir G. Patil, Tianjun Zhang, Xin Wang, and Joseph E. Gonzalez. Gorilla: Large Language Model Connected with Massive APIs. 2023. arXiv: 2305.15334 [cs.CL].   [44] Fábio Perez and Ian Ribeiro. “Ignore previous prompt: Attack techniques for language models”. In: arXiv preprint arXiv:2211.09527 (2022).   [45] ProtectAI. Fine-Tuned DeBERTa-v3-base for Prompt Injection Detection. https : / / huggingface.co/ProtectAI/deberta-v3-base-prompt-injection-v2. 2024.   [46] Mahima Pushkarna, Andrew Zaldivar, and Oddur Kjartansson. “Data Cards: Purposeful and Transparent Dataset Documentation for Responsible AI”. In: 2022 ACM Conference on Fairness, Accountability, and Transparency. FAccT ’22. ACM, 2022. DOI: 10.1145/3531146. 3533231.",
+    "score": 0.5961913398112916,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 12
+   },
+   {
+    "text": "-Y., et al. Attention tracker: Detecting prompt in- jection attacks in llms. arXiv preprint arXiv:2411.00348, 2024.   Inan, H., Upasani, K., Chi, J., Rungta, R., Iyer, K., Mao, Y., Tontchev, M., Hu, Q., Fuller, B., Testug- gine, D., et al. Llama guard: Llm-based input-output safeguard for human-ai conversations. arXiv preprint arXiv:2312.06674, 2023.   Jia, F., Wu, T., Qin, X., and Squicciarini, A. The task shield: Enforcing task alignment to defend against in- direct prompt injection in llm agents. arXiv preprint arXiv:2412.16682, 2024.   Liao, Z., Mo, L., Xu, C., Kang, M., Zhang, J., Xiao, C., Tian, Y., Li, B., and Sun, H. Eia: Environmental injection attack on generalist web agents for privacy leakage. arXiv preprint arXiv:2409.11295, 2024.   Liu, Y., Jia, Y., Geng, R., Jia, J., and Gong, N. Z.",
+    "score": 0.5821809870056323,
+    "source": "165 - MELON.pdf",
+    "page": 10
+   }
+  ],
+  "sources": [
+   "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+   "165 - MELON.pdf",
+   "164 - AI Agent Traps.pdf",
+   "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+   "165 - MELON.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5839ff9c-5edd-4484-ac21-6710c7442af2",
+  "X-Amzn-Trace-Id": "Root=1-6b080420-44b93379654a1cac19d5db99;Parent=0a31b7991c4355a8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 2.013
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:16+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Which papers in the knowledge base deal with prompt injection attacks?"
+   }
+  ]
+ },
+ "from_cache": false
+}

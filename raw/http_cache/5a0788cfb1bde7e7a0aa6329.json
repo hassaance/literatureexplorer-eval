@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.314,
+ "json": {
+  "query": "In the Holistic Agent Leaderboard (HAL) paper, what limitation is noted about the latency data collected during massively parallel evaluations?",
+  "contexts": [
+   {
+    "text": "A single benchmark could take weeks to run serially, and as a result, leaderboards are often not updated with the latest models (Challenges #1-#3. Second, agents vary widely in costs, but evaluations rarely report these costs. Scaffolds dramatically impact both accuracy and cost, yet comparisons across scaffolds are rare (Challenges #4-#6). Third, agents can exploit shortcuts that inflate benchmark scores and take actions that would be catastrophic in deployment. Yet, current evaluations rarely detect or penalize such behavior (Challenges #7-#8).   To address these shortcomings, we develop HAL, the Holistic Agent Leaderboard. It is a unified evaluation framework for reproducible, cost-controlled agent benchmarking with automated agent log analysis. Existing evaluation frameworks like HELM (Liang et al., 2023) and LM Evaluation Harness (Biderman et al., 2024) have standardized language model benchmarking, but agent evalu- ation poses fundamentally different challenges. While LLMs respond to prompts with text, agents navigate complex environments over extended time horizons, using tools from browsers to bash shells, often consuming hundreds of thousands of tokens per rollout. They can fail catastrophically or get trapped in loops in ways that simple text generation cannot. These unique characteristics demand purpose-built infrastructure that tracks not just what agents output, but how they achieve it, what they cost, and where they break. HAL provides this infrastructure.",
+    "score": 0.6086493704893565,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 2
+   },
+   {
+    "text": "We outline them below, along with our plan to remediate these concerns to the extent possible.   Provider-specific parameters. OpenAI’s “low,” “medium,” and “high” reasoning settings don’t have publicly documented specifications, making it difficult to interpret what these levels mean in terms of computational effort. Since these are proprietary parameters, we cannot standardize them but clearly document which settings we use for each evaluation.   Latency measurements. Our parallel evaluation setup introduces variance in timing measurements due to VM provisioning, network effects, and server load. While we have timing data, defending its reliability would require serial execution, which would extend evaluation time from hours to weeks. We plan to add small-sample serial runs to provide latency estimates.   Limitations in failure mode analysis. Our automated log analysis identifies specific points where agents fail, but we cannot determine whether addressing these failures would lead to successful task completion or simply reveal subsequent errors. Establishing true causal relationships between ob- served failures and task outcomes would require checkpointing agent and environment states at each failure point, then replaying execution with the error corrected, which is beyond our computational budget at the moment.   Despite these limitations, HAL represents a step toward standardized, reproducible agent evaluation. The infrastructure we’ve built enables systematic comparison across models, scaffolds, and bench- marks in ways that were previously infeasible.",
+    "score": 0.5876079536652734,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 22
+   },
+   {
+    "text": "We document these limitations transparently and outline our plans to address them.   A4.1 LIMITATIONS WE PLAN TO ADDRESS IN FUTURE VERSIONS OF HAL   Incomplete cost accounting for caching. SWE-Agent currently uses caching to reduce API costs, but our cost calculations don’t yet account for cache hits, reporting full token prices instead. We will implement cache-aware cost tracking for SWE-Agent in the next update to HAL.   21Holistic Agent Leaderboard   Evaluation on public test sets. For GAIA and AssistantBench, we evaluate on publicly available test sets rather than the full private sets used for official leaderboards, which may have different task distributions. We plan to work with benchmark authors to enable evaluation on private test sets through secure submission portals.   Limited benchmark coverage. We use SWE-Bench Verified Mini (50 tasks) rather than the full SWE-Bench Verified dataset (500 tasks), providing a focused but limited view of software engi- neering capabilities. Similarly, we use the original TAU-bench, though the newer τ2 Bench (Barres et al., 2025) addresses several known issues with task specifications and evaluation metrics (Zhu et al., 2025a). We will expand to complete benchmark versions in upcoming releases.   Incomplete evaluation matrix. We report 142 model-scaffold-benchmark combinations in our analysis (Section 4) from a total of 186 runs.",
+    "score": 0.5840891051498992,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 21
+   },
+   {
+    "text": "These unique characteristics demand purpose-built infrastructure that tracks not just what agents output, but how they achieve it, what they cost, and where they break. HAL provides this infrastructure.   HAL contains three main components:   1. Unified evaluation harness with distributed orchestration: We develop an open source har- ness that standardizes agent evaluation across diverse benchmarks. The harness is framework- agnostic, requiring light-weight modifications to integrate scaffolds, while automatically instru- menting cost tracking, logging all API calls, and capturing complete execution traces (Sec- tion 2). Through orchestration across hundreds of virtual machines, we reduce evaluation time from weeks to hours (Challenge #1). The system handles heterogeneous execution environ- ments, from web browsers to code repositories (Challenge #2), through a unified interface that researchers can invoke with a single command to update leaderboards (Challenge #3).   2. Multidimensional leaderboard with large-scale evaluation results: We conduct 21,730 agent rollouts spanning 9 benchmarks and 9 models, costing about $40,000 in compute (Sections 3 and 4.1). Our leaderboard tracks performance across three dimensions: agent scaffolds, mod-   Evaluations conducted in prior work Evaluations conducted in the Holistic Agent Leaderboard   Benchmark Clau de Opus 4.1   Clau de Opus 4.1   High   Clau de-3   .7 Son   net   Clau",
+    "score": 0.5680089249754409,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 2
+   },
+   {
+    "text": "Holistic Agent Leaderboard   HOLISTIC AGENT LEADERBOARD: THE MISSING INFRASTRUCTURE FOR AI AGENT EVALUATION   Sayash Kapoor*# Benedikt Stroebl* Peter Kirgis Nitya Nadgir Zachary S Siegel Boyi Wei Tianci Xue Ziru Chen Felix Chen Saiteja Utpala Franck Ndzomga Dheeraj Oruganty Sophie Luskin Kangheng Liu Botao Yu Amit Arora Dongyoon Hahm Harsh Trivedi Huan Sun Juyong Lee Tengjun Jin Yifan Mai Yifei Zhou Yuxuan Zhu Rishi Bommasani Daniel Kang Dawn Song Peter Henderson Yu Su Percy Liang Arvind Narayanan#   ABSTRACT   AI agents have been developed for complex real-world tasks from coding to cus- tomer service. But AI agent evaluations suffer from many challenges that under- mine our understanding of how well agents really work (Figure 1). We introduce the Holistic Agent Leaderboard (HAL) to address these challenges. We make three main contributions. First, we provide a standardized evaluation harness that orchestrates parallel evaluations across hundreds of VMs, reducing evalua- tion time from weeks to hours while eliminating common implementation bugs. Second, we conduct three-dimensional analysis spanning models, scaffolds, and benchmarks.",
+    "score": 0.5323848920905544,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d30ebe18-03d4-41bf-9285-230d2880577c",
+  "X-Amzn-Trace-Id": "Root=1-6b080447-4587336663c8e26952dc3d33;Parent=5d80477a37f4a511;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.314
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:54+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the Holistic Agent Leaderboard (HAL) paper, what limitation is noted about the latency data collected during massively parallel evaluations?"
+ },
+ "from_cache": false
+}

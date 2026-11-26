@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.313,
+ "json": {
+  "query": "In AgentSociety 2, which dataset supplies daily mobility ground‑truth data for Beijing, and what specific mobility indicators does it contain?",
+  "contexts": [
+   {
+    "text": "F.1 Summary   • Dataset name: AgentDojo   • Dataset link: https://github.com/ethz-spylab/agentdojo   • Datacard author: Edoardo Debenedetti, ETH Zurich   F.2 Authorship   F.2.1 Publishers   • Publishing organizations: ETH Zurich, Invariant Labs   • Industry types: Academic - Tech, Corporate - Tech   • Contact details:   – Publishing POC: Edoardo Debenedetti – Affiliation: ETH Zurich – Contact: edoardo.debenedetti@inf.ethz.ch   F.2.2 Dataset Owners   • Contact details:   – Dataset Owner: Edoardo Debenedetti – Affiliation: ETH Zurich – Contact: edoardo.debenedetti@inf.ethz.ch   • Authors:   – Edoardo Debenedetti, ETH Zurich – Jie Zhang, ETH Zurich – Mislav Balunovic, ETH Zurich and Invariant Labs – Luca Beurer-Kellner, ETH Zurich and Invariant Labs – Marc Fischer, ETH Zurich and Invariant Labs – Florian Tramèr, ETH Zurich   F.2.3 Funding Sources   No institution provided explicit funding for the creation of this benchmark.",
+    "score": 0.4373374896499604,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 23
+   },
+   {
+    "text": "AgenticData outperformed baselines on DABStep, Spider-2.0-Lite and Real-Bank, because our effective memory mechanism reduced the steps of planning. However, CodeAgent was faster because it lacked precise data profiling process, but it had lower accuracy.   7.6 Customer Real Use Cases We evaluated the performance of AgenticData in real-world cus- tomer scenarios. At the State Grid Corporation of China, AgenticData supported electrical load pressure analysis and marketing analytics on heterogeneous data comprising hundreds of structured tables (with thousands columns) and tens of thousands of documents, achieving 91% accuracy on over 200 questions, which was 30-40% better than directly using LLMs and the ReAct agent framework. At the Postal Savings Bank of China, AgenticData replaced the traditional BI system and answered ad-hoc complex analytical queries from all subsidiary managers. These queries involved com- plex data analysis and insights tasks on heterogeneous data, and AgenticData achieved 92% accuracy across 300 tasks, which was 35% better than the ReAct agent framework.   Table 2: Average Latency.",
+    "score": 0.43295142985936497,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 12
+   },
+   {
+    "text": "Specifically, the evaluation metric is “success rate” for ALFWorld and M3ToolEval, “task score (defined as the average reward obtained across episodes)” for Webshop, “progress rate” for SciWorld and PDDL, and “micro pass rate” for TravelPlanner.   Baselines. We compare AgentSquare with four types of baselines:   • Hand-crafted agents. We compare with 12 hand-crafted agents including CoT (Wei et al., 2022), CoT-SC (Wang et al., 2023a), Self-refine (Madaan et al., 2024), ToT (Yao et al., 2024), Step back (Zheng et al., 2024), Thought propagation (Yu et al., 2024), HuggingGPT (Shen et al., 2024), Voyager (Wang et al., 2024a), Generative Agents (Park et al., 2023), DEPS (Wang et al., 2024c), OPENAGI (Ge et al., 2024)and Dilu (Wen et al., 2024).   • Module search methods. We compare with two module-level agent optimization methods in- cluding the random combination of existing modules and Bayesian (Zhou et al., 2019) module combination optimization inspired by Bayesian optimization in NAS (White et al., 2021).",
+    "score": 0.4309814351299216,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 15
+   },
+   {
+    "text": "Construction and evaluation prompts are in Appendix C; the human review of constructed factors is in Appendix D. Unless stated otherwise, construction and checking were carried out by language models under written rules. In the archived material, recorded human screening of individual candidates is available only for the initial random- ized study. The expanded protocol described in Section 4 has no corresponding item-level archive in this package; other archived study factors were checked by models.   A.1 SOURCE DATA   All studies use the Chinese task and persona files of PDR-Bench (Liang et al., 2026b) from the archived repository revision. The query mapping is used only to identify which source users are paired with a task; conversation histories, English source files, and the PDR evaluation criteria are not supplied to constructors or agents. PDR-Bench’s source participants belong to the source dataset and are distinct from reviewers or annotators in this work. Tasks exposed in earlier development studies are excluded from the main-study roster before construction. In the main study, the agent receives one user message containing the task text, a shared user background, and the endpoint sentence(s), separated by line breaks (Appendix B). Recorded attempts use this frozen task-and-user message. In the exploratory study, the message also began with a research reference date; any task-specific date clarification was applied identically across the paired conditions.",
+    "score": 0.4293727844475538,
+    "source": "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+    "page": 13
+   },
+   {
+    "text": "Experimental results on widely-used benchmarks demonstrate that AgenticData significantly outperformed state-of-the-art base- lines. AgenticData has been deployed in real data analysis appli- cations within banks and power grid companies.   12REFERENCES [1] Dabench. https://infiagent.github.io/. [2] Dabstep. https://huggingface.co/datasets/adyen/DABstep. [3] Real-bank. https://anonymous.4open.science/r/AgenticData-696B. [4] Spider 2. https://spider2-sql.github.io. [5] Wiki. https://dumps.wikimedia.org/. [6] E. Anderson, J. Fritz, A. Lee, B. Li, M. Lindblad, H. Lindeman, A. Meyer, P. Parmar,   T. Ranade, M. A. Shah, et al. The design of an llm-powered unstructured analytics system. arXiv preprint arXiv:2409.00847, 2024.   [7] A. Biswal, L. Patel, S. Jha, A. Kamsetty, S. Liu, J. E. Gonzalez, C. Guestrin, and M. Zaharia. Text2sql is not enough: Unifying ai and databases with tag. In CIDR, 2025.",
+    "score": 0.4285488700090613,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 12
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c28e05e8-1031-4931-82cb-cb4374e1a37e",
+  "X-Amzn-Trace-Id": "Root=1-6b080441-688db0124af87cc227d45312;Parent=75bdd7ce83976b9a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.313
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:49+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In AgentSociety 2, which dataset supplies daily mobility ground‑truth data for Beijing, and what specific mobility indicators does it contain?"
+ },
+ "from_cache": false
+}

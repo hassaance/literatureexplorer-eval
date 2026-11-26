@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.261,
+ "json": {
+  "query": "Emergence of human-like polarization among large language model agents",
+  "contexts": [
+   {
+    "text": "Emergence of polarization in networks of large language model agents Jinghua Piao1+, Zhihong Lu1+, Chen Gao1, Fengli Xu1, Qinghua Hu2, Fernando P. Santos3*, Yong Li1*, and James Evans4,5*   1Department of Electronic Engineering, Tsinghua University, Beijing National Research Center for Information Science and Technology (BNRist), Beijing, P. R. China 2College of Intelligence and Computing, Tianjin University, Tianjin, P. R. China 3Informatics Institute, University of Amsterdam, Amsterdam, the Netherlands 4Knowledge Lab, University of Chicago, Chicago, U.S.A 5Santa Fe Institute, Santa Fe, U.S.A. *To whom correspondence should be addressed; Email: f.p.santos@uva.nl, liyong07@tsinghua.edu.cn, jevans@uchicago.edu. +Jinghua Piao and Zhihong Lu contribute equally to this work.   ABSTRACT   Rapid advances in large language models (LLMs) have not only empowered autonomous agents to generate social networks, communicate, and form shared and diverging opinions on political issues, but have also begun to play a growing role in shaping human political deliberation. Our understanding of their collective behaviours and underlying mechanisms remains incomplete, however, posing unexpected risks to human society.",
+    "score": 0.707087213703854,
+    "source": "176 - Emergence of human-like polarization among large language model agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "% CI = [0.021,0.059]. In this synthetic testbed, individual-level strategies are associated with larger observed reductions in polarization than network-level interventions.   20/72Supplementary information for Emergence of polarization in networks of large language model agents Jinghua Piao1,+, Zhihong Lu1,+, Chen Gao1, Fengli Xu1, Qinghua Hu2, Fernando P. Santos3,∗, Yong Li1,∗, and James Evans4,5,∗   1Department of Electronic Engineering, Tsinghua University, Beijing National Research Center for Information Science and Technology (BNRist), Beijing, P. R. China   2College of Intelligence and Computing, Tianjin University, Tianjin, P. R. China 3Informatics Institute, University of Amsterdam, Amsterdam, the Netherlands 4Knowledge Lab, University of Chicago, Chicago, U.S.A. 5Santa Fe Institute, Santa Fe, U.S.A. ∗Correspondence: f.p.santos@uva.nl, liyong07@tsinghua.edu.cn, jevans@uchicago.edu. +Jinghua Piao and Zhihong Lu contributed equally to this work.Contents   1 Supplementary Methods: A Networked System of Large Language Model Agents 23 1.1 System Description . . . . . . . . . . . . . . . .",
+    "score": 0.6229892128116303,
+    "source": "176 - Emergence of human-like polarization among large language model agents.pdf",
+    "page": 20
+   },
+   {
+    "text": "ABSTRACT   Rapid advances in large language models (LLMs) have not only empowered autonomous agents to generate social networks, communicate, and form shared and diverging opinions on political issues, but have also begun to play a growing role in shaping human political deliberation. Our understanding of their collective behaviours and underlying mechanisms remains incomplete, however, posing unexpected risks to human society. In this paper, we simulate networked systems involving thousands of LLM agents across different backbone models (GPT-3.5, GPT-4o, ChatGLM, Llama-3, and DeepSeek-V3), in which agents interact through LLM-guided conversations and update their opinions over time, resulting in the emergence of opinion polarization. We discover that these agents spontaneously develop their own social network with properties characteristic of human social networks, including homophilic clustering. The collective opinions of these LLM agents evolve in ways that exhibit behavioural patterns consistent with social phenomena and mechanisms widely discussed in studies of human behaviour. Overall, these behaviours, patterns, and emergent phenomena produced by LLM agents are consistent with real-world observations and established opinion-dynamics models. This consistency suggests that LLM agents can serve as a valuable synthetic testbed for exploring hypothetical intervention strategies in networked LLM-agent systems.",
+    "score": 0.5966384477656823,
+    "source": "176 - Emergence of human-like polarization among large language model agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "4.033, 95% CI = [0.022,0.042], and (f) t(10) = 4.02, p = .002 < .01, Cohen’s d = 2.324, 95% CI = [0.051,0.177], t(10) = 4.78, p < .001, Cohen’s d = 2.760, 95% CI = [0.021,0.059]. In this synthetic testbed, individual-level strategies are associated with larger observed reductions in polarization than network-level interventions.   20/72Supplementary information for Emergence of polarization in networks of large language model agents Jinghua Piao1,+, Zhihong Lu1,+, Chen Gao1, Fengli Xu1, Qinghua Hu2, Fernando P. Santos3,∗, Yong Li1,∗, and James Evans4,5,∗   1Department of Electronic Engineering, Tsinghua University, Beijing National Research Center for Information Science and Technology (BNRist), Beijing, P. R. China   2College of Intelligence and Computing, Tianjin University, Tianjin, P. R. China 3Informatics Institute, University of Amsterdam, Amsterdam, the Netherlands 4Knowledge Lab, University of Chicago, Chicago, U.S.A. 5Santa Fe Institute, Santa Fe, U.S.A.",
+    "score": 0.5819664189892674,
+    "source": "176 - Emergence of human-like polarization among large language model agents.pdf",
+    "page": 20
+   },
+   {
+    "text": "As shown in Figure S1, we find that the polarization patterns in the regulated networked system of LLM agents are similar to those in human society, with an average difference of 0.21. Given the average difference among all the empirical datasets is 0.45 (0.49 if Twitter-Gun Control and Twitter-Abortion are   26/72excluded), the difference between the empirical and simulated results is small. This suggests a strong similarity between the polarization observed among LLM agents and that seen among humans.   a   b   Figure S1. Comparison between empirical and simulated opinion distributions. a, Empirical results, where Twitter-Politics is based on Flamino et al. [10], Twitter-Gun Control and Twitter-Abortion are based on Cinelli et al. [7]. b, Simulation results of self-regulated networked systems. Here we take a coarsen division of left-leaning, neutral, and right-leaning camps.   Some researchers explore the underlying mechanisms behind the emergence of polarization [7–9, 14]. As studied in prior works [7–10, 14, 19–25], many social mechanisms are proposed from the perspective of individuals: selective exposure [19], confirmation bias [20], elite signaling [10, 21, 22], exaggerated misperception [23], objective illusion [24], and steoreotyping [25].",
+    "score": 0.5669286911087046,
+    "source": "176 - Emergence of human-like polarization among large language model agents.pdf",
+    "page": 26
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "22405ed9-e615-4273-94c2-8e837bd7b8e3",
+  "X-Amzn-Trace-Id": "Root=1-6b080517-736910ca25faf0aa3e6d1303;Parent=2158ece5ea34ed58;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.261
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:22+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Emergence of human-like polarization among large language model agents"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,35 @@
+{
+ "status": 400,
+ "latency_s": 0.043,
+ "json": {
+  "error": {
+   "message": "messages must contain a user message"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "85436ddf-b829-41fd-9b34-7071f53c8091",
+  "X-Amzn-Trace-Id": "Root=1-6b080547-6a7ed9b86be17fb4014acad7;Parent=443d4e95d07bc874;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 400,
+   "latency_s": 0.043
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:11+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "err_empty_content",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": ""
+   }
+  ]
+ },
+ "from_cache": false
+}

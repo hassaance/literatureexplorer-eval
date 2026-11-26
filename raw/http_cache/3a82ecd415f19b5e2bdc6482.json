@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.374,
+ "json": {
+  "query": "RescueBench: Can Embodied Agents Save Lives in the Wild?",
+  "contexts": [
+   {
+    "text": "RescueBench: Can Embodied Agents Save Lives in the Wild?   Kui Wu1,5 Beiyu Guo 4   Hao Chen 4   ShuHang Xu2,5 Yuling Li2,5 Yongdan Zeng2,5   Zhoujun Li1 Yizhou Wang3 Fangwei Zhong2 B   1Beihang University 2Beijing Normal University 3Peking University 4City University of Macau 5ATEC2025 Challenge Committee   wukui@buaa.edu.cn, fangweizhong@bnu.edu.cn   Progressive Difficulty   Env. complexity Clue ambiguity spatial hierarchy   1 Search   2 Rescue   3 Return   4 HandOff   Task Challenges   Semantic Reasoning   3D Spatial State Estimation   Compositional Generalization   Level1 Level2 Level3 Level4 Level5   Text Clue Image Clue   Initial clue   Figure 1: RescueBench comprises four sequentially dependent stages: multimodal explore (S1), locate and rescue target (S2), memory-guided return (S3), and locate and handoff (S4). This sequential composition exposes cascading failure modes absent in existing benchmarks. Five progressive difficulty levels vary along environmental complexity, clue ambiguity, and spatial hierarchy.",
+    "score": 0.6847188171058246,
+    "source": "153 - RescueBench Can Embodied Agents Save Lives in the Wild.pdf",
+    "page": 1
+   },
+   {
+    "text": "Multi-modal Clue   #1 #2 #3   #4#5#6   Ego-Centric Observations   Embodied Rescue in the Loop   Figure 2: A complete L4 episode: the agent explores from an outdoor area, opens a door to traverse indoors (bottom inset) (S1), locates the injured person (S2), returns through the same path (S3), and completes handoff at the stretcher zone (S4).   agents successfully locate the target, they frequently fail to return to the ambulance, revealing that the capability deficit extends beyond exploration. Unlike benchmarks that measure each capability in isolation, RescueBench measures the composite capability, whether an agent can sustain exploration, interaction, and memory retrieval in sequence, which is the prerequisite for any multi-stage SAR deployment. RescueBench thus provides the diagnostic infrastructure to pinpoint where and why embodied agents fail, exposing capability gaps that only emerge under sequential task composition.   2 RescueBench   RescueBench is a photo-realistic embodied AI benchmark designed to evaluate whether current agents can execute the full search-and-rescue pipeline in unstructured environments.",
+    "score": 0.6337141562524009,
+    "source": "153 - RescueBench Can Embodied Agents Save Lives in the Wild.pdf",
+    "page": 3
+   },
+   {
+    "text": "We introduce RescueBench through three components: (i) a four-stage sequential task definition that mirrors real- world SAR protocols and isolates exploration, approach navigation, and spatial memory capabilities; (ii) five progressive difficulty levels that systematically vary environmental complexity, clue ambiguity, and spatial hierarchy; and (iii) a scalable automatic data collection pipeline built on Unreal Engine 5. The design intentionally decouples evaluation from manipulation limitations through environment- assisted interaction triggering, ensuring that failure diagnosis reflects architectural gaps in navigation and exploration rather than manipulation primitives. The following sections detail each component.   2.1 Task Definition   We formulate search-and-rescue as a four-stage sequential task that mirrors the real-world SAR pipeline. An ambulance with a stretcher (home base) is positioned at pamb ∈ E , and an injured target at ptar ∈ E . A single agent, acting as the primary rescuer, is tasked with all physical interactions. The formulation naturally generalizes to heterogeneous multi-agent configurations (Appendix E), but we currently focus on the single-agent setting for fine-grained evaluation.",
+    "score": 0.5533138777262321,
+    "source": "153 - RescueBench Can Embodied Agents Save Lives in the Wild.pdf",
+    "page": 3
+   },
+   {
+    "text": "Abstract   Search-and-rescue (SAR) requires embodied agents to explore unfamiliar environ- ments under multimodal uncertainty, perform multi-stage interactions, and retrieve spatial memory over long horizons. Existing benchmarks typically evaluate these capabilities in isolation, leaving unclear how failures compound when they must be composed in realistic workflows. We introduce RescueBench, a photo-realistic diagnostic benchmark that instantiates SAR as a four-stage pipeline: multimodal exploration, target rescue, memory-guided return, and final handoff. By combining sequential task composition with stage-level evaluation, RescueBench enables anal- ysis of how exploration and memory failures propagate through embodied rescue workflows. It contains five progressive difficulty levels that vary in environmental complexity, clue ambiguity, and spatial hierarchy, along with an automatic episode generation and annotation pipeline for scalable evaluation and training. We evaluate seven baselines, an oracle reference, and human players, showing that no baselines complete the full task at the greatest difficulty. Stage-level diagnosis identifies autonomous exploration as the dominant failure mode and spatial memory as a second, independent bottleneck, suggesting that these limitations are not resolved by current topological visual-language navigation or map-based methods. Code is available in https://github.com/UnrealZoo/RescueBench.   Preprint.",
+    "score": 0.5531642818406454,
+    "source": "153 - RescueBench Can Embodied Agents Save Lives in the Wild.pdf",
+    "page": 1
+   },
+   {
+    "text": "Environment Interaction?   Ego-centric observation   Instruction Generation   Text Clue There is a injured women on the first floor of this building directly in front of you. Please find this person and carry him/her to the yellow ambulance stretcher.   +   Difficulty Validation✅ Level(1-5)   Image Clue   Figure 4: Scalable data collection pipeline. Given environment assets and a UE5 navigation mesh, the pipeline automates episode generation and annotation in four steps: (1) candidate spawn zones are extracted from the navigation mesh; (2) ambulance, target, and agent positions are sampled under level-specific constraints; (3) a navmesh-driven agent executes the task while trajectories and interaction annotations are recorded; (4) validation rules enforce difficulty consistency, and multimodal clues are generated from the agent’s egocentric observations via a VLM (Qwen-3.5 plus).   2.3 Environments and Simulator   RescueBench is built on UnrealZoo [14], a UE5-based platform providing photo-realistic environ- ments with built-in rendering control via UnrealCV [19]. From this pool, we select 7 representative scenes spanning residential, commercial, outdoor street, and natural terrain, with layouts ranging from single-floor flat to multi-level structures. All rescue-specific components (task execution logic, interaction systems, SAR action mappings) are built from scratch.",
+    "score": 0.5442592178196809,
+    "source": "153 - RescueBench Can Embodied Agents Save Lives in the Wild.pdf",
+    "page": 5
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a1b00bb3-292c-4e13-a873-69c5d13ade60",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-677b628e1fa4bc326977562c;Parent=10f6ed7bae2e89a8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.374
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "RescueBench: Can Embodied Agents Save Lives in the Wild?"
+ },
+ "from_cache": false
+}

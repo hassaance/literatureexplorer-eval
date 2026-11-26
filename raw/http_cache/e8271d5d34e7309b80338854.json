@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.258,
+ "json": {
+  "query": "Tool Receipts, Not Zero-Knowledge Proofs: Practical Hallucination Detection for AI Agents",
+  "contexts": [
+   {
+    "text": "Tool Receipts, Not Zero-Knowledge Proofs:   Practical Hallucination Detection for AI Agents   Abhinaba Basu mail@abhinaba.com   Abstract   AI agents that execute tasks via tool calls frequently hallucinate results—fabricating tool ex- ecutions, misstating output counts, or presenting inferences as verified facts. Recent approaches to verifiable AI inference rely on zero-knowledge proofs (Wang et al., 2026; Sun et al., 2024), which provide cryptographic guarantees but impose minutes of proving time per query, making them impractical for interactive personal agents. We propose NabaOS, a lightweight verifica- tion framework inspired by Indian epistemology (Nyāya Śāstra), which classifies every claim in an LLM response by its epistemic source (pramān. a): direct tool output (pratyaks.a), inference (anumāna), external testimony (śabda), absence (abhāva), or ungrounded opinion. Our runtime generates HMAC-signed tool execution receipts that the LLM cannot forge, then cross-references LLM claims against these receipts to detect hallucinations in real time.   We evaluate on NyayaVerifyBench, a new benchmark of 1,800 agent response scenarios across four languages with injected hallucinations of six types.",
+    "score": 0.7275962534197657,
+    "source": "174 - Tool Receipts, Not Zero-Knowledge Proofs Practical Hallucination Detection for AI Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "NabaOS is complementary—it could in principle be composed with ZK proofs to achieve both computational and semantic verification.   2.2 Hallucination Detection   Hallucination detection in LLMs has been extensively studied (Ji et al., 2023). VerifierQ (Qi et al., 2025) trains Q-learning-based verifiers that learn to assess factual correctness through reward sig- nals. SVIP (Sun et al., 2025) trains a learned inspector model to detect tampering and hallucination in LLM outputs. Self-consistency checking (Wang et al., 2023) samples multiple responses from the LLM and flags claims that are not stable across samples, achieving moderate detection rates but doubling or tripling inference cost. Chain-of-verification (Dhuliawala et al., 2023) prompts the   3model to generate its own verification questions and answer them, relying on the model’s abil- ity to detect its own errors. Retrieval-augmented generation (RAG) (Lewis et al., 2020) grounds generation in retrieved documents, reducing but not eliminating hallucination.   These methods operate at the linguistic or statistical level: they analyze the text of the response. NabaOS operates at the execution level: it analyzes the tool execution trace.",
+    "score": 0.5583829873541212,
+    "source": "174 - Tool Receipts, Not Zero-Knowledge Proofs Practical Hallucination Detection for AI Agents.pdf",
+    "page": 3
+   },
+   {
+    "text": "HMAC-signed tool execution receipts that provide unforgeable proof of tool invocation and output, enabling deterministic hallucination detection for fabricated tool calls and mis- statements (Section 3.2).   3. A cross-checking protocol for deep agent (autonomous) results that independently verifies URLs, replays computations, and checks temporal consistency (Section 3.5).   4. NyayaVerifyBench, a multilingual benchmark of 1,800 agent response scenarios with six hallucination types across four languages (Section 4).   5. An empirical demonstration that trust-level indicators derived from pramān. a classifica- tion are well-calibrated, with “Fully Verified” responses being correct 98.7% of the time (Sec- tion 5.5).   2 Related Work   2.1 Verifiable AI Inference   The problem of verifying that an AI system performed the computation it claims has attracted significant cryptographic attention. zkLLM (Sun et al., 2024) constructs end-to-end zero-knowledge proofs for LLM inference, enabling a verifier to confirm that a specific model produced a given output. However, the computational overhead is extreme: thousands of times slower than plain inference, restricting applicability to offline auditing. zkAgent (Wang et al., 2026) extends this paradigm to agentic settings with one-shot proofs, reducing overhead substantially but still requiring minutes per query and specialized hardware.",
+    "score": 0.5070474824194119,
+    "source": "174 - Tool Receipts, Not Zero-Knowledge Proofs Practical Hallucination Detection for AI Agents.pdf",
+    "page": 3
+   },
+   {
+    "text": "• Hallucination. The contemporary conception of hallucination in LLM agents, as delineated in the research by [36], is defined as instances where the output produced by these models is either inconsistent with or unreliable in relation to the input or source content provided. This issue primarily arises from the LLM Engine and Knowledge components, where errors occur during language generation or when retrieving and composing factual content. The phenomenon of hallucinations in LLM agents is a complex issue stemming from multiple stages of the model’s development process, including the nature of training data, the architectural design of the model, and the strategies employed during decoding. Several factors contribute to hallucination. Misinformation and biases in both LLM Engine component training data and Knowledge component data can lead to the generation of inaccurate or biased outputs, which in turn result in different types of hallucinations [44]. Furthermore, flaws in the model’s architecture, such as limited directional representation and issues with attention mechanisms, along with exposure bias, further contribute to the occurrence of hallucinations [49]. Additionally, the randomness inherent   Proc. ACM Meas. Anal. Comput. Syst., Vol. 37, No. 4, Article 111. Publication date: August 2018.111:10 • Feng He, Tianqing Zhu, Dayong Ye, Bo Liu, Wanlei Zhou, and Philip S.",
+    "score": 0.5011707774568119,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 9
+   },
+   {
+    "text": ": \"Define AI hallucination and AI bias\", \"weight\": 0.14285714285714285, \"examples\": [ \"factually incorrect, nonsensical, or misleading outputs   despite appearing confident in their responses\",↪→ \"when an LLM generates content that does not correspond to   reality, producing outputs that are coherent and grammatically correct but factually incorrect or nonsensical\",   ↪→ ↪→ ↪→ \"AI systems generate outputs that are misleading, biased, or   entirely fabricated, despite appearing convincingly real\",↪→ \"systematic errors or skewed outputs stemming from imbalances   in training data, model architecture, or deployment context\",   ↪→ ↪→ \"an inclination or prejudice for or against a person or group,   especially in a way considered unfair\",↪→ \"prejudiced or unfair outcomes due to skewed training data or   flawed algorithmic design\"↪→ ]   }, { \"name\": \"answer_critical_1\", \"criterion\": \"Explain shared root causes linking hallucination   and bias, particularly training data issues\",↪→ \"weight\": 0.14285714285714285, \"examples\": [   57Published as a conference paper at ICLR 2026   \"biased training data\", \"Both originate from the inherent reliance on statistical   pattern matching over true semantic understanding\",↪→ \"Incomplete or biased data can lead to AI models",
+    "score": 0.49987229986922505,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 57
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "37f19663-b278-4fee-adc3-3a748dbb4683",
+  "X-Amzn-Trace-Id": "Root=1-6b080516-504cd8cc3c604c260ac2fee4;Parent=7c2cf03a11fe6b03;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.258
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:22+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Tool Receipts, Not Zero-Knowledge Proofs: Practical Hallucination Detection for AI Agents"
+ },
+ "from_cache": false
+}

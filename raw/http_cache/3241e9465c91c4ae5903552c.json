@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.261,
+ "json": {
+  "query": "ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality",
+  "contexts": [
+   {
+    "text": "ShadAR: Real-time Prompting On-demand Visual Aug- mentation in Augmented Reality. In The 39th Annual ACM Symposium on User Interface Software and Technology (UIST ’26), November 02–05, 2026, Detroit, MI, USA. ACM, New York, NY, USA, 14 pages. https://doi.org/10. 1145/3830398.3830534   1 Introduction Visual perception is a central interface between a person and the real world. Augmented Reality (AR) can intervene in this interface by computationally modifying the passthrough feed that mediates how users see the world, known as “visual augmentation” [14]. Prior work explored different use cases of AR visual augmentation, such as recoloring real-world objects to compensate for colorblind- ness [6], or blurring distractions to support focus [9]. However, these visual effects are predefined by experts for specific usages. While effective in their intended scenarios, this approach might not suit the diverse and unpredictable needs that arise in future EverydayAR[33], where people use AR in many different contexts and tasks. During a day, a user may require various visual augmen- tations, ranging from increased contrast in low-light conditions, to edge enhancement during manual work, to blurred distractions for reading. To address such diverse needs, it requires visual aug- mentations to be created and adjusted by users on demand and in real time.",
+    "score": 0.7857004821596842,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 2
+   },
+   {
+    "text": "ShadAR can graphically manipulate AR passthrough real-time via shader injection. When receiving a user’s prompt, ShadAR uses LLMs (GPT5.2) to interpret the user’s intent, analyzes the user’s view with object detection (YOLOv26), generates a pixel shader, and applies it to the targeted region on AR passthrough. To understand usage pattern, we invited 21 HCI researchers to use ShadAR, identifying four application domains (design, health, productivity, and social interaction) and two prompt- framing patterns: procedural prompts specifying what to modify and how (“Highlight the book.” ), and end-goal prompts conveying desired mental/behavioral states (“Make me laugh.” ). Such end-goal prompts suggest a future in which users specify outcomes (e.g., “Make me not miss my flight” ) while the system determines how to realize them, though often with inherently indeterminate results. We discuss design opportunities for ShadAR and ethical concerns.   CCS Concepts • Human-centered computing → Mixed / augmented reality.   Keywords Augmented Reality, Shader, Visual Augmentation, Code Generation, Large Language Model   ACM Reference Format: Yanni Mei, Samuel Hartenstein, Jonas Wombacher, Florian Mueller, and Jan Gugenheimer. 2026. ShadAR: Real-time Prompting On-demand Visual Aug- mentation in Augmented Reality.",
+    "score": 0.7088306242996997,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 2
+   },
+   {
+    "text": "ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality   Yanni Mei yanni.mei@tu-darmstadt.de   TU Darmstadt Darmstadt, Germany   Samuel Hartenstein samuel.hartenstein@stud.tu-   darmstadt.de TU Darmstadt   Darmstadt, Germany   Jonas Wombacher jonas.wombacher@tu-darmstadt.de   TU Darmstadt Darmstadt, Germany   Florian Mueller florian.mueller@tu-darmstadt.de   TU Darmstadt Darmstadt, Germany   Jan Gugenheimer jan.gugenheimer@tu-darmstadt.de   TU Darmstadt Darmstadt, Germany   Figure 1: ShadAR lets AR users verbally request visual augmentations (e.g., \"Turn the book into dark mode\") and uses LLMs to generate shaders with object detection to modify their view. Other examples: (B) simulating color blindness; (C) applying a sketch-style filter to the room; (D) enlarging a stop sign; and (E) drawing a line between two hands to show the distance   This work is licensed under a Creative Commons Attribution-NonCommercial- NoDerivatives 4.0 International License.",
+    "score": 0.7076531191243419,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 1
+   },
+   {
+    "text": "UIST ’26, Detroit, MI, USA   Abstract Augmented Reality can reshape our visual perception (e.g., simulat- ing color blindness) yet such effects are typically pre-programmed   © 2026 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-2856-3/2026/11 https://doi.org/10.1145/3830398.3830534   ar X   iv :2   61 0.   19 99   8v 1   [ cs   .H C   ] 1   4 O   ct 2   02 6         https://creativecommons.org/licenses/by-nc-nd/4.0        https://creativecommons.org/licenses/by-nc-nd/4.0        https://creativecommons.org/licenses/by-nc-nd/4.0        https://doi.org/10.1145/3830398.3830534        https://arxiv.org/abs/2610.19998v1UIST ’26, November 02–05, 2026, Detroit, MI, USA Mei et al.   by experts, making visual augmentation static and inflexible. We introduce ShadAR, an AR system that allows users to describe expected visual augmentations (e.g., \"Blur all people\") for chang- ing their vision in real time.",
+    "score": 0.6387011763645309,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 1
+   },
+   {
+    "text": "For example, if a user says “highlight this person in red,” and another person later en- ters the view, the system cannot tell which person was originally re- ferred to, and highlights both. To address this, we are considering in- tegrating an instance-aware segmentation model (e.g., SAM 3 [21]) to assign persistent, instance-level IDs (e.g., helmet 1/2/3). ThisShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality UIST ’26, November 02–05, 2026, Detroit, MI, USA   would also require more context-aware LLM prompting to resolve ambiguous user references (e.g., understanding that \"this helmet\" refers to helmet 1).   Limited visual transformation capabilities. From the study, we found prompts that are difficult to achieve with shaders alone, such as style transfer or inpainting for diminished reality. As the next step of ShadAR, we have started to extend our current proto- type to include a ComfyUI pipeline for real-time image generation. However, current performance results in low FPS and unstable con- sistency between frames, which we aim to improve in future work. In Fig. 6, we illustrate different results produced by a style transfer prompt “See the world in the style of Van Gogh”, when using shader generation compared to our ongoing image generation pipeline.",
+    "score": 0.6217996972392961,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e353abd0-23c7-4fcc-ab67-2fc08475ff9b",
+  "X-Amzn-Trace-Id": "Root=1-6b08050f-3a5dfa8132466368535e1faf;Parent=23e49e4a0daf94ac;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.261
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:15+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ShadAR: Real-time Prompting On-demand Visual Augmentation in Augmented Reality"
+ },
+ "from_cache": false
+}

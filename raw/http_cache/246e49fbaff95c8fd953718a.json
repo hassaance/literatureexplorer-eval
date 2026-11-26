@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.366,
+ "json": {
+  "query": "PaperBanana: Automating Academic Illustration for AI Scientists",
+  "contexts": [
+   {
+    "text": "Comprehensive experiments on our benchmark demonstrate the effectiveness of PaperBanana. Our method consistently outperforms leading baselines across all four evaluation dimensions— faithfulness (+2.8%), conciseness (+37.2%), readability (+12.9%), and aesthetics (+6.6%)—as well as the aggregated overall score (+17.0%) for diagram generation. We further show that our method also seamlessly extends to statistical plots. Collectively, our method paves the way for automating the generation of academic illustrations (Examples shown in Figure 1). As a demonstration of its capability, figures marked with in this manuscript were entirely generated using PaperBanana. Additionally, we discuss intriguing settings including using our framework to enhance existing human- created illustrations and using image generation models for statistical plot generation. To sum up, our contributions are:   2PaperBanana: Automating Academic Illustration for AI Scientists   • We propose PaperBanana, a fully automated agentic framework that orchestrates specialized agents to generate publication-ready academic illustrations.   • We construct PaperBananaBench to assess the quality of academic illustrations, particularly methodology diagrams.   • Comprehensive experiments show that our workflow significantly outperforms leading baselines, showing promise for automating the generation of academic illustrations.   2. Task Formulation   We formalize the task of automated academic illustration generation as learning a mapping from a source context and a communicative intent to a visual representation.",
+    "score": 0.8902016383290411,
+    "source": "098 - PaperBanana Automating Academic Illustration for AI Scientists.pdf",
+    "page": 2
+   },
+   {
+    "text": "This paradigm shifts the focus from single-shot generation to a generate-and-select workflow, enabling either human users or VLM-based preference models to select the illustration that best aligns with their specific requirements.   Extension to Broader Domains. Beyond academic illustrations, our framework establishes a gener- alizable paradigm: leveraging retrieval to instruct the model on what to generate (target diagram types) and employing automatic style summarization to teach it how to generate (stylistic norms). By effectively decoupling structural planning from aesthetic rendering, this reference-driven approach bypasses the need for expensive domain-specific fine-tuning. We believe this paradigm holds signifi- cant promise for other specialized domains requiring strict adherence to community standards, such as UI/UX design, patent drafting, and industrial schematics.   Acknowledgements   We thank all members of Google Cloud AI Research for their valuable support during the project. We also thank Yuhang and Ali for the thoughtful discussion.   12PaperBanana: Automating Academic Illustration for AI Scientists   Impact Statement   This paper introduces PaperBanana, a framework designed to automate the generation of academic illustrations. Our goal is to democratize access to high-quality visual communication tools, particularly benefiting researchers who may lack professional design resources. By reducing the manual effort required for diagram creation, we aim to accelerate the scientific workflow.",
+    "score": 0.7970332899753819,
+    "source": "098 - PaperBanana Automating Academic Illustration for AI Scientists.pdf",
+    "page": 12
+   },
+   {
+    "text": "2026-3-25   PaperBanana: Automating Academic Illustration for AI Scientists Dawei Zhu1 2 *, Rui Meng2, Yale Song2, Xiyu Wei1, Sujian Li1, Tomas Pfister2 and Jinsung Yoon2   1Peking University, 2Google Cloud AI Research https://dwzhu-pku.github.io/PaperBanana/   Despite rapid advances in autonomous AI scientists powered by language models, generating publication- ready illustrations remains a labor-intensive bottleneck in the research workflow. To lift this burden, we introduce PaperBanana, an agentic framework for automated generation of publication-ready academic illustrations. Powered by state-of-the-art VLMs and image generation models, PaperBanana orchestrates specialized agents to retrieve references, plan content and style, render images, and iteratively refine via self-critique. To rigorously evaluate our framework, we introduce PaperBananaBench, comprising 292 test cases for methodology diagrams curated from NeurIPS 2025 publications, covering diverse research domains and illustration styles. Comprehensive experiments demonstrate that PaperBanana consistently outperforms leading baselines in faithfulness, conciseness, readability, and aesthetics. We further show that our method effectively extends to the generation of high-quality statistical plots. Collectively, PaperBanana paves the way for the automated generation of publication-ready illustrations.",
+    "score": 0.796197436198484,
+    "source": "098 - PaperBanana Automating Academic Illustration for AI Scientists.pdf",
+    "page": 1
+   },
+   {
+    "text": "Conclusion   This paper introduces PaperBanana, an agentic framework designed to automate the generation of publication-ready academic illustrations. By orchestrating specialized agents—Retriever, Plan- ner, Stylist, Visualizer, and Critic—our approach transforms scientific content into high-fidelity methodology diagrams and statistical plots. To facilitate rigorous evaluation, we presented Pa- perBananaBench, a comprehensive benchmark curated from top-tier AI conferences. Extensive experiments demonstrate that PaperBanana significantly outperforms existing baselines in faith- fulness, conciseness, readability, and aesthetics, paving the way for AI scientists to autonomously communicate their discoveries with professional-grade visualizations.   9. Limitations and Future Directions   As a pioneering work, although PaperBanana achieves promising results, it inevitably faces certain limitations. This section will discuss these limitations in detail, and outline the corresponding future directions we envision.   Towards Editable Academic Illustrations. The most prominent limitation of PaperBanana lies in the raster nature of its output. Unlike vector graphics—which are preferred in academic contexts for their infinite scalability and precise detail preservation—raster images are inherently difficult to edit. While generating outputs at 4K resolution serves as a viable workaround to ensure high visual fidelity, it does not fundamentally resolve the challenge of post-generation modification. To address this, we envision three potential solutions catering to varying levels of editing needs.",
+    "score": 0.7894948328682556,
+    "source": "098 - PaperBanana Automating Academic Illustration for AI Scientists.pdf",
+    "page": 11
+   },
+   {
+    "text": "ar X   iv :2   60 1.   23 26   5v 2   [ cs   .C L   ] 2   4 M   ar 2   02 6         https://dwzhu-pku.github.io/PaperBanana/        https://dwzhu-pku.github.io/PaperBanana/        https://arxiv.org/abs/2601.23265v2PaperBanana: Automating Academic Illustration for AI Scientists   Models (LLMs) (Anthropic, 2025; Comanici et al., 2025; Liu et al., 2024; OpenAI, 2025b; Yang et al., 2025a), autonomous AI Scientists have demonstrated the potential to automate many facets of the research lifecycle, such as literature review, idea generation, and experiment iteration (Gottweis et al., 2025; Lu et al., 2024; Luo et al., 2025). Yet scientific discoveries achieve their full value only through effective communication. Despite their proficiency in textual analysis and code execution, current autonomous AI scientists struggle to visually communicate discoveries, especially for generating illustrations (diagrams and plots) that adhere to the rigorous standards of academic manuscripts.   Among these illustration tasks, generating methodology diagrams represents a significant chal- lenge, demanding both content fidelity and visual aesthetics.",
+    "score": 0.7875619298675672,
+    "source": "098 - PaperBanana Automating Academic Illustration for AI Scientists.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f3282a6f-22af-4928-b952-873fc1238b61",
+  "X-Amzn-Trace-Id": "Root=1-6b080508-23b7c8b21c7e49ab62e9ee2f;Parent=64eb8a2590015496;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.366
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:08+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "PaperBanana: Automating Academic Illustration for AI Scientists"
+ },
+ "from_cache": false
+}

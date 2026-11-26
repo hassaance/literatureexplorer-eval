@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.833,
+ "json": {
+  "id": "chatcmpl-051456ef-3c11-4f9a-9c0f-9c41271ce2fc",
+  "object": "chat.completion",
+  "created": 1795687479,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "In the Division-of-Thoughts system, a sentence embedding is derived from the language model by leveraging the local deployed Smaller-scale Language Models (SLMs) to produce sentence embeddings. A multi-layer perceptron (MLP) is then appended to the transformer module of the LLM to map the embeddings to a difficulty score."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1697,
+   "completion_tokens": 71,
+   "total_tokens": 1768
+  },
+  "contexts": [
+   {
+    "text": "For efficiency, we append a multi- layer perceptron (MLP) to the transformer module of the LLM to map the embeddings to a difficulty score. Given that both the edgeDivision-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents WWW ’25, April 28-May 2, 2025, Sydney, NSW, Australia   Subtask A   1.Subtask Difficulty Estimation   s-Task4 s-Task5 s-Task6 s-Task3 s-Task2 s-Task1   Evaluation   Subtask B   0   1   𝑰𝒏𝒅𝒆𝒙𝑻𝒐𝒌𝒆𝒏   𝑷𝒓𝒐𝒃𝑻𝒐𝒌𝒆𝒏   Reasoning   LLM   0   1   𝑰𝒏𝒅𝒆𝒙𝑻𝒐𝒌𝒆𝒏   𝑷𝒓𝒐𝒃𝑻𝒐𝒌𝒆𝒏   More Uncertainty   Extract α-quantile   Evaluate Difficulty   Subtask A   Subtask B   EASY   HARD   s-Task2   > > > > >   2.",
+    "score": 0.5283240656590944,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 4
+   },
+   {
+    "text": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents   Chenyang Shao Department of Electronic Engineering   BNRist, Tsinghua University Beijing, China   shaocy24@mails.tsinghua.edu.cn   Xinyuan Hu Department of Quantitative Theory & Methods   Emory University GA, USA   nate.hu@emory.edu   Yutang Lin Department of Electronic Engineering   Tsinghua University Beijing, China   yt-lin21@mails.tsinghua.edu.cn   Fengli Xu∗ Department of Electronic Engineering   BNRist, Tsinghua University Beijing, China   fenglixu@tsinghua.edu.cn   Abstract The rapid expansion of web content has made on-device AI as- sistants indispensable for helping users manage the increasing complexity of online tasks. The emergent reasoning ability in large language models offer a promising path for next-generation on- device AI agents. However, deploying full-scale Large Language Models (LLMs) on resource-limited local devices is challenging. In this paper, we propose Division-of-Thoughts (DoT), a collabora- tive reasoning framework leveraging the synergy between locally deployed Smaller-scale Language Models (SLMs) and cloud-based LLMs.",
+    "score": 0.4922991980940458,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "We start by solving the sub-tasks from the shallowest depth batch, running the sub-tasks within the same batch in parallel. After completing one batch, we proceed to the next. During the reasoning of a specific sub-task, only the results of its prerequisite sub-tasks, rather than all previously solved tasks, are included in the prompts, which enables efficient graph-based reasoning.   4.4 Task Allocation with Reinforced SLM For the decomposed sub-tasks, we aim to assess their difficulty based on the task descriptions and allocate either cloud-based or edge-side models for execution. Using LLMs to evaluate difficulty introduces additional inference costs and often fails to accurately as- sess the sub-task’s complexity, which motivates us to train a model specifically designed for task allocation with sentence embeddings. Sentence embeddings, which map a sentence to a fixed-size vector capturing its semantic meaning and context, have seen extensive application in natural language processing for their lightweight accessibility and the strong ability to capture sentence semantics. We can obtain a sentence embedding for each sub-task’s prompt and then map the embedding to the corresponding difficulty. Given that LLMs are already deployed on the edge side and have been shown to serve as effective sentence embedders, we plan to leverage the local deployed SLM to produce sentence embeddings.",
+    "score": 0.48706432226178414,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 4
+   },
+   {
+    "text": "To address this problem, our work draws inspiration from the fundamental economic concept of “division of labour”, which posits that breaking down complex tasks into finer components often leads to more efficient solutions by allowing collaborative part- ners to fully exploit their respective strengths. Building on this idea, we propose a novel Division-of-Thoughts (DoT) framework to fully harness the synergy between locally deployed SLMs and cloud-based LLMs through sophisticated task decomposition and optimized sub-tasks allocation. Specifically, DoT leverages a Task Decomposer, a meta-prompt that combines “chain-of-thought”-like prompting [38] with carefully curated task decomposition exam- ples. This approach taps into the inherent planning abilities of language models [35], enabling them to decompose user queries into smaller sub-tasks. Our core insight is that even complex user queries often contain a significant portion of simple sub-tasks that can be adequately handled by SLMs. Therefore, decomposing user queries can lead to optimized collaboration on sub-task level, i.e., unleashing the potential of “Division-of-Thoughts”. Moreover, DoT employs a Task Scheduler that analyzes the pair-wise dependency between sub-tasks and creates a dependency graph. This facilitates efficient and accurate scheduling by identifying parallel sub-tasks and assessing the structural importance of each task.",
+    "score": 0.4789819094656193,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "∗Corresponding author. 1Code available at: https://github.com/tsinghua-fib-lab/DoT   This work is licensed under a Creative Commons Attribution 4.0 International License. WWW ’25, Sydney, NSW, Australia © 2025 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-1274-6/25/04 https://doi.org/10.1145/3696410.3714765   Keywords Large Language Model, LLM Reasoning, AI Agents, Edge-Cloud Collaboration ACM Reference Format: Chenyang Shao, Xinyuan Hu, Yutang Lin, and Fengli Xu∗. 2025. Division- of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents. In Proceedings of the ACM Web Conference 2025 (WWW ’25), April 28-May 2, 2025, Sydney, NSW, Australia. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3696410.3714765   1 Introduction As web content continues to grow exponentially, on-device AI as- sistants have become essential tools for helping users navigate the increasingly complex online landscape.",
+    "score": 0.4682152707601277,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+   "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+   "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+   "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+   "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "051456ef-3c11-4f9a-9c0f-9c41271ce2fc",
+  "X-Amzn-Trace-Id": "Root=1-6b080436-1cb52e631cafb62148badef3;Parent=642ee7ea8df3547f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.833
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:38+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the Division-of-Thoughts system, how is a sentence embedding derived from the language model and what component is added to convert it into a difficulty score?"
+   }
+  ]
+ },
+ "from_cache": false
+}

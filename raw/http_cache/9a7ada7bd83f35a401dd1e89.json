@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.582,
+ "json": {
+  "id": "chatcmpl-19dfa623-8b07-4d84-abc4-eef5309815ab",
+  "object": "chat.completion",
+  "created": 1795687445,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "G-EVAL with GPT-4 as the backbone model achieves a Spearman correlation of 0.514 with human judgments on the summarization task."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1794,
+   "completion_tokens": 34,
+   "total_tokens": 1828
+  },
+  "contexts": [
+   {
+    "text": "0.605 0.627 0.631 0.531 0.551 0.575 0.588   Table 2: Turn-level Spearman (ρ) and Kendall-Tau (τ ) correlations of different metrics on Topical-Chat benchmark.   003). The dataset can be divided in three categories:   1) human-written summaries that are rated higher than GPT-3.5 summaries by human judges, 2) human-written summaries that are rated lower than GPT-3.5 summaries by human judges, and 3) human-written summaries and GPT-3.5 summaries are rated equally good by human judges. We use G- EVAL-4 to evaluate the summaries in each category, and compare the averaged scores. 2   The results are shown in Figure 2. We can see that, G-EVAL-4 assigns higher scores to human- written summaries when human judges also pre- fer human-written summaries, and assigns lower scores when human judges prefer GPT-3.5 sum- maries. However, G-EVAL-4 always gives higher scores to GPT-3.5 summaries than human-written summaries, even when human judges prefer human- written summaries. We propose two potential rea- sons for this phenomenon:   1. NLG outputs from high-quality systems are in natural difficult to evaluate.",
+    "score": 0.6338900690763902,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 6
+   },
+   {
+    "text": "The second part shows the results of metrics that use neural networks to learn from human ratings of summary quality. These metrics have much higher correlations than the similarity-based metrics, sug- gesting that they are more reliable for summariza- tion evaluation.   In the last part of Table 1 which corresponds to GPT-based evaluators, GPTScore also uses GPTs for evaluating summarization texts, but relies on GPT’s conditional probabilities of the given tar- get. G-EVAL substantially surpasses all previous state-of-the-art evaluators on the SummEval bench- mark. G-EVAL-4 achieved much higher human correspondence compared with G-EVAL-3.5 on both Spearman and Kendall-Tau correlation, which indicates that the larger model size of GPT-4 is beneficial for summarization evaluation. G-EVAL   also outperforms GPTScore on several dimension, demonstrating the effectiveness of the simple form- filling paradigm.   3.5 Results for Dialogue Generation We use the Topical-chat benchmark from Mehri and Eskenazi (2020) to measure how well differ- ent evaluators agree with human ratings on the quality of dialogue responses. We calculate the Pearson and Spearman correlation for each turn of the dialogue. Table 2 shows that similarity- based metrics have good agreement with humans   on how engaging and grounded the responses are, but not on the other aspects.",
+    "score": 0.6054049622432367,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 5
+   },
+   {
+    "text": "0.361 0.344 0.339 0.323 0.327 0.288 0.346 0.317 G-EVAL-4 0.582 0.457 0.507 0.425 0.455 0.378 0.547 0.433 0.514 0.418   - Probs 0.560 0.472 0.501 0.459 0.438 0.408 0.511 0.444 0.502 0.446 - CoT 0.564 0.454 0.493 0.413 0.403 0.334 0.538 0.427 0.500 0.407   Table 1: Summary-level Spearman (ρ) and Kendall-Tau (τ ) correlations of different metrics on SummEval bench- mark. G-EVAL without probabilities (italicized) should not be considered as a fair comparison to other metrics on τ , as it leads to many ties in the scores. This results in a higher Kendall-Tau correlation, but it does not fairly reflect the true evaluation ability. More details are in Section 4.   as the backbone model, and G-EVAL-3.5 to indi- cate G-EVAL with GPT-3.5 as the backbone model.",
+    "score": 0.5885041988744656,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 4
+   },
+   {
+    "text": ". The dataset can be divided in three categories:   1) human-written summaries that are rated higher than GPT-3.5 summaries by human judges, 2) human-written summaries that are rated lower than GPT-3.5 summaries by human judges, and 3) human-written summaries and GPT-3.5 summaries are rated equally good by human judges. We use G- EVAL-4 to evaluate the summaries in each category, and compare the averaged scores. 2   The results are shown in Figure 2. We can see that, G-EVAL-4 assigns higher scores to human- written summaries when human judges also pre- fer human-written summaries, and assigns lower scores when human judges prefer GPT-3.5 sum- maries. However, G-EVAL-4 always gives higher scores to GPT-3.5 summaries than human-written summaries, even when human judges prefer human- written summaries. We propose two potential rea- sons for this phenomenon:   1. NLG outputs from high-quality systems are in natural difficult to evaluate. The authors of the original paper found that inter-annotator agreement on judging human-written and LLM-generated summaries is very low, with Krippendorff’s alpha at 0.07.   2. G-EVAL may have a bias towards the LLM- generated summaries because the model could share the same concept of evaluation criteria during generation and evaluation.",
+    "score": 0.585084250768408,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 6
+   },
+   {
+    "text": "We show that G-EVAL with GPT-4 as the backbone model achieves a Spearman correlation of 0.514 with human on summarization task, outperforming all previous methods by a large margin. We also propose analysis on the behavior of LLM-based eval- uators, and highlight the potential concern of LLM-based evaluators having a bias towards the LLM-generated texts. 1   1 Introduction   Evaluating the quality of natural language genera- tion systems is a challenging problem even when large language models can generate high-quality and diverse texts that are often indistinguishable from human-written texts (Ouyang et al., 2022). Traditional automatic metrics, such as BLEU (Pap- ineni et al., 2002), ROUGE (Lin, 2004), and ME- TEOR (Banerjee and Lavie, 2005), are widely used for NLG evaluation, but they have been shown to   1https://github.com/nlpyang/geval   have relatively low correlation with human judg- ments, especially for open-ended generation tasks. Moreover, these metrics require associated refer- ence output, which is costly to collect for new tasks.   Recent studies propose directly using LLMs as reference-free NLG evaluators (Fu et al., 2023; Wang et al., 2023).",
+    "score": 0.5632669721817113,
+    "source": "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+   "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+   "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+   "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf",
+   "134 - G-Eval NLG Evaluation using GPT-4 with Better Human Alignment.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "19dfa623-8b07-4d84-abc4-eef5309815ab",
+  "X-Amzn-Trace-Id": "Root=1-6b080415-04de939963baed0a6598435b;Parent=564582a014eba5eb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.582
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:05+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What Spearman correlation with human judgments does G-Eval with GPT-4 reach on the summarization task?"
+   }
+  ]
+ },
+ "from_cache": false
+}

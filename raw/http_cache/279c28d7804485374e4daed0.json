@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.679,
+ "json": {
+  "id": "chatcmpl-e845f16e-808e-4b33-9b05-48a14845f4c2",
+  "object": "chat.completion",
+  "created": 1795687449,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The paper \"AI Agents That Matter\" identifies several shortcomings in agent benchmarking:\n\n1. **Narrow Focus on Accuracy**: The paper notes that current benchmarks have a narrow focus on accuracy without attention to other metrics, leading to needlessly complex and costly agents.\n\n2. **Conflation of Model and Downstream Developer Needs**: The paper points out that the benchmarking needs of model and downstream developers have been conflated, making it difficult to identify which agent would be best suited for a particular application.\n\n3. **Inadequate Holdout Sets**: Many agent benchmarks have inadequate holdout sets, or sometimes none at all, leading to agents that are fragile because they take shortcuts and overfit to the benchmark.\n\n4. **Lack of Standardization**: There is a pervasive lack of standardization in evaluation practices, leading to a lack of reproducibility.\n\n5. **Implementation Bugs**: The paper encountered several bugs with agent developers' implementation of their agents and their evaluations, such as incorrectly marked tasks and removed tasks from the benchmark.\n\n6. **No Clear Standards for Evaluation Scripts**: There are no clear standards for providing agent evaluation scripts, which contributes to the differences between model and agent benchmarks and the scope for bugs during agent development and evaluation.\n\nThese shortcomings highlight the need for a standardized evaluation framework and a principled approach to agent benchmarking."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1482,
+   "completion_tokens": 261,
+   "total_tokens": 1743
+  },
+  "contexts": [
+   {
+    "text": "With so many different agents—many behind paywalls and all evaluated in bespoke ways—how are end users and AI developers to know which perform best?   Unfortunately, existing agent benchmark suites have several deficiencies, when considered as a general measure of AI skill, including for their ability to do scientific research (Table 1). First, suites often lack the standard task environments and tools necessary for realistic, controlled comparison of agents on a level playing field; for example, no large-scale, controlled document retrieval tools exist, making it unclear whether a ‘winning’ agent has superior AI capabilities or merely access to a more relevant information source. Second, they fail to properly account for confounding variables; we are unaware of agent benchmarks that account for variations in tool usage, and only a few like HAL (Kapoor et al., 2025) measure cost, which is critical since even simplistic strategies (e.g., taking a majority vote over repeated invocation) can boost accuracy by spending more (Kapoor et al., 2024).",
+    "score": 0.6736614473801474,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 2
+   },
+   {
+    "text": "AI Agents That Matter   Sayash Kapoor∗, Benedikt Stroebl∗, Zachary S. Siegel, Nitya Nadgir, Arvind Narayanan   Princeton University July 2, 2024   Abstract   AI agents are an exciting new research direction, and agent development is driven by benchmarks. Our analysis of current agent benchmarks and evaluation practices reveals several shortcomings that hinder their usefulness in real-world applications. First, there is a narrow focus on accuracy without attention to other metrics. As a result, SOTA agents are needlessly complex and costly, and the community has reached mistaken conclusions about the sources of accuracy gains. Our focus on cost in addition to accuracy motivates the new goal of jointly optimizing the two metrics. We design and implement one such optimization, showing its potential to greatly reduce cost while maintaining accuracy. Second, the benchmarking needs of model and downstream developers have been conflated, making it hard to identify which agent would be best suited for a particular application. Third, many agent benchmarks have inadequate holdout sets, and sometimes none at all. This has led to agents that are fragile because they take shortcuts and overfit to the benchmark in various ways. We prescribe a principled framework for avoiding overfitting. Finally, there is a lack of standardization in evaluation practices, leading to a pervasive lack of reproducibility.",
+    "score": 0.6536040518644131,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 1
+   },
+   {
+    "text": "But as we have seen, these frameworks don’t suffice for evaluating AI agents. Developing an agent evaluation framework is a ripe area for future work.   7 Conclusion   AI agent benchmarking is new and best practices haven’t yet been established, making it hard to distinguish genuine advances from hype. Our thesis is that agents are sufficiently different from models that benchmarking practices need to be rethought. We have taken the first steps toward a principled approach to agent benchmarking, resulting in recommendations including cost-controlled comparisons, separating model and downstream evaluation, preventing shortcuts using appropriate hold-outs, and greater standardization of evaluation practices. We hope these steps will raise the rigor of AI agent evaluation and provide a firm foundation for progress.   11Acknowledgments and Disclosure of Funding   We thank Rishi Bommasani, Rumman Chowdhury, Omar Khattab, Percy Liang, Shayne Longpre, Yifan Mai, Morgan McGuire, Matt Salganik, Hailey Schoelkopf, and Venia Veselovsky for discussions and inputs that informed our analysis. We are grateful to the authors of the papers we engage with for their quick responses and for sharing their code, which makes such reproduction analysis possible in the first place.",
+    "score": 0.6388525978846129,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 11
+   },
+   {
+    "text": "Perhaps due to the issues above, we encountered several bugs with agent developers’ implementa- tion of their agents and their evaluations. For example, both LATS [65] and STeP [47] marked some incorrectly completed tasks as correct. Similarly, both agents removed a small number of tasks from the benchmark (1 and 8 tasks for LATS and STeP respectively).   The need for a standardized evaluation framework. These shortcomings stem from three distinct (but related) reasons. First, as of yet, there are no clear standards for providing agent evaluation scripts (shortcoming 1). As a result, the differences between model and agent benchmarks are not appreciated (shortcomings 1-3). Finally, due to the lack of community norms on evaluation, there is scope for bugs to creep in during agent development and evaluation (shortcoming 5). We include examples and more details on each in Table A6. Shortcomings with standardization have also been observed for LLM evaluation. Evaluation frameworks like HELM [28] and LM Evaluation Harness [3] address these shortcomings for model evaluations by providing standardized evaluation results. But as we have seen, these frameworks don’t suffice for evaluating AI agents. Developing an agent evaluation framework is a ripe area for future work.   7 Conclusion   AI agent benchmarking is new and best practices haven’t yet been established, making it hard to distinguish genuine advances from hype.",
+    "score": 0.6372441204569973,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 11
+   },
+   {
+    "text": "We prescribe a principled framework for avoiding overfitting. Finally, there is a lack of standardization in evaluation practices, leading to a pervasive lack of reproducibility. We hope that the steps we introduce for addressing these shortcomings will spur the development of agents that are useful in the real world and not just accurate on benchmarks.   1 Introduction   Compound AI systems, or AI agents, are becoming an important research direction. Zaharia et al. [63] argue that “compound AI systems will likely be the best way to maximize AI results in the future, and might be one of the most impactful trends in AI in 2024.” Over a dozen agent benchmarks have been released, spanning domains such as web interaction [66], programming [21] and tool use [39]. Many benchmarks developed for LLM evaluation have also been used for agent evaluation.   Agent evaluation differs from language model evaluation in fundamental ways. Agents can be used on tasks that are harder, more realistic, have more real-world utility, and usually don’t have a single correct answer. For example, agents can use the command line to carry out tasks; SWE-Agent even includes its own agent-computer interface [59]. Agents can cost much more than a single model call. For example, the authors of SWE-Agent capped each run of the agent at $4 USD, which translates to hundreds of thousands of language model tokens.   As a result, agent benchmarking comes with distinct challenges.",
+    "score": 0.6146641885507674,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+   "005 - AI Agents That Matter.pdf",
+   "005 - AI Agents That Matter.pdf",
+   "005 - AI Agents That Matter.pdf",
+   "005 - AI Agents That Matter.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e845f16e-808e-4b33-9b05-48a14845f4c2",
+  "X-Amzn-Trace-Id": "Root=1-6b080417-6c243ac36ff3be922ef76a84;Parent=43484360d2a54b7d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.679
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:07+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What shortcomings in agent benchmarking does the paper 'AI Agents That Matter' identify?"
+   }
+  ]
+ },
+ "from_cache": false
+}

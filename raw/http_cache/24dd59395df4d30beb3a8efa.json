@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.346,
+ "json": {
+  "query": "Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents",
+  "contexts": [
+   {
+    "text": "Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents   Andon Labs Axel Backlund and Lukas Petersson   founders@andonlabs.com   February 2025   Abstract   While Large Language Models (LLMs) can exhibit impressive proficiency in isolated, short-term tasks, they often fail to maintain coherent performance over longer time horizons. In this paper, we present Vending-Bench, a simulated environment designed to specifically test an LLM-based agent’s ability to manage a straightforward, long-running business scenario: operat- ing a vending machine. Agents must balance inventories, place orders, set prices, and handle daily fees – tasks that are each simple but collectively, over long horizons (>20M tokens per run) stress an LLM’s capacity for sustained, coherent decision-making. Our experiments reveal high variance in performance across multiple LLMs: Claude 3.5 Sonnet and o3-mini manage the machine well in most runs and turn a profit, but all models have runs that derail, either through misinterpreting delivery schedules, forgetting orders, or descending into tangential \"meltdown\" loops from which they rarely recover. We find no clear correlation between failures and the point at which the model’s context window becomes full, suggesting that these breakdowns do not stem from memory limits.",
+    "score": 0.7080582593149696,
+    "source": "136 - Vending-Bench A Benchmark for Long-Term Coherence of Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "OpenAI co-founder John Schulman has speculated that the missing piece is long-term coherence [8]. This is the ability for the LLMs to do tasks over long time horizons. Similarly, METR, an AI   1   ar X   iv :2   50 2.   15 84   0v 1   [ cs   .A I]   2 0   Fe b   20 25safety organization focused on evaluating LLM, found that LLMs gain far less in performance from increased time budgets compared to humans [9]. METR’s investigation focused on very complex tasks (specifically, AI R&D), but it is not clear if this trend holds for more simple tasks.   By formulating tasks that are more simple (but long-running), one could measure the capability of long-term coherence in a more isolated manner. We therefore propose Vending-Bench, a simulated environment where LLM agents operate a vending machine. The agent must handle ordering, inventory management and pricing. Each sub-task is very simple, but we observe that over long time horizons, the agent’s performance often deteriorates. That being said, some runs with the most capable LLMs, Claude 3.5 Sonnet and o3-mini, outperform the human baseline, albeit with higher variance in the results than a human would have. See Figure 1 for an overview of the benchmark.",
+    "score": 0.6959069360790519,
+    "source": "136 - Vending-Bench A Benchmark for Long-Term Coherence of Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "We find no clear correlation between failures and the point at which the model’s context window becomes full, suggesting that these breakdowns do not stem from memory limits. Apart from highlighting the high variance in performance over long time horizons, Vending-Bench also tests models’ ability to acquire capital, a necessity in many hypothetical dangerous AI scenarios. We hope the benchmark can help in preparing for the advent of stronger AI systems.   1 Introduction Large language models (LLMs) have seen remarkable performance improvements in the last couple of years. They are now on the level of PhDs in many academic domains [4,6], they outperform most professional coders in competitive programming [7], and they even display impressive emotional intelligence [5]. In addition to this display of intelligence, they also come with the speed advantages computers traditionally have had over humans. Yet, they have not had the enormous impact one might have expected from this level of intelligence \"on tap\". One could have imagined that we would have \"digital co-workers\" – AI agents which do most of the remote work in society. However, something is clearly missing.   OpenAI co-founder John Schulman has speculated that the missing piece is long-term coherence [8]. This is the ability for the LLMs to do tasks over long time horizons.",
+    "score": 0.5975616010868735,
+    "source": "136 - Vending-Bench A Benchmark for Long-Term Coherence of Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "That being said, some runs with the most capable LLMs, Claude 3.5 Sonnet and o3-mini, outperform the human baseline, albeit with higher variance in the results than a human would have. See Figure 1 for an overview of the benchmark.   Figure 1: Overview of Vending-Bench   Operating a vending machine involves acquiring capital and managing resources, capabilities that have dual-use potential. They are essential for enabling many valuable applications of AI [2], but are also necessary in many hypothetical scenarios where AI poses risks. Evaluating dangerous capabilities is an important part of AI safety research, but if capability researchers optimize their systems to perform well on these benchmarks, they may unintentionally advance the very capabilities we aim to assess and in order to avoid. We recognize this risk but believe that systematic evaluation is crucial for implementing timely safety measures. Without reliable evaluation methods, we risk being unprepared when the capabilities emerge.   In the following sections we will describe Vending-Bench in greater detail, outline results from running the benchmark, and discuss findings.   2 Method   2.1 Agent implementation An LLM agent is a computer program that allows an LLM to autonomously take actions to complete a task. The simplest implementation is a loop where the LLM repeatedly calls tools based on   2previous iterations and the task objective.",
+    "score": 0.5790615396053044,
+    "source": "136 - Vending-Bench A Benchmark for Long-Term Coherence of Autonomous Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our findings reveal a substantial performance decrease (around 20% passˆ1) when agents must shift from autonomous operation to guiding a user. This clearly distinguishes pure reasoning failures from those arising from communication and decentralized control, pinpointing the latter as a critical bottleneck for current agents.   2 Related Work   Benchmarks for Conversational AI Agents. Following a long line of research into language agents [25, 27, 10, 13, 21], LLM tool use [24, 20, 9], and task-oriented dialog [5, 4, 1, 22, 6, 7, 8], τ -bench [26] is a recently introduced benchmark to measure the reliability of language agents in multi-turn task-oriented conversations such as customer service workflows, while respecting domain rules. Each task in τ -bench instantiates a live conversation between a user simulator and the language agent, with tasks spread across two domains – retail and airline. To quantify reliability the paper introduces passˆk metrics: the fraction of k independent runs that succeed.   Several follow-ups to τ -bench have explored variations of the basic setup. FlowBench [23] isolates the planning step of tool-using agents by injecting explicit workflow knowledge into the prompt, using natural language, python-like pseudocode or mermaid flowcharts.",
+    "score": 0.5068204490612432,
+    "source": "141 - τ2-Bench Evaluating Conversational Agents in a Dual-Control Environment.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "14cde30b-fd83-459d-a7a7-3a60ba05cb08",
+  "X-Amzn-Trace-Id": "Root=1-6b08050f-4c090af95da10e9f7fe865be;Parent=6dfe8f3bc8d4c46f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.346
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:15+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Vending-Bench: A Benchmark for Long-Term Coherence of Autonomous Agents"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 1.584,
+ "json": {
+  "query": "Intent-Driven Network Management with Multi-Agent LLMs: The Confucius Framework",
+  "contexts": [
+   {
+    "text": "Intent-Driven Network Management with Multi-Agent LLMs: The Confucius Framework   Zhaodong Wang★ Samuel Lin★ Guanqing Yan★ Soudeh Ghorbani★† Minlan Yu‡ Jiawei Zhou§ Nathan Hu★ Lopa Baruah★ Sam Peters★ Srikanth Kamath★ Jerry Yang★ Ying Zhang★   ★Meta †Johns Hopkins University ‡Harvard University §Stony Brook University   Abstract Advancements in Large Language Models (LLMs) are significantly transforming network management practices. In this paper, we present our experience developing Confucius, a multi-agent frame- work for network management at Meta. We model network man- agement workflows as directed acyclic graphs (DAGs) to aid plan- ning. Our framework integrates LLMs with existing management tools to achieve seamless operational integration, employs retrieval- augmented generation (RAG) to improve long-termmemory, and es- tablishes a set of primitives to systematically support human/model interaction. To ensure the accuracy of critical network operations, Confucius closely integrates with existing network validation meth- ods and incorporates its own validation framework to prevent re- gressions. Remarkably, Confucius is a production-ready LLM devel- opment framework that has been operational for two years, with over 60 applications onboarded.",
+    "score": 0.751381340177084,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 1
+   },
+   {
+    "text": "Remarkably, Confucius is a production-ready LLM devel- opment framework that has been operational for two years, with over 60 applications onboarded. To our knowledge, this is the first report on employing multi-agent LLMs for hyper-scale networks.   CCS Concepts • Networks→ Data center networks; Network management; Network monitoring; • Computing methodologies → Multi- agent systems.   Keywords Large Language Models (LLMs), RAG, Network Planning ACM Reference Format: ZhaodongWang★ Samuel Lin★ Guanqing Yan★ Soudeh Ghorbani★† Min- lan Yu‡ Jiawei Zhou§ Nathan Hu★ Lopa Baruah★ Sam Peters★ Srikanth Kamath★ Jerry Yang★ Ying Zhang★. 2025. Intent-Driven Network Man- agement with Multi-Agent LLMs: The Confucius Framework. In ACM SIG- COMM 2025 Conference (SIGCOMM ’25), September 8–11, 2025, Coimbra, Por- tugal. ACM, New York, NY, USA, 16 pages. https://doi.org/10.1145/3718958. 3750537   1 Introduction Network management is a vital component of large-scale services’ networks, playing a pivotal role in ensuring reliability, performance, and scalability across vast numbers of interconnected servers.",
+    "score": 0.7312799409230005,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 1
+   },
+   {
+    "text": "Other applications besides data re- trieval and analysis are also explored, such as incident management and investigation [24, 54], machine-readable protocol grammar extraction engine ChatAFL [36], and LLM-based DDoS defense framework ShieldGPT [48], among others. Recent works have also developed agentic frameworks for complex system management, including LLo11yPop [22], an observability agentic framework for GPU fleet management, and AssetOpsBench [40], which orches- trates multi-agent workflows for industrial asset management.   10 Conclusion In this paper, we introduce Confucius, a multi-agent large lan- guage model (LLM) framework designed to address the complex challenges of network management at Meta. By decoupling reason- ing from domain-specific knowledge and tools, Confucius enables effective collaboration with existing foundation models without requiring fine-tuning. Our framework decomposes management tasks into smaller, structured subtasks, allowing for precise exe- cution with domain-specific tools and databases. We have demon- strated the effectiveness of Confucius through its deployment in production, serving thousands of users and over 60 management tasks. Confucius has the potential to enable and revolutionize true intent-based network management.   This work does not raise any ethical issues.   11 Acknowledgment This work is a close collaboration within Meta’s Network Infras- tructure team, especially our interns Rae Wong and Jenny Li.",
+    "score": 0.7241325358266617,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 13
+   },
+   {
+    "text": "For instance, diagnosing a failed service request demands a meticulous process of troubleshooting networking issues, analyzing routing paths, and narrowing down potential causes. Similarly, evaluating the impact of a topology expansion plan requires multiple steps, involving traffic forecast generation, topology augmentation, failure simulation, and result analysis. Given their complexity and domain-specific nature, simply relying on LLMs to handle them in a single step is not effective. Instead, a more nuanced approach is needed, one that incorporates domain expertise and iterative refinement.   To address these challenges, we introduce Confucius, a novel multi-agent LLM framework. Confucius decomposes intricate man- agement tasks into smaller, structured subtasks, each of which can be executed using specialized domain-specific tools and databases. Confucius introduces three key components that effectively incor- porate domain-specific knowledge into the general multi-agent LLM framework:   Enhancing planning with structured network procedures: Confucius integrates existing structured network procedures, such as codified Methods of Processes (MOPs) or workflows [51], with LLM reasoning. These programs are often written in Domain- Specific Languages (DSLs), which use predefined functions to en- code smaller operations. Confucius introduces programming primi- tives that bridge the gap between human-friendly structured data and foundational models. This integration aids the LLM in breaking down complex network management tasks into multiple smaller tasks. It also combines multiple agents’ outputs to achieve better planning outcomes.",
+    "score": 0.702685836168626,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 1
+   },
+   {
+    "text": ".   • Not Depend on Fine-tuning: We design our approach to work effectively with foundation models that do not require fine-tuning as a prerequisite. This allows us to leverage the latest advances in LLMs while minimizing the dependency on costly and time- consuming fine-tuning.   3.2 Key Design Ideas We align our design choices with the challenges outlined in §2.4. The functional block overview is shown in Figure 3.   AMulti-Agent Framework: In network management, complex tasks must be decomposed into multiple interconnected subtasks, each requiring different specialized tools and domain knowledge. A naive solution uses a single LLM to handle an entire task from start to finish, but this falls short with sufficiently complex tasks, leading to excessive prompts and unreliable performance. By adopting a multi-agent framework, Confucius decomposes complex workflows into distinct subtasks that can be tackled by multiple specialized agents. Figure 3 shows the LLM agent interacting with four parts: planning, memory, tools, and human. We build network-specific primitives to facilitate interaction among them.   Leverage Existing MOPs andWorkflows for Planning:MOPs and runbooks are predefined workflows for network tasks, available in structured format [51].",
+    "score": 0.6478997882584012,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "510a130b-a630-4d23-a4f1-6c651a3107e4",
+  "X-Amzn-Trace-Id": "Root=1-6b080502-3da261cd4b29a1566e63d398;Parent=6dc33b7bede300b6;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.584
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:02+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Intent-Driven Network Management with Multi-Agent LLMs: The Confucius Framework"
+ },
+ "from_cache": false
+}

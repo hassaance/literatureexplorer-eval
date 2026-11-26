@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.421,
+ "json": {
+  "query": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies",
+  "contexts": [
+   {
+    "text": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies FENG HE, School of Computer Science, University of Technology Sydney, Australia TIANQING ZHU∗, Faculty of Data Science, City University of Macau, China DAYONG YE, School of Computer Science, University of Technology Sydney, Australia and Faculty of Data Science, City University of Macau, China BO LIU, School of Computer Science, University of Technology Sydney, Australia WANLEI ZHOU, City University of Macau, China PHILIP S. YU, Department of Computer Science, University of Illinois at Chicago, United States   Inspired by the rapid development of Large Language Models (LLMs), LLM agents have evolved to perform complex tasks. LLM agents are now extensively applied across various domains, handling vast amounts of data to interact with humans and execute tasks. The widespread applications of LLM agents demonstrate their significant commercial value; however, they also expose security and privacy vulnerabilities. At the current stage, comprehensive research on the security and privacy of LLM agents is highly needed. This survey aims to provide a comprehensive overview of the newly emerged privacy and security issues faced by LLM agents. We begin by introducing the fundamental knowledge of LLM agents, followed by a categorization and analysis of the threats. We then discuss the impacts of these threats on humans, environment, and other agents. Subsequently, we review existing defensive strategies, and finally explore future trends.",
+    "score": 0.8791540683782265,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 1
+   },
+   {
+    "text": "• Malicious Agent Detection and Mitigation: Incorporating human feedback and user authorization for each step can help reduce these threats. This necessitates designing the system with robust security measures to prevent unauthorized access or misuse. An effective approach is the implementation of a stateless oracle agent, which can monitor each sensitive task and assess whether it constitutes malicious activity [77].   Despite their importance, the privacy and security challenges of LLM-MA systems remain underexplored in existing research. Future research could focus on:   • Developing scalable and decentralized security solutions, such as blockchain-based communication proto- cols, to enhance inter-agent collaboration while minimizing systemic vulnerabilities.   • Investigating privacy-preserving methodologies, including differential privacy and federated learning, to securely manage sensitive data shared among agents without compromising performance.   • Creating standardized benchmarks and testing environments to systematically evaluate the robustness of LLM-MA systems against cascading misinformation and malicious activities.   Currently, research on privacy and security in LLM-MA systems has not received widespread attention. However, with the rapid development of LLM-MA technology, these issues are becoming increasingly prominent. Therefore, there is an urgent need for robust security solutions to mitigate these emerging challenges.   7 Conclusion In this survey, we have explored the multifaceted security and privacy challenges faced by LLM agents, including the two categories of the sources of threats: inherited threats from LLM and specific threats on agents. Also,   Proc.",
+    "score": 0.7579479261195287,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 29
+   },
+   {
+    "text": "Yu   Th e Em   er ge d Se cu rit y an d Pr iv ac y of   LL M   Ag en t   Introduction (§1)   Foundation of LLM Agent (§2)   Definition of LLM Agent (§2.1)   Structure of LLM Agent (§2.2)   Workflow of LLM Agent (§2.3)   Capability of LLM Agent (§2.4)   Sources of Threats for LLM Agents (§3)   Inherited Threats from LLM (§3.1)   Specific Threats on Agent (§3.2)   The Impact of Threats (§4)   The Impact to Humans (§4.1)   The Impact to Environment (§4.2)   The Impact to Other Agents (§4.3)   Defensive Strategies Against Threats (§5)   Mitigating Technical Vulnerabilities (§5.1)   Mitigating Malicious Attacks (§5.2)   Mitigating Specific Threats (§5.3)   Future Trends and Discussion (§6)   Multimodal Large Language Model Agent (§6.1)   Large Language Model Multi-Agent System (§6.2)   Conclusion (§7)   Fig. 2. Taxonomy of The Emerged Security and Privacy of LLM Agent.",
+    "score": 0.7519154448646174,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 4
+   },
+   {
+    "text": "Therefore, there is an urgent need for robust security solutions to mitigate these emerging challenges.   7 Conclusion In this survey, we have explored the multifaceted security and privacy challenges faced by LLM agents, including the two categories of the sources of threats: inherited threats from LLM and specific threats on agents. Also,   Proc. ACM Meas. Anal. Comput. Syst., Vol. 37, No. 4, Article 111. Publication date: August 2018.111:30 • Feng He, Tianqing Zhu, Dayong Ye, Bo Liu, Wanlei Zhou, and Philip S. Yu   we present the security and privacy impacts on humans, environment, and other agents. Based on those, we discuss the corresponding defensive strategies. Additionally, we have discussed future trends in this field. To facilitate an in-depth understanding, we have incorporated a variety of case studies via a virtual town project. By highlighting the challenges that LLM agents encounter, we aim to inspire further research and exploration by researchers and developers in enhancing the security and privacy of LLM agents in the future.   References [1] 2022. ChatGPT. https://openai.com/chatgpt [2] 2023. Gemini - Chat to Supercharge Your Ideas. https://gemini.google.com [3] Embrace The Red 2023.",
+    "score": 0.7404618600628518,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 29
+   },
+   {
+    "text": "Subsequently, we review existing defensive strategies, and finally explore future trends. Additionally, the survey incorporates diverse case studies to facilitate a more accessible understanding. By highlighting these critical security and privacy issues, the survey seeks to stimulate future research towards enhancing the security and privacy of LLM agents, thereby increasing their reliability and trustworthiness in future applications. CCS Concepts: • Information systems→ Language models; • Security and privacy; Additional Key Words and Phrases: Large Language Models, LLM Agent, Security, Privacy preservation, Defense ACM Reference Format: Feng He, Tianqing Zhu, Dayong Ye, Bo Liu, Wanlei Zhou, and Philip S. Yu. 2018. The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies. Proc. ACM Meas. Anal. Comput. Syst. 37, 4, Article 111 (August 2018), 35 pages. https://doi.org/XXXXXXX.XXXXXXX   1 Introduction Large Language Model (LLM) agents are sophisticated AI systems built upon large language models like GPT 4 [63], Claude 3 [6] and Llama 3 [5]. These agents leverage the vast amounts of text data on which they are trained ∗Corresponding author.",
+    "score": 0.7274773282530397,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "83184379-6232-4e5e-b186-91c2fc20de80",
+  "X-Amzn-Trace-Id": "Root=1-6b080515-390a266330039f4c490ac56c;Parent=7efc49cd221701ac;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.421
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:21+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies"
+ },
+ "from_cache": false
+}

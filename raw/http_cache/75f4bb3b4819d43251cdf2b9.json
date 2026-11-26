@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.278,
+ "json": {
+  "query": "Are Emergent Abilities in Large Language Models just In-Context Learning?",
+  "contexts": [
+   {
+    "text": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 5098–5139 August 11-16, 2024 ©2024 Association for Computational Linguistics   Are Emergent Abilities in Large Language Models just In-Context Learning?   Sheng Lu1*, Irina Bigoulaeva1*, Rachneet Sachdeva1, Harish Tayyar Madabushi2, and Iryna Gurevych1   1 Ubiquitous Knowledge Processing Lab, Technical University of Darmstadt 2 Department of Computer Science, The University of Bath   www.ukp.tu-darmstadt.de   htm43@bath.ac.uk   Abstract   Large language models, comprising billions of parameters and pre-trained on extensive web- scale corpora, have been claimed to acquire certain capabilities without having been specif- ically trained on them. These capabilities, re- ferred to as “emergent abilities,” have been a driving force in discussions regarding the potentials and risks of language models. A key challenge in evaluating emergent abilities is that they are confounded by model compe- tencies that arise through alternative prompt- ing techniques, including in-context learning, which is the ability of models to complete a task based on a few examples.",
+    "score": 0.8333176129048376,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 1
+   },
+   {
+    "text": "We call this use of ICL ‘implicit’ in-context learning. Performing such a mapping would be relatively straightforward for a very large model, especially given that this task format aligns closely with the training process carried out during instruction-tuning. Investigating the exact nature of this mechanism is left for future work.   51055 Related Work   Emergent Abilities An emergent ability was first defined as an ability that is not present in smaller models but is present in larger models (Wei et al., 2022b). From a review of prior literature of LLMs including GPT-3, PaLM (Chowdhery et al., 2023), Chinchilla (Hoffmann et al., 2022), Gopher (Rae et al., 2021) and LaMDA (Thoppilan et al., 2022), Wei et al. (2022b) identified a total of 67 emergent abilities based on above-random performance of LLMs on tasks designed to test those abilities from the BIG-bench dataset (Srivastava et al., 2023), and the Massive Multitask Language Understanding Benchmark (Hendrycks et al., 2020). Subsequent studies have explored additional abilities emergent in LLMs, such as Theory of Mind (Kosinski, 2023) and cognitive biases (Itzhak et al., 2023).",
+    "score": 0.7162752204176581,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 8
+   },
+   {
+    "text": "Here we will explore emergence with respect to model scale, as measured by training compute and number of model parameters. Specifically, we define emergent abilities of large language models as abilities that are not present in smaller-scale models but are present in large-scale models; thus they cannot be predicted by simply extrapolating the performance improvements on smaller-scale models (§2).1 We survey emergent abilities as observed in a range of prior work, categorizing them in settings such as few-shot prompting (§3) and augmented prompting strategies (§4). Emergence motivates future research on why such abilities are acquired and whether more scaling will lead to further emergent abilities, which we highlight as important questions for the field (§5).   2 Emergent Abilities Definition   As a broad concept, emergence is often used informally and can be reasonably interpreted in many different ways. In this paper, we will consider a focused definition of emergent abilities of large language models:   An ability is emergent if it is not present in smaller models but is present in larger models.   Emergent abilities would not have been directly predicted by extrapolating a scaling law (i.e. consistent performance improvements) from small-scale models. When visualized via a scaling curve (x-axis: model scale, y-axis: performance), emergent abilities show a clear pattern—performance is near-random until a certain critical threshold of scale is reached, after which performance increases to substantially above random.",
+    "score": 0.6979926116579823,
+    "source": "177 - Emergent Abilities of Large Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence raises the question of whether additional scaling could potentially further expand the range of capabilities of language models.   1 Introduction   Language models have revolutionized natural language processing (NLP) in recent years. It is now well-known that increasing the scale of language models (e.g., training compute, model parameters, etc.) can lead to better performance and sample efficiency on a range of downstream NLP tasks (Devlin et al., 2019; Brown et al., 2020, inter alia). In many cases, the effect of scale on performance can often be methodologically predicted via scaling laws—for example, scaling curves for cross-entropy loss have been shown to empirically span more than seven orders of magnitude (Kaplan et al., 2020; Hoffmann et al., 2022). On the other hand, performance for certain downstream tasks counterintuitively does not appear to continuously improve as a function of scale, and such tasks cannot be predicted ahead of time (Ganguli et al., 2022).   In this paper, we will discuss the unpredictable phenomena of emergent abilities of large language models.",
+    "score": 0.6890659149372079,
+    "source": "177 - Emergent Abilities of Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "We present a novel theory that explains emergent abilities, taking into account their potential confounding factors, and rigorously substantiate this theory through over 1000 experiments. Our findings suggest that purported emergent abilities are not truly emergent, but result from a combination of in- context learning, model memory, and linguistic knowledge. Our work is a foundational step in explaining language model performance, pro- viding a template for their efficient use and clar- ifying the paradox of their ability to excel in some instances while faltering in others. Thus, we demonstrate that their capabilities should not be overestimated. 1   1 Introduction, Motivation and Context   One of the most captivating aspects of pre-trained language models (PLMs) is their capacity to ac- quire a wide range of knowledge across different domains, while being trained primarily through masked language modelling, a task requiring mod- els to predict masked tokens in their input (Tenney et al., 2019; Petroni et al., 2019). The diverse abil- ities of PLMs can be categorised into two broad   *Equal Contribution 1Our code and data are available at https://github.   com/UKPLab/on-emergence and https://tudatalib.ulb. tu-darmstadt.de/handle/tudatalib/3931.   types: formal linguistic abilities and functional lin- guistic abilities.",
+    "score": 0.6834062726494815,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "adf07d4c-d2c3-4654-87b7-f24d88841a03",
+  "X-Amzn-Trace-Id": "Root=1-6b080517-4e9180e1263d185e7fffadec;Parent=3efd1a863000ab31;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.278
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Are Emergent Abilities in Large Language Models just In-Context Learning?"
+ },
+ "from_cache": false
+}

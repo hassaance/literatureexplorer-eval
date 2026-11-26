@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.268,
+ "json": {
+  "query": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models",
+  "contexts": [
+   {
+    "text": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models   Binfeng Xu billxbf@gmail.com   Zhiyuan Peng jerrypeng1937@gmail.com   Bowen Lei bowenlei@stat.tamu.edu   Subhabrata Mukherjee subhabrata.mukherjee@microsoft.com   Yuchen Liu yliu322@ncsu.edu   Dongkuan Xu dxu27@ncsu.edu   Abstract Augmented Language Models (ALMs) blend the reasoning capabilities of Large Language Models (LLMs) with tools that allow for knowledge retrieval and action execution. Existing ALM systems trigger LLM thought processes while pulling observations from these tools in an interleaved fashion. Specifically, an LLM reasons to call an external tool, gets halted to fetch the tool’s response, and then decides the next action based on all preceding response tokens. Such a paradigm, though straightforward and easy to implement, often leads to huge computation complexity from redundant prompts and repeated execution. This study addresses such challenges for the first time, proposing a modular paradigm ReWOO (Reasoning WithOut Observation) that detaches the reasoning process from external observa- tions, thus significantly reducing token consumption. Comprehensive evaluations across six public NLP benchmarks and a curated dataset reveal consistent perfor- mance enhancements with our proposed methodology.",
+    "score": 0.817292064001129,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Comprehensive evaluations across six public NLP benchmarks and a curated dataset reveal consistent perfor- mance enhancements with our proposed methodology. Notably, ReWOO achieves 5× token efficiency and 4% accuracy improvement on HotpotQA, a multi-step rea- soning benchmark. Furthermore, ReWOO demonstrates robustness under tool-failure scenarios. Beyond prompt efficiency, decoupling parametric modules from non- parametric tool calls enables instruction fine-tuning to offload LLMs into smaller language models, thus substantially reducing model parameters. Our illustrative work offloads reasoning ability from 175B GPT3.5 into 7B LLaMA, demonstrating the significant potential for truly efficient and scalable ALM systems. Full code, model, and data are released for reproduction.1   1 Introduction   There is a trending paradigm[1; 2; 3; 4; 5; 6; 7; 8] to couple large language models (LLMs) with external plugins or tools, enabling LLMs to interact with environment [9; 10] and retrieve up-to-date knowledge. The tool-augmented LLMs, often referred to as augmented language models (ALMs), have fueled several prevailing applications like Auto-GPT [11] for autonomous task executions.",
+    "score": 0.5948225190092045,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "In contrast, prompt engineering for efficient LLMs, though rarely studied, is flexible and straightforward. It demands no internal information of LLMs and can be readily applied to any off-the-shelf black-box language models like OpenAI ChatGPT and Google PaLM. Following this direction, our work gives the first exploration of prompting for efficient tool-augmented LLMs.   6 Conclusion   We present ReWOO , a modular ALM framework to solve multi-step reasoning tasks efficiently by decoupling reasoning from tool feedback and observations. Theoretical decomposition of prompt tokens establishes that ReWOO is able to substantially reduce prompting redundancy in prevailing Thought-Action-Observation ALM systems. Comprehensive experiments on both public NLP bench- marks and curated tasks reveal superior performance of ReWOO in achieving boosted performance with much less token consumption. A side study also shows that ReWOO has relatively robust per- formance under tool-failure cases. Our study further unveils the potential for generic reasoning offloading via instruction tuning and specialization. Future improvements beyond ReWOO based ALM systems involve modular LLM fine-tuning, tool representation learning, and system graph learning and optimization.",
+    "score": 0.5133954649008889,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 9
+   },
+   {
+    "text": "Note that in (a), the context and exemplars are repeatedly fed into the LLM, resulting in prompt redundancy.   that LLaMa 7B fine-tuned with a small number of epochs can be on par with GPT3.5 in a zero-shot setup, underscoring the capability of ReWOO to facilitate lightweight and scalable ALM deployment.   Contributions. Our contributions to the field of ALM can be summarized as follows: (1) We identify and assess reasoning ability of LLMs without explicit observations (termed foreseeable reasoning). Extensive experiments show that foreseeable reasoning can be harnessed to encourage prompt- efficient ALMs. (2) We introduce a modular framework, ReWOO , designed to capitalize on the foreseeable reasoning ability of language models. Comprehensive testing suggests that, compared to the prevalent thought-action-observation style ALMs, ReWOO can achieve comparable or superior performance while substantially reducing token usage. In addition, ReWOO exhibits greater robustness in real-world scenarios. (3) We demonstrate a pipeline to offload the general ability of foreseeable reasoning from LLMs into smaller language models, enabling the smaller model to utilize unseen tools in zero-shot setups. This research highlights the potential of ReWOO towards scalable and parameter-efficient ALM.   2 Methodology A salient ability of humans is to predict possible outcomes from to-be-conducted actions.",
+    "score": 0.5094688410080788,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Further- more, we demonstrate the potential of ReWOO for system parameter efficiency through instruction tuning [13] and Specialization [14]. We observe   2Single request to solve a multi-step task with Auto-GPT easily exceeds $1 (excluding API costs).   2(a) Reasoning with Observation (b) ReWOO   Task   Planner Tool   Tool   Tool   P E   Solver   Tool   #E Worker   <exemplars>   <context>   User   Task   T A O   T A O   T A O   LLM Tool Tool Tool   T A   Tool   <exemplars>   <context>   User   Figure 2: In (a) observation-dependent reasoning, the task requested from a user is first wrapped with context prompt and exemplars, then fed into an LLM to initiate a reasoning process. The LLM generates a thought(T) and an action(A), then waits for the observation(O) from tools. The observation is stacked into the prompt history to start the next LLM call. In ReWOO (b), Planner produces at once a list of interdependent plans(P) and calls Worker to fetch evidence(E) from tools. The P and E are combined with the task, and then fed into Solver for the final answer. Note that in (a), the context and exemplars are repeatedly fed into the LLM, resulting in prompt redundancy.",
+    "score": 0.5059139331975442,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "485adfc3-bda9-4032-a405-1d7e662df659",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fd-6654f2917aa5caa617d117da;Parent=56a3ff5f5c60d942;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.268
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:57+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models"
+ },
+ "from_cache": false
+}

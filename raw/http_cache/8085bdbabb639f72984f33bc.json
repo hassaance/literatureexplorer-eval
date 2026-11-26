@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.324,
+ "json": {
+  "query": "Toward Efficient Agents: Memory, Tool learning, and Planning",
+  "contexts": [
+   {
+    "text": "Toward Efficient Agents: A Survey of Memory, Tool Use, and Planning   Xiaofang Yang1,2,† Lijun Li1,†, Heng Zhou1,3,† Tong Zhu1,† Xiaoye Qu1 Yuchen Fan1,4   Qianshan Wei5 Rui Ye4 Li Kang1,4 Yiran Qin6 Zhiqiang Kou7 Daizong Liu8 Qi Li5 Ning Ding9 Siheng Chen4 Jing Shao1,   1 Shanghai Artificial Intelligence Laboratory, 2 Fudan University, 3 University of Science and Technology of China, 4 Shanghai Jiaotong University,   5 Institute of Automation, Chinese Academy of Sciences, 6 The Chinese University of Hong Kong (Shenzhen),   7 Hong Kong Polytechnic University, 8 Wuhan University, 9 Tsinghua University   Abstract: Recent years have witnessed increasing interest in extending large language models into agentic systems. While the effectiveness of agents has continued to improve, efficiency, which is crucial for real-world deployment, has often been overlooked. This paper therefore investigates efficiency from three core components of agents: memory, tool use, and planning, considering costs such as latency, tokens, steps, etc.",
+    "score": 0.7148771227821124,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 1
+   },
+   {
+    "text": "Existing studies cluster around   memory, tool use, planning, and benchmarks, suggesting that agent efficiency is not only a model-level problem but also a system-level problem across the agent workflow. Our survey aims to systematize the numerous efforts in this emerging field from an efficiency-centered   perspective. While efficient LLM surveys mainly focus on reducing the cost of the underlying model [183, 241, 147], efficient agents require optimization at the system level. To bridge this gap, we categorize existing works into three strategic directions: 1) Efficient Memory: techniques for compressing historical context, managing memory storage, and optimizing context retrieval; 2) Efficient Tool Use: strategies to reduce unnecessary tool calls, lower external interaction latency, and improve tool-use decisions; and 3) Efficient Planning: strategies to reduce redundant reasoning steps, shorten execution trajectories, and decrease the number of API calls required to solve a problem. It is important to note that these categories are analytical rather than mutually exclusive. In a deployed   agent, memory, tool use, and planning are tightly coupled: memory can store tool-use experience and reusable plans; planning decides when to retrieve memory or invoke tools; tool observations become new memory and may reshape subsequent plans. When a method touches multiple components, we assign it to the category corresponding to its primary efficiency motivation or the main bottleneck it is designed to reduce.",
+    "score": 0.6616541922709122,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 5
+   },
+   {
+    "text": "Here S denotes the latent environment state space, O the observation space, and A the agent action space. The environment dynamics are given by the transition kernel P, the reward function R, and the discount factor γ ∈ [0, 1). The agent is additionally equipped with a set of external tools T and a tool interface Ψ, which specifies   how tool calls are executed and what tool outputs are returned to the agent. Finally, we model explicit agent memory with memory state spaceMmem, an update rule U that maps the current memory and available information to the next memory state, and an initialization distribution ρ over the initial memory.   2.2. From Pure LLMs to Agents   Pure LLMs   Tool Learning Pla nn   in g   Memory   M emory + Tool Learning + Planning   Agents   Figure 2: From LLMs to agents: standalone reasoning to trajectory-level reasoning with memory, planning, and tool use, while introducing additional cost sources.   We define efficiency through a cost–performance trade-off: achieving comparable performance with lower cost, or achieving higher performance under a similar cost budget. We acknowledge that many efficiency tech-   niques used in LLM-based agents overlap with those for standalone LLMs (e.g., model compression and inference acceleration). In agents, however, these techniques mainly serve as foundational enablers rather than addressing the agent-specific sources of inefficiency.",
+    "score": 0.6551530893465872,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 6
+   },
+   {
+    "text": "Planning determines whether a task should be solved through direct reasoning, tool execution, or a decomposed multi-step workflow. Conversely, tools can externalize parts of reasoning, allowing the planner to rely on calculators, search engines, code interpreters, or databases rather than expanding the internal chain of thought. Tool observations also become memory candidates: useful outputs may be cached for reuse, while failed calls can inform future avoidance. Therefore, a method categorized as efficient tool use may obtain its end-to-end efficiency by reducing planning search or improving memory quality. This interaction suggests that future tool-using agents should jointly optimize tool choice, memory reuse, and planning depth, rather than treating tool calls as isolated actions.   5. Efficient Planning Efficient planning studies how agents allocate limited reasoning resources during task solving. Unlike classical planning, which often abstracts away the cost of search or optimization, LLM-based agents expose planning costs through token usage, latency, tool calls, environment interactions, and communication overhead. Thus, planning is not only about generating a valid action sequence, but also about deciding how much reasoning, search, verification, and coordination should be spent before acting. From this perspective, planning becomes a form of online compute allocation. Deeper reasoning or   broader collaboration may improve task success, but it can also introduce extra search, longer contexts, redundant communication, and delayed execution. Efficient planning therefore aims to balance the benefit   33Table 4: A summary of representative efficient planning methods.",
+    "score": 0.5941804638514532,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 33
+   },
+   {
+    "text": "8 Conclusion 44   31. Introduction   2023   2024   2025   MemoryBank   MemGPT   LightMem   ReadAgent   Memory Sharing   G-Memory   Toolformer   Efficient Memory   Construct Manage Access   Expel   MemAgent Zep   AriGraphHiAgent   MemOSMemory-R1   TinyAgent BTP   ToolOrchestra   ProTIP   ToolGen   AutoTIR SMART ToolRL   SWiRL   SwiftSage   ETO   Budget-Aware   GAP CATS   Alita   QLASS   A-MEM   Evo-Memory   StoryBench   MemBench   TPS-Bench   CostBench   Memory   Tool Use Planning   Benchmark   Efficient Tool Use Efficient Planning Benchmarks   Selection Calling Reasoning   LoCoMo   SWE-Bench   WebShop GAIA   �-bench   WebArena   Budgeting Search Learning Computation Time Interaction   Effectiveness First   Toward Efficiency   Memory-aware   Smarter Memory   Chain of Agents   CodeAgents   UltraTool   MARS   2026 RF-Mem SimpleMem   W&D Ares InfoSeeker   Figure 1: The evolutionary trajectory of efficient agent research. The diagram is organized into four principal branches: Memory, Tool Use, Planning, and Benchmarks.",
+    "score": 0.5810146379034012,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "aa6863ee-ef65-4990-ba93-174243a8864d",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f8-3d8decb03d0855bc4cd2fbba;Parent=0208de0461d944b9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.324
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:52+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Toward Efficient Agents: Memory, Tool learning, and Planning"
+ },
+ "from_cache": false
+}

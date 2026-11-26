@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.312,
+ "json": {
+  "query": "In the paper *Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond*, what mitigation techniques are suggested for the governance risks associated with persistent, automated model revision?",
+  "contexts": [
+   {
+    "text": "Preprint   Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond Meng Chu1†, Xuan Billy Zhang2†q, Kevin Qinghong Lin3†, Lingdong Kong2†, Jize Zhang3†, Teng Tu2†, Weijian Ma2†, Ziqi Huang4, Senqiao Yang5, Wei Huang6, Yeying Jin2, Zhefan Rao1, Jinhui Ye1, Xinyu Lin2, Xichen Zhang1, Qisheng Hu4, Shuai Yang1, Leyang Shen2, Wei Chow2, Yifei Dong7, Fengyi Wu7, Quanyu Long4, Bin Xia5, Shaozuo Yu5, Mingkang Zhu5, Wenhu Zhang1, Jiehui Huang1, Haokun Gui1, Runyi Li8, Chenyu Tang9, Dong Huang2, Xuhang Chen9, Rui Liu5, Chengzu Li9, Shiyi Du10, Xu Huang11, Haoxuan Che1§, Long Chen1§, Qifeng Chen1§, Wenya Wang4§, Wenxuan Zhang12§, Xiaojuan Qi6§, Yang Deng13§, Yanwei Li5§, Mike Zheng Shou2§, Zhi-Qi Cheng7§, See-Kiong Ng2§, Ziwei Liu4§, Philip",
+    "score": 0.543492740592541,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 1
+   },
+   {
+    "text": "Primary bottleneck: attribution ambiguity and ethical constraints on social experimentation.   Governance challenges. Three governance risks arise specifically from persistent, automated model re- vision. Benchmark overfitting occurs when the regression gate is too close to the training distribution; the system learns to pass tests rather than improve genuinely. Knowledge contamination occurs when the re- vision loop incorporates evidence that is itself biased or adversarially constructed, silently degrading the model on OOD inputs. Misattribution cascades occur when a fix for one failure mode inadvertently degrades another component; without comprehensive regression suites, the net effect of an update can be negative. Mitigations include held-out probe sets that are refreshed independently of training data, canary deployment that surfaces regressions before full rollout, and causal ablations that isolate the contribution of each update.   Relationship to Sections 6 and 7. From an evaluation perspective (Section 6), assessing L3 requires protocols that go beyond single-episode accuracy: the key metric is whether the system improves across revision cycles k without regressing on held-out probes. From an implementation perspective (Section 7), L3 places the heaviest demands on the system stack (persistent storage, replay infrastructure, regression harnesses, and rollback mechanisms) that are often underspecified in current architectures.",
+    "score": 0.5369472873821572,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 38
+   },
+   {
+    "text": "The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate. ⌂ Homepage: https://agentic-world-modeling.xyz   ¹ Repo: https://github.com/matrix-agent/awesome-agentic-world-modeling   u Database: https://agentic-world-modeling.notion.site   ¯ Contact: mchuah@connect.ust.hk, xuanzhang@u.nus.edu   Disclaimer: This is an early-access preprint and has not undergone peer review. The content may be inaccurate or incomplete. The authors reserve the right to update, correct, or retract content without notice.   1   ar X   iv :2   60 4.   22 74   8v 3   [ cs   .A I]   1 6   Ju n   20 26         https://agentic-world-modeling.xyz        https://github.com/matrix-agent/awesome-agentic-world-modeling        https://agentic-world-modeling.notion.site        https://arxiv.org/abs/2604.22748v3Preprint   Agentic World Modeling   §1 Introduction   §1.1 Motivation   §1.2 Scope & Organizing Principle   §1.3 Contributions & Positioning   §2 Preliminaries   §2.1 Epistemology to Capability Hierarchy",
+    "score": 0.5224222017578096,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 1
+   },
+   {
+    "text": "We therefore view the development of world models that can discover and manipulate symbolic governing laws from data, rather than merely absorbing them into latent representations, as one of the most important open problems in the field. How to extend this to physical, digital, social, and scientific worlds remains a fundamental challenge.   Key Takeaway   The future of agentic AI lies not in larger predictors, but in models that internalize the governing laws of the world, simulate its dynamics, and continuously evolve themselves through active trial-and-error loops, enabling them to navigate, interpret, and ultimately reshape the world.   52Preprint   References J. Abramson, J. Adler, J. Dunger, R. Evans, T. Green, A. Pritzel, O. Ronneberger, L. Willmore, A. J. Ballard,   J. Bambrick, S. W. Bodenstein, D. A. Evans, C.-C. Hung, M. O’Neill, D. Reiman, K. Tunyasuvunakool, Z. Wu, A. Žemgulyṫė, E. Arvaniti, C. Beattie, O. Bertolli, A. Bridgland, A. Cherepanov, M. Congreve, A. I. Cowen-Rivers, A. Cowie, M. Figurnov, F. B. Fuchs, H.",
+    "score": 0.507144809667772,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 52
+   },
+   {
+    "text": "We identify four progressively stronger capabilities, namely rollout, intervention sensitivity, constraint consistency, and closed-loop use, that characterize world models and go beyond generic predictors (formalized in Section 2). Moreover, existing surveys underrepresent the role of world modeling in agentic AI applications, including web agents, tool-use agents, and multi-agent systems, where learned environment dynamics are essential for planning and action selection (Gu et al., 2025b; Zhang et al., 2025c; Wang et al., 2024d; Park et al., 2023). The goal of this paper is to establish a   4Preprint   Figure 3: Schematic illustrations of the four governing-law regimes. Representative scenes for each regime: a humanoid agent manipulating blocks (Physical World), code and UI surfaces (Digital World), a network of interacting agents with speech acts (Social World), and instrumented experimentation with robotic microscope and pipette (Scientific World). Each regime’s formal constraints are discussed in Section 2.5.   capability-based taxonomy with clear boundary conditions, and to use it to connect research communities that currently evaluate world modeling systems with different assumptions, objectives, and metrics.   Figure 2 positions this survey relative to existing work along two axes: scope (domain-specific to cross- domain) and organizing principle (modality-centric to capability-centric).",
+    "score": 0.5043290062159095,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "3c70c6d0-01c9-444e-bf48-2ae5f72ea94b",
+  "X-Amzn-Trace-Id": "Root=1-6b08062f-13aa7ec53938451c0284619f;Parent=7a5d8abb5b129335;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.312
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:03+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "rep1",
+ "request_body": {
+  "query": "In the paper *Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond*, what mitigation techniques are suggested for the governance risks associated with persistent, automated model revision?"
+ },
+ "from_cache": false
+}

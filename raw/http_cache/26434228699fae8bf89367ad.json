@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.36,
+ "json": {
+  "query": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite",
+  "contexts": [
+   {
+    "text": "In response, we define principles and tooling for more rigorously benchmarking agents. Using these, we present AstaBench, a suite that provides a holistic measure of agentic ability to perform scientific research, comprising 2400+ problems spanning the entire scientific discovery process and multiple scientific domains, and including many problems inspired by actual user requests to deployed Asta agents. Our suite comes with the first scientific research environment with production-grade search tools that enable controlled, reproducible evaluation, better accounting for confounders. Alongside, we provide a comprehensive suite of nine science-optimized classes of Asta agents and numerous baselines. Our extensive evaluation of 57 agents across 22 agent classes reveals several interesting findings, most importantly that despite meaningful progress on certain individual aspects, AI remains far from solving the challenge of science research assistance.   1 INTRODUCTION   AI agents are increasingly being applied to complex real-world use cases.",
+    "score": 0.7797722877646649,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 1
+   },
+   {
+    "text": "AstaBench is the first major agent benchmark suite to come with standard environment and tools that enable controlled comparison of agents: the Asta Environment, the first scientific research environment for agents with realistic, controlled search tools. Alongside, we present the agent- baselines Agents Suite, a large suite of standardized agents, which we used to conduct experiments on AstaBench with 57 agents across 22 architectural classes. This revealed several interesting findings, most importantly that despite meaningful progress on certain individual aspects, agentic AI remains far from solving the challenge of scientific research assistance. We invite the community to make submissions to the AstaBench Leaderboard, which is powered by our agent-eval Agents Evaluation Toolkit.   This work opens up many exciting possibilities for the agentic AI, scientific research assistance, and automated scientific discovery communities. We are actively pushing the performance-cost frontiers in AstaBench and closing the gap for truly open agents by developing new agent techniques, tools, and open models specialized for scientific research. We are also enhancing agent abilities to manage complex context, from improving on Asta v0 simple orchestration techniques to handling long-duration tasks in complex research projects. We are continuing to research how to refine our LLM-as-a-judge grading procedures, especially for challenging scientific discovery tasks. We plan to develop fresh benchmark problems that use the latest scientific knowledge, which is contamination- resistant and past the training cut-off date of models.",
+    "score": 0.76556745776491,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 10
+   },
+   {
+    "text": "We believe this task is a useful complement to the many existing benchmarks that focus on more narrow problems in the research pipeline.   3 ASTABENCH: A HOLISTIC SCIENTIFIC RESEARCH BENCHMARK SUITE   We present AstaBench, the first benchmark suite for holistic evaluation of agents’ ability to perform scientific research. Crucially, our suite is reproducible even as science progresses, since it comes with the first realistic, reproducible search tools (Section 4). Our suite implements a new standard interface for agent benchmark suites and provides time-invariant cost reporting through the agent-eval Agents Evaluation Toolkit (Section 4.2)). As such, AstaBench is ready for use by new general agents such as those in our agent baselines suite (Section 4.3).   AstaBench comprises the following 11 benchmarks (summarized in Table 2, with full details in Appendix E and example inputs in Appendix H; note that AstaBench uses slightly modified versions of some of the cited datasets): PaperFindingBench tests an agent’s ability to handle challenging scientific search queries. LitQA2-FullText/LitQA2-FullText-Search (Skarlinski et al., 2024) measure an agent’s ability to answer questions and retrieve papers within the biomed- ical domain. ScholarQA-CS2 tests an agent’s ability to answer long-form scientific questions.",
+    "score": 0.7606512472760721,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 5
+   },
+   {
+    "text": "Published as a conference paper at ICLR 2026   ASTABENCH: RIGOROUS BENCHMARKING OF AI AGENTS WITH A SCIENTIFIC RESEARCH SUITE   Jonathan Bragg1 Mike D’Arcy1   Nishant Balepur2,∗ Dan Bareket1 Bhavana Dalvi1 Sergey Feldman1 Dany Haddad1   Jena D. Hwang1 Peter Jansen1,3 Varsha Kishore1,6 Bodhisattwa Prasad Majumder1 Aakanksha Naik1 Sigal Rahamimov1 Kyle Richardson1 Amanpreet Singh1   Harshit Surana1 Aryeh Tiktinsky1 Rosni Vasu4,∗ Guy Wiener1   Chloe Anastasiades1 Stefan Candra1 Jason Dunkelberger1 Dan Emery1 Rob Evans1 Malachi Hamada1 Regan Huff1 Rodney Kinney1 Matt Latzke1 Jaron Lochner1 Ruben Lozano-Aguilera1 Cecile Nguyen1 Smita Rao1   Amber Tanaka1 Brooke Vlahos1   Peter Clark1 Doug Downey1 Yoav Goldberg1,5 Ashish Sabharwal1 Daniel S.",
+    "score": 0.7544848367679108,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 1
+   },
+   {
+    "text": "In response, we present a set of benchmarking principles and a benchmark suite, built upon these principles, that overcomes the aforementioned limitations, along with open-source resources that enable more rigorous, comprehensive measurement. Specifically:   • We formalize principles for rigorously benchmarking agents (Appendix A), which address key limitations of current agent benchmark suites.   • Guided by our principles, we present AstaBench1 (Section 3), a more rigorous agent benchmark suite that is a holistic measure of scientific research, which exercises a broad spectrum of skills— including literature understanding, data understanding, planning, tool use, coding, and search—and comprises over 2400 problems spanning the full scientific discovery process and multiple scientific domains, including many problems based on real user requests from Asta,2 where we have deployed several of our agents for public use. It is easy to integrate new general agents with AstaBench, which provides a standardized task interface.   • AstaBench includes the powerful Asta Environment (Section 4), the first agent environment that enables controlled, reproducible evaluation with production-grade search tools for retrieving information from a large corpus of scientific literature.",
+    "score": 0.737125631927599,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "990ede32-3317-4614-b761-4972c540f35a",
+  "X-Amzn-Trace-Id": "Root=1-6b080511-43edb1167d6f66c9780612cf;Parent=532c6124f67ab2b1;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.36
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:17+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite"
+ },
+ "from_cache": false
+}

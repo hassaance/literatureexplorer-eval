@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.273,
+ "json": {
+  "query": "The potential existential threat of large language models to online survey research",
+  "contexts": [
+   {
+    "text": "RESEARCH ARTICLE POLITICAL SCIENCES OPEN ACCESS   The potential existential threat of large language models to online survey research Sean J. Westwooda,1 ID   Edited by James N. Druckman, University of Rochester, Rochester, NY; received July 9, 2025; accepted September 12, 2025 by Editorial Board Member Margaret Levi   The advancement of large language models poses a severe, potentially existential threat to online survey research, a fundamental tool for data collection across the sciences. This work demonstrates that the foundational assumption of survey research—that a coherent response is a human response—is no longer tenable. I designed and tested an autonomous synthetic respondent capable of producing survey data that possesses the coherence and plausibility of human responses. This agent successfully evades a comprehensive suite of data quality checks, including instruction-following tasks, logic puzzles, and “reverse shibboleth” questions designed to detect nonhuman actors, achieving a 99.8% pass rate on 6,000 trials of standard attention checks. The synthetic respondent generates internally consistent responses by maintaining a coherent demographic persona and a memory of its prior answers, producing plausible data on psychometric scales, vignette comprehension tasks, and complex socioeconomic trade-offs. Furthermore, its open-ended text responses are linguistically sophisticated and stylistically calibrated to the level of education of its assigned persona. Critically, the agent can be instructed to maliciously alter polling outcomes, demonstrating an overt vector for information warfare.",
+    "score": 0.6973453666845535,
+    "source": "129 - The potential existential threat of large language models to online survey research.pdf",
+    "page": 1
+   },
+   {
+    "text": "Critically, the agent can be instructed to maliciously alter polling outcomes, demonstrating an overt vector for information warfare. More subtly, it can also infer a researcher’s latent hypotheses and produce data that artificially confirms them. These findings reveal a critical vulnerability in our data infrastructure, rendering most current detection methods obsolete and posing a potential existential threat to unsupervised online research. The scientific community must urgently develop new data validation standards and reconsider its reliance on nonprobability, low-barrier online data collection methods.   surveys | large language models | survey quality   The scientific enterprise rests on the analysis of reliable data (1). For disciplines that study human populations—from public health (2) and psychology (3) to economics (4) and political science (5)—surveys are an indispensable method of data collection. The advent of online platforms such as MechanicalTurk amplified this reliance, democratizing research and enabling the rapid collection of vast datasets on human behavior (6, 7), and polling data for political campaigns (8). This paper demonstrates that this critical data infrastructure now faces a fundamental threat from the rapid advancement of large language models (LLMs).   Previous concerns about data quality primarily revolved around issues such as satisficing (9) or crude forms of automated responses from simple bots (10). LLMs, however, represent a new class of threat that constitutes a potential crossroads for online survey research (11).",
+    "score": 0.6797034599385763,
+    "source": "129 - The potential existential threat of large language models to online survey research.pdf",
+    "page": 1
+   },
+   {
+    "text": "Previous concerns about data quality primarily revolved around issues such as satisficing (9) or crude forms of automated responses from simple bots (10). LLMs, however, represent a new class of threat that constitutes a potential crossroads for online survey research (11). Their ability to generate human-like, context-aware responses can convincingly mimic the output of actual survey participants, and basic coding can automate the use of LLMs to respond to online surveys. These automatic “synthetic respondents” are, I show, capable of completing entire surveys with human-like responses. This makes LLMs a concern in the data collection process. As a result, the foundational assumption of survey research—that a coherent response is a human response—is no longer tenable. This vulnerability is not merely theoretical; the tools to create these fraudulent respondents are cheap, effective, and readily available, posing a direct threat to the integrity of science.   While financially motivated fraud from “survey farmers” has long been a challenge, LLMs could transform survey fraud from a labor-intensive/low-margin cottage industry into a potentially lucrative and scalable black market for fraudulent data. The scale of this problem is substantial; the data quality firm Research Defender, for instance, estimates that 31% of raw survey responses are fraudulent (12), though not specifically because of AI. In 2024, 34.3% of respondents in a Prolific sample reported using AI to answer open-ended survey questions (13).",
+    "score": 0.5446313952502794,
+    "source": "129 - The potential existential threat of large language models to online survey research.pdf",
+    "page": 1
+   },
+   {
+    "text": "Polit. 76, 684–697 (2014).   33. S. J. Westwood, Replication for “The Potential Existential Threat of Large Language Models to Online Survey Research”. Open Science Framework. https://osf.io/ ektqr/?view_only=c75f58815f804164a6a7685bff7f1800. Accessed 2 November 2025.   10 of 10 https://doi.org/10.1073/pnas.2518075122 pnas.org   D ow   nl oa   de d   fr om   h ttp   s: //w   w w   .p na   s. or   g by   U N   IV E   R SI   T Y   O F   O U   L U   ; M E   D IC   A L   L IB   R A   R Y   o n   O ct   ob er   1 5,   2 02   6 fr   om I   P ad   dr es   s 13   0. 23   1. 24   8. 22   .",
+    "score": 0.544307458217146,
+    "source": "129 - The potential existential threat of large language models to online survey research.pdf",
+    "page": 10
+   },
+   {
+    "text": "However, this approach has serious drawbacks. It raises considerable privacy concerns (especially for sensitive topics), faces technological hurdles, and still does not guarantee a human is the one who actually completes the survey.   • Secure Software: It is also possible to create secure survey tools that, like standardized testing software, take over a screen to block the use of AI assistance. This is likely a nonstarter, though, since many people now take surveys on their mobile phones, where such lockdowns are impractical.   • Market Consolidation: Finally, the market might simply correct itself. The large number of cheap, low-quality sur- vey panels available today could shrink, leaving a smaller, more reliable set of highly vetted panels to take their place.   5. Discussion   The findings presented in this paper paint a concerning picture for the future of online survey research. I have demonstrated that reasoning-based LLMs can complete surveys with plausible responses and can generate results that would bias measures of public opinion. They can mimic human personas, evade current detection methods, and be trivially programmed to systematically bias online survey outcomes. The era of having to only deal with crude bots and inattentive humans is over; the threat is now sophisticated, scalable, and potentially existential.",
+    "score": 0.5316115808144716,
+    "source": "129 - The potential existential threat of large language models to online survey research.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "84657c63-0972-4d87-8aa8-baf3b430c155",
+  "X-Amzn-Trace-Id": "Root=1-6b08050e-3fe7a84b661472f64e93faba;Parent=7e7f340547f21701;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.273
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:14+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The potential existential threat of large language models to online survey research"
+ },
+ "from_cache": false
+}

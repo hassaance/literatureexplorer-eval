@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.091,
+ "json": {
+  "id": "chatcmpl-ce33f46a-2e9b-4646-84d7-b8f43445e34f",
+  "object": "chat.completion",
+  "created": 1795687959,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "Reflexion uses verbal feedback by converting binary or scalar feedback from the environment into verbal feedback in the form of a textual summary. This self-reflective feedback acts as a ‘semantic’ gradient signal by providing the agent with a concrete direction to improve upon, helping it learn from prior mistakes to perform better on the task. The reflective text is added as additional context for the LLM agent in the next episode, allowing it to learn from past mistakes and improve its decision-making, reasoning, and programming abilities."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1600,
+   "completion_tokens": 101,
+   "total_tokens": 1701
+  },
+  "contexts": [
+   {
+    "text": "Preprint. Under review.   ar X   iv :2   30 3.   11 36   6v 4   [ cs   .A I]   1 0   O ct   2 02   3         https://github.com/noahshinn024/reflexionIn this paper, we propose an alternative approach called Reflexion that uses verbal reinforcement to help agents learn from prior failings. Reflexion converts binary or scalar feedback from the environment into verbal feedback in the form of a textual summary, which is then added as additional context for the LLM agent in the next episode. This self-reflective feedback acts as a ‘semantic’ gradient signal by providing the agent with a concrete direction to improve upon, helping it learn from prior mistakes to perform better on the task. This is akin to how humans iteratively learn to accomplish complex tasks in a few-shot manner – by reflecting on their previous failures in order to form an improved plan of attack for the next attempt. For example, in figure 1, a Reflexion agent learns to optimize its own behavior to solve decision-making, programming, and reasoning tasks through trial, error, and self-reflection.   Generating useful reflective feedback is challenging since it requires a good understanding of where the model made mistakes (i.e. the credit assignment problem [25]) as well as the ability to generate a summary containing actionable insights for improvement.",
+    "score": 0.6445989988461761,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 1
+   },
+   {
+    "text": "Reflexion: Language Agents with Verbal Reinforcement Learning   Noah Shinn Northeastern University   noahshinn024@gmail.com   Federico Cassano Northeastern University   cassano.f@northeastern.edu   Edward Berman Northeastern University   berman.ed@northeastern.edu   Ashwin Gopinath Massachusetts Institute of Technology   agopi@mit.edu   Karthik Narasimhan Princeton University   karthikn@princeton.edu   Shunyu Yao Princeton University   shunyuy@princeton.edu   Abstract   Large language models (LLMs) have been increasingly used to interact with exter- nal environments (e.g., games, compilers, APIs) as goal-driven agents. However, it remains challenging for these language agents to quickly and efficiently learn from trial-and-error as traditional reinforcement learning methods require exten- sive training samples and expensive model fine-tuning. We propose Reflexion, a novel framework to reinforce language agents not by updating weights, but in- stead through linguistic feedback. Concretely, Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials. Reflexion is flexible enough to incorporate various types (scalar values or free-form language) and sources (external or internally simulated) of feedback signals, and obtains significant improvements over a baseline agent across diverse tasks (sequential decision-making, coding, language reasoning).",
+    "score": 0.6207110370376618,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our proposed “verbal” reinforcement learning might address some of the issues and turn autonomous agents more inter- pretable and diagnosable. For example, in the case of tool-usage that may be too hard for humans to understand, self-reflections could be monitored to ensure proper intent before using the tool.   7 Conclusion   In this work, we present Reflexion, an approach that leverages verbal reinforcement to teach agents to learn from past mistakes. We empirically show that Reflexion agents significantly outperform currently widely-used decision-making approaches by utilizing self-reflection. In future work, Reflexion could be used to employ more advanced techniques that have been thoroughly studied in traditional RL settings, such as value learning in natural language or off-policy exploration techniques.   8 Reproducibility   We highly advise others to use isolated execution environments when running autonomous code writing experiments as the generated code is not validated before execution.   9References [1] Ahn, M., Brohan, A., Brown, N., Chebotar, Y., Cortes, O., David, B., Finn, C., Gopalakrishnan,   K., Hausman, K., Herzog, A., et al. (2022). Do as i can, not as i say: Grounding language in robotic affordances. arXiv preprint arXiv:2204.01691.",
+    "score": 0.6140018881312258,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 9
+   },
+   {
+    "text": "We provide a detailed description of each of these models and subsequently elucidate their collaborative functioning within the Reflexion framework.   3ActionObs / Reward   Trajectory (short-term memory)   Experience (long-term memory)   Self-reflection (LM)   Agent   Actor (LM)   Environment   Evaluator (LM)   External feedback   Internal feedback   Reflective text   Algorithm 1 Reinforcement via self-reflection   Initialize Actor, Evaluator, Self-Reflection: Ma, Me, Msr   Initialize policy πθ(ai|si), θ = {Ma,mem} Generate initial trajectory using πθ   Evaluate τ0 using Me   Generate initial self-reflection sr0 using Msr   Set mem← [sr0] Set t = 0 while Me not pass or t < max trials do   Generate τt = [a0, o0, . . . ai, oi] using πθ   Evaluate τt using Me   Generate self-reflection srt using Msr   Append srt to mem Increment t   end while return   Figure 2: (a) Diagram of Reflexion. (b) Reflexion reinforcement algorithm   Actor The Actor is built upon a large language model (LLM) that is specifically prompted to generate the necessary text and actions conditioned on the state observations.",
+    "score": 0.5790923599175081,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 3
+   },
+   {
+    "text": "However, as LLM capabilities improve, we only expect this paradigm to get better over time.   We perform experiments on (1) decision-making tasks to test sequential action choices over long trajectories, (2) reasoning tasks to test knowledge-intensive, single-step generation improvement, and (3) programming tasks to teach the agent to effectively use external tools such as compilers and interpreters. Across all three types of tasks, we observe Reflexion agents are better decision- makers, reasoners, and programmers. More concretely, Reflexion agents improve on decision-making AlfWorld [24] tasks over strong baseline approaches by an absolute 22% in 12 iterative learning steps, and on reasoning questions in HotPotQA [28] by 20%, and Python programming tasks on HumanEval [6] by as much as 11%.   To summarize, our contributions are the following:   • We propose Reflexion, a new paradigm for ‘verbal‘ reinforcement that parameterizes a policy as an agent’s memory encoding paired with a choice of LLM parameters.   • We explore this emergent property of self-reflection in LLMs and empirically show that self-reflection is extremely useful to learn complex tasks over a handful of trials.   • We introduce LeetcodeHardGym, a code-generation RL gym environment consisting of 40 challenging Leetcode questions (‘hard-level‘) in 19 programming languages.",
+    "score": 0.5610581560375711,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ce33f46a-2e9b-4646-84d7-b8f43445e34f",
+  "X-Amzn-Trace-Id": "Root=1-6b080616-62cd4e1e59f1a017036b60f2;Parent=3bdf7afc96cc15d1;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.091
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:38+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How does Reflexion use verbal feedback?"
+   }
+  ]
+ },
+ "from_cache": false
+}

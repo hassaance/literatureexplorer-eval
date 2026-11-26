@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.514,
+ "json": {
+  "id": "chatcmpl-76be555c-0981-4eed-be5b-85543cd69247",
+  "object": "chat.completion",
+  "created": 1795687480,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1578,
+   "completion_tokens": 7,
+   "total_tokens": 1585
+  },
+  "contexts": [
+   {
+    "text": "CHI 2020 Paper CHI 2020, April 25–30, 2020, Honolulu, HI, USA   Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design   Qian Yang Aaron Steinfeld Carolyn Rosé John Zimmerman Carnegie Mellon University, Pittsburgh PA, USA   {yangqian,steinfeld}@cmu.edu cp3a@andrew.cmu.edu johnz@cs.cmu.edu   ABSTRACT Artificial Intelligence (AI) plays an increasingly important role in improving HCI and user experience. Yet many chal- lenges persist in designing and innovating valuable human-AI interactions. For example, AI systems can make unpredictable errors, and these errors damage UX and even lead to unde- sired societal impact. However, HCI routinely grapples with complex technologies and mitigates their unintended conse- quences. What makes AI different? What makes human-AI interaction appear particularly difficult to design? This paper investigates these questions. We synthesize prior research, our own design and research experience, and our observations when teaching human-AI interaction. We identify two sources of AI’s distinctive design challenges: 1) uncertainty surround- ing AI’s capabilities, 2) AI’s output complexity, spanning from simple to adaptive complex. We identify four levels of AI sys- tems. On each level, designers encounter a different subset of the design challenges.",
+    "score": 0.535937660171087,
+    "source": "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+    "page": 1
+   },
+   {
+    "text": "HCI professionals cannot easily sketch the numerous of ways an AI system might adapt to different users in different contexts [13, 58]. Nor can they easily prototype the types of inference errors a not-yet developed AI system might make [29, 42, 49].   Existing research frequently attributes these challenges to AI’s technical complexity, demand for data, and unpredictable inter- actions [49, 26, 13, 42]. Less discussed is that HCI routinely grapples with complex, resource-intensive technologies us- ing simple, inexpensive artifacts, e.g., paper prototypes and Wizard of Oz systems. What makes AI different and dis- tinctly difficult to prototype? Equally important, designers routinely choreograph complex, dynamic, sometimes unpre- dictable interactions, with a focus on mitigating technologies’ unintended consequences (e.g., [61]). What makes AI inter- actions particularly difficult to sketch? A critical first step in designing valuable human-AI interactions is to articulate the unique qualities of AI that made it so difficult to design.   The goal of this paper is to delineate whether, why, and how human-AI interaction is distinctly difficult to design and inno- vate. The paper has four parts:   1. We set the stage by cataloging the many human-AI interac- tion design challenges that literature has reported as well as solutions proposed.   2. We ask three provocative questions as a critique of current related work.",
+    "score": 0.5200380217694655,
+    "source": "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+    "page": 1
+   },
+   {
+    "text": "However, it seems a similar set of design challenges that curbed user-centered design also thwarted technology- driven design innovations (Figure 2, from left to right), for example:   • Challenges in understanding AI capabilities; • Challenges in mapping out the right user stories and user   cases of a “minimum viable\" AI system, or envisioning how it can be applied in less obvious ways [13];   • Challenges in collaborating with AI engineers.   We found no agreed-upon set of root causes or themes around which we can easily summarize these challenges. Some re- searchers suggested that AI systems’ technical complexity causes the interaction design problems [9]. Some considered the unpredictable system behaviors as the cause [26]. Some argued that AI appeared to be difficult to design because AI is just “a new and difficult design material,\" suggesting that over time, known HCI methods will likely address these challenges [13]. Others argued that user-centered design needs to change in order to work for AI [19, 51]. These proposals rarely share key citations that indicate emerging agreements.   Paper 174 Page 3CHI 2020 Paper CHI 2020, April 25–30, 2020, Honolulu, HI, USA   Facilitating Human-AI Interaction Design HCI researchers have started to investigate how to make it easier to design and innovate human-AI interactions. We identify five broad themes in this body of work:   1.",
+    "score": 0.5072207661979397,
+    "source": "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+    "page": 3
+   },
+   {
+    "text": "We set the stage by cataloging the many human-AI interac- tion design challenges that literature has reported as well as solutions proposed.   2. We ask three provocative questions as a critique of current related work. These questions serve as a springboard for rethinking how to approach the question of why human-AI interaction appears so difficult to design.   3. We synthesize our own research, including studies on the challenges HCI practitioners faced when working with AI, our insights from making AI things via research through de- sign, and our insights from teaching students in human-AI interaction design and innovation. This synthesis identified   Paper 174 Page 1   This work is licensed under a Creative Commons Attribution International 4.0 License.",
+    "score": 0.5049106039552316,
+    "source": "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+    "page": 1
+   },
+   {
+    "text": "Systems may respond diferently to the same text input over time (e.g., autocompletion systems suggesting diferent words after language model updates) or behave diferently from one user to the next (e.g., search engines returning diferent results due to personalization). Inconsis- tent and unpredictable behaviors can confuse users, erode their confdence, and lead to abandonment of AI technology [7, 22]. Errors are common in AI-infused systems, rendering it difcult to reliably achieve the principle of error preven- tion. This has contributed to the large and growing body of work on AI explanations and interpretability to support hu- man verifcation of proposed actions aimed at reducing the likelihood of unwarranted or potentially dangerous actions and costly outcomes (e.g., [14, 21, 23, 36, 38, 44]).   For over 20 years, the human-computer interaction (HCI) community has proposed principles, guidelines, and strate- gies for designing user interfaces and interaction for appli- cations employing AI inferences (e.g., [16, 17, 33]).",
+    "score": 0.5030882540135667,
+    "source": "021 - Guidelines for Human-AI Interaction.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+   "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+   "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+   "022 - Re-examining Whether, Why, and How Human-AI Interaction Is Uniquely Difficult to Design.pdf",
+   "021 - Guidelines for Human-AI Interaction.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "76be555c-0981-4eed-be5b-85543cd69247",
+  "X-Amzn-Trace-Id": "Root=1-6b080438-34f8e0032e432bfb3b790f64;Parent=164525c81a950bf2;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.514
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:40+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In 'Re-examining Whether, Why, and How Human‑AI Interaction Is Uniquely Difficult to Design', which system is cited as an extreme example of new data driving AI performance in the wrong direction?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.367,
+ "json": {
+  "query": "Humanity's Last Exam",
+  "contexts": [
+   {
+    "text": "In response, we introduce HUMANITY’S LAST EXAM (HLE), a multi-modal bench- mark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. HLE consists of 2,500 questions across dozens of subjects, including mathematics, humanities, and the natural sciences. HLE is developed globally by subject-matter experts and con- sists of multiple-choice and short-answer questions suitable for automated grading. Each question has a known solution that is unambiguous and easily verifiable, but cannot be quickly answered via internet retrieval. State-of-the-art LLMs demon- strate low accuracy and calibration on HLE, highlighting a significant gap between current LLM capabilities and the expert human frontier on closed-ended academic questions. To inform research and policymaking upon a clear understanding of model capabilities, we publicly release HLE at https://lastexam.ai.   1 Introduction   The capabilities of large language models (LLMs) have progressed dramatically, exceeding human performance across a diverse array of tasks. To systematically measure these capabilities, LLMs are evaluated upon benchmarks: collections of questions which assess model performance on tasks such as math, programming, or biology.",
+    "score": 0.5524068008676004,
+    "source": "135 - Humanity's Last Exam.pdf",
+    "page": 4
+   },
+   {
+    "text": "However, state-of-the-art models now achieve nearly perfect scores on many existing evaluations [3, 15, 17, 35, 38, 51, 58], obscuring the full extent of current and future frontier AI capabilities [28, 33, 39, 40]. This has motivated the development of more challenging benchmarks which test for multi-modal capabilities [2, 11, 27, 29, 32, 48, 50, 55, 59, 61], strengthen existing benchmarks [25, 44, 46, 50, 55], filter questions over multiple stages of review [19, 28, 31, 34, 45], and employ experts to write tests for advanced academic knowledge [5, 19, 31, 35, 42, 45]. HLE combines these approaches: the questions are developed by subject-matter experts and undergo multiple rounds of review, while preserving the broad subject- matter coverage of MMLU. As a result, HLE provides a clear measurement of the gap between current AI capabilities and human expertise on closed-ended academic tasks, complementing other assessments of advanced capabilities in open-ended domains [11, 36, 37, 57].   3 Dataset   HUMANITY’S LAST EXAM (HLE) consists of 2,500 challenging questions across over a hundred subjects.",
+    "score": 0.5280265766703004,
+    "source": "135 - Humanity's Last Exam.pdf",
+    "page": 5
+   },
+   {
+    "text": "Humanity’s Last Exam   Organizing Team   Long Phan∗1, Alice Gatti∗1, Ziwen Han∗2, Nathaniel Li∗1,   Josephina Hu2, Hugh Zhang‡, Chen Bo Calvin Zhang2, Mohamed Shaaban2, John Ling2, Sean Shi2, Michael Choi2, Anish Agrawal2, Arnav Chopra2, Adam Khoja1, Ryan Kim†, Richard Ren1, Jason Hausenloy1, Oliver Zhang1, Mantas Mazeika1,   Summer Yue∗∗2, Alexandr Wang∗∗2, Dan Hendrycks∗∗1   1 Center for AI Safety, 2 Scale AI   Dataset Contributors   Dmitry Dodonov, Tung Nguyen, Daron Anderson, Mikhail Doroshenko, Alun Cennyth Stokes, Mobeen Mahmood, Oleksandr Pokutnyi, Oleg Iskra, Jessica P. Wang, John-Clark Levin, Mstyslav Kazakov, Fiona Feng, Steven Y.",
+    "score": 0.5268338256812624,
+    "source": "135 - Humanity's Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "Contributors: see Appendix A.   3Abstract   Benchmarks are important tools for tracking the rapid advancements in large lan- guage model (LLM) capabilities. However, benchmarks are not keeping pace in difficulty: LLMs now achieve over 90% accuracy on popular benchmarks like MMLU, limiting informed measurement of state-of-the-art LLM capabilities. In response, we introduce HUMANITY’S LAST EXAM (HLE), a multi-modal bench- mark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. HLE consists of 2,500 questions across dozens of subjects, including mathematics, humanities, and the natural sciences. HLE is developed globally by subject-matter experts and con- sists of multiple-choice and short-answer questions suitable for automated grading. Each question has a known solution that is unambiguous and easily verifiable, but cannot be quickly answered via internet retrieval. State-of-the-art LLMs demon- strate low accuracy and calibration on HLE, highlighting a significant gap between current LLM capabilities and the expert human frontier on closed-ended academic questions. To inform research and policymaking upon a clear understanding of model capabilities, we publicly release HLE at https://lastexam.ai.   1 Introduction   The capabilities of large language models (LLMs) have progressed dramatically, exceeding human performance across a diverse array of tasks.",
+    "score": 0.5153859320651629,
+    "source": "135 - Humanity's Last Exam.pdf",
+    "page": 3
+   },
+   {
+    "text": "To systematically measure these capabilities, LLMs are evaluated upon benchmarks: collections of questions which assess model performance on tasks such as math, programming, or biology. However, state-of-the-art LLMs [3, 15, 17, 35, 38, 51, 58] now achieve over 90% accuracy on popular benchmarks such as MMLU [22], which were once challenging frontiers for LLMs. The saturation of existing benchmarks, as shown in Figure 1, limits our ability to precisely measure AI capabilities and calls for more challenging evaluations that can meaningfully assess the rapid improvements in LLM capabilities at the frontiers of human knowledge.   To address this gap, we introduce HUMANITY’S LAST EXAM (HLE), a benchmark of 2,500 ex- tremely challenging questions from dozens of subject areas, designed to be the final closed-ended benchmark of broad academic capabilities. HLE is developed by academics and domain experts, providing a precise measure of capabilities as LLMs continue to improve (Section 3.1). HLE is multi-modal, featuring questions that are either text-only or accompanied by an image reference, and includes both multiple-choice and exact-match questions for automated answer verification. Ques- tions are original, precise, unambiguous, and resistant to simple internet lookup or database retrieval.",
+    "score": 0.4918720631933564,
+    "source": "135 - Humanity's Last Exam.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "8a12980b-1bc8-4e6b-bce1-94d9b262d2d9",
+  "X-Amzn-Trace-Id": "Root=1-6b08050f-4c6dfe9c684f3c9851526b15;Parent=269bbedce2bf3555;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.367
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:15+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Humanity's Last Exam"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.31,
+ "json": {
+  "query": "Stop Wasting Your Tokens: Towards Efficient Runtime Multi-Agent Systems",
+  "contexts": [
+   {
+    "text": "Published as a conference paper at ICLR 2026   STOP WASTING YOUR TOKENS: TOWARDS EFFICIENT RUNTIME MULTI-AGENT SYSTEMS   Fulin Lin1,∗ Shaowen Chen1 Ruishan Fang2,1 Hongwei Wang1,3,† Tao Lin2,† 1Zhejiang University 2Westlake University 3State Key Laboratory of CAD&CG, Zhejiang University {fulin1.24, hongweiwang}@intl.zju.edu.cn swenchen@zju.edu.cn {fangruishan, lintao}@westlake.edu.cn   ABSTRACT   While Multi-Agent Systems (MAS) excel at complex tasks, their growing auton- omy with operational complexity often leads to critical inefficiencies, such as excessive token consumption and failures arising from misinformation. Existing methods primarily focus on post-hoc failure attribution, lacking proactive, real- time interventions to enhance robustness and efficiency. To this end, we introduce SUPERVISORAGENT, a lightweight and modular framework for runtime, adaptive supervision that operates without altering the base agent’s architecture. Triggered by an LLM-free adaptive filter, SUPERVISORAGENT intervenes at critical junctures to proactively correct errors, guide inefficient behaviors, and purify observations.",
+    "score": 0.6680473810198025,
+    "source": "061 - Stop Wasting Your Tokens Towards Efficient Runtime Multi-Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "Emerging approaches such as latent-space reasoning or direct activation sharing between models could circumvent this bottleneck, potentially altering the scaling dynamics we observe if inter-agent communication shifts from token exchange to more efficient representational transfer. As shown in our cost analysis (Section 4.4), token consumption and latency grow substantially with agent count, often without proportional performance gains. Future work should explore efficiency-oriented designs, such as sparse communication, early-exit mechanisms, or distilled coordinator models, to make multi-agent deployments economically feasible at scale. Complementary latency-oriented designs, where parallel agent branches execute speculatively and suboptimal trajectories are pruned post-hoc, may trade increased total compute for reduced wall-clock time, a trade-off increasingly relevant for real-time applications where response latency   26Towards a Science of Scaling Agent Systems   dominates cost considerations. Additionally, current agentic benchmarks capture dynamic text-based environments but do not yet include long-horizon temporal dependencies or real-world feedback loops. Integrating embodied or multimodal settings (e.g., robotic control, medical triage, multi-user social interaction) will test whether our observed scaling principles generalize beyond symbolic domains.   (vii) Our regression analysis clusters observations at the dataset level (? = 6). With a small number of clusters, cluster-robust standard errors are known to be conservative, and several predictors that are significant under naive OLS lose significance under cluster-robust inference (Table 14).",
+    "score": 0.5262638081303935,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 26
+   },
+   {
+    "text": "Our extensive experiments demonstrate a significant Pareto improvement. On the challenging GAIA benchmark, SUPERVISORAGENT reduces token consumption by an average of 29.68% while maintaining competitive task success rates, a crucial step towards building more practical and scalable agentic systems.   10Published as a conference paper at ICLR 2026   ACKNOWLEDGEMENTS   This work was supported in part by the National Key Research and Development Program of China (2024YFF0907803), Research Fund for International Scientists of National Natural Science Foundation of China (72350710798), National Natural Science Foundation of China (NSFC) under No. 62576285, 62276230, Research Center for Industries of the Future (RCIF) at Westlake University, and Westlake Education Foundation.   ETHICS STATEMENT   Our work aims to improve the reliability and efficiency of Multi-Agent Systems, a crucial step for developing practical and beneficial autonomous technologies. We believe that by introducing a mechanism for real-time supervision, our framework provides a paradigm not only for performance optimization but also for enhancing the safety and predictability of future agentic systems. Our research was conducted on publicly available benchmarks, did not involve private user data, and adheres to the ICLR Code of Ethics.   REPRODUCIBILITY STATEMENT   We are committed to ensuring our work is reproducible.",
+    "score": 0.5222979306316212,
+    "source": "061 - Stop Wasting Your Tokens Towards Efficient Runtime Multi-Agent Systems.pdf",
+    "page": 10
+   },
+   {
+    "text": "Toward Efficient Agents: A Survey of Memory, Tool Use, and Planning   Xiaofang Yang1,2,† Lijun Li1,†, Heng Zhou1,3,† Tong Zhu1,† Xiaoye Qu1 Yuchen Fan1,4   Qianshan Wei5 Rui Ye4 Li Kang1,4 Yiran Qin6 Zhiqiang Kou7 Daizong Liu8 Qi Li5 Ning Ding9 Siheng Chen4 Jing Shao1,   1 Shanghai Artificial Intelligence Laboratory, 2 Fudan University, 3 University of Science and Technology of China, 4 Shanghai Jiaotong University,   5 Institute of Automation, Chinese Academy of Sciences, 6 The Chinese University of Hong Kong (Shenzhen),   7 Hong Kong Polytechnic University, 8 Wuhan University, 9 Tsinghua University   Abstract: Recent years have witnessed increasing interest in extending large language models into agentic systems. While the effectiveness of agents has continued to improve, efficiency, which is crucial for real-world deployment, has often been overlooked. This paper therefore investigates efficiency from three core components of agents: memory, tool use, and planning, considering costs such as latency, tokens, steps, etc.",
+    "score": 0.5183569756828919,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 1
+   },
+   {
+    "text": "Figure 6: SUPERVISORAGENT overhead on the GAIA benchmark.   settings. The results indicate that integrating SUPERVISORAGENT leads to a significant reduction in overall token usage across all complexity levels (L1, L2, L3) and pass@k configurations. Specifically, SUPERVISORAGENT achieves an average token saving of 35.95% across all settings compared to the baseline Smolagent. This substantial decrease in token consumption highlights SUPERVISORAGENT’s effectiveness in optimizing the multi-agent system’s efficiency by reducing unnecessary interactions and streamlining the reasoning process.   Notably, even when accounting for the additional tokens introduced by SUPERVISORAGENT’s super- visory interventions, the net token consumption remains significantly lower than that of the baseline (already reported in main content). And the token overhead of SUPERVISORAGENT only contains about 15.45% in average of the total tokens used in the Smolagent baseline. This demonstrates that the benefits of improved efficiency and reduced redundancy far outweigh the costs associated with supervision.   Latency Overhead Analysis. Table 7 and Figure 7 analyzes the temporal impact of SUPERVI- SORAGENT. While integrating the supervisor introduces an average latency increase of 37.27%, this translates to an absolute delay of less than 1.5 minutes per task. Crucially, the ablation study reveals that Adaptive Observation Purification is the primary driver of this latency.",
+    "score": 0.5175678185736678,
+    "source": "061 - Stop Wasting Your Tokens Towards Efficient Runtime Multi-Agent Systems.pdf",
+    "page": 22
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "99cd2fc8-ebe8-4c62-b5f1-9f33f2745694",
+  "X-Amzn-Trace-Id": "Root=1-6b080501-645c77ba0e99a98f1ff518e0;Parent=3df4d060a21aa88b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.31
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:01+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Stop Wasting Your Tokens: Towards Efficient Runtime Multi-Agent Systems"
+ },
+ "from_cache": false
+}

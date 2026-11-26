@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.957,
+ "json": {
+  "id": "chatcmpl-56c29f8a-41eb-49f7-8e58-a33eb57ee341",
+  "object": "chat.completion",
+  "created": 1795687356,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "On ALFWorld, ReAct achieves an average success rate of 54, while the three-agent design of ALFChat achieves a significantly higher success rate of 77. On WebShop, ReAct achieves an absolute 10% improvement over the previous best success rate. However, existing methods are still far from the performance of expert humans."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1562,
+   "completion_tokens": 74,
+   "total_tokens": 1636
+  },
+  "contexts": [
+   {
+    "text": "Moreover, the advantage of ReAct over Act is consistent across six controlled trials, with relative performance gain ranging from 33% to 90% and averaging 62%. Qualitatively, we saw that, without any thoughts at all, Act fails to correctly decompose goals into smaller subgoals, or loses track of the current state of the environment. Example trajectories comparing ReAct and Act can be found in Appendix D.2.1 and Appendix D.2.2.   On Webshop, one-shot Act prompting already performs on par with IL and IL+RL methods. With additional sparse reasoning, ReAct achieves significantly better performance, with an absolute 10% improvement over the previous best success rate. By checking examples, we find that ReAct is more likely to identify instruction-relevant products and options by reasoning to bridge the gap between noisy observations and actions (e.g. “For ‘space-saving ottoman bench for living room’, the item has options ‘39x18x18inch’ and ‘blue’ and seems good to buy.”). However, existing methods are still far from the performance of expert humans (Table 4), who perform significantly more product explorations and query re-formulations that are still challenging for prompting-based methods.   On the value of internal reasoning vs. external feedback To our knowledge, ReAct is the first demonstration of combined reasoning and action using an LLM applied to an interactive environment within a closed-loop system.",
+    "score": 0.5857634943217774,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 8
+   },
+   {
+    "text": "Moreover, the advantage of ReAct over Act is consistent across six controlled trials, with relative performance gain ranging from 33% to 90% and averaging 62%. Qualitatively, we saw that, without any thoughts at all, Act fails to correctly decompose goals into smaller subgoals, or loses track of the current state of the environment. Example trajectories comparing ReAct and Act can be found in Appendix D.2.1 and Appendix D.2.2.   On Webshop, one-shot Act prompting already performs on par with IL and IL+RL methods. With additional sparse reasoning, ReAct achieves significantly better performance, with an absolute 10% improvement over the previous best success rate. By checking examples, we find that ReAct is more likely to identify instruction-relevant products and options by reasoning to bridge the gap between noisy observations and actions (e.g. “For ‘space-saving ottoman bench for living room’, the item has options ‘39x18x18inch’ and ‘blue’ and seems good to buy.”). However, existing methods are still far from the performance of expert humans (Table 4), who perform significantly more product explorations and query re-formulations that are still challenging for prompting-based methods.   On the value of internal reasoning vs. external feedback To our knowledge, ReAct is the first demonstration of combined reasoning and action using an LLM applied to an interactive environment within a closed-loop system.",
+    "score": 0.5857634943217774,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 8
+   },
+   {
+    "text": "Results ReAct + Reflexion significantly outperforms ReAct by completing 130 out of 134 tasks using the simple heuristic to detect hallucinations and inefficient planning. Further, ReAct + Reflexion learns to solve additional tasks by learning in 12 consecutive trials. In the ReAct-only approach, we see that performance increase halts between trials 6 and 7.   Analysis A common error in baseline failed AlfWorld trajectories is when an agent thinks that it has possession of an item but does not actually have the item. The agent proceeds to execute several actions in a long trajectory and is not able to backtrack its actions to find the mistake.",
+    "score": 0.5694734781927764,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 5
+   },
+   {
+    "text": "Method Pick Clean Heat Cool Look Pick 2 All ReAct (avg) 63 52 48 71 61 24 54   ALFChat (2 agents)(avg) 61 58 57 67 50 19 54 ALFChat (3 agents)(avg) 79 64 70 76 78 41 69   ReAct (best of 3) 75 62 61 81 78 35 66 ALFChat (2 agents)(best of 3) 71 61 65 76 67 35 63 AFLChat (3 agents)(best of 3) 92 74 78 86 83 41 77   Table 3: Comparisons between ReAct and the two variants of ALFChat on the ALFWorld bench- mark. For each task, we report the success rate out of 3 attempts. Success rate denotes the number of tasks successfully completed by the agent divided by the total number of tasks. The results show that adding a grounding agent significantly improves the task success rate in ALFChat.   design matches the performance of ReAct, while the three-agent design significantly outperforms ReAct. We surmise that the performance discrepancy is caused by the inherent difference between dialogue-completion and text-completion tasks. On the other hand, introducing a grounding agent as a knowledge source remarkably advances performance on all types of tasks.",
+    "score": 0.5567732668377773,
+    "source": "064 - AutoGen Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework.pdf",
+    "page": 25
+   },
+   {
+    "text": "To prompt ReAct, we randomly annotate three trajectories from the training set for each task type, where each trajectory includes sparse thoughts that (1) decompose the goal, (2) track subgoal completion, (3) determine the next subgoal, and (4) reason via commonsense where to find an object and what to do with it. We show prompts used for ALFWorld in Appendix C.4. Following Shridhar et al. (2020b), we evaluate on 134 unseen evaluation games in a task-specific setup. For robustness, we construct 6 prompts for each task type through each permutation of 2 annotated trajectories from the 3 we annotate. Act prompts are constructed using the same trajectories, but without thoughts — since task instances are randomly chosen from the training set, it favors neither ReAct nor Act and provides a fair and controlled comparison to test the importance of sparse thoughts. For baselines, we use BUTLER (Shridhar et al., 2020b), an imitation learning agent trained on 105 expert trajectories for each task type5.   WebShop Can ReAct also interact with noisy real-world language environments for practical applications? We investigate WebShop (Yao et al., 2022), a recently proposed online shopping website environment with 1.18M real-world products and 12k human instructions.",
+    "score": 0.5545628694710608,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 7
+   }
+  ],
+  "sources": [
+   "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "064 - AutoGen Enabling Next-Gen LLM Applications via Multi-Agent Conversation Framework.pdf",
+   "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "56c29f8a-41eb-49f7-8e58-a33eb57ee341",
+  "X-Amzn-Trace-Id": "Root=1-6b0803bb-4a8490a8352791560e438e59;Parent=0c66b811818d48ae;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.957
+  }
+ ],
+ "requested_at": "2026-11-26T10:02:35+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How much does ReAct improve the success rate over imitation and reinforcement learning methods on ALFWorld and WebShop?"
+   }
+  ]
+ },
+ "from_cache": false
+}

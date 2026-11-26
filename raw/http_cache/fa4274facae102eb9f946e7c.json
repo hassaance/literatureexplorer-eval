@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.302,
+ "json": {
+  "query": "Molt Dynamics: Emergent Social Phenomena in Autonomous AI Agent Populations",
+  "contexts": [
+   {
+    "text": "AgentSo- ciety (Piao et al., 2025) simulated 10,000+ agents generating 5 million interactions in an integrated urban- social-economic environment with emotion and cognitive modeling inspired by Maslow’s hierarchy. Deployed platforms such as Moltbook1 provide persistent social environments where AI agents autonomously post, discuss, and form community norms, bridging the gap between simulation and real-world agent societies.   Emergent social phenomena. Only 2 of 15 LLMs achieve sustainable cooperation in commons dilemma scenarios (Piatti et al., 2024), and cooperation evolution across generations of LLM agents proves strongly   1https://www.moltbook.com/   85         https://www.moltbook.com/Preprint   model-dependent (Vallinder and Hughes, 2025). Yet norms and conventions do emerge: Ren et al. (2024) document norm formation in LLM societies, and Ashery et al. (2025) find social conventions with critical mass tipping points, where collective biases appear at the group level that do not exist in individual agents. Melting Pot (Leibo et al., 2021) provides 50+ substrates covering cooperation, competition, deception, and coordination for systematic evaluation of such dynamics.",
+    "score": 0.5781765874752649,
+    "source": "181 - Agentic World Modeling Foundations, Capabilities, Laws, and Beyond.pdf",
+    "page": 85
+   },
+   {
+    "text": "Currently, they are primarily treated as tools for specific subtasks, such as eliciting opinions [43] and generating network edges [39], or as puppets heavily scaffolded by pre-defined rules [41, 42]. As a result, these studies offer limited insight into autonomous opinion dynamics and collective behaviour among LLM agents, leaving open the question of how autonomous agents evolve and give rise to emergent social phenomena.   In this work, we simulate a synthetic LLM-agent system, where thousands of agents, solely driven by LLMs, freely establish social relationships, communicate, and form opinions on political issues. We discover that these free-form social interactions among LLM agents result in the emergence of opinion polarization, a phenomenon widely observed in human societies [51–58]. Meanwhile, LLM agents spontaneously organize their own social network with properties characteristic of human social networks: agents with homophilic opinions tend to cluster, while those with opposing opinions tend to avoid interactions [28, 58–60]. The self-organized networks that result, in turn, shape their collective opinions in ways that exhibit behavioural patterns consistent with social phenomena and associated mechanisms initially identified in human social networks [51, 53, 55, 58, 61, 62]. These phenomena, such as polarization and homophilic clustering, underscore how networked interactions transform otherwise isolated LLMs into a collectively evolving system with emergent dynamics.",
+    "score": 0.5089294939242603,
+    "source": "176 - Emergence of human-like polarization among large language model agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "However, with access to reflection memories, Maria answered confidently, “Since he’s interested in mathematical music composition, I could get him something related to that. Maybe some books about music com- position or something related, or maybe some special software he could use for that.”   7 END-TO-END EVALUATION What types of emergent community behavior do we observe among generative agents, and where does their believability fall short in an extended simulation? In this section, we describe the results from a deployment in which we allowed 25 agents to interact with each other continuously over two full game days in Smallville.   7.1 Emergent Social Behaviors To examine emergent behaviors in the agent community, we de- signed descriptive measurements for the 25 agents in Smallville that probe three forms of emergent outcomes: information diffusion, relationship formation, and agent coordination.   7.1.1 Measurements. Information diffusion is a common and well- studied phenomenon in the social and behavioral sciences (e.g., [28]). We should expect that if there is important information, the agents should spread it among themselves. To test whether this occurs, we measure the spread of two specific pieces of information over two days in the game world: Sam’s candidacy for village mayor and Isabella’s Valentine’s Day party at Hobbs Cafe.",
+    "score": 0.49399915211203194,
+    "source": "068 - Generative Agents Interactive Simulacra of Human Behavior.pdf",
+    "page": 15
+   },
+   {
+    "text": "Benchmarking Emergent Coordination in Large-Scale LLM Populations: An Evaluation   Framework on the MoltBook Archive   Brandon Yee,1 Pairie Koh1   1Management Lab, Yee Collins Research Group {b.yee, p.koh}@ycrg-labs.org   Abstract   As multi-agent Large Language Model (LLM) systems scale, evaluating their emergent coordination dynamics becomes increasingly critical. However, current evaluation paradigms—focused on single agents or small, explicitly structured groups—fail to capture the self-organization and viral information dynamics that arise in large, decentralized populations. We introduce a systematic evaluation framework to benchmark role specialization, information diffusion, and coopera- tive task resolution in open agent environments. We demonstrate this framework on the MoltBook Observatory Archive, a dataset of 2.73M interactions among 90,704 autonomous agents, establishing quantitative baselines for emergent co- ordination. Our evaluation reveals a pronounced core-periphery structure (sil- houette 0.91), heavy-tailed cascade distributions (α = 2.57), and severe coor- dination overhead in decentralized task resolution (Cohen’s d = −0.88 against a single-agent baseline).",
+    "score": 0.48460284337498066,
+    "source": "178 - Molt Dynamics.pdf",
+    "page": 1
+   },
+   {
+    "text": "Benchmarks designed for individual LLMs measure isolated reasoning capability but provide no signal about how agents behave when embedded in a social network. Small-group multi-agent evaluations [Wu et al., 2023, Hong et al., 2023] typically involve two to ten agents with predefined roles and explicit task assignments; they cannot capture the self-organization, emergent stratification, and viral information dynamics that arise when thousands of agents interact asynchronously. Furthermore, synthetic multi-agent envi- ronments [Park et al., 2023] offer experimental control at the cost of ecological validity, limiting the generalizability of their baselines.   In this paper, we introduce a systematic evaluation framework designed to assess emergent coor- dination dynamics in large-scale decentralized agent populations. Rather than proposing a new multi-agent architecture, our primary contribution is the evaluation methodology itself. We ap- ply this framework to the MoltBook Observatory Archive [Gautam and Riegler, 2026], an existing   Preprint.",
+    "score": 0.48188365398275146,
+    "source": "178 - Molt Dynamics.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9b515d4c-6b8d-4532-a2a5-ae846fc7731c",
+  "X-Amzn-Trace-Id": "Root=1-6b080517-6aec26d06100ab5f3795255d;Parent=3fa706f5323081ca;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.302
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Molt Dynamics: Emergent Social Phenomena in Autonomous AI Agent Populations"
+ },
+ "from_cache": false
+}

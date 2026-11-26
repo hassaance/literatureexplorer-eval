@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.278,
+ "json": {
+  "query": "Language Models Do Not Embed Numbers Continuously",
+  "contexts": [
+   {
+    "text": "Language Models Do Not Embed Numbers Continuously   Alex O. Davies1,2, Roussel Nzoyem1,2, Nirav Ajmeri2, Telmo M. Silva Filho2   1Primary Author 2University of Bristol, UK   alexander.davies@bristol.ac.uk, rd.nzoyemngueguin@bristol.ac.uk   Abstract Recent research has extensively studied how large language models manipulate integers in specific arithmetic tasks, and on a more fundamental level, how they represent numeric val- ues. These previous works have found that language model embeddings can be used to reconstruct the original values, however, they do not evaluate whether language models actu- ally model continuous values as continuous. Using expected properties of the embedding space, including linear recon- struction and principal component analysis, we show that language models not only represent numeric spaces as non- continuous but also introduce significant noise. Using mod- els from three major providers (OpenAI, Google Gemini and Voyage AI), we show that while reconstruction is pos- sible with high fidelity (R2 ≥ 0.95), principal components only explain a minor share of variation within the embed- ding space. This indicates that many components within the embedding space are orthogonal to the simple numeric in- put space. Further, both linear reconstruction and explained variance suffer with increasing decimal precision, despite the ordinal nature of the input space being fundamentally un- changed.",
+    "score": 0.767008796554599,
+    "source": "030 - Language Models Do Not Embed Numbers Continuously.pdf",
+    "page": 1
+   },
+   {
+    "text": "0.01 1.00 ± 0.00 0.73 ± 0.02 0.79 ± 0.02 0.38 ± 0.00 0.45 ± 0.00 voyage-3.5-lite Voyage 0.91 ± 0.11 1.00 ± 0.00 0.75 ± 0.02 0.80 ± 0.02 0.37 ± 0.00 0.55 ± 0.00   Discussion Our results reveal a complex picture of how LLM em- bedding models encode numerical information. First, we demonstrate that embeddings can indeed be used to recon- struct numbers with reasonable fidelity. The linear recon- struction experiments show that most models maintain R2   scores above 0.95 for simpler numerical datasets, confirming that numerical information is preserved in the embedding space. This finding supports prior work suggesting that lan- guage models possess some inherent understanding of nu- merical relationships.   Second, the first principal component of the embedded representations correlates meaningfully with input preci- sion across most models and datasets. This correlation in- dicates that the primary axis of variation in the embedding space aligns with the numerical ordering of the input scalars, suggesting that models do capture the fundamental ordinal structure of numbers.",
+    "score": 0.5762361578192869,
+    "source": "030 - Language Models Do Not Embed Numbers Continuously.pdf",
+    "page": 6
+   },
+   {
+    "text": "encode numerical information. First, we demonstrate that embeddings can indeed be used to recon- struct numbers with reasonable fidelity. The linear recon- struction experiments show that most models maintain R2   scores above 0.95 for simpler numerical datasets, confirming that numerical information is preserved in the embedding space. This finding supports prior work suggesting that lan- guage models possess some inherent understanding of nu- merical relationships.   Second, the first principal component of the embedded representations correlates meaningfully with input preci- sion across most models and datasets. This correlation in- dicates that the primary axis of variation in the embedding space aligns with the numerical ordering of the input scalars, suggesting that models do capture the fundamental ordinal structure of numbers.   However, our third finding reveals a significant limitation: the explained variance by the first principal component re- mains consistently low across all models, typically below 40% even for the simplest datasets. This low explained vari- ance is particularly concerning when considered alongside our fourth observation. Given that the first component does correlate well with the original numbers, the low explained variance implies that the embedding space contains substan- tial additional variation that is not present in the original one- dimensional numerical input.",
+    "score": 0.5431221699667246,
+    "source": "030 - Language Models Do Not Embed Numbers Continuously.pdf",
+    "page": 6
+   },
+   {
+    "text": "The need for these techniques is underscored by comprehensive benchmarks which reveal that modern LLMs still fail at a wide range of basic numerical tasks. For exam- ple, the NUPA Test (Yang et al. 2024) shows broad failures beyond simple addition, while Tang et al. (2025) highlight significant error rates in the seemingly straightforward task of numerical translation, especially when dealing with large units across languages.   Experiments Consider a real scalar number x ∈ R1, and an embed- ding model f(x) → x̂ ∈ Rd for d the dimensionality of the model’s embedding space. Scalars x are in a set of X = {x1, x2, . . .}. Further, consider that x ∈ X has a given number of integer and decimal places a and b;   1234 . 567 .   a = 4 b = 3   In this work we evaluate how accurately embedding mod- els encode numbers x with respect to these precisions a, b and sign of the number. A diagram of our experimental framework is presented in Figure 2. We can expect that, as in prior work (Zhu, Dai, and Sui 2024; Levy and Geva 2024), a number x can be reproduced by a linear model over the embedding lin(X̂) → X ′; perfect reconstruction is lin(X̂) = X .",
+    "score": 0.536602181627441,
+    "source": "030 - Language Models Do Not Embed Numbers Continuously.pdf",
+    "page": 3
+   },
+   {
+    "text": "Language models encode numbers using digit representations in base 10. arXiv:2410.11781. Lin, Z.; Deng, C.; Zhou, L.; Zhang, T.; Xu, Y.; Xu, Y.; He, Z.; Shi, Y.; Dai, B.; Song, Y.; Zeng, B.; Chen, Q.; Miao, Y.; Xue, B.; Wang, S.; Fu, L.; Zhang, W.; He, J.; Zhu, Y.; Wang,X.; and Zhou, C. 2024. GeoGalactica: A Scientific Large Language Model in Geoscience. arXiv. Maltoni, D.; and Ferrara, M. 2024. Arithmetic with lan- guage models: From memorization to computation. Neural Networks, 179: 106550. Marjieh, R.; Veselovsky, V.; Griffiths, T. L.; and Sucholut- sky, I. 2025. What is a Number, That a Large Language Model May Know It? arXiv preprint arXiv:2502.01540. OpenAI. 2025. New embedding models and API up- dates. https://openai.com/index/new-embedding-models- and-api-updates/. Accessed: 10/2025. Peikos, G.; Kasela, P.; and Pasi, G. 2024.",
+    "score": 0.5060802602130625,
+    "source": "030 - Language Models Do Not Embed Numbers Continuously.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "42f4b413-804c-4327-9508-e21f8d3b72a9",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fb-7bf159847cdd64d56455bf45;Parent=70551b66474473a5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.278
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:55+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Language Models Do Not Embed Numbers Continuously"
+ },
+ "from_cache": false
+}

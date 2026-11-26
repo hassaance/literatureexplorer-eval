@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.395,
+ "json": {
+  "query": "SlideGen: Collaborative Multimodal Agents for Scientific Slide Generation",
+  "contexts": [
+   {
+    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License.   MM ’26, Rio de Janeiro, Brazil © 2026 Copyright held by the owner/author(s).   ACM ISBN 979-8-4007-2213-4/2026/11   https://doi.org/10.1145/3767308.3835435   CCS Concepts • Computing methodologies→Multi-agent systems; Natural language generation; • Applied computing → Multi / mixed media creation; • Information systems→Multimedia content   creation.   Keywords Scientific Slide Generation, Multimodal Agents, Layout Design   ACM Reference Format: Xin Liang, Zhilin Zhang, Xiang Zhang, Haoran Su, Yiwei Xu, Siqi Sun,   and Chenyu You. 2026. SlideGen: Collaborative Multimodal Agents for   Scientific Slide Generation. In Proceedings of the 34th ACM International Conference on Multimedia (MM ’26), November 10–14, 2026, Rio de Janeiro, Brazil. ACM, New York, NY, USA, 64 pages. https://doi.org/10.1145/3767308.   3835435   1 Introduction Scientific slides are the primary medium through which research   is communicated, e.g., in conference talks, classrooms, and tutori-   als.",
+    "score": 0.794427797862611,
+    "source": "096 - SlideGen Collaborative Multimodal Agents for Scientific Slide Generation.pdf",
+    "page": 1
+   },
+   {
+    "text": "SlideGen: Collaborative Multimodal Agents for Scientific Slide Generation   Xin Liang ∗   Stony Brook University   Stony Brook, New York, USA   Zhilin Zhang ∗   New York University   New York, New York, USA   Xiang Zhang   University of British Columbia   Vancouver, British Columbia, Canada   Haoran Su   New York University   New York, New York, USA   Yiwei Xu   University of California, Los Angeles   Los Angeles, California, USA   Siqi Sun   Fudan University   Shanghai, China   Chenyu You †   Stony Brook University   Stony Brook, New York, USA   Abstract Creating presentation slides from scientific papers is not simply a   matter of summarizing paragraphs. A presenter is required to de-   cide what story to tell, which figures and equations to highlight, and   how to arrange them into pages that are visually clear rather than   crowded or repetitive. The need to jointly reason over long con-   texts and layout-sensitive design makes paper-to-slide generation   a uniquely challenging multimodal task. Most existing approaches,   however, focusmainly on textual content selection, producing slides   that often lack visual balance, narrative flow, or coherent integration   of multimodal evidence. In this work, we introduce SlideGen, a col-   laborative vision-language multi-agent framework that coordinates   narrative planning, multimodal grounding, and layout composi-   tion.",
+    "score": 0.7702614500539491,
+    "source": "096 - SlideGen Collaborative Multimodal Agents for Scientific Slide Generation.pdf",
+    "page": 1
+   },
+   {
+    "text": "Table 1 summarizes   representative systems along key functional dimensions, highlight-   ing that while recent approaches increasingly support multimodal   inputs and structured content extraction, few explicitly address   visual layout design or produce fully editable presentation outputs.   Motivated by this gap, we propose SlideGen, a modular multi-   agent framework that coordinates narrative planning, multimodal   grounding, and principled layout composition for slide generation.   Rather than producing slides through a single monolithic model   or rigid formatting rules, SlideGen orchestrates a team of special-   ized vision-language agents that jointly reason about document   structure and visual organization. Figure 1 illustrates the overall   workflow of SlideGen. Given a scientific paper, the system first   performs global document parsing and multimodal asset extraction   using Docling [26] and Marker [33], following prior document-   based visual generation pipelines [32]. While this step provides the   raw ingredients for slide construction, turning them into an effec-   tive presentation requires coordinated decisions about storyline,   evidence selection, and layout design.   To this end, SlideGen decomposes slide generation into a set of   collaborative roles, each handled by a specialized agent. Outliner determines the high-level narrative of the presentation, allocating   key ideas into a coherent sequence of slides.",
+    "score": 0.7316331726504066,
+    "source": "096 - SlideGen Collaborative Multimodal Agents for Scientific Slide Generation.pdf",
+    "page": 2
+   },
+   {
+    "text": "In this work, we introduce SlideGen, a col-   laborative vision-language multi-agent framework that coordinates   narrative planning, multimodal grounding, and layout composi-   tion. SlideGen assigns specialized agents to outline the presentation   structure, align supporting figures and tables with key claims, gen-   erate speaker notes, and compose editable PPTX slides through a   diverse layout library. By refining layouts at the deck level, the sys-   tem produces slide decks that are both faithful to the source paper   and effective as presentations. To evaluate slide generation beyond   text fidelity, we propose geometry-aware density (GAD), a metric   that captures visual clutter, sparsity, and fragmentation, and shows   strong agreement with human judgments. Evaluated across four   complementary dimensions on our 200-paper benchmark, SlideGen   consistently and significantly improves layout balance, content   coverage, and text coherence, outperforming competitive baselines   in paper-to-slide generation. Our findings suggest that effective   slide generation requires multimodal design reasoning, and that   agent collaboration offers a principled bridge between document   understanding and scientific communication.   ∗ Both authors contributed equally to this research.   † Corresponding author.   This work is licensed under a Creative Commons Attribution 4.0 International License.   MM ’26, Rio de Janeiro, Brazil © 2026 Copyright held by the owner/author(s).",
+    "score": 0.7183371204287788,
+    "source": "096 - SlideGen Collaborative Multimodal Agents for Scientific Slide Generation.pdf",
+    "page": 1
+   },
+   {
+    "text": "Second, the 19 fixed templates   are comprehensive for general slide structures, but cannot cover   every possible arrangement, and adding domain-specific layouts   still requires manual design. Future work will focus on how to   enable human-in-the-loop for improving generation effectiveness,   where users can iteratively adjust agent outputs, and on learned   layout selection method to replace the fixed template library with   a learned model that can generate diversified slide layouts.SlideGen: Collaborative Multimodal Agents for Scientific Slide Generation MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil   References [1] Abdelrahman Abouelenin, Atabak Ashfaq, Adam Atkinson, Hany Awadalla,   Nguyen Bach, Jianmin Bao, Alon Benhaim, Martin Cai, Vishrav Chaudhary,   Congcong Chen, et al. 2025. Phi-4-mini technical report: Compact yet powerful   multimodal language models via mixture-of-loras. arXiv:2503.01743   [2] Tushar Aggarwal and Aarohi Bhand. 2025.",
+    "score": 0.7030990818843618,
+    "source": "096 - SlideGen Collaborative Multimodal Agents for Scientific Slide Generation.pdf",
+    "page": 8
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f047a765-7735-426b-817f-b79da3745f46",
+  "X-Amzn-Trace-Id": "Root=1-6b080508-7754e9e44dbad45758323740;Parent=060b9a23de2126c2;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.395
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:08+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "SlideGen: Collaborative Multimodal Agents for Scientific Slide Generation"
+ },
+ "from_cache": false
+}

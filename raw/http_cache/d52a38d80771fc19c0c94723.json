@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.255,
+ "json": {
+  "query": "Mitkä ovat Voyager-agentin kolme pääkomponenttia?",
+  "contexts": [
+   {
+    "text": "X-axis denotes the number of prompting iterations.   1   ar X   iv :2   30 5.   16 29   1v 2   [ cs   .A I]   1 9   O ct   2 02   3         https://voyager.minedojo.orgMine Wood Log   Make Crafting Table   Craft Stone Sword   Craft Shield   Make Furnace   Cook Steak   Combat Zombie Mine Wood Log   Make Crafting Table   Combat Zombie   Mine Diamond   New Task   Code as Actions   Refine ProgramEnv Feedback Execution Errors   Update Exploration Progress   Skill Retrieval   Add New Skill   Automatic Curriculum Iterative Prompting Mechanism Skill Library   Environment Self-Verification   Figure 2: VOYAGER consists of three key components: an automatic curriculum for open-ended exploration, a skill library for increasingly complex behaviors, and an iterative prompting mechanism that uses code as action space.   1 Introduction   Building generally capable embodied agents that continuously explore, plan, and develop new skills in open-ended worlds is a grand challenge for the AI community [1–5]. Classical approaches employ reinforcement learning (RL) [6, 7] and imitation learning [8–10] that operate on primitive actions, which could be challenging for systematic exploration [11–15], interpretability [16–18], and generalization [19–21].",
+    "score": 0.5065157091966423,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "It can construct an ever-growing skill library of action programs that are reusable, interpretable, and generalizable to novel tasks. We evaluate VOYAGER systematically against other LLM-based agent techniques (e.g., ReAct [29], Reflexion [30], AutoGPT [28]) in MineDojo [23], an open-source Minecraft AI framework. VOYAGER outperforms prior SOTA by obtaining 3.3× more unique items, unlocking key tech tree milestones up to 15.3× faster, and traversing 2.3× longer distances. We further demonstrate that VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other methods struggle to generalize.   2 Method   VOYAGER consists of three novel components: (1) an automatic curriculum (Sec. 2.1) that suggests objectives for open-ended exploration, (2) a skill library (Sec. 2.2) for developing increasingly complex behaviors, and (3) an iterative prompting mechanism (Sec. 2.3) that generates executable code for embodied control. Full prompts are presented in Appendix, Sec. A.   2.1 Automatic Curriculum   Embodied agents encounter a variety of objectives with different complexity levels in open-ended environments.",
+    "score": 0.498620304441863,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Voyager’s skill library represents a validated architecture for the S-component—storing not raw interaction history but abstracted, reusable capabilities.   Three additional multi-agent systems—Concordia (Vezhnevets et al., 2023), Mixture-of-Agents (Wang et al., 2024), and AgentVerse (Chen et al., 2023)—occupy the capability module category with a multi-agent specialization. Concordia (DeepMind) provides a simulation substrate for LLM agents acting in physical, social, or digital spaces; its shared Associative Memory component enables persistent state synchronization across agent ensembles, addressing the multi-agent S-component challenge of cross-agent state consistency without requiring a centralized harness. Mixture-of-Agents (MoA) struc- tures agent collaboration as a layered pipeline in which proposer agents generate candidate answers and aggregator agents synthesize them across rounds; its collective intelligence effect—demonstrating that iterative cross-agent synthesis outperforms any single agent—establishes a motivating case for the harness interoperability work discussed in §7 Direction 4 (Protocol Interoperability). AgentVerse intro- duces dynamic agent recruitment, where the agent ensemble composition adapts to task demands at runtime; this requires harness-level agent registry management analogous to dynamic tool registration in the T-component, but applied to agents rather than tools.",
+    "score": 0.48728280005351127,
+    "source": "043 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 36
+   },
+   {
+    "text": "Voyager’s skill library represents a validated architecture for the S-component—storing not raw interaction history but abstracted, reusable capabilities.   Three additional multi-agent systems—Concordia (Vezhnevets et al., 2023), Mixture-of-Agents (Wang et al., 2024), and AgentVerse (Chen et al., 2023)—occupy the capability module category with a multi-agent specialization. Concordia (DeepMind) provides a simulation substrate for LLM agents acting in physical, social, or digital spaces; its shared Associative Memory component enables persistent state synchronization across agent ensembles, addressing the multi-agent S-component challenge of cross-agent state consistency without requiring a centralized harness. Mixture-of-Agents (MoA) struc- tures agent collaboration as a layered pipeline in which proposer agents generate candidate answers and aggregator agents synthesize them across rounds; its collective intelligence effect—demonstrating that iterative cross-agent synthesis outperforms any single agent—establishes a motivating case for the harness interoperability work discussed in §7 Direction 4 (Protocol Interoperability). AgentVerse intro- duces dynamic agent recruitment, where the agent ensemble composition adapts to task demands at runtime; this requires harness-level agent registry management analogous to dynamic tool registration in the T-component, but applied to agents rather than tools.",
+    "score": 0.48728280005351127,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 36
+   },
+   {
+    "text": "VOYAGER: An Open-Ended Embodied Agent with Large Language Models   Guanzhi Wang1 2#, Yuqi Xie3, Yunfan Jiang4∗, Ajay Mandlekar1∗, Chaowei Xiao1 5, Yuke Zhu1 3, Linxi “Jim” Fan1†#, Anima Anandkumar1 2†   1NVIDIA, 2Caltech, 3UT Austin, 4Stanford, 5UW Madison ∗Equal contribution †Equal advising # Corresponding authors   https://voyager.minedojo.org   Abstract   We introduce VOYAGER, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. VOYAGER consists of three key components: 1) an automatic curriculum that maximizes exploration, 2) an ever-growing skill library of executable code for storing and retrieving complex behaviors, and 3) a new iterative prompting mechanism that incorporates environ- ment feedback, execution errors, and self-verification for program improvement. VOYAGER interacts with GPT-4 via blackbox queries, which bypasses the need for model parameter fine-tuning. The skills developed by VOYAGER are temporally extended, interpretable, and compositional, which compounds the agent’s abilities rapidly and alleviates catastrophic forgetting.",
+    "score": 0.47837887621047376,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "49c370c6-f188-4174-a8c9-38afd7a4a7ff",
+  "X-Amzn-Trace-Id": "Root=1-6b080432-538a3e1e42d4cf8e5f01ee9d;Parent=613987d07706ccd3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.255
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:34+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "Mitkä ovat Voyager-agentin kolme pääkomponenttia?"
+ },
+ "from_cache": false
+}

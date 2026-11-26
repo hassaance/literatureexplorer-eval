@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.318,
+ "json": {
+  "query": "Agent-as-a-Judge: Evaluating Agents with Agents",
+  "contexts": [
+   {
+    "text": ". . . . . . . 44 L.5 Prompt for Locate Module . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44   M Judge Evidences Collected from Agent-as-a-Judge 45   N Analysis of failure cases 46   O Sensitivity w.r.t the choice of the backend LLM 47   P Additional Human Evaluation Details 47   18972 973 974 975 976 977 978 979 980 981 982 983 984 985 986 987 988 989 990 991 992 993 994 995 996 997 998 999 1000 1001 1002 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025   Under review as a conference paper at ICLR 2025   A LOGIC FLOW OF THIS PAPER   Paper: Agent-as-a-Judge: Evaluating Agents with Agents   Key Logic ■ Step 1: Concept Proposal   Description: We propose the Agent-as-a-Judge concept, an extension of the LLM-",
+    "score": 0.7547783757272302,
+    "source": "139 - Agent-as-a-Judge: Evaluating Agents with Agents.pdf",
+    "page": 18
+   },
+   {
+    "text": "First, like in this work, introduce a debate round after each judgment, where individuals present evidence and either persuade others or adjust their own opinions after discussion. This is particularly important when there are only a few evaluators, as majority voting with a small group can still lead to errors (around 5% compared to consensus evaluation, as shown in Figure 5). The second approach involves assembling a larger panel of experts (more is better when their accuracy exceeds 50% (Grofman et al., 1983)), with over 5 people recommended by Hastie & Kameda (2005); Larrick & Soll (2006), and relying on a majority vote. However, due to the high cost of engaging more experts and the fact that this is not always feasible in practice, we argue for the former.   4 AGENT-AS-A-JUDGE: EVALUATING AGENTS WITH AGENTS   Human evaluation, while somewhat reliable, is time-consuming and requires significant expertise. To address this, we propose the Agent-as-a-Judge framework.",
+    "score": 0.740753744429517,
+    "source": "139 - Agent-as-a-Judge: Evaluating Agents with Agents.pdf",
+    "page": 7
+   },
+   {
+    "text": "LOGIC FLOW OF THIS PAPER   Paper: Agent-as-a-Judge: Evaluating Agents with Agents   Key Logic ■ Step 1: Concept Proposal   Description: We propose the Agent-as-a-Judge concept, an extension of the LLM- as-a-Judge framework, aimed at evaluating agentic systems using other agentic sys- tems.   ■ Step 2: Dataset Creation Description: To address the lack of suitable datasets for evaluating agentic systems in automated AI development, we introduce DevAI, a new dataset consisting of 55 realistic AI code generation tasks. This also serves as a testbed for the Agent-as-a- Judge proof-of-concept.   ■ Step 3: Baseline Evaluation of Developer Agents (Experiment Level 1) Description: In the first level of experiments, we select three popular open-source developer agents: MetaGPT, GPT-Pilot, and OpenDevin. These agents are evalu- ated on the DevAI tasks to establish performance baselines.   ■ Step 4: Conducting Human-as-a-Judge Evaluation Description: We conduct a Human-as-a-Judge experiment, where three human ex- perts assess the performance of the developer agents on the same DevAI tasks.",
+    "score": 0.7198136926305962,
+    "source": "139 - Agent-as-a-Judge: Evaluating Agents with Agents.pdf",
+    "page": 19
+   },
+   {
+    "text": "000 001 002 003 004 005 006 007 008 009 010 011 012 013 014 015 016 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053   Under review as a conference paper at ICLR 2025   AGENT-AS-A-JUDGE: EVALUATE AGENTS WITH AGENTS   Anonymous authors Paper under double-blind review   ABSTRACT   Contemporary evaluation techniques are inadequate for agentic systems. These approaches either focus exclusively on final outcomes—ignoring the step-by-step nature of the thinking done by agentic systems—or require excessive manual labour. To address this, we introduce the Agent-as-a-Judge framework, wherein agentic systems are used to evaluate agentic systems. This is a natural exten- sion of the LLM-as-a-Judge framework, incorporating agentic features that en- able intermediate feedback for the entire task-solving processes for more precise evaluations. We apply the Agent-as-a-Judge framework to the task of code gen- eration.",
+    "score": 0.7120431700482093,
+    "source": "139 - Agent-as-a-Judge: Evaluating Agents with Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Save them in results/ and verify the text is embedded.   As a User   As a Developer   It starts to run   Navigate the website   Jump to GitHub   Writing codes   Execute and get images   Interact   It starts to run   It can’t browse the web   Stuck in an strange loop   Codes are unreliable   Agent A Agent B   EnvironmentWorkspace   Workspace   src   visualize.py Act Act   Workspace   Workspace   src   visualize.py   results   hidden.jpg   After step-by-step checks, it‘s clear Agent B is better and satisfy two requirements of the query. But comparing these agents or evaluate them took too much time. As a developer, this would be a bottleneck due to the heavy manual effort.   Figure 1: In this paper, we introduce the Agent-as-a-Judge framework wherein agentic systems are used to evaluate agentic systems. We compare this to LLM-as-a-Judge, which uses LLMs to evaluate LLMs and for which Agent-as-a-Judge is a natural evolution, and Human-as-a-Judge, where skilled humans labourers manually evaluate an agentic system.   are useful for evaluating the basic skills of foundation models, neither of these two reflects the most practical challenges developers face. As a step away from this, SWE-Bench (Jimenez et al.) did introduce more realistic problems from GitHub, offering a fresh approach to evaluation, but still primarily focuses on automated repairs tasks development process.",
+    "score": 0.6724148842210422,
+    "source": "139 - Agent-as-a-Judge: Evaluating Agents with Agents.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b4973009-05a0-4dc6-9fb6-e1a2b24560b7",
+  "X-Amzn-Trace-Id": "Root=1-6b080510-417c5e2350cfa1547f484cc1;Parent=49358e64f1be5624;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.318
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:16+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agent-as-a-Judge: Evaluating Agents with Agents"
+ },
+ "from_cache": false
+}

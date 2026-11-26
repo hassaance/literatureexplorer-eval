@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.477,
+ "json": {
+  "id": "chatcmpl-18e50607-27c7-4a3c-988c-137a4778a7e9",
+  "object": "chat.completion",
+  "created": 1795687988,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "HyDE performs zero-shot dense retrieval by decomposing the task into two sub-tasks: a generative task and a document-document similarity task. Here's how it works:\n\n1. **Generative Task**: An instruction-following language model (InstructLM) is used to generate a hypothetical document based on the query. The model is instructed to \"write a document that answers the question.\" This generated document is not real and can contain factual errors, but it is expected to capture the \"relevance\" by providing an example of a relevant document.\n\n2. **Document Embedding**: The generated hypothetical document is then encoded into an embedding vector using an unsupervised contrastive encoder (enccon). This encoder is trained to capture document-document similarity, which is learned through unsupervised contrastive learning.\n\n3. **Search and Retrieval**: The embedding vector of the hypothetical document is used to search against the embeddings of the real documents in the corpus. The most similar real documents are retrieved and returned based on the inner product similarity between the hypothetical document embedding and the corpus document embeddings.\n\nBy leveraging the document-document similarity encoded in the inner-product during contrastive training, HyDE effectively performs zero-shot dense retrieval without requiring any relevance judgments or training data."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1591,
+   "completion_tokens": 253,
+   "total_tokens": 1844
+  },
+  "contexts": [
+   {
+    "text": "In comparison, our method uses the standard MIPS index and requires no training or training data. Our generative model produces an intermediate hypothetical document to be fed into a dense encoder, instead of a real document.   3 Methodology   In this section, we first formally define the prob- lem of (zero-shot) dense retrieval. Then we will introduce how HyDE is designed to solve it.   3.1 Preliminaries Dense retrieval models similarity between query and document with inner product similarity. Given a query q and document d, it uses two encoder function encq and encd to map them into d dimen- sion vectors vq,vd, whose inner product is used as similarity measurement.   sim(q, d) = 〈encq(q), encd(d)〉 = 〈vq,vd〉 (1)   For zero-shot retrieval, we consider L query sets Q1, Q2, ..., QL and their corresponding search cor- pus, document sets D1, D2, ..., DL. Denote the j-th query from i-th set query set Qi as qij . We need to fully define mapping functions encq and encd without access to any query set Qi, document set Di, or any relevance judgment rij .",
+    "score": 0.7375697392181382,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "In comparison, our method uses the standard MIPS index and requires no training or training data. Our generative model produces an intermediate hypothetical document to be fed into a dense encoder, instead of a real document.   3 Methodology   In this section, we first formally define the prob- lem of (zero-shot) dense retrieval. Then we will introduce how HyDE is designed to solve it.   3.1 Preliminaries Dense retrieval models similarity between query and document with inner product similarity. Given a query q and document d, it uses two encoder function encq and encd to map them into d dimen- sion vectors vq,vd, whose inner product is used as similarity measurement.   sim(q, d) = 〈encq(q), encd(d)〉 = 〈vq,vd〉 (1)   For zero-shot retrieval, we consider L query sets Q1, Q2, ..., QL and their corresponding search cor- pus, document sets D1, D2, ..., DL. Denote the j-th query from i-th set query set Qi as qij . We need to fully define mapping functions encq and encd without access to any query set Qi, document set Di, or any relevance judgment rij .",
+    "score": 0.7375697392181382,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "We need to fully define mapping functions encq and encd without access to any query set Qi, document set Di, or any relevance judgment rij .   The difficulty of zero-shot dense retrieval lies precisely in Equation 1: it requires learning of two embedding functions (for query and document re- spectively) into the same embedding space where inner product captures relevance. Without rele- vance judgments/scores to fit, learning becomes intractable.   3.2 HyDE HyDE circumvents the aforementioned learning problem by performing search in document- only embedding space that captures document- document similarity. This can be easily learned using unsupervised contrastive learning (Izacard et al., 2021; Gao et al., 2021; Gao and Callan, 2022). We set document encoder encd directly as a contrastive encoder enccon.   f = encd = enccon (2)   This function is also denoted as f for simplic- ity. This unsupervised contrastive encoder will be shared by all incoming document corpus.   vd = f(d) ∀d ∈ D1 ∪D2 ∪ ... ∪DL (3)   To build the query vector, we consider in addition an instruction following LM, InstructLM. It takes a query q and a textual instruction INST and follows them to perform the task specified by INST.",
+    "score": 0.6799119525965184,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "We need to fully define mapping functions encq and encd without access to any query set Qi, document set Di, or any relevance judgment rij .   The difficulty of zero-shot dense retrieval lies precisely in Equation 1: it requires learning of two embedding functions (for query and document re- spectively) into the same embedding space where inner product captures relevance. Without rele- vance judgments/scores to fit, learning becomes intractable.   3.2 HyDE HyDE circumvents the aforementioned learning problem by performing search in document- only embedding space that captures document- document similarity. This can be easily learned using unsupervised contrastive learning (Izacard et al., 2021; Gao et al., 2021; Gao and Callan, 2022). We set document encoder encd directly as a contrastive encoder enccon.   f = encd = enccon (2)   This function is also denoted as f for simplic- ity. This unsupervised contrastive encoder will be shared by all incoming document corpus.   vd = f(d) ∀d ∈ D1 ∪D2 ∪ ... ∪DL (3)   To build the query vector, we consider in addition an instruction following LM, InstructLM. It takes a query q and a textual instruction INST and follows them to perform the task specified by INST.",
+    "score": 0.6799119525965184,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "With these ingredients, we propose to   pivot through Hypothetical Document Embeddings (HyDE), and decompose dense retrieval into two tasks, a generative task per- formed by an instruction-following language model and a document-document similarity task performed by a contrastive encoder (Figure 1). First, we feed the query to the generative model and instruct it to \"write a document that answers the question\", i.e. a hypothetical document. We expect the generative process to capture \"relevance\" by giving an example; the generated document is not real, can contain factual errors but is like a relevant document. In the second step, we use an unsupervised contrastive encoder to encode this document into an embedding vector. Here, we expect the encoder’s dense bottleneck to serve a lossy compressor, where the extra (hallucinated) details are filtered out from the embedding. We use this vector to search against the corpus embeddings. The most similar real documents are retrieved and returned. The retrieval leverages document-document similarity encoded in the inner-product during contrastive training. Note that, interestingly, with HyDE factorization, the query-document similarity score is no longer explicitly modeled nor computed. Instead, the retrieval task is cast into two NLU and NLG tasks.   HyDE appears unsupervised. No model is trained in HyDE: both the generative model and the con- trastive encoder remain intact.",
+    "score": 0.6779678578190758,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "18e50607-27c7-4a3c-988c-137a4778a7e9",
+  "X-Amzn-Trace-Id": "Root=1-6b080633-085124ad106caba12ccf0eb6;Parent=6f2da9067a7927c9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.477
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:07+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "rep1",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How does HyDE (Hypothetical Document Embeddings) perform zero-shot dense retrieval?"
+   }
+  ]
+ },
+ "from_cache": false
+}

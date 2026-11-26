@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.646,
+ "json": {
+  "id": "chatcmpl-d1b89141-90f0-4154-9a43-d2d88b920d8b",
+  "object": "chat.completion",
+  "created": 1795687461,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1643,
+   "completion_tokens": 7,
+   "total_tokens": 1650
+  },
+  "contexts": [
+   {
+    "text": ", Vedanuj Goswami, Naman Goyal, Anthony Hartshorn, Saghar Hosseini, Rui Hou, Hakan Inan, Marcin Kardas, Viktor Kerkez, Madian Khabsa, Isabel Kloumann, Artem Korenev, Punit Singh Koura, Marie-Anne Lachaux, Thibaut Lavril, Jenya Lee, Diana Liskovich, Yinghai Lu, Yuning Mao, Xavier Martinet, Todor Mihaylov, Pushkar Mishra, Igor Molybog, Yixin Nie, Andrew Poulton, Jeremy Reizenstein, Rashi Rungta, Kalyan Saladi, Alan Schelten, Ruan Silva, Eric Michael Smith, Ranjan Subramanian, Xiaoqing Ellen Tan, Binh Tang, Ross Taylor, Adina Williams, Jian Xiang Kuan, Puxin Xu, Zheng Yan, Iliyan Zarov, Yuchen Zhang, Angela Fan, Melanie Kambadur, Sharan Narang, Aurélien Rodriguez, Robert Stojnic, Sergey Edunov, and Thomas Scialom. Llama 2: Open foundation and fine-tuned chat models. CoRR, abs/2307.09288, 2023.   Fanqi Wan, Xinting Huang, Deng Cai, Xiaojun Quan, Wei Bi, and Shuming Shi.",
+    "score": 0.521663283791558,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 15
+   },
+   {
+    "text": "Goswami, Naman Goyal, An- thony Hartshorn, Saghar Hosseini, Rui Hou, Hakan Inan, Marcin Kardas, Viktor Kerkez, Madian Khabsa, Isabel Kloumann, Artem Korenev, Punit Singh Koura, Marie-Anne Lachaux, Thibaut Lavril, Jenya Lee, Di- ana Liskovich, Yinghai Lu, Yuning Mao, Xavier Mar- tinet, Todor Mihaylov, Pushkar Mishra, Igor Moly- bog, Yixin Nie, Andrew Poulton, Jeremy Reizen- stein, Rashi Rungta, Kalyan Saladi, Alan Schelten, Ruan Silva, Eric Michael Smith, Ranjan Subrama- nian, Xiaoqing Ellen Tan, Binh Tang, Ross Tay- lor, Adina Williams, Jian Xiang Kuan, Puxin Xu, Zheng Yan, Iliyan Zarov, Yuchen Zhang, Angela Fan, Melanie Kambadur, Sharan Narang, Aurélien Ro- driguez, Robert Stojnic, Sergey Edunov, and Thomas Scialom. 2023b. Llama 2: Open foundation and fine-tuned chat models. CoRR, abs/2307.09288.",
+    "score": 0.5103691487783726,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 13
+   },
+   {
+    "text": "0.04   0.06   0.08   MATH   0 10 20 30 40 Ensemble Size   0.15   0.17   0.20   0.23   0.25   Chess   0 10 20 30 40 Ensemble Size   0.35   0.40   0.45   0.50   MMLU   0 10 20 30 40 Ensemble Size   0.05   0.10   0.15   0.20   0.25 HumanEval   Figure 8: Accuracy curves across various datasets using the Llama2-13B model.   0 10 20 30 40 Ensemble Size   0.50   0.60   0.70   Ac cu   ra cy   GSM8K   COT + Ours ZS-COT + Ours SPP + Ours Reflection + Ours Ours   0 10 20 30 40 Ensemble Size   0.02   0.04   0.06   0.08   0.10   0.12   MATH   0 10 20 30 40 Ensemble Size   0.10   0.15   0.20   0.25   Chess   0",
+    "score": 0.482169666012497,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 17
+   },
+   {
+    "text": "Ensemble Size   0.02   0.04   0.06   0.08   0.10   0.12   MATH   0 10 20 30 40 Ensemble Size   0.10   0.15   0.20   0.25   Chess   0 10 20 30 40 Ensemble Size   0.45   0.50   0.55   0.60   0.65 MMLU   0 10 20 30 40 Ensemble Size   0.15   0.20   0.25   0.30   HumanEval   Figure 9: Accuracy curves across various datasets using the Llama2-70B model.   0 10 20 30 40 Ensemble Size   0.70   0.75   0.80   0.85   Ac cu   ra cy   GSM8K   COT + Ours ZS-COT + Ours SPP + Ours Reflection + Ours Ours   0 10 20 30 40 Ensemble Size   0.25   0.30   0.35   0.40   MATH   0 10 20 30 40 Ensemble Size   0.35   0.40   0.45",
+    "score": 0.4647804714154687,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 17
+   },
+   {
+    "text": "0.50   0.55   0.60   0.65   MMLU   2 4 6 8 10   0.20   0.30   0.40   0.50   0.60   0.70   HumanEval   0 10 20 30 40 Ensemble Size   0.30   0.40   0.50   0.60   0.70   0.80   Ac cu   ra cy   Llama2-13B Llama2-70B GPT-3.5-Turbo   0 10 20 30 40 Ensemble Size   0.00   0.10   0.20   0.30   0.40   0 10 20 30 40 Ensemble Size   0.10   0.20   0.30   0.40   0.50   0 10 20 30 40 Ensemble Size   0.40   0.45   0.50   0.55   0.60   0.65   0.70   0 10 20 30 40 Ensemble Size   0.20   0.30   0.40   0.50   0.60",
+    "score": 0.4643141130743215,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 6
+   }
+  ],
+  "sources": [
+   "002 - More Agents Is All You Need.pdf",
+   "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+   "002 - More Agents Is All You Need.pdf",
+   "002 - More Agents Is All You Need.pdf",
+   "002 - More Agents Is All You Need.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d1b89141-90f0-4154-9a43-d2d88b920d8b",
+  "X-Amzn-Trace-Id": "Root=1-6b080425-0c64ad510477d032714ad22b;Parent=22769a20e48f2023;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.646
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:20+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What learning rate schedule was used to pretrain Llama 2?"
+   }
+  ]
+ },
+ "from_cache": false
+}

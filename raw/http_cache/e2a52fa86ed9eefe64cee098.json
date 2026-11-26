@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.257,
+ "json": {
+  "query": "Recursive self-improvement of AI research agents",
+  "contexts": [
+   {
+    "text": "2026-09-23   Recursive self-improvement of AI research agents Dhruv Srikanth1, Bingchen Zhao1, Dixing Xu1, Yuxiang Wu1 and Zhengyao Jiang1 1Weco AI   AI agents are beginning to automate research and development across the AI stack, from improving training efficiency to optimizing inference. A natural next step is to improve the research efficiency of the agents themselves. When an AI research agent’s own code is the object of optimization, each accepted rewrite becomes the agent that the next round edits. We refer to this loop as recursive self-improvement. Its significance lies in a long-standing trend, in which increased cumulative spending on R&D yields diminishing returns. Sustained self-improvement offers a way to counter this trend. We present AIDE2, a system that implements this loop for a frontier AI research agent. It proposes changes to its own code, benchmarks modified versions of itself on a suite of AI R&D tasks, and keeps the changes that perform best on hidden evaluations. In an autonomous 8-day run, AIDE2 discovered seven successive improvements, ranging from a new search policy to memory mechanisms that compress and manage the agent’s growing context. These gains generalize to four held-out benchmarks spanning machine learning engineering, heuristic algorithm engineering, and physics-based weather forecasting, the last of which is out of distribution from the selection tasks.",
+    "score": 0.8735871106711325,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Across the recursive self-improvement run, the loop repeatedly finds and accepts improvements under a fixed evaluation budget. Those improvements generalize beyond the tasks used to select them, carry over to a domain the loop never encountered, and come   2Recursive self-improvement of AI research agents   with a reduction in reward hacking that was not part of the objective being optimized for. Measured against a strong baseline developed over two years of human-driven R&D, the discovered agents match or outperform it on the held-out benchmarks.   2. Method   We frame recursive self-improvement as a bi-level optimization problem consisting of two loops that iteratively optimize an agent against a measurable outcome. The inner loop acts on specific tasks designed to capture an agent’s ability to optimize code within a subset of AI R&D domains. The outer loop operates on a meta-level, working to improve the inner-loop agent’s optimization capability. Each inner-loop agent is evaluated at a fixed budget; therefore, improving the optimization capability directly improves the research efficiency of the inner-loop agent. Each accepted rewrite becomes the agent that the next step edits and evaluates. Both loops are driven by agents of the same tree-search design. Figure 1 illustrates this bi-level optimization process.   2.1. Recursive self-improvement   The inner loop. Given a codebase and a measurable metric, an inner-loop agent, denoted 𝑎, iteratively edits the code to improve performance under that metric.",
+    "score": 0.8246108341739014,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "All rights reserved   ar X   iv :2   60 9.   26 45   7v 1   [ cs   .A I]   2 2   S ep   2 02   6         https://arxiv.org/abs/2609.26457v1Recursive self-improvement of AI research agents   Outer loop a tree of agents — every node is a research agent   incumbent   rewrite   Inner loop grade the agent candidate by its optimization capability on AI R&D tasks   Harness engineering   Heuristic algorithm engineering   ML engineering   ⋮ ⋮ ⋮   private grade g(a) from held-out scores   Task code one node — a runnable script   keep if better   public task scores guide each search   import torch import torch.nn.functional as F   model = ConvNet(depth=4).cuda() opt = torch.optim.AdamW( model.parameters(), lr=3e-4)   for x, y in train_loader: x, y = x.cuda(), y.cuda() out = model(x) loss = F.cross_entropy(out, y) opt.zero_grad() loss.backward() opt.step() acc = evaluate(model, val_loader)   Figure 1 | One step of recursive self-improvement, shown at three levels of magnification. Left: the outer loop searches a tree of agents, where every node is a complete research agent.",
+    "score": 0.8121933452269853,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Because candidates were selected on №���, the recursive self-improvement trace is not meant to demonstrate generalization beyond the selection benchmark. However, given that the inner-loop agents use №���pub№��Ё as their optimization signal and №��� is a   5Recursive self-improvement of AI research agents   function of №���priv№��Ё , we use the grades to test each candidate agentт��s ability to produce solutions that generalize from the public signal to the private held-out data within each task. Figure 2 shows that the improved agents eventually outperform AIDEhuman on the selection benchmark; we refer to this as first-order generalization.",
+    "score": 0.7622942156985423,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 5
+   },
+   {
+    "text": "AID Ehum   an   AI Scientist v2*   Autoresearch* AIDE*   OpenEvolve*   AI Scientist v1* AIRA*   0   5   10   15   20   25   m ea   n te   st im   pr ov   em en   t ( %   )   19.6 19.3 19.2   17.8   15.1   13.2 13.2   Figure 8 | AIDEhuman ranks among the strongest code optimization agents on FML-Bench. AIDEhuman outperforms all six agents evaluated by the benchmark’s authors and represents a strong baseline when comparing agents discovered by AIDE2. We show mean normalized test improvement over 18 tasks and 3 seeds with ±1 standard error of the mean across the three seed-level means. Asterisks mark agents whose per-round results were provided by the FML-Bench authors (Zou et al., 2026).   25Recursive self-improvement of AI research agents   C. Harness gains from recursive self-improvement transfer across models   We isolate how the harness interacts with the strength of the underlying model by studying agent performance on ALE-Bench and MLE-Bench, using AIDE0 and AIDE85, which effectively mark the start and end of the recursive self-improvement run described in section 3.2.",
+    "score": 0.7192815851258068,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 25
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4e9b49d9-728e-46d1-8b6b-a9e5631a5732",
+  "X-Amzn-Trace-Id": "Root=1-6b080507-31b1bd52445de4c704397a55;Parent=3aa788edcde27a0b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.257
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:07+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Recursive self-improvement of AI research agents"
+ },
+ "from_cache": false
+}

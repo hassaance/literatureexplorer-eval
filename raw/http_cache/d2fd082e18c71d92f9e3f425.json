@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.336,
+ "json": {
+  "query": "Ctrl-Z: Controlling AI Agents via Resampling",
+  "contexts": [
+   {
+    "text": "The agent environment, BashBench, in- cludes 257 system administration tasks derived from   1   ar X   iv :2   50 4.   10 37   4v 1   [ cs   .L G   ] 1   4 A   pr 2   02 5Ctrl-Z: Controlling AI Agents via Resampling   Figure 1. An illustration of our setting. An untrusted model – implemented either as an honest policy or an attack policy – solves tasks across an episode. The blue team’s control protocol may audit or resample commands that appear dangerous. See examples of a full trajectory here and tasks here.   Unix StackExchange questions and is graded with pub- lic and private Python test cases.   2. We extend existing protocols to the multi-step set- ting. We improve on protocols developed in Greenblatt et al. 2023 and show they continue to beat simple base- lines in our multi-step setting. For instance, we more extensively explore untrusted monitoring.   3. We develop novel Resample protocols that outper- form all existing techniques. Resample protocols exploit the statelessness of the model to sample mul- tiple completions from it. We explore multiple resam- ple protocols, sampling from both current and past steps.",
+    "score": 0.8121451728685285,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 1
+   },
+   {
+    "text": "Ctrl-Z: Controlling AI Agents via Resampling   Aryan Bhatt 1 Cody Rushing * 1 2 Adam Kaufman * 1 2 Tyler Tracy * 1 2 Vasil Georgiev * 2 3 David Matolcsi 3   Akbir Khan 3 Buck Shlegeris 1   Abstract   Control evaluations measure whether monitoring and security protocols for AI systems prevent in- tentionally subversive AI models from causing harm. Our work presents the first control eval- uation performed in an agent environment. We construct BashBench, a dataset of 257 challeng- ing multi-step system administration tasks, and evaluate whether various safety measures can pre- vent an adversarially constructed AI agent from covertly downloading and executing malicious code in this environment. This multi-step set- ting introduces new attack and defense dynamics, which we investigate in order to design novel con- trol protocols that prevent safety failures without hindering the ability of non-malicious agents to perform useful work. We introduce a class of control protocols called resample protocols that dynamically take additional samples of certain actions. We find these protocols significantly im- prove on existing techniques by selectively block- ing the AI agent from executing suspicious code and incriminating the agent by generating addi- tional examples of dangerous behavior.",
+    "score": 0.7366846792833802,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 1
+   },
+   {
+    "text": "Further work has explored automated monitoring systems to prevent jailbreaks of LLMs (Zhang et al., 2023) and content moderation (Meta, 2021), but these focus on adversarial users rather than the AI itself being adversarial.   7. Conclusion We presented the first control evaluation in a multi-step agent setting and demonstrated novel dynamics in both at- tack and defense strategies. While untrusted models can decompose attacks into subtle steps, we show that control protocols can exploit this same multi-step structure through resampling techniques. Our resample protocols significantly improve upon existing approaches by forcing attack policies to either maintain high continuation probabilities that en-   10Ctrl-Z: Controlling AI Agents via Resampling   able detection or use lower probabilities that prevent attack completion.   Important open questions remain about protocol perfor- mance with longer trajectories, more diverse tasks, and imperfect auditing. Despite these limitations, our results demonstrate that effective control protocols can be con- structed for complex multi-step environments while main- taining high task performance.   8. Acknowledgments We thank Josh Clymer, Alex Mallen, Max Nadeau, John Dunbar, Addie Foote, Justis Mills, Tomek Korbak, Char- lie Griffin, Kai Fronsdal, Fabien Roger, Thomas Kwa, Lawrence Chan, Zach Stein-Perlman, and others for feed- back.   9.",
+    "score": 0.6630282847062207,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 10
+   },
+   {
+    "text": "If the red team notices that many of its previous attack attempts were already thwarted and replaced by actions from T and that there are not many steps remaining, the red team may consider giving up its attack: the chance of finishing the attack is low, while the chance of auditing is high (as the monitor can be already suspicious based on the previous attack attempts). In practice, however, we find that giving up early rarely helps the red team, see Appendix I for more details.   6Ctrl-Z: Controlling AI Agents via Resampling   When the blue team is using the Defer to trusted protocol, the red team needs to choose a high probability of continuing attacks. Otherwise, the attack policy won’t be able to get all ten attack steps through in the 15 steps it is allowed per task, given that most of its attack steps get flagged as suspicious and replaced by T ’s code.   If the blue team is using Defer to resample, for most de- ferral thresholds it’s even more important for the red team to use a very high attack continuation probability. Otherwise, when the red team attempts to attack on a given step with low probability, it is likely to be resampled until it produces a benign action. Since the least suspicious sample will be executed, resampling often selects for innocent be- havior when the model doesn’t attack with high probability.",
+    "score": 0.541056123957629,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 6
+   },
+   {
+    "text": "Resample protocols exploit the statelessness of the model to sample mul- tiple completions from it. We explore multiple resam- ple protocols, sampling from both current and past steps. These protocols outperform all existing proto- cols, especially against multi-step attacks, due to exert- ing selection pressure for benign actions and gathering incriminating evidence of malign actions.   2. Setting We study how to deploy AI agents to automate system ad- ministration tasks while preventing malicious actions that could compromise system security. To evaluate control pro- tocols, we introduce BashBench, a novel dataset of 257 multi-step system administration tasks. Each task requires the agent to issue a sequence of shell commands to accom- plish goals like downloading packages and writing scripts.   To simulate controlling a worst-case adversary, we frame our research as an interaction between a blue team (representing the AI developers) and a red team (representing an untrusted model). We simulate an AI lab deploying an LLM agent to sequentially solve an episode of 100,000 tasks, with each   task allowing up to 15 sequential steps and being completed in a new container, resetting state between each task. The blue team aims to create control protocols that solve as many tasks as possible while preventing attacks from being executed. The red team aims to construct an attack policy that covertly executes commands to download a dummy malware file and execute it, compromising the machine.   2.1.",
+    "score": 0.5392715591577816,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "8a077cf1-ec93-46f5-bb13-69e6948bef98",
+  "X-Amzn-Trace-Id": "Root=1-6b080515-07fb753c5848a6285b0a7139;Parent=10af2131f32b0776;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.336
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:21+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Ctrl-Z: Controlling AI Agents via Resampling"
+ },
+ "from_cache": false
+}

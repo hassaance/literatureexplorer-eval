@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.268,
+ "json": {
+  "query": "Whose Personae? Synthetic Persona Experiments in LLM Research and Pathways to Transparency",
+  "contexts": [
+   {
+    "text": "Whose Personae? Synthetic Persona Experiments in LLM Research   and Pathways to Transparency Jan BatznerW, C, M, Volker StockerW, B, Bingjun TangC, Anusha NatarajanC,   Qinhao ChenC, Stefan SchmidW, B, Gjergji KasneciM   WWeizenbaum Institute CColumbia University BTechnical University Berlin MMunich Center for Machine Learning & Technical University Munich   Abstract   Synthetic personae experiments have become a prominent method in Large Language Model alignment research, yet the representativeness and ecological validity of these personae vary considerably between studies. Through a review of 63 peer-reviewed studies published between 2023 and 2025 in leading NLP and AI venues, we reveal a critical gap: task and population of interest are often underspecified in persona- based experiments, despite personalization being fundamen- tally dependent on these criteria. Our analysis shows sub- stantial differences in user representation, with most stud- ies focusing on limited sociodemographic attributes and only 35% discussing the representativeness of their LLM per- sonae. Based on our findings, we introduce a persona trans- parency checklist that emphasizes representative sampling, explicit grounding in empirical data, and enhanced ecologi- cal validity.",
+    "score": 0.7864454494460066,
+    "source": "078 - Whose Personae.pdf",
+    "page": 1
+   },
+   {
+    "text": "Pathways Toward Enhanced Transparency Based on our review of synthetic personae in LLM research, we propose the following six recommendations to enhance the transparency, quality, and representativeness of synthetic persona experiments:   (1) Application: Define task of interest clearly Researchers must clearly define specific tasks for which per- sonae are designed instead of making overly global claims (Table 2). Stating the “intended use” (Mitchell et al. 2019) and the “motivation for dataset creation” (Gebru et al. 2021) as recommended in ML-based research should equally ap- ply to persona experiments in LLM research. The domain of interest needs to be defined to select use case-specific perfor- mance metrics instead of generic measures, e.g., healthcare applications need different evaluation criteria than applica- tions in educational or customer service domains. Therefore, synthetic personae should be created to meet the specific do- main and context requirements, such as clinical accuracy for healthcare or pedagogical appropriateness for educational tools.   (2) Population: Specify Demographic Target Group Researchers should explicitly define which demographic tar- get group their personae represent instead of relying on generic or generalized descriptions (Table 3). Based on the task, domain, and use case defined earlier, the representa- tiveness of synthetic personae depends on the population of interest.",
+    "score": 0.7368341397911444,
+    "source": "078 - Whose Personae.pdf",
+    "page": 7
+   },
+   {
+    "text": "Talat et al. (2022) describe how attempts to aggregate diverse human judgments into unified models can be prob- lematic, particularly when “the average view is implicitlyidentified with moral correctness” while obscuring whose perspectives are actually represented. While recent work has evaluated LLM benchmark quality and proposed more rep- resentative alternatives (Raji et al. 2021; Reuel et al. 2024; Kirk et al. 2024b), a comprehensive assessment of synthetic personae in LLM research remains a critical gap. In this pa- per, we address this shortcoming and make the following contributions:   1. Literature Review: We evaluate 63 papers published in leading NLP and AI venues between 2023 and 2025 that use synthetic personae, analyzing sociodemographic rep- resentation and methodological practices.   2. Ecological Validity Assessment: We find poor ecologi- cal validity in current LLM persona experiments, failing to reflect real-world demographics, user interactions, and domain datasets.1   3. Pathways to Transparency: We synthesize our findings into concrete guidelines and present a checklist for de- veloping synthetic personae in LLM research.",
+    "score": 0.714617005122861,
+    "source": "078 - Whose Personae.pdf",
+    "page": 1
+   },
+   {
+    "text": "Pathways to Transparency: We synthesize our findings into concrete guidelines and present a checklist for de- veloping synthetic personae in LLM research.   Related Work The use of personae in human-computer interaction litera- ture predates LLMs, with researchers, product designers and marketers constructing personae since the 2000s to repre- sent specific user types (Jung et al. 2017; Salminen et al. 2018). The user persona should enable companies to bet- ter identify the needs of their target users (Miaskiewicz and Kozar 2011). Early personae studies relied on surveys, interviews, and ethnographic studies but were constrained by small sample sizes, high costs, and temporal limitations (Zhang, Brown, and Shankar 2016). The availability of user data gathered through social media platforms allowed quan- titative persona creation, leveraging computational methods on large-scale user data from online platforms to identify behavioral patterns across demographic groups (Salminen et al. 2020a; An, Kwak, and Jansen 2017). LLMs further en- abled simulation studies with persona-based agents, allow- ing developers to examine scenarios where agents interact based on assigned personas and platform design (Park et al. 2022).",
+    "score": 0.695162218865259,
+    "source": "078 - Whose Personae.pdf",
+    "page": 2
+   },
+   {
+    "text": "□ Limitations Acknowledgment: Discussed limitations of their personae explicitly?   Lastly, we examine researchers’ transparency practices regarding funding, ethics, and limitations in their persona- based studies. While the importance of positionality state- ments varies depending on application domain (e.g., more critical for culturally-sensitive applications), the analysis found that none of the 63 reviewed papers included an explicit positionality statement.5 Although most papers in- cluded limitations sections discussing persona constraints, none contained explicit acknowledgments of how author backgrounds might influence design decisions. Our review corpus shows a notable geographic concentration, with 34%   5Similar transparency limitations have been observed in popu- lar LLM benchmark studies (Kraft, Simon, and Schimmler 2025).(102 authors) affiliated with US institutions and 18% (54 au- thors) with Chinese institutions. Notably, 40% of the papers we reviewed have at least one US-based co-author, com- pared to 19% for China.   Pathways Toward Enhanced Transparency Based on our review of synthetic personae in LLM research, we propose the following six recommendations to enhance the transparency, quality, and representativeness of synthetic persona experiments:   (1) Application: Define task of interest clearly Researchers must clearly define specific tasks for which per- sonae are designed instead of making overly global claims (Table 2).",
+    "score": 0.6739261115429962,
+    "source": "078 - Whose Personae.pdf",
+    "page": 6
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5818a171-5b05-443b-8d42-a1aded252af0",
+  "X-Amzn-Trace-Id": "Root=1-6b080505-59b8c105608e0b7776cb1dab;Parent=3316e05d428a1ee3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.268
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:05+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Whose Personae? Synthetic Persona Experiments in LLM Research and Pathways to Transparency"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.235,
+ "json": {
+  "id": "chatcmpl-0387e268-1407-41fd-aa1c-f2bf42b4ed2a",
+  "object": "chat.completion",
+  "created": 1795688020,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The document encoder used to embed the generated document is denoted as `f`. This encoder takes the generated document as input and outputs a dense vector representation. The expectation value of the query vector is then estimated by sampling N documents from the distribution defined by `g`, and computing the average of the encoded vectors of these sampled documents. The query is also considered as a possible hypothesis, and its vector is included in the average. The inner product is then computed between the estimated query vector and the set of all document vectors, and the most similar documents are retrieved. The encoder function `f` serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1594,
+   "completion_tokens": 142,
+   "total_tokens": 1736
+  },
+  "contexts": [
+   {
+    "text": "We can now encode the generated document using the document encoder f . Write,   E[vqij ] = E[f(g(qij , INSTi))] (5)   Formally, g defines a probability distribution based on the chain rule. In this paper, we simply consider the expectation value, assuming the distribution of vqij is uni-modal, i.e. the query is not ambiguous. The study of ambiguous queries and diversity is left to future work. We estimate Equation 5 by sampling N documents from g, [d̂1, d̂2, ..., d̂N ].   v̂qij = 1   N   ∑ d̂k∼g(qij ,INSTi)   f(dk) (6)   = 1   N   N∑ k=1   f(d̂k) (7)   We also consider the query as a possible hypothesis,   v̂qij = 1   N + 1 [   N∑ k=1   f(d̂k) + f(qij)] (8)   Inner product is computed between v̂qij and the set of all document vectors {f(d)|d ∈ Di}. The most similar documents are retrieved. Here the encoder function f serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector.",
+    "score": 0.5130694322293303,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 4
+   },
+   {
+    "text": "We can now encode the generated document using the document encoder f . Write,   E[vqij ] = E[f(g(qij , INSTi))] (5)   Formally, g defines a probability distribution based on the chain rule. In this paper, we simply consider the expectation value, assuming the distribution of vqij is uni-modal, i.e. the query is not ambiguous. The study of ambiguous queries and diversity is left to future work. We estimate Equation 5 by sampling N documents from g, [d̂1, d̂2, ..., d̂N ].   v̂qij = 1   N   ∑ d̂k∼g(qij ,INSTi)   f(dk) (6)   = 1   N   N∑ k=1   f(d̂k) (7)   We also consider the query as a possible hypothesis,   v̂qij = 1   N + 1 [   N∑ k=1   f(d̂k) + f(qij)] (8)   Inner product is computed between v̂qij and the set of all document vectors {f(d)|d ∈ Di}. The most similar documents are retrieved. Here the encoder function f serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector.",
+    "score": 0.5130694322293303,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 4
+   },
+   {
+    "text": "∪DL (3)   To build the query vector, we consider in addition an instruction following LM, InstructLM. It takes a query q and a textual instruction INST and follows them to perform the task specified by INST. For simplicity, denote,   g(q, INST) = InstructLM(q, INST) (4)   Now we can use g to map queries to \"hypotheti- cal\" documents by sampling from g, setting INSTto be “write a paragraph that answers the question”. The generated document is not real, can and is likely to be ungrounded factually (Brown et al., 2020; Thoppilan et al., 2022). We only re- quire it to capture relevance pattern. This is done by generating documents, i.e. providing exam- ples. Critically, here we offload relevance mod- eling from representation learning model to an NLG model that generalizes significantly more eas- ily, naturally, and effectively (Brown et al., 2020; Ouyang et al., 2022). Generating examples also replaces explicit modeling of relevance scores. We can now encode the generated document using the document encoder f . Write,   E[vqij ] = E[f(g(qij , INSTi))] (5)   Formally, g defines a probability distribution based on the chain rule.",
+    "score": 0.46064016764593196,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "∪DL (3)   To build the query vector, we consider in addition an instruction following LM, InstructLM. It takes a query q and a textual instruction INST and follows them to perform the task specified by INST. For simplicity, denote,   g(q, INST) = InstructLM(q, INST) (4)   Now we can use g to map queries to \"hypotheti- cal\" documents by sampling from g, setting INSTto be “write a paragraph that answers the question”. The generated document is not real, can and is likely to be ungrounded factually (Brown et al., 2020; Thoppilan et al., 2022). We only re- quire it to capture relevance pattern. This is done by generating documents, i.e. providing exam- ples. Critically, here we offload relevance mod- eling from representation learning model to an NLG model that generalizes significantly more eas- ily, naturally, and effectively (Brown et al., 2020; Ouyang et al., 2022). Generating examples also replaces explicit modeling of relevance scores. We can now encode the generated document using the document encoder f . Write,   E[vqij ] = E[f(g(qij , INSTi))] (5)   Formally, g defines a probability distribution based on the chain rule.",
+    "score": 0.46064016764593196,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "Gemini embedding models are initialised from the Gemini LLM, with two rounds of contrastive training to produce the embedding model (Lee et al. 2025). Gemini embedding models are reported to out-perform competitors on benchmarks.   OpenAI 2 we use the three latest models provided by Ope- nAI, namely text-embedding-3-large, a con- densed version text-embedding-3-large and the oldertext-embedding-ada-002. No companion paper is published, but public documentation and re- leases suggests that OpenAI’s embedding models are based on the GPT-4 family, and are contrastively fine- tuned for embeddings (OpenAI 2025). OpenAI models are reported to out-perform competitors on benchmarks.   VoyageAI 3, provided by MongoDB, provides several text embedding models. We evaluate their non-specialist models, namely the 3.5 series (default, lite and large). No companion paper is published, with pub- lic documentation suggesting pure contrastive training for these embedding models (VoyageAI 2025).",
+    "score": 0.44590213848478466,
+    "source": "030 - Language Models Do Not Embed Numbers Continuously.pdf",
+    "page": 3
+   }
+  ],
+  "sources": [
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "030 - Language Models Do Not Embed Numbers Continuously.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0387e268-1407-41fd-aa1c-f2bf42b4ed2a",
+  "X-Amzn-Trace-Id": "Root=1-6b080653-220ce15a290778381a7d1ac8;Parent=71904c573a9022bb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.235
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:39+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "mt_alone",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Which encoder does it use to embed the generated document?"
+   }
+  ]
+ },
+ "from_cache": false
+}

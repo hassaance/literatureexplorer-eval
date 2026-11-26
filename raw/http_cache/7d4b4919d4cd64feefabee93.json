@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.36,
+ "json": {
+  "query": "AgentBreeder: Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement",
+  "contexts": [
+   {
+    "text": "AgentBreeder: Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement   J Rosser University of Oxford   jrosser@robots.ox.ac.uk   Jakob Foerster FLAIR   University of Oxford   Abstract   Scaffolding Large Language Models (LLMs) into multi-agent systems often im- proves performance on complex tasks, but the safety impact of such scaffolds has not been thoroughly explored. We introduce AGENTBREEDER, a framework for multi-objective self-improving evolutionary search over scaffolds. We evaluate discovered scaffolds on widely recognized reasoning, mathematics, and safety benchmarks and compare them with popular baselines. In ‘blue’ mode, we see a 79.4% average uplift in safety benchmark performance while maintaining or improving capability scores. In ‘red’ mode, we find adversarially weak scaffolds emerging concurrently with capability optimization. Our work demonstrates the risks of multi-agent scaffolding and provides a framework for mitigating them. Code is available at https://github.com/jrosseruk/AgentBreeder.   1 Introduction   Recently, the field of artificial intelligence has witnessed remarkable advancements in Large Language Models (LLMs) and their applications [66].",
+    "score": 0.791541051186197,
+    "source": "047 - AgentBreeder Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement.pdf",
+    "page": 1
+   },
+   {
+    "text": "First, we demonstrate that unsafe behaviors can coexist with strong task performance, as evidenced by REDAGENTBREEDER’s ability to generate scaffolds that maintain capability while exhibiting increased vulnerability. Second, our experiments reveal that multi-objective optimization targeting both capability and safety yields better overall solutions compared to single-objective approaches. Third, our BLUEAGENTBREEDER experiments achieved substantial safety improvements (up to 110.7% increase on SaladData with 79.4% average uplift) while simultaneously maintaining or enhancing capability (up to 21.0% improvement on GPQA). Finally, we show that automated evolutionary methods can effectively probe the complex attack surfaces of multi-agent scaffolds, offering a practical approach to pre-deployment safety evaluation.   As AI systems become increasingly interconnected and deployed in real-world settings, frameworks like AGENTBREEDER bridge the research gap between single-agent and multi-agent safety evalu- ations. Our work establishes a foundation for the systematic evaluation of multi-agent scaffolds, contributing to the development of safer and more reliable AI technologies.   8 Future Work   Scaling Laws. Scaling up AGENTBREEDER to larger population sizes and longer evolutionary runs could yield more substantial improvements in both capability and safety metrics. Incorporating closed- source safety benchmarks such as AILuminate [33] and contamination-free capability benchmarks such as MMLU-CF [65] would provide a more comprehensive assessment of multi-agent system safety.",
+    "score": 0.6806617251540217,
+    "source": "047 - AgentBreeder Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement.pdf",
+    "page": 10
+   },
+   {
+    "text": "FunSearch [44] is an evolutionary method to search the function space for high-performing computer programs but not necessarily scaffolds. PromptBreeder [15] is an evolutionary self-improving framework that evolves prompts for a given domain, but does not focus on the scaffold as a whole.   Multi-Agent Safety Research. Zhang et al. [64] evaluate the safety of multi-agent scaffolds from a psychological perspective by injecting agents with malicious traits, and provide mitigation strategies such as performing psychological assessments and therapy for agents. Polaris [35] introduces a safety-focused scaffold for real-time patient healthcare conversations. Huang et al. [23] explore the resilience of multi-agent scaffolds when injected with malicious or error-prone agents. Fowler [17] provide a more thorough discussion of the safety risks associated with scaffolded LLMs.   4 AgentBreeder   We now introduce AGENTBREEDER, our automated, evolutionary approach to discovering new multi-agent scaffolds. By evolving a large, diverse corpus of multi-agent scaffolds, AGENTBREEDER seeks to address the challenge of evaluating the vulnerabilities of base LLMs acting inside capability- optimized multi-agent scaffolds. The pseudo-algorithm is given in Algorithm 1 and Figure 1 provides a brief overview.",
+    "score": 0.6765591620726873,
+    "source": "047 - AgentBreeder Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement.pdf",
+    "page": 4
+   },
+   {
+    "text": "A Impact Statement   This work introduces methods for evaluating and improving the safety of multi-agent scaffolds, which is increasingly critical as embodied, autonomous agents become more prevalent. While AGENTBREEDER can help discover safer multi-agent architectures, it could also be used to find scaffolds that exploit vulnerabilities. We release this research to enable proactive safety testing before deployment, but acknowledge the dual-use nature of these techniques. The red-teaming capabilities we describe could be misused to develop harmful scaffolds, though we believe the defensive benefits outweigh these risks. Additionally, our research surfaces important questions about AI governance as multi-agent scaffolds become more common. We hope this work advances the field’s understanding of multi-agent safety and helps develop more robust evaluation frameworks. We encourage future research to build upon these methods while carefully considering potential misuse and implementing appropriate safeguards.   B CapableAgentBreeder   Table 5 shows the results of CAPABLEAGENTBREEDER reported on three benchmarks and compares them with the performance of ADAS [20].",
+    "score": 0.6692070305920842,
+    "source": "047 - AgentBreeder Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement.pdf",
+    "page": 15
+   },
+   {
+    "text": "Firstly, due to computational costs, we conducted experiments over a limited number of generations and with relatively small population sizes, resulting in only marginal performance improvements. Secondly, our experimental setup serves as a proof of concept for multi-objective alignment, and stronger claims of helpfulness and safety would require evaluations on more com- prehensive benchmarks. Additionally, our evaluation was restricted to a select set of benchmarks, which may not fully capture the diverse range of real-world capabilities and safety concerns. Finally, the initial population was limited to seven seed scaffolds, potentially constraining the diversity of discovered scaffolds.   7 Conclusion   This paper introduces AGENTBREEDER, an evolutionary framework for discovering and evaluating multi-agent scaffolds via the multi-objective optimization of capability and safety. Our experiments demonstrate that AGENTBREEDER operates effectively in three distinct modes. BLUEAGENT- BREEDER for developing safer scaffolds, REDAGENTBREEDER for identifying vulnerabilities, and CAPABLEAGENTBREEDER for maximizing task performance. Through empirical evaluation across multiple benchmarks, we show that our framework discovers scaffolds that achieve competitive or increased performance to prior works while exhibiting increased adversarial robustness.   Our results highlight several important findings for AI safety research. First, we demonstrate that unsafe behaviors can coexist with strong task performance, as evidenced by REDAGENTBREEDER’s ability to generate scaffolds that maintain capability while exhibiting increased vulnerability.",
+    "score": 0.667613777051823,
+    "source": "047 - AgentBreeder Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fa83d3f0-f44a-41a7-aa52-84d2ac2f03d5",
+  "X-Amzn-Trace-Id": "Root=1-6b0804ff-43a40cb011558f3f4b1d990b;Parent=6e3cc74f4275b6b0;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.36
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:58+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AgentBreeder: Mitigating the AI Safety Risks of Multi-Agent Scaffolds via Self-Improvement"
+ },
+ "from_cache": false
+}

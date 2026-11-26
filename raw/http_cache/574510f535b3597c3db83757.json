@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.353,
+ "json": {
+  "query": "Deliberate Lab: A Platform for Real-Time Human-AI Social Experiments",
+  "contexts": [
+   {
+    "text": "Deliberate Lab: A Platform for Real-Time Human–AI Social Experiments   CRYSTAL QIAN∗, Google DeepMind, USA   VIVIAN TSAI∗, Google DeepMind, USA   MICHAEL BEHR, Google, USA   NADA HUSSEIN, Google DeepMind, USA   LÉO LAUGIER, EPFL, Switzerland   NITHUM THAIN, Google DeepMind, Canada   LUCAS DIXON, Google DeepMind, France   No-code experiment builder Intuitive UI for designing multi-stage experiments   Flexible cohort management Monitor and intervene as needed   Live, multi-party interactions Human and LLM participants   Fig. 1. Deliberate Lab system overview. Experimenters can (1) create, (2) facilitate, and intervene in real-time online experiments with human and LLM-based participants. (3) shows a live conversation interface involving human participants and an LLM mediator.   Social and behavioral scientists increasingly aim to study how humans interact, collaborate, and make decisions alongside artificial intelligence. However, the experimental infrastructure for such work remains underdeveloped: (1) few platforms support real-time, multi-party studies at scale; (2) most deployments require bespoke engineering, limiting replicability and accessibility, and (3) existing tools do not treat AI agents as first-class participants.",
+    "score": 0.8145078798083526,
+    "source": "081 - Deliberate Lab A Platform for Real-Time Human-AI Social Experiments.pdf",
+    "page": 1
+   },
+   {
+    "text": "They often require bespoke engineering and platform development for customization [4], which can hinder rapid and reproducible experimentation, particularly for researchers without extensive technical resources. Furthermore, as interest grows in hybrid human-agent systems and algorithmically mediated group interaction [21, 33], there is a need for systems to consider digital or synthetic participants as well as traditional humans [32, 36, 44].   We introduce Deliberate Lab, a no-code, open-source platform for real-time social experimentation. Designed to support synchronous interaction, with large language models as first-class participants, Deliberate Lab lowers the technical barrier for interdisciplinary research while enabling reproducibility, extensibility, and flexible experimental design. The platform accommodates a wide range of configurations, from purely human deliberation to hybrid collectives involving LLM agents as participants, moderators, or simulated crowds.   During a 12-month public access period, researchers with diverse disciplinary backgrounds and varying levels of technical expertise used the platform to support a wide range of experiments and user studies. Psychologists conducted large-scale online elections, economists modeled negotiation dynamics with AI interventions, and HCI researchers extracted structured data on human–AI collaboration. Additional use cases included developing AI teachers and debate moderators, conducting remote product focus groups, and exploring real-time adjudication for data annotation. These applications are described in detail and supplemented with insights from user interviews.   The primary contributions of this paper are as follows:   (1) System design and architecture.",
+    "score": 0.7788112407423934,
+    "source": "081 - Deliberate Lab A Platform for Real-Time Human-AI Social Experiments.pdf",
+    "page": 2
+   },
+   {
+    "text": "As collective reasoning becomes increasingly digital, and as AI agents begin to shape these processes more directly, research infrastructure must adapt to the methodological demands of hybrid settings. Deliberate Lab aims to make human–AI collective experimentation more accessible, interdisciplinary, and reproducible, offering a standard tool for understanding how groups reason, deliberate, and decide in an algorithmic age. As AI systems become routine participants in communication and decision-making, platforms like Deliberate Lab can help the IUI community test, iterate on, and evaluate them under conditions that better reflect real-world complexity.   18Deliberate Lab: A Platform for Real-Time Human–AI Social Experiments   ACKNOWLEDGMENTS   We’d like to thank James Wexler, Michael Xieyang Liu, Fernanda Viegas, Rasmi Elasmar, Ian Baker, Thibaut De Saivre, the People and AI Research team, our interview participants, and the Deliberate Lab community. Thank you for your feedback and contributions.   REFERENCES [1] [n. d.]. Firestore – Firebase Documentation. https://firebase.google.com/docs/firestore. Last updated 2025-10-01; accessed 2025-10-07. [2] [n. d.]. Lit — Simple. Fast. Web Components. https://lit.dev/. Accessed: 2025-10-07. [3] [n. d.].",
+    "score": 0.7499325261623715,
+    "source": "081 - Deliberate Lab A Platform for Real-Time Human-AI Social Experiments.pdf",
+    "page": 18
+   },
+   {
+    "text": "However, the experimental infrastructure for such work remains underdeveloped: (1) few platforms support real-time, multi-party studies at scale; (2) most deployments require bespoke engineering, limiting replicability and accessibility, and (3) existing tools do not treat AI agents as first-class participants. We present Deliberate Lab, an open-source platform for large-scale, real-time behavioral experiments that supports both human participants and large language model (LLM)-based agents. We report on a 12- month public deployment of the platform (N=88 experimenters, N=9195 experiment participants), analyzing usage patterns and workflows. Case studies and usage scenarios are aggregated from platform users, complemented by in-depth interviews with select experimenters.",
+    "score": 0.7087226489520813,
+    "source": "081 - Deliberate Lab A Platform for Real-Time Human-AI Social Experiments.pdf",
+    "page": 1
+   },
+   {
+    "text": "https://doi.org/10.1145/3706599.3719677        https://doi.org/10.1145/3640543.3645198        https://www.qualtrics.com        https://arxiv.org/abs/2306.11932        https://arxiv.org/abs/2306.11932        https://doi.org/10.1145/3613904.3642241        https://doi.org/10.1145/3613904.3642241        https://doi.org/10.18653/v1/2024.emnlp-main.16        https://doi.org/10.18653/v1/2024.emnlp-main.16        https://doi.org/10.1126/science.adq2852        https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/science.adq2852        https://arxiv.org/abs/2312.03664        https://arxiv.org/abs/2312.03664Deliberate Lab: A Platform for Real-Time Human–AI Social Experiments   A SUPPLEMENTARY PLATFORM SCREENSHOTS   A.1 Experimenter interface.   Fig. 11.",
+    "score": 0.6977798206312624,
+    "source": "081 - Deliberate Lab A Platform for Real-Time Human-AI Social Experiments.pdf",
+    "page": 20
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b5591951-cdc9-40dd-bbbe-6e03ffe02506",
+  "X-Amzn-Trace-Id": "Root=1-6b080505-65457c697343231a26653f5e;Parent=38d30fc2c82c53ba;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.353
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:05+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Deliberate Lab: A Platform for Real-Time Human-AI Social Experiments"
+ },
+ "from_cache": false
+}

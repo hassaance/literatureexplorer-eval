@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.442,
+ "json": {
+  "id": "chatcmpl-4287ccb7-9a8d-43a4-857c-8f7a536d15e2",
+  "object": "chat.completion",
+  "created": 1795687986,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The main problem that the paper *Bilevel Autoresearch: Meta-Autoresearching Itself* addresses is the limitation of existing autoresearch systems, which are designed by humans and may have inherent bottlenecks or inefficiencies in their search procedures. The paper proposes to solve this problem by introducing a bilevel framework where an outer loop meta-optimizes the inner autoresearch loop. The outer loop reads the inner loop's code, identifies bottlenecks, and generates new search mechanisms as Python code at runtime, which are then injected into the inner loop to optimize its search process. This approach aims to achieve mechanism-level self-improvement, where the focus is on improving how the autoresearch loop generates, evaluates, selects, and revises future changes, rather than just improving a one-off artifact."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1552,
+   "completion_tokens": 159,
+   "total_tokens": 1711
+  },
+  "contexts": [
+   {
+    "text": "Bilevel Autoresearch: Meta-Autoresearching Itself   Yaonan Qu∗ Meng Lu†   Abstract If autoresearch is itself a form of research, then autoresearch can be applied to research   itself. We take this idea literally: we use an autoresearch loop to optimize the autoresearch loop.   The autoresearch systems we build on—from Karpathy’s single-track loop to AutoResearch- Claw’s multi-batch extension and EvoScientist’s persistent memory—use search procedures designed by humans. We ask whether an LLM can autonomously improve that procedure itself: reading the loop, identifying bottlenecks, and generating new mechanisms that change how future improvements are searched for.   We present Bilevel Autoresearch, a bilevel framework where an outer loop meta- optimizes the inner autoresearch loop by generating and injecting new search mechanisms as Python code at runtime. The inner loop optimizes the task; the outer loop optimizes how the inner loop searches. Both loops use the same LLM—no stronger model is needed at the meta level, although the outer loop consumes additional inference and wall-clock budget. This is a mechanism-level view of agentic self-improvement: Python code is the carrier in our implementation, but skills, prompts, workflows, scripts, evaluators, domain principles, world-model assumptions, and memory schemas can also encode modifiable mechanisms that shape future agent behavior.",
+    "score": 0.7094953547196396,
+    "source": "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+    "page": 1
+   },
+   {
+    "text": "We provide an initial affirmative demonstration (fig. 1). We present Bilevel Autoresearch, a bilevel framework with two nested loops: the inner loop optimizes the task (proposing hyperparameter changes, training, evaluating, keeping or discarding); the outer loop optimizes how the inner loop searches, by reading its code, identifying bottlenecks, generating new Python mechanisms, and injecting them at runtime. Both loops use the same LLM, although the outer loop consumes additional inference and wall-clock budget; any improvement comes from the bilevel architecture, not from a more capable model.   The central object is the mechanism, not the particular representation used in this im- plementation. We use Python code injection because code is explicit, executable, and easy to validate before activation. More generally, skills, prompts, workflows, scripts, evaluators, curricula, domain principles, world-model assumptions, and memory schemas can also serve as carriers of mechanisms that alter future agent behavior. Bilevel Autoresearch therefore targets mechanism-level self-improvement: improving how an agentic loop generates, evaluates, selects, and revises future changes, not only improving a one-off artifact.   This framing also suggests a recursive bootstrapping path. If Level 2 discovers mechanisms that improve Level 1, the same discovery principle can in principle be applied to the meta-level loop itself.",
+    "score": 0.6658716950782686,
+    "source": "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+    "page": 2
+   },
+   {
+    "text": "Many subsequent skill, harness, and workflow systems can be viewed through this lens as related carrier-level instantiations: they often optimize useful artifacts or agent scaffolding, while Bilevel Autoresearch frames such artifacts as possible representations of a deeper search/update mechanism.   3 Methods   3.1 Framework Overview   Bilevel Autoresearch has three nested levels (fig. 2): Level 1 optimizes the task; Level 1.5 adjusts search parameters; Level 2 generates new search mechanisms as Python code. All levels use the same DeepSeek deepseek-chat model.   3.2 Level 1: Inner Autoresearch Loop   The inner loop implements the standard autoresearch cycle [Karpathy, 2026]. At each iteration t:   1. The LLM receives the current train.py (frozen at the best accepted configuration), the list of active editable parameters, any frozen parameters, and a strategic guidance string injected by Level 1.5.   2. The LLM proposes a change: a set of parameter name–value pairs and a one-sentence hypothesis.   3. The change is applied to a working copy of train.py and training runs for a fixed 300-second budget.   4. If the resulting val_bpb is lower than the current best, the change is kept (the best copy is updated); otherwise it is discarded.",
+    "score": 0.6621257875197546,
+    "source": "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+    "page": 5
+   },
+   {
+    "text": "If Level 2 discovers mechanisms that improve Level 1, the same discovery principle can in principle be applied to the meta-level loop itself. This paper empirically studies the first bilevel step—an outer loop improving an inner loop—and leaves full recursive self-application to future work.   Outer Loop — optimize search mechanism   analyze trace → research mechanism → generate code → inject   Inner Loop — optimize task output   propose train evaluate keep / discard   update best config new mechanism   (Python code)   Figure 1: Bilevel autoresearch: the inner loop optimizes the task output; the outer loop optimizes the inner loop’s search mechanism by generating and injecting new Python code at runtime.   We evaluate the framework on Karpathy’s GPT pretraining benchmark with a controlled four-group ablation (section 3).   Contributions.   1. We formulate autoresearch as a closed-loop search process and introduce a bilevel framework   2in which an outer loop optimizes the inner loop’s search/update mechanism.   2. We implement the outer level via a 4-round LLM dialogue that generates and injects new search mechanisms as Python code at runtime.   3.",
+    "score": 0.6454832738419357,
+    "source": "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+    "page": 2
+   },
+   {
+    "text": "Bilevel Autoresearch targets this mechanism-level object directly. The current implementation represents mechanisms as injectable Python code, but the same formulation can apply to other carriers when they change the proposal, evaluation, selection, or update behavior of an agentic loop.   Concurrent and subsequent work. Since the initial March 24, 2026 arXiv version of this paper, several related systems have explored skill-, artifact-, harness-, and process-level self- improvement. Meta-Harness [Lee et al., 2026] searches over harness code for LLM applications, while Continual Harness [Karten et al., 2026] adapts prompts, sub-agents, skills, and memory online from trajectories. GEAR [Jeddi et al., 2026] replaces single-path autoresearch with population-based search over multiple research states and studies a variant whose controller can evolve during the run. Discovering Cooperative Pipelines [Gallego, 2026] studies two-level autoresearch for sequential social dilemmas, where an outer coding agent edits prompts, feedback functions, helper libraries, and iteration logic in an inner policy-synthesis pipeline.",
+    "score": 0.6140967297692926,
+    "source": "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+    "page": 4
+   }
+  ],
+  "sources": [
+   "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+   "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+   "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+   "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf",
+   "112 - Bilevel Autoresearch Meta-Autoresearching Itself.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4287ccb7-9a8d-43a4-857c-8f7a536d15e2",
+  "X-Amzn-Trace-Id": "Root=1-6b080631-6d359683189c1d4506756050;Parent=37826474abf5a339;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.442
+  }
+ ],
+ "requested_at": "2026-11-26T10:13:05+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "rep2",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the main problem that the paper *Bilevel Autoresearch: Meta‑Autoresearching Itself* addresses, and how does its bilevel framework propose to solve it?"
+   }
+  ]
+ },
+ "from_cache": false
+}

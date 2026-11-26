@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.362,
+ "json": {
+  "query": "Agents' Last Exam",
+  "contexts": [
+   {
+    "text": ". Corresponding to {sunyiyou,dawnsong}@berkeley.edu. Full affiliations in Appendix A.   ar X   iv :2   60 6.   05 40   5v 3   [ cs   .A I]   9 O   ct 2   02 6         https://agents-last-exam.org        https://github.com/rdi-berkeley/agents-last-exam        https://huggingface.co/datasets/agents-last-exam/agents-last-exam        https://agents-last-exam.org/leaderboard        https://arxiv.org/abs/2606.05405v3Abstract Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains. We argue that this gap is largely an evaluation problem: widely used benchmarks lack sustained performance measurement on real and economically valuable workflows. This paper introduces Agents’ Last Exam (ALE), a benchmark designed to evaluate AI agents on long horizon, economically valuable, real world tasks with verifiable outcomes. Developed in collaboration with 250+ industry experts, ALE covers non-physical industries defined with reference to O*NET / SOC 2018 (the U.S. federal occupational taxonomy). It is organized around a task taxonomy with 55 sub fields grouped into 13 industry clusters covering 1K+ tasks.",
+    "score": 0.5547740291323213,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "Agents’ Last Exam   �Website §GitHub HuggingFace �Leaderboard   Organization & Execution Team Yiyou Sun*, Xinyang Han*, Weichen Zhang*, Xiang Liu*, Yuanbo Pang*, Tianyu Wang*, Yuhan Cao*, Yixiao Huang*, Zhaowei Zhang, Chris Duroiu, Haoyun Zhang, Jeffrey Lin, Weishu Zhang, Tyler Zeng, Ying Yan, Bo Liu, Hanson Wen, Mingyang Xu, Xiaoyuan Liu, Zimeng Chen, Weiyan Shi, Amanda Dsouza, Vincent Sunn   Chen, Jingxu Xie, Sheldon Huang, Dewen Lei, Hanxuan Zhang, Zonglin Di, Dawn Song * Core contributors.   Advisory Committee Patrick Bryant, Carl Boettiger, Yamini Rangan, Bradley Rothenberg, Kyle Steinfeld, Arvind Rao, Tapio   Schneider, Georgios Yannakakis, Laure Zanna, Kaan Ozbay, Ida Sim, Tarek Zohdi, George Em Karniadakis, Jack Gallant, Teresa Head-Gordon   Data Contributors Chris Yuhao Liu, Rongwang Hu, Yafei Cheng, Aras Bacho, Zengyi Qin, Alan Yuille, Yixiong Chen, Hao Liu, Lin Zeng, Bo Chen, Zhendong Li, Litian Gong, Shashank Muralidhar Bharadwaj,",
+    "score": 0.5420757411288704,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "Qizheng Zhang, Yuexing Hao, Xiaoming Li, Xiangyi Li, Bingran You, Wenjun Ke   Leading institution: University of California, Berkeley. Corresponding to {sunyiyou,dawnsong}@berkeley.edu. Full affiliations in Appendix A.   ar X   iv :2   60 6.   05 40   5v 3   [ cs   .A I]   9 O   ct 2   02 6         https://agents-last-exam.org        https://github.com/rdi-berkeley/agents-last-exam        https://huggingface.co/datasets/agents-last-exam/agents-last-exam        https://agents-last-exam.org/leaderboard        https://arxiv.org/abs/2606.05405v3Abstract Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains. We argue that this gap is largely an evaluation problem: widely used benchmarks lack sustained performance measurement on real and economically valuable workflows. This paper introduces Agents’ Last Exam (ALE), a benchmark designed to evaluate AI agents on long horizon, economically valuable, real world tasks with verifiable outcomes.",
+    "score": 0.535466140141848,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 1
+   },
+   {
+    "text": "Building such evaluations is difficult for structural reasons. First, long-horizon authentic workflows are expensive to collect because they must be sourced from real software and organizational contexts. Prior work often adopts task units that are easier to collect, whether shorter computer-use tasks [51], synthetic environment construction [1], or purely question-answering setups [53]. Second, broad industry coverage with authentic, economically valuable workflows is also hard. It requires sustained access to experts across domains and deep insight into the industrial landscape. Existing benchmarks often evaluate on a limited set of domains [3]. Third, verification is intrinsically hard for real workflows because the output space is heterogeneous. A correct deliverable may be a file, spreadsheet, media artifact, report, design, or model. As a result, benchmarks that measure economically valuable work often rely on human judgment, as in GDPval [37] and the Remote Labor Index [23]. These constraints help explain why existing benchmarks often trade away one of realism, breadth, or verifiability. They jointly motivate Agents’ Last Exam (ALE).   Why “Last Exam”? The name carries a dual aspiration. Last as competence threshold: an agent that passes these industry exams demonstrates readiness to carry out sustained, economically valuable work in that profession, not merely to answer questions about it. Last as difficulty frontier: by grounding evaluation in authentic long-horizon workflows that require professional judgment, ALE sits at the boundary of what current systems can reliably accomplish.",
+    "score": 0.5050072341196881,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 3
+   },
+   {
+    "text": "The name carries a dual aspiration. Last as competence threshold: an agent that passes these industry exams demonstrates readiness to carry out sustained, economically valuable work in that profession, not merely to answer questions about it. Last as difficulty frontier: by grounding evaluation in authentic long-horizon workflows that require professional judgment, ALE sits at the boundary of what current systems can reliably accomplish.   Real professional work   Verified technical task completion   Interactive agent environments   Static answer evaluation   1 3 5 14 26 55   Agents’ Last Exam GDP-VAL 16/55   RLI 14/55 XBench 11/55   TheAgentCompany   SWE-Lancer   SWE-bench RE-Bench   MLE-bench   OSWorld WebArena   GAIA WorkArena++   PinchBench AgentBench   Terminal-Bench   MMLU HLE   GPQA MATH   Figure 3: Benchmark positioning map. Prior bench- marks are placed by mapping their published domains onto the ALE domain taxonomy.   ALE is a benchmark of 1K+ task instances spanning 55 subfields and 13 industry clusters, developed in collaboration with 250+ domain experts. To ensure broad and representative industry coverage, expert ad- visory committees map each domain’s workflow land- scape and identify economically meaningful work- flow families, anchored in the O*NET / SOC 2018 occupational taxonomy [38, 46].",
+    "score": 0.48558499431151897,
+    "source": "144 - Agents' Last Exam.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "273f686c-4ddf-49fc-8e0d-34fdf1596feb",
+  "X-Amzn-Trace-Id": "Root=1-6b080511-7a4702a55c6213e440b0c69e;Parent=6f21e1343fc98a65;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.362
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:17+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agents' Last Exam"
+ },
+ "from_cache": false
+}

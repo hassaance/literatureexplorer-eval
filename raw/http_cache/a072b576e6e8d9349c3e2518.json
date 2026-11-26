@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.356,
+ "json": {
+  "query": "Why LLMs Aren't Scientists Yet: Lessons from Four Autonomous Research Attempts",
+  "contexts": [
+   {
+    "text": "Why LLMs Aren’t Scientists Yet: Lessons from Four   Autonomous Research Attempts   Dhruv Trehan Paras Chopra   {dhruv.trehan, paras}@lossfunk.com   January 2026   Abstract   We report a case study of four end-to-end attempts to autonomously generate ML   research papers using a pipeline of six LLM agents mapped to stages of the scientific   workflow. Of these four, three attempts failed during implementation or evaluation. One   completed the pipeline and was accepted to Agents4Science 2025, an experimental inau-   gural venue that required AI systems as first authors, passing both human and multi-AI   review. From these attempts, we document six recurring failure modes: bias toward   training data defaults, implementation drift under execution pressure, memory and con-   text degradation across long-horizon tasks, overexcitement that declares success despite   obvious failures, insufficient domain intelligence, and weak scientific taste in experimen-   tal design.",
+    "score": 0.7127584369256202,
+    "source": "113 - Why LLMs Aren't Scientists Yet Lessons from Four Autonomous Research Attempts.pdf",
+    "page": 1
+   },
+   {
+    "text": "This learning process also depend on human values emphasising communication, mutual understanding, and peer review. Evidence shows a significant adoptionof LLM-assistedpaperwriting andpeer review in recent years. Estimates indicate that 1% to 10% of papers are written with LLM assistance189.In computer science, up to 17.5% of research papers are esti- mated to be assisted by LLMs, a figure that mainly reflects the output of researchers with strict time constraints190. Beyond papers, estimates also show that around 7–15% of reviews are written with LLM assistance191,192.   While LLMs can provide feedback that shows a high degree of overlap with human reviewers, they are not proficient at assessing the quality and novelty of research193. This limitation is especially significant for high- quality research194. Beyond this, LLM-assisted reviews tend to assign higher scores to papers than human reviewers evaluating the same papers191. Upon closer examination, LLMs also exhibit a homogenisation problem – they tend to provide similar critiques for different papers193,195.   Despite LLMs displaying limitations at tasks such as peer reviewing and raising ethical concerns in directly generating academic content, they may still benefit scientific communication. For example, most researchers today are non-native English speakers, so they can benefit from LLMs’ language capabilities that fit their diverse demands for proofreading195, helping alleviate the current bias towards Western Science.",
+    "score": 0.5029459597114806,
+    "source": "105 - Exploring the role of large language models in the scientiﬁc method from hypothesis to discovery.pdf",
+    "page": 9
+   },
+   {
+    "text": "Would scientists be satisfied letting LLMs set the agenda and conduct experiments with little to no supervision, or do we expect to supervise AI always, driven by the fear of multiple levels of misalignment? This is a misalignment between human scientific interests and the actual practice of science,   possibly forcing AI and LLMs to produce data as humans do, with its advantages or disadvantages, including constraining the search space and, therefore, the solution space.   Beyond the individual deployment of the scientific method, scien- tific discovery also happens at the community level, where scientists publish their work, share ideas, and collaborate. We can consider the scientists and even entire scientific community as an agent that learns from experiments and research publications in a manner similar to reinforcement learning processes185. However, learning from failed research (or negative results) is just as important as learning from suc- cessful studies186,187, yet it is currently undervalued188. This may be because failed research is far more common than successful research. However, with themassive text-processing capabilities of LLMs, we now have the opportunity to systematically share and learn from failures. Therefore, we advocate for journals and conference to encourage the publication of failed studies and negative results.   This learning process also depend on human values emphasising communication, mutual understanding, and peer review. Evidence shows a significant adoptionof LLM-assistedpaperwriting andpeer review in recent years.",
+    "score": 0.5023697190511733,
+    "source": "105 - Exploring the role of large language models in the scientiﬁc method from hypothesis to discovery.pdf",
+    "page": 9
+   },
+   {
+    "text": "Scientific Community - LLMs are not yet good reviewers189,191,192   - LLMs are widely used in paper and review writing189–192 LLMs can mitigate the disadvantage of non-native English speakers195,210–212   LLMs can help inter-disciplinary research195   There is much room for AI4Science as a field to fill in gaps under the listed themes, especially as LLM researchmatures over the next several years; consistent with all innovations in scientific practices and engineering standards, the demonstration-through-validation of said innovations requires time and resources several fold greater than are available in “safer” domains (where LLMs are currently embedded).   https://doi.org/10.1038/s44387-025-00019-5 Perspective   npj Artificial Intelligence | (2025) 1:14 8         www.nature.com/npjAIThe challenge to understand LLMs, and the opportunity to understand by using GenAI and LLMs A comprehensive scientific interpretation stimulates discussion and fur- ther discoveries among scientists. This is especially important for LLM- assisted scientific discovery—given that current LLMs are mostly black boxes, it becomes difficult to trust LLM outputs. To understand LLMs’ behaviour, LLMs’ language capabilities can be leveraged. There are two types of methods. First, LLMs’ hidden states can be used in what are known as probing methods.",
+    "score": 0.4947540292872213,
+    "source": "105 - Exploring the role of large language models in the scientiﬁc method from hypothesis to discovery.pdf",
+    "page": 8
+   },
+   {
+    "text": "All these parts–observation, proposing hypotheses, conducting experiments, and automation–can be assisted by LLMs and LLM-agents, considering the non-trivial implementations of scientific environments in silico.   https://doi.org/10.1038/s44387-025-00019-5 Perspective   npj Artificial Intelligence | (2025) 1:14 4         www.nature.com/npjAIways45,92. Their expertise and creativity could carry the potential for pro- posing novel research hypotheses.   Then, at the verification stage, experiments are conducted to obtain relevant information and test hypotheses. This requires the ability to plan and design experiments effectively. Given LLMs’ planning capabilities and potential understanding of causality93–95, they can help scientists design experiments. By incorporating tool-using abilities96, LLMs can directly implement experiments. LLM agents can perform complex workflows and undertake repetitive explorations that are time-consuming for human sci- entists. This allows us to search for novel results efficiently, which is key to scientific discovery97,98.   This process often involves a trial-and-error loop for a research topic or question.Thus, scientificdiscovery requires the following steps: observation, hypothesis proposal, experimentation, and automating the loop (see Figure 2 and Table 1 for detailed illustrations).",
+    "score": 0.4924646568621954,
+    "source": "105 - Exploring the role of large language models in the scientiﬁc method from hypothesis to discovery.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1051d124-7004-4efb-a015-15099000ed91",
+  "X-Amzn-Trace-Id": "Root=1-6b08050b-6a4c8f2237aade7465defeb4;Parent=2ed5e075061b7cbb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.356
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:11+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Why LLMs Aren't Scientists Yet: Lessons from Four Autonomous Research Attempts"
+ },
+ "from_cache": false
+}

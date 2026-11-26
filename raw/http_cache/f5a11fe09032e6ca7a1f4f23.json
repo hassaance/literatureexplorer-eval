@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.33,
+ "json": {
+  "query": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+  "contexts": [
+   {
+    "text": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory Siru Ouyang1*, Jun Yan2†, I-Hung Hsu2, Yanfei Chen2, Ke Jiang2, Zifeng Wang2, Rujun Han2, Long T. Le2, Samira Daruki2, Xiangru Tang3, Vishy Tirumalashetty2, George Lee2, Mahsan Rofouei4, Hangfei Lin4, Jiawei Han1, Chen-Yu Lee2† and Tomas Pfister2 1University of Illinois Urbana-Champaign, 2Google Cloud AI Research, 3Yale University, 4Google Cloud AI   With the growing adoption of large language model agents in persistent real-world roles, they naturally encounter continuous streams of tasks. A key limitation, however, is their failure to learn from the accumulated interaction history, forcing them to discard valuable insights and repeat past errors. We propose ReasoningBank, a novel memory framework that distills generalizable reasoning strategies from an agent’s self-judged successful and failed experiences. At test time, an agent retrieves relevant memories from ReasoningBank to inform its interaction and then integrates new learnings back, enabling it to become more capable over time. Building on this powerful experience learner, we further introduce memory-aware test-time scaling (MaTTS), which accelerates and diversifies this learning process by scaling up the agent’s interaction experience.",
+    "score": 0.8536880923022528,
+    "source": "056 - ReasoningBank Scaling Agent Self-Evolving with Reasoning Memory.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our contributions are threefold: (1) We propose ReasoningBank, a novel memory framework that distills generalizable reasoning strategies from both successful and failed experiences, beyond prior work that primarily stores raw trajectories or success-only routines. (2) We introduce MaTTS   2ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory   that establishes a powerful, bidirectional synergy betweenmemory and test-time scaling, with memory- driven experience as a new scaling dimension. (3) We conduct extensive experiments on web browsing (WebArena, Mind2Web) and software engineering (SWE-Bench-Verified) tasks. We demonstrate that our approaches not only outperform baselines in effectiveness (up to 20% relative improvement) and efficiency (up to 16% fewer interactions), but also uniquely learn from failures and enable agents to develop increasingly complex, emergent reasoning strategies over time.   2. Related Work   Memory for LLM Agents. Memory has emerged as an essential module in modern agent systems (He et al., 2026; Hu et al., 2025b; Zhang et al., 2025b) to enhance their performance by utilizing past information.",
+    "score": 0.8058874999232947,
+    "source": "056 - ReasoningBank Scaling Agent Self-Evolving with Reasoning Memory.pdf",
+    "page": 2
+   },
+   {
+    "text": ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27   C.4 Results with Smaller Open-source LLMs . . . . . . . . . . . . . . . . . . . . . . . . . 27   C.5 Case Study . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27   D Future Directions 28   E Limitations 29   F Use of LLMs 30   20ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory   A. Experiment Details   This section details the implementation of ReasoningBank with agent systems mentioned in Section 4.1 for web browsing tasks including WebArena and Mind2Web. We first present all the prompts used for memory extraction in Appendix A.1, and then we provide the technical details for memory extraction, retrieval, and consolidation in Appendix A.2.   A.1. Prompts Used for ReasoningBank   You are an expert in web navigation.",
+    "score": 0.7906121890029367,
+    "source": "056 - ReasoningBank Scaling Agent Self-Evolving with Reasoning Memory.pdf",
+    "page": 20
+   },
+   {
+    "text": "This positive feedback loop positions memory-driven experience scaling as a new scaling dimension for agents.   We conduct extensive experiments on challenging benchmarks for web browsing (WebArena, Mind2Web) and software engineering (SWE-Bench-Verified). We demonstrate that Reasoning- Bank outperforms baselines in both effectiveness (up to 20% relative improvement, Table 1) and efficiency (up to 16% fewer interaction steps, Table 1). Additionally, ReasoningBank synergizes best with MaTTS, making it an essential component for memory-driven experience scaling.   Our contributions are threefold: (1) We propose ReasoningBank, a novel memory framework that distills generalizable reasoning strategies from both successful and failed experiences, beyond prior work that primarily stores raw trajectories or success-only routines. (2) We introduce MaTTS   2ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory   that establishes a powerful, bidirectional synergy betweenmemory and test-time scaling, with memory- driven experience as a new scaling dimension. (3) We conduct extensive experiments on web browsing (WebArena, Mind2Web) and software engineering (SWE-Bench-Verified) tasks.",
+    "score": 0.7366518963503687,
+    "source": "056 - ReasoningBank Scaling Agent Self-Evolving with Reasoning Memory.pdf",
+    "page": 2
+   },
+   {
+    "text": "27   D Future Directions 28   E Limitations 29   F Use of LLMs 30   20ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory   A. Experiment Details   This section details the implementation of ReasoningBank with agent systems mentioned in Section 4.1 for web browsing tasks including WebArena and Mind2Web. We first present all the prompts used for memory extraction in Appendix A.1, and then we provide the technical details for memory extraction, retrieval, and consolidation in Appendix A.2.   A.1. Prompts Used for ReasoningBank   You are an expert in web navigation. You will be given a user query, the corresponding trajectory that represents how an agent successfully accomplished the task.   ## Guidelines You need to extract and summarize useful insights in the format of memory items based on the agent's successful trajectory.",
+    "score": 0.7320362985323138,
+    "source": "056 - ReasoningBank Scaling Agent Self-Evolving with Reasoning Memory.pdf",
+    "page": 20
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0f6fcd83-d14a-4cc5-9d56-3749dcee2473",
+  "X-Amzn-Trace-Id": "Root=1-6b080500-512930dd0fb9cad575b4ac7a;Parent=20cfe68d0548b19f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.33
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:00+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.319,
+ "json": {
+  "query": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+  "contexts": [
+   {
+    "text": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses   for LLM Agents   Edoardo Debenedetti1∗ Jie Zhang1 Mislav Balunovic1,2   Luca Beurer-Kellner1,2 Marc Fischer1,2 Florian Tramèr1   1ETH Zurich 2Invariant Labs   Abstract   AI agents aim to solve complex tasks by combining text-based reasoning with external tool calls. Unfortunately, AI agents are vulnerable to prompt injection attacks where data returned by external tools hijacks the agent to execute malicious tasks. To measure the adversarial robustness of AI agents, we introduce AgentDojo, an evaluation framework for agents that execute tools over untrusted data. To capture the evolving nature of attacks and defenses, AgentDojo is not a static test suite, but rather an extensible environment for designing and evaluating new agent tasks, defenses, and adaptive attacks. We populate the environment with 97 realistic tasks (e.g., managing an email client, navigating an e-banking website, or making travel bookings), 629 security test cases, and various attack and defense paradigms from the literature. We find that AgentDojo poses a challenge for both attacks and defenses: state-of-the-art LLMs fail at many tasks (even in the absence of attacks), and existing prompt injection attacks break some security properties but not all.",
+    "score": 0.854336877594992,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "For such scenarios, more involved forms of isolation may be needed, such as having a “planner” agent dispatch tool calls to isolated agents that only communicate results symbolically [63, 66]. However, such strategies would still be vulnerable in scenarios where the prompt injection solely aims to alter the result of a given tool call, without further hijacking the agent’s behavior (e.g., the user asks for a hotel recommendation, and one hotel listing prompt injects the model to always be selected).   5 Conclusion   We have introduced AgentDojo, a standardized agent evaluation framework for prompt injection attacks and defenses, consisting of 97 realistic tasks and 629 security test cases. We evaluated a number of attacks and defenses proposed in the literature on AI agents based on state-of-the-art tool-calling LLMs. Our results indicate that AgentDojo poses challenges for both attackers and defenders, and can serve as a live benchmark environment for measuring their respective progress.   We see a number of avenues for improving or extending AgentDojo: (i) we currently use relatively simple attacks and defenses, but more sophisticated defenses (e.g., isolated LLMs [63, 66], or attacks [15]) could be added in the future.",
+    "score": 0.735166035091643,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 9
+   },
+   {
+    "text": "Due to the ever-evolving nature of ML security, a static benchmark would be of limited use. Instead, AgentDojo is an extensible framework that can be populated with new tasks, attacks, and defenses. Our initial tasks and attacks already present a significant challenge for attackers and defenders alike. Current LLMs solve less than 66% of AgentDojo tasks in the absence of any attack. In turn, our attacks succeed against the best performing agents in less than 25% of cases. When deploying existing defenses against prompt injections, such as a secondary attack detector [28, 45], the attack success rate drops to 8%. We find that current prompt injection attacks benefit only marginally from side information about the system or the victim, and succeed rarely when the attacker’s goal is abnormally security-sensitive (e.g., emailing an authentication code).   At present, the agents, defenses, and attacks pre-deployed in our AgentDojo framework are general- purpose and not designed specifically for any given tasks or security scenarios. We thus expect future research to develop new agent and defense designs that can improve the utility and robustness of agents in AgentDojo. At the same time, significant breakthroughs in the ability of LLMs to distinguish instructions from data will likely be necessary to thwart stronger, adaptive attacks proposed by the community.",
+    "score": 0.7087606431807021,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "We find that AgentDojo poses a challenge for both attacks and defenses: state-of-the-art LLMs fail at many tasks (even in the absence of attacks), and existing prompt injection attacks break some security properties but not all. We hope that AgentDojo can foster research on new design principles for AI agents that solve common tasks in a reliable and robust manner.   https://agentdojo.spylab.ai   1 Introduction   Large language models (LLMs) have the ability to understand tasks described in natural language and generate plans to solve them [20, 27, 49, 60]. A promising design paradigm for AI agents [65] is to combine an LLM with tools that interact with a broader environment [14, 35, 40, 47, 51, 53, 55, 69]. AI agents could be used for various roles, such as digital assistants with access to emails and calendars, or smart “operating systems” with access to coding environments and scripts [24, 25].   However, a key security challenge is that LLMs operate directly on text, lacking a formal way to distinguish instructions from data [44, 74]. Prompt injection attacks exploit this vulnerability by inserting new malicious instructions in third-party data processed by the agent’s tools [17, 44, 62]. A successful attack can allow an external attacker to take actions (and call tools) on behalf of the user.",
+    "score": 0.6780976334446688,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "• Banking: tools and tasks related to performing bank transactions, summarizing bank state- ments, etc.   • Travel: tools and tasks related to finding and reserving options for flights, restaurants, and car rentals.   Further details on each environment and task suite are provided in Table 1.   3.2 Agents and Prompt Injection Defenses   AgentDojo is designed as a benchmark environment to evaluate new agent designs that can defend against prompt injection attacks. We thus provide a simple interface for implementing new agents. An agent component only has to provide a query function, which takes as argument the initial user instructions, a list of available tools, and the environment state (see Figure 11 in the appendix). To enable rapid prototyping of new designs, AgentDojo also offers the ability to build modular agent pipelines by combining different components. Figure 12 in the appendix provides an example for how we instantiate a prompt injection defense that combines an LLM agent (OpenAI’s GPT-4o) with an additional module for detecting prompt injections [28, 29, 64]. Generally, AgentDojo supports any   5Table 1: Overview of the environments we curate for the AgentDojo benchmark. Our suite features a total of 70 tools, 97 realistic user tasks and 27 injection targets.",
+    "score": 0.6491922928319871,
+    "source": "159 - AgentDojo A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.pdf",
+    "page": 5
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9f08ea7d-7c65-4a6f-8b9d-fb9ce0819bd0",
+  "X-Amzn-Trace-Id": "Root=1-6b080514-67df77a81feace93656d4db8;Parent=276a36f89c62c0ea;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.319
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:19+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.378,
+ "json": {
+  "query": "OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning",
+  "contexts": [
+   {
+    "text": "A human study on our interactive demo complements this, where users praised the system’s transparency and interpretability.   Our contributions are as follows: (1) We pro- pose OctoTools, a training-free, modular, and ex- tensible multi-agent framework that enables LLMs to solve complex reasoning tasks by planning and exe- cuting multi-step tool calls without fine-tuning. (2) We introduce a new planner-executor paradigm with standardized tool cards to simplify tool integration and improve reliability. We complement this with a lightweight toolset optimization algorithm that au- tomatically selects effective tools for a given task. (3) We conduct large-scale experiments on 16 diverse   benchmarks, providing one of the most systematic evaluations of agentic systems to date. These experi- ments show that OctoTools achieves substantial gains over strong baselines, including leading agentic frame- works. (4) We provide in-depth analyses and abla- tions that disentangle the contributions of multi-step planning and tool usage. To promote future research, we release our codebase, tool-card templates, and in- teractive demos, offering practical guidance for the community.   2 The OctoTools Framework   2.1 Preliminary   We propose OctoTools, an open-source, versatile, and user-friendly multi-agent framework for complex rea- soning tasks, as illustrated in Figure 2.",
+    "score": 0.7546729904183359,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 3
+   },
+   {
+    "text": "In this paper, we propose OctoTools, a training- free (i.e., it does not require updating model weights), user-friendly, and extensible multi-agent framework for tackling complex reasoning tasks across diverse domains (Figure 2). A key feature of OctoTools is the concept of tool cards, standardized wrappers that encapsulate heterogeneous tools (e.g., Python calcula-   ar X   iv :2   50 2.   11 27   1v 2   [ cs   .L G   ] 1   3 A   pr 2   02 6         https://octotools.github.io        https://github.com/octotools/octotools        https://huggingface.co/spaces/OctoTools/octotools        https://octotools.github.io/#tool-cards        https://octotools.github.io/#visualization        https://www.youtube.com/watch?v=4828sGfx7dk        https://octotools.github.io/        https://arxiv.org/abs/2502.11271v2Q: How many baseballs are there? The image shows four blue buckets, each containing five baseballs. Therefore, there are a total of 20 baseballs.",
+    "score": 0.6824570227338408,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 1
+   },
+   {
+    "text": "By offloading specialized subtasks (e.g., web queries, Python-based calculations, and specialized scientific tools) to dedi- cated modules, LLMs can focus on higher-level plan- ning and synthesis. Several frameworks have explored such tool usage, from those relying on extensive su- pervised data and fine-tuning (Schick et al., 2023; Liu et al., 2023), to static solutions without refinement (Lu et al., 2023), and those limited to one specialized do- main of tools (Nakano et al., 2021; Tao et al., 2023; Hu et al., 2024). Although these methods perform well on specific tasks, they still face challenges that hinder gen- eral widespread use. Many require substantial training with curated data, which limits their adaptability to new domains. Others are designed for a particular domain (Bran et al., 2023; Kang and Kim, 2024; Li et al., 2024a; Schmidgall et al., 2024) or cannot easily support multi-step problem-solving (Lu et al., 2023), restricting their generality.   In this paper, we propose OctoTools, a training- free (i.e., it does not require updating model weights), user-friendly, and extensible multi-agent framework for tackling complex reasoning tasks across diverse domains (Figure 2).",
+    "score": 0.6739085970461678,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 1
+   },
+   {
+    "text": "Agentic Framework with Extensible Tools for Complex Reasoning for ICML 2025   Object Detector Tool: Example 1   Input (image): \"example.png\"   Input (label): [\"baseball\"]   Output (detected objects):   Output (structured result): [   { \"label\": \"baseball\", \"confidence score\": 0.69, \"box\": [558, 48, 615, 107], \"saved_image_path\": \"example_baseball_1.png\"   }, {   \"label\": \"baseball\", \"confidence score\": 0.69, \"box\": [614, 137, 671, 191], \"saved_image_path\": \"example_baseball_2.png\"   }, ... {   \"label\": \"baseball\", \"confidence score\": 0.65, \"box\": [86, 335, 143, 393], \"saved_image_path\": \"example_baseball_19.png\"   }, {   \"label\": \"baseball\", \"confidence score\": 0.63, \"box\": [336, 95, 393, 153], \"saved_image_path\": \"example_baseball_20.png\"   } ]   56   Figure 2: The framework of OctoTools. (1) Tool cards define tool metadata and encapsulate tools, enabling integration of new tools without retraining or framework changes. (2) The planner agent handles both",
+    "score": 0.6648183130063171,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 2
+   },
+   {
+    "text": "OctoTools: A Multi-Agent Framework with Extensible Tools for Complex Reasoning   Pan Lu∗ , Bowen Chen∗ , Sheng Liu∗ , Rahul Thapa , Joseph Boen , James Zou * Equal contribution Stanford University Website: https://octotools.github.io   Code Demo Tool Cards Visualization Video   Abstract   Solving complex reasoning tasks may involve vi- sual understanding, domain knowledge retrieval, numerical calculation, and multi-step reasoning. Existing methods augment large language mod- els (LLMs) with external tools but are restricted to specialized domains, limited tool types, or re- quire additional training data. In this paper, we introduce OctoTools, a training-free, user-friendly, and easily extensible multi-agent framework de- signed to tackle complex reasoning across diverse domains. OctoTools introduces standardized tool cards to encapsulate tool functionality, a planner for both high-level and low-level planning, and an executor to carry out tool usage. We validate Oc- toTools’ generality across 16 diverse tasks (includ- ing MathVista, MMLU-Pro, MedQA, and GAIA- Text), achieving substantial average accuracy gains of 9.3% over GPT-4o. Furthermore, OctoTools also outperforms AutoGen, GPT-Functions, and LangChain by up to 10.6% when given the same set of tools.",
+    "score": 0.6635397867208007,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "85eddd31-87ef-4025-8b1b-a2e19cf30105",
+  "X-Amzn-Trace-Id": "Root=1-6b080502-59106ba60ccbfa020332a3d8;Parent=0f190afd1454a46a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.378
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:02+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning"
+ },
+ "from_cache": false
+}

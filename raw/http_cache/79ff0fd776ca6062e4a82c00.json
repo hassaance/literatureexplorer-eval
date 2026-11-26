@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.512,
+ "json": {
+  "query": "Apodex 1.1: Scaling Agentic Intelligence for Complex Work",
+  "contexts": [
+   {
+    "text": "Technical Report   Apodex 1.1: Scaling Agentic Intelligence for Complex Work Apodex Team   Official Website https://www.apodex.ai   API Platform https://platform.apodex.ai   GitHub Repository https://github.com/ApodexAI/FrontierAgent   Model Weights https://huggingface.co/collections/apodex/apodex-11   Abstract General-purpose language models can reason and synthesize knowledge, but complex work also requires sustained interaction with files, information sources, and executable code, together with state maintenance, failure recovery, and verifiable delivery. We call this working capability: sustained, verifiable progress toward a real-world objective. Apodex 1.1 develops this capability along two complementary dimensions. Environment Scaling expands the diversity and verifiability of executable file, search, and code environments, while Agentic Coordination Scaling trains agents to decompose long-horizon tasks, delegate parallel work, integrate asynchronous results, and replan. A shared execution harness and AgentOS maintain task state and provenance across tools and agents, and training turns environment trajectories and coordination traces into reliable behavior. Across complex professional work, finance, scientific research, mathematics, coding, and search, Apodex 1.1 reaches the leading performance band despite using a substantially smaller model than many frontier systems. The 35B-parameter Apodex 1.1 Mini further retains strong working capability in a locally deployable form. These results ground",
+    "score": 0.767028661709489,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 1
+   },
+   {
+    "text": "Unified SFT and agentic RL use executable task traces and Agent Team interactions to improve task execution, recovery, delivery, and coordination within one policy.   • Evaluation from general capability to professional delivery. A main benchmark table is followed by analyses of science, finance and professional file work, IMO gold-medal-level mathematics, coding, internal long-horizon tasks, and end-to-end cases.   2 Core Insights and Design Principles   Apodex 1.1 is built around a model-level observation: high-quality reasoning is necessary but insufficient for complex work, especially when the task unfolds over a long horizon. Scaling agentic intelligence requires a model to act in an environment, preserve authoritative state, turn intermediate results into better decisions, recover without losing valid progress, organize additional computation, and satisfy a checkable delivery objective. Our long-term objective is a Heavy-Duty Solver that can take responsibility for increasingly ambitious, long-running work.",
+    "score": 0.680593785585739,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 4
+   },
+   {
+    "text": "A shared main table is followed by capability analyses and end-to-end cases. Together, the model, scaled environments, coordination paradigm, harness, and training loop make Apodex 1.1 a concrete step toward a Heavy- Duty Solver.   Contributions. The report makes the following contributions:   • Scaling agentic intelligence for long-horizon complex work. Apodex 1.1 develops reasoning, tool use, file handling, code execution, state maintenance, recovery, and delivery in a common policy rather than as disconnected specialist modes.   • Environment Scaling for working capability. Diverse, faithful, and verifiable file, search, and code worlds expand the distribution of executable trajectories from which a unified policy can learn.   • Agentic Coordination Scaling for organized work. Apodex trains delegation, staged result integration, shared-state revision, and dynamic replanning as model behaviors, while Agent Team realizes them as adaptive asynchronous work at runtime.   • A common execution harness for both scaling dimensions. The harness connects the model to executable environments, persistent workspace and branch state, artifact provenance, replay, and verification, with AgentOS providing the underlying runtime.   • Training across environment and coordination trajectories. Unified SFT and agentic RL use executable task traces and Agent Team interactions to improve task execution, recovery, delivery, and coordination within one policy.   • Evaluation from general capability to professional delivery.",
+    "score": 0.6630220223464434,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 4
+   },
+   {
+    "text": "26   5 Related Work 28   6 Conclusion 29   References 30   A Case Studies 35   B Contributors 46   21 Introduction   General-purpose language models have improved rapidly in knowledge, reasoning, mathematics, and coding. Yet many valuable tasks remain difficult even when the model can state the right answer, because the work unfolds over a long horizon. The model must find and interpret evidence, operate on heterogeneous files, execute and debug code, maintain and revise a coherent plan over many steps, recover from failed actions without discarding valid progress, and deliver artifacts that another person can inspect or continue using. Prior work on reasoning-and-acting, learned tool use, and interactive agent evaluation has exposed this gap between answer quality and reliable action (Yao et al., 2022; Schick et al., 2023; Liu et al., 2023; Xie et al., 2024). The limiting capability is therefore not reasoning in isolation, but the ability to turn reasoning into sustained work inside a changing environment.   Apodex 1.1 is a general-purpose model and execution system that scales agentic intelligence for complex work. We operationalize this objective as working capability: the ability to make useful progress over long horizons by understanding an objective, acting through tools and stateful environments, revising plans when observations change the problem, recovering from failure, and satisfying a delivery contract.",
+    "score": 0.6498928273626885,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 2
+   },
+   {
+    "text": "Complementary training work addresses the optimization challenges created by these environments. Continual pre-training can establish broad tool- use behavior at an earlier stage (Su et al., 2025); Search-R1 and RAGEN optimize multi-turn interaction (Jin et al., 2025; Wang et al., 2025c); DAPO and related methods improve policy-optimization stability (Yu et al., 2025; Qi et al., 2026); and ROLL and ROLL Flash provide scalable asynchronous RL infrastructure (Wang et al., 2025b; Yao et al., 2025). Apodex integrates these directions through File, Search, and Code worlds with a shared delivery contract, artifact and provenance state, replay requirements, independent verification, trained Agent Team coordination, and a failure-driven task-construction loop.   6 Conclusion   Apodex 1.1 advances a model-level view of agentic intelligence for complex work: capability should be measured by whether a model can sustain progress through a changing task, use tools and evidence   29effectively, recover from failure, and deliver a verifiable result. We develop this capability along two complementary scaling dimensions. Environment Scaling broadens the executable file, search, and code worlds in which the model learns and acts, while Agentic Coordination Scaling broadens how work is decomposed, delegated, integrated, and reorganized across agents and time.",
+    "score": 0.6394962464336832,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 29
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9bdcbc33-d6ce-4d26-b99b-cb95c9ded2bd",
+  "X-Amzn-Trace-Id": "Root=1-6b08050b-65c0007f11521bc656a05536;Parent=6eb4a3def8a05c0e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.512
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:11+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Apodex 1.1: Scaling Agentic Intelligence for Complex Work"
+ },
+ "from_cache": false
+}

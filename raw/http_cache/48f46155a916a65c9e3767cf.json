@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.373,
+ "json": {
+  "query": "How do Lumine (Paper A) and the SELFCOMPACT scaffold (Paper B) each address the challenge of long‑horizon agent execution, and what techniques do they use to keep inference efficient?",
+  "contexts": [
+   {
+    "text": "The ability to operate under strict latency constraints, balancing computational deliberation with timely responses and managing asynchronous interactions to avoid missing critical opportunities [13, 40].   We introduce Lumine, a comprehensive and scalable recipe together with its prototype model for addressing these challenges as a concrete step toward general-purpose agents. We select Genshin Impact, a globally popular 3D open-world game, as our primary testbed. To the best of our knowledge, Lumine is the first agent capable of completing hours-long missions in real time within such an extremely challenging environment. Lumine adopts a human-like interaction paradigm that unifies perception, reasoning and action. Built upon the Qwen2-VL-7B-Base model [77], Lumine perceives the game world directly from raw pixels at 5 Hz, and autoregressively generates textual keyboard and mouse actions at 30 Hz using action chunking [91]. The standardized human-like interface and sufficient interaction frequency enable Lumine to operate seamlessly across a wide range of video game environments. Additionally, Lumine adopts a hybrid thinking strategy, allowing it to adaptively enter a thinking mode to produce inner-monologue reasoning before generating executable actions when necessary, thereby avoiding redundant computation and latency without compromising decision quality.",
+    "score": 0.5400310701364732,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 3
+   },
+   {
+    "text": "Lumine’s capabilities further extend across entirely different games, demonstrating cross-game generalization without any additional fine-tuning. It successfully completes a 100-minute mission in Wuthering Waves and the five-hour first chapter of Honkai: Star Rail, showcasing its ability to transfer visuomotor and reasoning competence to unseen environments.   These results establish Lumine as the first agent capable of real-time long-horizon task completion and cross-environment transfer in open-world settings, demonstrating the effectiveness of the Lumine recipe in developing generalist agents for complex 3D worlds.   2 Related Work   Lumine aims to advance the development of general-purpose agents capable of solving diverse, long-horizon tasks. Although we primarily validate this concept within video game environments, the underlying design naturally shares common principles with GUI agents and robotic vision-language-action (VLA) models. We discuss these connections across the following dimensions and compare Lumine with other representative game agents in Table 1.   Agent. Traditional agents [7, 10, 36, 50, 57, 73, 82] optimize policy networks from scratch via supervised learning or reinforcement learning in a system 1 style [38]. Such agents often generalize poorly to unseen scenarios and struggle to incorporate prior knowledge for temporal adaptation. Moreover, their limited language grounding fundamentally constrains their application in modern interactive environments saturated with textual and symbolic information.",
+    "score": 0.53031945575011,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 4
+   },
+   {
+    "text": ".   • Multimodal Perception. The ability to fuse and interpret heterogeneous sensory streams, including embodied 3D vision, 2D graphical user interfaces (GUIs), textual information and other modalities, to construct an actionable understanding of both the external world and the agent’s state [4, 20, 63].   • High-Level Planning. The ability to generate self-motivated, long-horizon plans that adapt as environ- mental dynamics evolve, incorporating reflection and self-revision to refine strategies while balancing competing objectives and environmental feedback [3, 42, 70, 75, 88].   • Low-Level Control. The skill to ground abstract intentions into precise and executable actions that enable coherent behavior across diverse embodiments [12, 93].   • Memory. The capacity to maintain and leverage experience over various timescales, providing context for consistent decision-making to enable coherent exploration and test-time adaptation [15, 28, 30, 56, 75].   • Real-Time Inference. The ability to operate under strict latency constraints, balancing computational deliberation with timely responses and managing asynchronous interactions to avoid missing critical opportunities [13, 40].   We introduce Lumine, a comprehensive and scalable recipe together with its prototype model for addressing these challenges as a concrete step toward general-purpose agents. We select Genshin Impact, a globally popular 3D open-world game, as our primary testbed.",
+    "score": 0.5262380903584053,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 3
+   },
+   {
+    "text": "Lumine demonstrates strong generalization abilities across different games, even as the similarity between game genres decreases. This indicates that despite variations in visual style and gameplay mechanics, the core skills of navigation, combat, and 2D GUI manipulation can transfer across games, making it a promising foundation model across games. Remarkably, even when trained on a single game, Lumine is able to adapt, highlighting its promising scalability for broader applications.   9 Discussion and Future Work   We proposed Lumine, an open recipe that spans the entire lifecycle of developing generalist agents in 3D open world environments, from environment selection, data collection and preprocessing to interaction frequency, model design, training procedures, and inference optimization. Lumine offers a unified framework that organically integrates perception, reasoning, and action. The success of Lumine demonstrates that with only 2400 hours of raw gameplay data and 64 H100 GPUs, a small open-source VLM can be seamlessly and efficiently transformed into a powerful agent capable of following natural language instructions in real time to perform diverse tasks and complete hours-long missions in complex 3D open-worlds, without the need to modify model structures or loss functions. Experimental results also reveal substantial potential for further scaling. Lumine’s remarkable zero-shot generalization to unseen missions and even entirely unseen games suggests that the model acquires transferable meta-skills, such as 3D navigation and 2D manipulation, that can be readily applied to other domains.",
+    "score": 0.5041577377675485,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 31
+   },
+   {
+    "text": "Built upon a VLM, Lumine receives pixel inputs along with historical context, such as previous actions and reasoning, and outputs textual keyboard and mouse actions. It employs a hybrid reasoning strategy, generating new reasoning steps only when necessary; otherwise, it directly produces actions for efficient real-time control.   As illustrated in Figure 3, we introduce Lumine, a 7B-parameter model designed to process sequences of raw pixel images as inputs and generate executable keyboard and mouse operations, accompanied by interpretable intermediate reasoning. Lumine builds upon Qwen2-VL-7B-Base [77], inheriting its strong multimodal understanding and generation capabilities gained from large-scale pretraining on diverse web data. By augmenting this foundation with an explicit reasoning and action prediction mechanism, Lumine is capable of closed-loop visual decision-making within interactive environments.   At each timestep t, the model first determines whether to enter a thinking mode to generate reasoning rt, conditioned on its historical visual observations o≤t as well as prior reasoning traces r<t and actions a<t. If the model decides not to reason explicitly, rt is set to null. Subsequently, it predicts the next executable action at.",
+    "score": 0.5003631664680291,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "972f1d3a-126b-465e-bac1-cff0063ae0af",
+  "X-Amzn-Trace-Id": "Root=1-6b08045c-3dd106017b3945be59fdb347;Parent=20a81297da368536;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.373
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:16+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How do Lumine (Paper A) and the SELFCOMPACT scaffold (Paper B) each address the challenge of long‑horizon agent execution, and what techniques do they use to keep inference efficient?"
+ },
+ "from_cache": false
+}

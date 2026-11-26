@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.829,
+ "json": {
+  "id": "chatcmpl-ecf29325-4147-4abc-b427-5924c4c84720",
+  "object": "chat.completion",
+  "created": 1795687356,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "ReAct is evaluated on the following four benchmarks:\n\n1. **FrontierFinance**\n2. **FrontierScience-Research**\n3. **APEX-Agents**\n4. **DeepSearchQA**\n\nThese benchmarks are mentioned in the context provided from the document \"111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf\" on page 21."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1687,
+   "completion_tokens": 79,
+   "total_tokens": 1766
+  },
+  "contexts": [
+   {
+    "text": "We use GPT-3.5-Turbo, GPT-3.5-Instruct, GPT-4, and Claude-Opus which are all newer models than those benchmarked in ReAct [Yao et al., 2022]. As noted, we use AlfWorld domain consistent with the setup in [Yao et al., 2022]. GPT3.5(Turbo, Instruct) results are on 134 instances across six tasks, GPT-4/Claude-Opus on 60 instances (10 for each task) due to cost considerations.   5.1 Utility of interleaving reasoning trace with action execution   From Table 1(RQ1) note that the exemplar CoT and the anonymized exemplar CoT performs significantly better than base ReAct for all GPT-X family of models. Moreover, the performance dips slightly for Claude-Opus along these variations. From Fig. 3 (larger area represents worse performance), we observe that base ReAct consistently performs worse in most of the tasks. This refutes ReAct’s first claim on the importance of interleaving reasoning trace generation with action execution.",
+    "score": 0.5523853573966598,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 7
+   },
+   {
+    "text": "RAG’s agility overcomes static limitations, making it a game-changer for tasks requiring up- to-date knowledge. RAG outperformed seq2seq models and task-specific architectures on ODQA benchmarks, achieving exact match scores, reaching up to 56.8% on TriviaQA and 44.5% on Natural Questions.   ReAct Prompting Unlike previous studies that treated reasoning and action sep- arately, ReAct [Yao et al., 2022] enables LLMs to generate reasoning traces and task-specific actions concurrently. This interleaved process enhances synergy between reasoning and action, facilitating the model in inducing, tracking, and updat- ing action plans while handling exceptions. ReAct is applied to diverse language and decision-making tasks, showcasing its effectiveness over state-of-the-art baselines. Notably, in question answering (HotpotQA) and fact verification (Fever), ReAct addresses hallucination and error propagation issues by interacting with a simple Wikipedia API, producing more inter- pretable task-solving trajectories. Additionally, in interactive decision-making benchmarks like ALFWorld and WebShop, ReAct surpasses both imitation and reinforcement learning approaches, achieving notable success rates of 34% and 10%, respectively, with minimal in-context examples.",
+    "score": 0.5471978397558427,
+    "source": "016 - A Systematic Survey of Prompt Engineering in Large Language Models Techniques and Applications.pdf",
+    "page": 7
+   },
+   {
+    "text": ", general-reasoning, and deep-search benchmarks. Bold indicates the best reported result in each benchmark column. Apodex results are grouped below the horizontal rule. DeepSearchQA reports F1, and BioMysteryBench uses the Human-difficult subset.   The cross-benchmark pattern is more informative than any single rank. The ReAct setting already places the underlying model near strong frontier references on multiple task families; Agent Team then converts additional coordinated computation into further gains, including the strongest values shown in our FrontierFinance and FrontierScience-Research comparison tables and competitive performance on GDPVal, APEX-Agents, HLE, and DeepSearchQA. This combination of breadth and model-scale efficiency is the main empirical result of Apodex 1.1.   35B model-scale efficiency. Apodex 1.1 mini shows that the gains are not confined to the largest model. On the overlapping FrontierFinance and APEX-Agents evaluations, ReAct improves over Apodex 1.0 mini from 33.2 to 40.0 and from 15.4 to 24.2, respectively. With ReAct alone, the 35B model reaches 40.0 on FrontierFinance, 45.0 on FrontierScience-Research, and 24.2 on APEX-Agents, establishing a strong underlying working policy before multi-agent coordination is added.",
+    "score": 0.5357622527412554,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 21
+   },
+   {
+    "text": "ReAct claude-sonnet-4 78.3± 2.2 0.390± 0.019 68.0± 10.6 0.238± 0.026 ∼ ✓ ReAct gpt-4.1 70.1± 3.2 0.733± 0.243 77.3± 9.5 0.222± 0.097 ∼ ✓ ReAct gpt-4o 53.3± 3.4 0.101± 0.012 22.7± 9.5 0.046± 0.015 ∼ ✓ ReAct gpt-5-mini 26.7± 7.4 0.027± 0.004 74.7± 9.9 0.075± 0.029 ∼ ✓ ReAct gpt-5 79.8± 3.5 0.373± 0.034 82.7± 8.6 0.276± 0.114 ∼ ✓ ReAct gemini-2.5-flash 52.8± 8.0 0.063± 0.026 36.0± 10.9 0.436± 0.140 ✓ ✓ ReAct llama-4-scout 24.8± 5.1 0.588",
+    "score": 0.5274852197884426,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 25
+   },
+   {
+    "text": "Among these approaches, ReAct [Yao et al., 2022] stands out which claims to improve LLM planning abilities through the use of reasoning traces interleaved with action execution given as plan guidance. While their original study includes multiple domains tasks such as question answering on HotPotQA and FEVER datasets [Yang et al., 2018, Thorne et al., 2018], in this paper we are particularly interested in planning tasks where ReAct claims superior performance.   In our initial experiments with ReAct for planning, we found that the system is overly dependent on the syntactic similarity of the example prompt and the query and is extremely brittle to minor perturbations to the input prompt. For example, when provided with an explicit set of examples of pick-and-place-object task and asked to plan for a pick-and-place-two-objects task, it should be trivial to generalize the solution of the examples to the queried task. Unfortunately, even such a minor variation to the original ReAct agent setup disrupts its performance.   Preprint. Under review.   ar X   iv :2   40 5.   13 96   6v 1   [ cs   .A I]   2 2   M ay   2 02   4Interact with a household to solve a task. Here are two examples. <EXAMPLE 1 of same task as QUERY> You are in the middle of a room ...",
+    "score": 0.5249665849318476,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+   "016 - A Systematic Survey of Prompt Engineering in Large Language Models Techniques and Applications.pdf",
+   "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+   "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+   "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ecf29325-4147-4abc-b427-5924c4c84720",
+  "X-Amzn-Trace-Id": "Root=1-6b0803bb-1f32e0215916a92d0bf55fee;Parent=1bb65fb40810bbe0;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.829
+  }
+ ],
+ "requested_at": "2026-11-26T10:02:35+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "On which four benchmarks is ReAct evaluated?"
+   }
+  ]
+ },
+ "from_cache": false
+}

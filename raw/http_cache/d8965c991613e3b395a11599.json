@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.354,
+ "json": {
+  "query": "τ2-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+  "contexts": [
+   {
+    "text": "ar X   iv :2   50 6.   07 98   2v 1   [ cs   .A I]   9 J   un 2   02 5   τ 2-Bench: Evaluating Conversational Agents in a Dual-Control Environment   Victor Barres ∗   Sierra victor@sierra.ai   Honghua Dong ∗†   Sierra & University of Toronto & Vector Institute honghuad@cs.toronto.edu   Soham Ray Sierra   soham@sierra.ai   Xujie Si University of Toronto & Vector Institute   six@cs.toronto.edu   Karthik Narasimhan Sierra   karthik@sierra.ai   Abstract   Existing benchmarks for conversational AI agents simulate single-control environ- ments, where only the AI agent can use tools to interact with the world, while the user remains a passive information provider. This differs from real-world scenarios like technical support, where users need to actively participate in modifying the state of the (shared) world.",
+    "score": 0.8581727110576025,
+    "source": "141 - τ2-Bench Evaluating Conversational Agents in a Dual-Control Environment.pdf",
+    "page": 1
+   },
+   {
+    "text": "In order to address this gap, we introduce τ2-bench, with four key contributions: 1) A novel Telecom dual-control domain modeled as a Dec-POMDP, where both agent and user make use of tools to act in a shared, dynamic environment that tests both agent coordination and communication, 2) A compositional task generator that programmatically creates diverse, verifiable tasks from atomic components, ensuring domain coverage and controlled com- plexity, 3) A reliable user simulator tightly coupled with the environment, whose behavior is constrained by tools and observable states, improving simulation fi- delity, 4) fine-grained analysis of agent performance through multiple ablations including separating errors arising from reasoning vs communication/coordination. In particular, our experiments show significant performance drops when agents shift from no-user to dual-control, highlighting the challenges of guiding users. Overall, τ2-bench provides a controlled testbed for agents that must both reason effectively and guide user actions.1   1 Introduction   Existing benchmarks for conversational AI agents are designed to test their abilities to communicate effectively with a user and perform the right sequence of actions to solve tasks [26, 14, 23, 19]. These benchmarks are inherently single-control environments, where the AI agent is able to interact with the world but the (simulated) user is limited to providing information about preferences and goals.",
+    "score": 0.7733038501112419,
+    "source": "141 - τ2-Bench Evaluating Conversational Agents in a Dual-Control Environment.pdf",
+    "page": 1
+   },
+   {
+    "text": "This introduces an inherent asymmetry between the agent and the user; our focus is not   3on solving a pure multi-agent problem but rather on the agent’s capability to effectively guide and collaborate with a user who also possesses agency. In this sense, the framework can be collaborative (e.g., troubleshooting), competitive (e.g., negotiating a subscription), or a hybrid, requiring the agent to identify and navigate the scenario appropriately, even accounting for user mistakes or errors.   3 τ 2-bench: Evaluating Agents in a Dual-Control Environment   τ2-bench serves as a platform for a systematic study of multi-turn interactions between a conver- sational AI agent and a simulated user. Dual-control interactions are modeled as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP) [15] where both the agent and user can communicate, use tools, and receive observations. This allows us to simulate complex scenarios like technical troubleshooting where agent and user must coordinate their actions to solve the task.   3.1 The Dec-POMDP Formalism   As illustrated in Figure 1, the Dec-POMDP in τ2-bench involves two players: an agent and a user.",
+    "score": 0.6513407694783401,
+    "source": "141 - τ2-Bench Evaluating Conversational Agents in a Dual-Control Environment.pdf",
+    "page": 3
+   },
+   {
+    "text": "The dual-control model provides a few advantages in improving the user simulation, such as selective information hiding, non-verbal manipulation of the environment, and easier specification of the user’s task or scenario, especially in cases where the structured format of tools is preferred to unstructured natural language.   The primary challenge in a dual-control setup lies in granting the user simulator meaningful agency via tools while maintaining the \"complexity asymmetry\" between the agent and the user simulator – that is, making sure the user’s affordances are limited and the user still requires support from the agent in order to solve issues. While tools for the user simulator could disrupt this balance by increasing its capabilities, we find that carefully designing the tools can help constrain user behavior, leading to more reliable simulations. We achieve this by ensuring user tools yield only human-readable outputs, limiting user planning to reactive tool use based on agent requests, and tightly constraining user behavior through the environment. This results in a controlled testbed for agents that must both think and effectively guide a user to take the right actions.   Overall, τ2-bench makes four key contributions:   Telecom dual-control domain. We introduce a novel dual-control telecom domain within τ2- bench, where, unlike previous benchmarks, both the AI agent and the user possess distinct tools to observe, act upon, and verify the state of a shared, dynamic environment.",
+    "score": 0.6108273237744718,
+    "source": "141 - τ2-Bench Evaluating Conversational Agents in a Dual-Control Environment.pdf",
+    "page": 2
+   },
+   {
+    "text": "We introduce a novel dual-control telecom domain within τ2- bench, where, unlike previous benchmarks, both the AI agent and the user possess distinct tools to observe, act upon, and verify the state of a shared, dynamic environment. This is formalized using a Decentralized Partially Observable Markov Decision Process (Dec-POMDP) [15]. This dual-control setup is designed to accurately represent real-world collaborative scenarios and exposes crucial agent coordination and communication challenges absent from evaluations where users have limited agency. Experiments show state-of-the-art LLMs struggle significantly in this domain (e.g., passˆ1 of 34% for gpt-4.1 [16], 42% for o4-mini [17], and 49% for claude-3.7-sonnet [2] on new tasks).   Compositional task generator. τ2-bench incorporates a programmatic task generator that automati- cally composes a vast and diverse set of verifiable tasks from a small set of atomic base scenarios (defined by initialization, solution, and assertion functions). This method ensures provable correctness of tasks, provides complete domain coverage, allows for explicit control over task complexity (e.g., by number of solution steps or issue type), and removes the manual effort and potential brittleness associated with hand-crafted task suites.   2Reliable user simulator.",
+    "score": 0.6053625402715881,
+    "source": "141 - τ2-Bench Evaluating Conversational Agents in a Dual-Control Environment.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "47e108f9-7d96-45ed-9906-ce6f4e492025",
+  "X-Amzn-Trace-Id": "Root=1-6b080510-07f94a0b64f61d01650db8d5;Parent=2396aa7147c1555b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.354
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:16+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "τ2-Bench: Evaluating Conversational Agents in a Dual-Control Environment"
+ },
+ "from_cache": false
+}

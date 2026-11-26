@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.26,
+ "json": {
+  "query": "How does ReWOO reduce token consumption compared to interleaved reasoning-and-observation approaches?",
+  "contexts": [
+   {
+    "text": "Specifically, let (Pj , Êj , Ej), j ∈ [1, k] be the plan, evidence variable #E and evidence response at step j, The total input tokens for ReWOO is:   #TokenReWOOI = Θ(Cplanner + S +Q) + Θ(Csolver +Q+   k∑ j=1   Pj + Ej)   ≈ 2Θ(Q)︸ ︷︷ ︸ Question   +2Θ(C)︸ ︷︷ ︸ Context   + Θ(S)︸ ︷︷ ︸ Exemplars   +   k∑ j=1   Θ(Pj + Ej)︸ ︷︷ ︸ PEs   (2)   It is hard to quantitatively measure the difference between the two methods without explicit knowledge of prompting setup. However, if we empirically equalize #TAOs with #PEs, then Eq. (1) differs from Eq. (2) linearly by size of Q,C,S and quadratically by size of T,A,O to the term k. Such analysis directly suggests that as a task sent to ALM becomes increasingly complicated, thus introducing more reasoning steps, ReWOO can save substantially larger amounts of computation costs in ALM systems.",
+    "score": 0.615213385392396,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 4
+   },
+   {
+    "text": "Further- more, we demonstrate the potential of ReWOO for system parameter efficiency through instruction tuning [13] and Specialization [14]. We observe   2Single request to solve a multi-step task with Auto-GPT easily exceeds $1 (excluding API costs).   2(a) Reasoning with Observation (b) ReWOO   Task   Planner Tool   Tool   Tool   P E   Solver   Tool   #E Worker   <exemplars>   <context>   User   Task   T A O   T A O   T A O   LLM Tool Tool Tool   T A   Tool   <exemplars>   <context>   User   Figure 2: In (a) observation-dependent reasoning, the task requested from a user is first wrapped with context prompt and exemplars, then fed into an LLM to initiate a reasoning process. The LLM generates a thought(T) and an action(A), then waits for the observation(O) from tools. The observation is stacked into the prompt history to start the next LLM call. In ReWOO (b), Planner produces at once a list of interdependent plans(P) and calls Worker to fetch evidence(E) from tools. The P and E are combined with the task, and then fed into Solver for the final answer. Note that in (a), the context and exemplars are repeatedly fed into the LLM, resulting in prompt redundancy.",
+    "score": 0.5621067531413848,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Worker retrieves external knowledge from tools to provide evidence. Solver synthesizes all the plans and evidence to generate the ultimate answer to the initial task. As shown in Figure 2, ReWOO separates the reasoning process of LLMs from external tools, avoiding the redundancy of interleaved prompts in observation-dependent reasoning, thereby significantly reducing token usage and enhancing prompting efficiency.   Figure 3: Overall benchmark performance of dif- ferent methods.   To holistically evaluate ReWOO, we conduct ex- periments over six multi-step and knowledge- intensive NLP benchmarks and a curated dataset. Evaluation baselines of ReWOO in- clude two non-ALM prompting methods, Direct Prompting, and Chain-of-Thought prompting (CoT) [12], and a prevailing ALM paradigm, ReAct [1], featuring observation-dependent rea- soning. Figure 3 provides an averaged per- formance over benchmarks in Table 2, demon- strating consistent efficiency gain of ReWOO over its observation-dependent counterpart. Further- more, we demonstrate the potential of ReWOO for system parameter efficiency through instruction tuning [13] and Specialization [14].",
+    "score": 0.5618622575419919,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models   Binfeng Xu billxbf@gmail.com   Zhiyuan Peng jerrypeng1937@gmail.com   Bowen Lei bowenlei@stat.tamu.edu   Subhabrata Mukherjee subhabrata.mukherjee@microsoft.com   Yuchen Liu yliu322@ncsu.edu   Dongkuan Xu dxu27@ncsu.edu   Abstract Augmented Language Models (ALMs) blend the reasoning capabilities of Large Language Models (LLMs) with tools that allow for knowledge retrieval and action execution. Existing ALM systems trigger LLM thought processes while pulling observations from these tools in an interleaved fashion. Specifically, an LLM reasons to call an external tool, gets halted to fetch the tool’s response, and then decides the next action based on all preceding response tokens. Such a paradigm, though straightforward and easy to implement, often leads to huge computation complexity from redundant prompts and repeated execution. This study addresses such challenges for the first time, proposing a modular paradigm ReWOO (Reasoning WithOut Observation) that detaches the reasoning process from external observa- tions, thus significantly reducing token consumption. Comprehensive evaluations across six public NLP benchmarks and a curated dataset reveal consistent perfor- mance enhancements with our proposed methodology.",
+    "score": 0.5139843800022609,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "The total number of input tokens can be calculated as Eq. (1).   #TokenTAOI = Θ(C + S +Q) +   k−1∑ j=1   Θ   ( C + S +Q+   j∑ t=1   (Tt +At +Ot)   )   = kΘ(Q)︸ ︷︷ ︸ Question   + kΘ(C)︸ ︷︷ ︸ Context   + kΘ(S)︸ ︷︷ ︸ Exemplars   +   k−1∑ j=1   (k − j)Θ(Tj +Aj +Oj)︸ ︷︷ ︸ TAOs   (1)   The equation above suggests that duplicated and identical prompts are used as input redundantly. Since Θ(C) and Θ(S) are usually nontrivial, input tokens quadratically grow oversize as the number of steps k increases, usually leading to token limit excess, ridiculously high computation, and time expenses. On the contrary, ReWOO avoids such interleaving pattern as illustrated in Figure 2 (b).",
+    "score": 0.5044454187582726,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a8eaf872-1d1e-485c-8474-ee7d5b033fe4",
+  "X-Amzn-Trace-Id": "Root=1-6b080420-55abec9d4e08cba343852ba0;Parent=55ad4021e9136c93;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.26
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:16+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How does ReWOO reduce token consumption compared to interleaved reasoning-and-observation approaches?"
+ },
+ "from_cache": false
+}

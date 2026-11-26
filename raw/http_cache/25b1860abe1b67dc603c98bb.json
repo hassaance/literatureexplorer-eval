@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.244,
+ "json": {
+  "query": "Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets",
+  "contexts": [
+   {
+    "text": "Background: Agentic Markets. Major economic platforms like Amazon, Facebook Marketplace, Google, and Bing are two-sided markets where consumers (on one side) and businesses (on the other) discover and transact with each   1Available open-source at https://github.com/microsoft/multi-agent-marketplace.   ar X   iv :2   51 0.   25 77   9v 1   [ cs   .M A   ] 2   7 O   ct 2   02 5         https://github.com/microsoft/multi-agent-marketplace        https://arxiv.org/abs/2510.25779v1A PREPRINT - OCTOBER 31, 2025   Magentic Marketplace Environment   “Could you find me a restaurant serving agua fresca and empanadas with free parking?”   Customers   “Welcome to Taqueria El Sabor! Our menu includes:   Steak tacos: $12 Empanadas: $10...”   Businesses   Customer Agents   Business Agents   Search   “Searching for a restaurant to fulfill your order.”   Multi-Agent Communication   “Asking about free parking and menu options.”   Final Transaction   “Placing your order!” $   Figure 1: Magentic Marketplace is an open-source environment where AI agents can discover, communicate, and transact with each other. The environment can be used for evaluating different market designs and agent behaviors.",
+    "score": 0.8019740822828104,
+    "source": "149 - Magentic Marketplace An Open-Source Environment for Studying Agentic Markets.pdf",
+    "page": 1
+   },
+   {
+    "text": "We instantiate Magentic Marketplace with synthetic consumer and business data to measure economic welfare gains from two-sided agentic markets and understand their performance and vulnerabilities to manipulation and bias.   3. We open-source Magentic Marketplace to help others build multi-agent market designs, test new agentic solutions in these settings, and contribute experiment protocols to explore additional marketplace behaviors of LLM-agents.   2 Related Work   The study of agents in marketplaces predates LLMs, with early work focusing on algorithmic agents, their interactions with human counterparts, and the implications for market outcomes (Wellman et al., 2004; Shahaf & Horvitz, 2010). More recently, the growing potential for an agentic economy has motivated the study of markets populated by AI agents. Researchers are investigating the forces that create and shape such markets as well as the conceptual benefits and risks of different designs (Hammond et al., 2025; Rothschild et al., 2025; Tomasev et al., 2025). Building on this foundation, Magentic Marketplace enables controlled experimentation of agentic economies.   Economic Agents. In agentic markets, AI agents are involved in making economic decisions.",
+    "score": 0.7801858322271891,
+    "source": "149 - Magentic Marketplace An Open-Source Environment for Studying Agentic Markets.pdf",
+    "page": 3
+   },
+   {
+    "text": "Magentic Marketplace extends this landscape by proposing a transaction-oriented protocol specifically designed for economic agent-to-agent interactions in market- place settings, complementing existing protocols while focusing on the unique requirements of two-sided markets.   3A PREPRINT - OCTOBER 31, 2025   (a) Assistant Agents (representing consumers) and Service Agents (representing businesses) interact through a central Market Environment.   (b) Our implementation of the environment comprises of three core endpoints: register to register an agent to the marketplace, protocol to discover available actions, and action to execute an action.   (c) Our protocol consists of 5 unique actions: search, send- ing text messages, sending order proposals, sending pay- ments, and fetching new messages.   Figure 2: Overview of Magentic Marketplace’s architecture: agents, endpoints, and action space.   3 Magentic Marketplace   In this section, we first establish design goals for the environment that we built for studying agentic markets and then overview its implementation. Then we zoom in on the marketplace protocol that allows agents to register and discover capabilities, and finally detail how this protocol exposes specific actions that enable agents to execute the complete economic lifecycle from discovery to transaction.   3.1 Environment Design Goals   Modeling Two-Sided Agentic Markets (Figure 2a).",
+    "score": 0.7600255017731171,
+    "source": "149 - Magentic Marketplace An Open-Source Environment for Studying Agentic Markets.pdf",
+    "page": 3
+   },
+   {
+    "text": "We propose an agent-marketplace research paradigm, centering on the use of simu- lation environments for empirical studies of the capabilities and risks of LLM-based agents in multi-agent economic ecosystems. In particular, we introduce Magentic Marketplace, a simulated multi-agentic marketplace environment for controlled experimentation in agentic markets. The environment supports the full transaction lifecycle: from search and matching to negotiation and transaction, enabling systematic study of agent behavior under realistic marketplace conditions (see Figure 1 for an example). This simulation environment enables us to answer questions such as: How effectively can agents discover and transact with one another? How do market design decisions impact agent efficacy at scale? How does current AI agent technology compare to ideal agentic behavior and non-agentic markets? How do agents behave in response to strategic and competitive market environments, relative to classic economic predictions?   Using Magentic Marketplace, we implement an experimental market scenario where agents seek to optimize outcomes for the consumers they represent, maximizing individual utility and generating rich interaction data. To enable con- trolled, repeatable experiments and safe exploration of agent behaviors, our current study uses fully synthetic data e.g., from a restaurant domain (specifically, Mexican restaurants and contractors). But the environment is extensible: it supports additional synthetic domains and public/open datasets, facilitating research that shows generalization across market settings. We demonstrate how this setup can be used to evaluate market efficiencies under search limitations, susceptibility to manipulation.",
+    "score": 0.7407497379626572,
+    "source": "149 - Magentic Marketplace An Open-Source Environment for Studying Agentic Markets.pdf",
+    "page": 2
+   },
+   {
+    "text": "MAGENTIC MARKETPLACE: AN OPEN-SOURCE ENVIRONMENT FOR STUDYING AGENTIC MARKETS   Gagan Bansal, Wenyue Hua, Zezhou Huang, Adam Fourney, Amanda Swearngin, Will Epperson, Tyler Payne, Jake M. Hofman, Brendan Lucier, Chinmay Singh, Markus Mobius, 1   Akshay Nambi, Archana Yadav, Kevin Gao, David M. Rothschild, Aleksandrs Slivkins, Daniel G. Goldstein, Hussein Mozannar, Nicole Immorlica, 2   Maya Murad, Matthew Vogel,3 Subbarao Kambhampati,4,‡ Eric Horvitz,4 Saleema Amershi 5   Microsoft ‡Arizona State University 1 Core Contributors; 2 Contributors; 3 Technical Program Managers; 4 Advisors; 5 Principal Investigator   October 31, 2025   ABSTRACT   As LLM agents advance, they are increasingly mediating economic decisions, ranging from prod- uct discovery to transactions, on behalf of users. Such applications promise benefits but also raise many questions about agent accountability and value for users. Addressing these questions requires understanding how agents behave in realistic market conditions. However, previous research has largely evaluated agents in constrained settings, such as single-task marketplaces (e.g., negotiation) or structured two-agent interactions.",
+    "score": 0.7404812072817535,
+    "source": "149 - Magentic Marketplace An Open-Source Environment for Studying Agentic Markets.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "323468ca-dc47-4504-b7e7-3901efbd9978",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-58bcb8951da17aba00d3bce0;Parent=23076a69419b1a70;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.244
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets"
+ },
+ "from_cache": false
+}

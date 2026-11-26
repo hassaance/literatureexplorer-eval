@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.264,
+ "json": {
+  "query": "What does the 2025 paper 'Quantum Advantage in Large Language Model Inference' conclude?",
+  "contexts": [
+   {
+    "text": "Jacob Charnock, Alejandro Tlaie, Kyle O’Brien, Stephen Casper, and Aidan Homewood. Expanding external access to frontier ai models for dangerous capability evaluations, 2026. URL https://arxiv.org/abs/2601.11916.   Chen Chen, Kim Young Il, Yuan Yang, Wenhao Su, Yilin Zhang, Xueluan Gong, Qian Wang, Yongsen Zheng, Ziyao Liu, and Kwok-Yan Lam. The shadow self: Intrinsic value misalignment in large language model agents. arXiv preprint arXiv:2601.17344, 2026.   Runjin Chen, Andy Arditi, Henry Sleight, Owain Evans, and Jack Lindsey. Persona vectors: Monitoring and controlling character traits in language models, 2025. URL https:// arxiv.org/abs/2507.21509.   Tavishi Choudhary. Political bias in large language models: A comparative analysis of chatgpt-4, perplexity, google gemini, and claude. In RAIS Conference Proceedings. Research Association for Interdisciplinary Studies, 2024.   Brian Christian, Jessica A. F. Thompson, Elle Michelle Yang, Vincent Adam, Hannah Rose Kirk, Christopher Summerfield, and Tsvetomira Dumbalska. Reward models inherit value biases from pretraining, 2026.",
+    "score": 0.4943400458250888,
+    "source": "119 - Agents of Chaos.pdf",
+    "page": 51
+   },
+   {
+    "text": "Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. In Proceedings of the 29th Symposium on Operating Systems Principles, 2023.   Robert Tjarko Lange, Yuki Imajuku, and Edoardo Cetin. Shinkaevolve: Towards open-ended and sample-efficient program evolution. arXiv preprint arXiv:2509.19349, 2025.   Yaniv Leviathan, Matan Kalman, and Yossi Matias. Fast inference from transformers via speculative decoding. In Proceedings of the 40th International Conference on Machine Learning, 2023.   Yuhui Li, Fangyun Wei, Chao Zhang, and Hongyang Zhang. Eagle-3: Scaling up inference accelera- tion of large language models via training-time test. arXiv preprint arXiv:2503.01840, 2025. URL https://arxiv.org/abs/2503.01840.   Hunter Lightman, Vineet Kosaraju, Yuri Burda, Harrison Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, and Karl Cobbe. Let’s verify step by step. In The twelfth international conference on learning representations, 2023.",
+    "score": 0.49401262173189403,
+    "source": "089 - SwarmResearch Orchestrating Coding Agents for Open-Ended Discovery.pdf",
+    "page": 13
+   },
+   {
+    "text": "LLMs achieve adult hu- man performance on higher-order theory of mind tasks, May 2024. URL http://arxiv.org/abs/2405. 18870. arXiv:2405.18870 [cs].   Sturgeon, B., Hyams, L., Samuelson, D., Vorster, E., Haimes, J., and Anthis, J. R. HumanAgencyBench: Do Language Models Support Human Agency?, February 2025. URL https://openreview.net/forum? id=nHp5FquS2R#discussion.   Suh, J., Jahanparast, E., Moon, S., Kang, M., and Chang, S. Language Model Fine-Tuning on Scaled Survey Data for Predicting Distributions of Public Opinions, Febru- ary 2025. URL http://arxiv.org/abs/2502. 16761. arXiv:2502.16761 [cs].   Sun, H., Pei, J., Choi, M., and Jurgens, D. Aligning with Whom? Large Language Models Have Gender and Racial Biases in Subjective NLP Tasks, November 2023. arXiv: 2311.09730 [cs] Number: arXiv:2311.09730.   Tan, D. C.",
+    "score": 0.4907721858817627,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 20
+   },
+   {
+    "text": "URL https://arxiv.org/abs/2501.12948. arXiv:2501.12948.   [5] OpenAI et al. Competitive programming with large reasoning models (2025). URL https://arxiv.org/abs/2502.06807. arXiv:2502.06807.   [6] Xi, Z. et al. The rise and potential of large language model based agents: A survey (2023). URL https://arxiv.org/abs/2309.07864. arXiv:2309.07864.   [7] Wang, L. et al. A survey on large language model based autonomous agents. Frontiers of Computer Science 18, 186345 (2024). URL http://dx.doi.org/10. 1007/s11704-024-40231-1.   [8] Boiko, D. A., MacKnight, R., Kline, B. & Gomes, G. Autonomous chemical research with large language models. Nature 624, 570–578 (2023). URL https: //doi.org/10.1038/s41586-023-06792-0.   [9] Huang, J.-T. et al. Kim, B. et al. (eds) On the humanity of conver- sational ai: Evaluating the psychological portrayal of llms.",
+    "score": 0.4837856470487004,
+    "source": "079 - Modeling Earth-Scale Human-Like Societies with One Billion Agents.pdf",
+    "page": 25
+   },
+   {
+    "text": "H., Arora, A., Josifoski, M., Anderson, A., and West, R. Generating Faithful Syn- thetic Data with Large Language Models: A Case Study in Computational Social Science, May 2023a. arXiv: 2305.15041 [cs] Number: arXiv:2305.15041.   Veselovsky, V., Ribeiro, M. H., and West, R. Artifi- cial Artificial Artificial Intelligence: Crowd Workers Widely Use Large Language Models for Text Produc- tion Tasks, June 2023b. URL http://arxiv.org/ abs/2306.07899. arXiv:2306.07899 [cs].   Veselovsky, V., Argin, B., Stroebl, B., Wendler, C., West, R., Evans, J., Griffiths, T. L., and Narayanan, A. Local- ized Cultural Knowledge is Conserved and Controllable in Large Language Models, April 2025. URL http:// arxiv.org/abs/2504.10191. arXiv:2504.10191 [cs].   Wang, A., Morgenstern, J., and Dickerson, J. P. Large language models cannot replace human participants because they cannot portray identity groups. CoRR, January 2024a. URL https: //openreview.net/forum?",
+    "score": 0.481282574438771,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 21
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "98aee2ea-deaa-4b9e-a6b9-8f2be982dd51",
+  "X-Amzn-Trace-Id": "Root=1-6b080428-4a00ff403502531550f00d1f;Parent=09e0be332bea9d37;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.264
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What does the 2025 paper 'Quantum Advantage in Large Language Model Inference' conclude?"
+ },
+ "from_cache": false
+}

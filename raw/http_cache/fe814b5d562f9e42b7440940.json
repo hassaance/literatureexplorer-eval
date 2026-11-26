@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.466,
+ "json": {
+  "query": "ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions",
+  "contexts": [
+   {
+    "text": "Song, Xiaojuan Ma, and Juho Kim   that ChoiceMates enables a more confident, satisfactory decision- making with better situation understanding than web search, and higher decision quality than a commercial multi-agent framework. We further illustrate how participants utilized ChoiceMates to make unfamiliar decisions, providing insights into designing a more con- trollable and collaborative multi-agent system.   CCS Concepts • Human-centered computing → Interactive systems and tools; Natural language interfaces.   Keywords multi-agent interactions, conversational user interface, decision- making support, large-language models   ACM Reference Format: Jeongeon Park, BryanMin, Kihoon Son, Jean Y. Song, XiaojuanMa, and Juho Kim. 2026. ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions. In 31st International Confer- ence on Intelligent User Interfaces (IUI ’26), March 23–26, 2026, Paphos, Cyprus. ACM,NewYork, NY, USA, 25 pages. https://doi.org/10.1145/3742413.3789107   1 Introduction People make decisions online every day, from purchasing a new product, choosing a trip destination, to taking on a new hobby.",
+    "score": 0.8234330610964299,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 2
+   },
+   {
+    "text": "ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions   Jeongeon Park∗ jep034@ucsd.edu   University of California, San Diego La Jolla, CA, USA   Bryan Min bdmin@ucsd.edu   University of California, San Diego La Jolla, CA, USA   Kihoon Son kihoon.son@kaist.ac.kr   School of Computing, KAIST Daejeon, Republic of Korea   Jean Y. Song jeansong@yonsei.ac.kr   Information and Interaction Design, Yonsei University   Incheon, Republic of Korea   Xiaojuan Ma mxj@cse.ust.hk   Hong Kong University of Science and Technology   Hong Kong, China   Juho Kim juhokim@kaist.ac.kr   School of Computing, KAIST Daejeon, Republic of Korea   juho@skillbench.com SkillBench   Santa Barbara, CA, USA   Figure 1: ChoiceMates is an interactive multi-agent conversational system designed to support online decision-making in unfamiliar domains. In ChoiceMates, the user can converse with any selected set of agents in the conversation space (1) to gather diverse information and perspectives in the domain (supported by features that auto-highlight criteria and options in the conversation history) (2) tomanage and understand the information found.",
+    "score": 0.7501331897381295,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 1
+   },
+   {
+    "text": "Facilitate users in building preferences relative to the domain. The participants mentioned the difficulty of gain- ing personalized standards (e.g., a travel destination less than 3 hours via flight) that would help them assess the information found. Rather than assuming users can form standards from scratch, the system can use exploration his- tory as a starting point to surface preference candidates, and have the users confirm or revise them. To reduce theChoiceMates IUI ’26, March 23–26, 2026, Paphos, Cyprus   risk of filter bubbles, the system should also surface con- trasting opinions alongside emerging preferences. Identified aspects could then function as evidence for the user to eval- uate later discovered information and gradually clarify their preferences over the decision-making period.   5 ChoiceMates: A Multi-Agent Conversational System   From our findings and the design goals, we designed and developed ChoiceMates, an interactive multi-agent conversational system that assists users in unfamiliar decision-making—situations where users must make a decision in a domain where they lack prior do- main knowledge and well-formed preferences, often under a limited time budget. Note that the scope of unfamiliar decision-making ChoiceMates is designed to support does not include primarily high-stakes or overly complex decision contexts (e.g., those requir- ing extensive verification, long-term deliberation, or multi-stage planning), which we discuss further in Section 7.3.",
+    "score": 0.7344690921068506,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 6
+   },
+   {
+    "text": "Multiple agents can surface diverse opinions and per- spectives in the domain through distinct viewpoints, allowing users to juxtapose opinions, discover trade-offs, and surface relevant criteria early rather than assembling information from scattered sources sequentially. Conversational interaction can support light- weight exchanges of information needs: users can ask follow-ups, compare options, and focus the search on their context. Together, a conversational set of agents could help users learn key domain knowledge, identify plausible options, and develop personalized standards within a limited time budget.   Many existing multi-agent systems primarily aim to automate the process of solving complex tasks with minimal human inter- vention by assigning agents into different subtasks [43, 88] or roles [25, 81, 81]. However, there is a limited exploration of multi-agent interfaces with interactionswhere the user is assisted or empowered by collaborating with a set of agents. For tasks like information seeking and (unfamiliar) decision-making where human prefer- ences and opinions play a significant role, it is important to keep users in the loop, as full automation may lead the users to naively follow agents’ guidance and lose agency over their decisions.   We present ChoiceMates, a multi-agent conversational system where the user can navigate the unfamiliar decision-making pro- cess by conversing with a set of agents and constructing the user’s own preference space.",
+    "score": 0.726559920565768,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our results show that ChoiceMates successfully led to a more   satisfactory and confident decision, enables comparable exploration of a broad information space, and supports easier management of discovered information and a better understanding of user situa- tion than the web condition. Compared with an existing computer- led multi-agent framework, ChoiceMates facilitated broader explo- ration of information in the domain and participants perceived the final decision as of higher quality. In addition, we report on repre- sentative strategies of how participants utilized ChoiceMates for unfamiliar decision-making, and further discuss the user-side im- plications and design considerations of a controllable, collaborative multi-agent system.   This research makes the following contributions: • Findings from a formative study with 14 participants uncovering the practices and needs in unfamiliar decision-making.   • Design and implementation of ChoiceMates2, a multi-agent con- versational system designed to support unfamiliar decision-making by providing users control over conversations with a dynamic set of agents with unique experiences and preference construction in the form of criteria, options, and agents.",
+    "score": 0.7207875313310517,
+    "source": "126 - ChoiceMates Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c72bebcc-72d5-469b-8c8e-6383b970fa3d",
+  "X-Amzn-Trace-Id": "Root=1-6b08050d-6eec67032c57019641e8c50b;Parent=73bb78939ab63ae7;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.466
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:13+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ChoiceMates: Supporting Unfamiliar Online Decision-Making with Multi-Agent Conversational Interactions"
+ },
+ "from_cache": false
+}

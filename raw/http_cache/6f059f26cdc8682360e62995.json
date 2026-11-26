@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.25,
+ "json": {
+  "query": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+  "contexts": [
+   {
+    "text": "SLEEPER AGENTS: TRAINING DECEPTIVE LLMS THAT PERSIST THROUGH SAFETY TRAINING   Evan Hubinger∗, Carson Denison∗, Jesse Mu∗, Mike Lambert∗, Meg Tong, Monte MacDiarmid, Tamera Lanham, Daniel M. Ziegler, Tim Maxwell, Newton Cheng   Adam Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez◦△, Jack Clark, Kamal Ndousse, Kshitij Sachan, Michael Sellitto, Mrinank Sharma, Nova DasSarma, Roger Grosse, Shauna Kravec, Yuntao Bai, Zachary Witten   Marina Favaro, Jan Brauner◦, Holden Karnofsky□, Paul Christiano⋄, Samuel R.",
+    "score": 0.6727140651785658,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 1
+   },
+   {
+    "text": "Ziegler, Tim Maxwell, Newton Cheng, Adam Jermyn, Amanda Askell, Ansh Radhakrishnan, Cem Anil, David Duvenaud, Deep Ganguli, Fazl Barez, Jack Clark, Kamal Ndousse, Kshitij Sachan, Michael Sellitto, Mrinank Sharma, Nova DasSarma, Roger Grosse, Shauna Kravec, Yuntao Bai, Zachary Witten, Marina Favaro, Jan Brauner, Holden Karnofsky, Paul Christiano, Samuel R. Bowman, Logan Graham, Jared Kaplan, Sören Mindermann, Ryan Greenblatt, Buck Shlegeris, Nicholas Schiefer, and Ethan Perez. Sleeper agents: Training deceptive llms that persist through safety training, 2024. URL https://arxiv.org/abs/2401.05566.   Matthew Hutson. Ai agents break rules under everyday pressure. IEEE Spectrum, February 2026. URL https://spectrum.ieee.org/ai-agents-safety. Published online 25 Novem- ber 2025; featured in February 2026 issue.   EunJeong Hwang, Yuwei Yin, Giuseppe Carenini, Peter West, and Vered Shwartz. Infusing theory of mind into socially intelligent llm agents. arXiv preprint arXiv:2509.22887, 2025.",
+    "score": 0.5324295127874105,
+    "source": "119 - Agents of Chaos.pdf",
+    "page": 52
+   },
+   {
+    "text": "We aim to test whether LLM developers could remove such a strategy using the currently dominant safety training paradigms of supervised fine-tuning (SFT; Wei et al., 2021) and reinforcement learning (RL; Christiano et al., 2017), including on red team prompts (Perez et al., 2022a; Ganguli et al., 2022). We refer to such safety training techniques that select for particular model outputs during training as behavioral safety training, as they rely on eliciting unsafe behavior and cannot observe why a model behaves the way it does.   Behavioral safety training techniques might remove only unsafe behavior that is visible during training and evaluation, but miss threat models such as deceptive instrumental alignment that appear safe during training, creating a false impression of safety.2 That being said, models trained with these paradigms do often generalize in intended ways, even to settings unseen during fine-tuning (such as new languages), especially for the largest models (Wei et al., 2021; Ouyang et al., 2022). Thus, one might expect behavioral safety training to   1For simplicity, we use training and deployment to describe distributions on which the behavior of a deceptive AI might differ. A more realistic scenario might include e.g. online training, separate evaluation stages, etc.",
+    "score": 0.5270310318234436,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 2
+   },
+   {
+    "text": "Bowman, Logan Graham, Jared Kaplan, Sören Mindermann‡◦, Ryan Greenblatt†, Buck Shlegeris†, Nicholas Schiefer∗, Ethan Perez∗   Anthropic, †Redwood Research, ‡Mila Quebec AI Institute, ◦University of Oxford, ⋄Alignment Research Center, □Open Philanthropy, △Apart Research evan@anthropic.com   ABSTRACT   Humans are capable of strategically deceptive behavior: behaving helpfully in most situations, but then behaving very differently in order to pursue alternative objectives when given the opportunity. If an AI system learned such a deceptive strategy, could we detect it and remove it using current state-of-the-art safety training techniques? To study this question, we construct proof-of-concept examples of deceptive behavior in large language models (LLMs). For example, we train models that write secure code when the prompt states that the year is 2023, but insert exploitable code when the stated year is 2024. We find that such backdoor behavior can be made persistent, so that it is not removed by standard safety training techniques, including supervised fine-tuning, reinforcement learning, and adversarial training (eliciting unsafe behavior and then training to remove it).",
+    "score": 0.5216498536743893,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 1
+   },
+   {
+    "text": "Bowman, Logan Graham, Jared Kaplan, Sören Mindermann, Ryan Greenblatt, Buck Shlegeris, Nicholas Schiefer, and Ethan Perez. 2024. Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training. arXiv:2401.05566 http://arxiv.org/abs/2401.05566   [38] Shotaro Ishihara. 2023. Training Data Extraction From Pre-trained Language Models: A Survey. In Proceedings of the 3rd Workshop on Trustworthy Natural Language Processing (TrustNLP 2023) (Toronto, Canada), Anaelia Ovalle, Kai-Wei Chang, Ninareh Mehrabi, Yada Pruksachatkun, Aram Galystan, Jwala Dhamala, Apurv Verma, Trista Cao, Anoop Kumar, and Rahul Gupta (Eds.). Association for Computational Linguistics, 260–275. https://aclanthology.org/2023.trustnlp-1.23   [39] Bargav Jayaraman, Esha Ghosh, Melissa Chase, Sambuddha Roy, Wei Dai, and David Evans. 2023.",
+    "score": 0.5191320936064463,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 31
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9b927f16-e71e-463f-80eb-338a7e407e2d",
+  "X-Amzn-Trace-Id": "Root=1-6b080513-2585b6e2014b6cc52cfa7416;Parent=356f705505753a41;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.25
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:19+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training"
+ },
+ "from_cache": false
+}

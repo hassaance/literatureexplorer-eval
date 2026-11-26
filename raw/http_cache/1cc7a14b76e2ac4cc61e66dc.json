@@ -1,0 +1,30 @@
+{
+ "status": 400,
+ "latency_s": 0.037,
+ "json": {
+  "error": {
+   "message": "body must contain a query"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "577ed351-5479-4d43-aa61-011111325cb6",
+  "X-Amzn-Trace-Id": "Root=1-6b080574-54c6cf5a427f514858c2f16a;Parent=24ddaf0e36a0f86a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 400,
+   "latency_s": 0.037
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "err_context_missing_query",
+ "request_body": {
+  "text": "What is ReAct?"
+ },
+ "from_cache": false
+}

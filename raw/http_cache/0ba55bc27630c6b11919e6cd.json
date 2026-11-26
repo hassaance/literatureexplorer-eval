@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.29,
+ "json": {
+  "query": "Towards a Science of Scaling Agent Systems",
+  "contexts": [
+   {
+    "text": "Towards a Science of Scaling Agent Systems Yubin Kim1,3,?, Ken Gu1, Chanwoo Park3, Chunjong Park2, Samuel Schmidgall2, A. Ali Heydari1, Yao Yan1, Zhihan Zhang1, Yuchen Zhuang2, Yun Liu1, Mark Malhotra1, Paul Pu Liang3, Hae Won Park3, Yuzhe Yang1, Xuhai Xu1, Yilun Du1, Shwetak Patel1, Tim Althoff1, Daniel McDuff1,? and Xin Liu1,? 1Google Research, 2Google DeepMind, 3Massachusetts Institute of Technology, ?Corresponding Author   Agents, language model-based systems capable of reasoning, planning, and acting are widely adopted in real-world tasks, yet how their performance changes as these systems scale across key dimensions remains underexplored. We introduce quantitative scaling principles for agent systems as a predictive model, capturing how performance varies with coordination, model capability, and measurable system and task factors. Across 260 configurations spanning six agentic benchmarks, five canonical architectures (Single-Agent and four Multi-Agent: Independent, Centralized, Decentralized, Hybrid), and three LLM families, we perform controlled evaluations standardizing tools, prompts, and compute to isolate architectural effects. The resulting model achieves a cross-validated ?2=0.373 across all six benchmarks (?",
+    "score": 0.7738905950416471,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "Experiments & Results   To establish quantitative scaling principles for agentic systems, we investigate three research questions: RQ1. What factors determine agent system?s performance (e.g., model capability, coordination architecture, task properties, their interactions)? We systematically vary each factor across 260 configurations to quantify their individual and joint contributions. RQ2. Under what conditions does inter-agent coordination improve or degrade agent system?s performance? We examine how task structure (e.g., decomposability, tool complexity, sequential   9Towards a Science of Scaling Agent Systems   Table 2 | Architectural comparison of agent methods with objective complexity metrics. Computational complexity measured in terms of LLM calls, coordination overhead, and parallelization potential.   Characteristic SAS MAS (Independent)   MAS (Decentralized)   MAS (Centralized)   MAS (Hybrid)   Interaction Type Agent   AgentAgent Agent   Aggregation   AgentAgent Agent   Majority Voting Sub-AgentSub-Agent Sub-Agent   Orchestrator   Sub-AgentSub-Agent Sub-Agent   Orchestrator   LLM Calls ?(?) ?(??) + ?(1) ?(???) + ?(1) ?(???) + ?(?) ?(???) +?(?) +?(?) Sequential Depth ? ? ? ? ?   Comm. Overhead 0 1 ? · ? ? · ? ? · ? + ? · ? Parallelization Factor 1 ? ? ? ?   Memory Complexity ?(?) ?",
+    "score": 0.7385863963267764,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 9
+   },
+   {
+    "text": "Regression Model Achieves Cross-Validated ?2=0.413 (ACI) / ?2=0.373 (Intelligence Index). We fit a scaling principle to all 260 configurations across six benchmarks that relates agentic system performance to four categories of predictors: 1) base model capability (intelligence index ?), 2) system configuration (agent count ??), 3) task properties (tool count ?, single-agent baseline ?SA). These are instance-level predictors capturing within-benchmark variation, distinct from the benchmark-level domain complexity ? defined in Appendix C, and 4) empirically measured coordination metrics from Table 5 (efficiency ??, overhead ?%, trace-level error amplification ?trace? , message density ?, redundancy ?). Rather than including all possible terms, we construct the model based on specific mechanistic hypotheses. Main effects capture direct relationships between individual factors and performance. We include   a quadratic term (?2) to test for non-linear capability scaling, and log-transformed tool count and agent count following standard diminishing-returns assumptions in scaling analyses [54]. Interaction terms test specific hypotheses about how these factors combine. We include nine   interactions, each motivated by observed patterns: ?? ×? tests whether efficiency penalties compound   16Towards a Science of Scaling Agent Systems   with tool complexity; ?trace? ×? tests whether errors propagate more severely in tool-rich environments; ?SA × log(1 + ??)",
+    "score": 0.6994605505492886,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 16
+   },
+   {
+    "text": "Corresponding author(s): ybkim95@mit.edu; dmduff@google.com; xliucs@google.com © 2026 Google. All rights reserved   ar X   iv :2   51 2.   08 29   6v 3   [ cs   .A I]   8 A   pr 2   02 6         https://arxiv.org/abs/2512.08296v3Towards a Science of Scaling Agent Systems   1. Introduction   Agents [1], language model-driven systems that operate through iterative cycles of reasoning, planning, and acting, adapting their behavior based on environmental or tool-generated feedback, have achieved strong performance in diverse applications, from code generation [2, 3], web browsing [4, 5], medical decision-making [6?8], finance [9], sustainability [10], to scientific discovery [11, 12]. As tasks becomemore complex and require long-horizon environmental interaction, multi-agent systems (MAS) have gained attention as a way to support task decomposition, parallel exploration, and verification. At the same time, concurrent works question whether multi-agent coordination outperforms single- agent systems (SAS), leaving the conditions under which MAS provides genuine benefits remain underexplored [13?18].",
+    "score": 0.6938281642553034,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "40 [20, 60] 50 [30, 70] 40 [20, 60]   43Towards a Science of Scaling Agent Systems   Figure 6 | Agent scaling dynamics across model capability. Performance across six benchmarks show best-performing multi-agent system versus single-agent baselines by Intelligence Index. OpenAI and Google show cooperative scaling in structured tasks (Finance Agent, Workbench). Anthropic models show diminished or negative returns in open-ended environments (PlanCraft, BrowseComp-Plus). SWE-bench Verified and Terminal-Bench show patterns consistent with the capability-saturation threshold: SWE-bench (high SAS baselines) shows limited MAS gains, while Terminal-Bench (lower baselines) shows mixed results with low tool count limiting coordination benefits.   44",
+    "score": 0.6418071391508102,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 43
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "53d33c7b-1ef2-4cb8-bb4e-b775029a1478",
+  "X-Amzn-Trace-Id": "Root=1-6b080501-24e5979541f9b9916ca24a31;Parent=60562a67bd5ce4d6;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.29
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:01+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Towards a Science of Scaling Agent Systems"
+ },
+ "from_cache": false
+}

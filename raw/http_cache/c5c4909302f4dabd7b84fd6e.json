@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.805,
+ "json": {
+  "id": "chatcmpl-6398209d-0075-4c35-b0ff-42e58c65b7ed",
+  "object": "chat.completion",
+  "created": 1795687491,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "ChainForge [6] and EvalGen [71] are mentioned as systems that help users iteratively validate and refine prompts for LLMs."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1624,
+   "completion_tokens": 33,
+   "total_tokens": 1657
+  },
+  "contexts": [
+   {
+    "text": "LLMs with increased capabilities have been continuously released over the past months. This wild universality of LLMs and their capacity to quickly work with unstructured information renders their application increasingly and continuously important and popular across many fields. Hence, the necessity of exact prompting skills may vary by application and are expected to change, however, the general insights on LLMs apply, as long as the types of interfaces, training, and output quality prevail.   While some AI tools themselves can help to reformulate and improve the prompts (Zhou et al., 2022) via dialoguing with a user, it takes time and still does not guarantee the desired result. Moreover, some tools (i.e., Text-to-Image models) might experience difficulties in improving the prompt in the situations where users apply too many constraints on the desired solution. These constraints might mislead the model, forcing it to focus on the insufficient details. In the end, the only way left to communicate with the tool is through trial-and-error until the user is satisfied with the solution. The iterative nature of trial- and-error can be  time-consuming, inefficient, economically burdensome, fallible, and may introduce security risks into critical decision-making processes, potentially leaving errors unobserved and further impacting corporate success and the well-being of users.   Thus, being able to concisely communicate the nature of the problem to the AI tool is as valuable as the tool itself.",
+    "score": 0.5455098858534366,
+    "source": "006 - Prompt engineering as a new 21st century skill.pdf",
+    "page": 2
+   },
+   {
+    "text": "Regardless of the approach, current models are limited to context derived solely from their own prior interactions with the user or from a limited taxonomy of pre-defined applications or sources. All other computer interaction is inaccessible to models.   We argue that engaging in grounding only when a user inter- acts with a model is a constraining interaction paradigm. Piecing together custom grounding interactions for specific domains—andUIST ’25, September 28–October 01, 2025, Busan, Republic of Korea Shaikh et al.   fixing these interactions to dialogue—limits the ubiquity of poten- tial common ground users can build with AI systems. In this work, we propose general user models that proactively build common ground with users through observation.   The second major issue that GUMs draw on is that prompting LLMs effectively is difficult [86]. Users often provide models with underspecified prompts [2, 70, 85], requiring repeated iteration to specify constraints for a specific context. A range of interactive systems have enabled users to better specify constraints to LLMs: systems like ChainForge [6] and EvalGen [71] offer users a means to interactively validate and iterate on prompts for specific tasks. Beyond developing prompts, systems like Graphologue [42] and Sensescape [74] allow users to explore the range of possible outputs given a prompt. Across these interactions, the burden of providing explicit input to build shared context lies with the user.",
+    "score": 0.5386684788794556,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 3
+   },
+   {
+    "text": "-Hum. Interact. 32, 4, Article 41 (August 2025), 27 pages. https://doi.org/10.1145/3731756   1 Introduction General-purpose AIs like Large Language Models (LLMs) have evolved from simple next-word predictors [6] to powerful assistants capable of fulfilling complex user needs [49, 54]. This im- provement in LLM’s ability to follow instructions has encouraged users to delegate increasingly intricate tasks to these models. In the early days of Prompt Engineering (PE), users primarily focused on refining the wording of simple instructions to improve LLM output quality [24, 63]. Today, prompts resemble detailed “essays” that define LLM behaviors. Rather than one-off small requests, these prompts start to power the generation of complex applications, and everyday users can write complex prompts to either generate code for softwares [71, 75] or tailor general-purpose LLMs into special purpose LLM applications [81]. For instance, an LLM application (or a GPTs) like Trip Advisor1 can be built solely using prompts similar to Figure 1(C). These LLM appli- cations function similarly to traditional software and are accessible through LLM App Stores like GPT Store2 and FlowGPT,3 where they can be reused with a single click.",
+    "score": 0.5306057401522699,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 2
+   },
+   {
+    "text": "Creating General User Models from Computer Use Omar Shaikh   Stanford University Stanford, CA, USA   oshaikh@stanford.edu   Shardul Sapkota Stanford University Stanford, CA, USA   sapkota@stanford.edu   Shan Rizvi Independent   New York, NY, USA shanrizvi4@gmail.com   Eric Horvitz Microsoft   Redmond, WA, USA horvitz@microsoft.com   Joon Sung Park Stanford University Palo Alto, CA, USA   joonspk@stanford.edu   Diyi Yang Stanford University Stanford, CA, USA   diyiy@cs.stanford.edu   Michael S. Bernstein Stanford University Stanford, CA, USA   msb@cs.stanford.edu   Figure 1: General User Models take as input completely unstructured interaction data (top), transforming these observations into structured propositions about a user (center). Together, these propositions create a general user model (GUM). We instantiate our user model in an assistant (Gumbo) that proactively discovers and executes suggestions on a user’s behalf (bottom).",
+    "score": 0.5292119533931049,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 1
+   },
+   {
+    "text": "Beyond developing prompts, systems like Graphologue [42] and Sensescape [74] allow users to explore the range of possible outputs given a prompt. Across these interactions, the burden of providing explicit input to build shared context lies with the user.   In contrast, a longstanding goal in HCI is to build systems that proactively assist users without disruption. Early work in mixed- initiative interfaces balanced autonomy with user control, leverag- ing context to identify the best moments to interact [36]. Classic AI models have already been employed to understand a user’s multimodal context. Memory Landmarks and the LifeBrowser sys- tem [38], for example, construct an understanding of which events users find important [64] by analyzing their calendar and mailbox. A handful of systems have started using LLMs to selectively process context. PICAN [34], for example, focuses on building context in VR-onboarding settings by focusing on dialogue and actions the user takes in the metaverse. Systems like GPTCoach [43] rely on external health data and qualitative context, augmenting LLMs with selective context to help with behavior change.   Still, our interactions with LLMs are far from visions like Weiser’s Sal, where computers unify machine intelligence with context from our daily lives [37]. Instead, LLM-based systems focus on constrain- ing the types of inputs, outputs, and tasks models operate over.",
+    "score": 0.5174581986012122,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 4
+   }
+  ],
+  "sources": [
+   "006 - Prompt engineering as a new 21st century skill.pdf",
+   "052 - Creating General User Models from Computer Use.pdf",
+   "018 - What Should We Engineer in Prompts.pdf",
+   "052 - Creating General User Models from Computer Use.pdf",
+   "052 - Creating General User Models from Computer Use.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "6398209d-0075-4c35-b0ff-42e58c65b7ed",
+  "X-Amzn-Trace-Id": "Root=1-6b080443-7a9b04a43aa45127345a3810;Parent=73bd772d26cfbbe5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.805
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:51+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In “Creating General User Models from Computer Use,” which interactive systems are mentioned as helping users iteratively validate and refine prompts for LLMs?"
+   }
+  ]
+ },
+ "from_cache": false
+}

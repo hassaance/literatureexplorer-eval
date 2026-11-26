@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.282,
+ "json": {
+  "query": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety",
+  "contexts": [
+   {
+    "text": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety   Tomek Korbak∗ UK AI Security Institute Mikita Balesni∗ Apollo Research   Elizabeth Barnes METR Yoshua Bengio University of Montreal & Mila Joe Benton Anthropic Joseph Bloom UK AI Security Institute Mark Chen OpenAI Alan Cooney UK AI Security Institute Allan Dafoe Google DeepMind Anca Dragan Google DeepMind Scott Emmons Google DeepMind Owain Evans Truthful AI & UC Berkeley David Farhi OpenAI Ryan Greenblatt Redwood Research Dan Hendrycks Center for AI Safety Marius Hobbhahn Apollo Research Evan Hubinger Anthropic Geoffrey Irving UK AI Security Institute Erik Jenner Google DeepMind Daniel Kokotajlo AI Futures Project Victoria Krakovna Google DeepMind Shane Legg Google DeepMind David Lindner Google DeepMind David Luan Amazon Aleksander Mądry OpenAI Julian Michael Scale AI Neel Nanda Google DeepMind Dave Orr Google DeepMind Jakub Pachocki OpenAI Ethan Perez Anthropic Mary Phuong Google DeepMind Fabien Roger Anthropic Joshua Saxe Meta Buck Shlegeris Redwood Research Martín Soto UK AI Security Institute Eric Steinberger Magic Jasmine Wang UK AI Security Institute Wojciech Zaremba OpenAI   Bowen Baker† OpenAI Rohin Shah† Google DeepMind Vlad Mikulik† Anthropic   Abstract   AI systems that “think” in human language offer a unique opportunity for AI",
+    "score": 0.8761185861397313,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 1
+   },
+   {
+    "text": "for the intent to misbehave. Like all other known AI oversight methods, CoT monitoring is imperfect and allows some misbehavior to go unnoticed. Nevertheless, it shows promise and we recommend further research into CoT monitorability and investment in CoT monitoring alongside existing safety methods. Because CoT monitorability may be fragile, we recommend that frontier model developers consider the impact of development decisions on CoT monitorability.   Expert endorsers: Samuel R. Bowman Anthropic John Schulman Thinking Machines Geoffrey Hinton University of Toronto Ilya Sutskever Safe Superintelligence Inc   *Equal first authors, † Equal senior authors. Correspondence: tomasz.korbak@gmail.com and mbalesni@gmail.com. The paper represents the views of the individual authors and not necessarily of their affiliated institutions.   1   ar X   iv :2   50 7.   11 47   3v 2   [ cs   .A I]   7 D   ec 2   02 5         https://arxiv.org/abs/2507.11473v21 Chain of Thought Offers a Unique Safety Opportunity   The opacity of advanced AI agents underlies many of their potential risks—risks that would become more tractable if AI developers could interpret these systems. Because LLMs natively process and act through human language, one might hope they are easier to understand than other approaches to AI.",
+    "score": 0.7489833586942134,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 1
+   },
+   {
+    "text": "AI Security Institute Eric Steinberger Magic Jasmine Wang UK AI Security Institute Wojciech Zaremba OpenAI   Bowen Baker† OpenAI Rohin Shah† Google DeepMind Vlad Mikulik† Anthropic   Abstract   AI systems that “think” in human language offer a unique opportunity for AI safety: we can monitor their chains of thought (CoT) for the intent to misbehave. Like all other known AI oversight methods, CoT monitoring is imperfect and allows some misbehavior to go unnoticed. Nevertheless, it shows promise and we recommend further research into CoT monitorability and investment in CoT monitoring alongside existing safety methods. Because CoT monitorability may be fragile, we recommend that frontier model developers consider the impact of development decisions on CoT monitorability.   Expert endorsers: Samuel R. Bowman Anthropic John Schulman Thinking Machines Geoffrey Hinton University of Toronto Ilya Sutskever Safe Superintelligence Inc   *Equal first authors, † Equal senior authors. Correspondence: tomasz.korbak@gmail.com and mbalesni@gmail.com.",
+    "score": 0.7006021501281254,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 1
+   },
+   {
+    "text": "It is thus possible that even for hard tasks, the chain of thought only contains benign-looking reasoning while the incriminating reasoning is hidden. In addition, the externalized reasoning property might not hold for future models. Therefore, as we discuss in Section 2, it is important to continuously evaluate monitorability of frontier models.   Finally, it remains an open question whether the most serious harms in fact require difficult reasoning. While we think it is likely for many of the most severe risks—especially ones that require planning ahead and avoiding detection, such as self-exfiltration (Black et al., 2025) or sabotage (Benton et al., 2024)—not   3all dangerous actions will require reasoning to execute, especially as AI systems begin to be routinely trusted with more and more high-stakes tasks.   1.2 Chain of Thought is Often Monitorable in Practice   Chain of thought monitoring has already been useful for safety research in many ways.   Detecting model misbehavior. When models act in a misaligned way, for example, exploiting flaws in their reward functions during training, manipulating data to achieve an outcome, or falling prey to prompt injection attacks, they often explicitly say so in their reasoning traces, e.g.",
+    "score": 0.6777168052355564,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 3
+   },
+   {
+    "text": "The paper represents the views of the individual authors and not necessarily of their affiliated institutions.   1   ar X   iv :2   50 7.   11 47   3v 2   [ cs   .A I]   7 D   ec 2   02 5         https://arxiv.org/abs/2507.11473v21 Chain of Thought Offers a Unique Safety Opportunity   The opacity of advanced AI agents underlies many of their potential risks—risks that would become more tractable if AI developers could interpret these systems. Because LLMs natively process and act through human language, one might hope they are easier to understand than other approaches to AI. The discovery of Chain of Thought (CoT; Reynolds & McDonell, 2021; Kojima et al., 2022; Wei et al., 2022) bolstered this hope. Prompting models to think out loud improves their capabilities while also increasing the proportion of relevant computation that happens in natural language. However, CoTs resulting from prompting a non- reasoning language model are subject to the same selection pressures to look helpful and harmless as any other model output, limiting their trustworthiness.",
+    "score": 0.6642850852991727,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "56a16004-1969-4354-ac76-d55db71a9b3f",
+  "X-Amzn-Trace-Id": "Root=1-6b080514-04f3340f3e09dcac0f30d21c;Parent=341431afcaa92d64;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.282
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:20+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety"
+ },
+ "from_cache": false
+}

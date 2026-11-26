@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.559,
+ "json": {
+  "query": "'; DROP TABLE documents; -- What is ReAct?",
+  "contexts": [
+   {
+    "text": "At time step t, an agent receives an observation ot ∈ O from the environment and takes an action at ∈ A following some policy π(at|ct), where ct = (o1, a1, · · · , ot−1, at−1, ot) is the context to the agent. Learning a policy is challenging when the mapping ct 7→ at is highly implicit and requires extensive computation. For example, the agent shown in Figure 1(1c) is unable to generate the correct final action (Act 4) to finish the QA task as it requires complex reasoning over the trajectory context (Question, Act 1-3, Obs 1-3). Similarly, the agent shown in Figure 1(2a) fails to comprehend from the context that sinkbasin 1 does not contain peppershaker 1, thus keep producing hallucinating actions.   The idea of ReAct is simple: we augment the agent’s action space to Â = A ∪ L, where L is the space of language. An action ât ∈ L in the language space, which we will refer to as a thought or a reasoning trace, does not affect the external environment, thus leading to no observation feedback. Instead, a thought ât aims to compose useful information by reasoning over the current context ct, and update the context ct+1 = (ct, ât) to support future reasoning or acting.",
+    "score": 0.5436013930558141,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "At time step t, an agent receives an observation ot ∈ O from the environment and takes an action at ∈ A following some policy π(at|ct), where ct = (o1, a1, · · · , ot−1, at−1, ot) is the context to the agent. Learning a policy is challenging when the mapping ct 7→ at is highly implicit and requires extensive computation. For example, the agent shown in Figure 1(1c) is unable to generate the correct final action (Act 4) to finish the QA task as it requires complex reasoning over the trajectory context (Question, Act 1-3, Obs 1-3). Similarly, the agent shown in Figure 1(2a) fails to comprehend from the context that sinkbasin 1 does not contain peppershaker 1, thus keep producing hallucinating actions.   The idea of ReAct is simple: we augment the agent’s action space to Â = A ∪ L, where L is the space of language. An action ât ∈ L in the language space, which we will refer to as a thought or a reasoning trace, does not affect the external environment, thus leading to no observation feedback. Instead, a thought ât aims to compose useful information by reasoning over the current context ct, and update the context ct+1 = (ct, ât) to support future reasoning or acting.",
+    "score": 0.5436013930558141,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "Among these approaches, ReAct [Yao et al., 2022] stands out which claims to improve LLM planning abilities through the use of reasoning traces interleaved with action execution given as plan guidance. While their original study includes multiple domains tasks such as question answering on HotPotQA and FEVER datasets [Yang et al., 2018, Thorne et al., 2018], in this paper we are particularly interested in planning tasks where ReAct claims superior performance.   In our initial experiments with ReAct for planning, we found that the system is overly dependent on the syntactic similarity of the example prompt and the query and is extremely brittle to minor perturbations to the input prompt. For example, when provided with an explicit set of examples of pick-and-place-object task and asked to plan for a pick-and-place-two-objects task, it should be trivial to generalize the solution of the examples to the queried task. Unfortunately, even such a minor variation to the original ReAct agent setup disrupts its performance.   Preprint. Under review.   ar X   iv :2   40 5.   13 96   6v 1   [ cs   .A I]   2 2   M ay   2 02   4Interact with a household to solve a task. Here are two examples. <EXAMPLE 1 of same task as QUERY> You are in the middle of a room ...",
+    "score": 0.513688644819417,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.5103306015773414,
+    "source": "037 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "Beyond such simple embodied tasks to interact with a few blocks, there have not been studies on how reasoning and acting can be combined in a synergistic manner for general task solving, and if such a combination can bring systematic benefits compared to reasoning or acting alone.   In this work, we present ReAct, a general paradigm to combine reasoning and acting with language models for solving diverse language reasoning and decision making tasks (Figure 1). ReAct prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting (reason to act), while also interact with the external environments (e.g. Wikipedia) to incorporate additional information into reasoning (act to reason).   2Published as a conference paper at ICLR 2023   We conduct empirical evaluations of ReAct and state-of-the-art baselines on four diverse benchmarks: question answering (HotPotQA, Yang et al., 2018), fact verification (Fever, Thorne et al., 2018), text-based game (ALFWorld, Shridhar et al., 2020b), and webpage navigation (WebShop, Yao et al., 2022).",
+    "score": 0.5103306015773414,
+    "source": "017 - ReAct Synergizing Reasoning and Acting in Language Models.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "977e43df-80f5-4191-9612-251f12abca2f",
+  "X-Amzn-Trace-Id": "Root=1-6b080613-6a0d302309c03c90022aaa61;Parent=5f68db5598ef879b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.559
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:35+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "err_sql_like_input",
+ "request_body": {
+  "query": "'; DROP TABLE documents; -- What is ReAct?"
+ },
+ "from_cache": false
+}

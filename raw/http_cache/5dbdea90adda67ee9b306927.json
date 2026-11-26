@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.633,
+ "json": {
+  "id": "chatcmpl-10e0e55d-8a06-4127-b434-40d3ba39db86",
+  "object": "chat.completion",
+  "created": 1795687460,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "\"Attention Is All You Need\" was published in 2017 at the 31st International Conference on Neural Information Processing Systems (NIPS'17)."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1842,
+   "completion_tokens": 36,
+   "total_tokens": 1878
+  },
+  "contexts": [
+   {
+    "text": "Attention Is All You Need   Ashish Vaswani∗ Google Brain   avaswani@google.com   Noam Shazeer∗ Google Brain   noam@google.com   Niki Parmar∗ Google Research   nikip@google.com   Jakob Uszkoreit∗ Google Research usz@google.com   Llion Jones∗ Google Research   llion@google.com   Aidan N. Gomez∗ † University of Toronto   aidan@cs.toronto.edu   Łukasz Kaiser∗ Google Brain   lukaszkaiser@google.com   Illia Polosukhin∗ ‡ illia.polosukhin@gmail.com   Abstract   The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English- to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU.",
+    "score": 0.5302500822134629,
+    "source": "001 - Attention Is All You Need.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our model achieves 28.4 BLEU on the WMT 2014 English-to- German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data. ...   Output (structured result): {   \"url\": \"https://arxiv.org/abs/1706.03762\", \"extracted_text\": \"[1706.03762] Attention Is All You Need\\n\\n...\\n\\n[Submitted on 12 Jun 2017 (\\   nv1\\n), last revised 2 Aug 2023 (this version, v7)]\\n\\nTitle:\\nAttention Is All You Need\\n\\ nAuthors:\\nAshish Vaswani\\n,\\nNoam Shazeer\\n,\\nNiki Parmar\\n,\\nJakob Uszkoreit\\n,\\nLlion Jones \\n,\\nAidan N. Gomez\\n,\\nLukasz Kaiser\\n,\\nIllia Polosukhin\\n\\n...",
+    "score": 0.4940143673087485,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 52
+   },
+   {
+    "text": "Vafa, K., Rambachan, A., and Mullainathan, S. Do large language models perform the way people expect? mea- suring the human generalization function. In Proceed- ings of the 41st International Conference on Machine Learning, volume 235 of ICML’24, pp. 48919–48937, Vienna, Austria, July 2024. JMLR.org.   Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. Attention is All you Need. In Advances in Neural Information Processing Systems, volume 30. Curran   20         https://www.bmj.com/lookup/doi/10.1136/bmj.g2573        https://www.bmj.com/lookup/doi/10.1136/bmj.g2573        http://arxiv.org/abs/2212.03551        http://arxiv.org/abs/2212.03551        https://www.nature.com/articles/s41586-023-06647-8        https://www.nature.com/articles/s41586-023-06647-8        https://openreview.net/forum?id=tvhaxkMKAn        https://openreview.net/forum?",
+    "score": 0.46227104555729,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 20
+   },
+   {
+    "text": "Learn. (ICML) 7880–7904; https://proceedings.mlr. press/v235/chen24bl.html (2024).   182. Wiegreffe, S. & Pinter, Y. Attention is not not Explanation. EMNLP- IJCNLP 2019 - 2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing, Proceedings of the Conference 11–20 https://doi.org/10.18653/V1/D19-1002 (2019).   183. Jain, S. & Wallace, B. C. Attention is not explanation. In Proc. 2019 Conference of the North 3543–3556 https://doi.org/10.18653/V1/ N19-1357 (2019).   184. Zhang, Y. et al. Attention is all you need: utilizing attention in AI- enabled drug discovery. Brief. Bioinform. 25, 1–22 (2023).   185. Narayanan, S. et al. Aviary: training language agents on challenging scientific tasks. (2024).   186. Taragin, M. I. Learning from negative findings. Isr. J. Health Policy Res 8, 1–4 (2019).   187. Bik, E. M.",
+    "score": 0.4483723893608538,
+    "source": "105 - Exploring the role of large language models in the scientiﬁc method from hypothesis to discovery.pdf",
+    "page": 14
+   },
+   {
+    "text": ", and Irina Higgins. Solving math word problems with process- and outcome-based feedback, 2022. URL: https://arxiv.org/abs/2211.14275.   US AI Safety Institute and UK AI Safety Institute. Us aisi and uk aisi joint pre-deployment test: An- thropic’s claude 3.5 sonnet. Technical report, National Institute of Standards and Technology and UK AI Safety Institute, November 2024. URL: https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/ 673b689ec926d8d32e889a8e_UK-US-Testing-Report-Nov-19.pdf.   Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. In Proceedings of the 31st International Conference on Neural Information Processing Systems, NIPS’17, pp. 6000–6010, Red Hook, NY, USA, 2017. Curran Associates Inc. ISBN 9781510860964.   Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed H. Chi, Quoc V.",
+    "score": 0.44585838846099224,
+    "source": "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf",
+    "page": 11
+   }
+  ],
+  "sources": [
+   "001 - Attention Is All You Need.pdf",
+   "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+   "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+   "105 - Exploring the role of large language models in the scientiﬁc method from hypothesis to discovery.pdf",
+   "162 - Chain of Thought Monitorability A New and Fragile Opportunity for AI Safety.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "10e0e55d-8a06-4127-b434-40d3ba39db86",
+  "X-Amzn-Trace-Id": "Root=1-6b080424-2a9c95601f19f89e5a1b5fe1;Parent=11abc1328e804aed;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.633
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:19+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In which year and at which venue was 'Attention Is All You Need' published?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.831,
+ "json": {
+  "id": "chatcmpl-79705a48-ac5b-48ef-a5f2-edcfa1992d3c",
+  "object": "chat.completion",
+  "created": 1795687488,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The ROPE group achieved a learning gain of 23% when evaluated on the o3-mini model, which was higher than the 19% gain observed when evaluated on GPT-4o. The PE group achieved a learning gain of 2% on o3-mini, which was also higher than the 1% gain observed on GPT-4o. The learning gap between the ROPE and PE groups remained significant, and the optimizer could not close this gap."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1581,
+   "completion_tokens": 101,
+   "total_tokens": 1682
+  },
+  "contexts": [
+   {
+    "text": "ROPE’s Effectiveness Generalizes to More Advanced (Reasoning) LLMs. Noticing the continuous evolvement of LLMs, we naturally ask the question: Would ROPE’s effectiveness generalize be- yond the GPT-4o we experimented, to models with better capabilities and alignments to human intents? Recent advancements in LLMs have introduced reasoning models, which have improved instruction-following capabilities and exhibit better performance in complex reasoning tasks [14]. We conducted an additional experiment using OpenAI’s o3-mini, a representative model of the emerging reasoning LLMs that has been shown to surpass GPT-4o [11]. We had o3-mini generate outputs using the same prompts (both original and optimized ones as above), and repeated all the grading and analyses as done on GPT-4o.   The results showed that ROPE-trained prompts not only remained effective, but in many cases performed even better with o3-mini. Specifically, when using the overall scores calculated on o3-mini (which impacted the LLM Output Quality score), we saw a larger learning gains compared to GPT-4o (23% > 19% for the ROPE group, 2% > 1% for PE group).This learning gap again could not be closed by the optimizer.",
+    "score": 0.6183908098511628,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 19
+   },
+   {
+    "text": "When the steps are divided, it’s easier to see the missing details in my original prompts too.”    Requirement-Focused Training Is More Effective Than Standard PE Practice. From the post-test prompt data, we observed that requirement-focused training and standard practice had distinct effects on how participants wrote prompts. ROPE group spent more time (19 minutes vs. 14 minutes) and wrote longer prompts (796 vs. 458 characters) than the PE group. In 100 randomly selected pairwise comparisons, ROPE participants produced more structured prompts 87% of the time, consistent with their self-reflections reported above.   These prompts also revealed learning gain differences. A two-sample t-test showed that the ROPE achieved significantly higher learning gains compared to the PE group (p < 0.001), as shown in Figure 5(b). In fact, while ROPE significantly improved (19.1% as mentioned above), we did not observe much gain in PE group’s pre-to-post score (0.7%). The contrast suggested that novices indeed could not acquire requirement articulation skills through standard prompting training alone.   Participant feedback supported our hypothesis that requirement articulation skills do not naturally emerge. While we hoped interacting with LLMs would help participants build mental models of LLM behaviors, PE participants found the LLM response too unpredictable for effective self-practice.",
+    "score": 0.5854962132559355,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 16
+   },
+   {
+    "text": "We conduct a randomized controlled user study (Section 5) with 30 prompting novices, com- paring the prompts users write before and after training, and against a control group that received standard PE training. We confirm that our requirement-focused training is effective (Section 6): Novices receiving this training significantly improved their requirement performances by two-fold in the pre-to-post test, achieved significantly more gains than conventional PE training, and learned to iterate on prompts in a more structured way towards requirements. Moreover, we confirm that requirements are indeed important for the LLM generation: There is a strong positive correlation between the requirement qualities and the LLM output qualities. Importantly, the training gains are complementary to potential improvements from optimizers and models: Using a popular prompt optimizer, we observe that optimizers can indeed improve requirement quality, but they cannot close the gap between the baseline and the training groups; moreover, when switching from GPT-4o to the more advanced reasoning model o3-mini, the model’s improved instruction-following ca- pabilities made its outputs more reflective of users’ explicit requirements, rather than rendering requirements obsolete. We conclude with an in-depth discussion (Section 7) on future directions for human training and optimizer design to enhance human-LLM complementarity in ROPE.",
+    "score": 0.5818073873709855,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 4
+   },
+   {
+    "text": "We conclude with an in-depth discussion (Section 7) on future directions for human training and optimizer design to enhance human-LLM complementarity in ROPE.   In summary, we make the following contributions:   —We identify the significance of requirement-based prompting, and propose the ROPE paradigm as a foundation for future human-LLM task delegation in PE.   —To the best of our knowledge, we are the first to investigate training specifically for requirement- based prompting. We developed tasks, assessments, and training systems that effectively improve requirement generation skills.   —We provide both quantitative and qualitative insights for the future of prompting, highlight the relationship between the quality of requirements and LLM performance across model advancements, and discuss current optimizers’ limitations and potentials.   As natural language prompt programs become more widespread, everyone needs the skill to write good requirements. We believe that with our ROPE paradigm, LLMs can empower anyone to program reusable AI assistants. We open source our training system, supplemental study materials, and user prompts at https://github.com/mqo00/rope/.   2 Related Works We review three key areas relevant to our work: PE, prompt optimization in natural language pro- cessing, and requirements engineering in end-user software engineering.",
+    "score": 0.5741306303696581,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 4
+   },
+   {
+    "text": "Specifically, when using the overall scores calculated on o3-mini (which impacted the LLM Output Quality score), we saw a larger learning gains compared to GPT-4o (23% > 19% for the ROPE group, 2% > 1% for PE group).This learning gap again could not be closed by the optimizer. Digging deeper, we found that o3-mini improved the LLM Output Quality score by 9.7% compared to GPT-4o (paired t-test, p < 0.001), which means that o3-mini better implemented the prompts. This suggests that improved model capabilities do not render explicit human requirements obsolete, but rather amplify their benefits, making learning on requirements more reflective on the model output quality.   Furthermore, we also found a stronger alignment between user-specified requirements and generated outputs for o3-mini, indicated by the stronger correlation between Requirement Quality and LLM Output Quality scores when using o3-mini compared to GPT-4o (d = 0.80 > 0.71, as shown in Table 3). The largest improvement in correlation came from the Connect4 task, where o3-mini showed better abilities to implement customized requirements like “Highlight the hovered column.”",
+    "score": 0.5722182720785942,
+    "source": "018 - What Should We Engineer in Prompts.pdf",
+    "page": 19
+   }
+  ],
+  "sources": [
+   "018 - What Should We Engineer in Prompts.pdf",
+   "018 - What Should We Engineer in Prompts.pdf",
+   "018 - What Should We Engineer in Prompts.pdf",
+   "018 - What Should We Engineer in Prompts.pdf",
+   "018 - What Should We Engineer in Prompts.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "79705a48-ac5b-48ef-a5f2-edcfa1992d3c",
+  "X-Amzn-Trace-Id": "Root=1-6b08043f-24d625d21cb1629711b3e3e6;Parent=68db3a467b3204a5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.831
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:47+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the paper *What Should We Engineer in Prompts? Training Humans in Requirement-Driven LLM Use*, what learning gains did the ROPE and PE groups achieve when evaluated on the o3‑mini model, and how did those gains compare to the results on GPT‑4o?"
+   }
+  ]
+ },
+ "from_cache": false
+}

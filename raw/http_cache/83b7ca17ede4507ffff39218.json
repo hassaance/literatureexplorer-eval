@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.343,
+ "json": {
+  "query": "Data Interpreter: An LLM Agent For Data Science",
+  "contexts": [
+   {
+    "text": "Compared to other open-source frameworks, Data Interpreter consistently shows notable advancements in machine learning and open-ended tasks, as illustrated in Figure 1. By rethinking how data science workflows are structured and managed, Data Interpreter sets a new standard for adaptability and efficiency, offering a powerful solution for complex, real-world applications.   22 RELATED WORK   LLMs as Data Science Agents Large language models (LLMs) have have made significant progress in automating data science tasks, initically focusing on code generation to simplify complex computations involved in reasoning processes (Gao et al., 2023; Chen et al., 2022). Subsequent work introduced code interpreters that leverage function-calling mechanisms, offering greater flexibility in solving complex problems (Zhou et al., 2023; Gou et al., 2024; Wang et al., 2024a). This interpreter-based approach has now become a mainstream method for enabling LLMs to handle complex reasoning and scientific tasks (Huang et al., 2023b; Hassan et al., 2023; Qiao et al., 2023; Zhang et al., 2024b). Recently, Zhang et al. (2023) introduces an LLM-based agent for data analysis, demonstrating capabilities in data processing and exploration within a code-centric framework, but does not evaluate its performance on predictive tasks such as machine learning pipelines.",
+    "score": 0.8229137297012863,
+    "source": "124 - Data Interpreter An LLM Agent For Data Science.pdf",
+    "page": 2
+   },
+   {
+    "text": "shown effectiveness across many applications. However, their use in data science scenarios requiring solving long- term interconnected tasks, dynamic data adjustments and domain expertise remains challenging. Previous approaches primarily focus on individual tasks, making it difficult to assess the complete data science workflow. Moreover, they struggle to handle real-time changes in intermediate data and fail to adapt dynamically to evolving task dependencies inherent to data science problems. In this paper, we present Data Interpreter, an LLM-based agent designed to automatically solve various data science problems end-to-end. Our Data Interpreter incorporates two key modules: 1) Hierarchical Graph Modeling, which breaks down complex problems into manageable subproblems, enabling dynamic node generation and graph optimization; and 2) Programmable Node Generation, a technique that refines and verifies each subproblem to iteratively improve code generation results and robustness. Extensive experiments consistently demonstrate the superiority of Data Interpreter. On InfiAgent-DABench, it achieves a 25% performance boost, raising accuracy from 75.9% to 94.9%. For machine learning and open- ended tasks, it improves performance from 88% to 95%, and from 60% to 97%, respectively. Moreover, on the MATH dataset, Data Interpreter achieves remarkable performance with a 26% improvement compared to state-of-the-art baselines.",
+    "score": 0.8220584292175805,
+    "source": "124 - Data Interpreter An LLM Agent For Data Science.pdf",
+    "page": 1
+   },
+   {
+    "text": "Chinese Academy of Sciences, 8King Abdullah University of Science and Technology (KAUST), 9University of Notre Dame, 10The University of Hong Kong, 11Yale University, 12Xiamen University, 13East China Normal University, 14Beijing University of Technology, 15Tsinghua University, 16Hohai University   ABSTRACT   Large Language Model (LLM)-based agents have shown effectiveness across many applications. However, their use in data science scenarios requiring solving long- term interconnected tasks, dynamic data adjustments and domain expertise remains challenging. Previous approaches primarily focus on individual tasks, making it difficult to assess the complete data science workflow. Moreover, they struggle to handle real-time changes in intermediate data and fail to adapt dynamically to evolving task dependencies inherent to data science problems. In this paper, we present Data Interpreter, an LLM-based agent designed to automatically solve various data science problems end-to-end. Our Data Interpreter incorporates two key modules: 1) Hierarchical Graph Modeling, which breaks down complex problems into manageable subproblems, enabling dynamic node generation and graph optimization; and 2) Programmable Node Generation, a technique that refines and verifies each subproblem to iteratively improve code generation results and robustness. Extensive experiments consistently demonstrate the superiority of Data Interpreter. On InfiAgent-DABench, it achieves a 25% performance boost, raising accuracy from 75.9% to 94.9%.",
+    "score": 0.7735067862048222,
+    "source": "124 - Data Interpreter An LLM Agent For Data Science.pdf",
+    "page": 1
+   },
+   {
+    "text": "A higher score indicates better performance.   Leveraging the extensive knowledge and coding capabilities of LLMs, recent efforts (Shen et al., 2024; Hollmann et al., 2023; Bordt et al., 2024; Zhang et al., 2024c; Liu et al., 2024) have integrated LLMs into data science tasks. These approaches primarily focus on individual tasks, such as feature engineering (Hollmann et al., 2023), model selection (Shen et al., 2024), and hyperparameter optimization (Liu et al., 2024), often operating within fixed pipelines. However, they lack a holistic evaluation of end-to-end workflows, making it difficult to assess the complete data science process. Furthermore, these methods often struggle to handle real-time changes in intermediate data and adapt dynamically to evolving task dependencies. While recent works (Wu et al., 2023b; Zhang et al., 2023) have improved performance in data-related tasks, they remain inadequate for machine learning or comprehensive data transformation tasks, involving intricate task interdependencies that require continuous updates and dynamic global planning (Zhang et al., 2024c).   To address these challenges, we present Data Interpreter, an LLM agent that reframes the data science workflows as a Hierarchical Graph Modeling problem, where interconnected tasks are represented as nodes, and their dependencies as edges within the graph.",
+    "score": 0.7728502497197319,
+    "source": "124 - Data Interpreter An LLM Agent For Data Science.pdf",
+    "page": 2
+   },
+   {
+    "text": "Ablation on different base LLMs. Based on GPT-4o and GPT-4o-mini, Data Interpreter shows further improvement in task completion across a wide range of tasks, as illustrated in Figure 5. In machine learning tasks, LLMs like Qwen-72B-Chat (Bai et al., 2023) and Mixtral-8x7B (Jiang et al., 2024) performed comparably to GPT-3.5-Turbo, while smaller LLMs experienced performance degradation. Our Data Interpreter handled data loading and analysis effectively with smaller models but had limitations with tasks requiring advanced coding proficiency. Smaller LLMs also encountered failures when using tools to handle images or webpage results, as shown in Figure 5.   5 CONCLUSION   In this work, we present the Data Interpreter, an LLM-based agent designed to tackle data science challenges via hierarchical graph representation. Our framework continuously monitors data changes and adapts to dynamic environments through iterative task refinement and graph optimization. It enhances data analysis and machine learning performance, and improves reasoning capabilities through hierarchical decomposition, fine-grained execution, validation, and iterative modifications. Combined with the LLM’s planning and coding abilities, this approach effectively solves tasks requiring complex multi-step reasoning.",
+    "score": 0.7665720933792226,
+    "source": "124 - Data Interpreter An LLM Agent For Data Science.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b6692cda-802f-4fdd-816a-f908e0d54f1d",
+  "X-Amzn-Trace-Id": "Root=1-6b08050d-324e0b0938b5db7d4023f4f5;Parent=2c1f61bb8668b700;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.343
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:13+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Data Interpreter: An LLM Agent For Data Science"
+ },
+ "from_cache": false
+}

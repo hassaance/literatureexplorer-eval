@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 2.116,
+ "json": {
+  "id": "chatcmpl-29840f9c-f8c5-4f1a-85c2-e4ef473a0abb",
+  "object": "chat.completion",
+  "created": 1795687520,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The primary goals and approaches to tool integration of the Confucius framework (Paper A) and the OctoTools framework (Paper B) are as follows:\n\n**Confucius Framework (Paper A):**\n- **Primary Goals:**\n  - Simplify application development with primitives and abstractions.\n  - Provide an interactive chat-like interface for user interaction.\n  - Ensure correctness through validations and human input.\n  - Separate reasoning from factual knowledge by leveraging LLMs for reasoning and existing tools for factual information.\n  - Utilize existing expertise in network management.\n  - Orchestrate with carefully engineered prompts to guide LLM reasoning.\n  - Prioritize iterative improvement and avoid dependence on fine-tuning.\n\n- **Approach to Tool Integration:**\n  - Confucius integrates with existing validation frameworks to ensure correctness.\n  - It employs a primitive called Collector to gather user inputs through structured human interaction.\n  - The framework is built on Pydantic, a Python schema language, and uses the Analect class for reusable logic and data.\n\n**OctoTools Framework (Paper B):**\n- **Primary Goals:**\n  - Provide a robust and effective framework for solving complex tasks through sub-goal decomposition and systematic tool usage.\n  - Enable seamless interaction among tools, the planner, and the executor.\n\n- **Approach to Tool Integration:**\n  - OctoTools uses tool cards to encapsulate the specifications of tools in a structured manner.\n  - The planner agent generates a tentative plan indicating how tools can be used to address the query.\n  - The executor agent converts the planner’s text-based action into a machine-executable command to obtain intermediate results.\n  - The framework iteratively refines actions based on the evolving context until a complete solution is found or inference limits are reached.\n\nIn summary, while both frameworks aim to integrate tools to solve complex tasks, Confucius focuses on simplifying application development and ensuring correctness through validation and human input, whereas OctoTools emphasizes a structured, multi-step process with tool cards for seamless interaction and sub-goal decomposition."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1551,
+   "completion_tokens": 409,
+   "total_tokens": 1960
+  },
+  "contexts": [
+   {
+    "text": "It offers short-term memory management, where users can control the level of memory for each session. For long-termmemory, Confucius leverages RAG to handle large volumes of context.   Ensure Correctness through Validations and Human In- put: Confucius integrates with existing validation frameworks, including dry-run and configuration validation systems, to ensure correctness of mission-critical tasks. Outputs are validated before presentation to the user, and human approval is enforced for highly sensitive tasks. To support human oversight, Confucius employs a primitive called Collector to systematically gather user inputs through structured human interaction.   3.3 Confucius Programming Framework Confucius is a programming framework that simplifies application development with primitives and abstractions, shown in Figure 4. It offers an interactive chat-like interface for user interaction.   ProgrammingAbstraction:At its core, Confucius is built on Pydan- tic, a Python schema language for defining custom data structures. The core abstraction class is the Analect, which holds reusable logic and data for inputs, outputs, and runtime. It is similar to a function but provides logging for execution, streamlining reuse throughout the system. Several basic operators are shared among all Analects.",
+    "score": 0.49933848993317753,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 4
+   },
+   {
+    "text": "Therefore, careful redaction of input data is essential before sending it to LLMs.   3 Overview In this section, we introduce the principles, key design ideas, and programming framework in Confucius.   3.1 Principles Over the past two years, we have explored leveraging LLMs for networking, ranging from chatbot-style Q&A interfaces to deeper integration with systems and tools. Based on our experiences, we summarize the following guiding principles for Confucius: • Separate Reasoning from Factual Knowledge: We leverage LLMs for reasoning tasks, which they are well-suited for, while we rely on existing runbooks, tools, and databases for retrieving factual information.   • Leverage Existing Expertise: We utilize established tools and expert knowledge in network management, similar to existing approaches for incorporating domain knowledge [3].   • Orchestrate with Carefully Engineered Prompts: Inspired by “cognitive architectures” [1], we decompose management tasks into individual components and use carefully engineered prompts to guide LLM reasoning. This allows us to maintain control over the reasoning process.   • Prioritize Iterative Improvement:We prioritize basic implementa- tion to develop a functional system quickly and refine iteratively over time.   • Not Depend on Fine-tuning: We design our approach to work effectively with foundation models that do not require fine-tuning as a prerequisite.",
+    "score": 0.4911582120935372,
+    "source": "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+    "page": 4
+   },
+   {
+    "text": "To promote future research, we release our codebase, tool-card templates, and in- teractive demos, offering practical guidance for the community.   2 The OctoTools Framework   2.1 Preliminary   We propose OctoTools, an open-source, versatile, and user-friendly multi-agent framework for complex rea- soning tasks, as illustrated in Figure 2. Given a user query q ∈ Q and a pretrained language model LLMθ(·), a naive approach would generate an out- put directly as y ∼ LLMθ(q), providing a single-step response. In contrast, our OctoTools framework intro- duces a structured, multi-step process that leverages external tools to tackle queries effectively.   Specifically, OctoTools contains a set of tools D = {di}ni=1 and associated metadata M = {mi}ni=1, where n is the number of available tools. Given a query, a planner agent (based on a language model) first generates a tentative plan from a high-level per- spective, indicating how these tools can be used to address the query, which forms the initial context s0. From this plan, the planner determines the initial ac- tion a1 for tool usage, specifying which tool d1 to use, the relevant context, and a sub-goal.",
+    "score": 0.48653893412660265,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 3
+   },
+   {
+    "text": "OctoTools provides a robust and effective frame- work for solving complex tasks through sub-goal de- composition and systematic tool usage. Standardized tool cards encapsulate functionality (§2.2), the planner agent orchestrates both high-level and low-level task planning (§2.3), and the executor agent instantiates tool calls for each sub-goal (§2.4).2.2 Tool Cards   To enable seamless interaction among tools, the plan- ner, and the executor, the toolbox serves as a funda- mental building block of OctoTools. In contrast to previous work (Lu et al., 2023; Hu et al., 2024) that rely on careful adaptations and tuning to support new tools, OctoTools leverages tool cards, which encapsu- late the specifications of tools in a structured manner.   Each tool card represents a tool d alongside its es- sential metadata m (as illustrated in Figure 3). This metadata includes the tool’s name, version, input and output types, and command demonstrations. It may also contain additional usage constraints (e.g., user- defined “limitations” and “best practices”), which pro- vide developers’ insights to guide the planner and executor. For example, Image_Captioner_Tool in- cludes “it may make mistakes in complex scenes” and “consider using other tools for context/verification” in the user metadata (§E.4).",
+    "score": 0.4813383863697695,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 3
+   },
+   {
+    "text": "From this plan, the planner determines the initial ac- tion a1 for tool usage, specifying which tool d1 to use, the relevant context, and a sub-goal. An executor agent (also powered by a language model) then con- verts the planner’s text-based action a1 into a machine- executable command ot, which is run to obtain inter- mediate results r1. These results, along with the orig- inal action, update the context to s1 := (a1, o1, r1). This process constitutes one step in our framework.   This process repeats, with the planner iteratively refining its actions based on the evolving context until it either finds a complete solution or inference limits (e.g., time or steps) are reached. After T steps, the framework produces a full trajectory (s0, s1, . . . , sT ), which is stored in a structured manner in the context. The planner then uses this trajectory to generate the final solution to the original query.   OctoTools provides a robust and effective frame- work for solving complex tasks through sub-goal de- composition and systematic tool usage.",
+    "score": 0.47699873315635016,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 3
+   }
+  ],
+  "sources": [
+   "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+   "067 - Intent-Driven Network Management with Multi-Agent LLMs.pdf",
+   "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+   "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+   "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "29840f9c-f8c5-4f1a-85c2-e4ef473a0abb",
+  "X-Amzn-Trace-Id": "Root=1-6b08045e-4371e7c2048fe4a7297d2e84;Parent=2a762e9a7bfa0feb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 2.116
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:18+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What are the primary goals and the approaches to tool integration of the Confucius framework (Paper A) compared to the OctoTools framework (Paper B)?"
+   }
+  ]
+ },
+ "from_cache": false
+}

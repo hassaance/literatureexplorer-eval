@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.316,
+ "json": {
+  "query": "Simulating Eating Disorder Patients with LLMs: Evaluating Psychological Persona Stability in Multi-Turn Conversations",
+  "contexts": [
+   {
+    "text": "Simulating Eating Disorder Patients with LLMs: Evaluating Psychological Persona Stability in Multi-Turn   Conversations   Jennifer Haase∗1,2, Jana Gonnermann-Müller1,3, See Heng Yim4, Nicolas Leins3, Jan Mendling1,2, and Sebastian Pokutta3   1Weizenbaum Institute, Berlin, Germany 2HU Berlin, Berlin, Germany   3Zuse Institute Berlin, Berlin, Germany 4Department of Psychology, University of Hong Kong, Hong Kong   Preprint   Abstract   Large language model (LLM)-based simulations of clinical patients are increasingly used for research and training, yet their validity requires persona stability : coherent maintenance of an assigned psychological profile across and within conversations. We evaluate this prerequisite using eating disorder personas grounded in five published case vignettes, a dual-assessment framework (self-report + independent observer ratings), and validated psychometric instruments (EDE-Q) with known ground-truth scores. Across six LLMs and two experiments (between- conversation stability (Exp. I) and within-conversation stability (Exp. II)), we find that LLMs are paradoxically too stable and too inaccurate: variability is negligible, yet all models systematically overshoot ground-truth severity by 12–30% of the scale range (0.7–1.8 points on a 0–6 scale).",
+    "score": 0.8342560507305881,
+    "source": "075 - Simulating Eating Disorder Patients with LLMs Evaluating Psychological Persona Stability in Multi-Turn Conversations.pdf",
+    "page": 1
+   },
+   {
+    "text": "Persona benchmarks target fictional or personality-trait settings [32, 1] and use generic user-simulation roles rather than clinically grounded profiles with validated instruments. What is missing is repeated, multi-source psychological measurement of simulated patient behaviour using clinical instruments and stability metrics.   We address this, we work with eating disorders (EDs), psychiatric conditions with the highest mortality rate of any mental illness [10], high stigma, and significant training gaps among clinicians. Artificial Intelligence (AI)-simulated ED patients have been shown to reduce trainee anxiety and increase self-efficacy in psychiatric education [3], yet the psychological validity and stability of such personas remain unevaluated. Meanwhile, commercial AI chatbots have been documented reinforcing disordered eating behaviours and failing to capture emotional nuance [7, 40], underscoring the need for rigorous evaluation before deployment.   We ask: How stably do LLMs maintain assigned eating disorder personas across independent conversations and throughout extended conversations, and which components of a persona description are necessary for clinically plausible simulation? We do not study therapy efficacy or multi-agent therapy pipelines; we study whether LLMs can simulate psychologically coherent ED personas, a prerequisite for any downstream application.",
+    "score": 0.6921350122386517,
+    "source": "075 - Simulating Eating Disorder Patients with LLMs Evaluating Psychological Persona Stability in Multi-Turn Conversations.pdf",
+    "page": 2
+   },
+   {
+    "text": "We do not study therapy efficacy or multi-agent therapy pipelines; we study whether LLMs can simulate psychologically coherent ED personas, a prerequisite for any downstream application.   Our contributions are: (1) A dual-assessment framework jointly measuring persona self-reports and independent LLM observer ratings using the EDE-Q, a clinical eating disorder questionnaire, with multi-provider rater aggregation to address LLM-as-judge bias [44, 28]. (2) A theoretically grounded prompt richness manipulation based on Fairburn’s transdiagnostic model [10], varying persona descriptions from full vignettes to minimal diagnostic parameters, with all assessment scores excluded to prevent circularity. (3) Stability experiments across six LLMs, five ED personas, and three prompt richness levels, with variance decomposition identifying the relative contribution of model, persona, and prompt to score variation.   2 Related Work   Persona simulation and stability. Persona assignment meaningfully alters LLM behaviour [31], and benchmarks now evaluate fidelity across fictional and personality-trait settings [37, 38, 32, 17, 15]. However, these predominantly evaluate surface-level consistency. Multi-turn stability remains poorly understood: Abdulhai et al. [1] found that line-to-line coherence stays high even as global persona alignment degrades, with mental health personas proving the most challenging domain. Yun et al. [43] documented systematic persona drift in CBT chatbots.",
+    "score": 0.607753526714584,
+    "source": "075 - Simulating Eating Disorder Patients with LLMs Evaluating Psychological Persona Stability in Multi-Turn Conversations.pdf",
+    "page": 2
+   },
+   {
+    "text": "Yun et al. [43] documented systematic persona drift in CBT chatbots. Most directly relevant, Gonnermann-Müller et al. [13] proposed dual assessment for ADHD simulations, finding stable self-reports but declining observer ratings, a dissociation motivating our design. We extend this paradigm to eating disorders with validated instruments and a theoretically grounded prompt richness manipulation [10].   Simulated patients. LLM-based simulated patients are deployed for clinical training [19, 25, 27], multi-agent diagnosis [26, 41], and even direct-to-patient therapy [2]. A common limitation is that   2these systems are evaluated on conversation realism, diagnostic accuracy, or symptom reduction, not on the psychological validity or temporal stability of the simulated persona itself. Our work addresses this gap.   LLM-as-judge. LLM judges achieve over 80% agreement with human preferences [44] but exhibit position bias, verbosity bias, and self-enhancement bias; the latter formalised by Panickssery et al. [28], who showed a linear correlation between self-recognition ability and self-preference magnitude. We mitigate these concerns by using three raters from different providers, aggregating scores, and withholding persona prompts from observers.   Prompt sensitivity. Meaning-preserving formatting changes can swing LLM accuracy by up to 76 percentage points [33], and selecting which persona attributes to include matters as much as format [4, 21].",
+    "score": 0.577537856693969,
+    "source": "075 - Simulating Eating Disorder Patients with LLMs Evaluating Psychological Persona Stability in Multi-Turn Conversations.pdf",
+    "page": 2
+   },
+   {
+    "text": "All report EDE- Q ground-truth (GT) scores (5.25 for BN to 2.64 for PD; see Table 2). Each persona is structured along nine clinical dimensions (diagnosis, over-evaluation, restraint, binge pattern, compensatory behaviours, body checking, cognitive beliefs, emotional patterns, contextual factors); full vignettes and source citations are in Appendix A.7.   3 Methodology   3.1 Experimental design   We operationalize stability through two complementary experiments (see Figure 1). Experiment I tests between-conversation stability: each model generates a first-person narrative (e.g., describing a typical day or eating-related situations) and completes ED self-report instruments; independent LLM raters complete the same self-report instruments from the perspective of the individual, based solely on the narrative and without access to persona instructions. Experiment II tests within- conversation stability: the target LLM engages in a 9-exchange neutral conversation (each exchange comprising one interviewer question and one persona response) with a scripted conversation partner who listens without judgment and asks simple questions that help the speaker continue talking without sharing opinions or trying to influence what they say. The conversation covers three topic blocks (the same three situations as Exp. I, uniformly shuffled per run), with self-report and observer assessments triggered after each block (at exchanges 3, 6, and 9). Observer raters evaluate each block independently; N = 20 runs per condition.",
+    "score": 0.5613620515104701,
+    "source": "075 - Simulating Eating Disorder Patients with LLMs Evaluating Psychological Persona Stability in Multi-Turn Conversations.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d91a4e7b-f35a-4101-8661-63ed363edeb9",
+  "X-Amzn-Trace-Id": "Root=1-6b080504-599540153d3c86f71884d4ce;Parent=1e78f2da18ea0c8a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.316
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:04+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Simulating Eating Disorder Patients with LLMs: Evaluating Psychological Persona Stability in Multi-Turn Conversations"
+ },
+ "from_cache": false
+}

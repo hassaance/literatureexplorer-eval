@@ -1,0 +1,8 @@
+.env
+.cache/
+__pycache__/
+data/papers.zip
+data/corpus_text/
+*.pyc
+.venv/
+.venv/

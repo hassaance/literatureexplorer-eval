@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.265,
+ "json": {
+  "query": "Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques",
+  "contexts": [
+   {
+    "text": "Proceedings of The Second Arabic Natural Language Processing Conference, pages 11–26 August 16, 2024 ©2024 Association for Computational Linguistics   Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques   Mariam ALMutairi, Lulwah AlKulaib, Melike Yildiz Aktas, Sara Alsalamah, Chang-Tien Lu   Virginia Tech Falls Church, VA, USA   malmutairi, lalkulaib , melike, salsalamah, clu @vt.edu   Abstract   The increasing use of artificial intelligence in healthcare requires robust datasets for training and validation, particularly in the domain of medical conversations. However, the creation and accessibility of such datasets in Arabic face significant challenges, especially due to the sen- sitivity and privacy concerns that are associated with medical conversations. These conversa- tions are rarely recorded or preserved, mak- ing the availability of comprehensive Arabic medical dialogue datasets scarce. This limi- tation slows down not only the development of effective natural language processing mod- els but also restricts the opportunity for open comparison of algorithms and their outcomes. Recent advancements in large language models (LLMs) like ChatGPT, GPT-4, Gemini-pro, and Claude-3 show promising capabilities in gen- erating synthetic data.",
+    "score": 0.8337604062011306,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 1
+   },
+   {
+    "text": "Recent advancements in large language models (LLMs) like ChatGPT, GPT-4, Gemini-pro, and Claude-3 show promising capabilities in gen- erating synthetic data. To address this gap, we introduce a novel Multi-Agent LLM approach capable of generating synthetic Arabic medical dialogues from patient notes, regardless of the original language. This development presents a significant step towards overcoming the bar- riers in dataset availability, enhancing the po- tential for broader research and application in AI-driven medical dialogue systems.   1 Introduction   Healthcare is a crucial aspect of daily life, involving coordination among multiple specialized depart- ments such as pharmacy, imaging, labs, and billing, alongside primary care provider notes. Each pa- tient interaction results in a clinical note document- ing the discussions, medical conditions, and future plans, essential for continuous care and communi- cation with patients and the healthcare team (Hus- mann et al., 2022). Unlike regular meeting sum- maries, clinical notes are semi-structured, includ- ing concise, bullet-pointed phrases with medical terminology and references to external data from electronic medical records (Krishna et al., 2020).   AI integration in healthcare promises significant improvements in efficiency and patient outcomes through enhanced data processing. In the Arab world, AI can bridge gaps in healthcare delivery by automating medical dialogue generation from clinical notes, reducing the documentation burden on healthcare providers.",
+    "score": 0.7712354619769425,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 1
+   },
+   {
+    "text": "This approach ensures AI systems remain adaptable and continue evolving with medical ad- vancements and changing healthcare practices.   Our work contributes significantly to the field of Arabic Natural Language Processing (NLP) and AI-driven healthcare solutions through several in- novative approaches:   • Development of a Multi-Agent LLM Sys- tem: We introduce a novel multi-agent large language model system that is specifically de- signed to generate synthetic Arabic medical dialogues. This system uses state-of-the-art techniques to ensure that the generated dia- logues are linguistically and medically accu- rate, making it highly suitable for real-world healthcare applications.   • Creation of Synthetic Medical Dialogue Datasets: Addressing the acute shortage of publicly available medical datasets in Arabic, this work utilizes advanced AI to generate synthetic datasets from clinical notes. These datasets are crucial for training and improving AI models tailored to the Arabic language and healthcare needs.   • Rigorous Evaluation of Generation Tasks: This study establishes a comprehensive evalu- ation framework for the Generation tasks, us- ing both quantitative metrics such as ROUGE and BERTScore and qualitative assessments by domain experts. This dual approach en- sures that the generated conversations adhere to technical accuracy and maintain practical usability and relevance in clinical settings.",
+    "score": 0.7139553472362683,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 2
+   },
+   {
+    "text": "Moreover, translating dialects through such systems can strip away vital cultural aspects that are intrinsic to understanding and using the language properly.   In contrast, advanced language models can adeptly adapt to various dialects, including the Na- jdi dialect, to generate dialogues that are both ac- curate and contextually appropriate. Utilizing the Najdi dialect in synthetic dialogues ensures that the interactions closely mirror real-life conversa- tions, thus providing more realistic and practical training scenarios for medical professionals. The use of dialect-specific expressions and idioms can resonate more deeply with native speakers, enhanc-   11ing the clarity and empathy of medical communi- cation compared to MSA. This approach not only improves the precision of conveyed information but also fosters a more genuine connection in medical interactions.   Recent efforts focus on advanced multi-agent large language models (LLMs) to generate syn- thetic Arabic medical dialogues. These models, trained on diverse datasets, achieve high linguistic and medical accuracy. Synthetic data generation offers a solution to the scarcity of Arabic medi- cal training data, providing feasible alternatives to real conversations and aiding in training robust AI models. This approach ensures AI systems remain adaptable and continue evolving with medical ad- vancements and changing healthcare practices.",
+    "score": 0.651521570845389,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 1
+   },
+   {
+    "text": "Sample data from the gener- ated dataset demonstrate the effectiveness of our approach and are presented in Figure 2 in the ap- pendix.   Generation Agent: The process begins with the Generation Agent, where an ACI-benchmark clini- cal note in English serves as the foundation for cre- ating the Arabic medical dialogue. Using Claude-3- Opus-20240229, we prompt the model to generate conversation in Arabic, specifically tailored to the Saudi Najdi dialect. We chose Claude-3-Opus be- cause it performed better with the Najdi dialect compared to GPT-4, based on our evaluation of a small sample set. The prompt ( details in Appendix A.1) includes detailed instructions to ensure the conversation covers approximately 50 exchanges and around 3000 words. The generated dialogue starts with a warm greeting from the doctor and   13continues with inquiries into the patient’s current condition and specific concerns. Key aspects of the clinical note are discussed, including the pa- tient’s chief complaint, history of present illness, current medications, past medical history, past sur- gical history, examination findings, results from any diagnostic tests, and the proposed treatment or follow-up plan. The conversation aims to be clear, culturally sensitive, and engaging, avoiding medical jargon and instead using layman’s terms to explain medical terms and findings.",
+    "score": 0.6435296377120927,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1d7efaad-1abe-4b4f-8478-785913bcc2e7",
+  "X-Amzn-Trace-Id": "Root=1-6b08050e-34f31fd07b774eb127060223;Parent=6c7aa61a481f1ac2;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.265
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:14+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.292,
+ "json": {
+  "query": "LLM Social Simulations Are a Promising Research Method",
+  "contexts": [
+   {
+    "text": "There is inevitably much uncertainty in the future of AI progress, but the rapid pace of technical ad- vances requires us to take a step back and consider whether this endeavor could succeed. We argue that, by thought- fully incorporating contemporary methods and future AI capabilities, sims are a promising research method to ac- celerate social science, open up new areas of inquiry into human behavior, and generate humanlike synthetic data to support the development of safe and beneficial AI.   9Position: LLM Social Simulations Are a Promising Research Method   Acknowledgments We are grateful for feedback from members of the Stan- ford Human-Computer Interaction (HCI), Stanford Insti- tute for Human-Centered AI (HAI), Stanford Digital Econ- omy Lab (DEL), and University of Chicago Knowledge Lab. We particularly thank Suhaib Abdurahman, José Ramón Enrı́quez, Sophia Kazinnik, David Nguyen, and Joon Sung Park for their contributions.   Impact Statement There are many potential societal impacts of our work. LLMs that effectively simulate human populations have the potential to advance scientific research, train human- compatible AI systems, and address a variety of other so- cietal issues. However, they could be used irresponsibly, such as to generate online propaganda or train manipula- tive bots.",
+    "score": 0.7944009023202273,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 9
+   },
+   {
+    "text": "In any case, it will be important to map out the areas in which LLM simulation is more or less successful at generalization. The most challenging areas may be related to each other in ways amenable to particular methods.   8Position: LLM Social Simulations Are a Promising Research Method   Sensitivity Analysis   Complete \"Human- Possible\" Studies   Complete \"Human-   Impossible\" Studies   Exact Replication   Exploratory Studies   Pilot Studies   Immediately Feasible   Long-term Challenges   Figure 1: Six applications of LLM social simulations. The most difficult applications are complete studies that are human-possible (HP), where it would be possible to use human subjects, or human-impossible (HI), such as large-scale policy experiments.   5. Applications We believe that sims can already be used for pilot studies, preliminary runs to surface possible issues and estimate ef- fect sizes for a complete study with human subjects. These results would be primarily used to inform methodological choices, rather than the underlying research topic. Cur- rent sims can be used for exploratory studies—oriented towards theory-building, brainstorming, and sketching out possibilities of future studies. Errors in exploratory stud- ies typically have lower costs than errors in confirmatory studies.",
+    "score": 0.7481844708300781,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 8
+   },
+   {
+    "text": "Many well-known biases distort what humans say to each other, such as social desirability bias (Nederhof, 1985), the Hawthorne effect (Mayo, 1933), or demand characteristics (Orne, 1959). Without radical changes, such as unethically forcing humans to partici- pate in research or making unprecedented advances in neu- rophysiological probing to bypass the limitations of self- report, social scientists cannot achieve the ideal experimen- tal isolation that is frequently available to natural scientists.   A.2. The Promise of LLM Social Simulations   Scientists have attempted to circumvent the limitations of human data since well-before the advent of LLMs. From the 1970s, computer simulation, particularly agent-based modeling, has sought to replicate social phenomena, such as John Conway’s Game of Life and Thomas Schelling’s dynamic model of human segregation (Schelling, 1971). In the following decades, major advances have been made in agent-based modeling (for a summary, see Steinbacher et al., 2021; Romero et al., 2023), but LLMs are uniquely promising because of their general-purpose ability to re- spond to a wide range of stimuli that can be represented in natural language or another suitable modality, such as   27Position: LLM Social Simulations Are a Promising Research Method   images or audio.",
+    "score": 0.7410032609774629,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 27
+   },
+   {
+    "text": "In the stud- ies reviewed, LLM simulation performance was substan-   7Position: LLM Social Simulations Are a Promising Research Method   tially reduced in group-level, rather than population-level, prediction (e.g., Hewitt et al., 2024). Likewise, sycophancy can be viewed as a problem of distribution shift from an LLM assistant to a simulation, in which LLMs may be ac- curate in generating “helpful” outputs, but those outputs are not helpful for simulation.   4.5.2. ITERATIVE EVALUATION   There is much that simulation-focused researchers can do to overcome these five challenges, but ultimately, the largest changes may come from more general advances in LLM capabilities. Therefore, we see it as essential to build methods of iterative evaluation to make the best use of ad- vancements as soon as they arrive. This includes toolkits of simulation methods, such as different approaches to fine- tuning (Binz et al., 2024; Suh et al., 2025), and datasets, such as Psych-101 (Binz et al., 2024), SubPOP (Suh et al., 2025), and Twin-2K-500 (Toubia et al., 2025).",
+    "score": 0.7325078241913915,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 7
+   },
+   {
+    "text": "et al. (2025)   Preprint (ArXiv)   Diversity, bias   World Values Survey, American National Election   Studies   Prompt variation (explicit demographics)   Kim & Lee (2024)   Preprint (ArXiv) Bias General Social Survey   (missing data) Fine-tuning, human subject   embeddings Kozlowski   et al. (2024) Preprint (ArXiv) Generalization COVID-19 behavior surveys Prompt variation (explicit   demographics) Lampinen   et al. (2024) PNAS Nexus - Logical inference, Wason selection task -   Lin et al. (2025)   Preprint (ArXiv) Diversity Michigan Survey of   Consumers   Prompt variation (explicit demographics),   LLM-as-an-expert Liu et al. (2024a)   Preprint (ArXiv) - choices13k LLM-as-an-expert,   chain-of-thought (basic)   Lyman et al. (2025)   Sociological Methods & Research   Diversity, bias,   sycophancy   Pigeonholing Partisans (descriptions of political   outgroups)   Prompt variation (explicit demographics)   Manning et al. (2024)   Preprint (ArXiv) - Auctions -   23Position: LLM Social Simulations Are a Promising Research Method   Table A1 continued from previous page   Paper Venue Challenges Described",
+    "score": 0.7315262885632393,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 23
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c03a921b-267e-4c7b-a737-cfb89e7fdcf3",
+  "X-Amzn-Trace-Id": "Root=1-6b080503-52fc280b2f55a175400aad86;Parent=08607eb84cb4d1ab;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.292
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:03+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "LLM Social Simulations Are a Promising Research Method"
+ },
+ "from_cache": false
+}

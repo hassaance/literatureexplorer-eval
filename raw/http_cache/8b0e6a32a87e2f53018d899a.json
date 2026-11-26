@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.301,
+ "json": {
+  "query": 42,
+  "contexts": [
+   {
+    "text": "0 MHCLiteAttention Seed 5.61363 -5.61363 4 2   Continued on next page   42S Gen Alias Primary metric   Score Corr Orig   0 HCAttentionSeed 5.75093 -5.75093 4 1   0 HyperbolicGeodesic Routing   ERROR (code)   ERROR (code) 1 3   0 GivensOrthogonal ManifoldHC 5.2677 -5.2677 4 4   0 PoincareBall RoutingHC 6.441 -6.441 4 4   0 GrassmannianSubspace Routing   ERROR (code)   ERROR (code) 1 4   0 HouseholderCayley ManifoldHC 5.45023 -5.45023 4 4   1 GivensCayley HybridHC 5.27033 -5.27033 4 3   1 HyperbolicAffin GatedRouting   ERROR (code)   ERROR (code) 1 3   1 HyperbolicLorentz Routing 5.64353 -5.64353 4 4   * 1 PoincareHC 0.0085 -0.0085 4 4   1 HyperbolicGeodesic Routing_v2   ERROR (code)   ERROR (code) 1 3",
+    "score": 0.4130837401085975,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 42
+   },
+   {
+    "text": "CVE remediation, IDS, fuzzing, dependency audit, network security.   dapt-intrusion-detection Multimodal E fix-druid-loophole-cve Agentic Coding E fix-erlang-ssh-cve Agentic Coding E setup-fuzzing-py Agentic Coding X software-dependency-audit Search & Research X suricata-custom-exfil Multimodal X syzkaller-ppdev-syzlang Agentic Coding X   Media & Content Production (n = 5). Video, audio, 3D content, dubbing, media transformation, and content production.   mario-coin-counting Multimodal X multilingual-video-dubbing Multimodal X threejs-structure-parser Multimodal X threejs-to-obj Multimodal X video-silence-remover Multimodal E   41N Experimental Protocol Details   This appendix expands the concise experimental setup in §4. It is separated from the benchmark- construction appendix to keep the evaluation protocol, agent configurations, and scoring choices easy to audit.   N.1 Model–Harness Configurations   We evaluate four terminal-agent harnesses in the latest aggregate: OpenHands, Claude Code [An- thropic, 2025b], Codex CLI [OpenAI, 2025], and Gemini CLI [Google, 2025]. Each model is evaluated with the harness shown in Appendix Table 5. All models use temperature 0.",
+    "score": 0.39761005708001984,
+    "source": "142 - SkillsBench Benchmarking How Well Agent Skills Work Across Diverse Tasks.pdf",
+    "page": 41
+   },
+   {
+    "text": ", 14=bird, 15=cat, 16=dog, 17=horse, 18=sheep, 19= cow   20=elephant, 21=bear, 22=zebra, 23=giraffe, 24=backpack, 25=umbrella, 26=handbag, 27=tie, 28=suitcase, 29= frisbee   30=skis, 31=snowboard, 32=sports ball, 33=kite, 34= baseball bat, 35=baseball glove, 36=skateboard, 37= surfboard, 38=tennis racket, 39=bottle   40=wine glass, 41=cup, 42=fork, 43=knife, 44=spoon, 45= bowl, 46=banana, 47=apple, 48=sandwich, 49=orange   50=broccoli, 51=carrot, 52=hot dog, 53=pizza, 54=donut, 55=cake, 56=chair, 57=couch, 58=potted plant, 59=bedUIST ’26, November 02–05, 2026, Detroit, MI, USA Mei et al.   60=dining table, 61=toilet, 62=tv",
+    "score": 0.3907614441995556,
+    "source": "132 - ShadAR Real-time Prompting On-demand Visual Augmentation in Augmented Reality.pdf",
+    "page": 13
+   },
+   {
+    "text": "[422] Zixuan Li, Yutao Zeng, Yuxin Zuo, Weicheng Ren, Wenxuan Liu, Miao Su, Yucan Guo, Yantao Liu, Xiang Li, Zhilei Hu, et al.",
+    "score": 0.38782977762940096,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 62
+   },
+   {
+    "text": "Li, J. Lin, J. Xia, K. Jin, K. Wang, K. Yang, L. Bing, L. Lei, L. Su, Le. Wang, Lu. Wang, N. Wang, Q. Ren, Q. Yang, R. Li, S. Bai, S. Du, S. Li, S. Lin, S. Nie, S. Wang, S. Zhang, S.Z. Wang, T. Ge, Ta.Q. Fang, Ti.Q. Fang, W. Fang, W. Li, W. Zhang, X. Chen, X. Li, X. Tang, X. Wang, X. Xu, X. Zhang, X.Q. Wang, X.Y. Wang, Y. Deng, Y. Gao, Y. Hu, Y. Li, Y. Sui, Y. Wang, Y. Xiao, Y. Zhang, Y. Zhou, Z. Chen, Z. Cheng, Z. Feng, Z. Liang, Z. Liu, Z. Zhang.   46",
+    "score": 0.3872905692671011,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 46
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "307d4978-be42-4f1d-bcc7-f875da1b76fa",
+  "X-Amzn-Trace-Id": "Root=1-6b080574-385a044e43a82f5b0d4c6fa5;Parent=1bbd3b895e1f53ea;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.301
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "err_context_query_number",
+ "request_body": {
+  "query": 42
+ },
+ "from_cache": false
+}

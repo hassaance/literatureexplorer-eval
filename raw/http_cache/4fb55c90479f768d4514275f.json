@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.456,
+ "json": {
+  "query": "Autodata: An agentic data scientist to create high quality synthetic data",
+  "contexts": [
+   {
+    "text": "Autodata: An agentic data scientist to create high quality synthetic data Ilia Kulikov†, ChenxiWhitehouse†, TianhaoWu†, Yixin Nie†, Swarnadeep Saha, Eryk Helenowski, Weizhe Yuan, Olga Golovneva, Jack Lanchantin, YoramBachrach, Jakob Foerster, Xian Li, Han Fang, Sainbayar Sukhbaatar, JasonWeston   FAIR at Meta †Joint first author   We introduce Autodata, a general method that enables AI agents to act as data scientists who build high quality training and evaluation data. We show how to train (meta-optimize) such a data scientist agent, so that it learns to create even stronger data. We describe the overall formulation, and a specific practical implementation, Agentic Self-Instruct. We conduct experiments on computer science research tasks, legal reasoning tasks and reasoning with mathematical objects, where we obtain improved results compared to classical synthetic dataset creation methods. Further, meta-optimizing the data scientist agent itself delivers an even larger performance uplift. Agentic data creation provides a way to convert increased inference compute into higher quality model training. Overall, we believe this direction has the potential to change the way we build AI data.",
+    "score": 0.8076019215450612,
+    "source": "125 - Autodata An agentic data scientist to create high quality synthetic data.pdf",
+    "page": 1
+   },
+   {
+    "text": "Further, methods like CoT Self-Instruct (Yu et al., 2025) extended that to use Chain-of-Thought reasoning during the generation process to help construct more complex tasks more accurately. Finally, so called “self-challenging” methods (Zhou et al., 2025) allowed a challenger agent to interact with tools before proposing a task and accompanying evaluation functions. However, none of these methods control the difficulty and quality of the data directly, motivating approaches such as filtering (Yu et al., 2025), evolution (Xu et al., 2024) and refinement (Shah et al., 2024).   In this work, we introduce Autodata, which generalizes all the above described methods. An agent acting as a data scientist is tasked with the act of constructing and curating data, performing the actions a human data scientist would take in order to create high quality data: where both building benchmark data and training data are use cases. This process includes both an initial iteration of data creation, followed by an analysis phase “eyeballing” the data as well as measuring its performance, constructing learnings, and then iterating with an improved recipe to create better data. Further, we show how to train (meta-optimize) this agentic system (outer loop) to be optimal as a data scientist (inner loop).",
+    "score": 0.7062954629488872,
+    "source": "125 - Autodata An agentic data scientist to create high quality synthetic data.pdf",
+    "page": 2
+   },
+   {
+    "text": "This provides a general mechanism for converting stronger inference-time models and larger agentic compute budgets into higher-quality training and evaluation data.   6 Conclusion and Discussion   We introduced Autodata, a general framework in which an autonomous agent plays the role of a data scientist—generating synthetic data, evaluating it with task-specific signals, and improving its data-generation recipe based on those results. We instantiated this idea with Agentic Self-Instruct, which explicitly optimizes for examples that separate weak and strong solvers, and demonstrated consistent quality gains across computer science research tasks, legal reasoning tasks, and reasoning with mathematical objects. Finally, we showed that the data scientist agent itself can be meta-optimized, yielding substantial additional improvements without manual prompt engineering. We believe that the experiments we report in this paper are just the tip of the iceberg, and further exploration and optimization of this approach will bring further gains. We list future directions below.   More tasks, models and baselines. Future continued work should explore the use of this method across more diverse tasks and models. We envision an ideal system being a general autodata agent that can be used for any kind of data (mathematics, code, general instruction following tasks, safety, and so on) from verifiable to non-verifiable, single-turn to multi-turn to agentic tasks.   14Hacking & limitations.",
+    "score": 0.6766470110036503,
+    "source": "125 - Autodata An agentic data scientist to create high quality synthetic data.pdf",
+    "page": 14
+   },
+   {
+    "text": "Further, we show how to train (meta-optimize) this agentic system (outer loop) to be optimal as a data scientist (inner loop). While much of the recent work on autoresearch (Karpathy, 2026) has concentrated on agentic methods for architectural or training recipe improvements, we posit that focusing on data is likely to play an equally important, if not more important, role in future progress.   In our experiments, we focus on a particular implementation of Autodata, Agentic Self-Instruct, and show that it provides strong results across a diverse set of tasks. We conduct experiments on computer science research tasks, legal reasoning tasks and reasoning with mathematical objects, where in each case we obtain improved results compared to classical synthetic dataset creation methods. Further, meta-optimizing the data scientist agent itself delivers an even larger performance uplift.   As state-of-the-art LLMs become ever-stronger, there is concern that existing tasks or synthetic data methods cannot produce tasks that are challenging enough to make further progress. Autodata, via agentic data creation, provides a way to convert increased inference compute into higher quality model training to produce such challenging data. Hence, we believe that this direction has the potential to change the way we create new tasks and benchmarks to advance the frontier.   2 Autodata   The high-level design of Autodata is shown in Figure 1, where various instantiations can be built from this template.",
+    "score": 0.6581780045525387,
+    "source": "125 - Autodata An agentic data scientist to create high quality synthetic data.pdf",
+    "page": 2
+   },
+   {
+    "text": "Further recent autoresearch systems aim to automate larger parts of the scientific loop: The AI Scientist (Lu et al., 2024) performs ideation, experiment implementation, result analysis, paper writing, and simulated review, while autoresearch (Karpathy, 2026) explores agents that modify training code and recipes. Meta-Harness (Lee et al., 2026) treats the harness around an LLM system as an object of end-to-end optimization. Our meta-optimization experiment applies this perspective to data creation itself: the outer loop improves the data scientist agent’s prompt and strategy using the same data quality criteria that guide the inner data-generation loop.   Positioning. Prior work has shown that LLMs can synthesize instructions, conversations, feedback, reasoning traces, domain-specific datasets, and even self-play tasks. Autodata unifies these ideas under an explicit agentic data-science formulation. Its key distinction is that data generation, evaluation, failure analysis, recipe revision, and meta-optimization are all part of the loop. This provides a general mechanism for converting stronger inference-time models and larger agentic compute budgets into higher-quality training and evaluation data.   6 Conclusion and Discussion   We introduced Autodata, a general framework in which an autonomous agent plays the role of a data scientist—generating synthetic data, evaluating it with task-specific signals, and improving its data-generation recipe based on those results.",
+    "score": 0.6521922563536224,
+    "source": "125 - Autodata An agentic data scientist to create high quality synthetic data.pdf",
+    "page": 14
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9b523c85-9ae0-41c3-965f-27f1ecfe40a9",
+  "X-Amzn-Trace-Id": "Root=1-6b08050d-6f09a01744bccc5d52b724dc;Parent=1a2bc178c3ad1435;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.456
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:13+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Autodata: An agentic data scientist to create high quality synthetic data"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.304,
+ "json": {
+  "query": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
+  "contexts": [
+   {
+    "text": "https://huggingface.co/datasets/MatrAIx2026/MatrAIx_Persona_1M        https://huggingface.co/datasets/MatrAIx2026/MatrAIx_Persona_1MMatrAIx: Simulating the World with 8.3 Billion Persona Agents 3   Real-Human Persona   Synthetic Generation   Shared Persona Schema   Background Psychology Capability   Behavior Lifestyle Preference   1290 Dimentions   Persona 8B   Build the Persona Population Simulated-user Evaluation Infrastructure   Application Tasks and Products   Sample from Persona Cohort   Playground   1 Survey   “$12.99 to $16.24, would you still buy?”   2 Chatbot   “I am seeking for help in nutrition.”   3 Web App4   “Help me find a good laptop”   “Buy Stocks, search for news”   ...   Task  Reports   Personal and Population Level Findings   Telemetry   Figure 1: Overview of the MatrAIx simulated-user evaluation framework. Evaluators describe the target audience, and MatrAIx retrieves matching personas from Persona 8B to form an evaluation cohort. The four environments define how these persona agents interact, while MatrAIx Applications provides the task specifications they execute. Shared telemetry and task-owned verification preserve the evidence needed for subgroup and population-level reporting.",
+    "score": 0.7138190473929411,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents   Organizers Xiaomin Li1† & Yuexing Hao2†   Contributors Jianheng Hou3, Jintao Huang4, Qianfeng Wen5, Shirley Huang1,6, Yifan Liu5, Xiaoyi Liu7, Yilan Fan8, Yijun Wang1, Koutian Wu9, Ruoqi Gao11, Muhammad Ahmed Mohsin11, Jing Tang12, Brihi Joshi3, Heming Liu13, Zheyuan Deng7,   Zonglin Di10, Sankalp Jajee14, Jiuyao Lu36, Zhiwei Zhang15, Saksham Kapoor16, Ishan Gupta17, Yunhan Zhao18, Chanwoo Park2, Yucheng Lu1,39, Bing Hu19, Weihang Xiao20, Aravind Mohan22, Hanwen Xing3, Runyu Zhang2, Mihir Kulshreshtha20, Yuanda Xu23, Qianyu Zhu2, Dianzhuo Wang1, Yuxin Xiao2, Bowen Jiang24, Yongye Su25, Wenhao Chai23, Zuxin Liu26, Lawrence Yunliang Chen21, Xuandong Zhao21, Ethan Ye26, Shivam Patel26, Jason Xie10, Alex Martin Richmond2, Weixiang",
+    "score": 0.7023478974000025,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Code: https://github.com/MatrAIx-ai/MatrAIx-Persona-8B. Project website: https://matraix.ai.   ar X   iv :2   60 8.   04 20   5v 1   [ cs   .A I]   4 A   ug 2   02 6         https://github.com/MatrAIx-ai/MatrAIx-Persona-8B        https://matraix.ai        https://arxiv.org/abs/2608.04205v1MatrAIx: Simulating the World with 8.3 Billion Persona Agents 2   1 Introduction   Human evaluation remains essential for understanding how AI systems and digital products perform for real users. However, its time and expense limit the breadth and frequency of studies during development. Offline benchmarks offer a scalable and reproducible alternative. However, they typically measure task outcomes without modeling how diverse users formulate requests, interact with a system (Chang et al., 2025), and judge its results (Santurkar et al., 2023; Kirk et al., 2024). For example, a coding-agent benchmark may test whether the trajectory passes all unit tests (Jimenez et al., 2024; Miserendino et al., 2025; Zan et al., 2025; Zhang et al., 2025).",
+    "score": 0.6810591276904676,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Offline evaluations are more scalable but often abstract away human diversity and interactive behavior. We there- fore introduce MatrAIx, a population-scale simulated-user evaluation infrastructure for testing AI systems and digital products with heterogeneous users. MatrAIx has three core components: First, Persona 8B contains 8.3 billion persona records represented through a schema of 1,290 categorical dimensions. Records are either sam- pled from a dependency graph that preserves correlated attributes or derived from human-authored profiles. We release a quality-filtered coreset of approximately 1 million personas, comprising 599,847 human-grounded and 400,000 synthetic records. Second, the MatrAIx Playground provides four environments in which diverse users evaluate and interact with digital products: Survey, AI Chatbot, Web, and App. Third, MatrAIx provides 1,010 application tasks spanning more than 25 domains, including Commerce, Software, Finance, and Healthcare. We conducted 18,189 evaluation trials across eight representative tasks. Persona agents were powered by three large language models: Claude Opus 4.8, GPT 5.5, and Claude Haiku 4.5. The resulting feedback captures how deci- sions and preferences vary across persona backgrounds, including hesitation after a price increase, willingness to continue after an AI assistant fails, and latency tolerance.",
+    "score": 0.6700179245558427,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "It would record whether they would still buy the product and why, then verify that each response includes both purchase intent and a rationale. The current MatrAIx Applications release contains 1,010 tasks: 621 Survey, 371 AI Chatbot, 12 Web, and 6 App. The library covers more than 25 domains, including Commerce, Software, Finance, and Healthcare. Each task defines a study that can be run with a selected persona cohort. The task count does not mean that all 1,010 studies have been executed. For this paper, we ran 18,189 evaluation trials across eight representative tasks. For each task, we report the persona cohort and model configuration. We also report trial-level verifier results and cohort-level analyses. Figure 1 shows how the three components form the end-to-end evaluation pipeline.   Together, these components form an operational end-to-end pipeline across all four environments. The pipeline con- nects population construction, cohort retrieval, persona-agent execution, task-owned verification, and population-level reporting. We evaluate three questions. Does the persona population preserve plausible distributions and dependen-MatrAIx: Simulating the World with 8.3 Billion Persona Agents 4   cies? Do agents follow their assigned personas in what they say and do? Do simulated-user studies reveal consistent differences across systems, models, and user groups? Our results show that the pipeline operates across all four en- vironments.",
+    "score": 0.6444848221303182,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c87dcc79-93dd-4c39-b01e-8f9d4817dcf4",
+  "X-Amzn-Trace-Id": "Root=1-6b080505-23ba13f3679906a002b51deb;Parent=6471db70c292329d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.304
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:05+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents"
+ },
+ "from_cache": false
+}

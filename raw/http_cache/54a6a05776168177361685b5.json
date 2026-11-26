@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.314,
+ "json": {
+  "query": "In the paper \"Towards autonomous medical artificial intelligence agents,\" what criteria does the system use to determine that a patient with acute pulmonary embolism can be safely discharged?",
+  "contexts": [
+   {
+    "text": "MIRA   Diagnosis: Acute pulmonary embolism Decision: Admission Reasoning: (...) active malignancy, advanced age (81), and newly diagnosed PE. Despite stable vitals and no right heart strain, sPESI is elevated (≥2 points), placing patient at higher risk; inpatient admission is recommended for initiation of LMWH and close monitoring.   Admission   Admission   Evaluate   Evaluation   Pulmonary embolism   Pneumonia   High-severity DDI orders were placed   Renal dosing not adjusted for the patient's current eGFR/creatinine   Allergy-medication mismatches (drug or class allergy con�icts)   QT-risk prescribing (QTc ≥ 500 ms or ≥ 2 QT-prolonging agents without rationale)   Unsafe opioid prescribing (e.g. MME > 50 per day or opioid + benzodiazepine)   Therapeutic duplication (same drug or class prescribed beyond safe overlap without justi�cation)   3 (5%)   Safe decision Likely to be safe (information absent/no contradictory information) Potential risk �agged   0 100 200 300 400   Dosage text   Dosage value   Dosage unit   Period   Period unit   Frequency   Route   Correct Incorrect   Adm iss   ion   Disc ha   rg e   Prediction   Adm iss   ion   Disc ha   rg e   Prediction   Admission   DischargeG ro   un",
+    "score": 0.48440136246198495,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "From these cohorts, ten cases per diagnosis were selected as templates. Because these lacked key narrative elements such as HPI, physical exam- ination findings, and free-text descriptions of symptoms, each template was expanded under the supervision of a board-certified physician to generate four distinct patient variants. For each, synthetic but clinically plausible histories, physical examinations, laboratory values, radiology findings, vital signs and medication reconciliation were written and adapted to represent a range of illness severities and clinical presenta- tions. A ground-truth disposition recommendation (either hospital admission or discharge from the emergency department) was assigned to each case based on established clinical criteria. We chose pneumonia and pulmonary embolism because validated objective scoring systems, CURB-65 and sPESI respectively, are routinely used as surrogates for admission necessity. Our primary evaluation end-point was recall,   defined as the proportion of admission-requiring patients that were correctly triaged for admission. In this experiment, we gave MIRA the additional ability to request vital signs and modified the original Admis- sion tool to besides giving a diagnosis also make a decision (admission or discharge from emergency department) together with its reasoning process (CloseCase tool).",
+    "score": 0.46803517418847,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 16
+   },
+   {
+    "text": "DDI, drug–drug interaction. b, Medication prescription correctness. For each field, stacked bars show whether the metric was rated as correct or wrong. Whiskers show 95% patient-cluster bootstrap confidence intervals for the observed proportion rated correct. c, Cohort curation and case synthesis for admission versus discharge experiments. Each case includes HPI, physical examination (PE), vital signs, imaging, laboratory tests and medication reconciliation. Example agent responses provide diagnosis, disposition and rationale that reference sPESI (simplified pulmonary embolism severity index) and CURB-65 (pneumonia) without explicit instructions. BUN, blood urea nitrogen; DOAC, direct oral anticoagulant; ED, emergency department; RR, respiratory rate. d, Outcome   evaluation. Left, 2 × 2 confusion heat map (TP, true positive; FN, false negative; FP, false positive; TN, true negative; positive corresponds to admission). Right, bars show the observed values of accuracy, precision, recall, negative predictive value (NPV) and F1 with 95% patient-cluster bootstrap confidence intervals. Metrics were computed on n = 80 constructed patient cases, comprising n = 40 pulmonary embolism cases (20 admission, 20 emergency department discharge) and n = 40 pneumonia cases (18 admission, 22 emergency department discharge).",
+    "score": 0.4599334000228634,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "These include AMIE, a conversational diagnostic system optimized for patient–physician dialogue1, and MAI-DxO15, a multi-agent diag- nostician that improved diagnostic accuracy and cost efficiency on complex case vignettes. In live clinical practice, OpenAI and Penda Health have built a non-autonomous safety-net assistant that is embed- ded in primary-care workflows, which provides suggestions to physi- cians16. Although these efforts have increased realism of AI evaluations in healthcare, they do not evaluate the clinical action capabilities of AI. In this regard, another study evaluated various LLMs on full clinical workflows using real-world data from the MIMIC-IV (Medical Informa- tion Mart for Intensive Care) dataset17, but its design did not integrate established medical coding systems such as FHIR or encompass essen- tial components of realistic clinical workflows, such as direct patient communication or the management of pre-admission medication. It concluded that current models still lack the reliability necessary to autonomously manage complex medical cases18. Thus, despite notable progress in developing increasingly autonomous and generalist LLMs, two critical challenges in healthcare remain unresolved. First, there is a gap regarding the integration of AI agents into existing workflows. Second, the performance and safety of such agents has not yet been evaluated in full patient care workflows spanning communication, diagnosis, treatment decisions and admission.",
+    "score": 0.45881646729815906,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "John Iafrate12, Daniel Truhn13, Dirk Jäger1 & Jakob Nikolas Kather1,2,3 ✉   Large language models (LLMs) show great potential for clinical decision-making, yet most applications remain narrow, task-specific chat tools rather than systems integrated into clinical workflows1,2. However, building physician copilots will require models that operate within the electronic health record (EHR), with governed access to patient data and the ability to initiate permitted EHR actions within defined safety constraints. Yet it remains unproven whether such a system can manage patient cases with physician-level performance. Here we show that MIRA (Medical Intelligence for Reasoning and Action), an autonomous artificial intelligence agent operating in a sandboxed EHR environment, can navigate a large clinical action space to obtain patient histories; order and interpret laboratory, imaging and microbiology tests; generate differential diagnoses; and formulate treatment plans such as prescribing medications, scheduling surgical procedures and planning admissions. In simulations on real patient cases spanning multiple diagnoses, MIRA outperformed physicians in diagnostic accuracy and made guideline-concordant, medication-safe and appropriate admission decisions. Compared with previous LLM applications that addressed isolated subtasks or provided free-text advice, these results suggest that an EHR- integrated artificial intelligence agent can turn clinical intent into structured, actionable EHR operations, possibly making it a more effective decision-support partner for physicians.",
+    "score": 0.4579269444380757,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "6be2d4c6-1517-4264-8832-8f73e1c4cde1",
+  "X-Amzn-Trace-Id": "Root=1-6b08043d-51370b145a44a0bc1bcacf98;Parent=54be98f9d37f6404;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.314
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:45+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper \"Towards autonomous medical artificial intelligence agents,\" what criteria does the system use to determine that a patient with acute pulmonary embolism can be safely discharged?"
+ },
+ "from_cache": false
+}

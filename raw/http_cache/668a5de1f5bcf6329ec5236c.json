@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 2.622,
+ "json": {
+  "id": "chatcmpl-9ed0c8e2-bf84-4f58-827b-7d2b448fcbff",
+  "object": "chat.completion",
+  "created": 1795684127,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "WOLF is a multi-agent social deduction benchmark designed to evaluate both the production and detection of deception in large language models (LLMs). It is based on the social deduction game Werewolf and includes role-grounded agents, programmable rules, and structured event logs for reproducibility. WOLF aims to analyze how often and in what forms LLMs engage in deception, how accurately and consistently they detect deception in peers, and how these dynamics evolve across multi-turn, role-conditioned interactions."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1578,
+   "completion_tokens": 99,
+   "total_tokens": 1677
+  },
+  "contexts": [
+   {
+    "text": "Error bars in figures denote ± 1 SEM across runs and reflect stochasticity in model outputs and game randomness (bids, dialogue, votes). For example, final-round suspicion averages 62.0%± 1.2% (Werewolf) vs. 45.0%± 0.9% (Villager), a stable gap across seeds.   6 Conclusions   WOLF is a multi-agent social deduction benchmark for evaluating both the production and detection of deception in LLMs. It embeds role-grounded agents in a programmable LangGraph game loop, where every public statement is paired with self- and peer-assessments and suspicion scores evolve over time.   Across 100 games and over 7,200 statements, WOLF shows a clear asymmetry: models lie often (Werewolves deceived in 31% of turns) but detect lies only moderately well (precision ≈72%, re- call ≈48%). Suspicion toward Werewolves rises across rounds while stabilizing for truthful roles, meaning extended interaction improves discrimination but cautious Villagers are still misclassi- fied. Results also vary by deception type—subtle forms like omission persist longer than overt fabrications—highlighting where models remain most vulnerable.   By combining statement-level annotations with longitudinal analysis, WOLF moves beyond static deception datasets and provides a controlled but dynamic testbed for probing both deceptive and detective capacity.",
+    "score": 0.5638487753998807,
+    "source": "175 - WOLF.pdf",
+    "page": 9
+   },
+   {
+    "text": "Other adaptations share similar gaps: AvalonBench revealed weaknesses in multi-turn reasoning [17], AmongAgents showed GPT-4’s basic role-play in Among Us but poor lie detection [18], and The Traitors added persistent memory and deception metrics but lacked statement-level labels [2]. Collectively, these works show that while social deduction surfaces deception, none systematically measure detection accuracy at the statement level.   3 Werewolf Game Flow and Architecture   Roles and Setup   WOLF recreates the social deduction game Werewolf as a programmable state graph with fixed roles, phases, and transitions. Each game uses a roster of eight participants: four Villagers, two Werewolves, one Seer, and one Doctor. Villagers form the uninformed majority, relying on debate and voting to identify threats. Werewolves act as a coordinated minority, eliminating Villagers at night while concealing their identities during the day. The Seer privately inspects one role each night, and the Doctor protects one player from elimination. This fixed distribution ensures stable conditions for deception to emerge and enables reproducible comparisons across runs, unlike prior implementations that randomized roles.   Game Phases   The game alternates between night and day. At night, Werewolves select a target, the Doctor chooses a player to protect, and the Seer investigates a role. These actions resolve simultaneously, with only outcomes—survival or elimination—revealed.",
+    "score": 0.5149514791013483,
+    "source": "175 - WOLF.pdf",
+    "page": 3
+   },
+   {
+    "text": "By combining statement-level annotations with longitudinal analysis, WOLF moves beyond static deception datasets and provides a controlled but dynamic testbed for probing both deceptive and detective capacity. Future directions include larger and more adaptive games, and applying insights to domains like moderation, fact-checking, and negotiation.   7 Limitations   To maximize reproducibility, WOLF fixes role distribution, player set, and debate length. These controls may under-sample longer-horizon or coalition-based strategies. Labels come from model self-assessments rather than humans, so they reflect subjective judgments, partly offset by peer analysis and aggregation. Prompts that ask agents to self-evaluate may also shape their behavior.   Finally, WOLF is a stylized Werewolf setting: it captures hidden roles and persuasion under partial information, but results may not fully generalize. To enable auditing, all prompts, outputs, and logs are released for re-labeling and external checks.   9References [1] Jennifer Haase and Sebastian Pokutta. Beyond static responses: Multi-agent llm systems as a new paradigm   for social science research, 2025. URL https://arxiv.org/abs/2506.01839. [2] Pedro M. P. Curvo. The traitors: Deception and trust in multi-agent language model simulations, 2025.",
+    "score": 0.5104771057145315,
+    "source": "175 - WOLF.pdf",
+    "page": 9
+   },
+   {
+    "text": "This raises concerns about deception strategies — absent in earlier generations — that emerged in GPT-4 [4]. It is already recognized that LLMs in real-world simulations can engage in deception, without explicit instruction to do so [5]. Even when models are trained to be honest, under the right pressure, LLMs often choose to deceive, irrespective of how truthful models are when benchmarked [6].   In a multi-agent scenario, GPT-4 demonstrates strong deceptive capabilities; however, it remains highly susceptible to being deceived itself [2]. This asymmetry highlights that while deception capabilities scale as models develop, detection capabilities lag behind—leaving LLMs simultaneously persuasive yet vulnerable. This leads to our guiding hypothesis: deception scales more quickly than detection. Modern LLMs exhibit strong cooperative reasoning yet remain under-tested in adversarial, multi-party settings where incentives to mislead are explicit.   In this work, we introduce WOLF, a benchmark that examines this asymmetry by evaluating both deceptive and detective capacities of LLMs in a multi-agent setting modeled on Werewolf. Social deduction games like Werewolf naturally induce deception, partial information, and theory-of-mind reasoning [7]. WOLF is designed to analyze three guiding questions: (i) how often and in what forms LLMs engage in deception, (ii) how accurately and consistently they detect deception in peers, and (iii) how these dynamics evolve across multi-turn, role-conditioned interactions.",
+    "score": 0.48348785033758124,
+    "source": "175 - WOLF.pdf",
+    "page": 2
+   },
+   {
+    "text": "Social deduction games like Werewolf naturally induce deception, partial information, and theory-of-mind reasoning [7]. WOLF is designed to analyze three guiding questions: (i) how often and in what forms LLMs engage in deception, (ii) how accurately and consistently they detect deception in peers, and (iii) how these dynamics evolve across multi-turn, role-conditioned interactions. We operationalize this setting as a reproducible benchmark with role-grounded agents, programmable rules, and structured logging.   This work makes three contributions:   1. A LangGraph-based implementation of Werewolf with role-conditioned agents, strict phase transitions, and structured event logs for reproducibility;   2. A deception measurement protocol coupling self-assessment with concurrent peer analysis for every public statement, categorized by omission, distortion, fabrication, and misdirection;   3. A metrics suite that captures deception production rates, detection accuracy, calibration (Brier score, ROC/AUPRC), and longitudinal suspicion trends that reveal how trust and mistrust develop over time.   2 Related Works   Benchmarks rarely elicit sustained deceptive behavior under partial information while also mea- suring detection. Social deduction settings surface coordination and theory-of-mind reasoning, but standardized, logged, multi-turn deception benchmarks remain limited. Existing work has explored agent-based evaluations with discussion and voting or deception classification with static text.",
+    "score": 0.4830776704720769,
+    "source": "175 - WOLF.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "175 - WOLF.pdf",
+   "175 - WOLF.pdf",
+   "175 - WOLF.pdf",
+   "175 - WOLF.pdf",
+   "175 - WOLF.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9ed0c8e2-bf84-4f58-827b-7d2b448fcbff",
+  "X-Amzn-Trace-Id": "Root=1-6b07f71d-024ba6aa1509450d08fe7eb7;Parent=563a2c0396b446e9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 2.622
+  }
+ ],
+ "requested_at": "2026-11-26T09:08:45+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is WOLF?"
+   }
+  ]
+ },
+ "from_cache": false
+}

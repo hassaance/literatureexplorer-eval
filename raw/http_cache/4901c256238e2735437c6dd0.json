@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.597,
+ "json": {
+  "id": "chatcmpl-ff3dd2fd-9145-4318-912e-46f679625900",
+  "object": "chat.completion",
+  "created": 1795687477,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "Reflexion achieves a 91% pass@1 accuracy on the HumanEval coding benchmark, surpassing the previous state-of-the-art GPT-4 that achieves 80%."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1607,
+   "completion_tokens": 39,
+   "total_tokens": 1646
+  },
+  "contexts": [
+   {
+    "text": "In 2, we observe a notable discrepancy between the false positive labels produced by internal test execution, P(not pass@1 generation correct | tests pass). That is, the probability that a submission will fail given that it passes all unit tests. For HumanEval and MBPP Python, the baseline pass@1 accuracies are relatively similar, 82% and 80%, respectively. However, the false positive test execution rate for MBPP Python is 16.3% while the rate for HumanEval Python is a mere 1.4%, leading to 91% overall accuracy 1.   Approach Test Generation Self-reflection Pass@1 (Acc) Base model False False 0.60 Test generation omission False True 0.52 Self-reflection omission True False 0.60 Reflexion True True 0.68   Table 3: Pass@1 accuracy for various compromised approaches on the Reflexion approach using GPT-4 as the base model on HumanEval Rust - 50 hardest problems   Ablation study We test the composite approach of Reflexion for test generation and self-reflection cooperation on a subset of the 50 hardest HumanEval Rust problems. Our Rust compiler environment provides verbose error logs and helpful debugging hints, therefore serving as a good playground for compromised approaches.",
+    "score": 0.47803424318896165,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 8
+   },
+   {
+    "text": "Reflexion is flexible enough to incorporate various types (scalar values or free-form language) and sources (external or internally simulated) of feedback signals, and obtains significant improvements over a baseline agent across diverse tasks (sequential decision-making, coding, language reasoning). For example, Reflexion achieves a 91% pass@1 accuracy on the HumanEval coding benchmark, surpassing the previ- ous state-of-the-art GPT-4 that achieves 80%. We also conduct ablation and analysis studies using different feedback signals, feedback incorporation methods, and agent types, and provide insights into how they affect performance. We release all code, demos, and datasets at https://github.com/noahshinn024/reflexion.   1 Introduction   Recent works such as ReAct [30], SayCan [1], Toolformer [22], HuggingGPT [23], generative agents [19], and WebGPT [17] have demonstrated the feasibility of autonomous decision-making agents that are built on top of a large language model (LLM) core. These methods use LLMs to generate text and ‘actions‘ that can be used in API calls and executed in an environment. Since they rely on massive models with an enormous number of parameters, such approaches have been so far limited to using in-context examples as a way of teaching the agents, since more traditional optimization schemes like reinforcement learning with gradient descent require substantial amounts of compute and time.   Preprint.",
+    "score": 0.45449759360750064,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 1
+   },
+   {
+    "text": "We found that the ability to specify self-corrections is an emergent quality of stronger, larger models.   Approach Pass@1 accuracy (avg over 8 trials) Pass@1 accuracy (std) Baseline 0.26 0.00481 Reflexion 0.26 0.00305   Table 4: Pass@1 accuracy on HumanEval Python using starchat-beta [13].   Model Baseline accuracy Reflexion accuracy CoT (GT) + text-davinci-003 0.60 0.77 CoT (GT) + gpt-3.5-turbo 0.57 0.71 CoT (GT) + gpt-4 0.68 0.80 ReAct + text-davinci-003 0.30 0.55 ReAct + gpt-3.5-turbo 0.26 0.38 ReAct + gpt-4 0.39 0.51   Table 5: Pass@1 accuracy on 100 HotPotQA using various models.   12B Decision-making   Environment: You are in the middle of a room.",
+    "score": 0.4515371281090449,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 12
+   },
+   {
+    "text": "Generating useful reflective feedback is challenging since it requires a good understanding of where the model made mistakes (i.e. the credit assignment problem [25]) as well as the ability to generate a summary containing actionable insights for improvement. We explore three ways for doing this – simple binary environment feedback, pre-defined heuristics for common failure cases, and self-evaluation such as binary classification using LLMs (decision-making) or self-written unit tests (programming). In all implementations, the evaluation signal is amplified to natural language experience summaries which can be stored in long-term memory.   Reflexion has several advantages compared to more traditional RL approaches like policy or value- based learning: 1) it is lightweight and doesn’t require finetuning the LLM, 2) it allows for more nuanced forms of feedback (e.g. targeted changes in actions), compared to scalar or vector rewards that are challenging to perform accurate credit assignment with, 3) it allows for a more explicit and interpretable form of episodic memory over prior experiences, and 4) it provides more explicit hints for actions in future episodes. At the same time, it does have the disadvantages of relying on the power of the LLM’s self-evaluation capabilities (or heuristics) and not having a formal guarantee for success. However, as LLM capabilities improve, we only expect this paradigm to get better over time.",
+    "score": 0.4460797388974185,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 2
+   },
+   {
+    "text": "Then, we filter for syntactically valid test statements by attempting to construct a valid abstract syntax tree (AST) for each proposed test. Finally, we sample n tests from the collection of generated unit tests to produce a test suite T , denoted as {t0, t1, . . . , tn}. We set n to a maximum of 6 unit tests. Aside from the unit test suite component, the setup for the learning loop for a Reflexion programming agent is identical to the reasoning and decision-making agents with a max memory limit of 1 experience.   Benchmark + Language Prev SOTA Pass@1 SOTA Pass@1 Reflexion Pass@1 HumanEval (PY) 65.8 (CodeT [5] + GPT-3.5) 80.1 (GPT-4) 91.0 HumanEval (RS) – 60.0 (GPT-4) 68.0 MBPP (PY) 67.7 (CodeT [5] + Codex [6]) 80.1 (GPT-4) 77.1 MBPP (RS) – 70.9 (GPT-4) 75.4 Leetcode Hard (PY) – 7.5 (GPT-4) 15.0   Table 1: Pass@1 accuracy for various model-strategy-language combinations. The base strategy is a single code generation sample.",
+    "score": 0.4451925344691395,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 7
+   }
+  ],
+  "sources": [
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ff3dd2fd-9145-4318-912e-46f679625900",
+  "X-Amzn-Trace-Id": "Root=1-6b080434-5790110d2c6f66f30a858275;Parent=597a496403e352cf;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.597
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:36+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "reflexion humaneval pass@1"
+   }
+  ]
+ },
+ "from_cache": false
+}

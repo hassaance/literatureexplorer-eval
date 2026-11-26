@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.316,
+ "json": {
+  "query": "RAAS: LLM Agentic System Architecture Search with GRPO",
+  "contexts": [
+   {
+    "text": "RAAS: LLM Agentic System Architecture Search with GRPO   Jiayi Yang* Guancheng Wan* Man Zhang Mang Ye†   School of Computer Science, Wuhan University, China {yangjiayi, guanchengwan, manzhang1, yemang}@whu.edu.cn   GitHub: github.com/ridlog/raas *Equal contribution. †Corresponding author.   Abstract   Large Language Model (LLM) agentic systems solve com- plex tasks through coordinated workflows, but design- ing them remains labor-intensive. The Agentic Supernet paradigm automates this by optimizing a probabilistic ar- chitecture space, yet suffers from critical evaluation insta- bilities: absolute performance scores entangle architectural merit with query difficulty, while single-execution proto- cols capture execution randomness rather than true capa- bility. These instabilities lead to unreliable search dynam- ics where simple queries inflate weak designs and challeng- ing queries suppress strong ones. We introduce RAAS (Ro- bust Architecture Adaptive Search), which establishes more stable and fair evaluation through two synergistic mecha- nisms. Contextual Architecture Orchestration (CAO) dis- entangles quality from task difficulty by evaluating cohorts of candidate architectures on identical queries, deriving context-aware merit signals through peer-group compari- son.",
+    "score": 0.7821665524768864,
+    "source": "040 - RAAS LLM Agentic System Architecture Search with GRPO.pdf",
+    "page": 1
+   },
+   {
+    "text": "In the following sections, we will systematically elabo- rate on how RAAS adheres to these foundational principles, achieving a robust and efficient search through the princi- pled application of Contextual Architecture Orchestration and Multi-Trial Assessment Synthesis.   3. Method   In this section we introduce RAAS, a framework for dis- covering effective agentic workflows within the supernet paradigm. Unlike traditional methods that evaluate each candidate architecture through single-execution absolute scoring, RAAS establishes stable, fair assessment through two synergistic mechanisms: (1) Contextual Architecture Orchestration (CAO) evaluates cohorts of designs on the same query to derive context-aware relative merit, and (2) Multi-Trial Assessment Synthesis (MTAS) aggregates mul- tiple independent executions to produce statistically robust capability estimates.   34472Figure 2. RAAS framework overview. CAO performs cohort-based peer comparison for contextual fairness, while MTAS aggregates multi-trial executions for statistical robustness, together producing stable evaluation signals for architecture discovery.   3.1. Agentic Supernet Foundation Following the established supernet framework [39], we for- malize the search space as an Agentic Supernet A = {π,O}, which encompasses all feasible multi-agent archi- tectures through a probabilistic composition of operators.",
+    "score": 0.5390425029396828,
+    "source": "040 - RAAS LLM Agentic System Architecture Search with GRPO.pdf",
+    "page": 3
+   },
+   {
+    "text": "Building on CAO and MTAS, we formalize a closed-loop RAAS pipeline over an agentic supernet, including query-conditioned architecture sampling, cohort-based assessment, and merit-weighted adaptation of the generation distributions.   ❸ Consistent gains with practical cost. RAAS reaches 60.87% MATH (+8.79), 95.16% GSM8K (+3.32), 96.31% HumanEval (+4.08), 84.18% MBPP (+5.47), and 20.84% GAIA (+2.78), averaging +5.41 over the strongest baseline in our comparison, while maintaining stable discovery under core hyperparameters (N , K) with modest cost (e.g., N=5, K=5→ 25 runs/query; 0.31 per query, ∼ 6% below MaAS).   344712. Related Work 2.1. LLM Agents and Agentic Systems The advent of Large Language Models (LLMs) has given rise to powerful autonomous agents capable of handling complex tasks by integrating external tools, memory, and planning capabilities [31, 43]. However, the capabilities of a single agent are ultimately limited. Research has shown that organizing multiple agents into a Multi-agent System (MAS) can effectively raise the ceiling on problem-solving capabilities through well-designed interaction and collabo- ration mechanisms [33].",
+    "score": 0.5344262326414052,
+    "source": "040 - RAAS LLM Agentic System Architecture Search with GRPO.pdf",
+    "page": 2
+   },
+   {
+    "text": "Contextual Architecture Orchestration (CAO) dis- entangles quality from task difficulty by evaluating cohorts of candidate architectures on identical queries, deriving context-aware merit signals through peer-group compari- son. Multi-Trial Assessment Synthesis (MTAS) reduces execution variance by aggregating performance across mul- tiple independent trials, producing statistically robust capa- bility estimates. Together, these mechanisms provide more reliable signals for architecture discovery. Experiments on six benchmarks spanning mathematical reasoning, code generation, and one multi-step tool-use benchmark show that RAAS consistently improves over strong baselines, im- proving HumanEval pass@1 from 92.23% to 96.31% and MATH accuracy from 52.08% to 60.87%, while maintain- ing practical efficiency. These results suggest that robust evaluation is a useful ingredient for agentic architecture search in the studied settings.   1. Introduction The advent of Large Language Models (LLMs) [25, 26]has unlocked new frontiers in complex problem-solving through agentic systems, where collaborative agents tackle tasks beyond the scope of any single model [2, 20, 28].   Figure 1. An illustration of the core problem and our proposed solution. (A) Problem: Evaluation Instabilities. Easy queries inflate weak architectures while hard queries depress strong ones (task-difficulty entanglement), and single-execution assessments capture transient artifacts rather than true capability (execution variance).",
+    "score": 0.5216053186455412,
+    "source": "040 - RAAS LLM Agentic System Architecture Search with GRPO.pdf",
+    "page": 1
+   },
+   {
+    "text": "This module eliminates execution randomness through statistical aggregation across multiple independent trials. Rather than judging an architecture from a single execution, MTAS samples multiple workflow instantiations for each candidate, synthesizes their collective outcomes through robust statistical operators, and derives stable capability estimates that reflect consistent architectural performance rather than transient execution artifacts (addressing Q2).   These two modules work synergistically: CAO provides context-aware fairness through peer comparison, while MTAS ensures statistical robustness through trial aggrega- tion. Together, they construct a more stable evaluation sig- nal for architecture search. As illustrated in Figure 1, tradi- tional methods suffer from task difficulty entanglement and execution volatility (top), while RAAS mitigates these is- sues through its complementary design (bottom), enabling more reliable discovery of effective architectures.   Our contributions are threefold:   ❶ Stable evaluation framework. We introduce RAAS with two synergistic modules—CAO for peer-normalized, zero-centered contextual merit and MTAS for multi-trial synthesis—to systematically address task-difficulty en- tanglement and execution randomness in agentic super- nets.   ❷ End-to-end architecture discovery. Building on CAO and MTAS, we formalize a closed-loop RAAS pipeline over an agentic supernet, including query-conditioned architecture sampling, cohort-based assessment, and merit-weighted adaptation of the generation distributions.   ❸ Consistent gains with practical cost.",
+    "score": 0.5192378761899925,
+    "source": "040 - RAAS LLM Agentic System Architecture Search with GRPO.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "71ed2c29-0dce-48e5-87ff-afd10b48c854",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fd-599d2ab860c05ae74b96ab69;Parent=08331ec614af248c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.316
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:57+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "RAAS: LLM Agentic System Architecture Search with GRPO"
+ },
+ "from_cache": false
+}

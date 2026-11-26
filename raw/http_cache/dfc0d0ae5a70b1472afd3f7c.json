@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 1.389,
+ "json": {
+  "query": "More Agents Is All You Need",
+  "contexts": [
+   {
+    "text": "Published in Transactions on Machine Learning Research (10/2024)   More Agents Is All You Need   Junyou Li∗ junyouli@tencent.com Tencent   Qin Zhang∗ adrienzhang@tencent.com Tencent   Yangbin Yu yangbinyu@tencent.com Tencent   Qiang Fu leonfu@tencent.com Tencent   Deheng Ye† dericye@tencent.com Tencent   Reviewed on OpenReview: https: // openreview. net/ forum? id= bgzUSZ8aeg   Abstract   We find that, simply via a sampling-and-voting method, the performance of large language models (LLMs) scales with the number of agents instantiated. Also, this method, termed as Agent Forest, is orthogonal to existing complicated methods to further enhance LLMs, while the degree of enhancement is correlated to the task difficulty. We conduct comprehensive experiments on a wide range of LLM benchmarks to verify the presence of our finding, and to study the properties that can facilitate its occurrence. Our code is publicly available at: https://github.com/MoreAgentsIsAllYouNeed/AgentForest.   1 Introduction   Although large language models (LLMs) demonstrate remarkable capabilities in variety of applications (Zhao et al., 2023), such as language generation, understanding, and reasoning, they struggle to provide accurate answers when faced with complicated tasks.",
+    "score": 0.48552411852041866,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 1
+   },
+   {
+    "text": "In total, we   identified 207 individual agents within all review systems, resulting in a total average of 2.27 agents per system. While   it is common to have multiple software agents within a system, only two reviewed papers feature multi-human agent   systems [26, 94]. In addition, there is no trend of increasing or decreasing average number of agents within a system.   5.2 Agent Findings   When analyzing the agent interplay within a system on an agent level, Figure 12 (i), we noted that there is a larger   number of agents sharing their world model than in the other interplay modes. This is most likely due to the idea of   allowing the cooperation between the agents to be better aligned by sharing their world models.",
+    "score": 0.4471042292418871,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 21
+   },
+   {
+    "text": "When the bias value is 0, we add no further information into the agent’s sys- tem prompt. Table 5 shows the information added to agent system prompts when the bias level B = 1. Table 6 shows the information added to agent sys- tem prompts when the bias level B = 2. Thus, for each agent produced with the combination of traits from Table 4, there are five new agents made once adding bias information (B = 0, B = 1 and In Favor, B = 1 and Against, B = 2 and In Favor, B = 2 and Against).   In total, for a given topic, we have (4 ∗ 5 ∗ 2 ∗ 4 ∗ 6) ∗ 5 = 4800 unique agents, where the first component comes from possible demographic val- ues and the second comes from the different bias values. The variation among these agents allows us to test across a broader range of preferences P , openness scores O and agreement scores, A.   To further ensure that the agent responses corre- spond to the demographic prompting we use, we also end each agent system prompt with Whenever you respond to prompts or questions, you should maintain coherence with these background details and viewpoints, grounding your answers in the lived experience and perspective of this individual..",
+    "score": 0.4405897907912168,
+    "source": "069 - Are LLM Agents Behaviorally Coherent Latent Profiles for Social Simulation.pdf",
+    "page": 12
+   },
+   {
+    "text": "Additionally, the experimental results indicate that there are greater performance improvements when addressing difficult tasks and when using weaker models. To understand the reasons behind these performance improvements, we analyze the influence of problem difficulty on the effectiveness of our method. We classify difficulty into three dimensions: the inherent difficulty, the length of reasoning steps, and the prior probability of the correct answer. Through a series of experiments, we adjust these dimensions and observe their effects independently. We observe and summarize a few properties, based on which, we further develop optimization strategies that can intrigue the power of “More Agents”.   Our contributions are summarized as follows:   2Published in Transactions on Machine Learning Research (10/2024)   • We present the first systematic study on the scaling property of raw agents instantiated by LLMs. We find that the performance scales with the increase of agents, using the simple(st) way of sampling and voting.   • We explore the compatibility of our method with existing complicated methods that stimulate the potential of LLMs, revealing that our method can enhance these methods to achieve further performance improvements.",
+    "score": 0.4398650108707684,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 2
+   },
+   {
+    "text": "Importantly, this method is orthogonal to different existing methods, which can lead to further improvements when combined with them.   Furthermore, we observe that the performance gains are influenced by the difficulty of the task. To explore this correlation, we isolate and analyze three dimensions of task difficulty: the inherent difficulty, the length of reasoning steps, and the prior probability of a correct answer. We find that: 1) the performance gains increase then decrease by rising the inherent difficulty; 2) performance gains increase with the number of steps; and 3) performance increases with the prior probability. Based on these properties, we also develop ways to boost the effectiveness of “More Agents”.   Considering that each input remains the same when we increase the number of agents, the sampling phase can be optimized to reduce the cost. Nonetheless, such a challenge of escalating costs commonly exists in works requiring multiple LLM calls Wang et al. (2023b); Du et al. (2023). This aligns with recent findings as discussed in Kapoor et al. (2024) that current benchmarks focus narrowly on accuracy, leading to costly agents. Additionally, the lack of adequate holdout sets and standardization in evaluation practices further complicates the development of cost-effective agents. Addressing these issues can enhance the practical efficiency of AI agents in real-world scenarios.",
+    "score": 0.4362884096328494,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 12
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "29adaaa9-9b61-4a8f-b352-d7a71736f1b0",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f6-1a059bd62050dce87d1531a1;Parent=30e06ced008fdf15;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.389
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:49+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "More Agents Is All You Need"
+ },
+ "from_cache": false
+}

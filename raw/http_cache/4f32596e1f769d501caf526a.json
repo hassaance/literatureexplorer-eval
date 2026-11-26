@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.29,
+ "json": {
+  "query": "Agents of Chaos",
+  "contexts": [
+   {
+    "text": "Preprint.   Agents of Chaos   Natalie Shapira1 Chris Wendler1 Avery Yen1   Gabriele Sarti1 Koyena Pal1 Olivia Floody2 Adam Belfki1   Alex Loftus1 Aditya Ratan Jannali2 Nikhil Prakash1 Jasmine Cui1   Giordano Rogers1 Jannik Brinkmann1 Can Rager2 Amir Zur3 Michael Ripa1   Aruna Sankaranarayanan8 David Atkinson1 Rohit Gandikota1 Jaden Fiotto-Kaufman1   EunJeong Hwang4,13 Hadas Orgad5 P Sam Sahil2 Negev Taglicht2 Tomer Shabtay2   Atai Ambus2 Nitay Alon6,7 Shiri Oron2 Ayelet Gordon-Tapiero6 Yotam Kaplan6   Vered Shwartz4,13 Tamar Rott Shaham8 Christoph Riedl1 Reuth Mirsky9   Maarten Sap10 David Manheim11,12 Tomer Ullman5 David Bau1   1 Northeastern University 2 Independent Researcher 3 Stanford University 4 University of British Columbia 5 Harvard University 6 Hebrew University 7 Max Planck Institute for Biological Cybernetics 8 MIT 9 Tufts University 10 Carnegie Mellon University 11 Alter 12 Technion 13 Vector Institute   Abstract   We report an",
+    "score": 0.7104238870763652,
+    "source": "119 - Agents of Chaos.pdf",
+    "page": 1
+   },
+   {
+    "text": "More broadly, we find repeated failures of social coherence: agents perform as misrepresenting human intent, authority, ownership, and proportionality, and often perform as they have successfully completed requests while in practice they were not, e.g., reporting for deleting confidential information while leaving underlying data accessible (or, conversely, removing their own ability to act while failing to achieve the intended goal). These results reinforce the need for systematic oversight and realistic red-teaming for agentic systems, particularly in multi-agent settings, and they motivate urgent work on security, reliability, human control, and protocols regarding who is responsible when autonomous systems cause harm.   Agent. Definitions of agent vary across disciplines, and we do not attempt to resolve ongoing debates about the boundary between advanced assistants, tool-augmented models, and autonomous agents (Kasirzadeh & Gabriel, 2025). We follow Masterman et al. (2024) and use “AI agent” to denote a language-model–powered entity able to plan and take actions to execute goals over multiple iterations. Recent work has proposed ordinal scales for agent autonomy: Mirsky (2025) defines six levels from L0 (no autonomy) to L5 (full autonomy), where an L2 agent can execute well-defined sub-tasks autonomously but an L3 agent can also recognize when a situation exceeds its competence and proactively transfer control to a human.",
+    "score": 0.4420612388558632,
+    "source": "119 - Agents of Chaos.pdf",
+    "page": 5
+   },
+   {
+    "text": "Rather than merely defecting within an existing game, the attacker engages in a form of adversarial mechanism design: pur- posefully structuring the information landscape to force agents into a destructive equilibrium. We identify five primary vectors for these sys-   temic failures, each defined by a distinct ad- versarial relationship to the multi-agent system. First, Congestion Traps, where an attacker induces a dilemma by broadcasting signals that trigger synchronised, exhaustive demand. Second, In- terdependence Cascades, where an attacker per- turbs a fragile equilibrium to trigger rapid, self- reinforcing failure loops similar to market \"flash crashes\". Third, Tacit Collusion, where the at- tacker acts as a mechanism designer, embedding environmental signals that function as correla- tion devices to synchronise behaviour without explicit communication. Fourth, Compositional Fragment Traps, where the adversary exploits the interaction structure by partitioning malicious payloads across multiple datasets. Finally, Sybil Attacks, where the attacker controls one or more fake agents to nudge group behaviour. In each case, the trap functions as a catalyst that pushes a multi-agent system toward a destructive equi- librium. Although there is some preliminary ev- idence pointing towards these risks, more work is needed to fully understand the dynamics of this emerging risk in modern multi-agent systems   12AI Agent Traps   built on multimodal foundation models.",
+    "score": 0.4341932528215469,
+    "source": "164 - AI Agent Traps.pdf",
+    "page": 12
+   },
+   {
+    "text": "Each agent was placed in a Discord server shared with its owner and, in some cases, with other agents and additional human participants. Agents on Discord server 1 were Ash, Flux, Jarvis, and Quinn; agents on Discord server 2 were Doug and Mira. Ash, Flux, Jarvis and Quinn use Kimi K 2.5 as LLM, and, Doug and Mira Claude Opus 4.6. Discord served as the primary interface for human–agent and agent–agent interaction: researchers issued instructions, monitored progress, and provided feedback through Discord messages. Agents also managed their own email accounts (via ProtonMail), handling incoming messages semi-autonomously—replying to routine emails on their own and escalating to their human via Discord when they encountered edge cases or suspicious messages.   The majority of agent actions during our experiments were initiated by human intervention, and most high-level direction was provided by humans. However, OpenClaw provides two mechanisms for agents to act autonomously:   Heartbeats are periodic background check-ins. By default, every 30 minutes the gateway triggers an agent turn with a prompt instructing it to follow its HEARTBEAT.md checklist (already present in the context window) and surface anything that needs attention.",
+    "score": 0.42850130119486396,
+    "source": "119 - Agents of Chaos.pdf",
+    "page": 6
+   },
+   {
+    "text": "Compared with LLMs, autonomous agents are more like humans. Using LLMs as their “brain” to think, agents are able to act in an environment with their “bodies”   1   ar X   iv :2   40 5.   02 95   7v 3   [ cs   .A I]   1 7   Ja n   20 25Figure 1. An overview of Agent Hospital. Agent Hospital is a simulacrum of hospital in which patients, nurses, and doctors are autonomous agents powered by large language models. Agent Hospital simulates the whole closed cycle of treating a patient’s illness: disease onset, triage, registration, consultation, medical examination, diagnosis, medicine dispensary, convalescence, and post-hospital follow-up visit. Doctor agents can keep improving treatment performance over time by reading medical textbooks and treating patient agents. An interesting finding is that the expertise doctor agents acquired in the virtual world is applicable to solving real-world medicare problems.   autonomously19–35. For example, Smallville5, which is a sandbox game world where 25 agents live and work, has demonstrated that human behaviors can be simulated by agents. These agents are able to plan their days, go to work, chat with neighbors, and reflect on days past.",
+    "score": 0.4270615195873545,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9d8ebbb6-4930-471e-a910-44fcfa166614",
+  "X-Amzn-Trace-Id": "Root=1-6b08050c-19ffecdf7d53b8231c881fcf;Parent=60aa182195f89bc5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.29
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:12+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agents of Chaos"
+ },
+ "from_cache": false
+}

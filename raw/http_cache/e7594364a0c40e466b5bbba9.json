@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.365,
+ "json": {
+  "query": "R-WoM: Retrieval-augmented World Model For Computer-use Agents",
+  "contexts": [
+   {
+    "text": "We propose R-WoM, a retrieval-augmented framework that grounds LLM-based world models with external tutorials, enabling environment- specific adaptation through retrieval-augmented simulation and listwise reward estimation.   2Published as a conference paper at ICLR 2026   • Empirical validation on realistic benchmarks. We demonstrate R-WoM’s effectiveness on two challenging computer-use benchmarks, WebArena (Zhou et al., 2023) and OSWorld (Xie et al., 2024), achieving consistent and substantial improvements (i.e., 5.6% to 23.4%) over competitive baselines, with particular advantages in longer-horizon scenarios.   2 BACKGROUND   2.1 PROBLEM FORMALIZATION   Given an initial task goal g, a computer-use agent interacts with the environment by iteratively receiving observations and executing actions to accomplish the task. Following the notation of prior work (Qin et al., 2025; Fang et al., 2025), we also introduce an intermediate reasoning component thought t, to capture thinking process. The resulting interaction trajectory can be expressed as   (g, (o1, t1, a1), (o2, t2, a2), . . . , (on, tn, an)), (1)   where oi is the observation at step i, ti is the reasoning thought generated before action selection, and ai is the executed action.",
+    "score": 0.7214702184286717,
+    "source": "031 - R-WoM Retrieval-augmented World Model For Computer-use Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "This highlights LLMs’ limita- tions in reliably modeling environment dynamics over long horizons. To address these limitations, we propose the Retrieval-augmented World Model (R-WoM), which grounds LLM simulations by incorporating factual, up-to-date knowledge retrieved from external tutorials. Experiments show that R-WoM achieves relative improvements of up to 23.4% and 16.3% on the subsets of OSWorld and Webarena compared to baselines, with particular advantage in longer-horizon simulations.   1 INTRODUCTION   World models have evolved from early symbolic planning systems to sophisticated neural ar- chitectures that learn latent representations of environment dynamics. Model-based reinforce- ment learning (MBRL) approaches, such as Dreamer v1-3 (Hafner et al., 2019; 2020; 2023) and MuZero (Schrittwieser et al., 2020), learn latent world models to “imagine” trajectories before se- lecting actions. More recently, Large Language Model (LLM)-based world models (Hao et al., 2023; Wang et al., 2024a; Zhang et al., 2024; Ge et al., 2024) have emerged as a new paradigm, leveraging large-scale pretraining to reason about action consequences in realistic digital environments.",
+    "score": 0.6806082117729182,
+    "source": "031 - R-WoM Retrieval-augmented World Model For Computer-use Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Published as a conference paper at ICLR 2026   R-WOM: RETRIEVAL-AUGMENTED WORLD MODEL FOR COMPUTER-USE AGENTS   Kai Mei Rutgers University kai.mei@rutgers.edu   Jiang Guo∗, Shuaichen Chang, Mingwen Dong AWS Agentic AI {gujiang, cshuaich, mingwd}@amazon.com   Dongkyu Lee, Xing Niu & Jiarong Jiang AWS Agentic AI {dkleekr, xingniu, jiarongj}@amazon.com   ABSTRACT   Large Language Models (LLMs) can serve as world models to enhance agent decision-making in digital environments by simulating future states and predicting action outcomes, potentially eliminating costly trial-and-error exploration. How- ever, this capability is fundamentally limited by LLM’s tendency to hallucination and their reliance on static training knowledge, which could lead to compound- ing errors that inhibit long-horizon simulations. To systematically investigate whether LLMs are appropriate for world modeling, we probe two core capabil- ities of world models – future state prediction and reward estimation – through three tasks: next-state identification, full-procedure planning alignment, and mile- stone transition recognition. Our analysis shows that while LLMs effectively cap- ture immediate next states and identify meaningful state transitions, their perfor- mance rapidly degrades in full-procedure planning.",
+    "score": 0.6636222263315438,
+    "source": "031 - R-WoM Retrieval-augmented World Model For Computer-use Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Learn-by-interact (Su et al., 2025) synthesizes trajectories by leveraging tutorials and interaction with the environments. These approaches focus on offline tra- jectory generation by referring to tutorials while our approach focuses on tutorial-guided grounding of LLMs as world models at inference time.   7 CONCLUSION AND FUTURE WORK   We presented a systematic study of LLM-based world models for computer-use tasks, revealing that while they can model state transitions and recognize task-relevant progress, they fail to reliably adapt to unfamiliar environments in long-term planning without grounding. To address this, we proposed the Retrieval-augmented World Model (R-WoM), which incorporates environment-specific tutorial knowledge during the imagination rollouts and reward prediction procedures to reduce hallucina- tions and stale knowledge. Evaluations on WebArena and OSWorld show that R-WoM consistently outperforms competitive baselines, demonstrating the efficacy of retrieval-augmented grounding for LLM agents in dynamic browser-use and computer-use scenarios.   10Published as a conference paper at ICLR 2026   8 ETHICS AND REPRODUCIBILITY STATEMENT.   Ethics. Our work uses only publicly available benchmarks (OSWorld and WebArena). While retrieval-augmented methods may inherit biases from external sources, our study remains confined to controlled environments.   Reproducibility. Our work is reproducible.",
+    "score": 0.6311164504514698,
+    "source": "031 - R-WoM Retrieval-augmented World Model For Computer-use Agents.pdf",
+    "page": 10
+   },
+   {
+    "text": "Figure 1: Example task: “Copy the screenshot 1.png from the desktop to where my cursor is lo- cated.” (Left:) Using LLM’s internal world knowledge, the agent loses cursor location and gets stuck. (Right:) With grounded world knowledge from tutorials, the agent uses the correct “Insert Image” operation while maintaining cursor position.   To systematically investigate whether LLMs can serve as effective world models, we probe two core capabilities: future state prediction and reward estimation. We design three evaluation tasks: next-state prediction and full-procedure planning alignment to assess LLMs’ future state prediction capability; and milestone transition recognition to assess LLMs’ reward estimation capability. Our analysis reveals that while LLMs demonstrate strong short-term dynamics understanding, such as identifying state changes and recognizing transition outcomes, they fail to maintain accuracy in full-procedure planning. This performance degradation over longer-horizon reasoning highlights fundamental limitations of LLM-based world modeling.   Motivated by these findings, we propose the Retrieval-augmented World Model (R-WoM) frame- work, which enhances LLM-based simulations by grounding them in external knowledge drawn from environment-specific tutorials. The core insight behind R-WoM is that while LLMs possess broad world knowledge from pretraining, they lack the specific, up-to-date procedural knowledge required for accurate simulation in dynamic digital environments.",
+    "score": 0.6275686846322988,
+    "source": "031 - R-WoM Retrieval-augmented World Model For Computer-use Agents.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "187058dd-51b4-40b7-8207-a8902a7c743e",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fc-51684fbb2d8623fb73452188;Parent=416c6644aa0700c3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.365
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "R-WoM: Retrieval-augmented World Model For Computer-use Agents"
+ },
+ "from_cache": false
+}

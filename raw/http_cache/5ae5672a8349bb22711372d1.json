@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.332,
+ "json": {
+  "query": "When combinations of humans and AI are useful: A systematic review and meta-analysis",
+  "contexts": [
+   {
+    "text": "Nature Human Behaviour | Volume 8 | December 2024 | 2293–2303 2293   nature human behaviour   https://doi.org/10.1038/s41562-024-02024-1Article   When combinations of humans and AI are useful: A systematic review and meta-analysis   Michelle Vaccaro    1,2, Abdullah Almaatouq    1 & Thomas Malone    1    Inspired by the increasing use of artificial intelligence (AI) to augment humans, researchers have studied human–AI systems involving different tasks, systems and populations. Despite such a large body of work, we lack a broad conceptual understanding of when combinations of humans and AI are better than either alone. Here we addressed this question by conducting a preregistered systematic review and meta-analysis of 106 experimental studies reporting 370 effect sizes. We searched an interdisciplinary set of databases (the Association for Computing Machinery Digital Library, the Web of Science and the Association for Information Systems eLibrary) for studies published between 1 January 2020 and 30 June 2023. Each study was required to include an original human-participants experiment that evaluated the performance of humans alone, AI alone and human–AI combinations.",
+    "score": 0.7948217722648673,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 1
+   },
+   {
+    "text": "Each study was required to include an original human-participants experiment that evaluated the performance of humans alone, AI alone and human–AI combinations. First, we found that, on average, human–AI combinations performed significantly worse than the best of humans or AI alone (Hedges’ g = −0.23; 95% confidence interval, −0.39 to −0.07). Second, we found performance losses in tasks that involved making decisions and significantly greater gains in tasks that involved creating content. Finally, when humans outperformed AI alone, we found performance gains in the combination, but when AI outperformed humans alone, we found losses. Limitations of the evidence assessed here include possible publication bias and variations in the study designs analysed. Overall, these findings highlight the heterogeneity of the effects of human–AI collaboration and point to promising avenues for improving human–AI systems.   People increasingly work with artificial intelligence (AI) tools in fields including medicine, finance and law, as well as in daily activi- ties such as travelling, shopping and communicating. These human– AI systems have tremendous potential given the complementary nature of humans and AI—the general intelligence of humans allows us to reason about diverse problems, and the computational power of AI systems allows them to accomplish specific tasks that people find difficult.",
+    "score": 0.607670340277608,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 1
+   },
+   {
+    "text": "It would thus facilitate the replica- tion, extension and synthesis of research in the field. For example, by applying advanced machine learning techniques on such a dataset, we could develop predictive models to guide the design of human–AI systems optimized for specific constraints and contexts. Additionally, it would provide a means to track progress in finding greater areas of human–AI synergy.   In conclusion, our results demonstrate that human–AI systems often perform worse than humans alone or AI alone. But our analysis also suggests promising directions for the future development of more effective human–AI systems. We hope that this work will help guide progress in developing such systems and using them to solve some of our most important problems in business, science and society.   Methods We conducted this meta-analysis in accord with the guidelines from Kitchenham55 on systematic reviews, and we followed the standards set forth by the Preferred Reporting Items for Systematic Reviews and Meta-Analyses56.   Literature review Eligibility criteria. Per our preregistration (https://osf.io/wrq7c/?view_ only=b9e1e86079c048b4bfb03bee6966e560), we applied the fol- lowing criteria to select studies that fit our research questions. First, the paper needed to present an original experiment that evaluated some instance in which a human and an AI system worked together to perform a task.",
+    "score": 0.5962109164290933,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 6
+   },
+   {
+    "text": "Discussion Systems that combine human intelligence and AI tools can address multiple issues of societal importance, from how we diagnose disease to how we design complex systems22–24. But some studies show that augmenting humans with AI can lead to better outcomes than humans or AI working alone24–26, while others show the opposite4,7,9. These seem- ingly disparate results raise two important questions: How effective is human–AI collaboration in general? And under what circumstances does this collaboration lead to performance gains versus losses? Our study analyses over three years of recent research to provide insights into both of these questions.   Performance losses from human–AI collaboration Regarding the first question, we found that, on average among recent experiments, human–AI systems did not exhibit synergy: the human–AI groups performed worse than either the human alone or the AI alone. This result complements the qualitative literature reviews on human–AI collaboration27–29, which highlight some of the surprising challenges that arise when integrating human intelligence and AI. For example, people often rely too much on AI systems (overreliance), using its sug- gestions as strong guidelines without seeking and processing more information6,30,31. Other times, however, humans rely too little on AI (underreliance), ignoring its suggestions because of adverse attitudes towards automation7,31,32.",
+    "score": 0.5808597659439141,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 3
+   },
+   {
+    "text": "These human– AI systems have tremendous potential given the complementary nature of humans and AI—the general intelligence of humans allows us to reason about diverse problems, and the computational power of AI systems allows them to accomplish specific tasks that people find difficult.   A large body of work suggests that integrating human creativity, intuition and contextual understanding with AI’s speed, scalability and analytical power can lead to innovative solutions and improved decision-making in areas such as health care1, customer service2 and scientific research3. However, a growing number of studies reveal that human–AI systems do not necessarily achieve better results than the best of humans or AI alone. Challenges such as communication barriers, trust issues, ethical concerns and the need for effective   Received: 6 April 2023   Accepted: 23 September 2024   Published online: 28 October 2024   Check for updates   1MIT Center for Collective Intelligence, Sloan School of Management, Massachusetts Institute of Technology, Cambridge, MA, USA. 2Institute for Data, Systems, and Society, Schwarzman College of Computing, Massachusetts Institute of Technology, Cambridge, MA, USA.  ",
+    "score": 0.5795488123599378,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "51572889-70c9-4583-9792-53e935169b39",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fa-7d23a1a5307bd45526ba4a23;Parent=7c061ee85fc5d91c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.332
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:54+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "When combinations of humans and AI are useful: A systematic review and meta-analysis"
+ },
+ "from_cache": false
+}

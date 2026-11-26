@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.315,
+ "json": {
+  "query": "What problem does the paper \"Recursive self-improvement of AI research agents\" tackle, and how does its AIDE2 system implement recursive self-improvement to address it?",
+  "contexts": [
+   {
+    "text": "2026-09-23   Recursive self-improvement of AI research agents Dhruv Srikanth1, Bingchen Zhao1, Dixing Xu1, Yuxiang Wu1 and Zhengyao Jiang1 1Weco AI   AI agents are beginning to automate research and development across the AI stack, from improving training efficiency to optimizing inference. A natural next step is to improve the research efficiency of the agents themselves. When an AI research agent’s own code is the object of optimization, each accepted rewrite becomes the agent that the next round edits. We refer to this loop as recursive self-improvement. Its significance lies in a long-standing trend, in which increased cumulative spending on R&D yields diminishing returns. Sustained self-improvement offers a way to counter this trend. We present AIDE2, a system that implements this loop for a frontier AI research agent. It proposes changes to its own code, benchmarks modified versions of itself on a suite of AI R&D tasks, and keeps the changes that perform best on hidden evaluations. In an autonomous 8-day run, AIDE2 discovered seven successive improvements, ranging from a new search policy to memory mechanisms that compress and manage the agent’s growing context. These gains generalize to four held-out benchmarks spanning machine learning engineering, heuristic algorithm engineering, and physics-based weather forecasting, the last of which is out of distribution from the selection tasks.",
+    "score": 0.8224640538151348,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Figure 1 illustrates this two-loop process structured as a nested tree search.   In one autonomous 8-day run, AIDE2 discovered seven successive improvements, each accepted only after it improved results on held-out data that the agent being rewritten never observes. We compare the discovered agents against AIDEhuman, a production research agent developed over two years of human-driven R&D that ranks among the strongest on FML-Bench (Zou et al., 2026). The strongest discovered agent matches or exceeds this baseline on four external benchmarks that never influenced the run. On a separate held-out task family, the reward hacking rate falls from 55% to 32%, below the 39% of the human-engineered agent. When used as the outer-loop agent, a discovered agent continues to produce accepted improvements, though due to compounding noise across both loops and the prohibitive cost of running additional seeds, its performance in that role cannot be decisively distinguished from the strong baseline.   In summary, we present AIDE2, a recursive self-improvement system in which an AI research agent improves its own research efficiency. Across the recursive self-improvement run, the loop repeatedly finds and accepts improvements under a fixed evaluation budget.",
+    "score": 0.8025884183729484,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "The outer-loop agent proposes a rewrite of the current incumbent’s code. Middle: the candidate is graded by running it as an optimizer on AI R&D tasks. Held-out scores across the tasks aggregate into the private grade 𝑔(𝑎). The rewrite is kept only if 𝑔(𝑎) improves on the incumbent’s grade. Right: each solution node is a runnable script for its task.   In this work, we study how recursive self-improvement can effectively advance frontier AI R&D. Our experiments target the harness layer, the code that surrounds a model and controls an agent’s search, context, and verification. As shown in appendix C, a substantial share of an agent’s realized capability is determined here. We present AIDE2, a two-loop system that carries out recursive self- improvement at the harness layer. In the inner loop, a research agent optimizes code against a measurable objective on problems drawn from a diverse set of AI R&D tasks. The outer loop performs a meta-level optimization over this inner-loop research process, rewriting the research agent with the objective of improving the research efficiency of the inner-loop agent. Figure 1 illustrates this two-loop process structured as a nested tree search.   In one autonomous 8-day run, AIDE2 discovered seven successive improvements, each accepted only after it improved results on held-out data that the agent being rewritten never observes.",
+    "score": 0.7510723639303227,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Across the recursive self-improvement run, the loop repeatedly finds and accepts improvements under a fixed evaluation budget. Those improvements generalize beyond the tasks used to select them, carry over to a domain the loop never encountered, and come   2Recursive self-improvement of AI research agents   with a reduction in reward hacking that was not part of the objective being optimized for. Measured against a strong baseline developed over two years of human-driven R&D, the discovered agents match or outperform it on the held-out benchmarks.   2. Method   We frame recursive self-improvement as a bi-level optimization problem consisting of two loops that iteratively optimize an agent against a measurable outcome. The inner loop acts on specific tasks designed to capture an agent’s ability to optimize code within a subset of AI R&D domains. The outer loop operates on a meta-level, working to improve the inner-loop agent’s optimization capability. Each inner-loop agent is evaluated at a fixed budget; therefore, improving the optimization capability directly improves the research efficiency of the inner-loop agent. Each accepted rewrite becomes the agent that the next step edits and evaluates. Both loops are driven by agents of the same tree-search design. Figure 1 illustrates this bi-level optimization process.   2.1. Recursive self-improvement   The inner loop. Given a codebase and a measurable metric, an inner-loop agent, denoted 𝑎, iteratively edits the code to improve performance under that metric.",
+    "score": 0.7244311575483194,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "In an autonomous 8-day run, AIDE2 discovered seven successive improvements, ranging from a new search policy to memory mechanisms that compress and manage the agent’s growing context. These gains generalize to four held-out benchmarks spanning machine learning engineering, heuristic algorithm engineering, and physics-based weather forecasting, the last of which is out of distribution from the selection tasks. On all four, the strongest discovered agent matches or exceeds a human-engineered production research agent that ranks among the strongest on FML-Bench. On a separate held-out task family, the discovered agents also exhibit reduced reward hacking, a property the loop never explicitly optimized for: the rate falls from 55% to 32% during the run, 7 percentage points below the human-engineered agent. Together, these results show that an AI research agent can improve its own research efficiency through recursive self-improvement, and that these gains transfer to tasks and domains the loop never encountered.   1.",
+    "score": 0.7236310568599682,
+    "source": "090 - Recursive self-improvement of AI research agents.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1731d18b-e36e-46bc-967a-bb3e92969897",
+  "X-Amzn-Trace-Id": "Root=1-6b080457-6f17d62d7cc3b9b719ab1ab6;Parent=013e6c03c85951c5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.315
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:11+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What problem does the paper \"Recursive self-improvement of AI research agents\" tackle, and how does its AIDE2 system implement recursive self-improvement to address it?"
+ },
+ "from_cache": false
+}

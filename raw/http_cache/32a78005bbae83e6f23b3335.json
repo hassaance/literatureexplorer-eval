@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 2.016,
+ "json": {
+  "id": "chatcmpl-f789da7e-477b-4331-9361-4a7d88794b64",
+  "object": "chat.completion",
+  "created": 1795687519,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "AgentSquare and CliffSearch differ in their research objectives and the core mechanisms they employ to achieve those objectives. \n\n**Research Objectives:**\n- **AgentSquare:** The primary objective of AgentSquare is to optimize Large Language Model (LLM) agents through modular design space by evolving and recombining modules. It aims to discover better agents compared to human-designed agents and provide a more efficient searching approach for LLM agent optimization.\n- **CliffSearch:** The primary objective of CliffSearch is to discover scientific algorithms through the optimization of structured scientific artifacts (theory+code). It focuses on a stricter scientific-discovery substrate with explicit artifact semantics and decision controls, emphasizing the optimization of scientific theories and their corresponding code.\n\n**Core Mechanisms:**\n- **AgentSquare:**\n  - **Initialization:** Starts with a global experience pool to seed well-designed agents and their performance metrics.\n  - **Module Recombination:** Uses LLMs as a self-adaptive proposer to identify promising module combinations based on accumulated experience.\n  - **Performance Predictor:** Implements an in-context surrogate model for efficient evaluation of novel agents.\n  \n- **CliffSearch:**\n  - **Optimization Object:** Focuses on optimizing structured scientific artifacts (theory+code) rather than code alone.\n  - **Reviewer Outputs:** Incorporates correctness and originality as hard selection gates alongside benchmark metrics.\n  - **Mutation:** Splits mutation into exploration (adjacent-domain novelty transfer) and correction (evidence-guided repair).\n\nIn summary, AgentSquare aims to optimize LLM agents through modular recombination and efficient evaluation, while CliffSearch aims to discover scientific algorithms by optimizing structured scientific artifacts with explicit decision controls."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1638,
+   "completion_tokens": 339,
+   "total_tokens": 1977
+  },
+  "contexts": [
+   {
+    "text": "CliffSearch is aligned with these directions but differs in three specific ways: (1) the optimization object is a structured scientific artifact (theory+code, with a compatible code-only mode) rather than code alone; (2) reviewer outputs (correctness and originality) are hard selection gates alongside benchmark metrics; and (3) mutation is explicitly split into exploration (adjacent-domain novelty transfer) and correction (evidence-guided repair). Relative to AlphaEvolve [3] and OpenEvolve [6], our goal is not a new generic evolutionary primitive, but a stricter scientific-discovery substrate with explicit artifact semantics and decision controls.   3 CliffSearch Framework   3.1 Task definition and optimization target   CliffSearch starts from a user-defined task contract: what is being optimized, how candidates are represented, which benchmark protocol/adapter must be executed, and which benchmark primary metric determines objective quality. This task contract is provided via task_type, task_preamble, and runtime grounding constraints, and is passed to all agents and benchmark adapters. The evolutionary loop is therefore generic, while task semantics (including benchmark definition) are explicit and injectable.   3.2 Node representation and artifact mode   The search unit is a node represented canonically as a strict JSON artifact with three content fields: summary_md, theory_content, and code_content.",
+    "score": 0.5786058141807054,
+    "source": "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+    "page": 3
+   },
+   {
+    "text": "𝑅1   𝑅2   𝑅3   𝑅4   𝑇1   𝑇2   𝑇3   𝑇4   𝑀1   𝑀2   𝑀3   𝑀4   𝑃1   𝑃2   𝑃3   𝑃4   Module Pool   𝑃2 𝑅2 𝑇2 𝑀2   𝑃3 𝑅3 𝑇3 𝑀3   𝑃4 𝑅4 𝑇4 𝑀4   𝑃1 𝑅1 𝑇1 𝑀1:   :   :   :   …   New Agents   Experience Pool   …   Webshop   Travelplanner   Alfworld   Sciworld   M3Tool …Evaluation   Evaluation   Task Evaluation   Reasoning   Tooluse   Memory   Agent Search   Feedback   Figure 3: Overview of AgentSquare search framework. AgentSquare optimizes LLM agents through the mechanisms of module evolution and recombination. We further introduce a performance pre- dictor that implements an in- context surrogate model for efficient evaluation of novel agents.",
+    "score": 0.5420130111169873,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 5
+   },
+   {
+    "text": "To further demonstrate the effectiveness of the search of AgentSquare, we compare three types of searching methods including module search, prompt search and agent search. Compared with the best agent crafted from these searching methods, AgentSquare achieves an average 8.4% per- formance improvement on Webshop, 8.1% improvement on ALFWorld, 11.0% improvement on SciWorld, 12.8% improvement on M3Tool, 2.5% improvement on Travelplanner, 1.4% improve- ment on PDDL. The comparison of search-based methods is conducted with a fixed LLM token budget to ensure fairness by maintaining the same number of search iterations. While in princi- ple ADAS has the potential to discover more sophisticated agents by searching in the entire code space, it may require more iterations (and thus higher LLM token usage) to achieve this.   Search trajectory in AgentSquare. We present the search trajectory under 15 iterations using AgentSquare based on GPT-4o and other searching methods on ALFWorld and Webhop tasks in Figure 4. Results on other tasks are presented in Figure A.13 and A.14. AgentSquare demonstrates a steady convergence trajectory, where more advanced agents are continually emerging during search. In contrast, module-level searching methods including random and Bayesian search lack a clear and insightful search direction.",
+    "score": 0.5344045963108943,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 8
+   },
+   {
+    "text": "From these results, we have the following observations:   • AgentSquare can effectively discover better agents compared with human-designed agents. On the six representative agent tasks, the best agent searched by AgentSquare consistently out- performs human-designed agents in terms of performance. Specifically, as shown in Table 1 and Table A.3, compared with the best human-designed agent, AgentSquare achieves an average 14.1% performance improvement on Webshop, 26.1% improvement on ALFWorld, 20.5% im- provement on SciWorld, 30.6% improvement on M3Tool, 6.0% improvement on Travelplanner, 6.0% improvement on PDDL. Simultaneously, the best agent from AgentSquare is commonly cost-efficient, which strikes the best performance-cost trade-off among all compared agents as seen in Figure A.7 -Figure A.12. Since the search cost is a one-time expense and the searched modules can be reused, it is not included in the above analysis, but separately listed in Table A.6.   • AgentSquare provides a more efficient searching approach for LLM agent optimization. To further demonstrate the effectiveness of the search of AgentSquare, we compare three types of searching methods including module search, prompt search and agent search.",
+    "score": 0.5109886267585129,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 8
+   },
+   {
+    "text": "Next, we detail the key components of the AgentSquare search process.   3.3 INITIALIZATION   Insights from existing AutoML studies indicate that a well-chosen initialization enhances warm-up and improves search efficiency by avoiding unpromising populations (So et al., 2019; Yuan et al., 2024). AgentSquare starts by initializing a global experience pool E = {(P,R, T,M, v)|P0 ∈ P, R0 ∈ R, T0 ∈ T,M0 ∈ M} to seed agents that are well-designed (as mentioned in Section 2) along with their real-valued performance v. The module pools {P,R,T,M} are set to the standard- ized modules extracted from these seed agents.   5Preprint   3.4 MODULE RECOMBINATION   Given the vast solution space of MoLAS, relying solely on prompt rewriting leads to a lim- ited exploration confined to the neighbor of the initial state. To expand the exploration space, we propose leveraging LLMs as a self-adaptive proposer, which iteratively reason to identify promising module combinations with accumulated experience beyond the original agent config- uration. Denote the initial agent of the recombination phase as A0   r = (P0, R0, T0,M0), where P0 ∈ P, R0 ∈ R, T0 ∈ T,M0 ∈ M.",
+    "score": 0.5046437485695503,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 5
+   }
+  ],
+  "sources": [
+   "048 - CliffSearch Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery.pdf",
+   "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+   "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+   "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+   "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f789da7e-477b-4331-9361-4a7d88794b64",
+  "X-Amzn-Trace-Id": "Root=1-6b08045d-3cb90e5235c31888626b501a;Parent=47ed6af66c6ee961;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 2.016
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:17+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "How do AgentSquare and CliffSearch differ in their research objectives and what core mechanisms do each framework employ to achieve those objectives?"
+   }
+  ]
+ },
+ "from_cache": false
+}

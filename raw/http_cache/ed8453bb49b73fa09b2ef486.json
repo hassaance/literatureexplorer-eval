@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.298,
+ "json": {
+  "query": "Towards Execution-Grounded Automated AI Research",
+  "contexts": [
+   {
+    "text": "Towards Execution-Grounded Automated AI Research   Chenglei Si * 1 Zitong Yang * 1 Yejin Choi 1 Emmanuel Candès 1 Diyi Yang 1 Tatsunori Hashimoto 1   Abstract Automated AI research holds great potential to accelerate scientific discovery. However, current LLMs often generate plausible-looking but inef- fective ideas. Execution grounding may help, but it is unclear whether automated execution is feasi- ble and whether LLMs can learn from the execu- tion feedback. To investigate these, we first build an automated executor to implement ideas and launch large-scale parallel GPU experiments to verify their effectiveness. We then convert two re- alistic research problems – LLM pre-training and post-training – into execution environments and demonstrate that our automated executor can im- plement a large fraction of the ideas sampled from frontier LLMs. We analyze two methods to learn from the execution feedback: evolutionary search and reinforcement learning. Execution-guided evolutionary search is sample-efficient: it finds a method that significantly outperforms the GRPO baseline (69.4% vs 48.0%) on post-training, and finds a pre-training recipe that outperforms the nanoGPT baseline (19.7 minutes vs 35.9 minutes) on pre-training, all within just ten search epochs.",
+    "score": 0.7673302544929141,
+    "source": "088 - Towards Execution-Grounded Automated AI Research.pdf",
+    "page": 1
+   },
+   {
+    "text": "To study the extent to which we can automate realistic LLM research, we chose two GPU-intensive research problems (LLM pre-training and post-training) that are critical for improving the capabilities of LLMs as the research envi- ronments for our automated AI researchers. For the first time, we demonstrate that our automated executor can im-   1   ar X   iv :2   60 1.   14 52   5v 1   [ cs   .C L   ] 2   0 Ja   n 20   26         https://arxiv.org/abs/2601.14525v1Towards Execution-Grounded Automated AI Research   plement a large fraction of LLM-generated ideas on these challenging open-ended research problems, with over 90% execution rates on the pre-training environment with Claude- 4.5-Sonnet and Claude-4.5-Opus.   To analyze whether grounding on execution-feedback can improve LLM idea generation, we define objective per- formance metrics for both environments and analyze the strengths and weaknesses of two popular learning algo- rithms: evolutionary search and reinforcement learning.   We use our automated executor to guide evolutionary search.",
+    "score": 0.6933117784207886,
+    "source": "088 - Towards Execution-Grounded Automated AI Research.pdf",
+    "page": 1
+   },
+   {
+    "text": "Execution Grounding for Code The idea of learning from execution feedback has been explored in the code generation domain. For example, Zheng et al. (2024) curate data and train models to refine code from either human or execution feedback; Gehring et al. (2025) use end-to-end RL training to teach models to improve code based on execution feedback; Lavon et al. (2025) directly guide code generation   9Towards Execution-Grounded Automated AI Research   with execution signals during inference time. In contrast, our work explores execution grounding for the application of idea generation, where the verification is more complicated and expensive.   7. Conclusion In this work, we built a large-scale parallel executor for au- tomatically executing model-generated ideas to verify their effectiveness on open-ended LLM research problems, in- cluding both LLM pre-training and post-training. Using this executor as a reward function, we analyzed the effective- ness of execution-guided evolutionary search, where frontier LLMs equipped with a simple evolutionary search scaffold can significantly outperform the baseline solutions. We also benchmarked and revealed the limitations of reinforcement learning with execution rewards, where models tend to con- verge on simple ideas to improve the average reward but lose diversity and do not improve the upper-bound. Our empirical results demonstrate the feasibility and potential of the automated execution feedback loop and also point out the remaining limitations for future improvement.",
+    "score": 0.6306131155465162,
+    "source": "088 - Towards Execution-Grounded Automated AI Research.pdf",
+    "page": 9
+   },
+   {
+    "text": "Execution-guided evolutionary search is sample-efficient: it finds a method that significantly outperforms the GRPO baseline (69.4% vs 48.0%) on post-training, and finds a pre-training recipe that outperforms the nanoGPT baseline (19.7 minutes vs 35.9 minutes) on pre-training, all within just ten search epochs. Frontier LLMs often generate meaningful algo- rithmic ideas during search, but they tend to sat- urate early and only occasionally exhibit scaling trends. Reinforcement learning from execution reward, on the other hand, suffers from mode collapse. It successfully improves the average re- ward of the ideator model but not the upper-bound, due to models converging on simple ideas. We thoroughly analyze the executed ideas and train- ing dynamics to facilitate future efforts towards execution-grounded automated AI research.   1. Introduction We envision automated AI research: LLMs generate re- search ideas to tackle important research problems, imple-   *Equal contribution. 1Stanford University. Correspondence: clsi@stanford.edu and zitong@berkeley.edu.",
+    "score": 0.6203674471503806,
+    "source": "088 - Towards Execution-Grounded Automated AI Research.pdf",
+    "page": 1
+   },
+   {
+    "text": "First, we observe a scaling trend with Claude-4.5-Opus, where searching for more epochs leads to a higher upper bound. In contrast, Claude-4.5-Sonnet and GPT-5 tend   4Towards Execution-Grounded Automated AI Research   0 1 2 3 4 5 6 7 8 9 Epoch   0.308   0.310   0.312   0.314   0.316   0.318   M ax   R ew   ar d   (1 /L   os s)   Max Reward (1/Loss) per Epoch (nanoGPT Environment)   GPT-5 Claude-4.5-Opus Claude-4.5-Sonnet   0 1 2 3 4 5 6 7 8 9 Epoch   0.500   0.525   0.550   0.575   0.600   0.625   0.650   0.675   0.700   M ax   A cc   ur ac   y   Max Accuracy per Epoch (GRPO Environment)   GPT-5 Claude-4.5-Opus Claude-4.5-Sonnet   Figure 3: Best performance at each epoch when performing execution-guided search with different models.",
+    "score": 0.616504785870511,
+    "source": "088 - Towards Execution-Grounded Automated AI Research.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "725f0e18-168e-4c00-853f-33b463cbb3f3",
+  "X-Amzn-Trace-Id": "Root=1-6b080507-3f2079881378122f0f4e5fc7;Parent=57e56da58adf4f1a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.298
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:06+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Towards Execution-Grounded Automated AI Research"
+ },
+ "from_cache": false
+}

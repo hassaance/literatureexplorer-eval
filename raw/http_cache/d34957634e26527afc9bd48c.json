@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.76,
+ "json": {
+  "id": "chatcmpl-d779b4a3-fbba-4a94-96a5-ef667e82e3b8",
+  "object": "chat.completion",
+  "created": 1795687449,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The model of types and levels of human interaction with automation distinguishes four classes of functions: 1) information acquisition; 2) information analysis; 3) decision and action selection; and 4) action implementation."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1702,
+   "completion_tokens": 45,
+   "total_tokens": 1747
+  },
+  "contexts": [
+   {
+    "text": "The economic benefits that automation can provide, or are perceived to offer, also tend to focus public attention on the technical capabilities of automation.   In contrast to the voluminous technical literature on automa- tion, there is a small but growing research base examining the humancapabilities involved in work with automated systems [1]–[8]. This work has shown clearly that automation does not simply supplant human activity but rather changes it, often in   1083-4427/00$10.00 © 2000 IEEE   Authorized licensed use limited to: Oulu University. Downloaded on October 15,2026 at 14:02:14 UTC from IEEE Xplore. Restrictions apply.PARASURAMAN et al.: TYPES AND LEVELS OF HUMAN INTERACTION WITH AUTOMATION 287   ways unintended and unanticipated by the designers of automa- tion [8], and as a result poses new coordination demands on the human operator [7]. Until recently, however, these findings have not had much visibility or impact in engineering and de- sign circles. Examination of human performance issues is es- pecially important because modern technical capabilities now force system designers to consider some hard choices regarding what to automate and to what extent, given that there is little that cannot be automated. In the present paper we propose a model for types and levels of automation that provides a framework and an objective basis for making such choices.",
+    "score": 0.6422897547431858,
+    "source": "023 - A model for types and levels of human interaction with automation.pdf",
+    "page": 1
+   },
+   {
+    "text": "286 IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART A: SYSTEMS AND HUMANS, VOL. 30, NO. 3, MAY 2000   A Model for Types and Levels of Human Interaction with Automation   Raja Parasuraman, Thomas B. Sheridan, Fellow, IEEE, and Christopher D. Wickens   Abstract—Technical developments in computer hardware and software now make it possible to introduce automation into virtu- ally all aspects of human-machine systems. Given these technical capabilities, which system functions should be automated and to what extent? We outline a model for types and levels of automa- tion that provides a framework and an objective basis for making such choices. Appropriate selection is important because automa- tion does not merely supplant but changes human activity and can impose new coordination demands on the human operator. We pro- pose that automation can be applied to four broad classes of func- tions: 1) information acquisition; 2) information analysis; 3) de- cision and action selection; and 4) action implementation. Within each of these types, automation can be applied across a continuum of levels from low to high, i.e., from fully manual to fully automatic. A particular system can involve automation of all four types at dif- ferent levels. The human performance consequences of particular types and levels of automation constitute primary evaluative cri- teria for automation design using our model.",
+    "score": 0.6222654904911105,
+    "source": "023 - A model for types and levels of human interaction with automation.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our goal is not to de- bate the theoretical structure of the human cognitive system but to propose a structure that is useful in practice. In this respect, the conceptualization shown in Fig. 1 provides a simple starting point with surprisingly far-reaching implications for automation design. Similar conceptual models have been found to be useful in deriving human factors recommendations for designing sys- tems in general [17].   The four-stage model of human information processing has its equivalent in system functions that can be automated. Ac- cordingly, we propose that automation can be applied to four classes of functions (see also [18] and related proposals in [9] and [19]):   1) information acquisition; 2) information analysis; 3) decision and action selection; 4) action implementation.   Each of these functions can be automated to differing de- grees, or many levels. The multiple levels of automation of decision making as shown in Table I can be applied, with some modification, to the information acquisition, information analysis, and action implementation stages as well, although the number of levels will differ between the stages. Fig. 2 provides a schematic of our model of types and levels of automation. As a convenient shorthand, we refer to the four types asacquisition, analysis, decision, andactionautomation. We also occasionally refer jointly to acquisition and analysis automation asinformationautomation.",
+    "score": 0.6130885727089311,
+    "source": "023 - A model for types and levels of human interaction with automation.pdf",
+    "page": 3
+   },
+   {
+    "text": "Several computational models of human-automation interac- tion have been put forward very recently, including models based on expected value statistics [37], [78], task-load models [79], cognitive-system models [80], and a model based on state-transition networks [81] (for a recent review of these models, see [82]). As these and related models mature and are validated, it may be possible to improve automation design by supplementing the qualitative analysis presented here with quantitative modeling.   VI. CONCLUSIONS   Automation design is not an exact science. However, nei- ther does it belong in the realm of the creative arts, with suc- cessful design dependent upon the vision and brilliance of indi- vidual creative designers. (Although such qualities can certainly help the “look and feel” and marketability of the automated system—see [83]). Rather, automation design can be guided by the four-stage model of human-automation interaction we have proposed, along with the consideration of several evaluative cri- teria. We do not claim that our model offers comprehensive de- sign principles but a simple guide. The model can be used as a starting point for considering what types and levels of automa- tion should be implemented in a particular system. The model also provides a framework within which important issues rel- evant to automation design may be profitably explored.",
+    "score": 0.5600917794895275,
+    "source": "023 - A model for types and levels of human interaction with automation.pdf",
+    "page": 9
+   },
+   {
+    "text": "The present paper is concerned with human performance in automated sys- tems. We therefore use a definition that emphasizes human-ma- chine comparison and define automation as a device or system that accomplishes (partially or fully) a function that was previ- ously, or conceivably could be, carried out (partially or fully) by a human operator [8].   III. A M ODEL FORTYPES ANDLEVELS OFAUTOMATION   In our definition, automation refers to the full or partial re- placement of a function previously carried out by the human operator. This implies that automation is not all or none, but can vary across a continuum of levels, from the lowest level of fully manual performance to the highest level of full automation. Several levels between these two extremes have been proposed [11], [12]. Table I shows a 10-point scale, with higher levels rep- resenting increased autonomy of computer over human action [10], based on a previously proposed scale [11]. For example, at a low level 2, several options are provided to the human, but the system has no further say in which decision is chosen. At level 4, the computer suggests one decision alternative, but the human   1In principle, our approach does not exclude the possibility of full automation, without any human operator involvement. This might suggest that our model is not needed if total automation is technically feasible.",
+    "score": 0.5423717241276307,
+    "source": "023 - A model for types and levels of human interaction with automation.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "023 - A model for types and levels of human interaction with automation.pdf",
+   "023 - A model for types and levels of human interaction with automation.pdf",
+   "023 - A model for types and levels of human interaction with automation.pdf",
+   "023 - A model for types and levels of human interaction with automation.pdf",
+   "023 - A model for types and levels of human interaction with automation.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d779b4a3-fbba-4a94-96a5-ef667e82e3b8",
+  "X-Amzn-Trace-Id": "Root=1-6b080419-7633355c07532dde1cb10696;Parent=18ceec51e99209ee;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.76
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:08+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Which four classes of functions does the model of types and levels of human interaction with automation distinguish?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 5.119,
+ "json": {
+  "id": "chatcmpl-776bdca2-5e2e-41e5-8434-73722dacb94a",
+  "object": "chat.completion",
+  "created": 1795687965,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The LIMIT dataset is a synthetic dataset created to highlight a fundamental limitation of embedding models in information retrieval. It is constructed by mapping combinations of documents into something that could be retrieved with a query, using attributes that someone could like (e.g., Jon likes Hawaiian pizza, sports cars, etc.). The dataset enforces two constraints for realism: (1) users shouldn’t have too many attributes, thus keeping the documents short (less than 50 per user) and (2) each query should only ask for one item to keep the task simple (e.g., “who likes X”). The dataset is designed to demonstrate that for a fixed embedding dimension, there will be some set of documents such that certain sets are unattainable as top-k sets, highlighting a theoretical and fundamental limit to embedding models."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1600,
+   "completion_tokens": 165,
+   "total_tokens": 1765
+  },
+  "contexts": [
+   {
+    "text": "Lexical models like BM25 do very well due to their higher dimensionality. Stars indicate models trained with MRL.   5.2 THE LIMIT DATASET   Dataset Construction In order to have a natural language version of this dataset, we need some way to map combinations of documents into something that could be retrieved with a query. One simple7 way to do this is to create a synthetic version with latent variables for queries and documents and then instantiate it with natural language. For this mapping, we choose to use attributes that someone could like (i.e. Jon likes Hawaiian pizza, sports cars, etc. ) as they are plentiful and don’t present issues w.r.t. other items: one can like Hawaiian pizza but dislike pepperoni, all preferences are valid. We then enforce two constraints for realism: (1) users shouldn’t have too many attributes, thus keeping the documents short (less than 50 per user) and (2) each query should only ask for one item to keep the task simple (i.e. “who likes X”). We gather a list of attributes a person could like through prompting Gemini 2.5 Pro. We then clean it to a final 1850 items by iteratively asking it to remove duplicates/hypernyms, while also checking the top failures with BM25 to ensure no overlap.",
+    "score": 0.6398422264041338,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 7
+   },
+   {
+    "text": "0.1 Gemini Embed 4 0.0 0.0 0.0 Gemini Embed 8 0.0 0.0 0.0 Gemini Embed 16 0.0 0.0 0.0 Gemini Embed 32 0.0 0.0 0.0 Gemini Embed 64 0.0 0.0 0.3 Gemini Embed 128 0.0 0.1 0.3 Gemini Embed 256 0.0 0.1 1.2 Gemini Embed 512 0.2 1.1 3.6 Gemini Embed 768 0.9 2.5 7.6 Gemini Embed 1024 1.3 2.7 8.1 Gemini Embed 2048 1.5 3.1 8.5 Gemini Embed 3072 1.6 3.5 10.0 GTE-ModernColBERT default 23.1 34.6 54.8 BM25 default 85.7 90.4 93.6   Table 5: Results on LIMIT.",
+    "score": 0.5645949257713788,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 22
+   },
+   {
+    "text": "We note that all of these options have various trade-offs and none provide a clear path to solving this problem as-is. We leave it to future work to develop new techniques to mitigate these issues: perhaps through one of these alterative categories or through new ideas around single-vector models that can resolve the underlying issue (potentially through techniques such as hyperencoders (Killingback et al., 2025) or other future work on single vector architectures yet to be developed).   6 CONCLUSION   We introduce the LIMIT dataset, which highlights a fundamental limitation of embedding models. We provide a theoretical connection which shows that, for a fixed embedding dimension there will be some set of documents such that certain sets are unattainable as top-k sets. We show these theoretical results hold empirically, through best case optimization of the vectors themselves, and make a practical connection to existing state-of-the-art models by creating a realistic and simple instantiation of the theory, called LIMIT, that these models cannot solve. Our results imply that the community should reconsider how instruction-based retrieval will impact future retrievers.   LIMITATIONS   Although our experiments provide theoretical insight for the most common type of embedding model (single vector) they do not hold necessarily for other architectures, such as multi-vector models. Although we showed initial empirical results with non-single vector models, we leave it to future work to extend our theoretical connections to these settings.",
+    "score": 0.5585144087505168,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 10
+   },
+   {
+    "text": "… Le sl ie   Figure 1: A depiction of the LIMIT dataset creation process, based on theoretical limitations. We test all combinations of relevance for N documents (i.e. in the figure, all combinations of relevance for three documents with two relevant documents per query) and instantiate it using a simple mapping.   vector representations in geometric space, there exist well-studied fields of mathematical research (Papadimitriou & Sipser, 1982) that could be used to analyze these representations.   Our work aims to bridge this gap, connecting known theoretical results in linear algebra with modern advancements in neural information retrieval. We draw upon research in high-dimensional geometry to provide a lower bound on the embedding dimension needed to represent a given combination of relevant documents and queries. Specifically, we show that for a given embedding dimension d there exist top-k combinations of documents that cannot be returned—no matter the query— highlighting a theoretical and fundamental limit to embedding models.   To show that this theoretical limit is true for any retrieval model or training dataset, we test a setting where the vectors themselves are directly optimized with the test data. This allows us to empirically show how the embedding dimension enables the solving of retrieval tasks. We find that there exists a crucial point for each embedding dimension (d) where the number of documents is too large for the embedding dimension to encode all combinations.",
+    "score": 0.5266013597734849,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 2
+   },
+   {
+    "text": "Rather than using difficult query operators like QUEST, BrowseComp, etc. (which are already difficult for reasons outside of the qrel matrix) we choose very simple queries and documents to highlight the difficulty of representing all top-k sets themselves.   6Published as a conference paper at ICLR 2026   32 512 1024 2048 3072 4096 Embed Dim   0.0   0.2   0.4   0.6   0.8 Sc   or e   Recall@2   32 512 1024 2048 3072 4096 Embed Dim   Recall@10   32 512 1024 2048 3072 4096 Embed Dim   Recall@100   E5-Mistral 7B Snowflake Arctic L   GritLM 7B Promptriever Llama3 8B   Qwen3 Embed Gemini Embed   BM25 GTE-ModernColBERT   Figure 3: Scores on the LIMIT task. Despite the simplicity of the task we see that SOTA models struggle. We also see that the dimensionality of the model is a limiting factor and that as the dimension increases, so does performance. Even multi-vector models struggle. Lexical models like BM25 do very well due to their higher dimensionality.",
+    "score": 0.5248200363118111,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 6
+   }
+  ],
+  "sources": [
+   "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+   "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+   "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+   "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+   "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "776bdca2-5e2e-41e5-8434-73722dacb94a",
+  "X-Amzn-Trace-Id": "Root=1-6b08061c-41ab79ff7e159fd83a012646;Parent=35f6bf2ac7368af4;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 5.119
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:40+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the LIMIT dataset?"
+   }
+  ]
+ },
+ "from_cache": false
+}

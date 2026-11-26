@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.298,
+ "json": {
+  "query": "Latent Collaboration in Multi-Agent Systems",
+  "contexts": [
+   {
+    "text": "Latent Collaboration in Multi-Agent Systems   Jiaru Zou 1 2 * † Ruizhong Qiu 3 † Gaotang Li 3 † Xiyuan Yang 3 † Katherine Tieu 3 † Pan Lu 2 † Ke Shen Hanghang Tong 3 Yejin Choi 2 Jingrui He 3 B James Zou 2 B Mengdi Wang 1 B Ling Yang 1 B   Project Page: https://github.com/Gen-Verse/LatentMAS   ↓ 85.9%   Avg. 83.7% Fewer Tokens   # of   To ke   ns   ↓ 81.7% ↓ 83.5%   ↓ 84.7% ↓ 82.7%   ↓ 83.4%   97.9   93.7   89.8   74.2   72.281.3   63.3   58.4   50.0   Avg. +13.3% Accuracy   En d-   to -E   nd S   pe ed   -u p   x3.2 x3.7   x3.1 x4.1   x3.4 x3.4   x4.7 x5.7   x7.0   Avg. x4.3 Faster Inference   Figure 1.",
+    "score": 0.7635016766034302,
+    "source": "180 - Latent Collaboration in Multi-Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "x∈V σxWout,xWa=ê]1[ ∑   x∈V σxWin,x=e] (9)   = ∑   σ∈supp(Pσ)   Pσ(σ)1[β ∑   x∈V σxWout,xWa=ê]   ∑ e∈supp(Pe)   1[ ∑   x∈V σxWin,x=e] (10)   = ∑   σ∈supp(Pσ)   Pσ(σ)1[β ∑   x∈V σxWout,xWa=ê]1[ ∑   x∈V σxWin,x∈supp(Pe)] (11)   = ∑   σ∈supp(Pσ)   Pσ(σ)1[β ∑   x∈V σxWout,xWa=ê] (12)   = Pê,Wa (ê); (13)   15Latent Collaboration in Multi-Agent Systems   and that for every e,∑ ê∈supp(Pê,Wa )   γ∗(ê, e) = ∑   ê∈supp(Pê,Wa )   ∑ σ∈supp(Pσ)",
+    "score": 0.7527615352198194,
+    "source": "180 - Latent Collaboration in Multi-Agent Systems.pdf",
+    "page": 15
+   },
+   {
+    "text": "Additional methods introduce structured communication protocols to enhance cooperation efficiency (Ye et al., 2025a) and emergent specialization (Mieczkowski et al., 2025; Huang et al., 2026) among agents. Building upon these advanced text-MAS methods, our work   aims to construct a multi-agent collaboration system entirely in latent space, treating agents as tightly integrated compo- nents to achieve more expressive and efficient coordination.   Model Collaboration in Latent Space. Recent studies on model collaboration (Tran et al., 2025) have gradually shifted from text-level coordination toward interaction di- rectly in latent representations. Instead of exchanging infor- mation through texts, these works (Coda-Forno et al., 2025; Ye et al., 2025a; Fu et al., 2025; Zheng et al., 2025) enable models to communicate through model internal states such as hidden representations (Coda-Forno et al., 2025) for ef- ficiency (Kong et al., 2026). Most existing methods rely on auxiliary alignment mechanisms and typically require additional training to facilitate effective cross-model com- munication. On the other hand, LatentMAS is a training-free latent multi-agent system in which each agent reasons and communicates via native latent representations.   We leave additional related works on latent reasoning and agent collaboration in Appendix H.   7.",
+    "score": 0.6685033770003292,
+    "source": "180 - Latent Collaboration in Multi-Agent Systems.pdf",
+    "page": 9
+   },
+   {
+    "text": "Impact Statement This paper introduces LatentMAS, a framework for multi- agent collaboration in the latent space, aiming to improve reasoning performance while reducing inference cost. The methods and findings in this work are intended to advance research in efficient and scalable machine learning systems. We do not anticipate immediate negative societal impacts beyond those commonly associated with deploying more capable and efficient language model systems.   9Latent Collaboration in Multi-Agent Systems   References Acharya, D. B., Kuppan, K., and Divya, B. Agentic ai:   Autonomous intelligence for complex goals–a compre- hensive survey. IEEe Access, 2025.   Ainsworth, S. K., Hayase, J., and Srinivasa, S. Git re-basin: Merging models modulo permutation symmetries. arXiv preprint arXiv:2209.04836, 2022.   Cemri, M., Pan, M. Z., Yang, S., Agrawal, L. A., Chopra, B., Tiwari, R., Keutzer, K., Parameswaran, A., Klein, D., Ramchandran, K., et al. Why do multi-agent llm systems fail? arXiv preprint arXiv:2503.13657, 2025.",
+    "score": 0.6590988670536091,
+    "source": "180 - Latent Collaboration in Multi-Agent Systems.pdf",
+    "page": 9
+   },
+   {
+    "text": "= √ ∥βWoutWa −Win∥2F (30)   = ∥βWoutWa −Win∥F . (31)   16Latent Collaboration in Multi-Agent Systems   A.2. Solving the Alignment Matrix Wa   In Section 3.1, we put the last-layer hidden states h back to the input sequence to enable the model’s latent reasoning. However, since the h is not perfectly aligned with the input embedding space, directly feeding h into shallow layers may lead to out-of-distribution activation patterns inside LLMs. To mitigate this in a training-free way, we seek a matrix Wa   which maps h to a valid input space (i.e., e = hWa). A straightforward way to calculate Wa is to enforce that the aligned latent vector e behaves similarly to a real input embedding when it enters the model.",
+    "score": 0.6177423162177675,
+    "source": "180 - Latent Collaboration in Multi-Agent Systems.pdf",
+    "page": 16
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4d32d92b-7677-4c81-9763-5fcd40a5aa56",
+  "X-Amzn-Trace-Id": "Root=1-6b080517-569b51937bd8219d776ff4bc;Parent=5ec67a7b4bf1f0b4;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.298
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Latent Collaboration in Multi-Agent Systems"
+ },
+ "from_cache": false
+}

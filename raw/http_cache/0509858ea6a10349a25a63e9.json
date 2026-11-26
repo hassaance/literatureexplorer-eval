@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.282,
+ "json": {
+  "query": "LARP: Language-Agent Role Play for Open-World Games",
+  "contexts": [
+   {
+    "text": "LARP: LANGUAGE-AGENT ROLE PLAY FOR OPEN-WORLD GAMES   Ming Yan *†1, Ruihao Li *1, Hao Zhang1, Hao Wang1, Zhilan Yang1, and Ji Yan1   1MiAO   ABSTRACT   Language agents have shown impressive problem-solving skills within defined settings and brief timelines. Yet, with the ever-evolving complexities of open-world simulations, there’s a pressing need for agents that can flexibly adapt to complex environments and consistently maintain a long- term memory to ensure coherent actions. To bridge the gap between language agents and open- world games, we introduce Language Agent for Role-Playing (LARP), which includes a cognitive architecture that encompasses memory processing and a decision-making assistant, an environment interaction module with a feedback-driven learnable action space, and a postprocessing method that promotes the alignment of various personalities. The LARP framework refines interactions between users and agents, predefined with unique backgrounds and personalities, ultimately enhancing the gaming experience in open-world contexts. Furthermore, it highlights the diverse uses of language models in a range of areas such as entertainment, education, and various simulation scenarios.",
+    "score": 0.8155732774490293,
+    "source": "116 - LARP Language-Agent Role Play for Open-World Games.pdf",
+    "page": 1
+   },
+   {
+    "text": "These challenges include but are not limited to interpreting complex environments, memorizing long-term events, generating expressions that cohere with character and environmental settings, and continuously learning from interactions with the environment.   Hence, in this work, we propose a game-oriented Role-Playing Agent framework, Language Agent for Role Play (LARP) toward open-world games. LARP focuses on blending the open-world games with language agents, utilizing a modular approach for memory processing, decision-making, and continuous learning from interactions. In the agent’s internal depiction, we designed a complex cognitive architecture based on cognitive psychology, equipping agents under the LARP framework with high playability and uniquity. Aiming to yield more realistic role-playing experience, we regularized agents using the data and context of the open-world gaming environment, prior set personalities, knowledge, rules, memory, and post constraints, which can be seen as a specific case within the general-purpose language agents. As for the general agent architecture, it typically requires a large-scale language model. However, our architecture incorporates a cluster of smaller language models, each fine-tuned for different domains, to handle various tasks separately. This design contributes new experiences and perspectives to developing language agents for open-world role-playing games.   The rest of this work is organized as follows: Section 2 discusses the related works on agent framework and agent components. In Section 3, we present the cognitive architecture part of LARP.",
+    "score": 0.707774906599763,
+    "source": "116 - LARP Language-Agent Role Play for Open-World Games.pdf",
+    "page": 2
+   },
+   {
+    "text": "Open-world games present a rich, dynamic, and engaging environment, encompassing complex missions and storylines. They require the use of agents to equip non-player characters with diversified behaviors. Although numerous studies have proposed architectures for general   *Equal Contribution †Correspondence to: mingyan@miao.company   ar X   iv :2   31 2.   17 65   3v 1   [ cs   .A I]   2 4   D ec   2 02   3         https://miao-ai-lab.github.io/LARP/Figure 1: Cognitive Architecture of LARP Overview.   language agents that could be applied in open-world games like Minecraft [Lin et al., 2023, Park et al., 2023], a gap still exists between the general-purpose agents and the overall requirements in an open-world gaming context. General-purpose language agents are created to address a variety of issues in realistic environments. Their primary requisites are universality and the simulation of human behavior. These agents can adapt to various environments and tasks, without being restricted to fixed roles. However, these general-purpose language agents face significant challenges in practical open-world environments. These challenges include but are not limited to interpreting complex environments, memorizing long-term events, generating expressions that cohere with character and environmental settings, and continuously learning from interactions with the environment.",
+    "score": 0.5907331891442265,
+    "source": "116 - LARP Language-Agent Role Play for Open-World Games.pdf",
+    "page": 1
+   },
+   {
+    "text": "These works also aim to boost the interaction capability between the agents and users, making the agents appear more self-conscious [Wang et al., 2023b, Shao et al., 2023, Shanahan et al., 2023, Li et al., 2023a]. Other studies focus on role-playing and interaction among multiple agents, which include scenarios such as collaboration to complete tasks [Li et al., 2023b, Chen et al., 2023a, Qian et al., 2023, Li et al., 2023c, Wu et al., 2023], simulating daily activities [Lin et al., 2023, Park et al., 2023, Wang et al., 2023c, Liu et al., 2023a], and promoting progress in debates [Liang et al., 2023, Du et al., 2023, Chan et al., 2023].   In addition to this, language agents are also applied in open-world environments.",
+    "score": 0.5504644239754504,
+    "source": "116 - LARP Language-Agent Role Play for Open-World Games.pdf",
+    "page": 3
+   },
+   {
+    "text": "However, in open-world games with free actions and rich gaming content, agents need to interact with the game environment by connecting the internal and the external. There are various works in employing language agents to interact with open-world game environments [Wang et al., 2023d, Zhu et al., 2023, Yang et al., 2023, Wang et al., 2023e]. For instance, Voyager uses the concept of an automatic curriculum, obtaining objectives by feeding GPT4 the contents and states of environmental observations. Then, GPT4 is prompted to generate the functioning code to reach the objectives. The paper also presents the skill library method, which embeds the description of the generated code as a key and the code as a value, achieving high   6Figure 4: Environment Interaction.   extensibility of incorporating new skills by adding key-value pairs. Octopus utilizes the Visual Language Model (VLM) to acquire observations. However, this approach can lead to high dimensions of data feature distribution, resulting in poor controllability. Moreover, the operational cost of the VLM is high, and it’s challenging to collect the data set’s prior knowledge within the game.   Figure 4 shows the fundamental interaction procedural. Interior refers to the working memory and the tasks that need to be executed based on the current situation, generated by the observation and cognitive architecture.",
+    "score": 0.5494477624922842,
+    "source": "116 - LARP Language-Agent Role Play for Open-World Games.pdf",
+    "page": 6
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "532ea44d-fe88-417d-8f60-01e90ba43822",
+  "X-Amzn-Trace-Id": "Root=1-6b08050c-63dca191405057c3236643da;Parent=4e6f39f0e419c4d1;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.282
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:12+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "LARP: Language-Agent Role Play for Open-World Games"
+ },
+ "from_cache": false
+}

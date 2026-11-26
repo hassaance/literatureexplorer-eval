@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.291,
+ "json": {
+  "query": "In the paper \"Answering Developer Questions with Annotated Agent-Discovered Program Traces,\" how do the authors map the predator–prey metaphor of Information Foraging Theory to software development tasks?",
+  "contexts": [
+   {
+    "text": "The infor- mation needed to answer them can be scattered across files, buried in layers of indirection, or hidden behind patterns like event dis- patch or dynamic dispatch [26, 27]. Developers must decide where to begin, which paths to follow, and how far to go, often without strong cues to guide them [41]. While code navigation tools in the IDE can help developers answer them, they also require developers to piece together answers from long lists of low-level results [26].   2.2 Information Foraging Theory In our work, we describe information foraging theory (IFT) as providing a template for designing autonomous components of tools for answering reachability questions. IFT models search as the iterative exploration of information patches with continuous judgments of which patches to explore [37, 38]. Some of its earliest applications focused on modeling web browsing behavior [7, 8], and since it has become an influential model for describing program debugging [16, 29] and code navigation [34].   We borrow the following constructs from IFT. In IFT, there is a predator (in our case, a developer) searching for prey (such as where a value is used in a program). The predator attends to cues in the code (e.g., identifier names, comments). These cues offer “scent,” or a sense of how likely further investigation will lead to useful information.",
+    "score": 0.5822607961707397,
+    "source": "103 - Answering Developer Questions with Annotated Agent-Discovered Program Traces.pdf",
+    "page": 2
+   },
+   {
+    "text": "UIST ’25, Busan, Republic of Korea © 2025 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-2037-6/25/09 https://doi.org/10.1145/3746059.3747652   CCS Concepts • Human-centered computing → Interactive systems and tools.   Keywords programming assistants, reachability questions, information forag- ing, program traces   ACM Reference Format: Litao Yan, Jeffrey Tao, Lydia B Chilton, and Andrew Head. 2025. Answering Developer Questions with Annotated Agent-Discovered Program Traces. In The 38th Annual ACM Symposium on User Interface Software and Technology (UIST ’25), September 28–October 01, 2025, Busan, Republic of Korea. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/3746059.3747652   1 Introduction A central challenge in understanding modern code bases is an- swering reachability questions [26, 27], which ask how control or data flows across a program. For example, a developer might ask of a UI components library, “How does this code disable scrolling of the window when a modal dialog is showing?” Answering these questions requires developers to explore code paths from where a behavior begins to its outcomes and effects.",
+    "score": 0.5698761896483596,
+    "source": "103 - Answering Developer Questions with Annotated Agent-Discovered Program Traces.pdf",
+    "page": 1
+   },
+   {
+    "text": "Their experience may differ from that of professional developers. For in- stance, they may have less exposure to large-scale code bases, more varied tool usage habits, and respond differently to time pressure in lab studies. That said, most participants reported regular use of modern IDEs and AI coding tools. While we believe that our study captures meaningful behaviors, future evaluation with industry developers is needed to understand how well these patterns hold in professional settings.Answering Developer Questions with Annotated Agent-Discovered Program Traces UIST ’25, September 28–October 01, 2025, Busan, Republic of Korea   7.3 Future Work Generalizing Trailblazers for other domains. While Trailblazer   was designed for code base question answering, we envision that the underlying interaction pattern could extend to other domains. The core of our design pattern is to present agent-driven search as a trace that users can inspect and replay. This pattern is well-suited to settings where the problem space can be represented as a graph, the agent can access domain-specific search tools, the search process involves many decisions, and users need to understand what the agent did and how its choices led to an answer. This pattern could support exploration in any domain where people seek to recover and make sense of paths through graph-structured information.",
+    "score": 0.556341474996558,
+    "source": "103 - Answering Developer Questions with Annotated Agent-Discovered Program Traces.pdf",
+    "page": 10
+   },
+   {
+    "text": "The system was tuned for TypeScript and TSX code, which offer strong typing that helps IDE tools reliably find definitions and references. While not a production-ready system, this prototype reflects the overarching architecture we believe is appropriate for answering reachability questions. Our implementation draws inspiration from informa- tion foraging theory (IFT, see Section 2.2,), modeling the agent’s behavior as a forager that identifies prey, selects promising patches, makes local decisions based on context, and presents findings withUIST ’25, September 28–October 01, 2025, Busan, Republic of Korea Litao Yan, Jeffrey Tao, Lydia B Chilton, and Andrew Head   Figure 3: Replayable walkthrough of code exploration. The walkthrough begins at the code location selected by the programmer and reveals only the relevant steps leading to the target snippet (➊). Brief annotations at key steps explain how each location was reached (➋). At each step, the corresponding portion of the code snippet is automatically pulled up and highlighted with a light blue border (➌). Programmers can navigate through the walkthrough using forward and back buttons, enabling them to trace the path taken by the agent and inspect each step along the way (➍).   a walkable trace. Here, we provide an overview of how the system works, described in terms of the constructs of IFT.3   Prey.",
+    "score": 0.5511562288836902,
+    "source": "103 - Answering Developer Questions with Annotated Agent-Discovered Program Traces.pdf",
+    "page": 5
+   },
+   {
+    "text": "Answering Developer Questions with Annotated Agent-Discovered Program Traces   Litao Yan University of Pennsylvania   Philadelphia, PA, USA ltyan@seas.upenn.edu   Jeffrey Tao University of Pennsylvania   Philadelphia, PA, USA jefftao@seas.upenn.edu   Lydia B Chilton Columbia University New York, NY, USA   chilton@cs.columbia.edu   Andrew Head University of Pennsylvania   Philadelphia, PA, USA head@seas.upenn.edu   Figure 1: Overview of Trailblazer. Trailblazer helps developers answer questions that cut across a code base (➊). It explores the code with an agent that performs incremental static analysis over the source code (➋). The tool presents answers as a combination of a concise natural language summary, a descriptive tour of key discovered snippets, and replayable annotated walkthroughs (➌). By combining flow analysis and AI, Trailblazer accumulates answers as annotated, replayable program traces that help developers understand not just what the answer is, but how it can be reached.   Abstract Developers often find themselves asking questions that cut across a code base. Answering these questions requires gathering relevant facts and tracing flow through the program. Yet today’s tools offer limited support for answering these questions. Developers can ei- ther use imprecise AI tools that ignore flow or flow-tracing tools that impose a great number of choices.",
+    "score": 0.5292915251097436,
+    "source": "103 - Answering Developer Questions with Annotated Agent-Discovered Program Traces.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "cf36f5aa-29b0-4026-abcd-c723d215b5a4",
+  "X-Amzn-Trace-Id": "Root=1-6b08044d-53f803271f3b293531f34d1c;Parent=2a5b367578a2f29b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.291
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:00+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper \"Answering Developer Questions with Annotated Agent-Discovered Program Traces,\" how do the authors map the predator–prey metaphor of Information Foraging Theory to software development tasks?"
+ },
+ "from_cache": false
+}

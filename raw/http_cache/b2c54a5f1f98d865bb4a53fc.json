@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.332,
+ "json": {
+  "query": "On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models",
+  "contexts": [
+   {
+    "text": "On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models   Mudit Verma* Siddhant Bhambri* Subbarao Kambhampati   School of Computing and AI Arizona State University   {muditverma, sbhambr1, rao}@asu.edu   Abstract   The reasoning abilities of Large Language Models (LLMs) remain a topic of debate. Some methods such as ReAct-based prompting, have gained popularity for claiming to enhance sequential decision-making abilities of agentic LLMs. However, it is unclear what is the source of improvement in LLM reasoning with ReAct based prompting. In this paper we examine these claims of ReAct based prompting in improving agentic LLMs for sequential decision-making. By introducing systematic variations to the input prompt we perform a sensitivity analysis along the claims of ReAct and find that the performance is minimally influenced by the \"interleaving reasoning trace with action execution\" or the content of the generated reasoning traces in ReAct, contrary to original claims and common usage. Instead, the performance of LLMs is driven by the similarity between input example tasks and queries, implicitly forcing the prompt designer to provide instance-specific examples which significantly increases the cognitive burden on the human.",
+    "score": 0.8005566653047469,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "It is much higher ( 80% for GPT-3.5-Turbo, 90% for Claude-Haiku) for weaker LLM models. This further highlights the inability of LLMs to operationalize its generated thought as also seen in [Roy et al., 2024]. From manual inspection we find that the typical thoughts would enlist all possible locations as next locations to visit for most of the tasks. As demonstrated in Section 5.2, the performance of LLMs actually decreases when provided with foresight guidance, as seen with the base ReAct model. A detailed investigation into the validity of the generated reasoning traces is beyond the scope of this work and is suggested as future research.   6 Conclusion ReAct based prompt engineering methods have been claimed to improve planning abilities of Large Language Models. In this study, we critically examine ReAct along three dimensions, informed by its claims and our hypotheses regarding its performance sources. Contrary to ReAct’s claims, our findings reveal that its performance is neither due to interleaving reasoning trace and guidance information generation with action execution, nor due to the specific nature of the guidance information. Instead, we identify that the true source of LLM performance in sequential decision-making tasks, such as AlfWorld, is the high degree of similarity between exemplar problems (few-shot) and the query task.",
+    "score": 0.5830226288196013,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 9
+   },
+   {
+    "text": "Depending on the domain and task, prompt designers may provide abstract guidance, task-specific instructions within the same domain, analogical examples, or global reasoning traces. ReAct’s inability to robustly adapt to such variations underscores its limitations in handling diverse input prompts, thereby necessitating a closer examination of its design and implementation. In this work, we systematically evaluate the brittleness of ReAct by studying which potential factors contribute to its performance. This analysis is conducted through variations in input prompts to understand how a ReAct LLM Agent responds to (1) where the guidance is provided, (2) the different types and structure of this guidance, and finally, (3) on varying the resemblance of example prompt to the queried problem. We investigate the research questions :   RQ1: Does the agent performance depend on interleaving reasoning trace with action execution? RQ2: How does the nature of the reasoning trace or guidance information affect the performance of LLM Agents? RQ3: How does the similarity between the example 〈problem, solution〉and the query 〈problem, ? 〉, which are present in the prompt, affect LLM Agent performance?   We conduct extensive experiments on the AlfWorld domain using various LLM Models, including GPT-3.5-turbo, GPT-3.5-instruct, GPT-4 and Claude-Opus.",
+    "score": 0.5811018764773495,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "In ReAct experiments, authors provide two example problem-solution pairs (referred to as exemplars in our work) before querying the LLM agent with a problem instance. Authors force ReAct agent to use examples and queries belonging to the same problem class without motivating this design decision. However, the queried problem may differ in objects or locations from the exemplars.   3 Related Work Large Language Models have been shown to be successful in a plethora of natural language tasks [Kocoń et al., 2023, Gilardi et al., 2023, Zhu et al., 2023, Bubeck et al., 2023, Bhattacharjee et al., 2024]. However, there are two schools of thought when it comes to utilizing off-the-shelf LLMs for planning and reasoning tasks. Works such as Chain of Thought, ReAct, and others that followed [Wei et al., 2022, Yao et al., 2023, Long, 2023, Yao et al., 2024, Besta et al., 2024, Fu et al., 2024, Aksitov et al., 2023], have argued about the reasoning abilities of LLMs by proposing prompting methods.",
+    "score": 0.5681772801371546,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "RAG’s agility overcomes static limitations, making it a game-changer for tasks requiring up- to-date knowledge. RAG outperformed seq2seq models and task-specific architectures on ODQA benchmarks, achieving exact match scores, reaching up to 56.8% on TriviaQA and 44.5% on Natural Questions.   ReAct Prompting Unlike previous studies that treated reasoning and action sep- arately, ReAct [Yao et al., 2022] enables LLMs to generate reasoning traces and task-specific actions concurrently. This interleaved process enhances synergy between reasoning and action, facilitating the model in inducing, tracking, and updat- ing action plans while handling exceptions. ReAct is applied to diverse language and decision-making tasks, showcasing its effectiveness over state-of-the-art baselines. Notably, in question answering (HotpotQA) and fact verification (Fever), ReAct addresses hallucination and error propagation issues by interacting with a simple Wikipedia API, producing more inter- pretable task-solving trajectories. Additionally, in interactive decision-making benchmarks like ALFWorld and WebShop, ReAct surpasses both imitation and reinforcement learning approaches, achieving notable success rates of 34% and 10%, respectively, with minimal in-context examples.",
+    "score": 0.5513000665908805,
+    "source": "016 - A Systematic Survey of Prompt Engineering in Large Language Models Techniques and Applications.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0b6a07f3-0bb3-445f-8480-bea85772eb89",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fa-31ccf95e2d7d117e3c7f71de;Parent=50c4e9c99088c0e9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.332
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:53+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models"
+ },
+ "from_cache": false
+}

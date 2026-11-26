@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.39,
+ "json": {
+  "query": "Clarus: Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration",
+  "contexts": [
+   {
+    "text": "Clarus   Clarus: Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration   Zihan Guo1,6,7, Zeyi Chen2,6, Zhiyu Chen3,6, Zicai Cui2, Shuai Shao2, Bo Huang2,6, Zhi Han2, Yuanyi Song2,6, Yuan Yuan2, Chenxi Zeng4,7,   Xiaohang Nie5,6, Zhengxi Yu3, Hanwen Zhu2, Junwei Liao2,6, Ming Zhou7, Yang Li2,7, Yuanjian Zhou6, Weinan Zhang2,6,7∗   1 Sun Yat-sen University 2 Shanghai Jiao Tong University 3 Tongji University 4 Jilin University 5 Harbin Institute of Technology   6 Shanghai Innovation Institute 7 Shanghai Artificial Intelligence Laboratory ∗ Corresponding author.   guozh29@mail2.sysu.edu.cn, wnzhang@sjtu.edu.cn   Abstract   Existing autonomous research agents can support parts of the research process, but most systems still treat research as either an isolated assistant task or a closed workflow. Therefore, autonomous science needs a collaboration infrastructure that coordinates projects, agents, and digital and physical resources.",
+    "score": 0.8089339156582858,
+    "source": "097 - Clarus Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration.pdf",
+    "page": 1
+   },
+   {
+    "text": "We identify this as a shift from code-centered execution loops to research-oriented collaboration processes, where ques- tions, evidence, participants, and resources must be coordinated under uncertainty. In this framing, an agent may be an AI system, a human researcher, a team, a laboratory, or an organization-backed participant. To this end, we present Clarus, a collaboration infrastructure for coordinating autonomous research agents toward web-scale scien- tific collaboration. Clarus reformulates research as an open, auditable, attributable, and resource-aware multi-phase collaboration process. It defines a minimal project- agent-resource object model and organizes scientific collaboration through four layers including Research Application, Digital Collaboration, Physical Substrate, and Physi- cal World. Core modules are implemented as pluggable mechanisms, allowing Clarus to adapt to task risk, collaboration structure, and resource constraints. Through a controlled paper-generation case study, we show that Clarus can organize a research goal into a traceable, reviewable, attributable, and accumulative collaboration network across phases, tasks, and participants. Together, the object model, collaboration proto- col, trust mechanisms, and prototype validation provide an initial foundation for open research networks. Clarus is now available at clarus.holosai.io.",
+    "score": 0.7264788137395004,
+    "source": "097 - Clarus Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration.pdf",
+    "page": 1
+   },
+   {
+    "text": "Clarus is now available at clarus.holosai.io.   Keywords: Clarus, Autonomous Research Agents, Scientific Collaboration, Collaboration Infrastructure, Research Network, Agentic Web   1 Introduction   Recent agentic systems can support scientific tasks well (Lu et al., 2026). Much of this progress remains tied to code-centered execution loops, where agents write programs, run tests, diagnose failures, and optimize implementation (Novikov et al., 2025). This paradigm is powerful because software tasks often provide executable specifications, dense feedback, and relatively clear success signals. However, research differs from code-centered execution in three important ways:   1. Feedback is sparse. Code can often be checked through tests, errors, or benchmarks, whereas research evidence is costly, delayed, incomplete, and sometimes ambiguous.   1   ar X   iv :2   60 6.   30 24   6v 1   [ cs   .A I]   2 9   Ju n   20 26         clarus.holosai.io        https://arxiv.org/abs/2606.30246v1Clarus   Figure 1: From closed workflows and open research “dark forests” to trusted scientific collaboration networks.",
+    "score": 0.6633351279565568,
+    "source": "097 - Clarus Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration.pdf",
+    "page": 1
+   },
+   {
+    "text": "First, it provides collaboration infrastructure that connects researchers, agents, and resources around shared research projects. Second, it turns the research process into an evidence-bearing data flow, where various records support intra-project coordination, cross-project im- pact updating, and a cumulative data loop for research-network evaluation and governance. Third, it serves as a testbed for studying different orchestration, audit, credit, impact-update, and resource-access strategies under a shared project-agent-resource model. The goal of Clarus is not to replace individual scientists or to build a fixed automation pipeline, but to provide a composable, traceable, reviewable, and accumulative infrastructure for open scientific collaboration. This paper makes three contributions.   1. We are, to our knowledge, the first to reformulate autonomous research as an infrastructure problem for web-scale scientific collaboration, emphasizing that open science requires coordination beyond closed workflows or single-agent assistants.   2. We present Clarus, a collaboration infrastructure built around a project-agent-resource object model, a four-layer architecture, an application workflow, and pluggable strategies for open research net- works.   3. We show how Clarus turns a research goal into an executable, auditable, attributable, and reviewable multi-agent research process, providing an initial testbed for future benchmarks, real-resource access, and cross-organization deployment.   The remainder of this paper is organized as follows.",
+    "score": 0.6555667852261993,
+    "source": "097 - Clarus Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration.pdf",
+    "page": 3
+   },
+   {
+    "text": "In this scenario, participants are opaque, capabilities are hard to verify, processes are difficult to trace, contri- butions are poorly attributed, and resource access lacks a trustworthy basis (Guo et al., 2025). Although   2Clarus   harness and loop engineering improve autonomous execution for individual agents (Zhou et al., 2026), the bottleneck is not only model capability or bounded task execution, but whether the network can support verifiable, reusable, and accumulative knowledge production. Progress toward scientific collab- oration requires research networks to move from opaque competition toward transparent collaboration, making the research process itself an auditable, reusable, and durable public infrastructure (Thibault et al., 2023).   To address these problems, we propose Clarus, a collaboration infrastructure for coordinating au- tonomous research agents toward web-scale scientific collaboration. Clarus models scientific collabora- tion with three primitive objects including projects, agents, and resources. A research goal becomes a collaborative process of phases, tasks, artifacts, credit records, and provenance, allowing heterogeneous participants to be discovered, authorized, coordinated, audited, and attributed within the same process. The role of Clarus is threefold. First, it provides collaboration infrastructure that connects researchers, agents, and resources around shared research projects.",
+    "score": 0.6264511162892556,
+    "source": "097 - Clarus Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "96eef226-572b-47fe-a9be-5e1d70b418e6",
+  "X-Amzn-Trace-Id": "Root=1-6b080508-3409b34d596faf4c1954aaf5;Parent=31b3b38afb6ddbb6;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.39
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:08+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Clarus: Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration"
+ },
+ "from_cache": false
+}

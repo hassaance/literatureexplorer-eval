@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.304,
+ "json": {
+  "query": "HERMES: Towards Efficient and Verifiable Mathematical Reasoning in LLMs",
+  "contexts": [
+   {
+    "text": "ArmoRM-Llama3-8Bv0.1.   6HERMES: Towards Efficient and Verifiable Mathematical Reasoning in LLMs   MATH AIME'25 CollegeMath HardMath2 Dataset   0   10000   20000   30000   40000   To ke   n Bu   dg et   3.6 K   7.5 K   3.6 K   8K   2.5 K   7.7 K   2.1 K   7.7 K   18 .2K   37 .8K   17 .8K   40 K   12 .5K   38 .4K   10 .7K   38 .5K   [@1] ZS-CoT [@1] Hermes [@5] ORM/PRM/Safe [@5] Hermes   (a) Qwen3-8B   MATH AIME'25 CollegeMath HardMath2 Dataset   0   5000   10000   15000   20000   25000   30000   35000   To ke   n Bu   dg et   1K   5.9 K   94 2   4.7 K   1.5 K   6.9 K   1.3 K   5.9 K",
+    "score": 0.8345455838541062,
+    "source": "057 - HERMES Towards Efficient and Verifiable Mathematical Reasoning in LLMs.pdf",
+    "page": 6
+   },
+   {
+    "text": "HERMES: Towards Efficient and Verifiable Mathematical Reasoning in LLMs   Azim Ospanov * 1 2 Zijin Feng † 1 Jiacheng Sun 1 Haoli Bai 1 Shen Xin 3 Farzan Farnia 2   Abstract   Informal mathematics has been central to modern large language model (LLM) reasoning, offering flexibility and efficient construction of arguments. However, purely informal reasoning is prone to logical gaps and subtle errors that are difficult to detect and correct. In contrast, formal theo- rem proving provides rigorous, verifiable mathe- matical reasoning, where each inference step is checked by a trusted compiler, but lacks the ex- ploratory freedom of informal problem-solving. This mismatch leaves current LLM-based math agents without a principled way to combine the strengths of both paradigms. In this work, we introduce Hermes, the first tool-assisted agent that explicitly interleaves informal reasoning with formally verified proofs in Lean. The frame- work performs intermediate formal checking to prevent reasoning drift and a memory module for proof continuity across multi-step reasoning chains, enabling both exploration and verifica- tion. We evaluate Hermes on four challenging mathematical reasoning benchmarks using LLMs of varying parameter scales, from small models to state-of-the-art systems. Across all settings, Hermes reliably improves the reasoning accu- racy of base models while substantially reduc- ing reasoning token usage and computational cost compared to reward-based approaches.",
+    "score": 0.7754874964940115,
+    "source": "057 - HERMES Towards Efficient and Verifiable Mathematical Reasoning in LLMs.pdf",
+    "page": 1
+   },
+   {
+    "text": "The framework combines the flexibility of informal problem solving with the rigor of formal verification by validating intermediate steps that would otherwise be prone to hallu- cinations or logical errors. Built on state-of-the-art Lean4 theorem-proving and autoformalization models, Hermes in- corporates a dedicated memory mechanism that preserves proof continuity across long reasoning chains and guides the reasoning LLM towards a correct solution. Experimental results show that Hermes achieves higher accuracy on four challenging mathematical benchmarks while consuming substantially fewer inference resources than reward-based approaches. On average, Hermes improves accuracy by 14% while using at least 4× fewer reasoning tokens. This im- provement stems from the synergistic interaction between its memory module, back-translator, and Lean4’s native solvers. Overall, Hermes represents a step toward unify- ing informal and formal mathematical reasoning within a scalable, verifiable, interpretable, and modular framework.   Acknowledgments The work of Farzan Farnia is partially supported by a grant from the Research Grants Council of the Hong Kong Spe- cial Administrative Region, China, Project 14210725, and is partially supported by CUHK Direct Research Grants with CUHK Project No. 4055164. The work is also sup- ported by a grant under 1+1+1 CUHK-CUHK(SZ)-GDSTC Joint Collaboration Fund.",
+    "score": 0.6872536428951189,
+    "source": "057 - HERMES Towards Efficient and Verifiable Mathematical Reasoning in LLMs.pdf",
+    "page": 9
+   },
+   {
+    "text": "0.5 66.7± 3.0 98.2± 0.4 74.7± 5.4   E. Additional results on benchmark results Complementing Table 1, we report the mean and standard deviation for all inference methods on the MATH500 and AIME’25 datasets, based on five independent runs. We observe that the performance of Hermes is stable, with variance comparable to that of CoT and RM-augmented baselines.   21HERMES: Towards Efficient and Verifiable Mathematical Reasoning in LLMs   F. Hermes Algorithm   Algorithm 1 Hermes Pseudocode   Input: Step st, Memory Database D, Hyperparameters Kf ,Kp, k Output: Tuple (st, status,D)   C ← RETRIEVETOPK(D, st, k) ▷ Retrieve top-k relevant correct steps from database S ← st ∪ C ▷ Augment context with retrieval status← VERIFICATION FAILURE   for i = 1 to Kf do ft ← πf(S) ▷ Translate to Lean if REPL(ft) is True then s̃t ← BackTranslation(ft) if st ≈ s̃t then   break ▷ Exit Formalization Module only when both REPL and Backtranslation are passed end if   end if end for if ft = ∅ then   Return (st, status,D) ▷ Verification failure is returned if no translation passed REPL and",
+    "score": 0.6713193724683174,
+    "source": "057 - HERMES Towards Efficient and Verifiable Mathematical Reasoning in LLMs.pdf",
+    "page": 21
+   },
+   {
+    "text": "Inspired by the strengths of both paradigms, in this work, we bridge the gap between formal and informal mathemat- ics by combining the verifiability of formal reasoning with the flexibility and expressiveness of LLM-based informal reasoning. We introduce Hermes, a multi-modular scalable tool-augmented agent (abbreviated from \"Hybrid AgEnt for Reasoning in Mathematics with NEuro-Symbolic Lean4 verification\"), designed to integrate formal verification into the LLM reasoning process. Hermes leverages modern LLMs’ tool-calling capability to verify individual reason- ing steps during inference and builds a memory block that ensures continuity of proof claims. For each critical proof step, the agent formalizes the natural-language statement into Lean goal, verifies formalization consistency through back-formalization, and invokes a prover module to attempt a proof or counter-proof. The resulting formal signal is then fed back into the LLM to inform its next reasoning step. The overview of our agentic framework is illustrated in Figure 1. We show that incorporating Hermes significantly enhances LLM accuracy across mathematical reasoning benchmarks of varying difficulty. It reduces token usage compared to traditional score-based methods and provides interpretable, step-level correctness feedback, offering transparency into how reasoning paths evolve and why certain trajectories lead to valid conclusions while others result in hallucinations.",
+    "score": 0.660792176308757,
+    "source": "057 - HERMES Towards Efficient and Verifiable Mathematical Reasoning in LLMs.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "956c4ebc-9d8d-494e-9088-91503e53e572",
+  "X-Amzn-Trace-Id": "Root=1-6b080500-4b1644624459313e6c16951e;Parent=2ef3b668bca38a30;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.304
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:00+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "HERMES: Towards Efficient and Verifiable Mathematical Reasoning in LLMs"
+ },
+ "from_cache": false
+}

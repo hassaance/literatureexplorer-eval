@@ -1,0 +1,35 @@
+{
+ "status": 401,
+ "latency_s": 0.041,
+ "json": {
+  "error": {
+   "message": "invalid API key"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ac200c14-e21f-49d2-9aab-05e6f02cffb4",
+  "X-Amzn-Trace-Id": "Root=1-6b080518-000e41b83d9ef4977f2a3cbe;Parent=371cbb42502a1112;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 401,
+   "latency_s": 0.041
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:24+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "err_wrong_api_key",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is ReAct?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.251,
+ "json": {
+  "query": "Claudini: Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs",
+  "contexts": [
+   {
+    "text": "Claudini: Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs   Alexander Panfilov∗1,2,3 Peter Romov∗ 4 Igor Shilov∗ 4   Yves-Alexandre de Montjoye† 4 Jonas Geiping† 2,3 Maksym Andriushchenko† 2,3   1MATS 2ELLIS Institute Tübingen & Max Planck Institute for Intelligent Systems 3Tübingen AI Center 4Imperial College London   Abstract   We show that AI agents are capable of discovering novel algorithms for adversarial attacks against LLMs, advancing the state of the art on white-box jailbreaking and prompt injection evaluations. We deploy frontier agents, such as Claude Code and Codex, in an autoresearch loop with access to a library of 30+ prior methods and an evaluation script with a fixed compute budget. We show this pipeline to be effective in jailbreaking OpenAI’s GPT-OSS-Safeguard-20B and in prompt injections against Meta-SecAlign-70B, an adversarially robust model. For GPT-OSS-Safeguard, the best agent-discovered method achieves up to 80% attack success rate on CBRN queries, compared to <50% for existing methods.",
+    "score": 0.7311460434850887,
+    "source": "166 - Claudini Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs.pdf",
+    "page": 1
+   },
+   {
+    "text": "For SecAlign, it achieves 100% ASR, while the best prior automated methods only achieve 82%. Notably, in our setting, attack methods are developed on unrelated surrogate models for a pure random-target token-forcing task, yet generalize directly to prompt injection on the adversarially trained model. Finally, we trace the lineage of methods developed during autoresearch, characterizing the agents’ strategies and failure modes. Adversarial ML has long held that defenses must be evaluated against attacks tailored to them; autoresearch automates this principle, and we argue it should be the minimum bar for defense evaluation going forward.   1 Introduction   LLM agents like Claude Code and Codex can not only write code but also carry out autonomous AI research and engineering [48, 39]. We show that an autoresearch-style pipeline [28] powered by frontier LLM agents discovers novel white-box adversarial attack algorithms that significantly outperform all existing (30+) methods in jailbreaking and prompt injection evaluations.   We deploy sandboxed agents with access to a library of existing attack implementations, their prior results, and a script that evaluates new methods under a fixed compute budget. Agents are asked to propose a method that improves over the existing ones, implement it, submit it for evaluation, and iterate on the results.",
+    "score": 0.5873859742073761,
+    "source": "166 - Claudini Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs.pdf",
+    "page": 1
+   },
+   {
+    "text": "Claude (orange): best loss achieved by Claude-designed optimizer variants (100 trials). Vertical ticks at trials 19 and 64 show where we switched target model during the autoresearch run. Claude methods consistently outperform Optuna-tuned baselines, reaching 10× lower loss by version 82.   supplies Claudini’s baselines; the methods split into discrete coordinate descent (e.g., I-GCG [31], TAO [59], MAC [61]), continuous relaxations (GBDA [17], PGD [14], ADC [22]), and gradient-free search [2, 49]. Claudini operates under the same threat model and assumptions as these methods: white-box gradient access to the target and a token-forcing objective.   A complementary line of research uses an LLM as the attacker [45], generating natural-language jailbreaks via iterative refinement, persuasion, or multi-turn dialog steering. PAIR [10] and TAP [36] established the iterative-refinement template, with more recent variants relying on agentic loops [44, 47, 60, 19]. In all these settings the LLM is the attacker, producing adversarial content directly, in contrast to the autoresearch setting where the LLM writes the attack algorithm.   Adaptive Attacks. More broadly, adversarial-ML methodology has converged on the principle that defenses must be evaluated against attacks tailored to them.",
+    "score": 0.5775660097432758,
+    "source": "166 - Claudini Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs.pdf",
+    "page": 3
+   },
+   {
+    "text": "We release all discovered attacks and evaluation code at https://github.com/romovpa/claudini.   2 Related Work   Automated Algorithmic Research. A growing body of work uses LLM agents to iterate on research code under a fixed compute budget, optimizing a measurable objective. AlphaEvolve [39], tasked with iteratively rewriting code blocks to maximize a programmable fitness function, produced verifiably new scientific results – including a novel matrix multiplication algorithm. Autoresearch [28], KernelBench [42], AlgoTune [46], PostTrainBench [48], AdderBoard [43], and the automated weak- to-strong researcher [57] demonstrate the same template across kernels, numerical programs, post- training, small transformers, and alignment research. Claudini brings this template to white-box adversarial attacks, discovering new attack optimizers that advance the state of the art on standard jailbreak and prompt-injection benchmarks and generalize across models and tasks.   LLM Jailbreaks. Large Language Models remain vulnerable to jailbreaks – inputs that bypass an aligned LLM’s safety training, eliciting content the model would otherwise refuse. In this work we focus on white-box optimization-based jailbreaks, which treat the search for an adversarial suffix as discrete optimization over input tokens, using gradients of the LLM’s loss to coerce a target completion.",
+    "score": 0.5579907085449538,
+    "source": "166 - Claudini Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs.pdf",
+    "page": 2
+   },
+   {
+    "text": "We trace the lineage of the discovered methods (Section 5) and find that most progress comes from recombining components of existing attacks and tuning their hyperparameters – yet this is enough to significantly outperform baselines tuned with classical hyperparameter optimization (Figure 2). Genuinely new ideas are rare and concentrated in escape mechanisms (e.g., patience-based perturbation, iterated local search). We suspect this reflects a limitation of our scaffold rather than an inherent ceiling: the agent treats each full attack run as the atomic unit of iteration, which constrains how fluidly it can probe intermediate ideas. Notably, our two best-performing agents – Kimi K2.6 and Claude Opus 4.6 – independently converged on the same algorithmic idea, suggesting it may be a local optimum for this problem.   Extending the findings of Carlini et al. [8], our results are an early demonstration that incremental safety and security research can be automated using LLM agents. We argue that autoresearch should become the minimum bar for defense evaluation, as an automated form of adaptive attack [38, 54]. More broadly, our results raise the question of how the closing gap between offensive and defensive automation will shift the balance between attackers and defenders. We release all discovered attacks and evaluation code at https://github.com/romovpa/claudini.   2 Related Work   Automated Algorithmic Research.",
+    "score": 0.5494880364988725,
+    "source": "166 - Claudini Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9cb7bfe3-f338-4c15-97d1-9bcc1c726d33",
+  "X-Amzn-Trace-Id": "Root=1-6b080515-60d4f0cc146ec5964397e466;Parent=687acf690c79cad7;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.251
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:20+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Claudini: Autoresearch Discovers State-of-the-Art Adversarial Attack Algorithms for LLMs"
+ },
+ "from_cache": false
+}

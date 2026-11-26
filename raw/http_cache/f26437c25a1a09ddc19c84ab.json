@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.355,
+ "json": {
+  "query": "Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots",
+  "contexts": [
+   {
+    "text": "Vol.:(0123456789)   Human-Centric Intelligent Systems (2025) 5:467–481 https://doi.org/10.1007/s44230-025-00121-6   RESEARCH ARTICLE   Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots   Shreetha Bhat1   · Asha Gowda Karegowda2 · Vineeth S. Naidu1 · C. S. Akshatha1   Received: 11 May 2025 / Revised: 28 October 2025 / Accepted: 13 November 2025 / Published online: 24 November 2025 © The Author(s) 2025   Abstract Chatbots have revolutionized human–computer interaction by providing intelligent, conversational assistance in various areas, including academic support, healthcare, and technical support. Cutting-edge chatbots utilize Natural Language Pro- cessing (NLP) and Machine Learning to generate responses that make sense and are relevant to the context. It is challenging to provide precise and knowledge-rich answers to complex questions, and this remains a significant challenge. Retrieval- Augmented Generation (RAG) systems address this challenge by combining generative language models with information retrieval techniques.",
+    "score": 0.6905734602209885,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 1
+   },
+   {
+    "text": "The user here interacts with the chatbot by submitting instructions related to topics cov- ered in a deep learning course, such as definitions, concepts, or explanations of techniques. The chatbot contains intents mapped to key concepts and their explanations from the course materials. The user's input is then compared against the intents in the chatbot's dataset, which consists of indexed course context. If the input matches the dataset values, the chatbot retrieves and displays the corresponding informa- tion response to the user. The application aims to integrate fine-tuning techniques with HyDE's zero-shot capabilities to create a robust RAG pipeline optimized for domain-specific contexts. This will be outlined in the following steps that involve in building the research-oriented Gemma 7B’s RAG- based application as follows:   Step 1 Set up Dependencies and Installing Modules The first step in this research focuses on setting up the   relevant dependencies such as the ‘torch’ framework for easy implementation of transformers, supporting acceleration units along with ensuring all required modules and depend- encies are installed.   Step 2 Importing Libraries The next step is to create a huggingface_hub library that   facilitates downloading pretrained models, datasets, and tokenizers or uploading your models and datasets to the hub. Then, logging in to notebook_Login () prompts to authenti- cate and access the resource platform.",
+    "score": 0.6185206446349527,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 6
+   },
+   {
+    "text": "This chatbot leverages the streamlined and fine-tuned RAG pipeline, combined with HyDE’s advanced embeddings, to deliver token-efficient, context-aware, and domain-specific responses. The integra- tion optimizes the response process by reducing verbosity and enhancing clarity, setting a new standard for conversa- tional Artificial Intelligence (AI). By merging the fine-tuned Gemma 7B model with HyDE’s cutting-edge query transfor- mation techniques, this system showcases the transformative potential of blending RAG pipelines with advanced model optimization. It highlights how these innovations can lead to the progress of next-generation AI systems capable of delivering precise, context-sensitive, and knowledge-rich interactions. Future advancements may include real-time data adaptation and multimodal input capabilities, further expanding the boundaries of AI-driven communication. This paper has four main contributions. First, we propose HyDE- enhanced retrieval, in which we incorporate HyDE into the RAG pipeline to convert user queries to semantically rich pseudo-documents, thus connecting complex query intent with pertinent document retrieval. Second, we conduct spe- cialization fine-tuning of the Gemma 7B model with LoRA adapters on a hand-curated deep learning course dataset to make the model more capable of addressing specialized vocabulary, subtle reasoning, and information-rich questions with greater accuracy.",
+    "score": 0.5984075437828443,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 2
+   },
+   {
+    "text": "The fine-tuned Gemma 7B model, hosted on Hugging Face, leverages tokenizers and transformers for natural language processing tasks, which is supported by an Unslowth module for in-depth optimization.   The RAG pipeline incorporates HyDE (Hypothetical Document Embeddings) as a pre-retrieval enhancement module. HyDE asks the Gemma model to first produce a hypothetical response that captures the semantic intent of the user's query rather than depending only on the raw   Fig. 2   Displays the Gradio Application Dashboard along with the response to the query asked   Fig. 3   RAG-Based Gemma model architecture diagram475Human-Centric Intelligent Systems (2025) 5:467–481   query. After that, this synthesized response is encoded into a dense vector representation and utilized as the document search retrieval key. HyDE fills the gap between the latent knowledge stored in the vector database and queries that are unclear or inadequately specified. Following a ranking based on semantic proximity to the HyDE-generated embedding, the retrieved documents are sent through the RAG orches- tration layer, where Gemma cross-attends to the retrieved passages and the user's initial query. By ensuring that the final response is both contextually true to the question and supported by outside data, this dual conditioning helps to improve factual alignment and lessen hallucinations.",
+    "score": 0.5607808112950237,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 8
+   },
+   {
+    "text": "Second, we conduct spe- cialization fine-tuning of the Gemma 7B model with LoRA adapters on a hand-curated deep learning course dataset to make the model more capable of addressing specialized vocabulary, subtle reasoning, and information-rich questions with greater accuracy. Third, to produce precise, concise, domain-aware, and contextually relevant responses, we pro- pose a unified RAG framework that combines the optimised Gemma 7B generator with HyDE's retrieval capabilities. Finally, we provide a full evaluation and implementation, confirming the system through qualitative comparisons with Google, Wikipedia, and ChatGPT, as well as quantitative metrics (accuracy, F1 score, and loss patterns). We also apply the model to a Gradio-based chatbot to demonstrate its usefulness.   2 � Literature Survey   The emergence of chatbots and retrieval-based advance- ments such as Retrieval-Augmented Generation (RAG) has expanded their application across multiple domains. This section summarises prior research in five application areas: education, healthcare, customer service, behavioural/ social factors, and technology underpinnings. This follows advancements in RAG frameworks.   A. Educational Applications469Human-Centric Intelligent Systems (2025) 5:467–481   Education remains the most popular domain for chatbot deployment.",
+    "score": 0.5458838651177608,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "31fbb61a-e230-42cd-ae2e-2af752be6f00",
+  "X-Amzn-Trace-Id": "Root=1-6b080500-1b7583884e3b94c310503524;Parent=2e01f8ef31c927cc;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.355
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:00+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots"
+ },
+ "from_cache": false
+}

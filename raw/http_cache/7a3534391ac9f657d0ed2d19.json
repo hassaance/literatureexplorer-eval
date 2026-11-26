@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.315,
+ "json": {
+  "query": "SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale",
+  "contexts": [
+   {
+    "text": "First, although SWE-rebench V2 is designed as a training sub- strate, we do not include end-to-end RL training ablations in this work. A convincing multilingual RL run at the scale enabled by the dataset would require substantial additional infrastructure. Instead, we validate prerequisite properties for training: tasks are executable, non-trivial, show pass@k   8SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale   headroom across models, and the A/B* analysis shows that metadata separates cleaner tasks from confounded ones. Direct comparisons of filtered versus unfiltered curricula remain important future work.   Second, Docker images make the main dataset robust to repository evolution, but do not eliminate all sources of drift. External package repositories, system packages, and network-hosted resources may change or disappear. We therefore view ongoing maintenance as important and plan periodic rebuilds, environment updates, and metadata revi- sions.   Third, our current environment design targets projects that can be reproducibly packaged into a single Docker container. This limits coverage of more complex systems where realis- tic execution requires multiple services, external databases, queues, or distributed infrastructure components.   6. Conclusion and Future Work In this work, we present SWE-rebench V2, a language- agnostic pipeline for constructing executable SWE tasks.",
+    "score": 0.7623239170631155,
+    "source": "151 - SWE-rebench V2 Language-Agnostic SWE Task Collection at Scale.pdf",
+    "page": 8
+   },
+   {
+    "text": "SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale   Ibragim Badertdinov 1 Maksim Nekrashevich 1 Anton Shevtsov 1 Alexander Golubev 1   Abstract   Software engineering agents (SWE) are improv- ing rapidly, with recent gains largely driven by reinforcement learning (RL). However, RL train- ing is constrained by the scarcity of large-scale task collections with reproducible execution en- vironments and reliable test suites. Although a growing number of benchmarks have emerged, datasets suitable for training remain limited in scale and diversity or often target a limited set of high-resource language ecosystems. We in- troduce SWE-rebench V2, a language-agnostic automated pipeline for harvesting executable real- world SWE tasks and constructing RL training environments at scale. The pipeline synthesizes repository-specific installation and test procedures via an interactive setup agent, and filters unsound instances using an ensemble of LLM judges, val- idated against human-verified SWE-bench an- notations. Using this pipeline, we construct a dataset of 32,079 tasks spanning 20 languages and 3,617 repositories, with pre-built images for reproducible execution. To further scale training data, we additionally release 120,000+ tasks with installation instructions, fail-to-pass tests and rich metadata, where the problem statement is gener- ated based on the original pull request description.",
+    "score": 0.6837608621087652,
+    "source": "151 - SWE-rebench V2 Language-Agnostic SWE Task Collection at Scale.pdf",
+    "page": 1
+   },
+   {
+    "text": "V2: Language-Agnostic SWE Task Collection at Scale   L., Guo, L., Luo, L., Ma, L., Wang, L., Zhang, L., Di, M. S., Xu, M. Y., Zhang, M., Zhang, M., Tang, M., Zhou, M., Huang, P., Cong, P., Wang, P., Wang, Q., Zhu, Q., Li, Q., Chen, Q., Du, Q., Xu, R., Ge, R., Zhang, R., Pan, R., Wang, R., Yin, R., Xu, R., Shen, R., Zhang, R., Liu, S.",
+    "score": 0.6829896805443102,
+    "source": "151 - SWE-rebench V2 Language-Agnostic SWE Task Collection at Scale.pdf",
+    "page": 10
+   },
+   {
+    "text": "This limits coverage of more complex systems where realis- tic execution requires multiple services, external databases, queues, or distributed infrastructure components.   6. Conclusion and Future Work In this work, we present SWE-rebench V2, a language- agnostic pipeline for constructing executable SWE tasks. The pipeline automates the end-to-end task construction, from mining pull requests to synthesizing executable envi- ronments and filtering instances without manual verifica- tion. We release 32,079 stable issue-linked tasks from 3,617 repositories across 20 languages, supplemented by 120,000+ PR-derived tasks that expand coverage beyond issue-linked changes. We also provide instance-level diagnostic meta- data and ablations on setup synthesis and quality filtering to quantify stage-wise yield and failure modes.   We plan to expand the dataset by increasing setup retries for higher yield, adding curated subsets, and onboarding more long-tail languages. Future work will target extending the pipeline to support complex, long-horizon tasks, such as those in multi-service systems requiring iterative, cross- component modifications. We will also investigate enriching the reward signal beyond test-based correctness to include automatically measurable non-functional requirements like performance, latency, and memory efficiency.   We believe that the automated data collection pipeline and resources released with SWE-rebench V2 provide a practical foundation for training and evaluating LLM-based agents on realistic software engineering tasks at scale.",
+    "score": 0.6577497126180034,
+    "source": "151 - SWE-rebench V2 Language-Agnostic SWE Task Collection at Scale.pdf",
+    "page": 9
+   },
+   {
+    "text": "https://arxiv.org/abs/2511.02352        https://arxiv.org/abs/2507.09108        https://arxiv.org/abs/2507.09108        https://arxiv.org/abs/2508.10925        https://arxiv.org/abs/2412.21139        https://arxiv.org/abs/2412.21139        https://arxiv.org/abs/2504.08703        https://arxiv.org/abs/2510.11967        https://arxiv.org/abs/2510.11967SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale   C., Huang, C., Zhang, C., Xu, C., Zhu, C., Li, C., Yin, C., Lin, D., Yang, D., Jiang, D., Ai, D., Zhu, E., Wang, F., Pan, G., Wang, G., Sun, H., Li, H., Li, H., Hu, H., Zhang, H., Peng, H., Tai, H., Zhang, H., Wang, H., Yang, H., Liu, H., Zhao, H., Liu, H., Yan, H., Liu, H., Chen, H., Li, J., Zhao, J., Ren, J., Jiao, J., Zhao, J., Yan, J., Wang, J., Gui, J.,",
+    "score": 0.6251722396841574,
+    "source": "151 - SWE-rebench V2 Language-Agnostic SWE Task Collection at Scale.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "81e1a047-f705-453b-8e34-463ea1b692fd",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-2482ee06127c3f2902f874b4;Parent=31d3b76fdaf274a6;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.315
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "SWE-rebench V2: Language-Agnostic SWE Task Collection at Scale"
+ },
+ "from_cache": false
+}

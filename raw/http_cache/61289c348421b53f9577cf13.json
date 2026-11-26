@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.323,
+ "json": {
+  "query": "AgenticData: An Agentic Data Analytics System for Heterogeneous Data",
+  "contexts": [
+   {
+    "text": "AgenticData: A Multi-Agent based Data Analytics System for Heterogeneous Data   Ji Sun, Guoliang Li, Peiyao Zhou, Yihui Ma, Jingzhe Xu, Yuan Li Department of Computer Science, Tsinghua University   {sunji,liguoliang}@tsinghua.edu.cn;{22371389,22371448}@buaa.edu.cn;1120222913@bit.edu.cn;liyuan25@mails.tsinghua.edu.cn   ABSTRACT Current unstructured data analytics systems heavily rely on ex- perts to code and manage complex analysis workflows, leading to high costs and significant time consumption. To address these limitations, we propose AgenticData, an agentic data analytics system that allows users to submit natural language (NL) queries while autonomously analyzing data from various domains, includ- ing both unstructured and structured data. Initially, AgenticData employs a multi-agent collaboration framework to automatically transform an NL query into a semantic plan containing relational and semantic operators. This framework includes a data profiling agent for identifying relevant data, a semantic validation agent for iterative optimization using feedback, and a smart memory agent for managing short-term context and long-term knowledge. Addi- tionally, we propose semantic optimization techniques to efficiently refine and execute semantic plans.",
+    "score": 0.758633402171069,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 1
+   },
+   {
+    "text": "In summary, we make the following contributions. (1) We propose AgenticData, an in-context learning-based agen- tic data system featuring multi-agent collaboration that can au- tonomously analyze multi-source heterogeneous data using NL queries (Section 2). To our best knowledge, this is the first agentic data analytics system designed for heterogeneous data. (2) We propose a data profiling agent that analyzes heterogeneous data from various perspectives and encodes the data profiles into a graph, which is then used to generate query plans (Section 3). (3) We introduce a multi-agent planning method that autonomously translates NL queries into high-quality plans (Section 4). (4) We propose a novel plan validation agent to provide plan feed- back (Section 5) and a memory management agent to store short- term context and long-term knowledge (Section 6).(5) We evaluated our system on five benchmarks, and the results showed that AgenticData achieved the highest accuracy and the lowest cost compared to state-of-the-art baselines (Section 7). More- over, AgenticData has been deployed in real-world data analysis applications at banks and power grid companies.   2 SYSTEM OVERVIEW 2.1 Problem Formulation Given a large collection of unstructured and structured data, we tackle the challenge of autonomously analyzing this heterogeneous data.",
+    "score": 0.7495626639409868,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 1
+   },
+   {
+    "text": "However, general AI agents are not specifically de- signed for collaborative multi-agent systems in data analytics tasks, which results in lower-quality outcomes in these scenarios. The challenges in developing an agentic data analytics system include: Challenge 1:How canwe efficiently discover query-specific datasets from vast data repositories in production environments? For exam- ple, bank production systems contain thousands of diverse datasets, but many lack detailed metadata and schema documentation. Challenge 2: How can we develop logically correct and valid se- mantic plans for an NL query? With dozens of primitive relational and semantic operators, the number of possible plans expands to trillions of variations, making the task of finding the correct solu- tion akin to searching for a needle in a haystack. Challenge 3: How can we detect plan errors and provide effective feedback to enhance plan accuracy? Since LLMs may introduce hal- lucinations, effectively detecting plan errors and efficiently storing and reusing these errors to provide feedback for improving plan accuracy is challenging.   To address these challenges, we propose AgenticData, a multi- agent data analytics system on heterogeneous data. AgenticData begins with a collaborative multi-agent planning framework that transforms an NL query into a semantic plan composed of a data profiling agent and a data planning agent. The data profiling agent is designed to thoroughly understand the data and data relation- ships, extract catalogs from diverse datasets, and proactively learn domain knowledge from the datasets.",
+    "score": 0.7379001405739507,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 1
+   },
+   {
+    "text": "AgenticData begins with a collaborative multi-agent planning framework that transforms an NL query into a semantic plan composed of a data profiling agent and a data planning agent. The data profiling agent is designed to thoroughly understand the data and data relation- ships, extract catalogs from diverse datasets, and proactively learn domain knowledge from the datasets. The planning agent is respon- sible for generating the semantic plan. Given the tendency of LLMs to produce errors, especially in complex plans, we design seman- tic and grammar validation techniques as well as smart memory management to provide essential feedback for plan correction. Contribution. In summary, we make the following contributions. (1) We propose AgenticData, an in-context learning-based agen- tic data system featuring multi-agent collaboration that can au- tonomously analyze multi-source heterogeneous data using NL queries (Section 2).",
+    "score": 0.6337707001268508,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 1
+   },
+   {
+    "text": "Existingmemory systems [9, 17, 37, 40] fo- cused on the efficiency and accuracy ofmemory accessing.Mem0 [9] supported large volumes of data, and A-Mem [37] dynamically or- ganized memories to improve the system adaptation to different tasks. MemOS [17] designed a hierarchical storage architecture for memory management. However, these works could not assist LLMs in optimizing the state exploration reward and could not provide evaluations for distinguishing between bad and good plans.   9 CONCLUSIONS We have proposed an agentic data analytics system, AgenticData, which autonomously translates an NL query into a semantic query plan composed of semantic and relational operators. We have devel- oped a multi-agent framework to generate high-quality semantic plans and introduced optimization techniques to improve the accu- racy. Experimental results on widely-used benchmarks demonstrate that AgenticData significantly outperformed state-of-the-art base- lines.",
+    "score": 0.6281042502608862,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 12
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e1075166-1812-4ebe-88be-2e823ff30d69",
+  "X-Amzn-Trace-Id": "Root=1-6b08050b-06900f03468290a51c18fafc;Parent=656ac5b4995ce73e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.323
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:10+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AgenticData: An Agentic Data Analytics System for Heterogeneous Data"
+ },
+ "from_cache": false
+}

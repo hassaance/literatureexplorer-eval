@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.374,
+ "json": {
+  "query": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+  "contexts": [
+   {
+    "text": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist   Bobo Li1, Hao Fei2*, Tianjie Ju1, Mong-Li Lee1 and Wynne Hsu1   1National University of Singapore 2University of Oxford   Project page: https://omni-scientist.github.io Software & Skill: https://github.com/Omni-Scientist/OmniScientist   ABSTRACT Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workflow coverage alone does not provide access to the full evidence on which scientific discovery depends. Existing systems typically reason over text, code, labels, or precomputed summaries, leaving scientifically decisive spatial, temporal, cross-channel, and procedural relations unavailable to the agent. We introduce OmniScientist, an end-to-end, omni-modal AI scientist that conducts multidisciplinary research directly from heterogeneous raw evidence. A perception layer and 3 autonomous agents for ideation, experiment, and writeup operate within a deterministic pipeline, allowing observations to shape research questions, experimental decisions, and final claims throughout the research lifecycle. By running idea, rigour, and claim checks in code, the system enforces novelty screening, statistical validity, execution provenance, and numerical traceability.",
+    "score": 0.7343080066641412,
+    "source": "100 - OmniScientist An Omni-Modal Omni-Discipline AI Scientist.pdf",
+    "page": 1
+   },
+   {
+    "text": "The gains appear in the scientific substance of the papers: the questions selected, the analyses executed, and the claims supportedOmniScientist: An Omni-Modal Omni-Discipline AI Scientist 3   by the resulting evidence.   In summary, our main contributions are as follows:   We present OmniScientist, an end-to-end, omni-modal, and discipline-agnostic AI scientist that works directly from heterogeneous scientific evidence. It extends automated discovery beyond workflow coverage by keeping spatial, temporal, statistical, and procedural relations available throughout the research process. We propose a perception-first, multi-agent architecture where raw observations actively guide ideation, experimentation, and manuscript generation. Furthermore, we integrate code-enforced checks across the pipeline to screen for novelty, ensure statistical validity and execution provenance, prevent HARKing, and guarantee that all reported claims are traceable and supported by evidence. We establish a 36-case demonstration suite across 5 discipline families and 4 families of scientific evidence. The 36 completed end-to-end runs, together with backbone comparisons and a paired blind ablation, demonstrate broad cross-disciplinary applicability and show that direct perception is essential to the evidence-grounded scientific discovery.   2 Related work   2.1 Autonomous agents for scientific discovery   Autonomous agents are increasingly participating in scientific discovery.",
+    "score": 0.7321664643273863,
+    "source": "100 - OmniScientist An Omni-Modal Omni-Discipline AI Scientist.pdf",
+    "page": 2
+   },
+   {
+    "text": "Figure 1), an end-to-end, omni-modal AI scientist for multidisciplinary discovery. A task is specified by a dataset, a scientific subject, and a target property, together with the raw artifacts referenced by that specification. OmniScientist coordinates a perception layer with 3 autonomous agents for ideation, experiment, and writeup (Figure 3). Within each stage, a ReAct loop interleaves observation, reasoning, and action (Yao et al., 2023; Shinn et al., 2023; Schick et al., 2023), allowing evidence to shape question formation, experimental design, result inspection, and scientific argumentation. Around these open-ended agents, a thin deterministic pipeline controls stage transitions, returns to ideation when an experiment collapses or yields a null result, and admits each stage output only after a check enforced in code. The idea, rigour, and claim checks examine novelty evidence and falsifiability, leakage and effective sample size, execution provenance and multiple comparisons, anti-HARKing constraints, numerical traceability, and claim support. We further organise scientific evidence into 4 discipline-independent families, namely perceptual, symbolic, quantitative-statistical, and procedural evidence (cf. Table 2). The same engine can consequently operate on a seismogram, a CAD mesh, or a knowledge graph. Adding a discipline requires a new specification file, with no change to the core pipeline and no domain-specific research code.",
+    "score": 0.7034703510478154,
+    "source": "100 - OmniScientist An Omni-Modal Omni-Discipline AI Scientist.pdf",
+    "page": 2
+   },
+   {
+    "text": "Section E reproduces one such file in full. Finally, Table 4 reports the end-to-end runs enabled by this unified framework, quantitatively evaluating the true extent of the system’s cross-disciplinary capabilities.   4 The OmniScientist framework   In this section, we introduce the OmniScientist framework, an end-to-end AI scientist consisting of a perception layer and 3 autonomous agents for ideation, experiment, and writeup (Figure 3).   4.1 Perception layer   To function effectively, a multimodal AI scientist must perceive raw artifacts directly, upstream of any pre- computed summaries. The perception layer supplies this grounding by organizing observations hierarchically. First, artifacts are categorized into an evidence family based on the reasoning paradigms they require. Within a given family, a specific modality defines the artifact’s exact representation (e.g., images, tables, or time-series signals), which the agent inspects using registered tools. Figure 4 illustrates the raw observations processed by the agent across 16 disciplines and 11 modalities, covering all 4 evidence families, along with the discoveries derived from this direct reading.   To balance thorough analysis with computational efficiency, the framework governs when and how the agent inspects raw data. Rather than immediately rendering visual plots, the agent prioritizes native numeric analysis by extracting key properties, such as FFT peaks or trend points, directly from the raw artifacts.",
+    "score": 0.6687268039248262,
+    "source": "100 - OmniScientist An Omni-Modal Omni-Discipline AI Scientist.pdf",
+    "page": 6
+   },
+   {
+    "text": "Scientific multimodal benchmarks usually fix the observation and the question in advance (Wang et al., 2024; Roberts et al., 2024; Pramanick et al., 2024; Li et al., 2024), while scientific agents that use perception generally invoke it at a local stage, such as inspecting generated figures, scoring plots, reading an interface, or monitoring an apparatus (Yamada et al., 2025; Gandhi et al., 2025; Sun et al., 2026; Darvish et al., 2025; Mandal et al., 2025). Such uses can improve an isolated decision, yet they do not establish a research loop in which an observation can redirect the study. In a perception-driven AI scientist, raw evidence should influence which question is selected, how the experiment is designed, what is examined after execution, and which statements are admitted to the final manuscript. A broader observation and search space also enlarges the room for data leakage, repeated testing, hypothesising after results are known (HARKing), and unsupported reporting. Lifecycle-wide perception therefore needs a control structure that preserves provenance and enforces statistical and factual constraints.   To meet these requirements, we introduce OmniScientist (cf. Figure 1), an end-to-end, omni-modal AI scientist for multidisciplinary discovery.",
+    "score": 0.6551906229866045,
+    "source": "100 - OmniScientist An Omni-Modal Omni-Discipline AI Scientist.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d6a643c2-c543-450a-8a77-03d14c6286e0",
+  "X-Amzn-Trace-Id": "Root=1-6b080509-176be258397a6cca7a953a32;Parent=6a94dbcf5236f409;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.374
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:09+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.346,
+ "json": {
+  "query": "The Value of Prompting Skills",
+  "contexts": [
+   {
+    "text": "As a way of effectively communicating with   GenAI systems, prompting is becoming increasingly important (Bansal, 2024; Walter, 2024). Early6      research on prompting suggests that well-crafted prompts relate to higher work quality and   reproducibility (Grabb, 2023; Park et al., 2023) and prompting is increasingly understood as a   quantifiable and acquirable skill (Bansal, 2024; Capraro et al., 2024; Handa et al., 2023; Hashmi   & Bal, 2024; Knoth et al., 2024; Oppenlaender et al., 2024). Under this premise, prompting skills   enable workers to produce higher quality GenAI output in a more efficient manner. This aligns   with human capital theory (Becker, 1962), in that a worker with prompting skills can be understood   as more productive for the firm compared to a worker without prompting skills.   Beyond being measurable human capital, prompting skills may additionally act as a signal   of being a more capable employee, which aligns with signaling theory postulating that –at the time   of a hiring decision– firms infer applicants’ productive capacity from their observed attributes   (Spence, 1973).",
+    "score": 0.72474915435861,
+    "source": "013 - The Value of Prompting Skills.pdf",
+    "page": 5
+   },
+   {
+    "text": "Copyright remains with the author(s) unless otherwise indicated.   The Value of Prompting Skills   Lara Fleck Maastricht University   Dominik Becker Federal Institute for Vocational Education and Training (BIBB) and Maastricht University   Marie-Christine Fregin Maastricht University   Andries de Grip Maastricht University and IZA@LISER   Harald Pfeifer Federal Institute for Vocational Education and Training (BIBB), Maastricht University and IZA@LISER   Kathrin Weis Federal Institute for Vocational Education and Training (BIBB)IZA DP No. 18871 August 2026   The Value of Prompting Skills Abstract With the advent of generative artificial intelligence, prompting skills are becoming increasingly relevant in the workplace. Using a discrete choice experiment (DCE), this study examines employers’ hiring preferences and willingness to pay (WTP) for prompting skills and whether prompting skills can complement social skills or compensate for occupation- specific skills gaps. In the DCE, decision-makers on hiring in German firms in all sectors of the economy are asked to choose between job applicants with different skills bundles. Applicant profiles vary in five attributes: prompting skills, occupation-specific skills gaps, social skills, gender and salary expectations.",
+    "score": 0.6995104198901395,
+    "source": "013 - The Value of Prompting Skills.pdf",
+    "page": 1
+   },
+   {
+    "text": "Similarly, AI adopters assess high levels of prompting to be particularly   beneficial, which is in line with self-reported measures of expected productivity gains through AI   (Licht & Wohlrabe, 2026). This strongly suggests that these firms intuitively grasp the implied   increase in human capital and its potential for productivity growth.   However, the persistent positive effect of prompting skills on applicants’ hiring prospects   in SMEs and non-adopting firms shows that prompting skills are broadly valued in the labor market   for skilled applicants. Even though non-adopting firms cannot directly benefit from prompting   skills, they still seem to value them already. As a complement to our previous human capital   explanation, this might be explained by signaling theory, in that firms may have inferred other   skills or applicant traits – such as adaptability or future-orientation – through prompting skills   (Stephany et al., 2026).   When comparing the effect sizes of our skills attributes, the effect of prompting skills is   rather modest, while occupation-specific skills matches and high social skills considerably benefit   applicants’ hiring probability. Considering the specificity of prompting skills compared to the17      much broader categories of occupation-specific and social skills, the smaller effect sizes are not   surprising. Building on experimental studies which established that AI skills increase in value   based on their complementarity with other skills (Stephany & Teutloff, 2024), we further test   interactions between these skills.",
+    "score": 0.6922643987655678,
+    "source": "013 - The Value of Prompting Skills.pdf",
+    "page": 16
+   },
+   {
+    "text": "Our study contributes to the literature in three ways. First, we add to the literature on AI   and changing skill demands (Garcia-Lazaro et al., 2025; Salomons et al., 2025; Stephany &   Teutloff, 2024) by focusing on the relevance of prompting skills for skilled workers in all sectors   of the economy. In that, we test the effect of applicants’ prompting skills on hiring probability and   evaluate the monetary value of these skills in the German labor market. Second, we add to existing   hiring experiments on the value of digital or AI skills, and prompting (Carvajal et al., 2024;   Stephany et al., 2026; Zamberlan et al., 2024) by quantifying the interplay between prompting,   occupation-specific and social skills from a firm perspective. Third, we add to the literature on   skills mismatches (Allen & van der Velden, 2001; McGuinness et al., 2018; van der Velden &5      Verhaest, 2017) by examining whether employers may see prompting skills as compensatory to   workers’ gaps in occupation-specific skills or as an upgrading of occupational skills requirements.   2.",
+    "score": 0.6860826609571955,
+    "source": "013 - The Value of Prompting Skills.pdf",
+    "page": 4
+   },
+   {
+    "text": "Building on experimental studies which established that AI skills increase in value   based on their complementarity with other skills (Stephany & Teutloff, 2024), we further test   interactions between these skills. However, we reject our hypothesis that high prompting skills   enhance hiring chances more strongly in conjunction with high social skills. Instead, we find a   positive interaction effect for applicants with prompting and social skills at intermediate levels.   Moreover, the positive effect of prompting persists for applicants with low social skills. These   results suggest an alternative notion to our hypothesis, indicating that prompting skills may have   leverage to balance out low to intermediate levels of social skills.   Similarly to Zamberlan et al. (2024), we also tested whether prompting skills may be   perceived to potentially compensate for skills mismatches within occupations – particularly   focusing on occupation-specific skills gaps. However, in our hiring scenario for a vocationally   trained worker with some professional expertise, employers – on average – were not willing to   tolerate deficits in occupation-specific skills, even when applicants had high prompting skills.   Prompting skills may not be perceived as a sufficiently strong predictor for improved worker   performance to offset the negative effects of skills deficits. Nevertheless, prompting skills do seem   to have positive value in the labor market when applicants’ occupation-specific skills match the   job requirements.",
+    "score": 0.6750181501582422,
+    "source": "013 - The Value of Prompting Skills.pdf",
+    "page": 17
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "83eb1707-3d85-4fc7-a3e0-290ee7c355f8",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f8-396d46a03ad677640e08387d;Parent=40bfcc3763cf7d58;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.346
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:52+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The Value of Prompting Skills"
+ },
+ "from_cache": false
+}

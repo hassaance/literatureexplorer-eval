@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.276,
+ "json": {
+  "query": "ABSTRAL: Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization",
+  "contexts": [
+   {
+    "text": "ABSTRAL: Automated Multi-Agent System Design via Skill-Referenced Adaptive Search   Weijia Song, Jiashu Yue, Zhe Pang   Abstract   How should multi-agent systems be designed, and can that design knowledge be captured in a form that is inspectable, revisable, and transferable? We introduce ABSTRAL, a framework that treats MAS ar- chitecture as an evolving natural-language document—a SKILL.md artifact refined through contrastive trace analysis. Three findings emerge. First, we provide a precise measurement of the multi-agent coor- dination tax: under fixed turn budgets, ensembles achieve only 26% turn efficiency, with 66% of tasks exhausting the limit—yet still improve over single-agent baselines by discovering parallelizable task decompositions. Second, design knowledge encoded in SKILL.md documents transfers: topology rea- soning and role templates learned on one domain provide a head start on new domains, with transferred seeds matching cold-start iteration-3 performance in a single iteration. Third, contrastive trace analysis discovers specialist roles absent from any initial design—a capability no prior system demonstrates. On SOPBench [Li et al., 2025] (134 bank tasks, deterministic oracle), ABSTRAL reaches 70% validation / 65.96% test pass rate with a GPT-4o backbone.",
+    "score": 0.5817446261004791,
+    "source": "050 - ABSTRAL Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization.pdf",
+    "page": 1
+   },
+   {
+    "text": "Fixed-topology frameworks such as MetaGPT [Hong et al., 2023] and AutoGen [Wu et al., 2023] define collaboration protocols but do not search over topology. All store knowledge as code, neural parameters, or scalar scores—opaque artifacts that cannot be inspected as design rationale. Only ABSTRAL simultaneously varies topology, stores readable knowledge, and discovers roles (Table 1).   Two open problems. Prior approaches optimize within a fixed design region along two axes. First, topol- ogy: without explicit diversity criteria, systems converge to the topology nearest initialization. Second, role composition: agents relabeled “Verifier” vs. “Checker” may be structurally identical; no prior system distinguishes genuine role novelty from relabeling, or discovers roles absent from the initial design. Orthog- onally, trace-driven approaches like Trace/OPTO [Cheng et al., 2024] propagate scalar feedback rather than extracting causal knowledge about which design component caused each failure. ABSTRAL addresses both problems (§3).   2Table 1: ABSTRAL vs. prior automated agent design systems. System Topology Var.? Readable Knowledge? Role Discovery?",
+    "score": 0.5681113842915382,
+    "source": "050 - ABSTRAL Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization.pdf",
+    "page": 2
+   },
+   {
+    "text": "On SOPBench [Li et al., 2025] (134 bank tasks, deterministic oracle), ABSTRAL reaches 70% validation / 65.96% test pass rate with a GPT-4o backbone. We release the converged SKILL.md documents as inspectable design rationale.   1 Introduction   Multi-agent systems built on large language models are currently designed by hand. Existing automated approaches store intermediate knowledge as code [Chen et al., 2024b], prompts [Khattab et al., 2023], or skill libraries [Wang et al., 2023], but none captures design knowledge: a human-readable account of which architectural patterns work for which problems, and why.   This paper asks: can natural-language documents serve as a viable optimization target for multi- agent design? We introduce ABSTRAL, which repurposes the SKILL.md standard [Zhang et al., 2025]— originally for documenting tasks—to document the design process itself. A meta-agent analyzes execution traces and refines this document iteratively.   Our experiments yield three findings that we believe are more important than any single benchmark number: • The coordination tax is real and measurable. Multi-agent ensembles achieve only 26% turn efficiency   under fixed budgets, with 66% of tasks hitting the turn limit. Yet they still improve over single-agent baselines—but only for tasks whose structure admits parallelizable decomposition.",
+    "score": 0.5620402243026521,
+    "source": "050 - ABSTRAL Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization.pdf",
+    "page": 1
+   },
+   {
+    "text": "SkillsBench [Li et al., 2026b] finds self-generated skills yield no net benefit without systematic curation, motivating ABSTRAL’s evidence-class-driven refinement. SkillOrchestra [Wang et al., 2026] is closest in spirit, building a Skill Handbook from contrastive trajectories, but its skills are routing descriptors for a fixed agent pool—it neither discovers new roles nor searches across topology families.   Automated agent design. ADAS [Chen et al., 2024b] evolves agent code; AFlow [Zhang, J. et al., 2024] uses MCTS over workflows (ICLR 2025 Oral); MaAS [Zhang, G. et al., 2025] samples from a probabilistic supernet (ICML 2025 Oral); MASS [Zhou et al., 2025] co-optimizes prompts and topologies; GPTSwarm [Zhuge et al., 2024] optimizes edge probabilities via REINFORCE; G-Designer [Zhang, G. et al., 2024] decodes topologies via graph autoencoders; EvoAgent [Yuan et al., 2024] evolves multi-agent populations. Fixed-topology frameworks such as MetaGPT [Hong et al., 2023] and AutoGen [Wu et al., 2023] define collaboration protocols but do not search over topology.",
+    "score": 0.5171588042709979,
+    "source": "050 - ABSTRAL Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization.pdf",
+    "page": 2
+   },
+   {
+    "text": "Three findings define the contribution. First, the coordination tax is real: 26% turn efficiency means multi-agent systems must discover parallelizable task decompositions to justify their overhead. This is not a limitation of ABSTRAL—it is a structural property of multi-agent coordination under fixed budgets that prior work has not quantified. Second, design knowledge transfers: topology reasoning and role templates learned on one domain accelerate convergence on new domains, with transferred seeds matching cold-start iteration-3 performance in a single iteration. Third, contrastive trace analysis discovers specialist roles absent from any initial design, providing a mechanism for automated role composition that prior systems lack.   On SOPBench bank (134 tasks, deterministic oracle), ABSTRAL reaches 70% val / 65.96% test pass rate with GPT-4o, but we view this number as context rather than the primary claim. The primary claims are about the properties of the design process: that it produces transferable, inspectable knowledge and that it reveals when multi-agent coordination is worth its cost.   Limitations. All reported results are from single experimental runs; a second run on SOPBench bank peaked at 65% (vs. 70%), indicating meaningful run-to-run variance from 20-task batch sampling. The 7- category topology taxonomy may not cover all architectures. The framework overhead comparison between our LangGraph pipeline and published FC baselines introduces a confound that we report transparently but cannot fully eliminate.",
+    "score": 0.51578063363805,
+    "source": "050 - ABSTRAL Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "92afff61-a19f-4d8d-878d-5ffa7a042be9",
+  "X-Amzn-Trace-Id": "Root=1-6b0804ff-0dd9e25e3dbcd0f97160fa79;Parent=7e2b0a78d30e6efc;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.276
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ABSTRAL: Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization"
+ },
+ "from_cache": false
+}

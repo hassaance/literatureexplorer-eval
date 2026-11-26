@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.294,
+ "json": {
+  "query": "Can you explain the trick of embedding a fake generated document to search for real ones?",
+  "contexts": [
+   {
+    "text": "We note that this is the best case: a real embedding model cannot di- rectly optimize the query and document vectors to match the test qrel matrix (and is constrained by factors such as “modeling natural language”). The results also show that the lower bounds in the previous section are a gross underestimate of real-world performance, as Table 1 shows a lower bound of 4 for n = 100 whereas we see the free embeddings needing d > 18 (e.g. a 4.5 multiplier even in the no-generalization or natural language case). Overall, these numbers already show that for web-scale search, even the largest embedding dimensions with ideal test-set optimization are not enough to model all combinations.   5 EMPIRICAL CONNECTION: REAL-WORLD DATASETS   The free embedding experiments provide empirical evidence that our theoretical results hold true. However, they still are abstract - what does this mean for real embedding models? In this section we (1) draw connections from this theory to existing datasets and (2) create a trivially simple yet extremely difficult retrieval task for existing SOTA models.   5.1 CONNECTION TO EXISTING DATASETS   Existing retrieval datasets typically use a static evaluation set with limited numbers of queries, as relevance annotation is expensive to do for each query. This means practically that the space of queries used for evaluation is a very small sample of the number of potential queries.",
+    "score": 0.4594905556830913,
+    "source": "027 - On the Theoretical Limitations of Embedding-Based Retrieval.pdf",
+    "page": 6
+   },
+   {
+    "text": "∪DL (3)   To build the query vector, we consider in addition an instruction following LM, InstructLM. It takes a query q and a textual instruction INST and follows them to perform the task specified by INST. For simplicity, denote,   g(q, INST) = InstructLM(q, INST) (4)   Now we can use g to map queries to \"hypotheti- cal\" documents by sampling from g, setting INSTto be “write a paragraph that answers the question”. The generated document is not real, can and is likely to be ungrounded factually (Brown et al., 2020; Thoppilan et al., 2022). We only re- quire it to capture relevance pattern. This is done by generating documents, i.e. providing exam- ples. Critically, here we offload relevance mod- eling from representation learning model to an NLG model that generalizes significantly more eas- ily, naturally, and effectively (Brown et al., 2020; Ouyang et al., 2022). Generating examples also replaces explicit modeling of relevance scores. We can now encode the generated document using the document encoder f . Write,   E[vqij ] = E[f(g(qij , INSTi))] (5)   Formally, g defines a probability distribution based on the chain rule.",
+    "score": 0.45704380235933667,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "∪DL (3)   To build the query vector, we consider in addition an instruction following LM, InstructLM. It takes a query q and a textual instruction INST and follows them to perform the task specified by INST. For simplicity, denote,   g(q, INST) = InstructLM(q, INST) (4)   Now we can use g to map queries to \"hypotheti- cal\" documents by sampling from g, setting INSTto be “write a paragraph that answers the question”. The generated document is not real, can and is likely to be ungrounded factually (Brown et al., 2020; Thoppilan et al., 2022). We only re- quire it to capture relevance pattern. This is done by generating documents, i.e. providing exam- ples. Critically, here we offload relevance mod- eling from representation learning model to an NLG model that generalizes significantly more eas- ily, naturally, and effectively (Brown et al., 2020; Ouyang et al., 2022). Generating examples also replaces explicit modeling of relevance scores. We can now encode the generated document using the document encoder f . Write,   E[vqij ] = E[f(g(qij , INSTi))] (5)   Formally, g defines a probability distribution based on the chain rule.",
+    "score": 0.45704380235933667,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   },
+   {
+    "text": "With these ingredients, we propose to   pivot through Hypothetical Document Embeddings (HyDE), and decompose dense retrieval into two tasks, a generative task per- formed by an instruction-following language model and a document-document similarity task performed by a contrastive encoder (Figure 1). First, we feed the query to the generative model and instruct it to \"write a document that answers the question\", i.e. a hypothetical document. We expect the generative process to capture \"relevance\" by giving an example; the generated document is not real, can contain factual errors but is like a relevant document. In the second step, we use an unsupervised contrastive encoder to encode this document into an embedding vector. Here, we expect the encoder’s dense bottleneck to serve a lossy compressor, where the extra (hallucinated) details are filtered out from the embedding. We use this vector to search against the corpus embeddings. The most similar real documents are retrieved and returned. The retrieval leverages document-document similarity encoded in the inner-product during contrastive training. Note that, interestingly, with HyDE factorization, the query-document similarity score is no longer explicitly modeled nor computed. Instead, the retrieval task is cast into two NLU and NLG tasks.   HyDE appears unsupervised. No model is trained in HyDE: both the generative model and the con- trastive encoder remain intact.",
+    "score": 0.4538855560850263,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 2
+   },
+   {
+    "text": "With these ingredients, we propose to   pivot through Hypothetical Document Embeddings (HyDE), and decompose dense retrieval into two tasks, a generative task per- formed by an instruction-following language model and a document-document similarity task performed by a contrastive encoder (Figure 1). First, we feed the query to the generative model and instruct it to \"write a document that answers the question\", i.e. a hypothetical document. We expect the generative process to capture \"relevance\" by giving an example; the generated document is not real, can contain factual errors but is like a relevant document. In the second step, we use an unsupervised contrastive encoder to encode this document into an embedding vector. Here, we expect the encoder’s dense bottleneck to serve a lossy compressor, where the extra (hallucinated) details are filtered out from the embedding. We use this vector to search against the corpus embeddings. The most similar real documents are retrieved and returned. The retrieval leverages document-document similarity encoded in the inner-product during contrastive training. Note that, interestingly, with HyDE factorization, the query-document similarity score is no longer explicitly modeled nor computed. Instead, the retrieval task is cast into two NLU and NLG tasks.   HyDE appears unsupervised. No model is trained in HyDE: both the generative model and the con- trastive encoder remain intact.",
+    "score": 0.4538855560850263,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b51f57e0-62e6-4da7-9f42-36a41e371d1a",
+  "X-Amzn-Trace-Id": "Root=1-6b080434-53eb78e710438f022f4c89b0;Parent=1ca744f5459d5228;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.294
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:36+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "Can you explain the trick of embedding a fake generated document to search for real ones?"
+ },
+ "from_cache": false
+}

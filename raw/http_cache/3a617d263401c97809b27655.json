@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.268,
+ "json": {
+  "query": "According to the survey, why are traditional safeguards such as peer review and post‑deployment auditing inadequate for supervising autonomous Vibe Coding agents?",
+  "contexts": [
+   {
+    "text": "The central challenge lies in scaling assurance mechanisms to match the increasing autonomy, speed, and operational complexity of these agents. Traditional safeguards designed for human-authored code, for example, peer review [572, 594, 595], and post-deployment auditing [596, 597], cannot feasibly monitor the millions of tokens or decisions that modern agents can generate per hour. This growing disparity between agent capability and human supervision capacity has become a critical obstacle to safe and accountable Vibe Coding workflows.   9.3.1 Emerging Risks of Vide Coding Workflow   Recent empirical analyses show that the introduction of autonomous agents into production pipelines correlates with a tenfold increase in security warnings and technical debt accumulation within six months of adoption [184, 584]. These findings reveal that human-centric verification processes fail to scale in environments where agents autonomously generate, refactor, and redeploy code. The challenge is not simply one of quality assurance but of maintaining interpretability and control in increasingly opaque decision pathways. Over-reliance on autonomous coding agents introduces new classes of risks:   Cascading Errors Cascading errors occur when autonomous agents propagate flawed outputs through in- terconnected software pipelines, transforming local inaccuracies into systemic failures.",
+    "score": 0.5744869575984296,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 38
+   },
+   {
+    "text": "The model may therefore reproduce these vulnerabilities in novel contexts. Consequently, for Vibe Coding to be a viable methodology for production-grade software, it must be augmented by a new generation of automated guardrails that operate continuously and intelligently within the development loop.   9.2.1 The Inadequacy of Manual Review   Traditional security assurance relies heavily on manual expert code review [587]. This practice is fundamentally incompatible with the philosophy of Vibe Coding. It is paradoxical to gain development speed by having an AI generate code, only to lose that speed by requiring a human to manually inspect every line of the output. Furthermore, the developer prompting the AI may lack the specific security expertise to spot vulnerabilities in the generated code, especially if it uses an unfamiliar library or a complex algorithm. The very premise of Vibe Coding—trusting the agent to handle implementation details—necessitates a shift from human-centric inspection to automated, real-time validation.   9.2.2 Architecting an Integrated Security and Reliability Feedback Loop   A robust Vibe Coding ecosystem must integrate automated analysis directly into the \"prompt-generate-validate\" cycle. This goes beyond traditional CI/CD pipeline scans and requires real-time feedback embedded within the developer’s interactive workflow. The architectural framework for this involves a tight coupling of the coding agent with Static Application Security Testing (SAST), Dynamic Application Security Testing (DAST), and other quality analysis tools.   Pre-Generation Contextual Analysis.",
+    "score": 0.5677419389770381,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 37
+   },
+   {
+    "text": "They are responsible for interpreting the outputs of these automated security tools, resolving ambiguities, and making the final risk-based decision. The goal of the tooling is to empower the developer with immediate, actionable intelligence, transforming the security process from a separate, delayed phase into an intrinsic property of the code generation act itself. However, the technical specifications and architectural blueprints for these deeply integrated, real-time security frameworks in Vibe Coding workflows are not yet standardized [590, 20] and building them remains a major challenge for the research and tool-development communities. Without solving this, Vibe Coding risks being confined to prototyping and non-critical applications, unable to deliver on its promise for reliable, secure, and production-ready software systems.   9.3 Scalable Oversight of Vibe Coding Agents   As coding agents evolve toward autonomous code generation and deployment [243, 244], the scope of oversight must expand from localized code verification to system-level governance. While Section 9.2 examined reliability and security at the level of generated code, the next frontier concerns the supervision of agents that operate continuously across repositories, pipelines, and environments. The central challenge lies in scaling assurance mechanisms to match the increasing autonomy, speed, and operational complexity of these agents.",
+    "score": 0.5639951250364154,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 38
+   },
+   {
+    "text": "Reinforce- ment learning–based watchdog agents extend this capacity: autonomous monitors trained to detect deviations from specification and intervene or alert humans when the coding agent exceeds its operational bounds [612, 613].   Scalable oversight architectures for Vibe Coding agents converge on the principle of amplifying limited oversight into broad governance. Through hierarchical weak-to-strong supervision, multi-agent critique, and automated watchdogs, researchers aim to generalize weak feedback signals into strong preventive constraints that evolve with agent capability [618, 614, 615]. The challenge lies not only in constructing these systems but in maintaining their reliability as agents advance beyond direct human comprehension. By incrementally upgrading oversight tools alongside the agents themselves, the field moves toward an adaptive architecture, one where even superhuman coding systems remain answerable to human-aligned constraints.   9.4 Human Factors in Vibe Coding   In contrast to traditional programming where developers directly manipulate code logic, Vibe Coding emphasizes context engineering and human-AI collaboration [28, 623]. We examine three key aspects of this transformation: the shift in developers’ mental models, the evolution of required skill sets, and the reconfiguration of team collaboration and responsibility [624].   9.4.1 Mental Model Shift: From Code Logic to Context Engineering   Software engineering has historically been conceptualized as the process of translating requirements into algorithms and data structures expressed through code [625].",
+    "score": 0.5420967944872468,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 40
+   },
+   {
+    "text": "New Challenges in Project Management and Collaboration . . . . . . . . . . . . . . . . . . . . 36   9.2 Code Reliability and Security in Vibe Coding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37 9.2.1 The Inadequacy of Manual Review . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37 9.2.2 Architecting an Integrated Security and Reliability Feedback Loop . . . . . . . . . . . . . . . 37 9.2.3 The Human-in-the-Loop as a Final Arbiter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38   9.3 Scalable Oversight of Vibe Coding Agents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38 9.3.1 Emerging Risks of Vide Coding Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+    "score": 0.5220683935953547,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "07198863-f300-4146-b979-d892cda660fd",
+  "X-Amzn-Trace-Id": "Root=1-6b080447-140f1f0a0f8dc49b6015bfff;Parent=10d466ca9fa0ba25;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.268
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:55+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "According to the survey, why are traditional safeguards such as peer review and post‑deployment auditing inadequate for supervising autonomous Vibe Coding agents?"
+ },
+ "from_cache": false
+}

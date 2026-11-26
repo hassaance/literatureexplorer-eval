@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.299,
+ "json": {
+  "query": "In the paper 'Prompt engineering as a new 21st century skill', what limitation do the authors highlight regarding the timeliness and completeness of their proposed assessment framework for prompt engineering?",
+  "contexts": [
+   {
+    "text": "We show that no existing related frameworks on 21st skills and others cover PE to the extent that allows for its valid assessment and targeted promotion in school and university education. Thus, we propose a conceptual framework for this skill set including (1) comprehension of the basic prompt structure, (2) prompt literacy, (3) the method of prompting, and (4) critical online reasoning. We also discuss the implications and challenges for the assessment framework of this skill set and highlight current PE-related recommendations for researchers and educators.   KEYWORDS   prompt engineering, artificial intelligence, 21st century skills, ChatGPT, digital skills, critical online reasoning, LLM   1 Introduction   The development of assisting Artificial Intelligence (AI) tools promises to revolutionize almost all fields of human learning. The widespread adoption of emerging digital technologies has accelerated the development and the speed of information exchange. It has become obvious that learners require a specific competence to be able to process various forms of information to successfully undertake tasks in disciplinary and cross-disciplinary contexts. As part of this transformative trend, the cultivation of 21st century skills has been deemed essential to preparing a global workforce to succeed in an increasingly data-centric and information-driven society.   While a universal definition of 21st century skills is hardly possible due to numerous different frameworks, their common features can be determined.",
+    "score": 0.5745995013922822,
+    "source": "006 - Prompt engineering as a new 21st century skill.pdf",
+    "page": 1
+   },
+   {
+    "text": "Frontiers in Education 01 frontiersin.org   Prompt engineering as a new 21st century skill Denis Federiakin *, Dimitri Molerov , Olga Zlatkin-Troitschanskaia  and Andreas Maur    Department of Business and Economics Education, Johannes Gutenberg University Mainz, Mainz, Germany   Artificial Intelligence (AI) promises to revolutionize nearly every aspect of human learning. However, users have observed that the efficacy of AI assistants hinges crucially on the quality of the prompts supplied to them. A slight alteration in wording can make the difference between an assistant misinterpreting an instruction and exceeding expectations. The skill of precisely communicating the essence of a problem to an AI assistant is as crucial as the assistant itself. This paper aims to introduce Prompt Engineering (PE) as an emerging skill essential for personal and professional learning and development in the 21st century. We define PE as the skill of articulating a problem, its context, and the constraints of the desired solution to an AI assistant, ensuring a swift and accurate response. We show that no existing related frameworks on 21st skills and others cover PE to the extent that allows for its valid assessment and targeted promotion in school and university education.",
+    "score": 0.5679383578333219,
+    "source": "006 - Prompt engineering as a new 21st century skill.pdf",
+    "page": 1
+   },
+   {
+    "text": "Not only has ChatGPT become a pervasive presence within the computer-reliant programming and technology sector (Chen et al., 2023a; Ridnik et al., 2024) and the research   OPEN ACCESS   EDITED BY   Knut Neumann, IPN–Leibniz Institute for Science and Mathematics Education, Germany   REVIEWED BY   Hongzhi (Veronica) Yang, The University of Sydney, Australia Barry Lee Reynolds, University of Macau, China   *CORRESPONDENCE   Denis Federiakin denis.federiakin@uni-mainz.de   RECEIVED 06 January 2024 ACCEPTED 08 October 2024 PUBLISHED 29 November 2024   CITATION   Federiakin D, Molerov D, ​ Zlatkin-Troitschanskaia O and Maur A (2024) Prompt engineering as a new 21st century skill. Front. Educ. 9:1366434. doi: 10.3389/feduc.2024.1366434   COPYRIGHT   © 2024 Federiakin, Molerov, Zlatkin-Troitschanskaia and Maur. This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY).",
+    "score": 0.5642346684226537,
+    "source": "006 - Prompt engineering as a new 21st century skill.pdf",
+    "page": 1
+   },
+   {
+    "text": "In summary, the abovementioned skill frameworks focus on the perspective of students as agentic learners who actively regulate their own learning processes. Therefore, PE and LLM use are compatible with the above frameworks, as they essentially relate to the consistently emerging cognitive, metacognitive, and self-regulatory skills (Foster, 2023a; Roll and Barhak-Rabinowitz, 2023). They can be attributed to the respective search phases as well as partly to the evaluation and reasoning phases, if the assessment’s operationalization grants students access to LLMs. However, the frameworks are not specific enough in addressing how users can skillfully interact with the AI-supported tools like ChatGPT to obtain desired information,   leaving a number of conceptual questions open. As with any new technology, novel affordances call for new (sub)skills, too.   5 Conceptualization of prompt engineering skills   For the sake of this paper, we  define PE as the skill of communicating the problem, its context, and the constraints imposed on the desirable solution to an LLM to solve it correctly as fast as possible (Lo, 2023a). Thus, this skill conveys the user’s needs to an LLM in a manner that the model can understand.",
+    "score": 0.5371786079066089,
+    "source": "006 - Prompt engineering as a new 21st century skill.pdf",
+    "page": 6
+   },
+   {
+    "text": "Understanding User Intent RaR Manual Single GPT-4-0613 Knowledge, Symbolic Accuray, Fair Score,   Language Modeling Score   Metacognition and Self-Reflection Take a Step Back Manual Single PaLM2-L, GPT-4 MMLU-Physics, MMLU-Chemistry   TimeQA, SituatedQA, StrategyQA Accuracy   3 Conclusion In the domain of artificial intelligence, prompt engineering has become a transformative force, unlocking the vast potential of LLMs. This survey paper aims to serve as a foundational resource that systematically categorizes 41 distinct prompt engineering techniques based on their targeted functionali- ties, inspiring further research and empowering innovators in the evolving landscape of prompt engineering. The analysis spans applications, models, and datasets, shedding light on the strengths and limitations of each approach. Furthermore, we have added a diagram and a table to highlight the important points. Despite the remarkable successes, challenges per- sist, including biases, factual inaccuracies, and interpretabil- ity gaps, necessitating further investigation and mitigation strategies. The future of prompt engineering holds immense potential, with emerging trends like meta-learning and hy- brid prompting architectures promising amplified capabilities. However, ethical considerations are paramount, emphasizing responsible development and deployment to ensure positive integration into our lives.   References Hyojin Bahng, Ali Jahanian, Swami Sankaranarayanan, and   Phillip Isola.",
+    "score": 0.5258187569926225,
+    "source": "016 - A Systematic Survey of Prompt Engineering in Large Language Models Techniques and Applications.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c3b3dd19-356b-47d0-9e63-6559c51a2b1f",
+  "X-Amzn-Trace-Id": "Root=1-6b080441-67066854771fa5a93ec23281;Parent=0d41c3333d69ad16;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.299
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:49+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper 'Prompt engineering as a new 21st century skill', what limitation do the authors highlight regarding the timeliness and completeness of their proposed assessment framework for prompt engineering?"
+ },
+ "from_cache": false
+}

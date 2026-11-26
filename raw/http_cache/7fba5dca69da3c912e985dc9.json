@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.556,
+ "json": {
+  "id": "chatcmpl-60ef596f-d97d-4bd0-84e3-d8557f63cf0d",
+  "object": "chat.completion",
+  "created": 1795687446,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The best GPT-4-based agent achieved an end-to-end task success rate of 14.41% in WebArena, which is significantly lower than the human performance of 78.24%."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1713,
+   "completion_tokens": 48,
+   "total_tokens": 1761
+  },
+  "contexts": [
+   {
+    "text": "Additionally, we curate a comprehensive benchmark consisting of 812 examples that focus on mapping high-level natural language intents into concrete web interactions. We also offer outcome-based evaluation that programmatically validate the tasks success. Our experiments show that even GPT-4 only achieves a limited end-to-end task success rate of 14.41%, significantly lagging behind the human performance of 78.24%. These findings underscore the need for future research to focus on enhancing the robustness and efficacy of autonomous agents within WebArena environment.   9Published as a conference paper at ICLR 2024   ACKNOWLEDGEMENT   We would like to thank Emmy Liu, Zhiruo Wang, Zhitong Guo for examining our annotations, Shunyu Yao for providing the raw Amazon product data in Webshop, Pengfei Liu, Zaid Sheikh and Aman Madaan for the helpful discussions. We are also grateful to the Center for AI Safety for providing computational resources. This material is partly based on research sponsored in part by the Air Force Research Laboratory under agreement number FA8750-19-2-0200. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright notation thereon. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the Air Force Research Laboratory or the U.S. Government.",
+    "score": 0.7077527969469785,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 9
+   },
+   {
+    "text": "We use this benchmark to evaluate several agents that can follow NL command and perform web- based tasks (§4). These agents are implemented in a few-shot in-context learning fashion with powerful large language models (LLMs) such as GPT-4 and PALM-2. Experiment results show that the best GPT-4 agent performance is somewhat limited, with an end-to-end task success rate of only 14.41%, while the human performance is 78.24%. We hypothesize that the limited performance of current LLMs stems from a lack of crucial capabilities such as active exploration and failure recovery to successfully perform complex tasks (§5.1). These outcomes underscore the necessity for further development towards robust and effective agents (LeCun, 2022) in WebArena.   2 WEBARENA : WEBSITES AS AN ENVIRONMENT FOR AUTONOMOUS AGENTS   Our goal is to create a realistic and reproducible web environment. We achieve reproducibility by making the environment standalone, without relying on live websites. This circumvents technical   2Published as a conference paper at ICLR 2024   Search for museums in Pittsburgh   webarena.wikipedia.com   Search for each art museum on the Map   webarena.openstreetmap.com   Record the optimized results to the repo   webarena.gitlab.com   …   Create an efficient itinerary to visit all of Pittsburgh's art museums with minimal driving distance starting from Schenley Park.",
+    "score": 0.6138853988741932,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Building upon our environment, we release a set of benchmark tasks focusing on evaluating the functional correctness of task completions. The tasks in our benchmark are diverse, long-horizon, and designed to emulate tasks that humans routinely perform on the internet. We experiment with several baseline agents, integrating recent techniques such as reasoning before acting. The results demonstrate that solving complex tasks is challenging: our best GPT-4-based agent only achieves an end-to-end task success rate of 14.41%, significantly lower than the human performance of 78.24%. These results highlight the need for further development of robust agents, that current state-of-the-art large language models are far from perfect performance in these real-life tasks, and that WebArena can be used to measure such progress. Our code, data, environment reproduction resources, and video demonstrations are publicly available at https://webarena.dev/.   1 INTRODUCTION   Autonomous agents that perform everyday tasks via human natural language commands could significantly augment human capabilities, improve efficiency, and increase accessibility. Nonetheless, to fully leverage the power of autonomous agents, it is crucial to understand their behavior within an environment that is both authentic and reproducible. This will allow measurement of the ability of agents on tasks that human users care about in a fair and consistent manner.   Current environments for evaluate agents tend to over-simplify real-world situations.",
+    "score": 0.595565227858718,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "The main results are shown on the top of Table 2. GPT-4 (OpenAI, 2023) with CoT prompting achieves a modest end-to-end task success rate of 11.70%, which is signifi- cantly lower than the human performance of 78.24%. GPT-3.5 (OpenAI, 2022) with CoT prompting is only able to successfully perform 8.75% of the tasks. The explicit reasoning procedure is somewhat helpful, it brings 2.34% improvement over the version without it. Further, TEXT-BISON-001 (Anil et al., 2023) underperforms GPT-3.5, with a success rate of 5.05%. These results under- line the inherent challenges and complexities of executing tasks that span long horizons, particularly in realistic environments such as WebArena.   5.1 ANALYSIS   Do models know when to stop? In our error analysis of the execution trajectories, we observe a prevalent error pattern of early stopping due to the model’s conclusion of unachievability. For instance, GPT-4 erroneously identifies 54.9% of feasible tasks as impossible. This issue primarily stems from the UA hint in the instruction, while this hint allows models to identify unachievable tasks, it also hinders performance on achievable tasks. To address this, we conduct an ablation study where we remove this hint.",
+    "score": 0.5889646361778095,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "o4-mini High (April 2025))   Browser-Use (GPT-5 Medium (August 2025))   Browser-Use (DeepSeek V3 (March 2025))   Browser-Use (GPT-4.1 (April 2025))   SeeAct (Claude Sonnet 4 High (May 2025))   SeeAct (Claude Sonnet 4 (May 2025))   Browser-Use (Claude-3.7 Sonnet (February 2025))   SeeAct (o3 Medium (April 2025))   Browser-Use (Claude Sonnet 4 High (May 2025))   Browser-Use (Claude-3.7 Sonnet High (February 2025))   Browser-Use (Claude Sonnet 4 (May 2025))   SeeAct (GPT-5 Medium (August 2025))   265/300 (88.3%)   127/300 (42.3%)   0 100 200 300   Any agent   Best agent   0%   20%   40%   60%   80%   100%   Fraction of Runs   Task ID   Performance Gap   Figure A24: Heatmap: best-agent vs. any-agent success.",
+    "score": 0.5639087580016571,
+    "source": "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf",
+    "page": 52
+   }
+  ],
+  "sources": [
+   "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+   "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+   "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+   "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+   "137 - Holistic Agent Leaderboard The Missing Infrastructure for AI Agent Evaluation.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "60ef596f-d97d-4bd0-84e3-d8557f63cf0d",
+  "X-Amzn-Trace-Id": "Root=1-6b080415-4c92c5e3784255095ab29b85;Parent=493871a7be9c9cb8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.556
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:05+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What end-to-end task success rate did the best GPT-4-based agent achieve in WebArena, and how does that compare to human performance?"
+   }
+  ]
+ },
+ "from_cache": false
+}

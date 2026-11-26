@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.269,
+ "json": {
+  "query": "Can Large Language Models Serve as Data Analysts? A Multi-Agent Assisted Approach for Qualitative Data Analysis",
+  "contexts": [
+   {
+    "text": "Can Large Language Models Serve as Data Analysts? A Multi-Agent Assisted Approach for Qualitative   Data Analysis   Zeeshan Rasheeda, Muhammad Waseema, Aakash Ahmad1, Kai-Kristian Kemella, Wang Xiaofeng1, Anh Nguyen Ducb, Pekka Abrahamssona   Faculty of Computing and Communications, Lancaster University Leipzig   Faculty of Engineering, Free University of Bozen Bolzano   aTampere University, Finland bUniversity of South Eastern Norway, Norway   Abstract   Context: Manual qualitative data analysis is time-intensive and can compromise validity and replicability, affecting analysis design, implemen- tation, and reporting. Large Language Models (LLMs) enable human-bot collaboration in Software Engineering (SE), but their potential for qualita- tive data analysis in SE remains largely unexplored.   Objective: The objective of this study is to design and develop an LLM- based multi-agent system that synergizes human decision support with AI to automate various qualitative data analysis approaches.   Methods: We used LLM-based multi-agents systems to assist the quali- tative data analysis process, deploying 27 agents, each responsible for a spe- cific task, such as text summarization, initial code generation, and extracting themes and patterns.",
+    "score": 0.8395942905620923,
+    "source": "117 - Can Large Language Models Serve as Data Analysts A Multi-Agent Assisted Approach for Qualitative Data Analysis.pdf",
+    "page": 1
+   },
+   {
+    "text": "Methods: We used LLM-based multi-agents systems to assist the quali- tative data analysis process, deploying 27 agents, each responsible for a spe- cific task, such as text summarization, initial code generation, and extracting themes and patterns.   Results: The main findings are: (1) the LLM-based multi-agent system accelerates the qualitative data analysis process, (2) the system effectively automates tasks such as text summarization, initial code generation, and theme extraction, and (3) the publicly accessible code facilitates validation and further evaluation.   Conclusion: The proposed LLM-based multi-agent system automates qualitative data analysis process, creating opportunities for researchers and practitioners. Future improvements focus on enhancing multilingual perfor- mance and integrating continuous expert feedback. The source code of pro-   ar X   iv :2   40 2.   01 38   6v 2   [ cs   .S E   ] 1   2 O   ct 2   02 5         https://arxiv.org/abs/2402.01386v2posed system and system details can be found here: https://github.com/GPT- Laboratory/Qualitative-Analysis-with-an-LLM-Based-Agentts   Keywords: Large Language Models, Qualitative Data Analysis, Multi-Agent Systems, Automation, Empirical Software Engineering   1.",
+    "score": 0.7276709189781588,
+    "source": "117 - Can Large Language Models Serve as Data Analysts A Multi-Agent Assisted Approach for Qualitative Data Analysis.pdf",
+    "page": 1
+   },
+   {
+    "text": "Research Questions Considering the objective of our study, we have formulated the following   Research Questions (RQs):   RQ1. How effective are LLM-based multi-agent systems to assist qual- itative data analysis?   The main aim of RQ1 is to determine whether LLM-based multi-agent systems are capable of assisting in qualitative data analysis. This question was formulated to evaluate the ability of LLM-based agents to accurately interpret and analyze complex textual data without human intervention.   3.2. System Design The section reports on how the proposed multi-agent system was devel-   oped to assist qualitative data analysis. In this project, we developed 27 agents, each of which is a specialized instance of an LLM, assigned a specific task to perform. As shown in Figure 1, the proposed multi-agent system receives diverse datasets from various sources. The multi-agent system pro- cesses the input and sends requests to the OpenAI API environment. Finally, the environment generates and returns a response. This is achieved by utiliz- ing the capabilities of LLMs to understand and interpret complex language structures, making it possible to automate the various aspects of qualita- tive analysis such as thematic analysis, content analysis, narrative analysis, discourse analysis and grounded theory generation.",
+    "score": 0.681630007162975,
+    "source": "117 - Can Large Language Models Serve as Data Analysts A Multi-Agent Assisted Approach for Qualitative Data Analysis.pdf",
+    "page": 8
+   },
+   {
+    "text": "Their findings suggested that prompts based on existing codebooks were more ef- fective than those with exemplar coding decisions, though both approaches fell short of expert coder performance. Building upon these foundations, our work extends the use of LLMs in qualitative research by employing a multi- agent system based on advanced LLMs to automate all types of qualitative data analysis, representing a step forward beyond existing applications in both scope and complexity. There is a lack of single platform that automate all aspects of qualitative analysis. This study aims to bridge this gap by in- troducing a platform that integrates LLMs with a multi-agent system. Our   7approach aims to provide a versatile system that supports qualitative data analysis using LLM-based AI agents.   3. Research Method   This research aims to investigate the efficiency of LLMs to assist qualita- tive data analysis in SE. Our methodology is structured into two phases, each designed to test and analyze the capabilities of LLMs in this context. Be- low we discuss how our LLM-based multi-agent system performs qualitative analysis tasks.   3.1. Research Questions Considering the objective of our study, we have formulated the following   Research Questions (RQs):   RQ1. How effective are LLM-based multi-agent systems to assist qual- itative data analysis?",
+    "score": 0.671435140818771,
+    "source": "117 - Can Large Language Models Serve as Data Analysts A Multi-Agent Assisted Approach for Qualitative Data Analysis.pdf",
+    "page": 7
+   },
+   {
+    "text": "Further research and development are required to address this gap and fully utilize the capabilities of LLMs within qualitative research methodologies.   In this paper, we propose an LLM-based multi-agent system to assist and automate the qualitative data analysis process, addressing challenges in scalability and efficiency. From the various qualitative research methods, we assist the five most popular methods used in SE: content analysis [24], thematic analysis [25], narrative analysis [26], grounded theory data analysis [27], and discourse analysis [28]. The proposed system analyzes large tex- tual datasets and interview transcripts to autonomously perform qualitative data analysis. It integrates LLMs to help researchers handle diverse datasets and accelerate the analysis process with improved performance. Primary contributions of this study are:   • An LLM-based multi-agent system synergises human decision support with AI to automate various qualitative data analysis approaches, in- cluding thematic analysis, grounded theory, content analysis, narrative analysis, and discourse analysis.   • The integration of LLMs based system into the qualitative analysis pro- cess allows researchers to handle large and diverse datasets and speed up the process. This reduces reliance on manual processes, making data analysis more efficient and accessible.   Implication of research: The results of this research can provide foun- dations to researchers who can formulate new hypotheses about the role of LLMs and explore processes, patterns, and methods for LLM-driven data analysis.",
+    "score": 0.6600151954573034,
+    "source": "117 - Can Large Language Models Serve as Data Analysts A Multi-Agent Assisted Approach for Qualitative Data Analysis.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f7871670-dc03-41b2-852b-9cf924e3a126",
+  "X-Amzn-Trace-Id": "Root=1-6b08050c-15aaa2522a21fae4351f5e8d;Parent=371a81323589a975;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.269
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:12+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Can Large Language Models Serve as Data Analysts? A Multi-Agent Assisted Approach for Qualitative Data Analysis"
+ },
+ "from_cache": false
+}

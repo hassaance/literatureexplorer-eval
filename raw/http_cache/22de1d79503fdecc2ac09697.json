@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.294,
+ "json": {
+  "query": "What method does the paper 'More Agents Is All You Need' use to improve LLM performance?",
+  "contexts": [
+   {
+    "text": "Additionally, the experimental results indicate that there are greater performance improvements when addressing difficult tasks and when using weaker models. To understand the reasons behind these performance improvements, we analyze the influence of problem difficulty on the effectiveness of our method. We classify difficulty into three dimensions: the inherent difficulty, the length of reasoning steps, and the prior probability of the correct answer. Through a series of experiments, we adjust these dimensions and observe their effects independently. We observe and summarize a few properties, based on which, we further develop optimization strategies that can intrigue the power of “More Agents”.   Our contributions are summarized as follows:   2Published in Transactions on Machine Learning Research (10/2024)   • We present the first systematic study on the scaling property of raw agents instantiated by LLMs. We find that the performance scales with the increase of agents, using the simple(st) way of sampling and voting.   • We explore the compatibility of our method with existing complicated methods that stimulate the potential of LLMs, revealing that our method can enhance these methods to achieve further performance improvements.",
+    "score": 0.6147675922970396,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 2
+   },
+   {
+    "text": "LLM agents with several LLM-centric functional modules including planning (Hao et al., 2023; Zeng et al., 2024; Shao et al., 2025), reasoning (Wei et al., 2022; Yao et al., 2024; Shang et al., 2024; Xu et al., 2025), using tools (Shen et al., 2024; Schick et al., 2024), and monitoring memory (Wang et al., 2024a; Park et al., 2023), greatly enhancing the capabilities of LLM agents. Along with the improvement of the single agent, there’s another line of work trying to build more advanced multi- agent systems by strategically organizing individual agents for both simulation (Li et al., 2023; Chen et al., 2023) and targeted task solving (Qian et al., 2024; Chen et al., 2024b; Li et al., 2024b). The emergence of more and more sophisticated agent produces remarkable performance improvement, however, their architectures and codebases differ greatly with each other.",
+    "score": 0.5806685781147353,
+    "source": "049 - AgentSquare Automatic LLM Agent Search in Modular Design Space.pdf",
+    "page": 10
+   },
+   {
+    "text": "Importantly, this method is orthogonal to different existing methods, which can lead to further improvements when combined with them.   Furthermore, we observe that the performance gains are influenced by the difficulty of the task. To explore this correlation, we isolate and analyze three dimensions of task difficulty: the inherent difficulty, the length of reasoning steps, and the prior probability of a correct answer. We find that: 1) the performance gains increase then decrease by rising the inherent difficulty; 2) performance gains increase with the number of steps; and 3) performance increases with the prior probability. Based on these properties, we also develop ways to boost the effectiveness of “More Agents”.   Considering that each input remains the same when we increase the number of agents, the sampling phase can be optimized to reduce the cost. Nonetheless, such a challenge of escalating costs commonly exists in works requiring multiple LLM calls Wang et al. (2023b); Du et al. (2023). This aligns with recent findings as discussed in Kapoor et al. (2024) that current benchmarks focus narrowly on accuracy, leading to costly agents. Additionally, the lack of adequate holdout sets and standardization in evaluation practices further complicates the development of cost-effective agents. Addressing these issues can enhance the practical efficiency of AI agents in real-world scenarios.",
+    "score": 0.5761966564745131,
+    "source": "002 - More Agents Is All You Need.pdf",
+    "page": 12
+   },
+   {
+    "text": "This exploration is pivotal in understanding the nature of LLM agents.   2.1 Definition of LLM Agent LLM technology continues to advance, the functionality of chatbots, such as ChatGPT [1], Gemini [2], Bing Chat [68], has significantly expanded beyond basic question-and-answer formats, embracing a wider array of capabilities. This evolution necessitates a broader, more general definition for LLM agents. An LLM agent is an artificial intelligence system that utilizes an LLM as its core computational engine to exhibit capabilities beyond text generation, including conducting conversations, completing tasks, reasoning, and can demonstrate some degree of autonomous behaviour [4].   These agents exhibit remarkable human-like behaviors and cooperative capabilities, marked by their proficiency in engaging in multi-agent conversation and adapting to diverse environmental interactions. They are adept at processing human instructions, formulating intricate strategies, and autonomously implementing solutions [86].   Fig. 3. The Structure of LLM Agent   2.2 Structure of LLM Agent LLM agents are complex systems that integrate various components to perform a wide range of functions, from simple text generation to engaging in dialogues, completing tasks, reasoning, and demonstrating a degree of autonomous behavior. The diagram illustrates the typical structure of an LLM agent, highlighting the connections between its key components and optional components. These components advance LLMs from passive text generators to active, semi-autonomous LLM agents.",
+    "score": 0.5634864033828229,
+    "source": "167 - The Emerged Security and Privacy of LLM Agent A Survey with Case Studies.pdf",
+    "page": 5
+   },
+   {
+    "text": "In agents, however, these techniques mainly serve as foundational enablers rather than addressing the agent-specific sources of inefficiency. As summarized by Wang et al. [150], compared to pure LLMs, LLM-based agents exhibit more human-like decision-making by augmenting a base model with cognitive components such as planning and memory. Accordingly, in this subsection we focus on what   differentiates agent efficiency from LLM efficiency. From a functional perspective, an agent is charac- terized by its ability to (i) plan and act over multiple steps, (ii) invoke external tools or environment com- mands to acquire information and execute operations, and (iii) condition subsequent decisions on retrieved or updated memory. As illustrated in Figure 2, agentic systems introduce additional cost sources beyond generation. For a   pure LLM, the inference cost is often dominated by token generation and can be approximated as:   CostLLM ≈ α Ntok,   6Predefined Rules   Rule-enhanced Retrieval   LLM / Tool-based Retrieval   Hierarchical Retrieval   Training   Output   Feedback/Loss   Graph-based Retrieval   Memory Access   Memory Management   Append   Append   Compress/Filter Textual Integration   Latent Integration   Latent Memory   Inject   Manager   Rule LLM   Hybrid   Memory Construction   Operations   Tokens Interaction Context …   Add   Delete No-op   Update   ...",
+    "score": 0.5625346801669228,
+    "source": "011 - Toward Efficient Agents Memory, Tool learning, and Planning.pdf",
+    "page": 6
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "3278c9dd-35b9-407c-b326-efe7331f4dc0",
+  "X-Amzn-Trace-Id": "Root=1-6b080418-433bde435577520f777c4b9c;Parent=3a3194968439452a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.294
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:08+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What method does the paper 'More Agents Is All You Need' use to improve LLM performance?"
+ },
+ "from_cache": false
+}

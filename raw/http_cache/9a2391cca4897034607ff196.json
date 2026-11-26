@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.253,
+ "json": {
+  "query": "How do the simulation goals and scales of VirT‑Lab (Paper A) and MatrAIx (Paper B) compare, specifically regarding the type of agents modeled and the intended evaluation outcomes?",
+  "contexts": [
+   {
+    "text": "By lowering barriers to simulation design while maintaining realism and control, VirT- Lab provides a realistic and controlled simulation environment for studying and analyzing complex team behaviors.   3.1 Design Goals   VirT-Lab system integrates four key design goals informed by our experience in team modeling and simulation, as well as findings from a semi-systematic review of the literature. Following the ap- proach proposed by Snyder[85], we review the work in three key ar- eas: human dynamics and behaviors [19, 41, 60, 67, 76], agent-based modeling and reinforcement learning simulations [43, 45, 64, 79], and LLM-based multi-agent frameworks [20, 30, 74, 86, 99]. We articulate our design goals as follows:   DG1: Support cohesive and sustainable simulations. Co- ordinating multiple autonomous LLM agents introduces several challenges. Agents struggle to model social constructs, such as individual behaviors, collective dynamics, norms, and organiza- tional structures [31]. When interacting with each other, they may produce hallucinations or inconsistent reasoning that disrupt sim- ulations [88], and they frequently fail to maintain coherent roles or stable interactions over time [50]. These limitations highlight the need for simulation tools that promote stable, realistic, and cohesive interactions in multi-agent environment.   DG2: Preserve user agency in simulations. Maintaining user agency is essential in simulation tools.",
+    "score": 0.5425757882301928,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 4
+   },
+   {
+    "text": "To address these gaps, VirT-Lab provides a system that supports simulations within spatial environments, multi-party interactions, and a web-based user interface to facilitate the creation of cus- tomizable scenarios (see Table 1). It also integrates configurable evaluation metrics directly into the simulation pipeline, enabling users to analyze both process and outcome variables in team dy- namics. In addition, we complement these automated metrics with a user study to better understand how researchers design, interact with, and interpret multi-agent simulations.   3 VirT-Lab System   Our motivation for designing the VirT-Lab system comes from the limitations of existing frameworks, which often require signifi- cant technical expertise and computational setup, and offer narrow support for simulating team dynamics. To address these gaps, we developed VirT-Lab as a configurable, web-based system. Through a prompting interface, users can create scenarios, define team struc- tures, and observe how autonomous agents collaborate, make de- cisions, and adapt as the scenarios unfold. By lowering barriers to simulation design while maintaining realism and control, VirT- Lab provides a realistic and controlled simulation environment for studying and analyzing complex team behaviors.   3.1 Design Goals   VirT-Lab system integrates four key design goals informed by our experience in team modeling and simulation, as well as findings from a semi-systematic review of the literature.",
+    "score": 0.5260944439158934,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 4
+   },
+   {
+    "text": "https://huggingface.co/datasets/MatrAIx2026/MatrAIx_Persona_1M        https://huggingface.co/datasets/MatrAIx2026/MatrAIx_Persona_1MMatrAIx: Simulating the World with 8.3 Billion Persona Agents 3   Real-Human Persona   Synthetic Generation   Shared Persona Schema   Background Psychology Capability   Behavior Lifestyle Preference   1290 Dimentions   Persona 8B   Build the Persona Population Simulated-user Evaluation Infrastructure   Application Tasks and Products   Sample from Persona Cohort   Playground   1 Survey   “$12.99 to $16.24, would you still buy?”   2 Chatbot   “I am seeking for help in nutrition.”   3 Web App4   “Help me find a good laptop”   “Buy Stocks, search for news”   ...   Task  Reports   Personal and Population Level Findings   Telemetry   Figure 1: Overview of the MatrAIx simulated-user evaluation framework. Evaluators describe the target audience, and MatrAIx retrieves matching personas from Persona 8B to form an evaluation cohort. The four environments define how these persona agents interact, while MatrAIx Applications provides the task specifications they execute. Shared telemetry and task-owned verification preserve the evidence needed for subgroup and population-level reporting.",
+    "score": 0.5129362244460417,
+    "source": "080 - MatrAIx Simulating the World with 8.3 Billion Persona Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "Entities. Lastly, VirT-Lab identifies and places entities in the environment based on the scenario’s description. They might be located in a specific area if the scenario provides the information, or         https://docs.python.org/3/library/pickle.htmlSimulating Teams with LLM Agents: Interactive 2D Environments for Studying Human–AI Dynamics Conference acronym ’XX, June 03–05, 2018, Woodstock, NY   BA   (a) Environment size configuration. Users can adjust the spatial di-   mensions of the simulation environment by modifying the (A) width   and (B) height parameters. Each block unit represents a unit of dis-   tance (e.g., a block unit represents a square meter).   DC   (b) Environment Complexity: users define (C) map complexity and   (D) simulation duration to determine the difficulty and length of the   scenario   Figure 3: Overview of the VirT-Lab interface for simulation setup.   A   B   C D   E   H   F   G   I   Figure 4: The agent configuration interface of VirT-Lab. The system allows users to customize agents by defining demographic   attributes, backgrounds, and personality traits. (A) Agent cards present each agent with the agent’s name and role in the   simulation. (B) Agent background and experience are presented as narrative elements that shape the agent’s behavior.",
+    "score": 0.5078319439040141,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 6
+   },
+   {
+    "text": "As with all LLM- based systems, our agents may reproduce societal biases embedded in model training data [2], which can affect the fidelity of simulated   behaviors. Moreover, our current implementation uses general- purpose LLMs without extensive fine-tuning for domain-specific applications or agent-specific roles. Future work may explore the integration of domain-adapted LMs and assess how model selection impacts emergent team behaviors.   Our evaluations demonstrated that VirT-Lab can support larger teams and complex environments, but scaling the system to ac- commodate dozens of agents remains expensive. LLM-based agent simulations are costly due to the substantial token usage and pro- cessing time required for frequent LLM queries. Improving system efficiency, such as using local LLMs [1, 26, 92], or optimizing model performance [38], represents an important direction for future de- velopment.   Finally, direct feedback on VirT-Lab’s interactive interface from a diverse range of end users, such as social scientists and agent- based modeling experts, remains limited. Future usability studies should include a broader and more diverse sample of users from var- ious domains to better evaluate how effectively users can configure scenarios and interpret simulation results.   7 Conclusion   In this work, we introduced VirT-Lab, a novel system designed to simulate human team behaviors through configurable LLM-based agents operating within dynamic environments.",
+    "score": 0.5055891334903873,
+    "source": "076 - Simulating Teams with LLM Agents Interactive 2D Environments for Studying Human-AI Dynamics.pdf",
+    "page": 20
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fd8bf4dc-2fb3-47c3-9b76-434e68ac0cfc",
+  "X-Amzn-Trace-Id": "Root=1-6b080460-54d9a73665b9766a6b52b14d;Parent=6500e6da07ce9220;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.253
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:20+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How do the simulation goals and scales of VirT‑Lab (Paper A) and MatrAIx (Paper B) compare, specifically regarding the type of agents modeled and the intended evaluation outcomes?"
+ },
+ "from_cache": false
+}

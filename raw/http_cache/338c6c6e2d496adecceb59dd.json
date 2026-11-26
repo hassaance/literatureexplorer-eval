@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.324,
+ "json": {
+  "query": "What benchmarks does WebArena include?",
+  "contexts": [
+   {
+    "text": "This motivates the need for held-out tasks during evaluation.   85.1 Case study of the STeP agent on WebArena.   Web agents can be evaluated on many capabilities: navigating to a website, scrolling, selecting the right web element etc. There are many different types of websites that can be used such benchmarks: e-commerce, social media, information search etc. WebArena is an agent benchmark that aims to evaluate agents on tasks on the web [66]. It includes clones of six different websites (GitLab, Reddit, Wikipedia, OpenStreetMaps, an e-commerce platform, and a content management system) and two tools (calculator and scratchpad). It has 812 different tasks that involve interacting with these websites, such as “find the address of all US international airports that are within a driving distance of 60 km to the Niagara Falls” and “post a question on a subreddit related to New York City”.   WebArena’s core stated selling point seems to be realism, which means that it should be difficult to find shortcuts. If we consider WebArena a task-specific benchmark, the key type of distribution shift is drift: agents should be robust to changes made to a website over time. However, WebArena does not model drift.   To be clear, it is challenging to model drift. Benchmark developers would need to find changes made to published websites and incorporate those into the test sets.",
+    "score": 0.7013735134596075,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 8
+   },
+   {
+    "text": "The content populating these websites is extracted from their real-world counterparts, preserving the authenticity of the content served on each platform. We deliver the hosting services using Docker containers with gym-APIs (Brockman et al., 2016), ensuring both the usability and the reproducibility of WebArena.   Along with WebArena, we release a ready-to-use benchmark with 812 long-horizon web-based tasks (§3). Each task is described as a high-level natural language intent, emulating the abstract language usage patterns typically employed by humans (Bisk et al., 2019). Two example intents are shown in the upper left of Figure 1. We focus on evaluating the functional correctness of these tasks, i.e., does the result of the execution actually achieve the desired goal (§3.2). For instance, to evaluate the example in Figure 2, our evaluation method verifies the concrete contents in the designated repository. This evaluation is not only more reliable (Zhong et al., 2017; Chen et al., 2021; Wang et al., 2022) than comparing the textual surface-form action sequences (Puig et al., 2018; Deng et al., 2023) but also accommodate a range of potential valid paths to achieve the same goal, which is a ubiquitous phenomenon in sufficiently complex tasks.   We use this benchmark to evaluate several agents that can follow NL command and perform web- based tasks (§4).",
+    "score": 0.6058522398964868,
+    "source": "156 - WebArena A Realistic Web Environment for Building Autonomous Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "To improve grounding and consistency, we added lightweight, category-specific initialization prompts, loosely inspired by OpenAI’s per-site prompting approach [61].   • Evaluation: modular evaluation framework consisting of three criteria that can be combined or used independently:   – URL Match: The agent’s final URL must match a predefined target.   – HTML Artifact: A required success artifact must be present in the final page’s DOM.   – Model-based Assessment: A language model evaluates the correctness of the final output using majority voting with 5 GPT 4.1 judges.   • Environment: Controlled web servers with fixed initial states accessed using Selenium-controlled Chrome.   A.2.1 Methodological Difficulties with WebArena.   Technical challenges. While WebArena is a valuable benchmark, its evaluation poses several method- ological challenges. The benchmark requires self-hosting of its websites, a process that is not seamless and which required manual intervention, notably to resolve issues in the OpenStreetMap environment. Its highly stateful design further complicates reproducibility, as tasks are interdependent and their outcomes can be affected by residual states from previous runs. These characteristics also make large-scale parallel execution impractical, substantially increasing the computational cost and time required to obtain robust metrics   17LLM-as-a-Judge. The benchmark’s original evaluation framework integrated programmatic checks of the final state with a single LLM-based assessment.",
+    "score": 0.6054202548340075,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 17
+   },
+   {
+    "text": ".   • Evaluation: We updated the evaluation protocol by replacing the single GPT-4V judge with a ma- jority vote over 3 GPT-4o judge calls (temperature 0, using last 5 screenshots), retaining the original WebVoyager evaluation prompt. This ensemble method is designed to reduce variance, mitigate single- judge bias, and prevent spurious results from isolated errors, thereby yielding more reliable and robust evaluations.   • Environment: Live websites on Selenium-controlled Chrome. Running this benchmark introduces practical challenges, such as bot-detection mechanisms like CAPTCHAs and IP-based access blockers. To mitigate these restrictions, we employed proxy rotation and redirected all Google-dependent tasks to Bing Search, as in [9], to ensure uninterrupted execution.   A.2 WebArena Evaluation   • Description: 812 tasks across self-hosted 6 websites: GitLab, Reddit, an E-commerce website called OneStopShop, an online store content management system (CMS), OpenStreetMap and the English Wikipedia.   • Task types: Information retrieval, comparison, navigation, multi-step and multi-websites actions, involving form filling and search across one or two websites. To improve grounding and consistency, we added lightweight, category-specific initialization prompts, loosely inspired by OpenAI’s per-site prompting approach [61].",
+    "score": 0.5919617728238249,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 17
+   },
+   {
+    "text": "This development is often overlooked because benchmark papers are categorized by their task domain rather than their infrastructure contribution— but the harness engineering required to make these benchmarks valid and reproducible was as significant as the task design.   WebArena (Zhou et al., 2024) provides the most instructive case. Deploying 812 long-horizon web navigation tasks against self-hosted live web environments—not cached snapshots, not third-party services, but fully operational web applications including a shopping site, a code repository, a Reddit-style forum, and a corporate wiki—required deploying and maintaining four independent web application servers, managing account state across hundreds of simulated users, implementing action injection   Preprints.org (www.preprints.org) | NOT PEER-REVIEWED | Posted: 7 April 2026 doi:10.20944/preprints202604.0428.v1   © 2026 by the author(s). Distributed under a Creative Commons CC BY license.         https://doi.org/10.20944/preprints202604.0428.v1        http://creativecommons.org/licenses/by/4.0/27 of 104   mechanisms compatible with arbitrary web application architectures, and designing success criteria that could be verified programmatically against arbitrary application state. The harness engineering to run one evaluation instance of WebArena was more complex than the harness engineering of most production agent deployments at the time.",
+    "score": 0.5887916940624823,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 27
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "6deddb3a-24ca-43a5-a9d0-76efa88b5925",
+  "X-Amzn-Trace-Id": "Root=1-6b08061f-6edf5eb35d9bf3d16ab61a1d;Parent=319298ae3f6434a0;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.324
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:46+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "query": "What benchmarks does WebArena include?"
+ },
+ "from_cache": false
+}

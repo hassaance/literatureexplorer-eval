@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.086,
+ "json": {
+  "id": "chatcmpl-c875c369-2fba-4939-b430-eb6a4be8447c",
+  "object": "chat.completion",
+  "created": 1795687462,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The paper 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' by Patrick Lewis et al. (2020) introduces a method called Retrieval-Augmented Generation (RAG) for improving the performance of language models on knowledge-intensive tasks. The approach combines the strengths of retrieval-based and generation-based models by using a retriever to fetch relevant documents and a generator to produce answers based on the retrieved information. This method aims to enhance the accuracy and reliability of language models in tasks that require access to external knowledge sources. The authors demonstrate the effectiveness of RAG through experiments on various NLP tasks, showing significant improvements over baseline models."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1270,
+   "completion_tokens": 136,
+   "total_tokens": 1406
+  },
+  "contexts": [
+   {
+    "text": "Retrieval-augmented genera- tion for knowledge-intensive nlp tasks.",
+    "score": 0.7172309010660961,
+    "source": "142 - SkillsBench Benchmarking How Well Agent Skills Work Across Diverse Tasks.pdf",
+    "page": 10
+   },
+   {
+    "text": "-t., Rocktäschel, T., et al. Retrieval-augmented generation for knowledge- intensive nlp tasks. Advances in neural information pro- cessing systems, 33:9459–9474, 2020.   9         https://www.anthropic.com/news/model-context-protocol        https://www.anthropic.com/news/model-context-protocol        https://www.businessofapps.com/data/tik-tok-statistics/        https://www.businessofapps.com/data/tik-tok-statistics/        https://cursor.com/blog/salesforce        https://cursor.com/blog/salesforce        https://deepmind.google/models/gemini/pro/        https://deepmind.google/models/gemini/pro/        https://www.kimi.com/blog/kimi-k2-5.html        https://www.kimi.com/blog/kimi-k2-5.html        https://github.com/langchain-ai/open_deep_research        https://github.com/langchain-ai/open_deep_researchSubmission and Formatting Instructions for ICML 2026   Li, Y., Wen, H., Wang, W., Li, X., Yuan, Y., Liu, G., Liu, J., Xu, W., Wang, X., Sun, Y., et al.",
+    "score": 0.5893972395612302,
+    "source": "004 - The Real Barrier to LLM Agent Usability is Agentic ROI.pdf",
+    "page": 9
+   },
+   {
+    "text": "Language models (mostly) know what they know. arXiv preprint arXiv:2207.05221, 2022.   Satyapriya Krishna, Kalpesh Krishna, Anhad Mohananey, Steven Schwarcz, Adam Stambler, Shyam Upadhyay, and Manaal Faruqui. Fact, fetch, and reason: A unified evaluation of retrieval-augmented generation. arXiv preprint arXiv:2409.12941, 2024.   Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, et al. Retrieval-augmented generation for knowledge- intensive nlp tasks. Advances in Neural Information Processing Systems, 33:9459–9474, 2020.   Moxin Li, Wenjie Wang, Fuli Feng, Fengbin Zhu, Qifan Wang, and Tat-Seng Chua. Think twice before assure: Confidence estimation for large language models through reflection on multiple answers. arXiv preprint arXiv:2403.09972, 2024.   Nelson F.",
+    "score": 0.5626195324754588,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 12
+   },
+   {
+    "text": "Rocktäschel, S. Riedel, and D. Kiela. Retrieval-Augmented Generation for Knowledge- Intensive NLP Tasks. In: Advances in Neural Information Processing Systems (NeurIPS). 2020.   6         https://www.suno.ai/        https://www.udio.com/        https://www.riffusion.com/        https://www.musicbusinessworldwide.com/major-record-companies-sue-ai-music-generators-suno-udio-for-mass-infringement-of-copyright/        https://www.musicbusinessworldwide.com/major-record-companies-sue-ai-music-generators-suno-udio-for-mass-infringement-of-copyright/        https://www.musicbusinessworldwide.com/major-record-companies-sue-ai-music-generators-suno-udio-for-mass-infringement-of-copyright/        https://elevenlabs.io/        https://www.kobaltmusic.com/        https://www.merlinnetwork.org/        https://www.beatoven.ai/        https://www.musical.ai/        https://splice.com/        https://moises.ai/[38] Y. Mao et al. Multi-RAG: A Multimodal Retrieval-Augmented Generation System for Adaptive Video Understanding. In: arXiv preprint arXiv:2505.23990 (2025).",
+    "score": 0.5548290689121108,
+    "source": "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+    "page": 6
+   },
+   {
+    "text": "Available: https://​arxiv.​org/​pdf/​2312.​10997.​pdf.   28. Gao T, Min D, Guo X, Zhao H, Lin J. “A Systematic Survey of Retrieval-Augmented Generation,” arXiv preprint arXiv:​2405.​ 07437, 2024. [Online]. Available: https://​arxiv.​org/​abs/​2405.​ 07437   Publisher's Note  Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+    "score": 0.5371923507125111,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 15
+   }
+  ],
+  "sources": [
+   "142 - SkillsBench Benchmarking How Well Agent Skills Work Across Diverse Tasks.pdf",
+   "004 - The Real Barrier to LLM Agent Usability is Agentic ROI.pdf",
+   "029 - Sufficient Context.pdf",
+   "131 - From Generation to Attribution Music AI Agent Architectures for the Post-Streaming Era.pdf",
+   "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c875c369-2fba-4939-b430-eb6a4be8447c",
+  "X-Amzn-Trace-Id": "Root=1-6b080425-7276f91960b71d0a666f9779;Parent=1768595a03b2e09b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.086
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:21+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Summarize the paper 'Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks' by Lewis et al."
+   }
+  ]
+ },
+ "from_cache": false
+}

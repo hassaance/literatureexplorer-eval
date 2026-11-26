@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.367,
+ "json": {
+  "query": "Democratizing AI scientists using ToolUniverse",
+  "contexts": [
+   {
+    "text": "ToolUniverse: An open platform for democratizing AI scientists   Shanghua Gao1, Richard Zhu1,2,∗, Pengwei Sui1,∗, Zhenglun Kong1,∗, Sufian Aldogom1,∗, Yepeng Huang1, Ayush Noori1, Reza Shamji1,2, Krishna Parvataneni3, Theodoros Tsiligkaridis4, Marinka Zitnik1,5,6,7,‡   1Department of Biomedical Informatics, Harvard Medical School, Boston, MA 2Harvard College, Harvard University, Cambridge, MA 3Massachusetts Institute of Technology, Cambridge, MA   4MIT Lincoln Laboratory, Lexington, MA 5Kempner Institute for the Study of Natural and Artificial Intelligence, Harvard University, Cambridge, MA   6Broad Institute of MIT and Harvard, Cambridge, MA 7Harvard Data Science Initiative, Cambridge, MA   ∗Co-second authors; ‡Correspondence: marinka@hms.harvard.edu   AI scientists are AI agents powered by conversational large language models that carry out complex analyses by calling scientific tools, querying datasets, and interacting with experimental systems, other agents, and human researchers [1]. Despite rapid progress, most are bespoke and difficult to reuse because they lack standardized interfaces for tools and data [2, 3].",
+    "score": 0.7026194023523522,
+    "source": "099 - Democratizing AI scientists using ToolUniverse.pdf",
+    "page": 1
+   },
+   {
+    "text": "Scientific re- search requires that AI scientists act on biological and physical systems rather than reason through text alone, operating within an environment of tools, agentic skills, replayable agentic memory, and new agentic capabilities introduced in the fast advancing field [1, 4]. The tools, skills, and capabilities supporting this interaction vary in purpose and complexity, require distinct inputs and parameters, depend on specific runtime environments, and run locally or through application pro- gramming interfaces (APIs) and laboratory systems. The tools among them span modalities from protein and nucleic acid sequences and molecular structures to microscopy images and biological networks, and their overlapping functionality complicates selecting and executing an appropriate tool for an objective expressed in natural language.   We present TOOLUNIVERSE, a platform for building AI scientists across open- and closed- weight language models and agents. TOOLUNIVERSE implements scientific tool use through six modules, Tool Manager, Tool Finder, Tool Caller, Tool Composer, Tool Discoverer, and Tool Op- timizer, that together enable AI scientists to discover, retrieve, execute, and compose tools from a library of more than 2,700 scientific tools as of July 2026 (Figure 1a; Supplementary Note S1 and S5). TOOLUNIVERSE is available at https://aiscientist.tools and accessible through a Python API, HTTP, the Model Context Protocol (MCP), and direct function calls (Supplementary Note S4).",
+    "score": 0.5841023636919097,
+    "source": "099 - Democratizing AI scientists using ToolUniverse.pdf",
+    "page": 1
+   },
+   {
+    "text": "This adaptive approach ensures comprehensive coverage while maintaining runtime constraints.   S4 Supplementary Note: Building AI scientists with TOOLUNIVERSE   A customized AI scientist can be developed by integrating TOOLUNIVERSE with LLMs, reasoning models, and AI agents. In this configuration, the LLMs and reasoning models provide the core ca- pabilities for reasoning and tool usage, while TOOLUNIVERSE serves as the scientific environment for interaction and experimentation. The development process involves three steps: (i) installing TOOLUNIVERSE with a single command (pip install tooluniverse), (ii) connecting TOOLUNIVERSE to the chosen model so it can access the tools provided by TOOLUNIVERSE, and (iii) instructing the model to use these tools to address a given scientific problem.   Once the setup is complete, the AI scientist operates as follows: given a user instruction or task, it formulates a plan or hypothesis, employs Tool Finder in TOOLUNIVERSE to identify   S8relevant tools, and iteratively applies these tools to gather information, conduct experiments, verify hypotheses, and request human feedback when necessary. For each required tool call, the AI scientist generates arguments that conform to the AI-tool interaction standard, after which Tool Caller executes the tool and returns the results for further reasoning.   The models used to construct AI scientists can include LLMs, reasoning models, and AI agents.",
+    "score": 0.5739828033175416,
+    "source": "099 - Democratizing AI scientists using ToolUniverse.pdf",
+    "page": 16
+   },
+   {
+    "text": "Figures 1 to 9   Supplementary Tables 1 to 4         https://aiscientist.tools        https://github.com/mims-harvard/ToolUniverse        https://pypi.org/project/tooluniverseS1 Supplementary Note: Overview of TOOLUNIVERSE   TOOLUNIVERSE is an ecosystem that exposes tools to any open or closed AI model, i.e., large language model (LLM), agent, or large reasoning model (LRM), allowing users to build AI re- search assistants (i.e., AI scientists) without additional training or finetuning. To achieve that, TOOLUNIVERSE provides the user-specified LLM/LRM/agent with a scientific toolkit (Supple- mentary Table S1). While advanced models possess planning and reasoning capabilities, scientific research cannot be conducted through reasoning alone. TOOLUNIVERSE addresses this by expos- ing executable tools that return experimental data, database query results, and model predictions. TOOLUNIVERSE defines an AI-tool interaction standard that makes tools understandable to LLMs, LRMs, and AI agents through natural-language descriptions and typed schemas, abstracting away backend differences.   TOOLUNIVERSE is extensible and allows tools to be easily added, optimized, or created. It hosts a toolkit of over 2,700 scientific tools and is designed for integration with language models, agents, and reasoning models.",
+    "score": 0.5673729738540707,
+    "source": "099 - Democratizing AI scientists using ToolUniverse.pdf",
+    "page": 9
+   },
+   {
+    "text": "Six modules (Tool Finder, Tool Caller, Tool Manager, Tool Composer, Tool Discoverer, and Tool Op- timizer; detailed in panels b–g) connect the platform, through the AI-tool interaction standard, to large language models, reasoning models, and agents (GPT, Claude, Gemini, and DeepSeek). Connected to TOOLUNIVERSE, these models act as AI scientists that perform research tasks, in- cluding hypothesis generation, experimental design, data analysis, and evidence synthesis (right). End-to-end examples of building AI scientists on TOOLUNIVERSE are provided in Supplemen- tary Note S4, and a quantitative evaluation of the platform in Supplementary Notes S8 and S9. b. Tool Finder identifies relevant tools using keyword search, LLM-based in-context search, and embedding-based similarity search. c. Tool Caller validates inputs, dynamically loads tools, dis- patches calls through TOOLUNIVERSE.run() or MCP, and returns tool outputs. d. Tool Manager integrates local and remote tools, registering local tools via JSON descriptions and decorators and adding remote tools through MCP for privacy- or dependency-constrained setups. e. Tool Composer chains multiple tools into composite workflows, supporting sequential, parallel, and feedback-driven orchestration of heterogeneous tools. f.",
+    "score": 0.5633339430974567,
+    "source": "099 - Democratizing AI scientists using ToolUniverse.pdf",
+    "page": 6
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c983125b-4277-455f-9968-414563f45af5",
+  "X-Amzn-Trace-Id": "Root=1-6b080509-083176c00fcce2df0670740a;Parent=43d166f6500a18a5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.367
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:09+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Democratizing AI scientists using ToolUniverse"
+ },
+ "from_cache": false
+}

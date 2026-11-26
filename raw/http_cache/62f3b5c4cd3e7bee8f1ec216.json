@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.348,
+ "json": {
+  "query": "A qualitative shift in AI capabilities: A “bitter lesson” for human-AI interaction research?",
+  "contexts": [
+   {
+    "text": "A qualitative shift in AI capabilities: A “bitter lesson” for human-AI interaction research?   Kim Astor Uppsala University, Department of Psychology, Sweden   A B S T R A C T   Richard Sutton's “Bitter Lesson” (2019) describes how prior knowledge-driven approaches to AI design were displaced by domain-general methods that scale with data and computation, rendering many prior insights obsolete. The technologies this shift enabled, including large language models with native multimodal ca pabilities, may now reshape human–AI interaction (HAI). Contemporary systems capable of fluid, expressive, open-ended interaction differ not only in degree but in kind from earlier technologies. This paper argues that HAI research may face its own “bitter lesson”: findings derived from interaction with earlier, technically constrained, systems cannot be assumed to generalize without replication and historical contextualization. It situates these developments in relation to methodo logical strategies and the challenges posed by rapid technological change, while highlighting how contemporary AI systems can offer a new lens on human connection and the expression of intelligence.   The most cited lesson in the history of artificial intelligence (AI) is Richard Sutton's “Bitter Lesson” (2019). Sutton argued that across do mains, from chess to vision, research that has relied on embedding human knowledge into systems consistently underperformed compared to general methods that scale with increases in computation.",
+    "score": 0.7421314761633089,
+    "source": "009 - A qualitative shift in AI capabilities.pdf",
+    "page": 1
+   },
+   {
+    "text": "At the same time, evidence suggests that once functional interaction is comparable across systems, increased   K. Astor Computers in Human Behavior: Arti cial Humans 7 (2026) 100253   2technical sophistication does not necessarily translate into higher perceived competence or qualitatively different interactional outcomes (Kennedy et al., 2015). Methodologically, Wizard-of-Oz paradigms illustrate how system limitations were explicitly addressed in earlier HAI work: users may engage in rich social interactions with systems they believe to be autonomous, even when core functions are human-controlled (e.g., Kory Westlund & Breazeal, 2015). Though such effects are likely moderated by users’ prior knowledge of AI capabilities, which can shape how the system is interpreted, and thus particularly effective in developmental populations (Dietz et al., 2023).   4. A bitter lesson for HAI? and a way forward   Sutton's (2019) “bitter lesson” in AI was simple but profound: entire research programs had produced knowledge that could not endure a change in paradigm. HAI research may now face a similar reckoning. Much of what the field has learned was produced in the pipeline era of brittle assistants and scripted robots. What once appeared to be general insights into human-machine interaction may instead be seen as his torically situated accounts of adaptation to limited technology.",
+    "score": 0.5637443622089355,
+    "source": "009 - A qualitative shift in AI capabilities.pdf",
+    "page": 2
+   },
+   {
+    "text": "Human-AI interaction (HAI) research may now face an analogous challenge to that in AI design. A generation of empirical studies has investigated how people engage with social robots lacking advanced verbal communication (e.g., Kory Westlund & Breazeal, 2015; Tanaka et al., 2007) and voice assistants such as Siri, Alexa, or Google Home (Lovato et al., 2019; Mavrina et al., 2022; Oranç & Ruggeri, 2021).   While impressive for its time, these voice assistants (built on modular pipelines and outdated language models) offered a very different sub strate of interaction than today's systems, and are perhaps better described as interactive tools that you need to get used to than social agents that interacts naturally (Andries & Robertson, 2023; Kim & Choudhury, 2021; Mavrina et al., 2022; Pradhan et al., 2019). The rapid emergence of large language models (LLMs) and the more recent shift to natively multimodal (voice-capable) architectures have altered the conditions under which interaction unfolds in ways that challenge the generalizability of earlier findings. Just as Sutton observed in core AI research, HAI research may also discover that the knowledge accumu lated under the previous technological era has limited applications once the system's capacities make qualitative shifts.",
+    "score": 0.541552892367482,
+    "source": "009 - A qualitative shift in AI capabilities.pdf",
+    "page": 1
+   },
+   {
+    "text": "Sutton argued that across do mains, from chess to vision, research that has relied on embedding human knowledge into systems consistently underperformed compared to general methods that scale with increases in computation. The bitterness lay in the realization that gains from decades of intellectual investment have been rendered obsolete by brute-force learning and search. A reckoning not only technical, but institutional and conceptual.   This marked a Kuhnian paradigm shift (Kuhn, 1962) in the engi neering of intelligence. AI is no longer something to be handcrafted in our image, but something to be grown from data and computation at scale (Kaplan et al., 2020). As the following sections describe, this epistemological shift in design philosophy has led to a qualitative transformation in AI capabilities, specifically in the affordances these systems provide for social exchange.1 The resulting systems differ not only in power, but in kind, from those that came before, with far-reaching consequences for how we can interact with them.   Human-AI interaction (HAI) research may now face an analogous challenge to that in AI design.",
+    "score": 0.5408841861195371,
+    "source": "009 - A qualitative shift in AI capabilities.pdf",
+    "page": 1
+   },
+   {
+    "text": "Just as Sutton observed in core AI research, HAI research may also discover that the knowledge accumu lated under the previous technological era has limited applications once the system's capacities make qualitative shifts.   In this paper, the term contemporary AI refers to LLM-based agents that support open-ended dialogue and, in their most recent forms, integrate multiple modalities (e.g., text and speech) within a single end- to-end architecture. The paper proceeds by first identifying architectural changes that enable new interactional affordances, then reconsidering prior HAI findings in light of these changes, and finally outlining methodological implications for research conducted under rapidly evolving interaction regimes.   E-mail address: kim.astor@psyk.uu.se. 1 Note that changes in interactional affordances do not imply that contemporary models are free of failure modes. On the contrary, contemporary AI systems are   known to produce incorrect outputs (“hallucinations”; Zhang et al., 2025), to project unwarranted confidence (Sun et al., 2025), and to exhibit limited contextual sensitivity and empathy (Kurian, 2023). These limitations highlight a dissociation between surface-level interactional competence and deeper reliability constraints, as well as functional inconsistencies that may appear unintuitive to users (Dell’Acqua et al., 2023).",
+    "score": 0.5256697722779738,
+    "source": "009 - A qualitative shift in AI capabilities.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d8d968ff-0c3b-4ec3-b431-95b306915083",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f8-3a16c0f773fac69d2b6c2a80;Parent=53f758babbe2ff02;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.348
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:52+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A qualitative shift in AI capabilities: A “bitter lesson” for human-AI interaction research?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.2,
+ "json": {
+  "id": "chatcmpl-b6c62c03-1476-4261-acb6-7f6de557506c",
+  "object": "chat.completion",
+  "created": 1795687474,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "HyDE retrieval works by using an encoder function that serves as a lossy compressor, outputting dense vectors that filter out extra details. This process grounds the hypothetical vector to the actual corpus and real documents. The system uses InstructGPT and Contriever models for implementation. The encoder function maps queries and documents into dimension vectors, and their inner product is used as a similarity measurement. HyDE significantly outperforms the state-of-the-art unsupervised dense retriever Contriever and shows strong performance comparable to fine-tuned retrievers across various tasks and languages."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1616,
+   "completion_tokens": 113,
+   "total_tokens": 1729
+  },
+  "contexts": [
+   {
+    "text": "Here the encoder function f serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector. It further grounds the hypothetical vector to the actual corpus and the real documents. The full HyDE system is illustrated in Figure 1.   4 Experiments   4.1 Setup Implementation We implement HyDE using InstructGPT, a GPT-3 model from the instruct series (text-davinci-003; Ouyang et al. (2022)) and Contriever models (Izacard et al., 2021). We   sample from InstructGPT using the OpenAI play- ground default temperature of 0.7 for open-ended generations. We use the English-only Contriever model for English retrieval tasks and multilingual mContriever for non-English tasks. We conducted retrieval experiments with the Pyserini toolkit (Lin et al., 2021a).   Datasets We consider web search query sets TREC DL19 (Craswell et al., 2020a) and DL20 (Craswell et al., 2020b); they are based on the MS-MARCO dataset (Bajaj et al., 2016). We also use a diverse collection of 6 low-resource datasets from the BEIR dataset (Thakur et al., 2021).",
+    "score": 0.568180782183554,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 4
+   },
+   {
+    "text": "Here the encoder function f serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector. It further grounds the hypothetical vector to the actual corpus and the real documents. The full HyDE system is illustrated in Figure 1.   4 Experiments   4.1 Setup Implementation We implement HyDE using InstructGPT, a GPT-3 model from the instruct series (text-davinci-003; Ouyang et al. (2022)) and Contriever models (Izacard et al., 2021). We   sample from InstructGPT using the OpenAI play- ground default temperature of 0.7 for open-ended generations. We use the English-only Contriever model for English retrieval tasks and multilingual mContriever for non-English tasks. We conducted retrieval experiments with the Pyserini toolkit (Lin et al., 2021a).   Datasets We consider web search query sets TREC DL19 (Craswell et al., 2020a) and DL20 (Craswell et al., 2020b); they are based on the MS-MARCO dataset (Bajaj et al., 2016). We also use a diverse collection of 6 low-resource datasets from the BEIR dataset (Thakur et al., 2021).",
+    "score": 0.568180782183554,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 4
+   },
+   {
+    "text": "This vector identifies a neighborhood in the corpus embedding space, where similar real documents are retrieved based on vector similarity. This second step ground the generated document to the actual corpus, with the encoder’s dense bottleneck filtering out the incorrect details. Our exper- iments show that HyDE significantly outper- forms the state-of-the-art unsupervised dense retriever Contriever and shows strong per- formance comparable to fine-tuned retrievers, across various tasks (e.g. web search, QA, fact verification) and languages (e.g. sw, ko, ja).1   1 Introduction   Dense retrieval (Lee et al., 2019; Karpukhin et al., 2020), the method of retrieving documents using semantic embedding similarities, has been shown successful across tasks like web search, question answering, and fact verification. A variety of meth- ods such as negative mining (Xiong et al., 2021; Qu et al., 2021), distillation (Qu et al., 2021; Lin et al., 2021b; Hofstätter et al., 2021) and task-specific   ∗ Equal contribution. 1No models were trained or fine-tuned in making this pre-   print. Our open source code is available at https://github. com/texttron/hyde.",
+    "score": 0.561363422676756,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 1
+   },
+   {
+    "text": "This vector identifies a neighborhood in the corpus embedding space, where similar real documents are retrieved based on vector similarity. This second step ground the generated document to the actual corpus, with the encoder’s dense bottleneck filtering out the incorrect details. Our exper- iments show that HyDE significantly outper- forms the state-of-the-art unsupervised dense retriever Contriever and shows strong per- formance comparable to fine-tuned retrievers, across various tasks (e.g. web search, QA, fact verification) and languages (e.g. sw, ko, ja).1   1 Introduction   Dense retrieval (Lee et al., 2019; Karpukhin et al., 2020), the method of retrieving documents using semantic embedding similarities, has been shown successful across tasks like web search, question answering, and fact verification. A variety of meth- ods such as negative mining (Xiong et al., 2021; Qu et al., 2021), distillation (Qu et al., 2021; Lin et al., 2021b; Hofstätter et al., 2021) and task-specific   ∗ Equal contribution. 1No models were trained or fine-tuned in making this pre-   print. Our open source code is available at https://github. com/texttron/hyde.",
+    "score": 0.561363422676756,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 1
+   },
+   {
+    "text": "In comparison, our method uses the standard MIPS index and requires no training or training data. Our generative model produces an intermediate hypothetical document to be fed into a dense encoder, instead of a real document.   3 Methodology   In this section, we first formally define the prob- lem of (zero-shot) dense retrieval. Then we will introduce how HyDE is designed to solve it.   3.1 Preliminaries Dense retrieval models similarity between query and document with inner product similarity. Given a query q and document d, it uses two encoder function encq and encd to map them into d dimen- sion vectors vq,vd, whose inner product is used as similarity measurement.   sim(q, d) = 〈encq(q), encd(d)〉 = 〈vq,vd〉 (1)   For zero-shot retrieval, we consider L query sets Q1, Q2, ..., QL and their corresponding search cor- pus, document sets D1, D2, ..., DL. Denote the j-th query from i-th set query set Qi as qij . We need to fully define mapping functions encq and encd without access to any query set Qi, document set Di, or any relevance judgment rij .",
+    "score": 0.5319511216233809,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   }
+  ],
+  "sources": [
+   "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+   "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b6c62c03-1476-4261-acb6-7f6de557506c",
+  "X-Amzn-Trace-Id": "Root=1-6b080431-638349e2143b35932fae4adb;Parent=73e6250b4579aa9c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.2
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:33+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "hyde retrieval how does it work"
+   }
+  ]
+ },
+ "from_cache": false
+}

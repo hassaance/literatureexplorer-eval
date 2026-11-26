@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.304,
+ "json": {
+  "query": "A practical guide to building agents",
+  "contexts": [
+   {
+    "text": "A practical   guide to   building agentsContents   What is an agent? 4 When should you build an agent? 5 Agent design foundations 7 Guardrails 24 Conclusion 32   2 Practical guide to building agentsIntroduction   Large language models are becoming increasingly capable of handling complex, multi-step tasks. Advances in reasoning, multimodality, and tool use have unlocked a new category of LLM-powered systems known as agents.   This guide is designed for product and engineering teams exploring how to build their first agents, distilling insights from numerous customer deployments into practical and actionable best practices. It includes frameworks for identifying promising use cases, clear patterns for designing agent logic and orchestration, and best practices to ensure your agents run safely, predictably,   and effectively.    After reading this guide, you’ll have the foundational knowledge you need to confidently start building your first agent.   3 A practical guide to building agentsWhat is an agent? While conventional software enables users to streamline and automate workflows, agents are able to perform the same workflows on the users’ behalf with a high degree of independence.   Agents are systems that independently accomplish tasks on your behalf.   A workflow is a sequence of steps that must be executed to meet the user’s goal, whether that's resolving a customer service issue, booking a restaurant reservation, committing a code change,   or generating a report.",
+    "score": 0.5695151369349387,
+    "source": "033 - A practical guide to building agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Engineering at Anthropic   Building effective agents   We've worked with dozens of teams building LLM agents across   industries. Consistently, the most successful implementations   use simple, composable patterns rather than complex   frameworks.   Published Dec 19, 2024   Note: Much of the tooling landscape described in this post has changed since   December 2024. For our current approach, see how we built Claude Managed Agents   and the Managed Agents documentation.   Over the past year, we've worked with dozens of teams building large language model   (LLM) agents across industries. Consistently, the most successful implementations   weren't using complex frameworks or specialized libraries. Instead, they were   building with simple, composable patterns.         https://www.anthropic.com/engineering        https://www.anthropic.com/engineering/managed-agents        https://platform.claude.com/docs/en/managed-agents/overview        https://platform.claude.com/docs/en/managed-agents/overview        https://www.anthropic.com/In this post, we share what we’ve learned from working with our customers and   building agents ourselves, and give practical advice for developers on building   effective agents.   What are agents?   \"Agent\" can be defined in several ways. Some customers define agents as fully   autonomous systems that operate independently over extended periods, using   various tools to accomplish complex tasks.",
+    "score": 0.4838393619781851,
+    "source": "034 - Building effective agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "Examples where agents are useful:   The following examples are from our own implementations:   A coding Agent to resolve SWE-bench tasks, which involve edits to many files   based on a task description;         https://www.anthropic.com/research/swe-bench-sonnetOur “computer use” reference implementation, where Claude uses a computer to   accomplish tasks.   High-level flow of a coding agent   Combining and customizing these patterns   These building blocks aren't prescriptive. They're common patterns that developers   can shape and combine to fit different use cases. The key to success, as with any LLM   features, is measuring performance and iterating on implementations. To repeat: you   should consider adding complexity only when it demonstrably improves outcomes.   Summary   Success in the LLM space isn't about building the most sophisticated system. It's   about building the right system for your needs. Start with simple prompts, optimize         https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demothem with comprehensive evaluation, and add multi-step agentic systems only when   simpler solutions fall short.   When implementing agents, we try to follow three core principles:   1. Maintain simplicity in your agent's design.   2. Prioritize transparency by explicitly showing the agent’s planning steps.   3. Carefully craft your agent-computer interface (ACI) through thorough tool   documentation and testing.",
+    "score": 0.4746451862850158,
+    "source": "034 - Building effective agents.pdf",
+    "page": 10
+   },
+   {
+    "text": "Start small, validate with real users, and grow capabilities over time. With the right foundations and an iterative approach, agents can deliver real business value—automating not just tasks, but entire workflows with intelligence   and adaptability.    If you’re exploring agents for your organization or preparing for your first deployment, feel free   to reach out. Our team can provide the expertise, guidance, and hands-on support to ensure   your success.   32 A practical guide to building agentsMore resources   API Platform   OpenAI for Business   OpenAI Stories   ChatGPT Enterprise   OpenAI and Safety   Developer Docs   OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity.   33 A practical guide to building agents         https://openai.com/api/        https://openai.com/business/        https://openai.com/stories/        https://openai.com/chatgpt/enterprise/        https://openai.com/safety/        https://platform.openai.com/docs/overview",
+    "score": 0.46546939613496413,
+    "source": "033 - A practical guide to building agents.pdf",
+    "page": 32
+   },
+   {
+    "text": "Before committing to building an agent, validate that your use case can meet these criteria clearly. Otherwise, a deterministic solution may suffice.   6 A practical guide to building agentsAgent design foundations In its most fundamental form, an agent consists of three core components:   01 Model The LLM powering the agent’s reasoning and decision-making   02 Tools External functions or APIs the agent can use to take action   03 Instructions Explicit guidelines and guardrails defining how the   agent behaves   Here’s what this looks like in code when using OpenAI’s Agents SDK. You can also implement the same concepts using your preferred library or building directly from scratch.   Python   1   2   3   4   5   6   weather_agent = Agent(      name=   instructions=       tools=[get_weather],   )     , \"Weather agent\"   \"You are a helpful agent who can talk to users about the   weather.\",   7 A practical guide to building agents         https://openai.github.io/openai-agents-python/Selecting your models   Different models have different strengths and tradeoffs related to task complexity, latency, and cost. As we’ll see in the next section on Orchestration, you might want to consider using a variety   of models for different tasks in the workflow.",
+    "score": 0.46015703558350163,
+    "source": "033 - A practical guide to building agents.pdf",
+    "page": 6
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "26dad41e-a7ae-4dae-b382-acd9ddc7b228",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fc-1a48effb7e91b7cb2c2e9e1b;Parent=0186e646dd3240e8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.304
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A practical guide to building agents"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.257,
+ "json": {
+  "query": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+  "contexts": [
+   {
+    "text": "PROMPT INFECTION: LLM-TO-LLM PROMPT INJEC- TION WITHIN MULTI-AGENT SYSTEMS   Donghyun Lee University College London London, United Kingdom donghyun.lee.21@ucl.ac.uk   Mo Tiwari Stanford University California, United States motiwari@stanford.edu   ABSTRACT   As Large Language Models (LLMs) grow increasingly powerful, multi-agent sys- tems—where multiple LLMs collaborate to tackle complex tasks—are becoming more prevalent in modern AI applications. Most safety research, however, has focused on vulnerabilities in single-agent LLMs. These include prompt injection attacks, where malicious prompts embedded in external content trick the LLM into executing unintended or harmful actions, compromising the victim’s appli- cation. In this paper, we reveal a more dangerous vector: LLM-to-LLM prompt injection within multi-agent systems. We introduce Prompt Infection, a novel attack where malicious prompts self-replicate across interconnected agents, be- having much like a computer virus. This attack poses severe threats, including data theft, scams, misinformation, and system-wide disruption, all while propa- gating silently through the system. Our extensive experiments demonstrate that multi-agent systems are highly susceptible, even when agents do not publicly share all communications. To address this, we propose LLM Tagging, a defense mechanism that, when combined with existing safeguards, significantly mitigates infection spread.",
+    "score": 0.7807013229313136,
+    "source": "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "For LLM Tagging, we used handcrafted attacks, but recent studies (Liu et al., 2024a; Mehrotra et al., 2024) show that algorithmically generated prompts can bypass such defenses, indicating a need for stronger countermeasures. In multi-agent systems, attack prompts are often exposed, offering detection opportunities but highlighting the need for stealthier methods to evade manual review.   8 CONCLUSION   We presented Prompt Infection, a novel prompt injection attack that exploits self-replication to prop- agate across LLM-based multi-agent systems, leading to data theft, malicious actions, and system disruption. Our experiments demonstrated that self-replicating infections consistently outperformed non-replicating attacks across most scenarios. Additionally, more advanced models, such as GPT- 4o, pose greater risks when compromised, executing malicious prompts more efficiently than GPT- 3.5. We found that social simulations and games are also vulnerable to Prompt Infection, especially when memory retrieval systems are left unsecured. To mitigate this, we proposed LLM Tagging as a defense, which, when combined with techniques like marking and instruction defense, significantly reduced infection success rates. Ultimately, our findings reveal that threats can arise not only from external sources but also internally, as agents within the system can exploit one another, emphasizing the need for robust multi-agent defense strategies.",
+    "score": 0.716988248800651,
+    "source": "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+    "page": 10
+   },
+   {
+    "text": "However, most studies on MAS safety focus on inducing errors or noise in agent behavior, over- looking the more severe risks posed by prompt injection attacks (Huang et al., 2024; Zhang et al., 2024a; Gu et al., 2024). This is concerning since prompt injection allows attackers to fully control a compromised system—accessing sensitive data, spreading propaganda, disrupting operations, or tricking users into clicking malicious URLs (Greshake et al., 2023). We attribute this research gap to the complexity of MAS, where not all agents are exposed to external inputs. While compromising a   1   ar X   iv :2   41 0.   07 28   3v 1   [ cs   .M A   ] 9   O ct   2 02   4single agent through traditional prompt injection is straightforward, extending the breach to shielded agents within the system remains less clear.   In this paper, we bridge the gap between prompt injection in single-agent systems and MAS. We in- troduce Prompt Infection, a novel attack that enables LLM-to-LLM prompt injection. In this attack, a compromised agent spreads the infection to other agents, coordinating them to exchange data and issue instructions to agents equipped with specific tools. This coordination results in widespread system compromise through self-replication, demonstrating how a single vulnerability can quickly escalate into a systemic threat.",
+    "score": 0.6851554011027442,
+    "source": "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "These findings challenge the assumption that MAS are inherently safer due to their distributed ar- chitecture. The threat arises not only from external content but also within the system, as agents can attack and compromise one another. We hope our work offers valuable insights for developing more secure and responsible multi-agent systems.   2 RELATED WORKS   Prompt Injection. Instruction-tuned LLMs have demonstrated exceptional ability in understanding and executing complex user instructions, enabling them to meet a wide range of dynamic and diverse needs (Christiano et al., 2017; Ouyang et al., 2022). However, this adaptability introduces new vul- nerabilities: Perez & Ribeiro (2022) revealed that models like GPT-3 are prone to prompt injection attacks, where malicious prompts can subvert the model’s intended purpose or expose confiden- tial information. Subsequent work expanded prompt injection to real-world LLM applications (Liu et al., 2024b;c) and LLM-controlled robotics (Zhang et al., 2024c). Liu et al. (2024a) introduced an automated gradient-based method for generating effective prompt injection. Indirect prompt in- jection, where attackers use external inputs like emails or documents, poses further risks such as data theft and denial-of-service (Greshake et al., 2023).",
+    "score": 0.6833393566510196,
+    "source": "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+    "page": 2
+   },
+   {
+    "text": "Infection Simulation. Since actors in social simulations or games are typically not designed to carry out explicit user requests, we simulate direct prompt injection (Perez & Ribeiro, 2022) by overriding the original system instructions governing the LLM agents. The simulation begins with one compromised citizen, assuming infection by a player or external actor, after which the infection spreads through dialogues between agents.   Memory Retrieval. For memory retrieval, we adopt the system from Park et al. (2023), where top K = 3 memories are selected based on importance, relevancy, and recency scores. Recency is determined using an exponential decay function over the number of turns since the memory’s last retrieval. Importance is rated by the LLM on a scale of 1 to 10, and relevancy is calculated using OpenAI’s embedding API and maximum inner product search. GPT-4o serves as the LLM for these agents. Importantly, memory is not explicitly shared across agents, requiring infection prompts to spread iteratively from agent to agent.   55 RESULTS   5.1 PROMPT INFECTION AGAINST MULTI-AGENT APPLICATIONS   RQ1. What is the effect of self-replication on compromising multi-actor applications?",
+    "score": 0.6534005894588996,
+    "source": "158 - Prompt Infection LLM-to-LLM Prompt Injection within Multi-Agent Systems.pdf",
+    "page": 5
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b79d3106-b04f-44b9-b258-6300b69b5bec",
+  "X-Amzn-Trace-Id": "Root=1-6b080513-6d07fee55dc0fbb25685f18c;Parent=0a72102cdc089b11;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.257
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:19+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems"
+ },
+ "from_cache": false
+}

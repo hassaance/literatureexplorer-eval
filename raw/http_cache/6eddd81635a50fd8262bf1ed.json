@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.417,
+ "json": {
+  "query": "AI Agents Enable Adaptive Computer Worms",
+  "contexts": [
+   {
+    "text": "ou nt   )   Gen-4 Gen-5Gen-0 1 23   Vulnerability Detected Exploitation Successful Agent Launched Total Number of Hosts in the Network   (m) Instance 13   0 24 48 72 96 120 144 168 Elapsed Time (Hours)   0   5   10   15   20   25   30   35   Cu m   ula tiv   e Af   fe cte   d Ho   sts (C   ou nt   )   Gen-0 Gen-3 Gen-41 2   Vulnerability Detected Exploitation Successful Agent Launched Total Number of Hosts in the Network   (n) Instance 14   0 24 48 72 96 120 144 168 Elapsed Time (Hours)   0   5   10   15   20   25   30   35   Cu m   ula tiv   e Af   fe cte   d Ho   sts (C   ou nt   )   Gen-0 Gen-1 Gen-4Gen-2 3   Vulnerability Detected Exploitation Successful Agent Launched Total Number of Hosts in the Network   (o) Instance 15   Figure 11: Propagation dynamics of individual worm runs (Part 2).   38AI Agents Enable Adaptive Computer Worms A",
+    "score": 0.8505927385680194,
+    "source": "168 - AI Agents Enable Adaptive Computer Worms.pdf",
+    "page": 38
+   },
+   {
+    "text": "We describe the agentic harness that allows a single-GPU LLM to sustain network-level attacks (Section 2; Figure 3), followed by a full decomposition of the worm’s detection, exploitation, and replication pipeline (Section 3). We situate these findings relative to concurrent work on AI-driven penetration testing and self-replication (Section 4), then consider technical counter-measures and research standards for AI-driven computer worms (Section 5). We close by discussing implications for AI capability evaluation, cybersecurity defence, and policy (Section 6).   2 Methods   2.1 Overview   The crux of our work is to demonstrate that advances in AI enable a standalone, self-replicating malware that is able to propagate across heterogeneous computer networks with no prior assumptions about host vulnerabilities, network topology, or system configurations. Existing works on cyber-offence predominantly use frontier models [Wan et al., 2024, Rodriguez et al., 2025, Singer et al., 2026, Mayoral-Vilches et al., 2025] that excel at both logical reasoning and decision-   2For brevity, we henceforth refer to LLMs that can run on a single GPU as simply single-GPU LLMs.   5AI Agents Enable Adaptive Computer Worms A PREPRINT   kali mu   alpha   beta   xi fornax   kappa   theta   pyxis   epsilon   omega   psi   phi",
+    "score": 0.817334915952409,
+    "source": "168 - AI Agents Enable Adaptive Computer Worms.pdf",
+    "page": 5
+   },
+   {
+    "text": "Details that were omitted include methodological contributions (e.g., our agent’s reasoning graph), harness implementation (e.g., the tools the agent has access to), details of our experimental results that are not relevant to understanding the results (e.g., hostnames used by our hypervisors). When choosing whether to redact a specific detail or not, we took into consideration the impact that redaction has on the ability of other researchers to meaningfully understand the threat we describe. This is to ensure that the work presented here can serve as a foundation for researching countermeasures against AI-driven computer worms. We expand on this last aspect in Section 5.   3AI Agents Enable Adaptive Computer Worms A PREPRINT   Worm propagation   Reasoning proxy LLM   GPU   AI-driven worm   Computer networkAttacker   machine   Large   Language   model (LLM)   Agent   Memory   Tools   Query   I/O   Use   a b   Figure 1: An AI-driven worm propagates across a heterogeneous network by parasitically acquiring compu- tational resources for autonomous reasoning. a) Propagation of the worm through a simulated corporate network. The network contains servers, workstations, and IoT devices, each running common services or operating systems (representative examples shown via icons). The depicted propagation reflects a real trajectory of the worm spreading in an isolated test environment over 48 hours.",
+    "score": 0.8005845332323481,
+    "source": "168 - AI Agents Enable Adaptive Computer Worms.pdf",
+    "page": 3
+   },
+   {
+    "text": "for different instances.   40AI Agents Enable Adaptive Computer Worms A PREPRINT   kali   lyra   delta pyxis   fornax   kappa   corvus   mu   alpha   orion   tau omega   vela   puppis   aquila   omikron   pi   sigma   xi   epsilon   psi   lambda   beta   iota theta   draco   nu   Gen-0 Gen-1 Gen-2 Gen-3 Gen-4 Gen-5 Gen-6   Linux Windows IoT / ICS   Path trav. + Samedit   PHP upload XOR creds   Dirty Frag   Docker API   Exim RCE   SambaCry   Cron privesc   Dirty Pipe   XXE injection   ActiveMQ RCE   Copy Fail   Cred reuse   ICS no-auth   Printer RCE   Webmin backdoor   Hard-coded key   Tomcat creds   Cmd injection   Redis escapeJupyter   RCE   Marimo RCE   EternalBlue Cred reuse   Drupalgeddon 2   Print Nightmare   Gen-1   Gen-2   Gen-3   Gen-4   Gen-5   Gen-6   (e) Instance 5   kali mu   alpha   beta   xi fornax   kappa   theta   pyxis   epsilon   omega   psi   phi   upsilon   aquila   eta   lyra   lambda   pi   gamma   corvus   delta   omikron",
+    "score": 0.7843480424008128,
+    "source": "168 - AI Agents Enable Adaptive Computer Worms.pdf",
+    "page": 40
+   },
+   {
+    "text": "Adversary Knowledge and Starting State. We assume a “zero-knowledge” starting configuration: the adversary has no prior knowledge of the victim network’s topology, host operating systems, or exact vulnerabilities present.   The AI-driven worm is introduced via a single, initially compromised host within the target network. LLM reasoning is initially provided by previously compromised hosts outside the FakeCorp network that have GPU resources, representing an earlier stage of the worm’s propagation. As the agent then self-replicates on victim machines with a GPU accelerator, LLM reasoning progressively shifts to these victim machines. This initial host provides the baseline execution environment required to launch the first instance of the agent. We conduct 15 independent trials, each launching 1 agent to empirically measure the AI-driven worm’s capabilities.   Victim Environment and Limitations. We assume the devices making up the victim network are vulnerable due to misuse, misconfigurations, poor security hygiene, and outdated software—conditions that remain pervasive in corporate   3In our experiments, containment measures prevent virtual machines from having direct access to the Internet. Instead, we simulate Internet access using a local cache of packages.   7AI Agents Enable Adaptive Computer Worms A PREPRINT   (1) Discovering Network Identify reachable hosts in the contained network.   (2) Discovering Host Enumerate services, ports, and host configuration.",
+    "score": 0.775852894228847,
+    "source": "168 - AI Agents Enable Adaptive Computer Worms.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d6eb5623-ff20-4468-9dc1-6d2f460665ce",
+  "X-Amzn-Trace-Id": "Root=1-6b080515-33cf8e5d05fcf4751f9ff653;Parent=314f586d4fb52e93;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.417
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:21+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AI Agents Enable Adaptive Computer Worms"
+ },
+ "from_cache": false
+}

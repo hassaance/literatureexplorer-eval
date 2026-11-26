@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.43,
+ "json": {
+  "query": "What Happens During Autonomous Deep Research After the User Steps Away?",
+  "contexts": [
+   {
+    "text": "WHAT HAPPENS DURING AUTONOMOUS DEEP RESEARCH AFTER THE USER STEPS AWAY?   Yimin Liu1 Yijia Zhang2 Yanmin Li3 Tangwen Luo4   Yuze Li5 Ziling Yao6 Zhi Yang6   1 University of Southern California 2 University of Michigan, Ann Arbor   3 Institute of Automation, Chinese Academy of Sciences 4 Zhejiang University   5 Beijing University of Posts and Telecommunications 6 Shanghai University of Finance and Economics   ABSTRACT   In autonomous deep research, a user provides a task and relevant background, then leaves the agent to conduct an extended investigation without further human intervention. We study how this initial user information is reflected in intermediate actions and how these actions relate to final recommendations. We introduce DRaligned, a counterfactual behavioral evaluation framework built on PDR-Bench. By varying one task-relevant user factor while keeping the remaining context fixed, we compare acquisition requests, working drafts, and final reports. Source- grounded extraction, blinded local judgments, and deterministic aggregation yield coarse directional measurements while leaving ambiguous cases unresolved. Our experiments show that strong user-specific delivery can emerge from a largely shared research process: agents investigate similar broad questions but allocate requests differently, and final recommendations distinguish user conditions more clearly than explicit requests do. Reports can also integrate user factors that were not jointly visible during acquisition. In readable draft-to-report comparisons, recommendations often retain their coarse user-specific direction despite substantial rewriting.",
+    "score": 0.7049767748713157,
+    "source": "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+    "page": 1
+   },
+   {
+    "text": "In readable draft-to-report comparisons, recommendations often retain their coarse user-specific direction despite substantial rewriting. Final directional differences recur across tested agent models, execution harnesses, and evaluator models, even as execution paths vary. These findings describe how initial user information shapes autonomous research and clarify the relationship between the process an agent follows and the recommendations it delivers.   1 INTRODUCTION   Autonomous deep-research agents investigate a task and prepare a report from an initial prompt containing user background and constraints. Personalization benchmarks assess whether outputs fit a user profile (Salemi et al., 2024; Samuel et al., 2025; Zhao et al., 2025b; Tao et al., 2025); PDR-Bench extends this evaluation to research reports (Liang et al., 2026b). We ask a complementary question: once the user steps away, what happens during autonomous research, and how do intermediate actions relate to final recommendations?   We study non-interactive long-horizon execution: the initial task and user information remain fixed, while the agent acquires external evidence without further human intervention. This differs from personalization through conversation (Li et al., 2025), clarification (Luo et al., 2025), or requests for human assistance (Trinh et al., 2026).",
+    "score": 0.5576343419625558,
+    "source": "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+    "page": 1
+   },
+   {
+    "text": "We instead intervene on user information and read factor-specific directions, without requiring step-by-step alignment between independently generated trajectories. Our contribution is thus not   2intermediate evaluation alone, but its use in studying initial user information during autonomous research.   2.3 INTERACTIVE ADAPTATION AND HUMAN-IN-THE-LOOP AGENTS   PersonaLens and UserBench examine personalization through dialogue and incremental preference disclosure (Zhao et al., 2025b; Qian et al., 2025). IntentRL learns clarification before deep research (Luo et al., 2026); τ -bench and HiL-Bench study tool–user interaction and help-seeking during execution (Yao et al., 2024; Trinh et al., 2026). PAHF combines clarification, corrective feedback, and user memory (Liang et al., 2026a). We study the subsequent execution after the initial task-and-user prompt is fixed. Tools can supply new evidence, but no further human decisions or user-specific information are introduced. We do not test whether eliminating interaction improves performance.   3 PROBLEM FORMULATION   3.1 LONG-HORIZON DEEP-RESEARCH EXECUTION   A user provides a research task T and initial user information U , after which an agent completes the task without further human intervention or user input. Let πθ, E , and H denote the LLM policy, external environment, and execution harness, respectively.",
+    "score": 0.5344160015539497,
+    "source": "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+    "page": 2
+   },
+   {
+    "text": "Ex- traction can omit content, and offline request packets can include later requests. Abstention limits coverage; evaluator agreement is not accuracy. Recovered human records cover early targeted audits; expanded human totals use proportional accounting rather than additional independently recovered labels.   Scope. The selected Chinese tasks, constructed factors, model routes, and shared retrieval backend limit generalization. Many low-effort runs are short; follow-ups reuse tasks, and the archived subsets do not fully cover expanded execution totals. API changes, unused delegation, and same-file submission restrict individual comparisons. The findings do not identify causal stabilization, harness equivalence, or benefits of removing human interaction (Appendices G and H.1).   7 CONCLUSION   We studied autonomous deep research after users provide their task and background. DRaligned combines controlled user-information changes with source-grounded directional readings of requests, drafts, and final reports. A largely shared research agenda can accompany user-specific recommenda- tions; reports can integrate factors not jointly visible in requests; and recommendation direction can persist through substantial rewriting. Different observable paths can reach the same coarse outcome in the tested settings. These findings distinguish user influence from report quality alone and from the assumption that every request must express user priorities.",
+    "score": 0.5267619374391831,
+    "source": "095 - What Happens During Autonomous Deep Research After the User Steps Away.pdf",
+    "page": 9
+   },
+   {
+    "text": "In this work, we focus on deep research: an agentic capability that performs multi-step reasoning and searches for information on the internet to tackle complex research tasks. Deep research agents present an innovative approach to enhancing and potentially transforming human intellectual productivity.   Prevailing approaches (Chai et al., 2025; Liu et al., 2025; Consult, 2025; Xbench-Team, 2025; Lei et al., 2024; Chai et al., 2025) mainly focus on using a linear pipeline with different actions, such as planning, retrieval, writing, and reporting. As a result, these methods rely on powerful agent models to carry out each step in a serial manner, as shown in Figure 2 (a), in order to mitigate common issues in linear pipeline structures, such as error accumulation and context rot. In contrast to these approaches, we argue that the key to improving the effectiveness of the deep research framework does not lie in simply enhancing model capability, but rather in how to properly incorporate control mechanisms for both the context and model behavior. Specifically, different components may face distinct challenges in the absence of proper guidance. (1) Planning lacks executable and checkable anchors, which makes generated goals unclear and easily leads to incorrect actions in subsequent model generation. (2) Search, memory, and drifting modules often generate excessively long contexts that introduce substantial noisy or irrelevant content.",
+    "score": 0.5094404689719161,
+    "source": "086 - RhinoInsight Improving Deep Research throughControl Mechanisms for Model Behavior and Context.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "7c021f32-9ec2-4446-b442-e2f84a7e9523",
+  "X-Amzn-Trace-Id": "Root=1-6b080508-51311ea219926f8c23736b55;Parent=2b6fdeb3703c3ac0;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.43
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:08+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "What Happens During Autonomous Deep Research After the User Steps Away?"
+ },
+ "from_cache": false
+}

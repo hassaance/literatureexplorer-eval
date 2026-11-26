@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.291,
+ "json": {
+  "query": "Towards Mutual Theory of Mind in Human-AI Interaction: How Language Reflects What Students Perceive About a Virtual Teaching Assistant",
+  "contexts": [
+   {
+    "text": "Towards Mutual Theory of Mind in Human-AI Interaction: How Language Reflects What Students Perceive   About a Virtual Teaching Assistant Qiaosi Wang Koustuv Saha Eric Gregori   Georgia Institute of Technology Georgia Institute of Technology Georgia Institute of Technology Atlanta, GA, USA Atlanta, GA, USA Atlanta, GA, USA   qswang@gatech.edu koustuv.saha@gatech.edu egregori3@gatech.edu   David A. Joyner Ashok K. Goel Georgia Institute of Technology Georgia Institute of Technology   Atlanta, GA, USA Atlanta, GA, USA david.joyner@gatech.edu ashok.goel@cc.gatech.edu   ABSTRACT Building conversational agents that can conduct natural and pro- longed conversations has been a major technical and design chal- lenge, especially for community-facing conversational agents. We posit Mutual Theory of Mind as a theoretical framework to design for natural long-term human-AI interactions. From this perspective, we explore a community’s perception of a question-answering con- versational agent through self-reported surveys and computational linguistic approach in the context of online education. We frst examine long-term temporal changes in students’ perception of Jill Watson (JW), a virtual teaching assistant deployed in an online class discussion forum. We then explore the feasibility of inferring stu- dents’ perceptions of JW through linguistic features extracted from student-JW dialogues.",
+    "score": 0.8237704376719409,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 1
+   },
+   {
+    "text": "To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specifc permission and/or a fee. Request permissions from permissions@acm.org. CHI ’21, May 8–13, 2021, Yokohama, Japan © 2021 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 978-1-4503-8096-6/21/05. . . $15.00 https://doi.org/10.1145/3411764.3445645   ACM Reference Format: Qiaosi Wang, Koustuv Saha, Eric Gregori, David A. Joyner, and Ashok K. Goel. 2021. Towards Mutual Theory of Mind in Human-AI Interaction: How Language Refects What Students Perceive About a Virtual Teaching Assistant. In CHI Conference on Human Factors in Computing Systems (CHI ’21), May 8–13, 2021, Yokohama, Japan. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/3411764.3445645   1 INTRODUCTION Conversational Agents (CAs)1 are becoming increasingly integrated into various aspects of our lives, providing services across health- care, entertainment, retail, and education.",
+    "score": 0.6458869825131537,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 1
+   },
+   {
+    "text": "For example, people might intentionally limit their emotional expression through language so that they don’t appear “stupid” for thinking a CA could interpret the emotional elements in theTowards Mutual Theory of Mind in Human-AI Interaction CHI ’21, May 8–13, 2021, Yokohama, Japan   language [40]; or people might purposefully reply with questions that can help them appear more humorous than to receive a correct answer from the CA. There are several occurrences of this in our study when students ask JW questions that are clearly out of scope for JW, such as “What is the meaning of life?” or “What is your favorite character in Game of Thrones?”.   6.3 Towards Mutual Theory of Mind in Human-AI Interaction   With the ultimate goal of building MToM in Human-AI interac- tions, our study explored the feasibility of building a CA’s ToM by operationalizing and identifying user perceptions of the CA through linguistic cues. From the lens of MToM, understanding the perception of each other during interactions, similar to human- human interaction, acts as the cognitive foundation of human-AI interactions [6]. Drawing upon human-human interactions that rely on all kinds of social signals conveyed through languages, to improve the accuracy of CA’s ToM, future research should explore how other conversational cues could potentially be combined with the linguistic features we investigated to provide more context and accuracy in understanding people’s perceptions of the CA.",
+    "score": 0.6345535109094559,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 10
+   },
+   {
+    "text": "This work was in collaboration with the class instructor and we took measures to avoid coercion. The maximum number of extra credits students could earn by participation was less than 1% of the total grade, and these extra credits could also be earned in other ways as part of the standard class structure. We clarifed to the students that survey responses would not be shared with the instructor, and would not have any impact on grades.Towards Mutual Theory of Mind in Human-AI Interaction CHI ’21, May 8–13, 2021, Yokohama, Japan   2 BACKGROUND In this section, we provide an overview of ToM and its application in existing human-AI interaction research. We then discuss related work that explores user perception of the CA to facilitate human- AI interactions and highlight the potential of leveraging language analysis to improve human-AI interaction.   2.1 Theory of Mind in Human-AI Interaction ToM, our ability to make suppositions of other’s minds through behavioral cues, is fundamental to many human social and cogni- tive behaviors, especially our ability to collaboratively accomplish goal-oriented tasks and our ability to perform smooth, natural com- munications with others [6, 7].",
+    "score": 0.6094599299876616,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 2
+   },
+   {
+    "text": "We are, however, hopeful that language analysis can reveal the diferent dimensions of people’s perceptions about CAs during interactions. Future research should replicate the current study using diferent measurements of the user’s mental model about CA to provide more evidence on the potential of language analysis.   7 CONCLUSION This paper posited Mutual Theory of Mind as the theoretical frame- work for designing adaptive community-facing conversational agents (CAs) as long-term companions. Guided by this framework, we examined the long-term changes of community perception of CA, and measured the feasibility of inferring perceptions through linguistic cues. We deployed a community-facing CA, JW, a virtual teaching assistant designed to answer students’ logistical ques- tions about the class in an online class public discussion forum. Driven by our understanding of Theory of Mind, we measured stu- dents’ perception of JW in terms of perceived anthropomorphism,CHI ’21, May 8–13, 2021, Yokohama, Japan Wang et al.   intelligence, and likeability. We found statistically signifcant long- term changes in student community’s perception of JW in terms of anthropomorphism and intelligence. Then, we extracted theory- driven language features from student-JW interactions over the course of the semester. Regression analyses revealed that linguistic features such as verbosity, diversity, adaptability, and readability explain students’ perception of JW.",
+    "score": 0.5821638561437743,
+    "source": "025 - Towards Mutual Theory of Mind in Human-AI Interaction.pdf",
+    "page": 11
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fe355058-0d9f-4e32-8824-8a4af0103768",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fb-092300ea4d4f756868b26b0a;Parent=5d58e285153a45e1;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.291
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:55+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Towards Mutual Theory of Mind in Human-AI Interaction: How Language Reflects What Students Perceive About a Virtual Teaching Assistant"
+ },
+ "from_cache": false
+}

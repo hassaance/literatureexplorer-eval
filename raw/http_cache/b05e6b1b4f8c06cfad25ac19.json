@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.33,
+ "json": {
+  "query": "The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling: A Survey",
+  "contexts": [
+   {
+    "text": "THE LANDSCAPE OF EMERGING AI AGENT ARCHITECTURES FOR REASONING, PLANNING, AND TOOL CALLING: A SURVEY   Tula Masterman* Neudesic, an IBM Company   tula.masterman@neudesic.com   Sandi Besen* IBM   sandi.besen@ibm.com   Mason Sawtell* Neudesic, an IBM Company   mason.sawtell@neudesic.com   * Denotes Equal Contribution   Alex Chao Microsoft   achao@microsoft.com   ABSTRACT   This survey paper examines the recent advancements in AI agent implementations, with a focus on their ability to achieve complex goals that require enhanced reasoning, planning, and tool execution capabilities. The primary objectives of this work are to a) communicate the current capabilities and limitations of existing AI agent implementations, b) share insights gained from our observations of these systems in action, and c) suggest important considerations for future developments in AI agent design. We achieve this by providing overviews of single-agent and multi-agent architectures, identifying key patterns and divergences in design choices, and evaluating their overall impact on accomplishing a provided goal. Our contribution outlines key themes when selecting an agentic architecture, the impact of leadership on agent systems, agent communication styles, and key phases for planning, execution, and reflection that enable robust AI agent systems.",
+    "score": 0.7726173779475863,
+    "source": "032 - The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling A Survey.pdf",
+    "page": 1
+   },
+   {
+    "text": "Regardless of the architecture selected, the best performing agent systems tend to incorporate at least one of the following approaches: well defined system prompts, clear leadership and task division, dedicated reasoning / planning- execution - evaluation phases, dynamic team structures, human or agentic feedback, and intelligent message filtering. Architectures that leverage these techniques are more effective across a variety of benchmarks and problem types.   While the current state of AI-driven agents is promising, there are notable limitations and areas for future improvement. Challenges around comprehensive agent benchmarks, real world applicability, and the mitigation of harmful language model biases will need to be addressed in the near-term to enable reliable agents. By examining the progression from static language models to more dynamic, autonomous agents, this survey aims to provide a holistic understanding of the current AI agent landscape and offer insight for those building with existing agent architectures or developing custom agent architectures.   11References   [1] Timo Birr et al. AutoGPT+P: Affordance-based Task Planning with Large Language Models. arXiv:2402.10778 [cs] version: 1. Feb. 2024. URL: http://arxiv.org/abs/2402.10778.   [2] Weize Chen et al. AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors. arXiv:2308.10848 [cs]. Oct. 2023.",
+    "score": 0.6064149029613103,
+    "source": "032 - The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling A Survey.pdf",
+    "page": 11
+   },
+   {
+    "text": "Keywords AI Agent · Agent Architecture · AI Reasoning · Planning · Tool Calling · Single Agent · Multi Agent · Agent Survey · LLM Agent · Autonomous Agent   1 Introduction   Since the launch of ChatGPT, many of the first wave of generative AI applications have been a variation of a chat over a corpus of documents using the Retrieval Augmented Generation (RAG) pattern. While there is a lot of activity in making RAG systems more robust, various groups are starting to build what the next generation of AI applications will look like, centralizing on a common theme: agents.   Beginning with investigations into recent foundation models like GPT-4 and popularized through open-source projects like AutoGPT and BabyAGI, the research community has experimented with building autonomous agent-based systems [19, 1].   As opposed to zero-shot prompting of a large language model where a user types into an open-ended text field and gets a result without additional input, agents allow for more complex interaction and orchestration. In particular, agentic systems have a notion of planning, loops, reflection and other control structures that heavily leverage the model’s inherent reasoning capabilities to accomplish a task end-to-end. Paired with the ability to use tools, plugins, and function calling, agents are empowered to do more general-purpose work.   Among the community, there is a current debate on whether single or multi-agent systems are best suited for solving complex tasks.",
+    "score": 0.563590891424237,
+    "source": "032 - The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling A Survey.pdf",
+    "page": 1
+   },
+   {
+    "text": "Among the community, there is a current debate on whether single or multi-agent systems are best suited for solving complex tasks. While single agent architectures excel when problems are well-defined and feedback from other   The opinions expressed in this paper are solely those of the authors and do not necessarily reflect the views or policies of their respective employers.   ar X   iv :2   40 4.   11 58   4v 1   [ cs   .A I]   1 7   A pr   2 02   4agent-personas or the user is not needed, multi-agent architectures tend to thrive more when collaboration and multiple distinct execution paths are required.   Figure 1: A visualization of single and multi-agent architectures with their underlying features and abilities   1.1 Taxonomy   Agents. AI agents are language model-powered entities able to plan and take actions to execute goals over multiple iterations. AI agent architectures are either comprised of a single agent or multiple agents working together to solve a problem.   Typically, each agent is given a persona and access to a variety of tools that will help them accomplish their job either independently or as part of a team. Some agents also contain a memory component, where they can save and load information outside of their messages and prompts. In this paper, we follow the definition of agent that consists of “brain, perception, and action” [31].",
+    "score": 0.5283741484536822,
+    "source": "032 - The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling A Survey.pdf",
+    "page": 1
+   },
+   {
+    "text": "Both single-agent and multi-agent architectures can be used to solve challenging tasks by employing reasoning and tool calling steps. Many methods use multiple iterations of reasoning, memory, and reflection to effectively and accurately   3complete problems [16, 23, 32]. They often do this by breaking a larger problem into smaller subproblems, and then solving each one with the appropriate tools in sequence.   Other works focused on advancing agent patterns highlight that while breaking a larger problem into smaller subproblems can be effective at solving complex tasks, single agent patterns often struggle to complete the long sequence required [22, 6].   Multi-agent patterns can address the issues of parallel tasks and robustness since individual agents can work on individual subproblems. Many multi-agent patterns start by taking a complex problem and breaking it down into several smaller tasks. Then, each agent works independently on solving each task using their own independent set of tools.   3 Single Agent Architectures   3.1 Overview   In this section, we highlight some notable single agent methods such as ReAct, RAISE, Reflexion, AutoGPT + P, and LATS. Each of these methods contain a dedicated stage for reasoning about the problem before any action is taken to advance the goal.",
+    "score": 0.5184075412571634,
+    "source": "032 - The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling A Survey.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "cc282f5a-1ad8-4938-8527-686ec4379a1c",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fc-6730754b2161041763502841;Parent=4b4920684e425d99;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.33
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling: A Survey"
+ },
+ "from_cache": false
+}

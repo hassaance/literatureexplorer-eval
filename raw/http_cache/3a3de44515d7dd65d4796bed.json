@@ -1,0 +1,30 @@
+{
+ "status": 400,
+ "latency_s": 0.051,
+ "json": {
+  "error": {
+   "message": "messages must contain a user message"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9010645e-467d-40d4-a6ac-aad53013f8a5",
+  "X-Amzn-Trace-Id": "Root=1-6b080547-26c096926af076eb592ba34f;Parent=7284e3debf8084c4;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 400,
+   "latency_s": 0.051
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:11+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "err_missing_messages",
+ "request_body": {
+  "prompt": "What is ReAct?"
+ },
+ "from_cache": false
+}

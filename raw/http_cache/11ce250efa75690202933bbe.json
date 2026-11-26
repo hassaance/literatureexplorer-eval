@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.371,
+ "json": {
+  "query": "PARNESS: A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cross-Run Knowledge Accumulation",
+  "contexts": [
+   {
+    "text": "PARNESS: A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text   Indexing, and Cross-Run Knowledge Accumulation   A Preprint   Yuchen Wang∗1 and Zhongzhi Luan†1 1Sino-German Joint Software Institute, Beihang University, Beijing, China   May 2026   Abstract   Recent autonomous research systems — AI-Scientist v1/v2 [1, 2], PaperOrchestra [3], OpenAGS, Karpathy’s autoresearch, AutoSOTA [4], Tongyi DeepResearch [5], InternAgent [6] and ResearchA- gent [7] — show that LLM agents can ideate, run experiments and write papers, but each fixes a particular control-flow shape (linear pipeline, hard-coded state machine, single-agent loop, or skill-pack with a fixed five-agent recipe) at the framework level.",
+    "score": 0.7737016223083294,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 1
+   },
+   {
+    "text": "Source code and pipeline configurations: https://github.com/gtrhythm/PARNESS.   ar X   iv :2   60 5.   05 25   8v 1   [ cs   .S E   ] 6   M ay   2 02   6         https://github.com/gtrhythm/PARNESS        https://arxiv.org/abs/2605.05258v1parness: A Paper Harness for Automated Research A Preprint   Figure 1: PARNESS as a paper harness. A single thin DAG kernel (centre) drives many different research scenarios as parallel lanes: wet-lab biology, social-science surveys, ML systems benchmarks, and theoretical/simulation studies. Each lane is a chain of pluggable agent modules that the user can swap, extend, or re-wire through ordinary YAML and through any GUI/TUI coding agent. A typed knowledge graph below the kernel feeds every lane. The contribution of this work is the kernel inside the machine: a thin runtime plus a four-field contract that lets disciplines, scenarios and discussion modes be expressed as data rather than orchestrator code, and a knowledge layer that lets every run accumulate into a long-lived corpus.   1 Introduction   The past two years have produced a wave of autonomous research systems that aspire to take a research question — or even a research area — and return reviewed scientific output without human intervention.",
+    "score": 0.7101083706570678,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 1
+   },
+   {
+    "text": "The smaller open models that researchers actually fine-tune and self-host (Llama-3 / Mistral / Qwen variants in the 32–128K   6parness: A Paper Harness for Automated Research A Preprint   (a) episodic full-text read (AI-Scientist, DeepResearch)   paper LLM call → discarded   (b) abstract-only ideation (PaperOrchestra)   abs. only LLM call → no fall-back   (c) PARNESS: persistent index + abstract→KG resolution   paper1 abs.2 paper3 KG index   (typed objects) LLM call   abstracts are resolved against the typed neighbourhood,   so reading capability grows monotonically with use   Figure 4: Reading a paper once is not the same as having it indexed. (a) AI-Scientist [1, 2] and DeepResearch [5] do parse full PDFs, but only episodically: the parsed text is consumed by the current call and then discarded. (b) PaperOrchestra [3], by contrast, only ever sees abstracts. In both regimes there is no long-lived corpus that the next step or the next run can search. (c) PARNESS indexes every parsed body as typed objects (layout, formulae, OCR, tables) into the KG; abstract-only inputs are resolved against the typed neighbourhood, so the system’s reading capability grows monotonically with use.",
+    "score": 0.6956416890619538,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 6
+   },
+   {
+    "text": "We make four contributions, mapped one-to-one with the limitations above and elaborated as the four pillars of §5:   3parness: A Paper Harness for Automated Research A Preprint   1. (M→L1) A highly-customisable DAG kernel and a declarative pipeline DSL. A minimal four-field Agent contract (§6.2) plus a YAML topology language with layered validation (§6.3), so disciplines and discussion modes are expressed as data, not code. Compared to programmatic orchestrators (AutoGen [31], MetaGPT [30], DSPy [34]) and skill-pack approaches (PaperOrchestra [3]), PARNESS treats the topology of the workflow as user-editable data and enforces correctness with a layered pipeline validator (§6.10).   2. (M→L3) A complete full-text PDF-parsing and literature-library subsystem. An integration of the third-party PDF-Extract-Kit [27] (used unmodified except for stability and adapter glue) feeds a typed indexing layer (§5.2); the system gracefully degrades to abstract-only when full text is unavailable, and progressively gains “abstract- comprehension” capability as the cumulative corpus grows.   3. (M→L2,L4,L5) A KG-based knowledge index over papers, ideas, experiments and code repositories (§6.7, §5.3).",
+    "score": 0.6810513727644295,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 3
+   },
+   {
+    "text": "PARNESS asks: how do we build the research process upstream of those inputs — including the inputs themselves — as a composable, accumulating, multi-discipline kernel? The answer is a four-field contract, a YAML DAG, and a typed knowledge substrate. We expect future systems to combine the two: PaperOrchestra as a single PARNESS module called when the upstream pipeline has populated (I, E, T,G, F ).   18parness: A Paper Harness for Automated Research A Preprint   10 Conclusion   We presented PARNESS, an open-source declarative DAG framework for autonomous research that occupies a previously-uncovered point in the design space: full life-cycle coverage plus pipeline-as-data plus agent-driven routing plus cross-run knowledge persistence plus multi-discipline workflow shape. The framework is a thin kernel; all interesting decisions live in modules, and modules communicate with the runner through a four-field contract. We released the reference implementation (130+ modules, 50 pipelines, broad development-test coverage, full KG harness) and showed that it runs end-to-end on real document collections within a single-node hour-scale budget. The natural next step is a quantitative head-to-head benchmark against PaperOrchestra (writing only), AI-Scientist v2 and InternAgent (full pipeline), with and without the cross-run KG populated (§9). The arXiv v1 of this paper is intended as a stable reference for that comparison.",
+    "score": 0.6643802070232285,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 18
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e1744111-1d12-489f-90ac-a3569745928f",
+  "X-Amzn-Trace-Id": "Root=1-6b08050b-36eb07b83800a1ef496e65f3;Parent=0f523bac60ca7749;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.371
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:10+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "PARNESS: A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cross-Run Knowledge Accumulation"
+ },
+ "from_cache": false
+}

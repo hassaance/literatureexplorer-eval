@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.27,
+ "json": {
+  "query": "SciToolAgent: A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration",
+  "contexts": [
+   {
+    "text": "SciToolAgent: A Knowledge Graph-Driven   Scientific Agent for Multi-Tool Integration   Keyan Ding1,2†, Jing Yu2,4†, Junjie Huang2, Yuchen Yang2, Qiang Zhang3,2*, Huajun Chen1,2,5*   1College of Computer Science and Technology, Zhejiang University, Hangzhou, China.   2Zhejiang Key Laboratory of Intelligent Manufacturing for Functional Chemicals, ZJU-Hangzhou Global Scientific and Technological Innovation Center, Zhejiang University, Hangzhou, China. 3ZJU-UIUC Institute, Zhejiang University, Haining, China.   4The Polytechnic Institute, Zhejiang University, Hangzhou, China. 5State Key Laboratory of Ocean Sensing, Hangzhou, China.   *Corresponding author(s). E-mail(s): qiang.zhang.cs@zju.edu.cn; huajunsir@zju.edu.cn;   Contributing authors: dingkeyan@zju.edu.cn; yujing17@zju.edu.cn; junjie6282@zju.edu.cn; yangyc 2020@163.com;   †These authors contributed equally to this work.   Abstract   Scientific research increasingly relies on specialized computational tools, yet effec- tively utilizing these tools demands substantial domain expertise.",
+    "score": 0.8762036579843612,
+    "source": "101 - SciToolAgent A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration.pdf",
+    "page": 1
+   },
+   {
+    "text": "We further val- idate SciToolAgent’s effectiveness through case studies across four scenarios: protein   3design and analysis, chemical reactivity prediction, chemical synthesis and analy- sis, and metal-organic framework (MOF) material screening. These studies showcase SciToolAgent’s capability to autonomously orchestrate complex multi-tool workflows while maintaining solution reliability and accuracy.   2 Results   2.1 Overview of SciToolAgent   SciToolAgent is an LLM-based agent designed to overcome the limitations of existing systems in scientific tool integration. While traditional frameworks often fail due to their naive in-context learning approaches that overlook tool interdependen- cies, SciToolAgent addresses this challenge through a scientific tool knowledge graph (SciToolKG) that mediates between LLMs and scientific tools. The toolset involved in SciToolAgent includes general tools like search engines and code interpreters, as well as specialized scientific tools in biology, chemistry, and materials domains (Fig. 1a). To establish the intricate relationships among extensive tools, we manually con- struct a SciToolKG (Fig. 1b), encompassing diverse information about each tool. This SciToolKG plays a crucial role in the planning process, enabling LLMs to make well-informed decisions regarding tool selection and combination for optimal problem- solving.",
+    "score": 0.7123738535029271,
+    "source": "101 - SciToolAgent A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration.pdf",
+    "page": 3
+   },
+   {
+    "text": "The failure to account for these interdependent relationships frequently leads to suboptimal solutions and reduced efficiency when handling multi-step scientific workflows. In this study, we present SciToolAgent, an agent framework that effectively integrates extensive and diverse scientific tools with LLMs (Fig. 1). Specifically, SciToolAgent utilizes advanced LLMs as Planner, Executor, and Summarizer to autonomously plan, execute multiple tools, and summarize the solution for scientific tasks. SciToolAgent introduces two   2•   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   ba   ExecutorPlanner Summarizer   c   LLMs   Fig. 1 Overview of SciToolAgent. (a) The toolset involved in our study, which includes general tools as well as frequently-used biology, chemistry, and material-related tools. (b) The schema of SciToolKG, encompassing diverse information about each tool such as input/output formats, specific functionalities, safety levels, etc. (c) The overall workflow of SciToolAgent. Given a user query, an LLM-based Planner generates a chain of tools using a SciToolKG-based retrieve-augmented genera- tion, followed by sequential implementation through an LLM-based Executor. A safety check module is then conducted to ensure ethical and safe solutions by retrieving a safeguard database.",
+    "score": 0.6601362144443593,
+    "source": "101 - SciToolAgent A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration.pdf",
+    "page": 2
+   },
+   {
+    "text": "For instance, in biology, we included sequence alignment tools like BLAST [38], protein structure pre- diction models such as ESMFold [27], and gene editing software like CRISPR-related tools. In chemistry, our toolset features molecular dynamics simulations, cheminfor- matics libraries like RDKit [39], and compound databases such as PubChem [34]. For materials science, we integrated tools for crystal structure prediction, materials property databases, and MOF property predictors such as MOFSimplify [36].   4.2 Construction of SciToolKG   The Scientific Tool Knowledge Graph (SciToolKG) serves as the backbone of Sci- ToolAgent, providing a structured representation of the relationships, dependencies, and operational details of a vast array of scientific tools. Formally, SciToolKG is rep- resented as a directed graph G = (V,E), where V represents a set of entities (nodes) and E represents a set of relations (edges) between these entities. Specifically, the tool nodes represent individual scientific tools, and the attribute nodes represent various tool properties and metadata. The edges captures the semantic relationships between the tool node and the attribute node.   The construction of SciToolKG followed a three-step process: tool characterization, schema development, and graph population. The initial phase involved defining a set of attributes for each tool, including its purpose, specific functionalities, input/output formats, categories, sources, and safety levels.",
+    "score": 0.6376042169430204,
+    "source": "101 - SciToolAgent A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration.pdf",
+    "page": 14
+   },
+   {
+    "text": "The primary advantage of SciToolAgent lies in its integration of diverse scientific tools through SciToolKG, which captures the intricacies of tool dependencies, input/out- put formats, and application contexts. Previous LLM-based frameworks have been restricted by their limited toolsets and simple task-planning strategies. By contrast, SciToolAgent can dynamically create a chain of tools tailored to the specific require- ments of each scientific task. This capability allows researchers to delegate repetitive or computationally intensive steps to SciToolAgent, making scientific inquiry more accessible and efficient for both domain experts and non-experts.   One potential limitation of SciToolAgent lies in the manual construction of the SciToolKG knowledge graph. Although SciToolKG captures relationships and depen- dencies effectively, its scalability is constrained by the effort required to curate and update tool information. Automated approaches, such as using knowledge extraction techniques from scientific literature or metadata from tool documentation, could fur- ther enhance the scalability and granularity of SciToolKG. Additionally, expanding the knowledge graph to incorporate emerging tools and resources will be essential as scientific research continues to evolve. To facilitate extensibility, we provide stan- dardized APIs and templates to support third-party tool integration with minimal effort. Future versions will also include GUI-based registration to reduce the barrier for domain experts without programming experience.   Another challenge lies in the reliance on the underlying LLM’s capabilities to per- form effectively across varied scientific tasks.",
+    "score": 0.6360509105624301,
+    "source": "101 - SciToolAgent A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration.pdf",
+    "page": 13
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "bdb48955-04e0-4fc9-a956-1db2d08726fe",
+  "X-Amzn-Trace-Id": "Root=1-6b080509-78ab28a9684f4ae62faec7e1;Parent=0dcaf21ac3529de7;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.27
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:09+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "SciToolAgent: A Knowledge Graph-Driven Scientific Agent for Multi-Tool Integration"
+ },
+ "from_cache": false
+}

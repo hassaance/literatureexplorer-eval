@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.325,
+ "json": {
+  "query": "LLM Agents as Social Scientists: A Human–AI Collaborative Platform for Social Science Automation",
+  "contexts": [
+   {
+    "text": "LLM Agents as Social Scientists: A Human–AI   Collaborative Platform for Social Science Automation   Lei Wang1,2, Yuanzi Li1,2, Jinchao Wu1,2, Heyang Gao1,2, Xiaohe Bo1,2, Xu Chen1,2, Ji-Rong Wen1,2   1Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, China 2Beijing Key Laboratory of Big Data Management and Analysis Methods, Beijing, China   Abstract   Traditional social science research often requires designing complex experiments across vast methodological spaces and depends on real human participants, making it labor-intensive, costly, and difficult to scale. Here we present S-Researcher, an LLM-agent-based platform that assists researchers in conducting social science research more efficiently and at greater scale by “sili- conizing” both the research process and the participant pool. To build S-Researcher, we first develop YuLan-OneSim, a large-scale social simulation system designed around three core re- quirements: generality via auto-programming from natural language to executable scenarios, scalability via a distributed architecture supporting up to 100,000 concurrent agents, and re- liability via feedback-driven LLM fine-tuning.",
+    "score": 0.7608881755046233,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 1
+   },
+   {
+    "text": "S-Researcher operationalizes all three paradigms into an integrated, human-in-the-loop workflow: researchers can modify generated designs, inject domain expertise, supply custom data, or use individual modules independently, ensuring that the platform serves as a collaborative accelerator rather than a black-box replacement. We validate the framework through three case studies. In the inductive paradigm, the S-Researcher autonomously designs and executes a cultural dissemination experiment that successfully reproduces the convergence and polarization dynamics predicted by Axelrod’s classical theory [27], with LLM-driven agents whose   3behaviors emerge from language model reasoning rather than hard-coded rules. In the deductive paradigm, large-scale classroom simulation (221 classrooms, 5,525 student agents) simultaneously tests three competing hypotheses about teacher attention allocation, with results directionally vali- dated against the China Education Panel Survey(CEPS) [28]. In the abductive paradigm, the most demanding test, S-Researcher identifies a leader demonstration mechanism in public goods games, which is independently confirmed by parallel human experiments (N = 120) with a cross-condition correlation of r = 0.915. These results demonstrate that LLM simulation, when embedded within a human–AI collaborative workflow, can meaningfully accelerate social science research.",
+    "score": 0.5843531285094652,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 3
+   },
+   {
+    "text": "Leveraging this system, S-Researcher supports researchers in designing social experiments, simulating human behavior with LLM agents, ana- lyzing results, and generating reports, forming a complete human–AI collaborative research loop in which researchers retain oversight and intervention at every stage. We operationalize LLM simulation research paradigms into three canonical reasoning modes (induction, deduction, and abduction) and validate S-Researcher through systematic case studies: inductive reproduction of cultural dynamics consistent with Axelrod’s theory, deductive testing of competing hypotheses on teacher attention validated against survey data, and abductive identification of a cooperation mechanism in public goods games confirmed by human experiments. S-Researcher establishes a new human–AI collaborative paradigm for social science, in which computational simulation augments human researchers to accelerate discovery across the full spectrum of social inquiry.   Keywords: large language model, social simulation, computational social science   Introduction   Social science has long advanced human civilization by providing deep insights into human behavior, social structures, and cultural dynamics. Traditional research typically begins with the design of methodological frameworks, such as surveys [1, 2], controlled experiments [3, 4], and longitudinal studies, followed by data collection from human participants to derive findings [5]. However, this process confronts two structural bottlenecks that fundamentally constrain the pace, scale, and depth of social science research.",
+    "score": 0.5771968780921324,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 1
+   },
+   {
+    "text": "In [104], LLM-based agents offer multifaceted assistance, ranging from generating concise article abstracts and extracting pivotal keywords to crafting detailed scripts for studies, showcasing their ability to enrich and streamline the research process. Meanwhile, in [113], LLM-based agents serve as a writing assis- tant, demonstrating their capability to identify novel research inquiries for social scientists, thereby open- ing new avenues for exploration and innovation in the field. These examples highlight the potential of LLM-based agents in enhancing the efficiency, creativity, and breadth of social science research.   3.2 Natural Science   Natural science is one of the branches of science concerned with the description, understanding and prediction of natural phenomena, based on empir- ical evidence from observation and experimenta- tion. With the ever prospering of LLMs, the ap- plication of LLM-based agents in natural sciences becomes more and more popular. In the follow- ing, we present many representative areas, where LLM-based agents can play important roles.   Documentation and Data Management: Natu- ral scientific research often involves the collection, organization, and synthesis of substantial amounts of literature, which requires a significant dedication   of time and human resources. LLM-based agents have shown strong capabilities on language under- standing and employing tools such as the internet and databases for text processing. These capabil- ities empower the agent to excel in tasks related to documentation and data management.",
+    "score": 0.5727717699973194,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 23
+   },
+   {
+    "text": "In [103], the authors systematically analyze the effectiveness of LLM- based conversation agents for mental well-being support. They collect 120 posts from Reddit, and find that such agents can help users cope with anx- ieties, social isolation and depression on demand. At the same time, they also find that the agents may produce harmful contents sometimes.   Political Science and Economy: LLM-based agents can also be utilized to study political science and economy [29, 104, 105]. In [29], LLM-based agents are utilized for ideology detection and pre- dicting voting patterns. In [104], the authors focuses on understanding the discourse structure and per- suasive elements of political speech through the assistance of LLM-based agents. In [105], LLM- based agents are provided with specific traits such as talents, preferences, and personalities to explore human economic behaviors in simulated scenarios.   Social Simulation: Previously, conducting ex- periments with human societies is often expensive, unethical, or even infeasible. With the ever pros- pering of LLMs, many people explore to build vir- tual environment with LLM-based agents to sim- ulate social phenomena, such as the propagation of harmful information, and so on [20, 34, 78, 80,   106–109].",
+    "score": 0.5554150198151863,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 22
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "c3468181-8ba8-47c7-a685-db36936c5443",
+  "X-Amzn-Trace-Id": "Root=1-6b08050a-1b4fa6cc7ea67d720d9d573a;Parent=147ceb884f6364e3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.325
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:10+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "LLM Agents as Social Scientists: A Human–AI Collaborative Platform for Social Science Automation"
+ },
+ "from_cache": false
+}

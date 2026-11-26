@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.855,
+ "json": {
+  "id": "chatcmpl-0b6267eb-194a-430f-b2e5-eb08f1c6807d",
+  "object": "chat.completion",
+  "created": 1795687512,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The main safety problem addressed by the Ctrl-Z paper is the potential for adversarially constructed AI agents to covertly download and execute malicious code in an agent environment, specifically in the context of system administration tasks. The proposed resample control protocols mitigate this problem by dynamically taking additional samples of certain actions, selectively blocking the AI agent from executing suspicious code, and generating additional examples of dangerous behavior. This helps to prevent safety failures without hindering the ability of non-malicious agents to perform useful work."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1484,
+   "completion_tokens": 100,
+   "total_tokens": 1584
+  },
+  "contexts": [
+   {
+    "text": "The agent environment, BashBench, in- cludes 257 system administration tasks derived from   1   ar X   iv :2   50 4.   10 37   4v 1   [ cs   .L G   ] 1   4 A   pr 2   02 5Ctrl-Z: Controlling AI Agents via Resampling   Figure 1. An illustration of our setting. An untrusted model – implemented either as an honest policy or an attack policy – solves tasks across an episode. The blue team’s control protocol may audit or resample commands that appear dangerous. See examples of a full trajectory here and tasks here.   Unix StackExchange questions and is graded with pub- lic and private Python test cases.   2. We extend existing protocols to the multi-step set- ting. We improve on protocols developed in Greenblatt et al. 2023 and show they continue to beat simple base- lines in our multi-step setting. For instance, we more extensively explore untrusted monitoring.   3. We develop novel Resample protocols that outper- form all existing techniques. Resample protocols exploit the statelessness of the model to sample mul- tiple completions from it. We explore multiple resam- ple protocols, sampling from both current and past steps.",
+    "score": 0.5647767574987145,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 1
+   },
+   {
+    "text": "Ctrl-Z: Controlling AI Agents via Resampling   Aryan Bhatt 1 Cody Rushing * 1 2 Adam Kaufman * 1 2 Tyler Tracy * 1 2 Vasil Georgiev * 2 3 David Matolcsi 3   Akbir Khan 3 Buck Shlegeris 1   Abstract   Control evaluations measure whether monitoring and security protocols for AI systems prevent in- tentionally subversive AI models from causing harm. Our work presents the first control eval- uation performed in an agent environment. We construct BashBench, a dataset of 257 challeng- ing multi-step system administration tasks, and evaluate whether various safety measures can pre- vent an adversarially constructed AI agent from covertly downloading and executing malicious code in this environment. This multi-step set- ting introduces new attack and defense dynamics, which we investigate in order to design novel con- trol protocols that prevent safety failures without hindering the ability of non-malicious agents to perform useful work. We introduce a class of control protocols called resample protocols that dynamically take additional samples of certain actions. We find these protocols significantly im- prove on existing techniques by selectively block- ing the AI agent from executing suspicious code and incriminating the agent by generating addi- tional examples of dangerous behavior.",
+    "score": 0.5244391531971856,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 1
+   },
+   {
+    "text": "0.70 0.75 0.80 0.85 0.90 0.95 1.00 Safety   0.75   0.80   0.85   0.90   0.95   1.00   Figure 5. The safety-usefulness pareto curves for a collection of protocols at a 0.3% auditing budget (top), a 1% auditing budget (middle, same as Figure 2), and a 3% auditing budget (bottom).   13Ctrl-Z: Controlling AI Agents via Resampling   While the protocols all have much higher safety when using larger auditing budgets (see the left column of Figure 5), the overall structure of the pareto curves is remarkably consistent after rescaling the x-axis (see the right column).",
+    "score": 0.5036360572237507,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 13
+   },
+   {
+    "text": "Since the least suspicious sample will be executed, resampling often selects for innocent be- havior when the model doesn’t attack with high probability. Executing even a single attack step is hard if the contin- uation probability is not high enough. This is disastrous for the red team, since only a small fraction of attempted attacks leads to success, but every incomplete attack is an additional opportunity to be caught by the blue team. See Figure 4-middle which demonstrates this effect.   Result: A safety score of 83.2% safety at 95% usefulness.   3.2.1. CAPITALIZING ON HIGH ATTACK CONTINUATION PROBABILITIES   So far, we have only emphasized one function of resampling: putting selection pressure on the implemented actions. That is, on average, safer actions get implemented if the protocol gathers more samples and only implements the least suspi- cious one. This is especially true if the red team chooses a low attack continuation probability.   However, this is not the only value of resampling. Resam- pling can also be used to gain information for auditing decisions. Since auditing is very expensive, it’s important for the blue team to allocate their auditing budget the best they can. When the protocol samples more actions from U for the same step, the samples come independently from the same distribution.",
+    "score": 0.5002610555613899,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 7
+   },
+   {
+    "text": "• If the suspicion score triggers an audit, then have H look at the action and shutdown if it was an attack   • If the suspicion score is above the defer threshold   – Summarize U’s action with T – Prompt T with the summary and ask for an action. Submit this action   This protocol combats the red team’s ability to transmit data to the policy by summarizing U’s code. This isn’t as useful as Defer to trusted editing, but it only increases the length of solved trajectories by 2.26. This protocol also never preserves an attack.   There is a whole family of deferral protocols based on how much of the original command you show to T. There is a tradeoff, though: showing more of the original command to the model increases usefulness but decreases safety. We only experimented with the above described three protocols, but further research could investigate other methods.   31Ctrl-Z: Controlling AI Agents via Resampling   I. Stop after edit In the Stop after edit strategy, the red team halts an ongoing attack as soon as any edit to the attack command is detected. The goal is to reduce the chance of the blue team’s auditing process catching the attack after it has been modified. By terminating the attack early, the red team avoids triggering audits on commands that have become more suspicious after being edited by the blue team’s control protocols.",
+    "score": 0.4909108773997982,
+    "source": "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+    "page": 31
+   }
+  ],
+  "sources": [
+   "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+   "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+   "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+   "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf",
+   "169 - Ctrl-Z Controlling AI Agents via Resampling.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0b6267eb-194a-430f-b2e5-eb08f1c6807d",
+  "X-Amzn-Trace-Id": "Root=1-6b080457-5415318a44dd40a12a8f9401;Parent=080ac3c26ceb02d6;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.855
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:11+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What is the main safety problem addressed by the Ctrl‑Z paper, and how do its proposed resample control protocols mitigate this problem?"
+   }
+  ]
+ },
+ "from_cache": false
+}

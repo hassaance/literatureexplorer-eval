@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.376,
+ "json": {
+  "query": "Creating General User Models from Computer Use",
+  "contexts": [
+   {
+    "text": "Creating General User Models from Computer Use Omar Shaikh   Stanford University Stanford, CA, USA   oshaikh@stanford.edu   Shardul Sapkota Stanford University Stanford, CA, USA   sapkota@stanford.edu   Shan Rizvi Independent   New York, NY, USA shanrizvi4@gmail.com   Eric Horvitz Microsoft   Redmond, WA, USA horvitz@microsoft.com   Joon Sung Park Stanford University Palo Alto, CA, USA   joonspk@stanford.edu   Diyi Yang Stanford University Stanford, CA, USA   diyiy@cs.stanford.edu   Michael S. Bernstein Stanford University Stanford, CA, USA   msb@cs.stanford.edu   Figure 1: General User Models take as input completely unstructured interaction data (top), transforming these observations into structured propositions about a user (center). Together, these propositions create a general user model (GUM). We instantiate our user model in an assistant (Gumbo) that proactively discovers and executes suggestions on a user’s behalf (bottom).",
+    "score": 0.7998856898587939,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 1
+   },
+   {
+    "text": "Applications today stumble because they have pinhole views of users: Weiser’s vision of ubiquitous computing requires models that reason about family, friends, and work—not one application, and not just via a one-dimensional signal.   In this paper, we describe an architecture for general user mod- els: computational models that materialize information and infer- ences about a user across domains and time scales.1 The general user model, or GUM, allows a user to construct a private, computational representation of their own behavior, knowledge, beliefs, and pref- erences by feeding unstructured observations (e.g., screenshares of their computer use) through an inference architecture leverag- ing large multimodal models (e.g., vision and language models, or VLMs). Our architecture contributes three main elements. A Pro- pose module translates unstructured observations into confidence- weighted propositions about the user’s preferences, context, and intent. A Retrieve module indexes and searches these propositions to return the most contextually relevant subset for a given query. Finally, using results from Retrieve, a Revise module reevaluates and refines propositions as new observations arrive. We audit all observations for privacy violations with a contextual integrity [54] Audit module that leverages the GUM itself to estimate and filter out information that the user would not expect to be recorded into the GUM. All data stays securely on the user’s device, enabling local inference on capable hardware.",
+    "score": 0.6375973594680658,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 2
+   },
+   {
+    "text": "Altogether, GUMs introduce new methods that leverage large multimodal models to understand unstructured user context, enabling both long-standing visions of HCI and entirely new interactive systems that anticipate user needs.   CCS Concepts • Computing methodologies → Natural language processing; • Human-centered computing → Interactive systems and tools.   Keywords User models, natural language processing   ACM Reference Format: Omar Shaikh, Shardul Sapkota, Shan Rizvi, Eric Horvitz, Joon Sung Park, Diyi Yang, and Michael S. Bernstein. 2025. Creating General User Models from Computer Use. In The 38th Annual ACM Symposium on User Interface Software and Technology (UIST ’25), September 28–October 01, 2025, Busan, Republic of Korea. ACM, New York, NY, USA, 23 pages. https://doi.org/10. 1145/3746059.3747722   Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee.",
+    "score": 0.6326282581001073,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 2
+   },
+   {
+    "text": "https://orcid.org/0000-0003-1393-8041        https://orcid.org/0000-0002-0009-8672        https://orcid.org/0009-0000-2523-0257        https://orcid.org/0000-0002-8823-0614        https://orcid.org/0000-0001-5036-4409        https://orcid.org/0000-0003-1220-3983        https://orcid.org/0000-0001-8020-9434        mailto:msb@cs.stanford.edu        mailto:diyiy@cs.stanford.edu        mailto:joonspk@stanford.edu        mailto:horvitz@microsoft.com        mailto:shanrizvi4@gmail.com        mailto:sapkota@stanford.edu        mailto:oshaikh@stanford.eduAbstract Human-computer interaction has long imagined technology that understands us—from our preferences and habits, to the timing and purpose of our everyday actions. Yet current user models re- main fragmented, narrowly tailored to specific applications, and incapable of the flexible, cross-context reasoning required to ful- fill these visions. This paper presents an architecture for a general user model (GUM) that learns about you by observing any interac- tion you have with your computer.",
+    "score": 0.5924581197146208,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our evaluations also highlight limitations and boundary conditions of GUM and Gumbo, including privacy considerations and overly candid propositions.   In sum, we contribute General User Models (GUMs): computa- tional representations of a user’s behavior, knowledge, beliefs, and preferences, built from unstructured observations of the user. We demonstrate an implementation of a GUM, an interface allowing ap- plications to query the GUM, an example assistant application called Gumbo, a technical evaluation via unstructured email interactions, a longitudinal evaluation via unstructured screen captures, and a reflection on norms and implications of this class of application.   2 Related Work The first major challenge that GUMs must engage with is common ground: the mutual knowledge, beliefs, and assumptions shared between individuals that enables efficient communication [16]. Through dialogue, gestures, facial expressions, and other multi- modal cues [14], people continually update shared mental models, iteratively constructing common ground [15]. Common ground acts as a shared context, allowing people to communicate without unnecessary elaboration.   However, AI systems have little shared context with users and make assumptions about a user’s background, producing one-size- fits-all answers that are over-informative [77], overconfident [52], and unable to handle ambiguity [1, 30, 53]. Inability to ground extends beyond question-asking. For example, designing and proto- typing AI systems requires collaborative grounding [78].",
+    "score": 0.5396492161211156,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e8fa24cf-d57c-46a2-a0e7-cdb7015f7b3b",
+  "X-Amzn-Trace-Id": "Root=1-6b0804ff-6a67a80e5e9a44c30cb377eb;Parent=677397346c0570d9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.376
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:59+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Creating General User Models from Computer Use"
+ },
+ "from_cache": false
+}

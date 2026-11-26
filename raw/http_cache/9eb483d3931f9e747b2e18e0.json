@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.337,
+ "json": {
+  "query": "Can AI Expand the Human Mind?",
+  "contexts": [
+   {
+    "text": "Large language models could constitute a ‘System 0,’ a new layer of cognition.   Society | DOI:10.1145/3748644 Neil Savage   Artificial intelligence was providing our decision making with a simplified version of the world that was customized according to our needs.   12 COMMUNICATIONS OF THE ACM | OCTOBER 2025 | VOL. 68 | NO. 10   I M   A G   E B   Y S   H U   T T   E R   S T   O C   K A   I G   E N   E R   A T   O R      news         https://dx.doi.org/10.1145/3748644philosophy at the U.K.’s University of Sussex, and David Chalmers, profes- sor of philosophy and neural science at New York University.   Their notion, cited in Riva’s article, is that objects outside of the body can function as part of the human mind. “If I write something in a notebook, isn’t that essentially the same as a memory store that’s internal to my brain?” the theory asks, said Brooke-Wilson. While the extended mind theory challenges scientists to think about where the lim- its lie between the brain and the out- side world, it has not had much impact on the practice of cognitive science, Brooke-Wilson said.",
+    "score": 0.5172123093280075,
+    "source": "003 - Can AI Expand the Human Mind.pdf",
+    "page": 1
+   },
+   {
+    "text": "While the extended mind theory challenges scientists to think about where the lim- its lie between the brain and the out- side world, it has not had much impact on the practice of cognitive science, Brooke-Wilson said. “Very few people are now modeling people’s notebooks as an extension of their minds.”   Whether something represents a part of human cognition could come down to what happens if it is removed, said Julian Jara-Ettinger, a professor of psychology and computer science at Yale. If you took away System 2, hu- mans would have a fundamentally dif- ferent kind of mind, he said. Similarly, removing some external extensions, like a notebook, would alter human cognition. “If you remove those, it’s a more limiting form of our intelligence. Because we wouldn’t be able to invent rocket ships and all of these things if we didn’t have [objects] to write things down and work through them,” he said. “That would fundamentally change us.”   Whether the same is true for AI is less clear, Jara-Ettinger said. “If you think of all of the people in the world right now that are not using ChatGPT, are they really fundamentally that dif- ferent?” he asked.   also avoid the subtle tricks that compa- nies and advertisers use to nudge some- one toward a particular decision, Riva said, like pushing certain results higher in a search.",
+    "score": 0.4962789761278598,
+    "source": "003 - Can AI Expand the Human Mind.pdf",
+    "page": 2
+   },
+   {
+    "text": "Because AI is able to notice subtle patterns that can elude humans, the agents might discov- er variables that make certain options more suitable for a particular user, even if the user is unaware of them. They can   G I U S E P P I R I VA F I R S T started to think about the role that artificial intelligence (AI) plays in human cognition when he and a colleague   were trying to find someplace to have dinner in Los Angeles. Both pulled out their phones and started perusing Google Maps for suggestions of nearby restaurants. Riva quickly noticed that the list of possibilities on his phone was very different from what his companion was seeing.   “This map was customized accord- ing to my previous interaction with the tool, and was totally different from the picture that my colleague nearby me was looking at,” said Riva, professor of psychology and director of the Humane Technology Lab at the Catholic Univer- sity of the Sacred Heart in Milan, Italy. “Artificial intelligence was providing our decision making with a simplified version of the world that was custom- ized according to our needs.”   The observation got Riva thinking about how the growth of AI—in particu- lar the large language models (LLMs) powering applications that provide personalized assistance—might be re- shaping how humans think and adding a new layer to the cognitive processes that go into making decisions.",
+    "score": 0.49179838478101023,
+    "source": "003 - Can AI Expand the Human Mind.pdf",
+    "page": 1
+   },
+   {
+    "text": "In earlier work, Shanahan (2022) described LLMs as “mind-like,” reminiscent of cognitive scientist Irene Pep- perberg who found that Alex the grey parrot could perform simple arithmetic, including with the number zero (Pep- perberg & Gordon, 2005). While we do not have our own favored conceptual model to advance in this position paper, we believe that just as scientists in the 21st century have a newfound appreciation for the complexity of animal behav- ior (de Waal, 2017), scholars of AI behavior can learn from the history of scientific theory that has sought to explain digital minds, human minds, and animal minds.   These fundamental challenges raise existential and moral questions. If LLMs can do all this, will society be so trans- muted that social science is overhauled? If AI “agents” dis- place human agency (Sturgeon et al., 2025), will social sci- ence need to shift its focus from understanding human be- havior to understanding AI behavior (Rahwan et al., 2019)? Would humanlike “digital minds” (Anthis et al., 2025) de- serve moral standing, such that we need ethics review for research studies?",
+    "score": 0.4761399811385494,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 7
+   },
+   {
+    "text": "We are not claiming that AI assistants have psychological states, although we leave open the possibility that attributing psychological states to AI assistants may allow for reliable prediction of AI assistant behaviour, and this may be the whole story with respect to human agency as well (Dennett, 1989; see also Shevlin and Halina, 2019).   Second, in characterising AI assistants as agents, we are suggesting that AI assistants are not merely external cognitive subsystems that constitute part of the user’s extended mind (Clark, 2008; Clark and Chalmers, 1998). In this latter view, AI assistants are analogous to the notebook in the Clark and Chalmers (1998, 12–18) example of an Alzheimer’s patient who uses a notebook as a functional substitute for biological memory. Clark and Chalmers (1998, 16) contend that, because ‘[the] notebook entries play just the sort of role that beliefs play in guiding most people’s lives’, it constitutes an externally located component of the patient’s mind. While AI assistants can perform particular cognitive functions such as memory, planning and ideation (see Chapter 4), and thus provide external mental modules for the user, AI assistants are not mere collections of external mental   15The Ethics of Advanced AI Assistants   modules.",
+    "score": 0.46926080613140914,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 21
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "57d7b7e5-6b90-4f34-8941-341373120e9c",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f6-43c2d82d63fc2c7264ce831f;Parent=1d4b99c47e589779;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.337
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:50+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Can AI Expand the Human Mind?"
+ },
+ "from_cache": false
+}

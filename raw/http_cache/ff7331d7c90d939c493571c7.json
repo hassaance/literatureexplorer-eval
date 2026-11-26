@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.322,
+ "json": {
+  "query": "ResearchStudio-Reel: Automate the Last Mile of Research from Paper to Poster, Video, and Blog",
+  "contexts": [
+   {
+    "text": "July 2026   ResearchStudio-Reel: Automate the Last Mile of Research from Paper to Poster, Video, and Blog   Lingao Xiao1,2* Yalun Dai1,3* Yangyu Huang1*‡ Qihao Zhao3 Wenshan Wu1 Hugo He♭   Ruishuo Chen4 Jin Jiang5 Qianli Ma6 Jiahuan Zhang7 Xin Zhang1 Ying Xin1 Yang Ou1   Yan Xia1 Scarlett Li1 Longbo Huang4 Zhipeng Zhang6 Yang He2,8‡ Yap Kim Hui3‡ Yan Lu1   1Microsoft Research 2National University of Singapore 3Nanyang Technological University 4Tsinghua University 5Peking University 6Shanghai Jiao Tong University 7Westlake University 8CFAR, A*STAR   Despite growing automation, turning a paper into a coherent poster, talk video, and blog piece often remains a labor-intensive last mile. Recent systems increasingly generate multiple dissemination formats, but a practical workflow must also keep the outputs editable in native tools and bound into one navigable deliverable for revision and reuse. We present ResearchStudio-Reel, a native-editable dissemination workspace that binds its three artifacts into one interactive deliverable at the experience level, implemented as five skills executable in Claude Code and Codex: one shared extractor, three editable artifact generators, and one interactive convergence layer.",
+    "score": 0.7281568401082217,
+    "source": "091 - ResearchStudio-Reel Automate the Last Mile of Research from Paper to Poster, Video, and Blog.pdf",
+    "page": 1
+   },
+   {
+    "text": "A shared asset bundle feeds a PowerPoint poster and video deck, plus a bilingual Word blog; rather than re-rendering the paper into a fourth format, Paper2Reel converges these already-produced artifacts at the experience level, binding poster regions, video segments, and blog passages into one interactive viewer. Artifact-specific release checks make this delivery contract testable, and Paper2Poster additionally uses a measured-fill loop. On the Paper2Poster benchmark, our Claude Code configuration achieves the best scores among automated systems on all three aesthetic sub-criteria and the best or tied-best scores on two of three information sub-criteria. Under two VLM judges, it exceeds the authors’ posters in average aesthetics (3.56 vs. 3.03) and wins on overall quality on 74 and 95 of the 100 papers under the two judges. The full pipeline additionally packages the native-editable source artifacts and their aligned viewer.   Project: https://aka.ms/ResearchStudio   (a) Poster (PAPER2POSTER) (b) Talk video (PAPER2VIDEO) (c) Bilingual blog (PAPER2BLOG)   Figure 1: Three editor-ready artifacts from one paper. From a single accepted PDF, ResearchStudio-Reel produces a print-ready conference poster, a narration-aligned talk video, and a bilingual blog spread, shown here across example papers.",
+    "score": 0.6222935798430366,
+    "source": "091 - ResearchStudio-Reel Automate the Last Mile of Research from Paper to Poster, Video, and Blog.pdf",
+    "page": 1
+   },
+   {
+    "text": "ResearchStudio-Reel collapses this into a single Claude Code session per paper: one extraction pass populates the Paper2Assets bundle, then the three generators run against it to emit an editable .pptx, a synchronized video.pptx+.mp4 pair, and a bilingual Word .docx pair that the author can hand-revise rather than regenerate, all navigable through one Paper2Reel reel.html that doubles as a review surface the author can share with co-authors before shipping.   4.2 Lab- and Org-level Scientific Communication   A research lab or industrial-research group can wire ResearchStudio-Reel into its publication-intake pipeline so that every accepted paper auto-generates draft dissemination artifacts, which an editorial or communications team then polishes. The editable PowerPoint and Word outputs are load-bearing here: they turn the system into a draft-and-revise workflow rather than a black-box render, which is what makes hand-off to a non-author reviewer practical.",
+    "score": 0.6041108680583687,
+    "source": "091 - ResearchStudio-Reel Automate the Last Mile of Research from Paper to Poster, Video, and Blog.pdf",
+    "page": 16
+   },
+   {
+    "text": "Implemented as five composable skills, it uses one Paper2Assets bundle to produce a native-editable PowerPoint poster and video deck, plus a native-editable bilingual Word blog, then binds their sections, slides, video times, captions, and passages through Paper2Reel. On the 100-paper Paper2Poster benchmark, our posters achieve the best scores among automated systems on all three aesthetic sub-criteria and the best or tied-best scores on two of three information sub-criteria under two VLM judges, exceed the authors’ own on aesthetics (3.56 vs. 3.03), and win on overall quality on 74 and 95 of the 100 papers under the two judges; the capability audits in §3 further document native-editable source files and aligned deliverables across all three artifact packages. This delivery-contract pattern may extend to other dissemination targets with native authoring formats, deterministic renderers, and testable package criteria, although its evaluative, generative, and architectural limits remain to be studied (§6). By keeping generated artifacts editable and connected after generation, ResearchStudio-Reel shifts the last mile from one-way automation toward a workflow authors can inspect, navigate, and revise.   References [1] Wei Pang, Kevin Qinghong Lin, Xiangru Jian, Xi He, and Philip Torr. Paper2poster: Towards multimodal poster   automation from scientific papers. Advances in Neural Information Processing Systems, 38, 2026.",
+    "score": 0.5888545177427125,
+    "source": "091 - ResearchStudio-Reel Automate the Last Mile of Research from Paper to Poster, Video, and Blog.pdf",
+    "page": 18
+   },
+   {
+    "text": "Authors may need to correct a number, replace a figure, or revise the framing without rerunning an entire generator; when three artifacts are edited independently, their content and navigation can drift even if they were initially produced from the same source. We therefore treat native source files and the alignment record as first-class deliverables rather than incidental intermediates.   Three technical ingredients support this implementation: (i) Claude Code [13] and Codex [14] provide skill runtimes for agent-driven workflows [15, 16]; (ii) deterministic primitives support document and media transformations, including headless Chromium for HTML→PDF [17], LibreOffice plus ffmpeg for slides→video [18, 19], and python-docx for editorial .docx [20]; (iii) Edge TTS [21] provides narration synthesis. Figure 1 shows what the system produces, three editor-ready artifacts from one paper PDF, and Figure 2 sketches the pipeline behind them.   Our contributions are as follows:   • We implement ResearchStudio-Reel, a native-editable dissemination workspace that turns one paper PDF into a print-ready conference poster, a narrated talk video, and a bilingual blog through composable skills.   • We introduce Paper2Reel, an experience-level convergence layer whose interactions connect poster regions, video segments, and blog passages in one navigable HTML surface.",
+    "score": 0.5698111570896186,
+    "source": "091 - ResearchStudio-Reel Automate the Last Mile of Research from Paper to Poster, Video, and Blog.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "cdbcab19-0a17-4a07-b057-293983c41372",
+  "X-Amzn-Trace-Id": "Root=1-6b080507-1f759b54395d64231e4184b8;Parent=18c3135f7c366893;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.322
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:07+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ResearchStudio-Reel: Automate the Last Mile of Research from Paper to Poster, Video, and Blog"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.426,
+ "json": {
+  "query": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+  "contexts": [
+   {
+    "text": "Meta-Harness: End-to-End Optimization of Model Harnesses   Yoonho Lee Stanford   Roshen Nair Stanford   Qizheng Zhang Stanford   Kangwook Lee KRAFTON   Omar Khattab MIT   Chelsea Finn Stanford   Project page w/ interactive demo: https://yoonholee.com/meta-harness/ Optimized harness: https://github.com/stanford-iris-lab/meta-harness-tbench2-artifact   0 10 20 30 40 Harness Evaluations   30   35   40   45   50   55   Be st   P er   fo rm   an ce   (% )   Zero-shot   Few-shot   ACE OpenEvolve TTT-Discover   Meta-Harness   Harness Optimizer Search Progress   20   25   30   35   40   Pa ss   R at   e (%   )   Meta-Harness (ours) 37.6 Goose   35.5 Terminus-KIRA 33.7   Mini-SWE- Agent 29.8 Terminus-2   28.3   Claude Code 27.5   TerminalBench-2 Harness Performance Human-written Model-optimized (ours)   Figure 1: (Left) On text classification, Meta-Harness outperforms the best prior hand- designed harnesses (ACE) and existing text optimizers (TTT-Discover,",
+    "score": 0.8077890721705971,
+    "source": "044 - Meta-Harness End-to-End Optimization of Model Harnesses.pdf",
+    "page": 1
+   },
+   {
+    "text": "Rather than reacting only to aggregate scores or summaries, the proposer in Meta-Harness can reason over failed examples and their execution traces to propose targeted edits. See Table 1 for a comparison of problem scale considered in those papers and ours, and Figures 1 and 4 for a direct comparison with OpenEvolve, GEPA, and TTT-Discover in our problem setting.   33 Meta-Harness: A Harness for Optimizing Harnesses   This section describes Meta-Harness, our outer-loop procedure for searching over task- specific harnesses. Meta-Harness is built on the idea that harness optimization benefits from allowing a proposer to selectively inspect prior code and execution traces via filesystem access, rather than optimizing from lossy summaries or an additional hand-designed search structure. At a high level, it repeatedly proposes, evaluates, and logs new harnesses.   Meta-Harness is itself a harness in the broad sense (hence the name), since it determines what information the proposer model sees during search. Unless otherwise noted, we use harness to refer to the task-specific programs being optimized.   Objective. A harness is a stateful program that wraps a language model and determines what context the model sees at each step. The goal is simple: find the harness that makes the underlying model perform best on the target task distribution. Formally, let M denote a fixed language model and X a task distribution.",
+    "score": 0.7363625885745841,
+    "source": "044 - Meta-Harness End-to-End Optimization of Model Harnesses.pdf",
+    "page": 3
+   },
+   {
+    "text": "The goal is simple: find the harness that makes the underlying model perform best on the target task distribution. Formally, let M denote a fixed language model and X a task distribution. For a harness H and task instance x ∼ X , we execute a rollout trajectory τ ∼ pM(H, x). The harness constructs prompts for M, the model responds, and the harness updates its state after each interaction. A task-specific reward function r(τ, x) scores the trajectory. The objective of harness optimization is to find the harness that maximizes the expected final reward:   H∗ = arg max H   Ex∼X ,τ∼pM(H,x) r(τ, x),   When multiple objectives are relevant (e.g., accuracy and context cost), we evaluate candi- dates under Pareto dominance and report the resulting frontier. In practice, this search has traditionally been carried out by human engineers and researchers, who iteratively refine prompts, context-management rules, and tool-use logic by hand.   Meta-Harness search loop. Meta-Harness uses a single coding-agent proposer with access to a growing filesystem D that serves as its feedback channel1. Here, a coding agent is a language-model-based system that can invoke developer tools and modify code.",
+    "score": 0.727494315182323,
+    "source": "044 - Meta-Harness End-to-End Optimization of Model Harnesses.pdf",
+    "page": 4
+   },
+   {
+    "text": "First, Meta-Harness demonstrates that the harness design space is formally searchable. An agentic proposer iteratively generates harness code candidates, the evaluator runs each candidate on mul- tiple benchmarks, execution traces are logged, and the proposer consumes the full history (source code, scores, and execution logs) to generate improved candidates in the next iteration. This outer- loop architecture implements a practical instantiation of the concept of “harness optimization” that has previously been studied theoretically but not at scale. Across five models and three domains, Meta-Harness discovered harnesses that outperform hand-engineered baselines: on TerminalBench- 2, Meta-Harness achieved 76.4% accuracy with Claude Opus 4.6 (surpassing the hand-engineered Terminus-KIRA system at 74.7%), and on IMO-level mathematics, a single discovered harness im- proved performance by +4.7 percentage points across five held-out models without model changes. On text classification tasks, Meta-Harness’s discovered harness achieved +7.7 percentage points over prior context management approaches while using 4× fewer tokens.   Second, Meta-Harness generates evidence that harness quality is empirically measurable and decoupled from model capability.",
+    "score": 0.7190222742964161,
+    "source": "043 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 55
+   },
+   {
+    "text": "First, Meta-Harness demonstrates that the harness design space is formally searchable. An agentic proposer iteratively generates harness code candidates, the evaluator runs each candidate on mul- tiple benchmarks, execution traces are logged, and the proposer consumes the full history (source code, scores, and execution logs) to generate improved candidates in the next iteration. This outer- loop architecture implements a practical instantiation of the concept of “harness optimization” that has previously been studied theoretically but not at scale. Across five models and three domains, Meta-Harness discovered harnesses that outperform hand-engineered baselines: on TerminalBench- 2, Meta-Harness achieved 76.4% accuracy with Claude Opus 4.6 (surpassing the hand-engineered Terminus-KIRA system at 74.7%), and on IMO-level mathematics, a single discovered harness im- proved performance by +4.7 percentage points across five held-out models without model changes. On text classification tasks, Meta-Harness’s discovered harness achieved +7.7 percentage points over prior context management approaches while using 4× fewer tokens.   Second, Meta-Harness generates evidence that harness quality is empirically measurable and decoupled from model capability.",
+    "score": 0.7190222742964161,
+    "source": "058 - Agent Harness for Large Language Model Agents.pdf",
+    "page": 55
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "bf81d066-da2f-433c-8fe6-e64c522308fc",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fe-3365591840cd02926aa257fe;Parent=3e9cfe8d40f2df8c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.426
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:57+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Meta-Harness: End-to-End Optimization of Model Harnesses"
+ },
+ "from_cache": false
+}

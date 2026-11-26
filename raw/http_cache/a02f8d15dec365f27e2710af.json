@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.27,
+ "json": {
+  "query": "In the Surfer 2 paper, how many tasks does the OSWorld benchmark contain, and which desktop applications are used to compose those tasks?",
+  "contexts": [
+   {
+    "text": "The diversity of successful paths indicates that most residual failures arise from local exploration traps rather than systematic reasoning errors. High task coverage offers a valuable signal about the agent’s effective action space and highlights its potential for reinforcing successful behavioral patterns through model training.   5.3 OSWorld   Surfer 2 achieves a state-of-the-art success rate of 60.1% on OSWorld in the Foundation E2E GUI category. With five attempts (pass@5), performance rises to 72.0%, closely matching the human baseline of 72.4%. At ten attempts (pass@10), Surfer 2 surpasses human performance with 77.0%. In Figure 5 we report success rates across task categories; in all of them, Surfer 2 exceeds the accuracy of 50%, performing especially well on programming-related tasks in environments like VSCode and OS. Interestingly, Surfer 2 completed several tasks labeled as infeasible by human evaluators, which were excluded from our success rate (see Figure 8).   Localizer ablation. Within the same agentic framework, Holo1.5 72B Localizer achieved the highest performance, reaching 60.1% compared to 58.4% for Holo1.5 7B and 56.9% for UI-TARS 7B [27].",
+    "score": 0.5501519497695471,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 10
+   },
+   {
+    "text": "URL and task focus updates   Updating URLs, parameters, and location references to ensure that tasks point to the intended content or have a more precise focus.   Updated URL parameter from sort=created asc to sort=created date (Task 45).   Evaluation flexibility improvements   Replacing specific data points (e.g., domains) with flexible placeholders to make the evaluation process more robust against variations in expected outputs.   Replaced a specific domain with the placeholder: <fuzzy general domain> (Task 293).   Consistency and formatting edits   Standardizing date formats, ensuring consistent phrasing, and adding URL parameters to control the number of items displayed for a uniform evaluation environment.   Standardized proximity phrasing by replacing “around” with “near” (Task 378).   A.3 OSWorld Evaluation   • Description: 369 tasks on Ubuntu Desktop. They involve different applications: LibreOffice Calc, LibreOffice Impress, LibreOffice Writer, Thunderbird, Gimp, OS, Chrome, VS Code, VLC. The task can involve several applications at the same time.   • Task types: document editing, image manipulation, email, file management, settings modifications, data analysis, coding, etc. The complexity of the tasks varies significantly (10-100 steps).   • Evaluation: Programmatic checks of final file/application state.   • Environment: AWS-hosted Ubuntu VMs, 1920x1080, VNC control.",
+    "score": 0.5334545326088128,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 18
+   },
+   {
+    "text": "We conducted 260 experiments across six benchmarks spanning deterministic to open-world task structures: Workbench (deterministic code execution and tool use with objective pass/fail criteria), Finance Agent (multi-step quantitative reasoning and risk assessment), Plan- Craft (spatiotemporal planning under constraints), BrowseComp-Plus (dynamic web navigation, information extraction, and cross-page synthesis), SWE-bench Verified (real-world software engi- neering; GitHub issue resolution with 7 tools including bash, file editing, and test execution), and Terminal-Bench (diverse CLI tasks spanning system administration, security, and ML training; 2 tools). BrowseComp-Plus, Finance Agent, PlanCraft, andWorkbench each contribute 45 configurations (9 models × 5 architectures); SWE-bench Verified and Terminal-Bench each contribute 40 configura- tions (8 models × 5 architectures, as Claude Sonnet 3.7 is deprecated). BrowseComp-Plus, Finance Agent, PlanCraft, and Workbench use 50?100 instances per configuration; SWE-bench Verified and Terminal-Bench use 20-instance subsets due to the computational cost of Docker-based evaluation (see Table 16 for bootstrap confidence intervals). The tool-count range spans {2, 3, 4, 5, 7, 16} across all six benchmarks. BrowseComp-Plus exhibits the highest performance variability across experimental configurations (coefficient of variation ?/?",
+    "score": 0.5214629905444439,
+    "source": "063 - Towards a Science of Scaling Agent Systems.pdf",
+    "page": 10
+   },
+   {
+    "text": "SWE-Perf (He et al., 2025) 140 real PR-based speedup tasks on OSS repos; produce patches that preserve semantics and beat expert runtime under a harness.   Machine Learning   MLE-Bench (Chan et al., 2025) 75 Kaggle-style ML engineering tasks (train/tune/evaluate) in an offline setting; measures practical workflows.   Cybersecurity Cybench (Zhang et al., 2025a) 40 professional CTF tasks with subtasks across categories; evalu- ates security skills with risk-aware behavior.   84",
+    "score": 0.5203519924848455,
+    "source": "148 - Terminal-Bench Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces.pdf",
+    "page": 84
+   },
+   {
+    "text": "Benchmark Orchestrator Navigator   Policy Judge Localizer   WebVoyager o3 Claude Sonnet 4.5 GPT 4.1 Holo1.5 7B   WebArena o3 Claude Sonnet 4.5 o3 Holo1.5 72B   OSWorld None Claude Sonnet 4.5 o3 Holo1.5 72B   AndroidWorld None o3 o3 Holo1.5 72B   length bounded. In AndroidWorld, the step limit is set to 150, reflecting the higher difficulty of certain tasks (e.g., OsmAndTrack which has an empirically determined optimal horizon of roughly 60 steps).   5 Results   In this section, we describe both qualitative and quantitative main results obtained on the four benchmarks.   5.1 WebVoyager   Surfer 2 establishes a new state of the art on the WebVoyager benchmark, achieving a 97.1% success rate and surpassing the previous best performance of 93.9% [59]. This strong performance is consistent across nearly all tested websites (see Figure 3), with the exception of the Cambridge Dictionary domain, where anti-bot measures such as CAPTCHAs hindered execution. Surfer 2 achieves a perfect 100% pass@10, effectively saturating the benchmark using test-time scaling.",
+    "score": 0.5170488156893095,
+    "source": "130 - Surfer 2 The Next Generation of Cross-Platform Computer Use Agents.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9ba22493-7cdd-4365-8285-ecc050a43f96",
+  "X-Amzn-Trace-Id": "Root=1-6b080439-07df329509e9a28b58500bab;Parent=1fd6b61843e82bcd;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.27
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:41+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the Surfer 2 paper, how many tasks does the OSWorld benchmark contain, and which desktop applications are used to compose those tasks?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.298,
+ "json": {
+  "query": "SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery",
+  "contexts": [
+   {
+    "text": "SWARMRESEARCH: Orchestrating Coding Agents for Open-Ended Discovery   Yuvraj Virk Zack Edds Chunqiu Steven Xia Lingming Zhang University of Illinois Urbana-Champaign   {yvirk2, zedds2, chunqiu2, lingming}@illinois.edu   Abstract Long-running coding agents such as autoresearch can persistently discover opti- mizations for open-ended problems. However, they tend to converge onto a single high-level approach, then proceed with low-level edits while missing other supe- rior approaches to the problem. We hypothesize two harness-level design choices contribute to this behavior: accumulating context in a single long-running agent and only exposing a single program state to edit. We introduce SWARMRESEARCH, an orchestrator-subagent harness in which a Shepherd Agent uses global con- text to steer a population of Search Agents, each operating with local context in their respective git branch. On open-ended optimization tasks, SWARMRE- SEARCH discovers better or comparable solutions to state-of-the-art LLM-guided evolution and multi-agent techniques on 13/15 tasks, driven by higher-level ex- ploration. Compared with fixed scaling of serial and parallel agents, SWARM- RESEARCH’s orchestrator-guided scaling discovers better-performing solutions by adapting parallelism at different search depths. Code and details available at https://github.com/SwarmResearch/SwarmResearch.   65 4.70",
+    "score": 0.7839074932849261,
+    "source": "089 - SwarmResearch Orchestrating Coding Agents for Open-Ended Discovery.pdf",
+    "page": 1
+   },
+   {
+    "text": "Autoresearch has inspired projects across domains with impressive results in systems optimization (Lütke, 2026), kernel optimization (RightNow-AI, 2026), and prompt injection (Panfilov et al., 2026).   Yet, long-running coding agents tend to converge quickly on a single high-level approach, then spend hours making small edits and micro-optimizations. Rather than exploring diverse directions, they can become trapped in a suboptimal region of the search space. We view this as a harness- engineering problem: context management and program versioning bottleneck divergent discovery. As agents accumulate long conversation histories filled with incremental refinements on one approach, substantial shifts in approach become unlikely. By committing all improvements to a single editable program, coding agent experimental loops do not preserve alternative directions for further exploration, effectively turning the process into greedy local search.   Instead, SWARMRESEARCH uses an orchestrator to delegate experiment ideation and execution to subagents with fresh or controlled context windows, and it assigns all major edits to separate git branches. SWARMRESEARCH is implemented as three skills compatible with popular coding agent tools such as Claude Code. A Shepherd Agent spawns and steers a population of Search Agents. Each Search Agent proposes and executes new ideas given minimal context, while the Shepherd Agent maintains global context over all Search Agent activity and strategically steers the population toward productive, diverse exploration.",
+    "score": 0.5967414785012574,
+    "source": "089 - SwarmResearch Orchestrating Coding Agents for Open-Ended Discovery.pdf",
+    "page": 2
+   },
+   {
+    "text": "A Shepherd Agent spawns and steers a population of Search Agents. Each Search Agent proposes and executes new ideas given minimal context, while the Shepherd Agent maintains global context over all Search Agent activity and strategically steers the population toward productive, diverse exploration.   We compare SWARMRESEARCH on state-of-the-art LLM-guided evolution (Liu et al., 2026) and multi-agent techniques (Qu et al., 2026) on 15 open-ended optimization tasks across mathematics, heuristics, and competitive heuristic engineering. SWARMRESEARCH exceeds or matches these techniques on 13/15 tasks. It typically makes 1.7× to 3.2× times larger code changes, reflecting higher- level exploration of approaches. We analyze SWARMRESEARCH from a test-time scaling perspective. By using an orchestrator to autonomously vary the number of parallel agents at different search depths, it exceeds the performance of optimal fixed scaling of parallel and serial agents on 4/5 tasks. Finally, we present a detailed case study on speculative decoding to illustrate SWARMRESEARCH’s capabilities and limitations.   2 Approach   We propose SWARMRESEARCH, an orchestrator-subagent harness in which a Shepherd Agent uses global context to steer a population of Search Agents, each operating in their respective git branch with fresh or controlled local context. Figure 2 describes an overview of the agent architecture.",
+    "score": 0.5860287268791992,
+    "source": "089 - SwarmResearch Orchestrating Coding Agents for Open-Ended Discovery.pdf",
+    "page": 2
+   },
+   {
+    "text": "Figure 2 describes an overview of the agent architecture. Our design is centered around two problems in long-running coding agents that bottleneck divergent solution discovery: accumulating context around one approach and only editing one program state.   2Git Branch: Parent solution + findings.md   Shepherd Agent   Explorer Search Agent   Optimizer Search Agent   . . .   Shepherd’s per-agent steering: Explorers learn from worktree contents with fresh context windows   1   2   3   Prompt: ideas to avoid, useful findings, ...   Agent type: Explorer or Optimizer   Short summaries with evaluated scores   Optimizers fork parent’s context   Global Context   Local Context   Explorer Search Agent   Local Context   Local Context   1 2   Figure 2: Overview of SWARMRESEARCH. Implements an orchestrator-subagent loop: (1) Shepherd Agent spawns concurrent search agents with 3 per-agent steering mechanisms: selecting a parent solution by setting up its git branch, writing a prompt to share minimal context, and selecting the Search Agent type. (2) Search Agents ideate, implement, evaluate, and iterate on a solution. Explorer Search Agents have fresh context windows so they’re unanchored to prior work, while Optimizer Search Agents fork their parent’s conversation history to continue along its detailed history of attempts. The Shepherd Agent receives summaries back from all Search Agents to strategically steer new ones.",
+    "score": 0.5799723205663516,
+    "source": "089 - SwarmResearch Orchestrating Coding Agents for Open-Ended Discovery.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our orchestrator-subagent design addresses two failure modes of context accumulation. First, stan- dalone coding agents tend to accumulate long conversation histories that repeatedly refine a small number of high-level approaches. These histories can make larger pivots less likely, because the agent is repeatedly conditioned on the current approach and its incremental refinements. SWARMRE- SEARCH avoids this diversity loss by spawning Explorer Agents with fresh context windows, while still supporting long-tail improvement through Optimizer Agents that inherit detailed conversation history when serial refinement is useful.   Second, multi-agent systems that self-organize through a shared memory e.g. CORAL (Qu et al., 2026), rather than an orchestrator, also converge onto a single high-level approach. When all agents see that another agent found a stronger solution, they decide to improve the best solution and abandon independent directions. SWARMRESEARCH eliminates this possibility by restricting Search Agent context to their direct lineage, rather than exposing them to all lineages. At the same time, global   4information remains useful for strategy, by revealing which approaches are promising, which fall behind, and where the population lacks coverage. SWARMRESEARCH incorporates this information through the Shepherd Agent, which uses global context to distribute Search Agents across parents and write prompts that selectively pass relevant information to new Search Agents.   2.3 Git Management   1   2   3   Figure 4: Git management for Search Agents.",
+    "score": 0.5294712588888928,
+    "source": "089 - SwarmResearch Orchestrating Coding Agents for Open-Ended Discovery.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fabcb003-f8ba-413e-a8cc-1f3d08d227e0",
+  "X-Amzn-Trace-Id": "Root=1-6b080507-359a7c49619d95274c8a5cf8;Parent=0563d622d84e1204;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.298
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:07+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery"
+ },
+ "from_cache": false
+}

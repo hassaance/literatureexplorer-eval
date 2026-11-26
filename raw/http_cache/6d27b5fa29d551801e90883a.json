@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.262,
+ "json": {
+  "query": "CreativityBench: Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing",
+  "contexts": [
+   {
+    "text": "Preprint. Under review.   CreativityBench: Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing   Cheng Qian∗1, Hyeonjeong Ha∗1, Jiayu Liu1, Jeonghwan Kim1, Jiateng Liu1, Bingxuan Li1, Aditi Tiwari1, Dwip Dalal1, Zhenhailong Wang1, Xiusi Chen1, Mahdi Namazifar2, Yunzhu Li3, Heng Ji1   1UIUC, 2Amazon, 3Columbia   Abstract   Recent advances in large language models have led to strong performance on reasoning and environment-interaction tasks, yet their ability for creative problem- solving remains underexplored. We study this capability through the lens of creative tool use, where a model repurposes available objects by reasoning about their affordances and attributes rather than relying on canonical usage. As a first step, we introduce CreativityBench, a benchmark for evaluating affordance-based creativity in LLMs. To this end, we build a large-scale affordance knowledge base (KB) with 4K entities and 150K+ affordance annotations, explicitly linking objects, parts, attributes, and actionable uses. Building on this KB, we generate 14K grounded tasks that require identifying non-obvious yet physically plausible solutions under constraints.",
+    "score": 0.8013511359926764,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our affordance KB, alternatively, provides one concrete step in this direction: beyond benchmark construction, it can be used to sample thousands of grounded creative problem-solving trajectories, potentially supporting the development of models that learn creative reasoning from data rather than from outcome supervision alone.   8 Conclusion and Future Work   In this work, we introduced CreativityBench, a large-scale benchmark for evaluating creative tool repurposing through affordance-based reasoning, together with a structured affordance knowledge base that links entities, parts, attributes, and uses. Our results reveal that current language models often struggle to ground creative solutions at the level of the correct part, attribute, and physical mechanism; moreover, stronger general reasoning, larger model scale, and standard inference- time strategies such as CoT do not reliably translate into better creative affordance discovery. These findings suggest that creative intelligence in models is not simply an extension of analytical reasoning or action planning, but a distinct capability requiring grounded comparison, flexible recombination of affordances, and careful attention to physical constraints. Looking forward, we hope CreativityBench can serve not only as an evaluation testbed but also as a resource for training models to improve grounded creative reasoning. An important direction for future work is to extend this framework beyond static text settings toward multimodal, interactive, and embodied environments, while also exploring training objectives that encourage grounded exploration and diverse yet physically plausible affordance discovery rather than mere distribution sharpening.",
+    "score": 0.7154278535671041,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 22
+   },
+   {
+    "text": "Improving model creativity may require a training objective that differs from the one optimized by much of current reinforcement learning. Existing RL methods, especially unsupervised ones, often emphasize sampling efficiency and empirically lead to distribution sharpening (He et al., 2026), which benefits reliability but can suppress the structured diversity needed for creative problem solving. For instance, although methods like TTRL (Zuo et al., 2025) can improve analytical intelligence in domains like math and coding, their reliance on majority vote as pseudo-labels may further reduce generation diversity and thus work against creativity. Recent work on rewarding unlikeliness (He et al., 2025) points in a promising direction by explicitly encouraging broader exploration, but it has not yet been applied to creative problem-solving settings. Our affordance KB, alternatively, provides one concrete step in this direction: beyond benchmark construction, it can be used to sample thousands of grounded creative problem-solving trajectories, potentially supporting the development of models that learn creative reasoning from data rather than from outcome supervision alone.   8 Conclusion and Future Work   In this work, we introduced CreativityBench, a large-scale benchmark for evaluating creative tool repurposing through affordance-based reasoning, together with a structured affordance knowledge base that links entities, parts, attributes, and uses.",
+    "score": 0.6774309107700478,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 22
+   },
+   {
+    "text": "• How to design a benchmark that rigorously evaluates affordance-based creative tool use beyond   coarse object-level reasoning? • How do current state-of-the-art models perform on affordance-based creative intelligence? To address these questions, we introduce CreativityBench, the first large-scale benchmark de- signed to systematically evaluate creative intelligence through affordance-based creative tool use. Our benchmark is enabled by a scalable affordance annotation pipeline that constructs a structured affordance knowledge base (KB) linking objects, their constituent parts, attributes, and associated affordances, grounding model judgments in concrete object properties rather than semantic guessing alone. The resulting KB contains over 4K entities and 150K affordance annota-   2Preprint. Under review.   tions, forming reusable building blocks for task generation, trajectory construction, and evaluation. Using this KB, we generate diverse and physically grounded tasks by reverse-engineering creative solution trajectories, ensuring that each task requires non-obvious, physically grounded affordance reasoning rather than surface-level object matching.   We evaluate multiple proprietary and open-source models on a comprehensive suite of 14K tasks and reveal striking insights about the current limits of model creativity. First, exact physical grounding remains a severe bottleneck: while models can often identify a plausible tool entity, they fail to ground its use at the specific part or attribute level, resulting in a performance drop of over 60%.",
+    "score": 0.6421766895197785,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 2
+   },
+   {
+    "text": "To summarize, our contributions are threefold:   • Affordance knowledge base: We build the first large-scale, structured KB of tool affordances with 4K entities and 150K+ affordance annotations, serving as reusable building blocks for grounded task sampling, trajectory construction, training, and evaluation, and enabling creative reasoning via recombination of physically plausible affordances.   • CreativityBench: We introduce an affordance-grounded benchmark that evaluates creative tool use under rigorous, reproducible protocols, targeting the previously under-measured facet of creative intelligence.   • Empirical analysis: We conduct a systematic study of creative tool use, probing affordance uniqueness, noise, task difficulty, and evaluation modes.   By isolating and operationalizing creative tool use as a distinct capability, we hope this work establishes a foundation for studying creativity in LLMs beyond reasoning and interaction, and moves toward systems capable of solving unforeseen problems and acting as reliable helpers in diverse real-world situations.   2 Related Work   2.1 Creativity in Language Models   Creativity is one of the hallmarks of human intelligence, enabling us to act robustly in novel and unfamiliar environments.",
+    "score": 0.6359263876829047,
+    "source": "152 - CreativityBench Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "92688306-1b8c-4544-94b5-1f52435166bd",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-48a14f0f48af84c955a29baa;Parent=4c049296dc8cd31f;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.262
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "CreativityBench: Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing"
+ },
+ "from_cache": false
+}

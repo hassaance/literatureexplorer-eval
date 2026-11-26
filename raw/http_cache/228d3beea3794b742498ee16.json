@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.823,
+ "json": {
+  "id": "chatcmpl-d797b3d7-900e-4d2b-9623-7b3caf033ff1",
+  "object": "chat.completion",
+  "created": 1795687484,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The authors highlight the implementation bottleneck as a key factor limiting the performance of AI research agents. They observe a strong correlation between the agents' performance and their ability to implement sufficiently complex solutions. This bottleneck is particularly significant because even with creative ideation, if the agent cannot successfully implement the proposed solutions, the performance will be negatively impacted."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1601,
+   "completion_tokens": 66,
+   "total_tokens": 1667
+  },
+  "contexts": [
+   {
+    "text": "What Does It Take to Be a Good AI Research Agent?   Studying the Role of Ideation Diversity Alexis Audran-Reiss1, Jordi Armengol-Estapé1, Karen Hambardzumyan1,2, Amar Budhiraja1, Martin Josifoski1, Edan Toledo1,2, Rishi Hazra1, DespoinaMagka1, Michael Shvartsman1, Parth Pathak1, Justine T Kao1, Lucia Cipolina-Kun1, Bhavul Gauri1, Jean-Christophe Gagnon-Audet1, Emanuel Tewolde1, Jenny Zhang3,4, Taco Cohen1, Yossi Adi1, Tatiana Shavrina1, YoramBachrach1   1FAIR at Meta, 2University College London, 3Meta SuperIntelligence Labs, 4University of British Columbia   AI research agents offer the promise to accelerate scientific progress by automating the design, implementation, and training of machine learning models. However, the field is still in its infancy, and the key factors driving the success or failure of agent trajectories are not fully understood. We examine the role that ideation diversity plays in agent performance. First, we analyse agent trajectories on MLE-bench, a well-known benchmark to evaluate AI research agents, across different models and agent scaffolds.",
+    "score": 0.7273360536082732,
+    "source": "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+    "page": 1
+   },
+   {
+    "text": "Upon examining agent trajectories, we find that Low Diversity agents repeatedly attempt to implement the same model, T5 (Raffel et al., 2020), but consistently fail, resulting in timeouts. In contrast, baseline agents implement a wider range of solutions and are more often able to make correct submissions. Notably, baseline agents also occasionally attempt to implement T5 and encounter similar failures, but their greater ideation diversity allows them to succeed elsewhere. These two competitions also account for a significant portion (estimated at around half) of the observed decline in medal rates.   9Our findings suggest that one reason for the drop in performance is that Low Diversity agents tend to focus on similar ideas that they sometimes cannot successfully implement. In other words, ideation diversity is crucial for performance, as it increases the likelihood that an AI research agent will attempt solutions it is actually capable of executing.   5 Discussion   What does it take to be a good AI research agent? We can imagine a hypothetical future scenario where excellent AI research agents ideate brilliant experiments and have outstanding coding skills to implement them. Until we get to this ideal situation, in practice, even state-of-the-art AI research agents will exhibit limited ideation and implementation capabilities, particularly when evaluated in challenging, real-world settings. In this imperfect, yet realistic, scenario, given the same level of capabilities, we prefer agents with greater ideation diversity. First, because it de-risks implementation pitfalls.",
+    "score": 0.7267560927146379,
+    "source": "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+    "page": 9
+   },
+   {
+    "text": "In the era of tool-use LLM-based agents (Schick et al., 2023; Kaddour et al., 2023), Shen et al. (2023); Nathani et al. (2025) evaluate agents at implementing machine learning tasks. MLE-bench (Chan et al., 2025), the benchmark used in this work, is a machine learning benchmark consisting of 75 Kaggle tasks. Zhao et al. (2025) propose a self-contained machine learning task with a focus on language models. AIRA (Toledo et al., 2025), studies AI research agents by formalizing AI research as search policies over a space of candidate solutions. This development is parallel to agentic benchmarks and scaffolds for other fields, such as software engineering (Jimenez et al., 2024; Jiang et al., 2025b).   7 Conclusions   This work started from the hypothesis that ideation diversity is a key bottleneck in AI research agents’ performance. We have confirmed this hypothesis by conducting a large-scale analysis on AI research agents’ trajectories and performing a controlled experiment. Our findings hold across several evaluation metrics.   In future work, we suggest focusing on diversity-aware methods, as other bottlenecks such as implementation quality will decrease in importance when AI systems keep improving. We also recommend considering multiple evaluation metrics and extending the existing benchmarks to more recent machine learning tasks.",
+    "score": 0.6546371373984383,
+    "source": "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+    "page": 12
+   },
+   {
+    "text": "We study a total of 11,000 AI research agents’ trajectories across multiple agentic frameworks, LLM backbones, and machine learning tasks.   • We show that the choice of agentic scaffold significantly influences ideation diversity. Our results further reveal a significant correlation between ideation diversity and agent performance on MLE-bench tasks.   • Through a controlled experimental design, we establish a causal relationship, showing that increasing ideation diversity leads to improved performance on MLE-bench tasks.   • We confirm that these findings are robust when evaluatedwith alternative performancemetrics. 1Our main results in Section 4.2 are based on decreasing ideation diversity through the prompt shown to the agent. In the   Appendix A, we provide additional results where we control diversity via the sampling temperature parameter.   22 Research Agents andMLE-bench   Agents Broadly, Wooldridge and Jennings (1995) define an agent as a computer system that is situated in some environment and that is capable of autonomous action in this environment in order to meet its design objectives.",
+    "score": 0.6359442976522143,
+    "source": "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+    "page": 2
+   },
+   {
+    "text": "First, because it de-risks implementation pitfalls. Our analysis of the controlled experiment shows that one reason why diversity is important is that it helps agents design solutions they are actually able to execute, highlighting the interplay between ideation and implementation. If the different proposed plans by the agent rely on similar approaches, and those happen to be hard to implement by the agent (in the context of the particular task), then we risk low implementation accuracies. Intuitively, a potential second argument for ideation diversity is that given the difficulty of coming up with creative, yet feasible research ideas, exploring significantly different paths hedges against pursuing a single unproductive direction (even if the agent knows how to implement it), and enables agents to more effectively explore the solution space of machine learning problems. We want to invest the allocated compute in a diversified, yet plausible, set of ideas. However, this second reason is hard to evaluate given the implementation bottleneck. Ultimately, a good experimentation plan could fail due to the agent being unable to implement it. Repeating these controlled experiments as LLMs’ coding capabilities get increasingly more powerful may yield valuable insights.   Importance of the implementation bottleneck. Unsurprisingly, implementation quality is an important bottle- neck of AI research agents. We observe a strong correlation between AI research agents’ performance and the ability to implement sufficiently complex solutions.",
+    "score": 0.607564117523123,
+    "source": "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+    "page": 10
+   }
+  ],
+  "sources": [
+   "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+   "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+   "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+   "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf",
+   "087 - What Does It Take to Be a Good AI Research Agent Studying the Role of Ideation Diversity.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d797b3d7-900e-4d2b-9623-7b3caf033ff1",
+  "X-Amzn-Trace-Id": "Root=1-6b08043b-4f7b798a1579a9470908bd19;Parent=602c2ca430abeb82;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.823
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:43+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the paper *What Does It Take to Be a Good AI Research Agent? Studying the Role of Ideation Diversity*, what bottleneck do the authors highlight as limiting the performance of AI research agents?"
+   }
+  ]
+ },
+ "from_cache": false
+}

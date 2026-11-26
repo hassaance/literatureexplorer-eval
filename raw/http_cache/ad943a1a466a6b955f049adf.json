@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.262,
+ "json": {
+  "query": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents",
+  "contexts": [
+   {
+    "text": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents   Chenyang Shao Department of Electronic Engineering   BNRist, Tsinghua University Beijing, China   shaocy24@mails.tsinghua.edu.cn   Xinyuan Hu Department of Quantitative Theory & Methods   Emory University GA, USA   nate.hu@emory.edu   Yutang Lin Department of Electronic Engineering   Tsinghua University Beijing, China   yt-lin21@mails.tsinghua.edu.cn   Fengli Xu∗ Department of Electronic Engineering   BNRist, Tsinghua University Beijing, China   fenglixu@tsinghua.edu.cn   Abstract The rapid expansion of web content has made on-device AI as- sistants indispensable for helping users manage the increasing complexity of online tasks. The emergent reasoning ability in large language models offer a promising path for next-generation on- device AI agents. However, deploying full-scale Large Language Models (LLMs) on resource-limited local devices is challenging. In this paper, we propose Division-of-Thoughts (DoT), a collabora- tive reasoning framework leveraging the synergy between locally deployed Smaller-scale Language Models (SLMs) and cloud-based LLMs.",
+    "score": 0.8135890856516257,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "∗Corresponding author. 1Code available at: https://github.com/tsinghua-fib-lab/DoT   This work is licensed under a Creative Commons Attribution 4.0 International License. WWW ’25, Sydney, NSW, Australia © 2025 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-1274-6/25/04 https://doi.org/10.1145/3696410.3714765   Keywords Large Language Model, LLM Reasoning, AI Agents, Edge-Cloud Collaboration ACM Reference Format: Chenyang Shao, Xinyuan Hu, Yutang Lin, and Fengli Xu∗. 2025. Division- of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents. In Proceedings of the ACM Web Conference 2025 (WWW ’25), April 28-May 2, 2025, Sydney, NSW, Australia. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3696410.3714765   1 Introduction As web content continues to grow exponentially, on-device AI as- sistants have become essential tools for helping users navigate the increasingly complex online landscape.",
+    "score": 0.7280616797477694,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "For efficiency, we append a multi- layer perceptron (MLP) to the transformer module of the LLM to map the embeddings to a difficulty score. Given that both the edgeDivision-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents WWW ’25, April 28-May 2, 2025, Sydney, NSW, Australia   Subtask A   1.Subtask Difficulty Estimation   s-Task4 s-Task5 s-Task6 s-Task3 s-Task2 s-Task1   Evaluation   Subtask B   0   1   𝑰𝒏𝒅𝒆𝒙𝑻𝒐𝒌𝒆𝒏   𝑷𝒓𝒐𝒃𝑻𝒐𝒌𝒆𝒏   Reasoning   LLM   0   1   𝑰𝒏𝒅𝒆𝒙𝑻𝒐𝒌𝒆𝒏   𝑷𝒓𝒐𝒃𝑻𝒐𝒌𝒆𝒏   More Uncertainty   Extract α-quantile   Evaluate Difficulty   Subtask A   Subtask B   EASY   HARD   s-Task2   > > > > >   2.",
+    "score": 0.5682337222203011,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 4
+   },
+   {
+    "text": "Looking ahead, we aim to apply our reasoning framework across a broader and more diverse range of scenarios, striving to contribute to the advancement of edge AI.   Acknowledgments This work is supported in part by the National Natural Science Foundation of China under 23IAA02114 and 62472241, in part by the joint project of Infinigence AI & Tsinghua University.Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents WWW ’25, April 28-May 2, 2025, Sydney, NSW, Australia   References [1] Marah Abdin, Sam Ade Jacobs, Ammar Ahmad Awan, Jyoti Aneja, Ahmed   Awadallah, Hany Awadalla, Nguyen Bach, Amit Bahree, Arash Bakhtiari, Harki- rat Behl, et al. 2024. Phi-3 technical report: A highly capable language model locally on your phone. arXiv preprint arXiv:2404.14219 (2024).   [2] Maciej Besta, Nils Blach, Ales Kubicek, Robert Gerstenberger, Michal Podstawski, Lukas Gianinazzi, Joanna Gajda, Tomasz Lehmann, Hubert Niewiadomski, Piotr Nyczyk, et al. 2024.",
+    "score": 0.5638936332230544,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 8
+   },
+   {
+    "text": "Specifically, the average reasoning time and API costs are reduced by 66.12% and 83.57%, respectively, compared to the most accurate baselines. Additionally, an ablation study con- firms the effectiveness of our key model design choices. Moreover, the DoT framework consistently achieves superior cost-accuracy trade-offs compared to task referral methods that do not leverage “Division-and-Allocate” strategy, where the performance gain are particularly large at low budget setting. We further demonstrate that DoT exhibits strong generalization across benchmarks.   To summarize, our contributions are three-fold:   • We present a novel Division-of-Thoughts (DoT) framework that fully exploits the synergy between locally deployed SLM and cloud-based LLM to power on-device agents with cost-effective reasoning.   • We propose a self-reinforced training method to boost the SLM’s task allocation accuracy without additional human an- notation, and also preserve the general reasoning capabilities of SLM with a detachable, plug-and-play adapter.   • We conduct extensive experiments on a wide range of bench- marks to evaluate the effectiveness of our DoT framework and found that DoT can significantly reduce LLM costs while maintaining high reasoning accuracy.   2 Related Work 2.1 Reasoning with LLMs Recent years have seen remarkable advancements in LLMs, with in- creasing model scale leading to powerful emergent reasoning capa- bilities. [37, 39].",
+    "score": 0.5634939358259975,
+    "source": "060 - Division-of-Thoughts Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "6178537b-0d04-4d5d-ae47-33fe8e4aca9b",
+  "X-Amzn-Trace-Id": "Root=1-6b080501-7d167a7749417c883309f860;Parent=70cab065d3340f5b;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.262
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:01+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents"
+ },
+ "from_cache": false
+}

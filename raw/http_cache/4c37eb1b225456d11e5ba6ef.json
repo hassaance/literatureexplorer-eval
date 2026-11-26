@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.329,
+ "json": {
+  "query": "SCP: Accelerating Discovery with a Global Web of Autonomous Scientific Agents",
+  "contexts": [
+   {
+    "text": "The 36 completed end-to-end runs, together with backbone comparisons and a paired blind ablation, demonstrate broad cross-disciplinary applicability and show that direct perception is essential to the evidence-grounded scientific discovery.   2 Related work   2.1 Autonomous agents for scientific discovery   Autonomous agents are increasingly participating in scientific discovery. Early frameworks targeted one domain and one instrument, executing laboratory procedures or choosing the next synthesis from diffraction patterns (Boiko et al., 2023; Szymanski et al., 2023). Later systems widened to real scientific data across disciplines, proposing hypotheses that were subsequently validated at the bench (Mitchener et al., 2025; Villaescusa-Navarro et al., 2025; Swanson et al., 2025; Gottweis et al., 2026; Ghareeb et al., 2026). A parallel wave automated the entire research lifecycle on software repositories, from idea generation to a drafted and self-reviewed manuscript, with an improved numerical metric as the measure of success (Lu et al., 2026; Yamada et al., 2025; Jiang et al., 2025; Schmidgall et al., 2025; Yuan et al., 2025; InternAgent Team et al., 2025), most recently embedding that pipeline in a collaborative ecosystem (Shao et al., 2025).",
+    "score": 0.6033582494269663,
+    "source": "100 - OmniScientist An Omni-Modal Omni-Discipline AI Scientist.pdf",
+    "page": 3
+   },
+   {
+    "text": "Ghareeb et al. Robin: A Multi-Agent System for Automating Scientific Discovery. arXiv preprint   arXiv:2505.13400, 2025. [9] V. Naumov et al. DORA AI Scientist: Multi-agent Virtual Research Team for Scientific Exploration Discovery   and Automated Report Generation. bioRxiv, doi:10.1101/2025.03.06.641840, 2025. [10] A. Authors. A Process-Centric Survey of AI for Scientific Discovery Through the EXHYTE Framework. Research   Square, 2025. [11] A. Authors. Active Inference AI Systems for Scientific Discovery. arXiv preprint arXiv:2506.21329, 2025. [12] S. Pu et al. IdeaSynth: Iterative Research Idea Development Through Evolving and Composing Idea Facets with   Literature-Grounded Feedback. In CHI, 2024. arXiv:2410.04025. [13] H. Su et al. Many Heads Are Better Than One: Improved Scientific Idea Generation by a LLM-Based Multi-Agent   System. In ACL, 2024. arXiv:2410.09403. [14] N. F. Liu et al. Lost in the Middle: How Language Models Use Long Contexts.",
+    "score": 0.564191520798565,
+    "source": "109 - PARNESS A Paper Harness for End-to-End Automated Scientific Research with Dynamic Workflows, Full-Text Indexing, and Cro.pdf",
+    "page": 19
+   },
+   {
+    "text": "This issue is important because language models can generate pla-   giarized science in the absence of robust evaluation systems. [15]   There are further gains to be made by multiplying LLM-to-LLM interactions for scientific   work. For instance, recent examples show the potential of specialized agent systems. PHYSICS   SUPERNOVA demonstrates AI agents matching elite gold medalists at IPHO 2025 through   manager agents with domain-specific tools [16]. Additionally, multi-agent virtual labs can also   sync up domain-specific tools for accelerated discovery [17].   The paradigm seems to be to break down scientific discovery into discrete capabilities. These   can be RL-ed into smaller, specialized models. This decomposition enables complex scientific   workflows to be learned as tasks with clear rubrics and reward functions. Larger labs will   rush to acquire meta capabilities that need collaboration with domain specialists. Smaller   labs will create their own benchmarks for open-source agents and domain-specific models,   using open-source models and RL. This creates a compelling case for open science in the near   future, including publications, sharing results, and all inputs and materials that enable broader   scientific progress.   6 Limitations and Future Work   Our autonomous research system demonstrates both the promise and current boundaries of AI-   driven scientific discovery. Several key limitations restrict the generalizability and robustness   of our findings.",
+    "score": 0.5410028581170634,
+    "source": "113 - Why LLMs Aren't Scientists Yet Lessons from Four Autonomous Research Attempts.pdf",
+    "page": 17
+   },
+   {
+    "text": "Our extensive evaluation of 57 agents across 22 agent classes reveals several interesting findings, most importantly that despite meaningful progress on certain individual aspects, AI remains far from solving the challenge of science research assistance.   1 INTRODUCTION   AI agents are increasingly being applied to complex real-world use cases. In particular, they hold the promise to revolutionize scientific productivity by automating reviews of the literature, replicating complex experiments, analyzing high volumes of data, and even proposing new avenues to explore.   1   ar X   iv :2   51 0.   21 65   2v 2   [ cs   .A I]   2 1   A pr   2 02   6         https://github.com/allenai/asta-bench        https://asta.allen.ai        https://arxiv.org/abs/2510.21652v2Published as a conference paper at ICLR 2026   Large organizations such as OpenAI and Google are investing in general-purpose “deep research” systems to help everyone, including scientists, comb through literature much more effectively. We even have specialized science-specific agents, such as AI Scientist (Lu et al., 2024; Yamada et al., 2025) and AIGS (Liu et al., 2024), targeting scientific research.",
+    "score": 0.5326841678537102,
+    "source": "143 - AstaBench Rigorous Benchmarking of AI Agents with a Scientific Research Suite.pdf",
+    "page": 1
+   },
+   {
+    "text": "Scientific-agent research demonstrates why useful work must include executable methods and artifacts. ChemCrow augments a language model with chemistry tools for synthesis, drug discovery, and materials tasks (Bran et al., 2023). The AI Scientist joins idea generation, code execution, experimentation, visualization, paper writing, and simulated review in an automated research loop (Lu et al., 2024); its successor introduces agentic tree search and a dedicated experiment manager (Yamada et al., 2025). The AI co-scientist uses an asynchronous coalition of specialized agents to generate, debate, rank, and evolve scientific hypotheses under researcher guidance (Gottweis et al., 2025). These systems emphasize different parts of the scientific process. Apodex instead scales agentic intelligence in a general-purpose model and execution runtime rather than targeting a domain-specific laboratory agent: scientific workflows are a primary use case, but the same file–search–code policy is also evaluated on software and professional work.   Multi-agent coordination and test-time scaling. AutoGen coordinates agents through programmable conversations (Wu et al., 2023); MetaGPT and ChatDev organize specialized roles around structured software-development workflows (Hong et al., 2023; Qian et al., 2023); and AgentVerse studies collabo- rative groups and emergent behavior (Chen et al., 2023).",
+    "score": 0.5292965179223892,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 29
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "11d4d5c1-7f43-420d-b28e-594271dde36c",
+  "X-Amzn-Trace-Id": "Root=1-6b08050a-666a5ee63f6a5f19673b308d;Parent=34cd0e655f60fe6c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.329
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:10+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "SCP: Accelerating Discovery with a Global Web of Autonomous Scientific Agents"
+ },
+ "from_cache": false
+}

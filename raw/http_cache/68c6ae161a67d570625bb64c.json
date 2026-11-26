@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.273,
+ "json": {
+  "query": "In the paper *On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models*, what did the authors identify as the true source of performance for ReAct on sequential decision‑making tasks, and what kinds of prompt variations did they find could easily break its performance?",
+  "contexts": [
+   {
+    "text": "On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models   Mudit Verma* Siddhant Bhambri* Subbarao Kambhampati   School of Computing and AI Arizona State University   {muditverma, sbhambr1, rao}@asu.edu   Abstract   The reasoning abilities of Large Language Models (LLMs) remain a topic of debate. Some methods such as ReAct-based prompting, have gained popularity for claiming to enhance sequential decision-making abilities of agentic LLMs. However, it is unclear what is the source of improvement in LLM reasoning with ReAct based prompting. In this paper we examine these claims of ReAct based prompting in improving agentic LLMs for sequential decision-making. By introducing systematic variations to the input prompt we perform a sensitivity analysis along the claims of ReAct and find that the performance is minimally influenced by the \"interleaving reasoning trace with action execution\" or the content of the generated reasoning traces in ReAct, contrary to original claims and common usage. Instead, the performance of LLMs is driven by the similarity between input example tasks and queries, implicitly forcing the prompt designer to provide instance-specific examples which significantly increases the cognitive burden on the human.",
+    "score": 0.6889768490825436,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Instead, we identify that the true source of LLM performance in sequential decision-making tasks, such as AlfWorld, is the high degree of similarity between exemplar problems (few-shot) and the query task. We also showed that ReAct is susceptible to trivial variations in exemplar prompts (such as with the use of synonyms, or Unrolling and Subtask Similarity cases). Our findings caution against an uncritical adoption of ReAct-style frameworks for their putative abilities to enhance performance in domains requiring planning.   7 Broader Impact & Limitations This work highlights the need for critical examination of prompt-engineering methods which claim emergent abilities of LLMs. Absence or presence of such abilities can have a large impact on several sectors such as economics, healthcare, transport to name a few. We hope highlighting the brittleness of popularly used technique such as ReAct will improve experimentation standards for the agentic LLM community.   We deliberately confined our experiments to be deep along a domain considered common-sense planning domain by the contemporary research community. Moreover, we restricted our discussion to sequential decision making problem of AlfWorld and admit that other prompting solutions to reasoning problems must be re-evaluated with similar scrutiny.",
+    "score": 0.6306394034379159,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 9
+   },
+   {
+    "text": "It is much higher ( 80% for GPT-3.5-Turbo, 90% for Claude-Haiku) for weaker LLM models. This further highlights the inability of LLMs to operationalize its generated thought as also seen in [Roy et al., 2024]. From manual inspection we find that the typical thoughts would enlist all possible locations as next locations to visit for most of the tasks. As demonstrated in Section 5.2, the performance of LLMs actually decreases when provided with foresight guidance, as seen with the base ReAct model. A detailed investigation into the validity of the generated reasoning traces is beyond the scope of this work and is suggested as future research.   6 Conclusion ReAct based prompt engineering methods have been claimed to improve planning abilities of Large Language Models. In this study, we critically examine ReAct along three dimensions, informed by its claims and our hypotheses regarding its performance sources. Contrary to ReAct’s claims, our findings reveal that its performance is neither due to interleaving reasoning trace and guidance information generation with action execution, nor due to the specific nature of the guidance information. Instead, we identify that the true source of LLM performance in sequential decision-making tasks, such as AlfWorld, is the high degree of similarity between exemplar problems (few-shot) and the query task.",
+    "score": 0.626067827084509,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 9
+   },
+   {
+    "text": "Depending on the domain and task, prompt designers may provide abstract guidance, task-specific instructions within the same domain, analogical examples, or global reasoning traces. ReAct’s inability to robustly adapt to such variations underscores its limitations in handling diverse input prompts, thereby necessitating a closer examination of its design and implementation. In this work, we systematically evaluate the brittleness of ReAct by studying which potential factors contribute to its performance. This analysis is conducted through variations in input prompts to understand how a ReAct LLM Agent responds to (1) where the guidance is provided, (2) the different types and structure of this guidance, and finally, (3) on varying the resemblance of example prompt to the queried problem. We investigate the research questions :   RQ1: Does the agent performance depend on interleaving reasoning trace with action execution? RQ2: How does the nature of the reasoning trace or guidance information affect the performance of LLM Agents? RQ3: How does the similarity between the example 〈problem, solution〉and the query 〈problem, ? 〉, which are present in the prompt, affect LLM Agent performance?   We conduct extensive experiments on the AlfWorld domain using various LLM Models, including GPT-3.5-turbo, GPT-3.5-instruct, GPT-4 and Claude-Opus.",
+    "score": 0.6225507487173809,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "of improvement in performance. This motivates our work in investigating the components of ReAct with respect to sequential decision-making problems and analyzing the role each component plays.   4 Brittleness of ReAct based Agentic LLMs We examine the claims of ReAct to understand the performance of ReAct-based LLM agents. It is crucial to assess whether ReAct’s fundamental assertions hold, particularly in sequential decision making. As outlined in Section 2, ReAct comprises three main components: interleaving the think tag with actions, plan guidance after the think tag, and the selection of exemplar problems for LLM prompts. We perform a sensitvity analysis by proposing alternatives along these three dimensions. The subsequent sections explore the design of exemplar prompt variations to investigate our research questions concerning the claims of ReAct. Each variation modifies the base ReAct exemplar prompts.   4.1 RQ1 : Interleaving thinking with acting Does the agent performance depend on interleaving reasoning trace with action execution?   To answer this research question, we propose collating the guidance information contained within the multiple think tags present in the examples of the input prompt into a single think tag appended after the example problem is specified.",
+    "score": 0.6058142834270166,
+    "source": "019 - On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "78e06d47-9224-444e-ae96-1f3a08e411bd",
+  "X-Amzn-Trace-Id": "Root=1-6b080448-41364550108350f17d76bf55;Parent=6af1a793660d5d3e;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.273
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:56+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper *On the Brittle Foundations of ReAct Prompting for Agentic Large Language Models*, what did the authors identify as the true source of performance for ReAct on sequential decision‑making tasks, and what kinds of prompt variations did they find could easily break its performance?"
+ },
+ "from_cache": false
+}

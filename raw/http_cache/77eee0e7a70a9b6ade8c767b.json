@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.277,
+ "json": {
+  "query": "In the paper \"Multi-Agent Collaboration via Evolving Orchestration\", what are the two configurations that Puppeteer provides, and which specific models are used in the Mono setting for the Titan and Mimas subspaces?",
+  "contexts": [
+   {
+    "text": "Many prior studies on multi-agent systems have employed the same base model to drive agent behavior [44, 36, 87]. To enable a more meaningful comparison and account for model heterogeneity, our method, referred to as Puppeteer, introduces two distinct configurations within each agent   3Other smaller-scale models in the same series (e.g., Qwen-2.0-7B) have also been experimentally validated, and their performance is generally weaker than that of the larger-scale model within the same series.   4https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Reward-HF   5         https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Reward-HFsubspace: the Mono setting, wherein all agents are driven by the same model, and we use LLaMA- 3.1-405B for Titan subspace and LLaMA-3.1-8B for Mimas subspace, and the default setting, wherein agents are driven by a diverse set of models. As Puppeteer undergoes online reinforcement learning, we categorize its learning process into two distinct phases: an initial phase characterized by unrefined behavior, and an evolved phase marked by reinforced performance.   Table 1: Performance comparison of different methods across various datasets in Titan and Mimas subspaces respectively.",
+    "score": 0.5836250290339017,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 5
+   },
+   {
+    "text": "irrespective of domain type or model space size. Similarly, Puppeteer-Mono demonstrates robust performance across both large- and small-scale models. These results collectively underscore the exceptional capability of our centralized orchestrator in coordinat- ing both heterogeneous and single-model-driven agents to form highly effective MAS, highlighting its robustness in managing diverse agent configurations.   Compared to various agent workflows and multi-agent baselines using the same base model, Puppeteer-Mono consistently outperforms competing methods across nearly all evaluated tasks. This result highlights the efficacy of our centralized orchestrator in coordinating single-model-driven agents with optimized reasoning strategies and strategic tool utilization, surpassing alternative frame- works. It underscores that superior performance stems from sophisticated organizational design and a context-aware, dynamically constructed multi-agent topology. Notably, despite Puppeteer-Mono leveraging near-optimal models within its respective subspaces, Puppeteer consistently achieves superior performance, likely benefiting from complementary interactions among heterogeneous agents driven by diverse models. Additionally, the expanded space in Puppeteer enables broader exploration of the solution landscape, thereby enhancing optimization opportunities.   To illustrate Puppeteer’s capability in organizing effective MAS, we compare performance between the initial and evolved phases. The results show that continued optimization yields substantial gains—for example, Puppeteer in the Titan subspace improves from 0.6893 to 0.7731 on average, with a similar trend observed in the Mimas subspace.",
+    "score": 0.55408235902027,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 6
+   },
+   {
+    "text": "Initialized Evolved Initialized Evolved Initialized Evolved Initialized Evolved Initialized Evolved   Puppeteer-MonoLlama-3.1-405B 0.5400 0.6100 0.6910 0.7600 0.6264 0.7697 0.8111 0.8417 0.6671 0.7453 Puppeteer 0.6600 0.7000 0.7400 0.8300 0.6191 0.7637 0.7381 0.7987 0.6893 0.7731   As detailed in Table 1, Puppeteer consistently achieves superior average performance during the evolved phase across all evaluated tasks, irrespective of domain type or model space size. Similarly, Puppeteer-Mono demonstrates robust performance across both large- and small-scale models. These results collectively underscore the exceptional capability of our centralized orchestrator in coordinat- ing both heterogeneous and single-model-driven agents to form highly effective MAS, highlighting its robustness in managing diverse agent configurations.   Compared to various agent workflows and multi-agent baselines using the same base model, Puppeteer-Mono consistently outperforms competing methods across nearly all evaluated tasks. This result highlights the efficacy of our centralized orchestrator in coordinating single-model-driven agents with optimized reasoning strategies and strategic tool utilization, surpassing alternative frame- works.",
+    "score": 0.5411568744456092,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 6
+   },
+   {
+    "text": "To this end, we propose a puppeteer-style paradigm for LLM-based multi-agent collaboration, where a centralized orchestra- tor (\"puppeteer\") dynamically directs agents (\"puppets\") in response to evolving task states. This orchestrator is trained via reinforcement learning to adaptively sequence and prioritize agents, enabling flexible and evolvable collective reasoning. Experiments on closed- and open-domain scenarios show that this method achieves superior performance with reduced computational costs. Analyses further reveal that the key improvements consistently stem from the emergence of more compact, cyclic reasoning structures under the orchestrator’s evolution. Our code is available at https://github.com/OpenBMB/ChatDev/tree/puppeteer.   Puppeteer i.e., Policy   Manupilate i.e., Orchestrate   Puppet i.e., Agent   Environment i.e., Reinforcing   Figure 1: Overview of the proposed multi-agent collaboration framework. A central policy (\"pup- peteer\") dynamically orchestrates which agent (\"puppet\") should reason at each step based on the evolving state of the task. As the task progresses, the orchestrator adaptively promotes more effective agents while removing those that are less useful, analogous to a puppeteer learning to skillfully pull or cut strings to direct a performance.   †Equal Contribution. BCorresponding Author.   39th Conference on Neural Information Processing Systems (NeurIPS 2025).",
+    "score": 0.5351871703471144,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 1
+   },
+   {
+    "text": "This mechanism enables the orchestrator to optimize both overall performance and resource consumption. In extreme cases, if the efficiency factor is entirely omitted from the reward design, the system naturally degenerates into a traditional large-scale collaborative framework, albeit with potentially further improvements in performance.   More specifically, in the Titan setting, the number of active agents notably decreases over the course of learning, suggesting that the orchestrator progressively learns to terminate the reasoning process earlier for more efficient problem-solving. In contrast, in the Mimas setting (see Appendix for results), the number of orchestrated agents remains relatively stable, indicating the orchestrator’s caution in prematurely halting the reasoning process due to the comparatively limited capabilities of the agents. In this case, reductions in token consumption are primarily achieved through the preferential selection of lower-cost agents rather than shorter reasoning chains. This contrast between Titan and Mimas arises from fundamental differences in agent capacity: Titan agents can solve tasks more efficiently, enabling earlier stopping without quality loss, whereas Mimas agents often require longer, more elaborate reasoning processes to ensure reliable completion.   3.3 How Does Organizational Topology Evolve During Reinforcement?   To elucidate the emergent organization of multi-agent collaboration, we systematically examine the evolution of agent interaction topologies throughout the learning process.",
+    "score": 0.5241028770369016,
+    "source": "074 - Multi-Agent Collaboration via Evolving Orchestration.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "bf23b1be-bd37-4cee-99fe-6a47a5515c98",
+  "X-Amzn-Trace-Id": "Root=1-6b080449-2c9d8fb02e8542741401aca5;Parent=0995ab1edd09d300;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.277
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:57+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper \"Multi-Agent Collaboration via Evolving Orchestration\", what are the two configurations that Puppeteer provides, and which specific models are used in the Mono setting for the Titan and Mimas subspaces?"
+ },
+ "from_cache": false
+}

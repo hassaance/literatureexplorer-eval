@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.251,
+ "json": {
+  "query": "Cradle: Empowering Foundation Agents towards General Computer Control",
+  "contexts": [
+   {
+    "text": "These agents, such as UFO [10] and CogAgent [11], interact not only through APIs but also by observing and manipulating GUIs in a human-like manner. By integrating visual understanding with reasoning, they provide more gen- eral automated control and a richer, more intuitive mode of interaction. The pursuit of ultimate generality and human-like autonomy takes this progression a final step further, leading to the API-free GUI-based agents, as exemplified by CRADLE [12] and Bottom-Up Agent [13]. This methodology envisions agents that operate exclusively through a universal, human- style interface—using only screen pixels as input and key- board/mouse actions as output. Such agents have demonstrated the remarkable ability to autonomously acquire skills from scratch in complex games and diverse software applications without any privileged access.",
+    "score": 0.48912042487187174,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "This includes leading pro- prietary models (GPT-4o, Claude 3.7), a strong open-source GUI agent (UI-TARS-1.5 [1]), and the two most relevant API-free agents (CRADLE [12] and the Bottom-up Agent [13]). This selection is motivated by the limitations of many existing frameworks, which are often incompatible with the API-free setting or require task-specific priors (e.g., predefined subgoals). For the CRADLE baseline, which natively depends on a library of atomic skills, we adapted its core prompts for our tasks. To ensure a fair comparison, we converted the skills learned by SAG-Agent into a compatible format that could be utilized by the CRADLE framework, thereby providing it with the necessary prerequisite capabilities.   Implementation Details. We use GPT-4o for semantic rea- soning and a pre-trained CLIP ViT-B/32 for visual encoding.   All hyperparameters remain consistent across all experiments to ensure fair and reproducible comparisons. For the SAG, the state merging threshold θmerge is set to 0.95, and the similarity edge threshold θsimi to 0.88. For skill edge weight computation (Eq. 1), we use a balancing factor α = 0.7 and fitness sensitivity constant C0 = 5.0.",
+    "score": 0.48486790590337064,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 7
+   },
+   {
+    "text": "Xu, W. Yu, J. Ji, Y. Wang, Z. Wang, Y. Dong, M. Ding et al., “Cogagent: A visual language model for gui agents,” in CVPR, 2024, pp. 14 281–14 290.   [12] W. Tan, W. Zhang, X. Xu, H. Xia, Z. Ding, B. Li, B. Zhou, J. Yue, J. Jiang, Y. Li, R. An, M. Qin, C. Zong, L. Zheng, Y. Wu, X. Chai, Y. Bi, T. Xie, P. Gu, X. Li, C. Zhang, L. Tian, C. Wang, X. Wang, B. F. Karlsson, B. An, S. YAN, and Z. Lu, “Cradle: Empowering foundation agents towards general computer control,” in ICML, 2025.   [13] J. Du, J. Wu, Y. Chen, Y. Hu, B. Li, and J. T. Zhou, “Rethinking agent design: From top-down workflows to bottom-up skill evolution,” arXiv preprint arXiv:2505.17673, 2025.   [14] M. R. Morris, J. Sohl-Dickstein, N.",
+    "score": 0.4807632141700475,
+    "source": "053 - Experience-Driven Exploration for Efficient API-Free AI Agents.pdf",
+    "page": 11
+   },
+   {
+    "text": "All code is open-sourced at https://github.com/ShengranHu/ADAS.   1 INTRODUCTION   Foundation Models (FMs) such as GPT (OpenAI, 2024; 2022) and Claude (Anthropic, 2024b) are quickly being adopted as powerful general-purpose agents for agentic tasks that need flexible rea- soning and planning (Wang et al., 2024). Despite recent advancements in FMs, solving problems re- liably often requires an agent to be a compound agentic system with multiple components instead of a monolithic model query (Zaharia et al., 2024; Rocktäschel, 2024). Additionally, to enable agents to solve complex real-world tasks, they often need access to external tools such as search engines, code execution, and database queries. As a result, many effective building blocks of agentic systems have been proposed, such as chain-of-thought planning and reasoning (Wei et al., 2022; Yao et al., 2023; Hu & Clune, 2024), memory structures (Zhang et al., 2024c; Lewis et al., 2020), tool use (Schick et al., 2023; Qu et al., 2024), and self-reflection (Madaan et al., 2024; Shinn et al., 2023).",
+    "score": 0.4777073803345179,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "This ability to extend functionality through the use of other tools can also extend to other AI models, so even if a task-tuned foundation model is unable to perform well at a specialist task such as protein folding, it may well be able to interact with an AI model that can (e.g. Bran et al., 2023). Indeed, as techniques continue to be developed that enable users to better harness the broad capabilities of foundation models, and API infrastructure continues to expand so as to enable a greater range of tools that generalist models can call to perform particular specialist tasks, it is entirely plausible that we can expect a capability explosion for AI systems over the near or medium term.   Foundation models, and in particular LLMs, allow for a number of product offerings. One class of products are dialogue agents, which include products like ChatGPT and Gemini, the purpose of which is to simulate an interlocutor that can engage the user in conversation. Dialogue agents cover a broad class of applications, including tutoring, debugging code, giving advice and solving problems. A second class of products are specialist tools, for example writing and copy-editing tools such as Jasper and Copy AI, and coding assistants such as GitHub Copilot and Code Whisperer.",
+    "score": 0.4662837576812013,
+    "source": "182 - The Ethics of Advanced AI Assistants.pdf",
+    "page": 32
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1efd9a37-09a4-4f5e-9355-124b91731487",
+  "X-Amzn-Trace-Id": "Root=1-6b08050d-318f7789501013744a8677f5;Parent=260465a506ca5d1c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.251
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:13+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Cradle: Empowering Foundation Agents towards General Computer Control"
+ },
+ "from_cache": false
+}

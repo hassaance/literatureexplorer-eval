@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.281,
+ "json": {
+  "query": "How do Paper A (\"A Survey of Vibe Coding with Large Language Models\") and Paper B (\"Context Engineering for AI Agents in Open-Source Software\") characterize the importance of context engineering for autonomous coding agents, and what contrasting observations do they make about the current state of context provision?",
+  "contexts": [
+   {
+    "text": "Given human intent I , project context K ⊆ P (a relevant subset retrieved from the project information space), and execution environment E , the Agent generates code sequence Y = (y1, . . . , yT) in an auto-regressive manner, with joint probability factorized as:   Pθ(Y|I ,K, E) = T   ∏ t=1   Pθ(yt|y<t, Ct), (2)   where Ct = A(I ,K, E , y<t) denotes the dynamic context at step t, orchestrated by the high-level assembly function A. Context components ci correspond to distinct information sources from the triadic relationship:   Human Layer:   • cinstr: System instructions and task requirements.   Project Layer:   • ccode: Codebase (source code, API interfaces, architectural design),   • cdata: Database (persistent data, data schemas),   8A Survey of Vibe Coding with Large Language Models   2025   2024   2023   2022   Open Resource Close Resource   Coding Agents Coding LLMs   Coding Environment Feedback   Implementation   AlphaCode   SantaCoder StarCoder   CodeT5+   WizardCoder   Code Llama Magicoder   CodeGemma   DeepSeek-Coder   SantaCoder2 DeepSeek-Coder V2   Qwen2.5-Coder OpenCoder   Codestral 25.01   Code World Model   ChatDev",
+    "score": 0.5711032424065301,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 8
+   },
+   {
+    "text": "Context Engineering for AI Agents in Open-Source Software Seyedmoein Mohsenimofidi   Heidelberg University   Germany   s.mohsenimofidi@uni-heidelberg.de   Matthias Galster   University of Bamberg   Germany   mgalster@ieee.org   Christoph Treude   Singapore Management University   Singapore   ctreude@smu.edu.sg   Sebastian Baltes   Heidelberg University   Germany   sebastian.baltes@uni-heidelberg.de   Abstract GenAI-based coding assistants have disrupted software develop-   ment. The next generation of these tools is agent-based, operating   with more autonomy and potentially without human oversight.   Like human developers, AI agents require contextual information   to develop solutions that are in line with the standards, policies,   and workflows of the software projects they operate in. Vendors of   popular agentic tools (e.g., Claude Code) recommend maintaining   version-controlled Markdown files that describe aspects such as the   project structure, code style, or building and testing. The content   of these files is then automatically added to each prompt. Recently,   AGENTS.md has emerged as a potential standard that consolidates ex-   isting tool-specific formats. However, little is known about whether   and how developers adopt this format. Therefore, in this paper, we   present the results of a preliminary study investigating the adop-   tion of AI context files in 466 open-source software projects.",
+    "score": 0.562650212375335,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 1
+   },
+   {
+    "text": "Therefore, in this paper, we   present the results of a preliminary study investigating the adop-   tion of AI context files in 466 open-source software projects. We   analyze the information that developers provide in AGENTS.md files, how they present that information, and how the files evolve over   time. Our findings indicate that there is no established content   structure yet and that there is a lot of variation in terms of how   context is provided (descriptive, prescriptive, prohibitive, explana-   tory, conditional). Our commit-level analysis provides first insights   into the evolution of the provided context. AI context files provide   a unique opportunity to study real-world context engineering. In   particular, we see great potential in studying which structural or   presentational modifications can positively affect the quality of the   generated content.   Keywords Software Engineering, Generative AI, AI Agents, Open Source   ACM Reference Format: Seyedmoein Mohsenimofidi, Matthias Galster, Christoph Treude, and Se-   bastian Baltes. 2026. Context Engineering for AI Agents in Open-Source   Software. In 23rd International Conference on Mining Software Repositories (MSR ’26), April 13–14, 2026, Rio de Janeiro, Brazil.",
+    "score": 0.5601001002872408,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 1
+   },
+   {
+    "text": "Drawing from systematic analysis of over 1000 research papers, we survey the entire vibe coding ecosystem, examining critical infrastructure components including LLMs for coding, LLM-based coding agent, development environment of coding agent, and feedback mechanisms. We first introduce Vibe Coding as a formal discipline by formalizing it through a Constrained Markov Decision Process that captures the dynamic triadic relationship among human developers, software projects, and coding agents. Building upon this theoretical foundation, we then synthesize existing practices into five distinct development models: Unconstrained Automation, Iterative Conversational Collaboration, Planning-Driven, Test-Driven, and Context-Enhanced Models, thus providing the first comprehensive taxonomy in this domain. Critically, our analysis reveals that successful Vibe Coding depends not merely on agent capabilities but on systematic context engineering, well-established development environments, and human-agent collaborative development models. Based on these findings, we identify key challenges spanning technical infrastructure optimization, security mechanisms, and human-centered design considerations. Ultimately, this survey serves as both a conceptual foundation for AI-augmented software engineering and a technical roadmap for researchers and practitioners navigating this rapidly evolving field.   ∗: Also affiliated with: (1) Key Laboratory of Network Data Science and Technology, ICT, CAS; (2) State Key Laboratory of AI Safety; (3) University of Chinese Academy of Sciences †: Corresponding Author   Keywords: Vibe Coding, Coding Agent, Large Language Models   Date: December 23,",
+    "score": 0.5588874654918,
+    "source": "102 - A Survey of Vibe Coding with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "While prompt engineering focuses on how a task is described to   the model (e.g., instructions and output indicators) [6, 28], context   engineering focuses on what task-relevant information the model   has access to, including relevant guidelines, configuration files, doc-   umentation, and exemplary code snippets [22, 29]. An advantage   of agent-based tools compared to conversational tools is that they   allow persistent, structured, and task-specific context to be pro-   vided in a more fine-grained and targeted manner [14]. One way   to “engineer” context is to add machine-readable AI context files to   source code repositories. The AI agents then automatically add the   content of these files to their prompts. While traditional README files are written for humans, AI context files are explicitly designed   for AI agents, providing a central machine-readable source of con-   textual information. Their content can include everything from   the required terminal commands to build and test the project over   documentation links, common workflows, coding conventions, to   instructions for creating pull requests.   AGENTS.md was introduced as an open tool-agnostic convention   for such AI context files [19], and it was recently announced as a   project in the Agentic AI Foundation. OpenAI’s Codex tool relies on   this format [26], while Claude Code by default searches for a file   named CLAUDE.md.",
+    "score": 0.5573269512462294,
+    "source": "121 - Context Engineering for AI Agents in Open-Source Software.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0693b8f9-6d86-4dcc-b14e-914c4be2e04b",
+  "X-Amzn-Trace-Id": "Root=1-6b080463-3ffad5c83b9e6033683cfef7;Parent=39c7b94af297c3d8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.281
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:23+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How do Paper A (\"A Survey of Vibe Coding with Large Language Models\") and Paper B (\"Context Engineering for AI Agents in Open-Source Software\") characterize the importance of context engineering for autonomous coding agents, and what contrasting observations do they make about the current state of context provision?"
+ },
+ "from_cache": false
+}

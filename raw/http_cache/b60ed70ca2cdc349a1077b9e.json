@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.37,
+ "json": {
+  "query": "How do Paper A ('Artificial intelligence and the future of work: Human‑AI symbiosis in organizational decision making') and Paper B ('The Metacognitive Demands and Opportunities of Generative AI') each describe AI’s role in augmenting human decision‑making, and what design strategies do they suggest to support that augmentation?",
+  "contexts": [
+   {
+    "text": "Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making   Mohammad Hossein Jarrahi   School of Information & Library Sciences, University of North Carolina, Chapel Hill, 200 Manning Hall, Chapel Hill, NC 27599, U.S.A.   Business Horizons (2018) 61, 577—586   Available online at www.sciencedirect.com   ScienceDirect www.elsevier.com/locate/bushor   KEYWORDS Artificial intelligence; Organizational decision making; Human-machine symbiosis; Human augmentation; Analytical and intuitive decision making   Abstract Artificial intelligence (AI) has penetrated many organizational processes, resulting in a growing fear that smart machines will soon replace many humans in decision making. To provide a more proactive and pragmatic perspective, this article highlights the complementarity of humans and AI and examines how each can bring their own strength in organizational decision-making processes typically character- ized by uncertainty, complexity, and equivocality. With a greater computational information processing capacity and an analytical approach, AI can extend humans’ cognition when addressing complexity, whereas humans can still offer a more holistic, intuitive approach in dealing with uncertainty and equivocality in organiza- tional decision making. This premise mirrors the idea of intelligence augmentation, which states that AI systems should be designed with the intention of augmenting, not replacing, human contributions. # 2018 Kelley School of Business, Indiana University. Published by Elsevier Inc.",
+    "score": 0.6142306142113568,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 1
+   },
+   {
+    "text": "Moreover, anal- ysis in many cases may result in multiple alternate routes with almost equal factual supports; humans can help in choosing the one that appears to be more intuitively sensible. Consequently, the part- nership between human decision makers and AI and can play out in two ways:   1. Humans and AI technologies can collaborate to deal with different aspects of decision making. AI is likely to be well positioned to tackle com- plexity issues (using analytical approaches).Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making 583   Humans can focus more on uncertainty and equivocality, using more creative and intuitive approaches.   2. Even the most complex decisions–—of which AI has a comparative edge–—are likely to require elements of uncertainty and equivocality, which compels human involvement. Therefore, hu- mans and AI will play a combined role in almost all complex decision making (see Figure 1).   5. Implications for managers and organizations   In AI-enabled business investments, the way many managers justify return on investment (ROI) in cog- nitive technologies centers on significant and imme- diate headcount reduction (Davenport & Faccioli, 2017). My premise in this article is that most benefits of AI are likely to materialize only in long-term partnership with unique human capabilities.",
+    "score": 0.5631692773010223,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 6
+   },
+   {
+    "text": "This is a race with the machines.” In line with the vision of human-machine symbiosis, it is more meaningful to view AI as a tool for augmentation (extending human’s capabilities) rather than auto- mation (replacing them). This can serve as a more effective guide for the future rather than a preoc- cupation with superintelligent machines that can replicate every aspect of human intelligence and eventually replace them in the workplace. To achieve such strategic human-machine partner- ships, human intervention is arguably inevitable (Davenport, 2016); therefore the possibility of hav- ing an exclusively AI-based organizational decision system is shortsighted.   References   Accenture (2017). Technology vision 2017: Technology for peo- ple. Dublin, Ireland: Accenture.   Bishop, P. (2000). Synchronicity and intellectual intuition in Kant, Swedenborg, and Jung. Lewiston, NY: The Edwin Mellen Press.   Brynjolfsson, E., & McAfee, A. (2012). Winning the race with ever-smarter machines. MIT Sloan Management Review, 53 (2), 53—60.   Brynjolfsson, E., & McAfee, A. (2014). The second machine age: Work, progress, and prosperity in a time of brilliant tech- nologies. New York, NY: WW Norton & Company.",
+    "score": 0.5220586464363896,
+    "source": "026 - Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making.pdf",
+    "page": 9
+   },
+   {
+    "text": "The symbols in front of the moderators indicate whether there is a statistically significant difference between the subgroups for human–AI synergy (*) and human augmentation (∧).         http://www.nature.com/nathumbehavNature Human Behaviour | Volume 8 | December 2024 | 2293–2303 2297   Article https://doi.org/10.1038/s41562-024-02024-1   requires knowledge or insight that humans have and computers do not, but it also often requires filling in boilerplate or routine parts of the text as well.   With most of the decision tasks studied in our sample, however, both the human and the AI system make a complete decision, with the humans usually making the final choice. Our results suggest that with these decision tasks, better results might have been obtained if the experimenters had designed processes in which the AI systems did only the parts of the task for which they were clearly better than humans. Only 3 of the 100+ experiments in our analysis explore such processes with a predetermined delegation of separate subtasks to humans and AI.",
+    "score": 0.5141158641726867,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 4
+   },
+   {
+    "text": "These seemingly contradictory results raise important questions: when do humans and AI complement each other, and by how much? To address these issues, we conducted a systematic literature review and meta-analysis in which we quantified synergy in human–AI sys- tems and identified factors that explain its presence (or absence) in different settings.   We focused on two outcomes: (1) human–AI synergy, where the human–AI group performs better than both the human alone and the AI alone, which is analogous to strong synergy in human groups10,11; and (2) human augmentation, where the human–AI group performs better than the human alone (see Supplementary Information section 1.1 for more details).   When evaluating human–AI systems, many studies focus on human augmentation12–15. This measure can serve important purposes in contexts for which full automation cannot happen for legal, ethical or safety reasons and in cases when AI does not align with human val- ues. But when talking about the potential of human–AI systems, most people implicitly assume that the combined system should be better than either alone; otherwise, they would just use the best of the two16. They are thus looking for human–AI synergy. In light of these consid- erations, a growing body of work emphasizes evaluating and searching for synergy in human–AI systems4,8,17–20.",
+    "score": 0.5119145298952315,
+    "source": "020 - When combinations of humans and AI are useful A systematic review and meta-analysis.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b2db6d0f-2b29-48bc-a11a-a2a71e246db0",
+  "X-Amzn-Trace-Id": "Root=1-6b08045e-10b120b23aa928394f1b7e23;Parent=4daa412151108b76;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.37
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How do Paper A ('Artificial intelligence and the future of work: Human‑AI symbiosis in organizational decision making') and Paper B ('The Metacognitive Demands and Opportunities of Generative AI') each describe AI’s role in augmenting human decision‑making, and what design strategies do they suggest to support that augmentation?"
+ },
+ "from_cache": false
+}

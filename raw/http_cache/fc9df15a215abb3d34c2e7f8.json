@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.697,
+ "json": {
+  "id": "chatcmpl-aa4cf735-3436-4e94-b488-808f97a40d81",
+  "object": "chat.completion",
+  "created": 1795687503,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The Arabic-Arabic pair achieved a BERT similarity score of 0.834, which is higher than the English-English baseline score of 0.819. This indicates strong semantic consistency in the generated Arabic dialogues."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1613,
+   "completion_tokens": 49,
+   "total_tokens": 1662
+  },
+  "contexts": [
+   {
+    "text": "Using the English-English pair, which compares the English notes with the English dialogues in the ACI dataset, as the baseline with a score of 0.819, the Arabic- Arabic pair achieved a higher similarity score of 0.834, indicating strong semantic consistency in the generated Arabic dialogues. The Arabic-English pair, which measures cross-lingual similarity, ob- tained a score of 0.809, demonstrating a slightly lower but comparable level of semantic alignment between the Arabic and English dialogues. These results, as presented in Table 4, underscore the effectiveness of the generation process in maintain- ing semantic consistency across both monolingual and cross-lingual comparisons.   6.3 Evaluation Using LLMs Results   Table 5 shows the evaluation results comparing Claude-3-Opus and GPT-4-Turbo. The evaluation criteria Table included Medical Accuracy and Com-   BERT Scores Metric Value Arabic - Arabic 0.834 Arabic - English 0.809 English - English 0.819   Table 4: BERT-Scores for Arabic and English Generated Dialogue Datasets   pleteness, Communication and Rapport, Structure and Flow, Language and Terminology, and Pa- tient Engagement and Education.",
+    "score": 0.6662273654579159,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 6
+   },
+   {
+    "text": "Proceedings of The Second Arabic Natural Language Processing Conference, pages 11–26 August 16, 2024 ©2024 Association for Computational Linguistics   Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques   Mariam ALMutairi, Lulwah AlKulaib, Melike Yildiz Aktas, Sara Alsalamah, Chang-Tien Lu   Virginia Tech Falls Church, VA, USA   malmutairi, lalkulaib , melike, salsalamah, clu @vt.edu   Abstract   The increasing use of artificial intelligence in healthcare requires robust datasets for training and validation, particularly in the domain of medical conversations. However, the creation and accessibility of such datasets in Arabic face significant challenges, especially due to the sen- sitivity and privacy concerns that are associated with medical conversations. These conversa- tions are rarely recorded or preserved, mak- ing the availability of comprehensive Arabic medical dialogue datasets scarce. This limi- tation slows down not only the development of effective natural language processing mod- els but also restricts the opportunity for open comparison of algorithms and their outcomes. Recent advancements in large language models (LLMs) like ChatGPT, GPT-4, Gemini-pro, and Claude-3 show promising capabilities in gen- erating synthetic data.",
+    "score": 0.5815972478605421,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 1
+   },
+   {
+    "text": "Therefore, ROUGE should be used with caution and in conjunction with other evaluation metrics to provide a more comprehensive assess-   17ment of generation quality.   7.2 BERT Scores Analysis The BERT-Scores highlight the Multi-Agent LLM’s ability to generate internally consistent dia- logues within Arabic, with the Arabic-Arabic score being the highest among the comparisons. This in- dicates that the model is adept at maintaining con- textual relevance and semantic coherence within the same language. The cross-language compari- son score (Arabic-English) indicates that while the model can translate and adapt dialogues, there is a notable decrease in similarity, suggesting room for improvement in cross-linguistic translation and contextual understanding. This decrease in similar- ity may stem from differences in linguistic struc- tures, idiomatic expressions, and cultural context that are not perfectly captured by the model.   7.3 Evaluation Using LLM Results Comparison   The evaluation results comparing Claude-3-Opus and GPT-4-Turbo further underline the strengths and areas for improvement of the multi-agent LLM system. Claude-3-Opus achieved high scores across all categories, with an overall score of 4.87, indicating a strong performance in generating med- ical dialogues.",
+    "score": 0.5651700526183826,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 7
+   },
+   {
+    "text": "5.00 4.99 Structure and Flow 4.91 5.00 Language and Terminology 5.00 5.00 Patient Engagement and Education 4.97 5.00 Overall Score 4.93 4.99   Table 5: Comparison of Claude-3-Opus and GPT-4-Turbo Evaluation Results   Based on Clinical Note   Clear Structure and Flow   Comprehensive Answers and Advice   Adheres to Ethical Guidelines   Appropriate Language and Terminology   Effective Communication and Rapport 0   20   40   60   80   100   Pe rc   en ta   ge of   R es   po ns   es (%   )   Strongly Agree Agree Neutral Disagree Strongly Disagree   Figure 1: Human Evaluation Results of Arabic Clinical Conversations   7 Discussion   The results demonstrate the performance of our multi-agent LLM system in generating Arabic med- ical dialogues when compared to English dialogues from the ACI-Benchmark dataset.   7.1 ROUGE Scores Analysis   The lower ROUGE-2 scores in both languages in- dicate challenges in generating precise bi-gram matches, which might be attributed to the com- plex medical terminology and the structure of di- alogues.",
+    "score": 0.5490032514042892,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 7
+   },
+   {
+    "text": "This approach ensures AI systems remain adaptable and continue evolving with medical ad- vancements and changing healthcare practices.   Our work contributes significantly to the field of Arabic Natural Language Processing (NLP) and AI-driven healthcare solutions through several in- novative approaches:   • Development of a Multi-Agent LLM Sys- tem: We introduce a novel multi-agent large language model system that is specifically de- signed to generate synthetic Arabic medical dialogues. This system uses state-of-the-art techniques to ensure that the generated dia- logues are linguistically and medically accu- rate, making it highly suitable for real-world healthcare applications.   • Creation of Synthetic Medical Dialogue Datasets: Addressing the acute shortage of publicly available medical datasets in Arabic, this work utilizes advanced AI to generate synthetic datasets from clinical notes. These datasets are crucial for training and improving AI models tailored to the Arabic language and healthcare needs.   • Rigorous Evaluation of Generation Tasks: This study establishes a comprehensive evalu- ation framework for the Generation tasks, us- ing both quantitative metrics such as ROUGE and BERTScore and qualitative assessments by domain experts. This dual approach en- sures that the generated conversations adhere to technical accuracy and maintain practical usability and relevance in clinical settings.",
+    "score": 0.5450665500892719,
+    "source": "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+    "page": 2
+   }
+  ],
+  "sources": [
+   "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+   "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+   "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+   "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf",
+   "127 - Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "aa4cf735-3436-4e94-b488-808f97a40d81",
+  "X-Amzn-Trace-Id": "Root=1-6b08044e-240251924a371894728939cc;Parent=01dba585467a2ccb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.697
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:02+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the paper *Synthetic Arabic Medical Dialogues Using Advanced Multi-Agent LLM Techniques*, what BERT similarity score did the Arabic‑Arabic pair obtain, and how does it compare to the English‑English baseline score?"
+   }
+  ]
+ },
+ "from_cache": false
+}

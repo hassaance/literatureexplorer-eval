@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.348,
+ "json": {
+  "query": "Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions",
+  "contexts": [
+   {
+    "text": "Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future   Directions   Mohamad Abou Ali1, 3, 4 and Fadi Dornaika*1, 2   1University of the Basque Country, 2IKERBASQUE, 3Lebanese International University (LIU), 4The International University of Beirut,   mohamad.abouali01@liu.edu.lb, fadi.dornaika@ehu.eus   Abstract Agentic AI represents a transformative shift in artificial intelligence, but its   rapid advancement has led to a fragmented understanding, often conflating mod- ern neural systems with outdated symbolic models—a practice known as con- ceptual retrofitting. This survey cuts through this confusion by introducing a novel dual-paradigm framework that categorizes agentic systems into two dis- tinct lineages: the Symbolic/Classical (relying on algorithmic planning and per- sistent state) and the Neural/Generative (leveraging stochastic generation and prompt-driven orchestration).",
+    "score": 0.7270258803710935,
+    "source": "015 - Agentic AI A Comprehensive Survey of Architectures, Applications, and Future Directions.pdf",
+    "page": 1
+   },
+   {
+    "text": ".   [31] D. B. Acharya, K. Kuppan, and B. Divya. Agentic AI: Autonomous intelligence for complex goals—A comprehensive survey. IEEE Access, 13:18912–18936, 2025.   [32] P. S. Viswanathan. Agentic ai: A comprehensive framework for autonomous decision- making systems in artificial intelligence. International Journal of Computer Engineering and Technology, 16(1):862–879, 2025.   [33] Aske Plaat, Max van Duijn, Nathan van Stein, Mike Preuss, Peter van der Putten, and Kees Joost Batenburg. Agentic large language models, a survey. arXiv, 2025.   [34] Johannes Schneider. Generative to agentic ai: Survey, conceptualization, and challenges. arXiv, 2025.   [35] Saeid Hosseini and Hamed Seilani. The role of agentic ai in shaping a smart future: A systematic review. Array, 26:100399, 2025.",
+    "score": 0.7163188304013718,
+    "source": "015 - Agentic AI A Comprehensive Survey of Architectures, Applications, and Future Directions.pdf",
+    "page": 39
+   },
+   {
+    "text": "Objectives: This systematic review aims to provide a comprehensive analysis of agentic AI systems through the following specific research objectives:   1. To identify, classify, and synthesize literature based on the dual architectural paradigms (Symbolic vs. Neural) of Agentic AI.   2. To examine the evolution of capabilities, applications, and performance metrics within and across each paradigm.   3. To analyze governance frameworks and ethical challenges, contextualizing them within their respective architectural paradigms.   4. To highlight paradigm-specific research gaps and propose informed future directions based on the synthesized evidence.   3.2 Data Sources and Search Strategy A multi-database search strategy was employed to identify literature across both historical sym- bolic and modern neural agentic AI research. Sources included: IEEE Xplore, ACM Digital Library, arXiv, SpringerLink, ScienceDirect, and Google Scholar.   The search strategy employed a structured set of keyword clusters designed to comprehen- sively capture the core concepts associated with both architectural paradigms. To represent the Symbolic/Classical lineage, targeted terms included foundational concepts such as \"Cog- nitive architectures,\" \"BDI agent,\" \"SOAR,\" \"POMDP,\" \"symbolic planning,\" and \"multi-agent systems\" (in its traditional sense).",
+    "score": 0.6805529952272054,
+    "source": "015 - Agentic AI A Comprehensive Survey of Architectures, Applications, and Future Directions.pdf",
+    "page": 14
+   },
+   {
+    "text": "B. Acharya, K. Kuppan, and B. Divya. Agentic ai: Autonomous intelligence for complex goals—a comprehensive survey. IEEE Access, 13:18912–18936, 2025.   [48] S. Hosseini and H. Seilani. The role of agentic ai in shaping a smart future: A systematic review. Array (N. Y.), 26(100399):100399, 2025.   [49] R. Sapkota, K. I. Roumeliotis, and M. Karkee. Ai agents vs. agentic ai: A conceptual taxonomy, applications and challenges. arXiv [cs.AI], 2025.   [50] V. Patel, S. Kanani, T. Pathak, P. Patel, M. I. Ali, and J. Breslin. A demonstration of smart doorbell design using federated deep learning. arXiv [cs.DC], 2020.   [51] V. Trencsenyi, A. Mensfelt, and K. Stathis. The influence of human-inspired agentic sophistication in llm-driven strategic reasoners. arXiv [cs.AI], 2025.   [52] Y. Lu, M. S. Squillante, and C. W. Wu.",
+    "score": 0.6690544468597676,
+    "source": "015 - Agentic AI A Comprehensive Survey of Architectures, Applications, and Future Directions.pdf",
+    "page": 40
+   },
+   {
+    "text": "To establish a precise conceptual foundation, we distinguish between the field’s core con- cepts. An AI Agent (or a Single-Agent System) is a self-contained autonomous system designed to accomplish a goal. It operates primarily in isolation, though it may interact with tools and APIs. Its agency is defined by its autonomy, proactivity, and its ability to complete a task from start to finish independently.   For example, a single, powerful LLM-based (Large Language Model-based) agent tasked with “Write a full project proposal for a new mobile app” would autonomously break down the task, conduct research, write the sections, and format the final document.   In contrast, Agentic AI is the broader field and architectural approach concerned with creat- ing systems that exhibit agency. Crucially, this often involves the orchestration of Multi-Agent Systems (MAS), where multiple specialized agents work together, coordinating and communicat- ing to solve problems that are too complex for a single agent.   For example, an Agentic AI system designed for the same task would employ a team of specialized agents: a Project Manager Agent to break the goal into tasks, a Researcher Agent to gather market data, a Writer Agent to draft content, and a Quality Assurance Agent to review the output. Their collaborative workflow is the embodiment of Agentic AI.",
+    "score": 0.6467859926547153,
+    "source": "015 - Agentic AI A Comprehensive Survey of Architectures, Applications, and Future Directions.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "dabc834d-416b-4a68-85c4-3b75ab9ceb45",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f9-23869ba327a7008e3dff604f;Parent=532cf09488d8e3e9;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.348
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:53+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions"
+ },
+ "from_cache": false
+}

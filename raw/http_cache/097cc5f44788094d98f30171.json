@@ -1,0 +1,35 @@
+{
+ "status": 400,
+ "latency_s": 0.041,
+ "json": {
+  "error": {
+   "message": "messages must contain a user message"
+  }
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "dee47360-1788-4146-ba3e-870b33d32614",
+  "X-Amzn-Trace-Id": "Root=1-6b080547-2159d7e924d1800c4fe13e72;Parent=0f908a681ecc0022;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 400,
+   "latency_s": 0.041
+  }
+ ],
+ "requested_at": "2026-11-26T10:09:11+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "err_invalid_role",
+ "request_body": {
+  "messages": [
+   {
+    "role": "wizard",
+    "content": "What is ReAct?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.299,
+ "json": {
+  "query": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+  "contexts": [
+   {
+    "text": "Second, we introduce an experiment manager agent coupled with a novel agentic tree-search algorithm, enabling deeper and   Corresponding author(s): Yutaro Yamada (yutaroyamada@sakana.ai), Robert Tjarko Lange (robert@sakana.ai), and Cong Lu (cong@sakana.ai).   ar X   iv :2   50 4.   08 06   6v 1   [ cs   .A I]   1 0   A pr   2 02   5         https://github.com/SakanaAI/AI-Scientist-v2The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search   Table 1 | Comparison of AI Scientist Versions. Comparison highlights key advancements in The AI Scientist-v2, including autonomous code generation via tree search, enhanced VLM integration for feedback during experiments and manuscript review, and evaluation through formal peer review.   Feature Codebase Execution Parallel VLM Human Result Drafting Planning Experiments Reviewer Evaluation   The AI Scientist-v1 Topic-Specific Linear ✗ ✗ Not Submitted The AI Scientist-v2 Domain-General Tree-Based ✓ ✓ Workshop Acceptance-Worthy   more systematic exploration of complex hypotheses. Third, we enhance the reviewing and refinement stages by integrating a Vision-Language Model (VLM)-based feedback mechanism, improving the quality, clarity, and alignment of generated figures, captions, and text interpretation.",
+    "score": 0.809401186881318,
+    "source": "084 - The AI Scientist-v2 Workshop-Level Automated Scientific Discovery via Agentic Tree Search.pdf",
+    "page": 1
+   },
+   {
+    "text": "2025-4-14   The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search Yutaro Yamada1,*, Robert Tjarko Lange1,*, Cong Lu1,2,3,*, Shengran Hu1,2,3, Chris Lu4, Jakob Foerster4, Jeff Clune2,3,5,� and David Ha1,� *Equal Contribution, 1Sakana AI, 2University of British Columbia, 3Vector Institute, 4FLAIR, University of Oxford, 5Canada CIFAR AI Chair, �Equal Advising   AI is increasingly playing a pivotal role in transforming how scientific discoveries are made. We introduce The AI Scientist-v2, an end-to-end agentic system capable of producing the first entirely AI- generated peer-review-accepted workshop paper. This system iteratively formulates scientific hypotheses, designs and executes experiments, analyzes and visualizes data, and autonomously authors scientific manuscripts. Compared to its predecessor (v1, Lu et al., 2024), The AI Scientist-v2 eliminates the reliance on human-authored code templates, generalizes effectively across diverse machine learning domains, and leverages a novel progressive agentic tree-search methodology managed by a dedicated experiment manager agent. Additionally, we enhance the AI reviewer component by integrating a Vision-Language Model (VLM) feedback loop for iterative refinement of content and aesthetics of the figures.",
+    "score": 0.7310240758592527,
+    "source": "084 - The AI Scientist-v2 Workshop-Level Automated Scientific Discovery via Agentic Tree Search.pdf",
+    "page": 1
+   },
+   {
+    "text": "Conceptually, Bengio et al. (2025) draws a distinction between agentic AI systems and Scientist AIs, emphasizing that the latter focus primarily on deepening the understanding of data rather than pursuing goal- directed interactions with the world. This distinction underscores the varying philosophical and methodological perspectives driving contemporary automated scientific discovery efforts.   14The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search   7. Conclusion In this work, we introduced The AI Scientist-v2, a significantly improved automated scien- tific discovery system featuring enhanced autonomy and exploration capabilities. Compared to its predecessor, The AI Scientist-v1, our system removes reliance on human-crafted templates, incorporates a structured and exploratory agentic tree search methodology supervised by an exper- iment manager agent, and integrates Vision-Language Model (VLM) feedback loops for iterative refinement of visualizations and manuscript quality. We demonstrated that The AI Scientist-v2 is capable of autonomously generating manuscripts that successfully pass peer review at a workshop of a major machine learning conference.   This achievement, the first instance of a fully AI-generated paper navigating peer review, marks a notable milestone and shows promising early signs of progress, even considering the limitations discussed regarding workshop versus conference standards (§5). While significant challenges remain in consistently achieving top-tier quality and generating truly groundbreaking hypotheses, the capa- bilities demonstrated here suggest a clear trajectory.",
+    "score": 0.7290126459709317,
+    "source": "084 - The AI Scientist-v2 Workshop-Level Automated Scientific Discovery via Agentic Tree Search.pdf",
+    "page": 14
+   },
+   {
+    "text": "Recent advances using code generation as an action space have opened new opportunities for LLM-driven automated workflows (Wang et al., 2024). AIDE (Jiang et al., 2025) combines LLM-based code generation with tree search, demon-   3The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search   strating state-of-the-art performance on the MLEBench benchmark (Chan et al., 2025), designed for machine learning engineering tasks. In AIDE, each node represents a potential solution state with a corresponding scalar evaluation score (e.g., validation accuracy). Nodes are iteratively selected for further debugging or refinement based on these scores. Inspired by this approach, we integrate a similar tree search-based exploration strategy within our automated scientific discovery framework, adapting it specifically to the multi-stage nature of scientific experimentation, as detailed in §3.   3. The AI Scientist-v2 We now describe the major innovations introduced in The AI Scientist-v2 relative to The AI Scientist-v1 (Lu et al., 2024). The most significant improvement is the move towards greater autonomy and generalization, starting a more general idea generation phase (§3.1) and eliminating the reliance on fixed, human-authored template code for experimentation. This process begins with generalized idea generation, producing an initial concept, which then feeds into the experimentation phase (§3.2).",
+    "score": 0.7176265955485354,
+    "source": "084 - The AI Scientist-v2 Workshop-Level Automated Scientific Discovery via Agentic Tree Search.pdf",
+    "page": 3
+   },
+   {
+    "text": "These proposals should lead to papers that are publishable at top ML conferences.   21The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search   You have access to the following tools:   {tool_descriptions}   Respond in the following format:   ACTION: <The action to take, exactly one of {tool_names_str}>   ARGUMENTS: <If ACTION is \"SearchSemanticScholar\", provide the search query as {{\"query\": \"your search query\"}}. If ACTION is \"FinalizeIdea\", provide the idea details as {{\"idea\": {{ ... }}}} with the IDEA JSON specified below.>   If you choose to finalize your idea, provide the IDEA JSON in the arguments:   IDEA JSON: ```json {{   \"Name\": \"...\", \"Title\": \"...\", \"Short Hypothesis\": \"...\", \"Related Work\": \"...\", \"Abstract\": \"...\", \"Experiments\": \"...\", \"Risk Factors and Limitations\": \"...\"   }} ```   Ensure the JSON is properly formatted for automatic parsing.   Note: You should perform at least one literature search before finalizing your idea to ensure it is well-informed by existing research.   # Initial idea generation prompt {workshop_description}   Here are the proposals that you have already generated:   {prev_ideas_string}   Begin by generating an interestingly new high-level research proposal that differs from what you have previously proposed. ...",
+    "score": 0.6929220597655651,
+    "source": "084 - The AI Scientist-v2 Workshop-Level Automated Scientific Discovery via Agentic Tree Search.pdf",
+    "page": 21
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4358a1bd-002d-4696-8caf-076da089449d",
+  "X-Amzn-Trace-Id": "Root=1-6b080506-332edff63e23017d2579d62a;Parent=56ab4122bec18842;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.299
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:06+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search"
+ },
+ "from_cache": false
+}

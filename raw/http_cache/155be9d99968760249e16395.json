@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.272,
+ "json": {
+  "query": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
+  "contexts": [
+   {
+    "text": "Can AI agents conduct open-ended AI research? Early evidence from two case studies Peter Kirgis1,∗,† Sayash Kapoor1,∗,† Andrew Schwartz1,2,† Stephan Rabanser1,† David Africa3 Konstantinos Voudouris3 Viet Nguyen4 Toby Pilditch3 Magda Dubois3 Harry Coppock3 Cozmin Ududec3 Nitya Nadgir5 Matilda Orona6 Tilman Bayer5 Derrick Chan-Sew5 Yue Ling5 Abhishek Shetty5 Helen Toner7 Gillian Hadfield8   Seth Lazar8 Steve Newman9 Shoshannah Tekofsky10 Rishi Bommasani11 Arvind Narayanan1,†   1Princeton University 2Cornflower Labs 3UK AI Security Institute 4University of Toronto 5Independent 6UC Berkeley 7Georgetown University (CSET) 8Johns Hopkins University 9Golden Gate Institute for AI 10AI Digest 11Stanford University ∗Equal contribution †CRUX Core Team   Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on narrow, verifiable tasks, which excludes open-ended research, or submit AI-generated papers to blind peer review, which is overstretched, stochastic, and suffers from poor review quality.",
+    "score": 0.807457991620776,
+    "source": "093 - Can AI agents conduct open-ended AI research Early evidence from two case studies.pdf",
+    "page": 1
+   },
+   {
+    "text": "At the same time, there is also a strong contrast between our findings for our automated AI research experiments and our previous experiment on iOS app development. In our previous experiment, a similar agent setup—OpenClaw with Opus 4.6 thinking—autonomously built and shipped an iOS app (Kapoor et al., 2026). In other work, we have found that frontier models using open-source agent scaffolds can now reproduce published research far better than they could two years ago (Nadgir et al., 2026). This suggests that unlike engineering tasks and verifiable research tasks, agents struggle with some kinds of open-ended AI research tasks.   7.2 Implications for accelerating AI research In this paper, we claim to find preliminary evidence that AI agents are not yet capable of conducting open-ended autonomous AI research. We highlight numerous identification challenges with shadow evaluations and the particular experiments that we run. But our broader motivation for this work is to evaluate claims of AI agents accelerating and   18even automating AI R&D itself. Thus, a separate question concerns the implications of a positive or negative finding on the question of AI agents automating open-ended AI research.   There are multiple reasons why our results might not actually clarify the debate on the broader question of accelerating AI R&D.",
+    "score": 0.6919933437177057,
+    "source": "093 - Can AI agents conduct open-ended AI research Early evidence from two case studies.pdf",
+    "page": 18
+   },
+   {
+    "text": "We release the expert reviews, survey responses, agent repositories, and logs. Our results provide early evidence that today’s agents can do the engineering of AI research, but struggle with critical parts of the research lifecycle.   Date: August 10, 2026 Materials: https://cruxevals.com/crux/can-ai-agents-conduct-research Correspondence: pkirgis@princeton.edu, sayashk@princeton.edu C R U X   Table of contents 1 Introduction 2 2 Shadow evaluations: A new method for measuring progress towards automating AI research 5 3 The task and the research setup 7 4 Results 9 5 Log analysis reveals five failure modes 15 6 A robustness experiment with Codex and GPT-5.6 Sol Ultra reproduced these failure modes 17 7 Limitations 17 8 Potential biases 19   1   ar X   iv :2   60 7.   27 19   1v 2   [ cs   .A I]   7 A   ug 2   02 6         https://cruxevals.com/crux/can-ai-agents-conduct-research        https://arxiv.org/abs/2607.27191v21 Introduction One of the most consequential open questions about AI capabilities is whether AI agents can conduct AI research.",
+    "score": 0.5981985104239481,
+    "source": "093 - Can AI agents conduct open-ended AI research Early evidence from two case studies.pdf",
+    "page": 1
+   },
+   {
+    "text": "There are multiple reasons why our results might not actually clarify the debate on the broader question of accelerating AI R&D. It is possible that the path to AI R&D does not require full automation of open-ended tasks like the ones we study, or that the open-ended research skills that we measure are not ones on the critical path.   Nevertheless, there are good reasons to view the distinction between AI capabilities on verifiable tasks and open- ended research problems as germane to the question of accelerating AI R&D. Anthropic’s post on self-improvement explicitly cites Claude’s rising success rate on LLM-judged \"open-ended\" Claude Code sessions as evidence of self- improvement (Favaro and Clark, 2026). A recent report from the Elasticity Institute on the economics of recursive self-improvement explicitly distinguishes between \"broad\" and \"narrow\" AI capabilities, discusses implications of a speed-up in only \"narrow\" capabilities, and cites the need for more data on the full breadth of AI capabilities and weaknesses relative to human AI researchers (Cunningham et al., 2026). We hope our experiments provide early evidence to answer this question.   8 Potential biases Open-world evaluations allow substantial researcher discretion: researchers have leeway in choosing the questions being evaluated, designing the study, and executing it.",
+    "score": 0.575203800101819,
+    "source": "093 - Can AI agents conduct open-ended AI research Early evidence from two case studies.pdf",
+    "page": 19
+   },
+   {
+    "text": "Many forecasts of explosive AI progress speculate that AI systems will soon do AI research themselves (Kokotajlo et al., 2025; Cunningham et al., 2026). This is also the explicit premise of leading AI labs; in June, Anthropic published a post entitled “When AI Builds Itself” (Favaro and Clark, 2026), and in July, OpenAI advertised that their new model, GPT-5.6 Sol, had helped post-train a smaller model, saving researchers multiple weeks (OpenAI, 2026c).1 But despite the significance of this research direction and the attention paid to these claims, the evidence base on whether agents can solve open-ended research questions is thin.   What unifies most of this recent work on autonomous AI R&D is its focus on verifiable tasks where agents need to improve a fixed, narrow metric. Benchmarks ask agents to improve a known metric, and an automatic verifier scores the result. Beyond benchmarks, a number of evaluations have shown AI agents beating expert human performance in tasks such as optimizing GPT-2 level models (Prime Intellect Team, 2026), using weaker models to train stronger ones (Wen et al., 2026), and optimizing an autoresearch harness (Weco Team, 2026).2   But much AI research goes beyond solving verifiable tasks.",
+    "score": 0.5552609779046904,
+    "source": "093 - Can AI agents conduct open-ended AI research Early evidence from two case studies.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a3de1e57-e427-4f0a-93db-3a9461af03e6",
+  "X-Amzn-Trace-Id": "Root=1-6b080508-38d9e21333ff09277a33f8a5;Parent=3bbec96a157c9407;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.272
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:07+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Can AI agents conduct open-ended AI research? Early evidence from two case studies"
+ },
+ "from_cache": false
+}

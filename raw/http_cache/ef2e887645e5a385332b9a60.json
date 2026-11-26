@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.375,
+ "json": {
+  "query": "Automated Design of Agentic Systems",
+  "contexts": [
+   {
+    "text": "Published as a conference paper at ICLR 2025   AUTOMATED DESIGN OF AGENTIC SYSTEMS   Shengran Hu1,2, Cong Lu1,2, Jeff Clune1,2,3   1University of British Columbia, 2Vector Institute, 3Canada CIFAR AI Chair {srhu,conglu}@cs.ubc.ca, jclune@gmail.com   ABSTRACT   Researchers are investing substantial effort in developing powerful general- purpose agents, wherein Foundation Models are used as modules within agen- tic systems (e.g. Chain-of-Thought, Self-Reflection, Toolformer). However, the history of machine learning teaches us that hand-designed solutions are eventu- ally replaced by learned solutions. We describe a newly forming research area, Automated Design of Agentic Systems (ADAS), which aims to automatically cre- ate powerful agentic system designs, including inventing novel building blocks and/or combining them in new ways. We further demonstrate that there is an un- explored yet promising approach within ADAS where agents can be defined in code and new agents can be automatically discovered by a meta agent program- ming ever better ones in code. Given that most programming languages are Turing Complete, this approach theoretically enables the learning of any possible agentic system: including novel prompts, tool use, workflows, and combinations thereof.",
+    "score": 0.7067801319867626,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 1
+   },
+   {
+    "text": "In this paper, we describe a newly forming research area Automated Design of Agentic Systems (ADAS). Similar to research areas in AI-GAs (Clune, 2019) and AutoML (Hutter et al., 2019), such as Neural Architecture Search (Elsken et al., 2019), we formulate ADAS as an optimization process and identify three key components of ADAS algorithms (Figure 2).   Formulation   Automated Design of Agentic Systems (ADAS) involves using a search algorithm to dis- cover agentic systems across a search space that optimize an evaluation function.   3Published as a conference paper at ICLR 2025   • Search Space: The search space defines which agentic systems can be represented and thus discovered in ADAS. For example, works like PromptBreeder (Fernando et al., 2024) mutate only the text prompts of an agent, but their other components, such as workflow, remain the same. Thus, in these search spaces, agents that have a different workflow than the predefined one can not be represented. Existing works also explore search spaces such as graph structures (Zhuge et al., 2024) and feed-forward networks (Liu et al., 2023).   • Search Algorithm: The search algorithm defines how ADAS algorithms explore the search space.",
+    "score": 0.6858686148240557,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 3
+   },
+   {
+    "text": "It is also important to design novel evaluation functions in ADAS to address these tasks. Finally, in this work, we targeted only one domain during the search. It would be interesting to explore whether ADAS algorithms can design even better generalist agents when specifically searching for agents capable of performing well across multiple domains.   • Understanding the emergence of complexity from human organizations. Beyond potentially saving researchers’ efforts and improving upon the manual design of agentic systems, the research in ADAS is also scientifically intriguing as it sheds light on the origins of complexity emerging from human organization and society. The agentic system is a machine learning system that oper- ates primarily over natural language—a representation that is interpretable to humans and used by humans in constructing our organization and society. Thus, there is a close connection between agentic systems and human organizations, as shown in works incorporating the organizational structure for human companies in agents (Hong et al., 2023) or simulating a human town with agents (Park et al., 2023). Therefore, the study in ADAS may enable us to observe how to create a simple set of conditions and have an algorithm to bootstrap itself from simplicity to produce complexity in a system akin to human society.   Conclusion. In this paper, we propose a new research problem, Automated Design of Agentic Systems (ADAS), which aims to automatically invent novel building blocks and design powerful agentic systems.",
+    "score": 0.685513012873235,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 11
+   },
+   {
+    "text": "Our experiments show that the discovered agents substantially outperform state-of-the-art hand- designed baselines. For instance, our agents improve F1 scores on reading comprehension tasks in DROP (Dua et al., 2019) by 13.6/100 and accuracy rates on math tasks in MGSM (Shi et al., 2023) by 14.4%. Additionally, they improve accuracy over baselines by 25.9% and 13.2% on GSM8K (Cobbe et al., 2021) and GSM-Hard (Gao et al., 2023) math tasks, respectively, after trans- ferring across domains. The promising performance of our algorithm over hand-designed solutions illustrates the potential of ADAS in automating the design of agentic systems. Furthermore, the experiments demonstrate that the discovered agents not only perform well when transferring across similar domains but also exhibit strong performance when transferring across dissimilar domains, such as from mathematics to reading comprehension. This highlights the robustness and transfer- ability of the agentic systems discovered by Meta Agent Search. In conclusion, our work opens up many exciting research directions and encourages further studies (Section 6).   2 AUTOMATED DESIGN OF AGENTIC SYSTEMS (ADAS)   Search Space   E.g. Agents defined by code   Search Algorithm   E.g. LLM defines agents using code   Evaluation Function   E.g.",
+    "score": 0.670613470119612,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 3
+   },
+   {
+    "text": "Conclusion. In this paper, we propose a new research problem, Automated Design of Agentic Systems (ADAS), which aims to automatically invent novel building blocks and design powerful agentic systems. We demonstrated that a promising approach to ADAS is to define agents in code, allowing new agents to be automatically discovered by a “meta” agent programming them in code. Following this idea, we propose Meta Agent Search, where the meta agent iteratively builds on previous discoveries to program interesting new agents. The experiments show that Meta Agent Search consistently outperforms state-of-the-art hand-designed agents across an extensive number of domains, and the discovered agents transfer well across models and domains. Overall, our work illustrates the potential of an exciting new research direction toward full automation in developing powerful agentic systems from the bottom up.   11Published as a conference paper at ICLR 2025   ACKNOWLEDGMENTS   This work was supported by the Vector Institute, the Canada CIFAR AI Chairs program, grants from Schmidt Futures and Open Philanthropy, an NSERC Discovery Grant, and a generous donation from Rafael Cosman. We thank Jenny Zhang, Rach Pradhan, Ruiyu Gou, Nicholas Ioannidis, and Eunjeong Hwang for insightful discussions and feedback.   REFERENCES   Dario Amodei. Machines of loving grace, October 2024. URL https://darioamodei.com/ machines-of-loving-grace.   Anthropic.",
+    "score": 0.6548124386767674,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 11
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "48428350-8b0a-4ca9-8a2b-2cc434e48231",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fe-3d39b24f5bd68d44251365b9;Parent=49114a75e5ed4300;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.375
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:58+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Automated Design of Agentic Systems"
+ },
+ "from_cache": false
+}

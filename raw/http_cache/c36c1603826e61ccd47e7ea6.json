@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.346,
+ "json": {
+  "query": "According to the survey, what technique does the Andromeda system use to prevent overly generic diagnostic responses, and what sources does it draw context from?",
+  "contexts": [
+   {
+    "text": "Augmenting Diagnosis with RAG. To avoid overly generic responses, Andromeda [53] incorporates a RAG mechanism to supply matched domain-specific context from historical queries, troubleshooting manuals, and DBMS telemetries, en- hancing diagnostic suggestions for configuration debugging.   Despite advances, they rely on static inputs and lack real- time monitoring and interaction with databases, which limits their ability to provide adaptive diagnosis and recovery.   D. L1 Assistance in Data Preparation   Data preparation involves cleaning, integration, and discov- ery to ensure its quality and completeness for downstream tasks. This section reviews L1 data agents for this field.   Data Cleaning. Data cleaning focuses on handling missing values, constraint violations, and inconsistencies within a dataset. With the emergence of LLMs, data agents at L1 are primarily employed in two modes for data cleaning:   Generating Direct Answers via Prompting. A straightfor- ward way is to directly prompt LLMs to infer and generate an answer (e.g., filling a missing value) [80]. For example, a data record can be serialized into text and fed to them to fill in a missing value with minimal examples [80]. To improve quality, RetClean [55] and LakeFill [56] utilize an RAG approach, retrieving relevant tuples from the data lake to ground their response, which is crucial for private or domain- specific data.",
+    "score": 0.438506140653562,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 6
+   },
+   {
+    "text": "They collectively perform multi-step root cause analysis through a tree-search algorithm, continuously interacting with the database state to localize issues. Similarly, Panda [133] simulates database engineers’ workflows, interacting with the database using four mechanisms: grounding to supply query context, verification with troubleshooting documents and tickets, affordance to estimate the performance impact, and feedback for continuous improvement.   Contextualized Diagnosis Knowledge. Some approaches further integrate evolving structured diagnosis knowledge graphs to accumulate experiences and memory over time. Data agents retrieve relevant subgraphs or identify missing connections to provide concrete, contextualized knowledge, enabling more informed diagnosis. DBAIOps [135] builds a heterogeneous graph of diagnostic experience and employs an automatic graph evolution mechanism to explore relevant paths and detect potential gaps (i.e., missing connections). This structured knowledge supports root cause identification and the generation of comprehensive diagnostic reports.   Limitations. While collecting evidence and localizing is- sues through database interactions and knowledge graphs significantly enhance performance and autonomy in anomaly diagnosis and resolution, these methods remain constrained by their reliance on structured diagnostic paths, human-defined worker agents, and predefined collaboration mechanisms. Con- sequently, they are unable to autonomously design diagnostic mechanisms to proactively address emerging anomalies and coordinate with tasks such as configuration tuning and query optimization, hindering the achievement of more efficient and robust data management.   C. L2 Data Agents in Data Preparation   Data Cleaning.",
+    "score": 0.43772834204038946,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 10
+   },
+   {
+    "text": "As a complementary exploratory analysis, we also quantified diagnosis-relevant versus non-diagnostic patient utterances and their temporal distribution across dialogues (Supplementary Figs. 2 and 3).   Then, diagnostic procedures were evaluated as follows: for physical examinations, we measured the frequency with which MIRA and human physicians correctly requested these tests out of the total cases in our benchmark dataset. Tools relying on predefined categorical variables, such as laboratory, urine, microbiology requests and imaging studies, were evaluated by measuring the overlap between the parameters requested by MIRA and those documented in the data from MIMIC-IV. This overlap was then compared to the overlap observed between the two physician cohorts and MIMIC-IV. For the evaluation of medications, several challenges arose that—such as seen when measuring diagnostic accuracy—prevented the use of predefined categorical comparisons between MIRA’s output and the information available in the data. Similar to real-world hospital settings, where medications are often recorded in free-text formats in a patient chart (as they are primarily instructions for humans), direct mapping of medications is difficult. Additionally, hospital pharmacies frequently substitute medications with generics or follow in-house standard operating procedures that prioritize specific drugs over others such that the medication adminis- tered to patients in the MIMIC-IV dataset might not necessarily always follow objective standards.",
+    "score": 0.43508149977511007,
+    "source": "083 - Towards autonomous medical artificial intelligence agents.pdf",
+    "page": 15
+   },
+   {
+    "text": "Beyond developing prompts, systems like Graphologue [42] and Sensescape [74] allow users to explore the range of possible outputs given a prompt. Across these interactions, the burden of providing explicit input to build shared context lies with the user.   In contrast, a longstanding goal in HCI is to build systems that proactively assist users without disruption. Early work in mixed- initiative interfaces balanced autonomy with user control, leverag- ing context to identify the best moments to interact [36]. Classic AI models have already been employed to understand a user’s multimodal context. Memory Landmarks and the LifeBrowser sys- tem [38], for example, construct an understanding of which events users find important [64] by analyzing their calendar and mailbox. A handful of systems have started using LLMs to selectively process context. PICAN [34], for example, focuses on building context in VR-onboarding settings by focusing on dialogue and actions the user takes in the metaverse. Systems like GPTCoach [43] rely on external health data and qualitative context, augmenting LLMs with selective context to help with behavior change.   Still, our interactions with LLMs are far from visions like Weiser’s Sal, where computers unify machine intelligence with context from our daily lives [37]. Instead, LLM-based systems focus on constrain- ing the types of inputs, outputs, and tasks models operate over.",
+    "score": 0.43317893630572657,
+    "source": "052 - Creating General User Models from Computer Use.pdf",
+    "page": 4
+   },
+   {
+    "text": "Surprisingly, this remains true after we filter out questions that the model answers correctly in a closed book (w/o RAG) setting. Together, our analysis deepens our understanding of RAG systems by revealing nuances in how models generate responses with retrieval.   As a final contribution, we explore ways to use sufficient context labels to reduce model hallucinations. We implement a new selective generation framework that improves accuracy. We use a smaller, intervention model to determine when the model generates or abstains, providing a controllable trade-off. Moreover, we can combine our method with any LLM, including proprietary models like Gemini and GPT. Our main result is that using sufficient context as an additional signal leads to much higher accuracy over the fraction of answered queries, for most coverage levels and across multiple models/datasets. We also find that fine-tuning open-source models with sufficient context information does not easily reduce the hallucination rate. Instead, for LLama 3.1 and Mistral 3, fine-tuning can lead to a higher abstention rate at the cost of fewer correct answers. Code for our selective generation method and the prompts used in our autorater analysis are available on our github.   To summarize, our main contributions are   1. We define the notion of sufficient context, unifying existing work on relevance for RAG systems.",
+    "score": 0.4326976007553193,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "679a985e-dac0-4d85-b613-716e2c9691e0",
+  "X-Amzn-Trace-Id": "Root=1-6b08043f-6979ac9a2b32704c1dcf3939;Parent=07c76ee3afd94d55;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.346
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:47+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "According to the survey, what technique does the Andromeda system use to prevent overly generic diagnostic responses, and what sources does it draw context from?"
+ },
+ "from_cache": false
+}

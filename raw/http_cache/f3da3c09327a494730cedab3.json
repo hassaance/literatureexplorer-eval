@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.312,
+ "json": {
+  "query": "According to the taxonomy presented in “A Design Space for Intelligent Agents in Mixed‑Initiative Visual Analytics,” what are the possible outgoing signal types for an agent, and how does the paper differentiate between an ‘Instruction’ and a ‘Request’ signal?",
+  "contexts": [
+   {
+    "text": "It   clarifies the intent and purpose of an agent’s communication. Notification is assigned when an agent informs another   agent, e.g., [35, 121]. Instruction describes an agent prompting another agent to take a certain action in a one-directional   sense, i.e., the other agent does not communicate anything in return, like in [70, 123]. Request refers to a bi-directional   mode of communication where an agent asks another agent to take a certain action and to be informed of the result,   e.g., the other agent has to search for specific data points [89]. Feedback describes a specific form of notification,   where an agent does not have the immediate intent of informing but rather to provide commentary related to another   agent’s actions, i.e., feedback [99], recommendations [100], etc. Lastly, Availability is assigned if an agent indicates its   operational availability, i.e., busy or open, e.g., [110].   Type Incoming   Description: What are the signal types of the incoming communication to an agent?   Codes: Notification, Instruction, Request, Feedback, Availability, None   Complementary to the Type Outgoing, we define the Type Incoming, enabling a comprehensive overview of the   communication channels throughout the system. Logically, while one agent sends a specific type, at least one other   agent within the same system receives this signal type.",
+    "score": 0.5684145740338677,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 16
+   },
+   {
+    "text": "Signal The agent communicates directly to another agent and exclusively provides instructions   without sending data (outside of the signal) into the environment.   Signal and Data The agent communicates directly to another agent and provides both instructions and data.   None The agent does not communicate with other agents.   Type Outgoing   What are the signal types of the outgoing communication from an agent?   Notification The agent informs another agent.   Instruction The agent gives instructions to another agent.   Request The agent requests information from another agent.   Feedback The agent provides feedback to another agent.   Availability The agent provides its availability (e.g., Busy or Available) to another agent.   None The agent does not communicate with other agents.   Type Incoming   What are the signal types of the incoming communication to an agent?   Notification The agent gets informed by another agent.   Instruction The agent gets instructions from another agent.   Request The agent gets requested information by another agent.   Feedback The agent is provided feedback by another agent.   Availability The agent receives availability (e.g., Busy or Available) updates from another agent.   None The agent does not receive communication from other agents.   Trigger   What trigger type is initiating the agent-to-agent communication?   Internal The communication starts due to the agent’s internal logic and metrics.   Context Based The communication starts based on the agent’s observations.   Communication Based The communication starts due to external signals from other agents.",
+    "score": 0.567642954640813,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 42
+   },
+   {
+    "text": "A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics   TOBIAS STÄHLE, ETH Zürich, Switzerland   MATTHIJS JANSEN OP DE HAAR, ETH Zürich, Switzerland   SOPHIA BOYER, ETH Zürich, Switzerland   RITA SEVASTJANOVA, ETH Zürich, Switzerland   ARPIT NARECHANIA, The Hong Kong University of Science and Technology, Hong Kong SAR   MENNATALLAH EL-ASSADY, ETH Zürich, Switzerland   Environment   Configuration and Logic   Initial Modules Dynamic Modules   Agent’s thinking and decision making   World Model Agent’s knowledge of the environment and agents   Observations Agent’s sensory capacity of the environment   Communication Agent’s transmissions to and from other agents   Actions Agent’s exertion upon the environment   Agent   Action Module   Communication Module   Observation Module   Configuration Module   Infrastructure   Exert   Talk   View   Ground   InfrastructureAgent   Dim 1   Dim 6   Dim 5   Dim 4   Dim 2   Dim 3   Fig. 1. To investigate the design space of intelligent agents, a mixed-initiative visual analytics system is partitioned into three components: Agent, Infrastructure, and Environment.",
+    "score": 0.5575548962008127,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 1
+   },
+   {
+    "text": "Focusing on the agent, the design space characterizes how agents interact with the environment and other agents, given the five dimensions of the agent (Dim 1–5) – Configuration and Logic, World Model, Observations, Communication, and Actions – and the description of the Infrastructure (Dim 6).   Mixed-initiative visual analytics (VA) systems, where human and artificial intelligence (AI) agents collaborate as equal partners during   analysis, represented a paradigm shift in human-computer interaction. With recent advances in AI, these systems have seen an increase   in sophisticated software agents that have improved task planning, reasoning, and completion capabilities. However, while existing   work characterizes agent interplay and communication strategies, there is a limited understanding of the overarching design principles   for intelligent agents. Through a systematic review of 90 systems (and 207 unique agents), we propose a design space of intelligent   agents comprising six dimensions that collectively characterize an agent’s perception, environmental understanding, action capability,   and communication strategies. We contribute a novel framework for researchers and designers to explore various design choices for   new systems and to situate a system in the current landscape. We conclude with future research opportunities for intelligent agents in   mixed-initiative VA systems.   CCS Concepts: • Human-centered computing→ Interactive systems and tools.",
+    "score": 0.5457467804623671,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 1
+   },
+   {
+    "text": "Then we construct the design space based on initial discussions among all authors and three iterations of paper coding, additional discussions among the authors, and design space refinements.A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics 5   3.1 Scope and Definitions   In the absence of an established unified definition for an intelligent agent, and acknowledging the challenge of precisely   defining the terms ’agent’ and ’intelligence’ [118], we first provide several perspectives of other works on this concept.   In the domain of Reinforcement Learning, Abel et al. [1] state that the term \"agent\" frequently refers to a collection   of mathematical functions that delineate the behavior of the agent. Moreover, they note that agents are capable of   modifying their internal parameters, enabling them to learn and adapt in response to past observations and actions.   Research in the broader field of AI by Russell and Norvig [86] defines an agent as an entity “that receive percepts from the   environment and perform actions.” In their understanding, the internal unit of the agent is mapping percepts to specific   actions, enabling the agent to act upon different scenarios. Rousseau and Moulin [85] extend this concept by defining   software agents as computer systems that utilize their own knowledge bases, possess distinct goals and capabilities,   execute actions, and engage with other agents as well as with humans.",
+    "score": 0.5438079700924702,
+    "source": "120 - A Design Space for Intelligent Agents in Mixed-Initiative Visual Analytics.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fa402cdb-617a-460e-8556-c44084c6ce3c",
+  "X-Amzn-Trace-Id": "Root=1-6b080445-19ef84502cc500cb42460cac;Parent=0273ae9a33026bad;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.312
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:53+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "According to the taxonomy presented in “A Design Space for Intelligent Agents in Mixed‑Initiative Visual Analytics,” what are the possible outgoing signal types for an agent, and how does the paper differentiate between an ‘Instruction’ and a ‘Request’ signal?"
+ },
+ "from_cache": false
+}

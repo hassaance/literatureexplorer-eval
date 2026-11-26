@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 1.489,
+ "json": {
+  "id": "chatcmpl-4a3c4734-bcf5-4f16-8d00-31a98489c25e",
+  "object": "chat.completion",
+  "created": 1795687973,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "Multi-agent systems have several failure modes, which can be categorized into three main categories: System Design Issues, Inter-Agent Misalignment, and Verification Issues. Here are the failure modes under each category:\n\n**System Design Issues:**\n1. Disobey task specification (FM-1.1)\n2. Disobey role specification (FM-1.2)\n3. Step repetition (FM-1.3)\n4. Loss of conversation history (FM-1.4)\n5. Unaware of termination conditions (FM-1.5)\n\n**Inter-Agent Misalignment:**\n1. Conversation reset (FM-2.1)\n2. Fail to ask for clarification (FM-2.2)\n3. Task derailment (FM-2.3)\n4. Information withholding (FM-2.4)\n5. Ignored other agent’s input (FM-2.5)\n6. Reasoning-action mismatch (FM-2.6)\n\n**Verification Issues:**\n1. Premature termination (FM-3.1)\n2. No or incomplete verification (FM-3.2)\n3. Incorrect verification (FM-3.3)"
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1616,
+   "completion_tokens": 239,
+   "total_tokens": 1855
+  },
+  "contexts": [
+   {
+    "text": "Table 2: AgentOS 1.1 mechanisms and the failure modes they address.   Concern Failure mode Mechanism   Workspace state Ambiguous ownership or backend- dependent visibility   Stable three-region namespace with explicit private/shared workspace topology   Reference library Durable user documents exposed to mutation Read-only /shares mount, configured by the deployment   Coordination state Plan and completion state disappear during compaction   External task board, periodic re-injection, and finalization gate   Live intervention A follow-up waits behind a long fan-in oper- ation or races a report   Message-addressable queue, interruptible waits, delivery acknowledgement, and lease renewal   Context pressure Estimate-driven compaction fires too early or too late   Provider-reported trigger, tool-result eviction, and conditional LLM summary   Budget enforcement Hard cancellation discards work in flight Shared soft/hard budget, deadline-clamped waits, and bounded report recovery   Shared delivery Concurrent, undeclared, stale, or incomplete output files   Single-publisher lease, exact manifest, scoped write policy, and baseline reconciliation   Operational Boundaries. The mechanisms above define a runtime contract for state, execution, and delivery; they do not guarantee that a retrieved source, computation, scientific method, or final conclusion is correct.",
+    "score": 0.6052238693440326,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 17
+   },
+   {
+    "text": "System Design Issues   This category includes failures that arise from deficiencies in the design of the system architecture, poor conversation management, unclear task specifications or violation of constraints, and inadequate definition or adherence to the roles and responsibilities of the agents.   We identify five failure modes under this category:   • FM-1.1: Disobey task specification - Failure to adhere to the specified constraints or requirements of a given task, leading to suboptimal or incorrect outcomes.   • FM-1.2: Disobey role specification - Failure to adhere to the defined responsibilities and constraints of an assigned role, potentially leading to an agent behaving like another.   • FM-1.3: Step repetition - Unnecessary reiteration of previously completed steps in a process, potentially causing delays or errors in task completion.   • FM-1.4: Loss of conversation history - Unexpected context truncation, disregarding recent interaction history and reverting to an antecedent conversational state.   • FM-1.5: Unaware of termination conditions - Lack of recognition or understanding of the criteria that should trigger the termination of the agents’ interaction, potentially leading to unnecessary continuation.   A.2 FC2. Inter-Agent Misalignment   This category includes failures arising from ineffective communication, poor collaboration, conflicting behaviors among agents, and gradual derailment from the initial task.",
+    "score": 0.5923892118969798,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 17
+   },
+   {
+    "text": "A.2 FC2. Inter-Agent Misalignment   This category includes failures arising from ineffective communication, poor collaboration, conflicting behaviors among agents, and gradual derailment from the initial task.   We identify six failure modes under this category:   • FM-2.1: Conversation reset - Unexpected or unwarranted restarting of a dialogue, poten- tially losing context and progress made in the interaction.   • FM-2.2: Fail to ask for clarification - Inability to request additional information when faced with unclear or incomplete data, potentially resulting in incorrect actions.   • FM-2.3: Task derailment - Deviation from the intended objective or focus of a given task, potentially resulting in irrelevant or unproductive actions.   • FM-2.4: Information withholding - Failure to share or communicate important data or insights that an agent possess and could impact decision-making of other agents if shared.   • FM-2.5: Ignored other agent’s input - Disregarding or failing to adequately consider input or recommendations provided by other agents in the system, potentially leading to suboptimal decisions or missed opportunities for collaboration.   17• FM-2.6: Reasoning-action mismatch - Discrepancy between the logical reasoning process and the actual actions taken by the agent, potentially resulting in unexpected or undesired behaviors.   A.3 FC3.",
+    "score": 0.5662829603610744,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 17
+   },
+   {
+    "text": "84 85 83 84 84   80   84 84   29   86 84   40   85   75 73   75 74 75 75 73   75 75   28   77 75   26   75 72   70 71 71 71 71 68   71 71   23   72 71   27   71   Number of Failures by Failure Mode - Intervention Comparison Original Prompt Intervention Topology Intervention   1. System Design Issues 2. Interagent Misalignment 3. Verification Issues Failure Category   0   100   200   300   400   Nu m   be r o   f F ai   lu re   s   424   372 355   447   403   376   209   176 169   Distribution of Failures by Main Category - Intervention Comparison Original Prompt Intervention Topology Intervention   Failure Mode Distribution Comparison: Intervention Comparison (AG2)   Figure 11: Effect of prompt and topology interventions on ChatDev as captured by MAST using the automated LLM-as-a-Judge   I Analysis on Multi-Agent Systems with Open-Source Models   In this section, we also provide the analysis of failure modes on MetaGPT and ChatDev frame- works where the underlying LLMs are open-source models.",
+    "score": 0.5545135639734562,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 28
+   },
+   {
+    "text": "(Agent Coordination)   1.1 Disobey Task Specification   2.6 Reasoning-Action Mismatch   1.3 Step Repetition   2.4 Information Withholding   2.5 Ignored Other Agent’s Input   3.1 Premature Termination   3.2 No or Incomplete Verification   3.3 Incorrect Verification   2.2 Fail to Ask for Clarification   1.4 Loss of Conversation History   2.1 Conversation Reset   2.3 Task Derailment   1.2 Disobey Role Specification   1.5 Unaware of Termination Conditions   (11.5%)   (1.57%)   (7.59%)   (9.16%)   (8.64%)   (13.61%)   (4.71%)   (2.36%)   (6.54%)   (2.09%)   (6.02%)   (5.50%)   (15.2%)   37.17%   31.41%   31.41%   (5.50%)   Pre Execution Execution Post Execution Inter-Agent Conversation Stages   Failure Modes   Multi-Agent Dataset   Figure 2: Methodological workflow for constructing the MAST-Data dataset, involving the empirical identification of failure modes, the development of MAST, iterative refinement through inter-annotator agreement studies (κ",
+    "score": 0.5531766660378925,
+    "source": "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+    "page": 5
+   }
+  ],
+  "sources": [
+   "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf",
+   "062 - Why Do Multi-Agent LLM Systems Fail.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4a3c4734-bcf5-4f16-8d00-31a98489c25e",
+  "X-Amzn-Trace-Id": "Root=1-6b080624-5a0dcc7a17d08d8c3ef101f4;Parent=1be785bdcd59be09;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 1.489
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:52+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What failure modes do multi-agent systems have?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.297,
+ "json": {
+  "query": "In the paper 'Are Emergent Abilities in Large Language Models just In-Context Learning?', what are the two completion‑style prompting formats the authors test, and why are the results from one of them omitted from the analysis?",
+  "contexts": [
+   {
+    "text": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 5098–5139 August 11-16, 2024 ©2024 Association for Computational Linguistics   Are Emergent Abilities in Large Language Models just In-Context Learning?   Sheng Lu1*, Irina Bigoulaeva1*, Rachneet Sachdeva1, Harish Tayyar Madabushi2, and Iryna Gurevych1   1 Ubiquitous Knowledge Processing Lab, Technical University of Darmstadt 2 Department of Computer Science, The University of Bath   www.ukp.tu-darmstadt.de   htm43@bath.ac.uk   Abstract   Large language models, comprising billions of parameters and pre-trained on extensive web- scale corpora, have been claimed to acquire certain capabilities without having been specif- ically trained on them. These capabilities, re- ferred to as “emergent abilities,” have been a driving force in discussions regarding the potentials and risks of language models. A key challenge in evaluating emergent abilities is that they are confounded by model compe- tencies that arise through alternative prompt- ing techniques, including in-context learning, which is the ability of models to complete a task based on a few examples.",
+    "score": 0.6450277142660515,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 1
+   },
+   {
+    "text": "We call this use of ICL ‘implicit’ in-context learning. Performing such a mapping would be relatively straightforward for a very large model, especially given that this task format aligns closely with the training process carried out during instruction-tuning. Investigating the exact nature of this mechanism is left for future work.   51055 Related Work   Emergent Abilities An emergent ability was first defined as an ability that is not present in smaller models but is present in larger models (Wei et al., 2022b). From a review of prior literature of LLMs including GPT-3, PaLM (Chowdhery et al., 2023), Chinchilla (Hoffmann et al., 2022), Gopher (Rae et al., 2021) and LaMDA (Thoppilan et al., 2022), Wei et al. (2022b) identified a total of 67 emergent abilities based on above-random performance of LLMs on tasks designed to test those abilities from the BIG-bench dataset (Srivastava et al., 2023), and the Massive Multitask Language Understanding Benchmark (Hendrycks et al., 2020). Subsequent studies have explored additional abilities emergent in LLMs, such as Theory of Mind (Kosinski, 2023) and cognitive biases (Itzhak et al., 2023).",
+    "score": 0.5796965962984342,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 8
+   },
+   {
+    "text": "Details of these experiments and associated results are presented in Appendix B.1.   3 Emergence in GPT in the Absence of In-Context Learning   In this and the next section, we highlight a subset of the results with the goal of highlighting the key findings and trends from our experiments. Specifi- cally, this section deals with the emergence of func- tional linguistic abilities in non-instruction-tuned models, and the next section (Section 4) focuses on exploring instruction-tuned models and their interplay with ICL and emergent abilities. Consid- ering that prior research has identified emergent abilities in GPTwe prioritise the GPT family in our experimental analysis.   Figure 1 illustrates the performance of non- instruction-tuned models from the GPT family in the setting where they are prompted without the use of in-context examples (zero-shot). This ap- proach guarantees the exclusion of ICL, allowing for a clear assessment of emergent abilities. Tasks listed in the first row against a grey background are tasks which have not been found to be emergent by prior work and the rest are those which have been found to be emergent previously.   Recall that the definition of emergence (Wei et al., 2022b) requires LLMs to perform a task above the baseline and do so in a manner that cannot be predicted based on the performance of smaller models.",
+    "score": 0.5632922002476816,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 5
+   },
+   {
+    "text": "Following previous work (Wei et al., 2022b), we refer to these techniques, illus- trated in Figure 3, as prompting techniques.   Significant to our investigation is the observation that prompting techniques and emergent abilities manifest within LLMs at a comparable scale. Fur- thermore, ICL and instruction-tuning can be ob- served in smaller-scale models, albeit to a lesser degree, and are thus predictable. This predictability means they are not ‘emergent’, nor do they pose a threat, contrasting with the unpredictability and potential risks associated with emergent abilities in larger models. Considering this context, it becomes imperative to ascertain the extent of these emergent abilities in the absence of prompting techniques.   1.3 Fine-tuning, In-Context Learning, and other Prompting Techniques   Artificial neural models have, for some time, ex- hibited tremendous success on specific tasks when trained on those tasks (Devlin et al., 2019; Liu et al., 2019). PLMs in particular have demonstrated this even when trained on just a few examples (Hofer et al., 2018; Radford et al., 2019; Brown et al., 2020; Gao et al., 2021). Such performance is not considered “emergent”, precisely because models are trained on that very task.",
+    "score": 0.5568351169949386,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 2
+   },
+   {
+    "text": "Subsequent studies have explored additional abilities emergent in LLMs, such as Theory of Mind (Kosinski, 2023) and cognitive biases (Itzhak et al., 2023). However, Schaeffer et al. (2023) have previously questioned the existence of emergent abilities, arguing that emergence is likely to be a consequence of the discrete evaluation metrics commonly employed for assessing LLMs. Some (Wei et al., 2022b) argue against this by pointing out that there are tasks on which LLMs are able to perform well above the random baseline where smaller models can only perform below it, suggesting that these abilities are still emergent and not just a conse- quence of discrete evaluation metrics. Similarly, several works (Biderman et al., 2023; Tefnik and Kadlčík, 2023; Wu et al., 2023; Zheng et al., 2023) have explored the extent to which memory plays a role in LLMs’ abilities.   In-Context Learning ICL is a learning paradigm that has gained great popularity with the advent of LLMs (Brown et al., 2020; Liu et al., 2023).",
+    "score": 0.5534065947985134,
+    "source": "179 - Are Emergent Abilities in Large Language Models just In-Context Learning.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "38faded4-10da-4a71-aeb5-59a2cfa89565",
+  "X-Amzn-Trace-Id": "Root=1-6b080444-1e3d3b734876b7bc11be0055;Parent=19db5917129dfd53;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.297
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:51+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the paper 'Are Emergent Abilities in Large Language Models just In-Context Learning?', what are the two completion‑style prompting formats the authors test, and why are the results from one of them omitted from the analysis?"
+ },
+ "from_cache": false
+}

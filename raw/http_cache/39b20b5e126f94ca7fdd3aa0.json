@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.676,
+ "json": {
+  "id": "chatcmpl-9738b17c-51f7-41e7-96de-84c5856fd816",
+  "object": "chat.completion",
+  "created": 1795687463,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1667,
+   "completion_tokens": 7,
+   "total_tokens": 1674
+  },
+  "contexts": [
+   {
+    "text": "We use the publicly available instruction tuned Mistral-7B-Instruct-v0.3 model, released on May 22, 2024 (Jiang et al., 2023).   FLAMe. We use the published FLAMe-RM-24B model (Vu et al., 2024).   TRUE-NLI model. Calculated the maximum probability over the chunks in the context. Use a threshold of 0.05, where if the maximum probability is higher then this, then we classify as ‘sufficient context’. The threshold of 0.05 achieved the highest F1 score on our human labeled dataset. We use the t5_xxl_true_nli_mixture version of their model (Honovich et al., 2022).   A.2 FINE-TUNING SETTINGS   In our fine-tuning setup, we employed the LoRA adaptation technique (Hu et al., 2022) to fine-tune two models: LLaMA 3.1 8B instruct and Mistral-7B-Instruct-v0.31. We used either a 2,000-example random subset sampled from the training set of the Musique-Ans dataset or from the development set of the HotPotQA data2. The prompt template for finetuning is provided in Appendix D.   For the LoRA parameters, we set the rank to 4 and alpha to 8 for all experiments.",
+    "score": 0.44446495527564395,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 15
+   },
+   {
+    "text": ".   • RAG with HyDE: Precision of retrieval increased by ~ 18%, allowing for more contextually pertinent docu-476 Human-Centric Intelligent Systems (2025) 5:467–481   ments to be retrieved. Not only were the responses more accurate, but also more coherent in processing complex queries (e.g., gradient descent vs. stochastic gradient descent).   5 � Results and Analysis   5.1 � Training Configuration and Parameter Settings   The Gemma 7B model was trained with the Unsloth frame- work and LoRA adapters. Hyperparameters were selected with care for a trade-off between training efficiency and performance:   • Epochs: 20 — enough to allow convergence without overfitting.   • Batch Size: 16 — within GPU memory limit and for sta- ble gradient estimates.   • Learning Rate: 0.01 linearly decaying — a high initial rate to speed up initial learning, with linear decay to sta- bilize convergence.   • Precision: bf16 — offers memory efficiency while main- taining numerical precision.   These parameters were selected after initial trials demon- strated stable training curves, loss reduction, and consistent improvements in accuracy and F1 scores.   Figure 4 (Accuracy: Train vs. Test) shows a steady rise in accuracy over 20 epochs.",
+    "score": 0.4352249980764429,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 9
+   },
+   {
+    "text": "We run open sourced models on an NVIDIA A100 GPU.   B Datasets The pre-2021 datasets are common GLUE (Wang et al. 2018) and Super GLUE (Wang et al. 2019) tasks: MRPC (Dolan and Brockett 2005), boolq (Clark et al. 2019), SST- 2 (Socher et al. 2013), QNLI (Demszky, Guu, and Liang 2018), WNLI (Levesque, Davis, and Morgenstern 2012), RTE (Giampiccolo et al. 2008), CB (de Marneffe, Simons, and Tonhauser 2019), COPA (Roemmele, Bejan, and Gor- don 2011), WiC (Pilehvar and Camacho-Collados 2019). The post-2021 datasets are StrategyQA (Geva et al. 2021), NLI4Wills (Kwak et al. 2022), NewsMTSC (Hamborg and Donnay 2021), CREPE (Yu et al. 2023), FOMC (Shah, Pa- turi, and Chava 2023) and NewsMet (Joseph et al. 2023).",
+    "score": 0.42962510295556344,
+    "source": "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+    "page": 13
+   },
+   {
+    "text": "The training is conducted as a full supervised fine-tuning of the language model components, while keeping ViT and projector layers frozen to maintain visual feature extraction capabilities and improve efficiency. We   42Figure 23 Distribution of gameplay categories in the Instruction Following dataset. A total of 39,055 annotated clips (≈165 hours) are organized into a three-level hierarchical taxonomy, consisting of Game Scene, Game Content, and fine-grained activity types. The numbers in parentheses after each category indicate the number of clips and their percentage proportion within the full dataset.   set the learning rate to 1e-5 with a warmup ratio of 0.1 over 500 training steps.   Evaluation on the test set reveals excellent performance for this classification task. As shown in Table 7, both the 2B and 7B models achieve a high average precision of over 80%. Crucially, the performance difference between the 2B and 7B models is marginal. Given the comparable accuracy, we opt to use the Qwen2-VL 2B model for our production inference pipeline to maximize processing throughput and efficiency.   Table 7 Accuracy comparison across different model sizes.",
+    "score": 0.42470919553312025,
+    "source": "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+    "page": 42
+   },
+   {
+    "text": "We think a better Solver prompt or providing a simple exemplar could mitigate this issue.   B Implementation Details   B.1 Instruction Tuning   When instruction-tuning Alpaca 7B, we use the low-rank adaptation (LoRA) following a frame- work implemented in https://github.com/tloen/alpaca-lora. This trick allows us to fine- tune and specialize Planner 7B model on a single RTX 4090. We use batch-size=128, learning rate=1e-4, cutff_len=1024 with lora_r=8, and train upon Alpaca 7B (https://huggingface. co/tloen/alpaca-lora-7b) for 10 epochs. The specialized Planner 7B is uploaded to https: //huggingface.co/rewoo/planner_7B. This model can further benefit from more instruction planning data and deliberate training setups.   B.2 Prompts   Hereby we disclose the context prompts and exemplars used in ReWOO. The tool descriptions and exemplars are subject to setups at run time. Notably, ReWOO is a general paradigm and prompts are not necessarily fixed. We encourage readers and users to adjust the prompts tailored to their own needs.   –PLANNER– For the following task, make plans that can solve the problem step by step.",
+    "score": 0.42435171290245804,
+    "source": "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf",
+    "page": 13
+   }
+  ],
+  "sources": [
+   "029 - Sufficient Context.pdf",
+   "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+   "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+   "054 - Lumine An Open Recipe for Building Generalist Agents in 3D Open Worlds.pdf",
+   "041 - ReWOO Decoupling Reasoning from Observations for Efficient Augmented Language Models.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9738b17c-51f7-41e7-96de-84c5856fd816",
+  "X-Amzn-Trace-Id": "Root=1-6b080427-22fe9e5e7f5d89a06a14754c;Parent=22d18e44de4f8739;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.676
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:23+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "What hardware was used to train the Mixtral 8x7B model?"
+   }
+  ]
+ },
+ "from_cache": false
+}

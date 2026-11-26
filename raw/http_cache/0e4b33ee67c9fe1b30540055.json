@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.322,
+ "json": {
+  "query": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+  "contexts": [
+   {
+    "text": "Full Autonomy   Human in charge Data Agent in charge   Dominator Solo N/A   Dominator Integrating   Assistant   Dominator Orchestrating   Executor   Supervisor Overseeing   Dominator   Onlooker Delegating   Dominator   N/A None   Dominator None Responder Procedural Autonomous Proactive Generative   Application   Data Analysis   Structured Data Analysis Unstructured Data Analysis   Report GenerationNL2SQL NL2VIS TableQA …   Agentic Data Systems Config Tuning   Data Management   …   Data Cleaning   Data Preparation   Data Discovery   Data Integ. ……   Query Opt.   System Diagnosis   Fig. 1: An Overview of Data Agents.   Abstract—The rapid advancement of large language models (LLMs) has spurred the emergence of data agents, autonomous systems designed to orchestrate Data + AI ecosystems for tackling complex data-related tasks. However, the term “data agent” currently suffers from terminological ambiguity and inconsistent adoption, conflating simple query responders with sophisticated autonomous architectures. This terminological ambiguity fosters mismatched user expectations, accountability challenges, and barriers to industry growth.",
+    "score": 0.6334659805169713,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 1
+   },
+   {
+    "text": "Recent advances in LLM-based agents demonstrate not only enhanced reasoning ability but also emerging capacities for environmental perception and interac- tion [15], [16], memory retention [17], strategic planning [18], and external tool invocation [19], [20].   A. The Dawn of Data Agents   Within this trend, Data Agents are introduced to address the distinctive challenges of data-intensive environments. A data agent is defined as a comprehensive, LLM-powered architecture that orchestrates the Data + AI ecosystem to autonomously perform a wide range of data-related tasks [21], [22]. As illustrated in Figure 1, the data agents serve as a central intelligence layer that bridges user-facing applications with the underlying data infrastructure by producing output such as optimized database configurations, prepared data, data insights, visualization charts, or analytical reports. Formally, we can define a data agent A that operates on raw data D within an environment E (e.g., DBMS, code interpreters, APIs, etc.), utilizing LLMs M, ultimately producing an output O to tackle the data-related task T , abstractly represented as:   A : (T ,D, E ,M) → O.   Different from general LLM agents such as those designed for mathematical reasoning or open-ended conversation, data agents are built to navigate vast, heterogeneous data lakes that are too large and complex for holistic processing. Table I compares data agents with general LLM agents.",
+    "score": 0.6303384682758268,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 2
+   },
+   {
+    "text": "DataVoyager arXiv’24   MatPlotAgent ACL’24   Alpha-SQL ICML’25   DeepEye-SQL arXiv’25   nvAgent ACL’25   Doctopus VLDB’25   MACT arXiv’25   GraphReader EMNLP’24DataPuzzle   arXiv’25   DAgent arXiv’25   DataNarrative EMNLP’24   Multimodal DeepResearcher   arXiv’25   AutoDCWorkflow EMNLP’25 Findings   λ-Tune SIGMOD’25L1   L0   A ut   on om   y L   ev el   s of   D at   a A   ge nt   s   L2   L3   L4 L5   Data Management Data Preparation   D ata   A nalysis   Data Cleaning Data Integration   Data Discovery Data   Analysis   Structured   U nstructured   D ata   Analysis Report   G eneration   Configuration   Tuning   Query   Optimization   System Diagnosis   Proto-L3   Fig. 2: Representative Data Agents Across Different Levels.   • User-Side Risk. The ambiguity creates expectation mis- matches. When users are unable to clearly aware the scope and limitations of data agents’ capabilities, they can form a flawed understanding of their functionality, leading to a gap between users’ expectations and the system’s actual performance.",
+    "score": 0.6153458614039776,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 3
+   },
+   {
+    "text": "JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021 1   A Survey of Data Agents: Emerging Paradigm or Overstated Hype?   Yizhang Zhu, Liangwei Wang, Chenyu Yang, Xiaotian Lin, Boyan Li, Wei Zhou, Xinyu Liu, Zhangyang Peng, Tianqi Luo, Yu Li, Chengliang Chai, Chong Chen, Shimin Di, Ju Fan, Ji Sun, Nan Tang, Fugee Tsung,   Jiannan Wang, Chenglin Wu, Yanwei Xu, Shaolei Zhang, Yong Zhang, Xuanhe Zhou, Guoliang Li∗ and Yuyu Luo∗   Awesome Data Agents: https://github.com/HKUSTDial/awesome-data-agents   LLM Hub   Data Agent   Structured Data Semi-structured Data   …… … … Documents Images Videos   … …   Unstructured Data Data Lake   Level 0 Level 1 Level 2 Level 3 Level 4 Level 5   No Autonomy Assistance Partial Autonomy Conditional Autonomy High Autonomy Full Autonomy   Human in charge Data Agent in charge   Dominator Solo N/A   Dominator Integrating   Assistant   Dominator Orchestrating   Executor   Supervisor Overseeing   Dominator   Onlooker Delegating   Dominator   N/A None   Dominator None Responder",
+    "score": 0.6134942646868405,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 1
+   },
+   {
+    "text": "Preparation   Data Discovery   Data Integ. ……   Query Opt.   System Diagnosis   Fig. 1: An Overview of Data Agents.   Abstract—The rapid advancement of large language models (LLMs) has spurred the emergence of data agents, autonomous systems designed to orchestrate Data + AI ecosystems for tackling complex data-related tasks. However, the term “data agent” currently suffers from terminological ambiguity and inconsistent adoption, conflating simple query responders with sophisticated autonomous architectures. This terminological ambiguity fosters mismatched user expectations, accountability challenges, and barriers to industry growth. Inspired by the SAE J3016 standard for driving automation, this survey introduces the first systematic hierarchical taxonomy for data agents, comprising six levels that delineate and trace progressive shifts in autonomy, from manual operations (L0) to a vision of generative, fully autonomous data agents (L5), thereby clarifying capability boundaries and   ∗Corresponding authors: Guoliang Li (liguoliang@tsinghua.edu.cn) and Yuyu Luo (yuyuluo@hkust-gz.edu.cn).   Yizhang Zhu, Liangwei Wang, Chenyu Yang, Xiaotian Lin, Boyan Li, Xinyu Liu, Zhangyang Peng, Tianqi Luo, Nan Tang, Fugee Tsung, and Yuyu Luo are with The Hong Kong University of Science and Technology (Guangzhou), China.",
+    "score": 0.6134508360970929,
+    "source": "104 - A Survey of Data Agents Emerging Paradigm or Overstated Hype.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e3ef8a8e-136f-45d3-b3c6-449c36efcd3a",
+  "X-Amzn-Trace-Id": "Root=1-6b08050a-3e716b7d03686fca7c9e9251;Parent=716dcb04264995fc;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.322
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:09+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?"
+ },
+ "from_cache": false
+}

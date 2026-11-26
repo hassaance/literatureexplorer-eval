@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.295,
+ "json": {
+  "query": "RedAgent: An Autonomous Agent for Context-aware Red Teaming of LLM Jailbreaks",
+  "contexts": [
+   {
+    "text": "� LLM applications are vulnerable to specific strategies under different jailbreak goals and contexts: The heat map shows a clear diagonal dominance near the top: each class of jailbreak goal tends to succeed more frequently with particular strategies, indicating that a jailbreak’s effectiveness depends strongly on the attack objective. To   Authorized licensed use limited to: Oulu University. Downloaded on October 15,2026 at 14:10:21 UTC from IEEE Xplore. Restrictions apply.6512 IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING, VOL. 23, NO. 3, MAY/JUNE 2026   examine how strategy choice interacts with context, we append six context-category rows at the bottom of the heat map. A comparable pattern emerges across these context rows, as different contexts favor different jailbreak strate- gies. Based on this finding, red team methods can enhance strategy selection by considering the contexts and jailbreak goals.   IV. REDAGENT   Based on the above observations, in this section, we propose a novel agent-based red teaming method, RedAgent, to efficiently identify the context-specific jailbreak vulnerabilities of cus- tomized LLM applications. We first describe the context-specific red teaming task and highlight the challenges of introducing contexts into red teaming in Section IV-A. Following this, we provide an overview of our proposed method that addresses these challenges in Section IV-B.",
+    "score": 0.7684064571875743,
+    "source": "118 - RedAgent.pdf",
+    "page": 6
+   },
+   {
+    "text": "6506 IEEE TRANSACTIONS ON DEPENDABLE AND SECURE COMPUTING, VOL. 23, NO. 3, MAY/JUNE 2026   RedAgent: An Autonomous Agent for Context-Aware Red Teaming of   LLM Jailbreaks Huiyu Xu , Wenhui Zhang, Zhibo Wang , Senior Member, IEEE, Feng Xiao, Rui Zheng ,   Zhongjie Ba , Member, IEEE, and Kui Ren , Fellow, IEEE   Abstract—Recently, Large Language Models (LLMs) have been integrated into many real-world applications like Code Copilot. These applications have significantly expanded the attack surface of LLMs, exposing them to complex real-world jailbreak threats. Despite the promising advances in actively finding jailbreak vulner- abilities of LLMs (i.e., red teaming) in general contexts, identifying these threats in complex domain-specific contexts (e.g, mathemati- cal LLMs) remains underexplored. In this paper, we study whether the context these real-world LLM applications work in, including different system prompts, tools, and scenarios of tasks, give rise to context-specific jailbreak threats. Particularly, we adapt general jailbreak prompts to the context of the target application via LLM rewriting to generate context-specific attacks. By measuring the differences in jailbreak responses between general attacks and context-specific attacks, we reveal that customized domain-specific LLMs are more vulnerable in their specific context.",
+    "score": 0.7581790614490411,
+    "source": "118 - RedAgent.pdf",
+    "page": 1
+   },
+   {
+    "text": "By measuring the differences in jailbreak responses between general attacks and context-specific attacks, we reveal that customized domain-specific LLMs are more vulnerable in their specific context. Motivated by this observation, we propose a context-aware red teaming ap- proach, RedAgent, to generate context-specific jailbreak attacks towards customized LLM applications. Through effectively re- trieving and updating structured knowledge in an agent system, RedAgent efficiently perceive and utilize contextual information to adapt the jailbreak prompts to the target contexts. Extensive exper- iments show that our system can jailbreak most black-box LLMs within just five queries, improving the efficiency of existing red teaming methods by two times. Further, RedAgent can effectively jailbreak customized LLM applications. By generating context- specific jailbreak prompts towards 60 trending applications on the marketplace of OpenAI, we discover 600 vulnerabilities of these real-world applications with only two queries per vulnerability.   Received 23 July 2025; revised 6 January 2026; accepted 11 February 2026. Date of publication 16 February 2026; date of current version 12 May 2026.",
+    "score": 0.7517966575076843,
+    "source": "118 - RedAgent.pdf",
+    "page": 1
+   },
+   {
+    "text": "Typical red teams explore potential jailbreak variants randomly, often relying on general templates derived from past trials and thus lacking contextual relevance. Since existing methods do not explicitly estimate or leverage contex- tual information from target LLM responses, they fail to adapt prompts to specific contexts effectively. iii) Diversity of prompt refinement: Typical red teaming approaches are limited to using a few mutation operations to refine jailbreak templates. This restricted action space limits the automation of adaptive prompt generation, often leading to ineffective refinement. The key requirement for context-specific red-teaming is to dynamically adapt attacks based on contextual information estimated from responses, which demands a more diverse and flexible action space that existing methods do not provide.   To address these challenges, we propose RedAgent, a novel red teaming method that automatically perceives the context and adjusts the general jailbreak prompts into context-specific ones based on it. To enable scalability and flexibility in red team knowledge, we propose modeling existing jailbreak prompts as structured representations of jailbreak strategies. These strate- gies, organized into structured text, act as flexible conditions for generating adaptive prompts that can be applied across varying contexts. Upon such modeling, we enhance the contextual rel- evance of generated prompts via building a context-aware red team. Unlike previous methods, we optimize the red teaming knowledge at two levels: the global strategy level (i.e., long-term memory) and the contextual modification level (i.e., short-term memory).",
+    "score": 0.7370874179167709,
+    "source": "118 - RedAgent.pdf",
+    "page": 2
+   },
+   {
+    "text": "Each LLM is prompted by specific instructions to perform different roles. Here is the pipeline of RedAgent:   i) Red Team Knowledge Construction: The summarizer LLM abstracts collected jailbreak prompts into strategies as the ini- tialization of the long-term memory.   ii) Context-guided Jailbreak Prompt Generation: Given an initial jailbreak goal, the retrieval LLM searches relevant strate- gies from long-term memory. Upon the strategy as generation condition, the attacker LLM generates corresponding jailbreak prompts to query target LLM.   iii) Context-aware Jailbreak Evaluation: The evaluator LLM evaluates the response of the target LLM application, deter- mines whether the response is harmful, and obtains the context   Authorized licensed use limited to: Oulu University. Downloaded on October 15,2026 at 14:10:21 UTC from IEEE Xplore. Restrictions apply.XU et al.: REDAGENT: AN AUTONOMOUS AGENT FOR CONTEXT-AWARE RED TEAMING OF LLM JAILBREAKS 6513   Fig. 5. An overview of RedAgent, which is a multi-LLM agent red team system with five individual LLMs, each of them are prompted to have different roles and capabilities. They autonomously collaborate to obtain context-specific jailbreak strategies and leverage them to generate context-specific jailbreak prompts.",
+    "score": 0.7346661328724925,
+    "source": "118 - RedAgent.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "e76409a1-dc88-4f7a-82fa-5adb6d9b1c8f",
+  "X-Amzn-Trace-Id": "Root=1-6b08050c-2162f96b787d4ff653c2bc96;Parent=01f291c7e2f9a35c;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.295
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:12+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "RedAgent: An Autonomous Agent for Context-aware Red Teaming of LLM Jailbreaks"
+ },
+ "from_cache": false
+}

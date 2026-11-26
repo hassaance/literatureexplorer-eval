@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.314,
+ "json": {
+  "query": "What is HyDE?",
+  "contexts": [
+   {
+    "text": "Here the encoder function f serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector. It further grounds the hypothetical vector to the actual corpus and the real documents. The full HyDE system is illustrated in Figure 1.   4 Experiments   4.1 Setup Implementation We implement HyDE using InstructGPT, a GPT-3 model from the instruct series (text-davinci-003; Ouyang et al. (2022)) and Contriever models (Izacard et al., 2021). We   sample from InstructGPT using the OpenAI play- ground default temperature of 0.7 for open-ended generations. We use the English-only Contriever model for English retrieval tasks and multilingual mContriever for non-English tasks. We conducted retrieval experiments with the Pyserini toolkit (Lin et al., 2021a).   Datasets We consider web search query sets TREC DL19 (Craswell et al., 2020a) and DL20 (Craswell et al., 2020b); they are based on the MS-MARCO dataset (Bajaj et al., 2016). We also use a diverse collection of 6 low-resource datasets from the BEIR dataset (Thakur et al., 2021).",
+    "score": 0.5594585916437363,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 4
+   },
+   {
+    "text": "Here the encoder function f serves as a lossy compressor that outputs dense vectors, where the extra details are filtered and left out from the vector. It further grounds the hypothetical vector to the actual corpus and the real documents. The full HyDE system is illustrated in Figure 1.   4 Experiments   4.1 Setup Implementation We implement HyDE using InstructGPT, a GPT-3 model from the instruct series (text-davinci-003; Ouyang et al. (2022)) and Contriever models (Izacard et al., 2021). We   sample from InstructGPT using the OpenAI play- ground default temperature of 0.7 for open-ended generations. We use the English-only Contriever model for English retrieval tasks and multilingual mContriever for non-English tasks. We conducted retrieval experiments with the Pyserini toolkit (Lin et al., 2021a).   Datasets We consider web search query sets TREC DL19 (Craswell et al., 2020a) and DL20 (Craswell et al., 2020b); they are based on the MS-MARCO dataset (Bajaj et al., 2016). We also use a diverse collection of 6 low-resource datasets from the BEIR dataset (Thakur et al., 2021).",
+    "score": 0.5594585916437363,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 4
+   },
+   {
+    "text": "This vector identifies a neighborhood in the corpus embedding space, where similar real documents are retrieved based on vector similarity. This second step ground the generated document to the actual corpus, with the encoder’s dense bottleneck filtering out the incorrect details. Our exper- iments show that HyDE significantly outper- forms the state-of-the-art unsupervised dense retriever Contriever and shows strong per- formance comparable to fine-tuned retrievers, across various tasks (e.g. web search, QA, fact verification) and languages (e.g. sw, ko, ja).1   1 Introduction   Dense retrieval (Lee et al., 2019; Karpukhin et al., 2020), the method of retrieving documents using semantic embedding similarities, has been shown successful across tasks like web search, question answering, and fact verification. A variety of meth- ods such as negative mining (Xiong et al., 2021; Qu et al., 2021), distillation (Qu et al., 2021; Lin et al., 2021b; Hofstätter et al., 2021) and task-specific   ∗ Equal contribution. 1No models were trained or fine-tuned in making this pre-   print. Our open source code is available at https://github. com/texttron/hyde.",
+    "score": 0.5258607838719631,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 1
+   },
+   {
+    "text": "This vector identifies a neighborhood in the corpus embedding space, where similar real documents are retrieved based on vector similarity. This second step ground the generated document to the actual corpus, with the encoder’s dense bottleneck filtering out the incorrect details. Our exper- iments show that HyDE significantly outper- forms the state-of-the-art unsupervised dense retriever Contriever and shows strong per- formance comparable to fine-tuned retrievers, across various tasks (e.g. web search, QA, fact verification) and languages (e.g. sw, ko, ja).1   1 Introduction   Dense retrieval (Lee et al., 2019; Karpukhin et al., 2020), the method of retrieving documents using semantic embedding similarities, has been shown successful across tasks like web search, question answering, and fact verification. A variety of meth- ods such as negative mining (Xiong et al., 2021; Qu et al., 2021), distillation (Qu et al., 2021; Lin et al., 2021b; Hofstätter et al., 2021) and task-specific   ∗ Equal contribution. 1No models were trained or fine-tuned in making this pre-   print. Our open source code is available at https://github. com/texttron/hyde.",
+    "score": 0.5258607838719631,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 1
+   },
+   {
+    "text": "This dataset ensures that the model acquires relevant conversational nuances specific to the targeted domain. The final fine-tuned model is enhanced with LoRA adapters and pushed to the Hugging Face reposi- tory, making it accessible for further integrations. Adding another dimension to this system, HyDE introduces a novel approach to query transformation. Unlike traditional meth- ods that rely on querying large databases to retrieve exter- nal documents, HyDE generates hypothetical documents based on user queries. These documents encapsulate antici- pated patterns of relevant information, transforming them into embedding vectors. By averaging these embeddings   and matching them to actual embeddings through vector similarity, HyDE bypasses conventional retrieval steps. This approach not only eliminates the need for exhaustive database searches but also ensures that responses are direct, concise, and highly relevant. With the synergistic capabili- ties of these advancements, HyDE query transformation is integrated into a Gradio chatbot. This chatbot leverages the streamlined and fine-tuned RAG pipeline, combined with HyDE’s advanced embeddings, to deliver token-efficient, context-aware, and domain-specific responses. The integra- tion optimizes the response process by reducing verbosity and enhancing clarity, setting a new standard for conversa- tional Artificial Intelligence (AI).",
+    "score": 0.5047966042191631,
+    "source": "055 - Leveraging HyDE and RAG in Gemma LLM Framework for Enlightened Deep Learning Chatbots.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "a4e18947-60db-4a1f-9345-7eb4570d921b",
+  "X-Amzn-Trace-Id": "Root=1-6b080620-608916722389ece816f88a9a;Parent=5ed2576f46b3916d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.314
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:48+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "query": "What is HyDE?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.518,
+ "json": {
+  "id": "chatcmpl-64153e4b-08a1-4aac-b9e2-89553bf2fba5",
+  "object": "chat.completion",
+  "created": 1795687494,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "I don't know."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1443,
+   "completion_tokens": 7,
+   "total_tokens": 1450
+  },
+  "contexts": [
+   {
+    "text": "conference paper at ICLR 2025   100   101 Args: 102 - taskInfo (Info): Task information. 103   104 Returns: 105 - Answer (Union[Info, str]): Your FINAL Answer. Return either a   namedtuple Info or a string for the answer. 106 \\\"\"\" 107 pass   With the provided framework, an agent can be easily defined with a “forward” function. Here we show an example of implementing self-reflection using the framework.   Code 2: Self-Reflection implementation example 1 def forward(self, taskInfo): 2 # Instruction for initial reasoning 3 cot_initial_instruction = \"Please think step by step and then solve   the task.\" 4   5 # Instruction for reflecting on previous attempts and feedback to improve   6 cot_reflect_instruction = \"Given previous attempts and feedback, carefully consider where you could go wrong in your latest attempt. Using insights from previous attempts, try to solve the task better.\"   7 cot_module = FM_Module([’thinking’, ’answer’], ’Chain-of-Thought’) 8   9 # Instruction for providing feedback and correcting the answer 10 critic_instruction = \"Please review the answer above and criticize on   where might be wrong.",
+    "score": 0.46869872058657963,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 25
+   },
+   {
+    "text": "In decision-making tasks, we employ pre-defined heuristic functions that are tailored to specific evaluation criteria. Additionally, we experiment with using a different instantiation of an LLM itself as an Evaluator, generating rewards for decision-making and programming tasks. This multi-faceted approach to Evaluator design allows us to examine different strategies for scoring generated outputs, offering insights into their effectiveness and suitability across a range of tasks.   Self-reflection The Self-Reflection model instantiated as an LLM, plays a crucial role in the Reflexion framework by generating verbal self-reflections to provide valuable feedback for future trials. Given a sparse reward signal, such as a binary success status (success/fail), the current trajectory, and its persistent memory mem, the self-reflection model generates nuanced and specific feedback. This feedback, which is more informative than scalar rewards, is then stored in the agent’s memory (mem). For instance, in a multi-step decision-making task, when the agent receives a failure signal, it can infer that a specific action ai led to subsequent incorrect actions ai+1 and ai+2. The agent can then verbally state that it should have taken a different action, a′i, which would have resulted in a′i+1   and a′i+2, and store this experience in its memory. In subsequent trials, the agent can leverage its past experiences to adapt its decision-making approach at time t by choosing action a′i.",
+    "score": 0.4612272517164322,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 4
+   },
+   {
+    "text": "In ExpeL [43], two approaches are introduced for the agent to acquire reflection. Firstly, the agent compares successful or failed trajectories within the same task. Secondly, the agent learns from a collection of successful tra- jectories to gain experiences.   A significant distinction between traditional LLMs and the agents is that the latter must possess the ca- pability to learn and complete tasks in dynamic en- vironments. If we consider the memory module as responsible for managing the agents’ past behaviors, it becomes essential to have another significant mod- ule that can assist the agents in planning their future actions. In the following, we present an overview of how researchers design the planning module.10 Front. Comput.",
+    "score": 0.4557736049492079,
+    "source": "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+    "page": 9
+   },
+   {
+    "text": "To achieve fully autonomous behavior, we implement two self-evaluation techniques: natural language classification using an LLM and a hand-written heuristic. The heuristic is simple: if the agent executes the same action and receives the same response for more than 3 cycles, or if the number of actions taken in the current environment exceeds 30 (inefficient planning), we self-reflect. In the baseline runs, if self-reflection is suggested, we skip the self-reflection process, reset the environment, and start a new trial. In the Reflexion runs, the agent uses self-reflection to find its mistake, update its memory, reset the environment, and start a new trial. To avoid very long prompt windows that may exceed the maximum limit, we truncate the agent’s memory to the last 3 self-reflections (experiences).   To avoid syntactic errors, we provide two domain-specific few-shot trajectories to the agent. We use the same few-shot trajectory examples as Yao et al. [30] with GPT-3 for the LLM. AlfWorld tasks, ReAct few-shot prompts, and Reflexion examples are included in the appendix.   Results ReAct + Reflexion significantly outperforms ReAct by completing 130 out of 134 tasks using the simple heuristic to detect hallucinations and inefficient planning. Further, ReAct + Reflexion learns to solve additional tasks by learning in 12 consecutive trials.",
+    "score": 0.44701879048083115,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 5
+   },
+   {
+    "text": "Your FINAL Answer. Return either a   namedtuple Info or a string for the answer. 106 \\\"\"\" 107 pass   With the provided framework, an agent can be easily defined with a “forward” function. Here we show an example of implementing self-reflection using the framework.   Code 2: Self-Reflection implementation example 1 def forward(self, taskInfo): 2 # Instruction for initial reasoning 3 cot_initial_instruction = \"Please think step by step and then solve   the task.\" 4   5 # Instruction for reflecting on previous attempts and feedback to improve   6 cot_reflect_instruction = \"Given previous attempts and feedback, carefully consider where you could go wrong in your latest attempt. Using insights from previous attempts, try to solve the task better.\"   7 cot_module = FM_Module([’thinking’, ’answer’], ’Chain-of-Thought’) 8   9 # Instruction for providing feedback and correcting the answer 10 critic_instruction = \"Please review the answer above and criticize on   where might be wrong.",
+    "score": 0.444240098924697,
+    "source": "046 - Automated Design of Agentic Systems.pdf",
+    "page": 25
+   }
+  ],
+  "sources": [
+   "046 - Automated Design of Agentic Systems.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "008 - A Survey on Large Language Model based Autonomous Agents.pdf",
+   "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+   "046 - Automated Design of Agentic Systems.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "64153e4b-08a1-4aac-b9e2-89553bf2fba5",
+  "X-Amzn-Trace-Id": "Root=1-6b080445-3dbf75ba636fa71e457b0a8e;Parent=6ec449fd19cb5ce8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.518
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:53+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "In the Cradle system, what does the self‑reflection module do when the agent tries to move left but encounters an obstacle during the 'Purchasing Seeds' task?"
+   }
+  ]
+ },
+ "from_cache": false
+}

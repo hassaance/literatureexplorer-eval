@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.368,
+ "json": {
+  "query": "Agents Are Systems, Not Models: Rethinking Agentic Evaluation",
+  "contexts": [
+   {
+    "text": "AGENTS ARE SYSTEMS, NOT MODELS: RETHINKING AGENTIC EVALUATION   Luis Wiedmann1,2, Leander Girrbach1,2, Cordelia Schmid3, Zeynep Akata1,2   1Technical University of Munich, MCML 2Helmholtz Munich 3Inria, École normale supérieure, CNRS, PSL Research University   ABSTRACT   Agent evaluations increasingly go beyond a single success rate, reporting metrics such as cost, consistency, and robustness. Yet they typically treat the agent it- self as fixed. In practice, an agent is a configurable system: users decide what to tell it, how long to let it run, and which model to use, and each of these choices can change how well and how consistently it performs. We study these choices on a new benchmark of four scientific tasks, where a coding agent must find and correctly operate a published specialist model. We investigate five parts of the agent’s configuration: task information, reasoning, self-verification, time budget, and backbone model. We find substantial run-to-run variability, with approxi- mately 54% of the outcome variance coming from repeating the same configu- ration rather than changing it. Across configurations, the information provided to the agent has the largest effect, exceeding both time budget and model size, while also reducing cost and improving calibration.",
+    "score": 0.7221990728145677,
+    "source": "154 - Agents Are Systems, Not Models Rethinking Agentic Evaluation.pdf",
+    "page": 1
+   },
+   {
+    "text": "We believe that the current issue with evaluating agentic systems stems from the lack of feedback during the intermediate task-solving stages for these nontraditional systems. Agentic systems think more like a human, often act step-by-step (Wooldridge, 1999) and often hosting very human-like natural language discussions internally to solve problems (Zhuge et al., 2023). And thus agentic systems should be evaluated like a human, with rich evaluative feedback which looks at the full thought and action trajectory; evaluating an agentic system in the traditional way is like evaluating a student using multiple-choice testing—a comparatively unreliable estimator (Park, 2010). For example, while SWE-Bench (Jimenez et al.) is widespread, its evaluation method, which relies solely on the final resolve rate for long-term automated repair tasks, does not effectively pinpoint what is happening within agentic systems that affects the resolve rate. On the other hand, performing a better evaluation with a human is prohibitively expensive. We instead propose that agentic systems should be used to evaluate agentic systems. Inspired by LLM-as-a-Judge (Zheng et al., 2024; Fu et al., 2024; Chen et al.), which uses LLMs to evaluate LLMs, we call this framework Agent-as-a- Judge, of which it is a key extension to the world of agentic systems (see Figure 1).",
+    "score": 0.6234099247796885,
+    "source": "139 - Agent-as-a-Judge: Evaluating Agents with Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "The symbolic paradigm offers verifiable reliability through rigorously engineered protocols, while the neural paradigm offers adaptable emergence through learned conversation patterns. This critical distinction is essential for understanding the capabilities, risks, and appro- priate applications of modern MAS, thereby further validating the necessity of the dual-paradigm framework presented in this survey.   4.6 Evaluating Agency: Beyond Accuracy The evaluation of Agentic AI systems presents a fundamental challenge that distinguishes it from the assessment of traditional AI models. As the reviewer rightly notes, simple metrics like ac- curacy are wholly insufficient. Measuring “agency” requires quantifying a system’s capacity for sustained, goal-directed behavior in dynamic environments, necessitating a multi-dimensional evaluation framework that accounts for paradigm-specific mechanisms of action.   The core challenge lies in the fact that agency is not a monolithic property but a spectrum encompassing autonomy, task success, efficiency, and robustness. Consequently, evaluation must be tailored to the architectural paradigm.   In the Symbolic Paradigm, evaluation has historically focused on verifiability. Key met- rics include Goal Completion Fidelity, which measures the percentage of pre-defined sub-goals correctly achieved in a plan, and Plan Optimality, which compares the cost (e.g., time, steps) of an agent’s generated plan against a known optimal solution.",
+    "score": 0.5965002026943955,
+    "source": "015 - Agentic AI A Comprehensive Survey of Architectures, Applications, and Future Directions.pdf",
+    "page": 21
+   },
+   {
+    "text": ".   • Environment and goals. The more complex the environment — e.g. range of tasks and domains, multi-stakeholder, long time horizon, unexpected changes — the more AI systems operating in that environment are agentic [41, 14]. Systems that pursue complex goals without being instructed on how to pursue the goal are more agentic [41, 4, 14].   • User interface and supervision. AI systems that can be instructed in natural language and act autonomously on the user’s behalf are more agentic [14]. In particular, systems that require less user supervision are more agentic [41, 4, 14]. We discuss the user supervision aspect in more detail in Section 5.2.   • System design: Systems that use design patterns such as tool use (e.g., web search, programming) or planning (e.g., reflection, subgoal decomposition) are more agentic [57, 38]. Systems whose control flow is driven by an LLM, and hence dynamic, are more agentic [57, 5].   2 AI agent evaluations must be cost-controlled   2.1 Maximizing accuracy can lead to unbounded cost   Calling language models repeatedly and taking a majority vote can lead to non-trivial increases in accuracy across benchmarks like GSM-8K, MATH, Chess, and MMLU [26, 6, 48].",
+    "score": 0.5658539513902063,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 2
+   },
+   {
+    "text": "We found pervasive shortcomings in the reproducibility of WebArena and HumanEval evaluations (Table A6). These errors inflate accuracy estimates and lead to overoptimism about agent capabilities.   The overarching goal of our work is to stimulate the development of agents that are useful in the real world and not just accurate on benchmarks. (1) and (2) above do this by incorporating metrics beyond accuracy into agent evaluation and optimization; (4) and (5) do so by improving precision about what a benchmark aims to measures and ensuring that it actually measures that; and (3) does both.   1.1 What is an AI agent?   In traditional AI, agents are defined as entities that perceive and act upon their environment [40]. In the LLM era, the term is used in a narrower way (a thermostat would qualify as an agent under the traditional definition). Many researchers have tried to formalize the community’s intuitive understanding of what constitutes an agent in the context of language-model-based systems. Many of them view it as a spectrum — sometimes denoted by the term ‘agentic’ [38] — rather than a binary definition of an agent. We agree with this perspective. Since there are already many definitions, we do not provide a new one, but rather identify the factors that cause an AI system to be considered more agentic according to existing definitions. We found three clusters of factors.   • Environment and goals.",
+    "score": 0.5486577304116963,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "3170d736-1593-4045-89ba-538eb637d95f",
+  "X-Amzn-Trace-Id": "Root=1-6b080512-72a0e158671567b2109decaa;Parent=16f46b932de07332;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.368
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:18+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agents Are Systems, Not Models: Rethinking Agentic Evaluation"
+ },
+ "from_cache": false
+}

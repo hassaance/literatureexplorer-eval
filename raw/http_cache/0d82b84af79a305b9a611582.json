@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.363,
+ "json": {
+  "query": "A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities",
+  "contexts": [
+   {
+    "text": "A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities Jiaqi Chen1,∗ Ming Wang1,2,∗ Tingna Xie1 Shi Feng1,† Yongkang Liu3,†   1School of Computer Science and Engineering, Northeastern University, Shenyang 110819, China 2School of Computing and Information Systems, Singapore Management University, Singapore 178902, Singapore   3School of Computer and Communication Engineering, Northeastern University, Qinhuangdao 066004, China ∗Equal contribution †Corresponding author: fengshi@cse.neu.edu.cn, liuyongkang@qhd.neu.edu.cn   Abstract   Imbuing Large Language Models (LLMs) with specific per- sonas is prevalent for tailoring interaction styles, yet the impact on underlying cognitive capabilities remains unexplored. We employ the Neuron-based Personality Trait Induction (NPTI) framework to induce Big Five personality traits in LLMs and evaluate performance across six cognitive benchmarks. Our findings reveal that persona induction produces stable, repro- ducible shifts in cognitive task performance beyond surface- level stylistic changes. These effects exhibit strong task dependence: certain personalities yield consistent gains on instruction-following, while others impair complex reasoning. Effect magnitude varies systematically by trait dimension, with Openness and Extraversion exerting the most robust influence.",
+    "score": 0.6661711775421606,
+    "source": "007 - A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities.pdf",
+    "page": 1
+   },
+   {
+    "text": "• RQ2 (Domain Specificity): Do persona effects exhibit se- lective influence on specific cognitive domains (reasoning, instruction-following, knowledge retrieval), consistent with the CB5T framework that predicts trait-process specificity?   • RQ3 (Trait-Process Mapping): Which Big Five dimen- sions most strongly influence cognitive performance, and do they map onto distinct computational mechanisms as predicted by human personality-cognition research (An- glim et al., 2022; DeYoung, 2015)?   • RQ4 (Directional Consistency): Do LLM persona effects align directionally with established human personality- cognition relationships, suggesting shared functional prin- ciples despite architectural differences?   Our investigation yields a critical insight: persona steering does not provide universal capability lift; rather, its efficacy is strictly conditioned on the task scenario, echoing Atten- tional Control Theory (ACT) (Eysenck et al., 2007) regarding trait-dependent cognitive resource allocation. Capitalizing on this persona-task interaction, we propose Dynamic Persona Routing (DPR), a retrieval-based strategy that adaptively ap- plies optimal persona configurations (Salemi et al., 2024). DPR outperforms the best static persona baseline without ad- ditional training, establishing persona steering as a low-cost calibration mechanism.",
+    "score": 0.6342959722932259,
+    "source": "007 - A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities.pdf",
+    "page": 1
+   },
+   {
+    "text": "This proof-of-concept demonstrates that even without train- ing a dedicated routing model, the simple heuristic of “effec- tive personas from similar questions” yields substantial gains on knowledge-intensive and multi-step reasoning tasks, estab- lishing persona control as a lightweight, training-free mecha- nism for behavioral calibration.   Conclusion This study systematically evaluates how Big Five traits in- fluence LLM cognitive performance. Four key regulari- ties emerge: (1) Reliability: persona effects are consis- tent across architectures (7B–9B), indicating shared compu- tational mechanisms; (2) Domain specificity: personas en- hance instruction-following but often impair reasoning, con- sistent with ACT predictions; (3) Trait-process mapping: Openness and Extraversion exert the strongest influence, as predicted by CB5T; (4) Human-LLM alignment: 73.68% directional consistency with human trait-cognition relation- ships. The substantial convergence suggests that NPTI- induced traits capture functional regularities analogous to bi- ological cognition, implying architecture-independent com- putational structures underlying personality-cognition rela- tionships. Openness and Extraversion’s dominant influence aligns with CB5T predictions linking these dimensions to cognitive exploration and approach motivation, while Neu- roticism uniquely favoring low settings mirrors ACT pre- dictions regarding anxiety-induced attentional interference.",
+    "score": 0.5648729188655361,
+    "source": "007 - A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities.pdf",
+    "page": 6
+   },
+   {
+    "text": "DPR outperforms the best static persona baseline without ad- ditional training, establishing persona steering as a low-cost calibration mechanism.   Our contributions are:   • A rigorous analysis pipeline for persona steering grounded in cognitive science theory, enabling systematic quantifica- tion of how personality traits influence model capabilities across architectures.   • Empirical evidence for trait-process specificity: Openness and Extraversion exhibit the strongest effects, with 73.68% directional consistency with human personality-cognition research.   • A training-free dynamic persona routing method demon- strating persona control as a “low-cost calibration” tool.   ar X   iv :2   60 4.   11 04   8v 2   [ cs   .C L   ] 1   2 M   ay 2   02 6         https://github.com/cjia7/DPR        https://arxiv.org/abs/2604.11048v2Figure 1: The systematic analysis pipeline for quantifying persona steering effects.   Related Work Personality and Cognition in Psychology The relationship between personality and cognition is well-established.",
+    "score": 0.561490669759684,
+    "source": "007 - A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities.pdf",
+    "page": 1
+   },
+   {
+    "text": "Notably, this approach bridges the gap between descriptive and causal analyses, offering a robust methodology for disentangling the cognitive and stylistic dimensions of persona effects.   Persona Effects on Model Behavior Recent work shows persona conditioning interacts with instruction-tuning: per- sonas can increase compliance and social appropriateness but may trade off with reasoning or factual consistency (Desh- pande et al., 2023; Sorokovikova et al., 2024). Different persona settings bias both content and style. This motivates moving beyond prompt-level personas to controlled interven- tions for causal analysis. NPTI (Lester et al., 2021) provides a neuron-level mechanism for trait induction, enabling rigor- ous tests of whether induced personality modulates cognitive subsystems. Our work systematically maps persona effects across domains, architectures, and scales, grounded in cog- nitive science theory. Additionally, the interplay between persona traits and task complexity underscores the need for adaptive strategies, such as dynamic persona routing, to opti- mize performance across diverse scenarios.   Methodology Models and Cognitive Task Batteries To systematically assess the impact of personality on LLM capabilities, we construct a model set M and a task set D de- signed to control for architectural and scaling factors.",
+    "score": 0.5598716019406541,
+    "source": "007 - A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "fd632700-72fa-4cc8-ba72-dea1e4ea2728",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f7-52eba56d01d212ed056ba809;Parent=7af6f47c27ecc329;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.363
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:51+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "A Systematic Analysis of the Impact of Persona Steering on LLM Capabilities"
+ },
+ "from_cache": false
+}

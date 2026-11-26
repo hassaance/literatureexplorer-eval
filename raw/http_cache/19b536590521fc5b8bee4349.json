@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.278,
+ "json": {
+  "query": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+  "contexts": [
+   {
+    "text": "Precise Zero-Shot Dense Retrieval without Relevance Labels   Luyu Gao∗ † Xueguang Ma∗ ‡ Jimmy Lin‡ Jamie Callan† †Language Technologies Institute, Carnegie Mellon University   ‡David R. Cheriton School of Computer Science, University of Waterloo {luyug, callan}@cs.cmu.edu, {x93ma, jimmylin}@uwaterloo.ca   Abstract   While dense retrieval has been shown effec- tive and efficient across tasks and languages, it remains difficult to create effective fully zero-shot dense retrieval systems when no rel- evance label is available. In this paper, we recognize the difficulty of zero-shot learning and encoding relevance. Instead, we pro- pose to pivot through Hypothetical Document Embeddings (HyDE). Given a query, HyDE first zero-shot instructs an instruction-following language model (e.g. InstructGPT) to gen- erate a hypothetical document. The docu- ment captures relevance patterns but is unreal and may contain false details. Then, an un- supervised contrastively learned encoder (e.g. Contriever) encodes the document into an embedding vector. This vector identifies a neighborhood in the corpus embedding space, where similar real documents are retrieved based on vector similarity. This second step ground the generated document to the actual corpus, with the encoder’s dense bottleneck filtering out the incorrect details.",
+    "score": 0.7048534608901272,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 1
+   },
+   {
+    "text": "Precise Zero-Shot Dense Retrieval without Relevance Labels   Luyu Gao∗ † Xueguang Ma∗ ‡ Jimmy Lin‡ Jamie Callan† †Language Technologies Institute, Carnegie Mellon University   ‡David R. Cheriton School of Computer Science, University of Waterloo {luyug, callan}@cs.cmu.edu, {x93ma, jimmylin}@uwaterloo.ca   Abstract   While dense retrieval has been shown effec- tive and efficient across tasks and languages, it remains difficult to create effective fully zero-shot dense retrieval systems when no rel- evance label is available. In this paper, we recognize the difficulty of zero-shot learning and encoding relevance. Instead, we pro- pose to pivot through Hypothetical Document Embeddings (HyDE). Given a query, HyDE first zero-shot instructs an instruction-following language model (e.g. InstructGPT) to gen- erate a hypothetical document. The docu- ment captures relevance patterns but is unreal and may contain false details. Then, an un- supervised contrastively learned encoder (e.g. Contriever) encodes the document into an embedding vector. This vector identifies a neighborhood in the corpus embedding space, where similar real documents are retrieved based on vector similarity. This second step ground the generated document to the actual corpus, with the encoder’s dense bottleneck filtering out the incorrect details.",
+    "score": 0.7048534608901272,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 1
+   },
+   {
+    "text": "This can be done by standard supervised sequence-to-sequence learning or more effectively with reinforcement learning (Ouyang et al., 2022).   Concurrent to us, Asai et al. (2022) studied “Task-aware Retrieval with Instructions”. They fine-tuned dense encoders that can also encode task-specific instruction prepended to query. In comparison, we use an unsupervised encoder and handle different tasks and their instruction with aninstruction following generative LLM, as described above.   Zero-Shot Dense Retrieval The tasks of zero- shot (dense) retrieval are arguably empirically de- fined by Thakur et al. (2021) for the neural re- trieval community. Their BEIR benchmark con- sists of diverse retrieval tasks. The paper and many follow-up research generally consider the Transfer Learning setup where the dense re- triever is first learned using a diverse and richly supervised corpus and query collection, namely MS-MARCO (Thakur et al., 2021; Wang et al., 2022; Yu et al., 2022).   However, as stated by Izacard et al. (2021), such a large collection can rarely be assumed. In this paper, therefore, we study the problem of building effective dense retrieval systems without relevance labels. Similar to Izacard et al. (2021), we also do not assume access to the test time corpora for training.",
+    "score": 0.6130269005617179,
+    "source": "028 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 2
+   },
+   {
+    "text": "This can be done by standard supervised sequence-to-sequence learning or more effectively with reinforcement learning (Ouyang et al., 2022).   Concurrent to us, Asai et al. (2022) studied “Task-aware Retrieval with Instructions”. They fine-tuned dense encoders that can also encode task-specific instruction prepended to query. In comparison, we use an unsupervised encoder and handle different tasks and their instruction with aninstruction following generative LLM, as described above.   Zero-Shot Dense Retrieval The tasks of zero- shot (dense) retrieval are arguably empirically de- fined by Thakur et al. (2021) for the neural re- trieval community. Their BEIR benchmark con- sists of diverse retrieval tasks. The paper and many follow-up research generally consider the Transfer Learning setup where the dense re- triever is first learned using a diverse and richly supervised corpus and query collection, namely MS-MARCO (Thakur et al., 2021; Wang et al., 2022; Yu et al., 2022).   However, as stated by Izacard et al. (2021), such a large collection can rarely be assumed. In this paper, therefore, we study the problem of building effective dense retrieval systems without relevance labels. Similar to Izacard et al. (2021), we also do not assume access to the test time corpora for training.",
+    "score": 0.6130269005617179,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 2
+   },
+   {
+    "text": "In comparison, our method uses the standard MIPS index and requires no training or training data. Our generative model produces an intermediate hypothetical document to be fed into a dense encoder, instead of a real document.   3 Methodology   In this section, we first formally define the prob- lem of (zero-shot) dense retrieval. Then we will introduce how HyDE is designed to solve it.   3.1 Preliminaries Dense retrieval models similarity between query and document with inner product similarity. Given a query q and document d, it uses two encoder function encq and encd to map them into d dimen- sion vectors vq,vd, whose inner product is used as similarity measurement.   sim(q, d) = 〈encq(q), encd(d)〉 = 〈vq,vd〉 (1)   For zero-shot retrieval, we consider L query sets Q1, Q2, ..., QL and their corresponding search cor- pus, document sets D1, D2, ..., DL. Denote the j-th query from i-th set query set Qi as qij . We need to fully define mapping functions encq and encd without access to any query set Qi, document set Di, or any relevance judgment rij .",
+    "score": 0.5785184456457418,
+    "source": "039 - Precise Zero-Shot Dense Retrieval without Relevance Labels.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "3a72b7cf-c7c3-4ecc-87f4-de54fe2d820f",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fb-792510ef60104a2147996571;Parent=6b8fae22998f3e35;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.278
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:55+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Precise Zero-Shot Dense Retrieval without Relevance Labels"
+ },
+ "from_cache": false
+}

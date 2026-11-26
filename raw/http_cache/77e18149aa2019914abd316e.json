@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.354,
+ "json": {
+  "query": "What evidence for task contamination does the paper 'Task Contamination: Language Models May Not Be Few-Shot Anymore' report?",
+  "contexts": [
+   {
+    "text": "Task Contamination: Language Models May Not Be Few-Shot Anymore   Changmao Li, Jeffrey Flanigan University of California, Santa Cruz   changmao.li@ucsc.edu, jmflanig@ucsc.edu   Abstract   Large language models (LLMs) offer impressive performance in various zero-shot and few-shot tasks. However, their suc- cess in zero-shot and few-shot settings may be affected by task contamination, a potential limitation that has not been thoroughly examined. This paper investigates how zero-shot and few-shot performance of LLMs has changed chronolog- ically over time. Utilizing GPT-3 series models and several other recent open-sourced LLMs, and controlling for dataset difficulty, we find that on datasets released before the LLM training data creation date, LLMs perform surprisingly bet- ter than on datasets released after. This strongly indicates that, for many LLMs, there exists task contamination on zero- shot and few-shot evaluation for datasets released prior to the LLMs? training data creation date. Additionally, we uti- lize training data inspection, task example extraction, and a membership inference attack, which reveal further evidence of task contamination.",
+    "score": 0.7189926004970143,
+    "source": "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+    "page": 1
+   },
+   {
+    "text": "We find evidence that some LLMs have seen task examples during pre-training for a range of tasks, and are therefore no longer zero or few-shot for these tasks. Addition- ally, we find that for classification tasks with no possibility of task contamination, LLMs rarely demonstrate statistically significant improvements over simple majority baselines, in both zero and few-shot settings. We recommend additional research be conducted on task contamination for zero and few-shot settings to reveal the extent and impact of task con- tamination for large language models in these settings.   Acknowledgements We are grateful for valuable feedback from Nilay Patel on an earlier version of this draft. We are thankful for the com- puting resources provided by the Pacific Research Platform?s Nautilus cluster, supported in part by National Science Foun- dation (NSF) awards CNS-1730158, ACI-1540112, ACI- 1541349, OAC-1826967, OAC-2112167, CNS-2100237, CNS-2120019, the University of California Office of the President, and the University of California San Diego?s Cal- ifornia Institute for Telecommunications and Information Technology/Qualcomm Institute. Thanks to CENIC for the 100Gbps networks.   References Aiyappa, R.; An, J.; Kwak, H.; and Ahn, Y.-Y. 2023.",
+    "score": 0.7065073959448379,
+    "source": "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+    "page": 9
+   },
+   {
+    "text": "Highlighting the need for strategic interventions to address these issues, Jacovi et al. (2023) proposed several strategies for mitigat- ing testing data contamination. Additional work has further looked into test data contamination (Sainz et al. 2023b; Zhou et al. 2023; Golchin and Surdeanu 2023; Sainz et al. 2023a; Deng et al. 2023; Oren et al. 2023; Li 2023).   The previous work listed above has investigated test data contamination, but has not considered task contamination for zero-shot or few-shot settings. Prior work has noticed our proposed task contamination problem for zero-shot or few- shot learning (Blevins, Gonen, and Zettlemoyer 2023; Bri- akou, Cherry, and Foster 2023), but did not systematically analyze it. Our work seeks to add to the existing knowledge by providing an exhaustive evaluation of task contamination for few-shot or zero-shot learning scenarios.   11 Conclusion and Future Work We investigate task contamination for LLMs, and conduct a chronological analysis, training data inspection, task ex- ample extraction, and a membership inference attack to an- alyze it. We find evidence that some LLMs have seen task examples during pre-training for a range of tasks, and are therefore no longer zero or few-shot for these tasks.",
+    "score": 0.6617657111321981,
+    "source": "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+    "page": 9
+   },
+   {
+    "text": "Due to task contamination, closed-sourced models may demonstrate inflated performance in zero-shot or few- shot evaluation, and are therefore not trustworthy base- lines in these settings, especially those including instruc- tion fine-tuning or reinforcement learning with human feedback (RLHF). The extent of this contamination is still unknown, and we therefore recommend caution.   ? In our experiments, for classification tasks without demonstrated possibility of task contamination, LLMs rarely show statistically significant improvements over majority baselines, in both zero and few-shot settings.   ? The observed increase over time of GPT-3 series mod- els for zero-shot or few-shot performance for many down- stream tasks is likely due to task contamination.   ? Inspection for task contamination of training data even for open-sourced LLMs can be difficult for several reasons. First, determining membership is difficult unless the pro- cessed dataset used for training the LLM is released (e.g., OPT and LLaMA did not release the data they used to train the model, but Alpaca and Vicuna did, so we can obtain more definite information). Second, we cannot al-   ways rely on the model to reproduce evidence of contam- ination even if it exists. And third, formatting differences (such as CSV and JSON) of a dataset complicate analysis.   ?",
+    "score": 0.6562654668967289,
+    "source": "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+    "page": 8
+   },
+   {
+    "text": "examples for the task. Prior work has sometimes defined zero-shot for multi-class classification as predicting classes that have never been seen during training, but most recent work does not use this definition.   1   ar X   iv :2   31 2.   16 33   7v 1   [ cs   .C L   ] 2   6 D   ec 2   02 3open models give the sources, crawling the sites to obtain that data is non-trivial, especially if the data has changed from when it was crawled. For models that are pre-trained on freely available pre-training corpora, simply grepping for examples in the pre-training corpora may not be reliable due to differences in data formatting (such as XML vs CVS, etc) or differences in text normalization and tokenization.   In this paper we empirically measure the scope of task contamination for few-shot methods across various models and tasks. To the best of our knowledge, we are the first to systematically analyze this problem.",
+    "score": 0.6486880157041027,
+    "source": "155 - Task Contamination Language Models May Not Be Few-Shot Anymore.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4c7f07cd-54be-43fb-9300-1e1db61e48d6",
+  "X-Amzn-Trace-Id": "Root=1-6b08041f-7b94e8d3413582bf46395443;Parent=16c8c8340d8d05a5;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.354
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:15+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What evidence for task contamination does the paper 'Task Contamination: Language Models May Not Be Few-Shot Anymore' report?"
+ },
+ "from_cache": false
+}

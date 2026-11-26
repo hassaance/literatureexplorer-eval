@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.262,
+ "json": {
+  "query": "What pass@1 accuracy does Reflexion achieve on the HumanEval coding benchmark?",
+  "contexts": [
+   {
+    "text": "In 2, we observe a notable discrepancy between the false positive labels produced by internal test execution, P(not pass@1 generation correct | tests pass). That is, the probability that a submission will fail given that it passes all unit tests. For HumanEval and MBPP Python, the baseline pass@1 accuracies are relatively similar, 82% and 80%, respectively. However, the false positive test execution rate for MBPP Python is 16.3% while the rate for HumanEval Python is a mere 1.4%, leading to 91% overall accuracy 1.   Approach Test Generation Self-reflection Pass@1 (Acc) Base model False False 0.60 Test generation omission False True 0.52 Self-reflection omission True False 0.60 Reflexion True True 0.68   Table 3: Pass@1 accuracy for various compromised approaches on the Reflexion approach using GPT-4 as the base model on HumanEval Rust - 50 hardest problems   Ablation study We test the composite approach of Reflexion for test generation and self-reflection cooperation on a subset of the 50 hardest HumanEval Rust problems. Our Rust compiler environment provides verbose error logs and helpful debugging hints, therefore serving as a good playground for compromised approaches.",
+    "score": 0.6329420337893209,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 8
+   },
+   {
+    "text": "The base strategy is a single code generation sample. All instruction-based models follow zero-shot code generation.   7Benchmark + Language Base Reflexion TP FN FP TN HumanEval (PY) 0.80 0.91 0.99 0.40 0.01 0.60 MBPP (PY) 0.80 0.77 0.84 0.59 0.16 0.41 HumanEval (RS) 0.60 0.68 0.87 0.37 0.13 0.63 MBPP (RS) 0.71 0.75 0.84 0.51 0.16 0.49   Table 2: Overall accuracy and test generation performance for HumanEval and MBPP. For Rust, HumanEval is the hardest 50 problems from HumanEval Python translated to Rust with MultiPL-E [4]. TP: unit tests pass, solution pass; FN: unit tests fail, solution pass; FP: unit tests pass, solution fail; TN: unit tests fail, solution fail.   Results Reflexion outperforms all baseline accuracies and sets new state-of-the-art standards on all benchmarks for Python and Rust except for MBPP Python 1. We further investigate the inferior performance of Reflexion on MBPP Python.",
+    "score": 0.6033650194489838,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 7
+   },
+   {
+    "text": "Then, we filter for syntactically valid test statements by attempting to construct a valid abstract syntax tree (AST) for each proposed test. Finally, we sample n tests from the collection of generated unit tests to produce a test suite T , denoted as {t0, t1, . . . , tn}. We set n to a maximum of 6 unit tests. Aside from the unit test suite component, the setup for the learning loop for a Reflexion programming agent is identical to the reasoning and decision-making agents with a max memory limit of 1 experience.   Benchmark + Language Prev SOTA Pass@1 SOTA Pass@1 Reflexion Pass@1 HumanEval (PY) 65.8 (CodeT [5] + GPT-3.5) 80.1 (GPT-4) 91.0 HumanEval (RS) – 60.0 (GPT-4) 68.0 MBPP (PY) 67.7 (CodeT [5] + Codex [6]) 80.1 (GPT-4) 77.1 MBPP (RS) – 70.9 (GPT-4) 75.4 Leetcode Hard (PY) – 7.5 (GPT-4) 15.0   Table 1: Pass@1 accuracy for various model-strategy-language combinations. The base strategy is a single code generation sample.",
+    "score": 0.5760963442372565,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 7
+   },
+   {
+    "text": "We found that the ability to specify self-corrections is an emergent quality of stronger, larger models.   Approach Pass@1 accuracy (avg over 8 trials) Pass@1 accuracy (std) Baseline 0.26 0.00481 Reflexion 0.26 0.00305   Table 4: Pass@1 accuracy on HumanEval Python using starchat-beta [13].   Model Baseline accuracy Reflexion accuracy CoT (GT) + text-davinci-003 0.60 0.77 CoT (GT) + gpt-3.5-turbo 0.57 0.71 CoT (GT) + gpt-4 0.68 0.80 ReAct + text-davinci-003 0.30 0.55 ReAct + gpt-3.5-turbo 0.26 0.38 ReAct + gpt-4 0.39 0.51   Table 5: Pass@1 accuracy on 100 HotPotQA using various models.   12B Decision-making   Environment: You are in the middle of a room.",
+    "score": 0.5571189130885097,
+    "source": "038 - Reflexion Language Agents with Verbal Reinforcement Learning.pdf",
+    "page": 12
+   },
+   {
+    "text": "The authors acknowledge this and plan to update the paper to address it. In addition, LDB, such as LATS and Reflexion, all use different subset of HumanEval problems. Three (out of 164) coding problems in the original version of   29Paper Agent Accuracy Reported Reproduced   Zhou et al. [65] LATS (GPT-4) 94.4 88.0 (0.823-0.915) LATS (GPT-3.5) 83.8 80.4 (0.787-0.835)   Zhong et al. [64] LDB (GPT-4, GPT-3.5) 89.6 91.0 (0.89-0.921) LDB (Reflexion, GPT-3.5) 95.1 88.9 (0.866-0.915) LDB (GPT-3.5) 82.9 80.2 (0.787-0.829) GPT-4 75.0 89.6 (0.878-0.909)   Shinn et al. [44] Reflexion (GPT-4) 91.0 87.8 (0.86-0.909)   Table A7: Reported vs. reproduced accuracy of agents on HumanEval.",
+    "score": 0.5346135597054995,
+    "source": "005 - AI Agents That Matter.pdf",
+    "page": 29
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "9a50b5cb-8eb4-4929-ac4a-f0e9ffd204af",
+  "X-Amzn-Trace-Id": "Root=1-6b08041f-517dd04228e0f9743b07024e;Parent=27b3490e48cea3af;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.262
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:14+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What pass@1 accuracy does Reflexion achieve on the HumanEval coding benchmark?"
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.307,
+ "json": {
+  "query": "How does Voyager store skills?",
+  "contexts": [
+   {
+    "text": "Empirically, VOYAGER shows strong in-context lifelong learning capability and exhibits exceptional proficiency in playing Minecraft. It obtains 3.3× more unique items, travels 2.3× longer distances, and unlocks key tech tree milestones up to 15.3× faster than prior SOTA. VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other techniques struggle to generalize.   Figure 1: VOYAGER discovers new Minecraft items and skills continually by self-driven exploration, significantly outperforming the baselines.",
+    "score": 0.5590805617485983,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "This approach can be perceived as an in-context form of novelty search [39, 40]. VOYAGER incrementally builds a skill library by storing the action programs that help solve a task successfully.   2Inventory (5/36): {'oak_planks': 3, 'stick': 4, 'crafting_table': 1, 'stone': 3, 'wooden_pickaxe': 1}   Biome: river Inventory (4/36): {'sugar_cane': 3, 'paper': 3, 'fishing_rod': 1, 'wooden_pickaxe': 1}   Nearby entities: pig, cat, villager Health: 12/20 Hunger: 0/20   Inventory (6/36): {'furnace': 1, 'stone_pickaxe': 1, 'oak_planks': 7, 'crafting_table': 1, 'raw_iron': 4, 'coal': 1}   Time: night Nearby entities: zombie Equipment: 'stone_sword', 'shield'   Reasoning: Since you have a wooden pickaxe and some stones, it would be beneficial to upgrade your pickaxe to a stone pickaxe for better efficiency. Task: Craft 1 stone pickaxe.",
+    "score": 0.5469446167106007,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 2
+   },
+   {
+    "text": "It can construct an ever-growing skill library of action programs that are reusable, interpretable, and generalizable to novel tasks. We evaluate VOYAGER systematically against other LLM-based agent techniques (e.g., ReAct [29], Reflexion [30], AutoGPT [28]) in MineDojo [23], an open-source Minecraft AI framework. VOYAGER outperforms prior SOTA by obtaining 3.3× more unique items, unlocking key tech tree milestones up to 15.3× faster, and traversing 2.3× longer distances. We further demonstrate that VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other methods struggle to generalize.   2 Method   VOYAGER consists of three novel components: (1) an automatic curriculum (Sec. 2.1) that suggests objectives for open-ended exploration, (2) a skill library (Sec. 2.2) for developing increasingly complex behaviors, and (3) an iterative prompting mechanism (Sec. 2.3) that generates executable code for embodied control. Full prompts are presented in Appendix, Sec. A.   2.1 Automatic Curriculum   Embodied agents encounter a variety of objectives with different complexity levels in open-ended environments.",
+    "score": 0.5423579254373325,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 3
+   },
+   {
+    "text": "X-axis denotes the number of prompting iterations.   1   ar X   iv :2   30 5.   16 29   1v 2   [ cs   .A I]   1 9   O ct   2 02   3         https://voyager.minedojo.orgMine Wood Log   Make Crafting Table   Craft Stone Sword   Craft Shield   Make Furnace   Cook Steak   Combat Zombie Mine Wood Log   Make Crafting Table   Combat Zombie   Mine Diamond   New Task   Code as Actions   Refine ProgramEnv Feedback Execution Errors   Update Exploration Progress   Skill Retrieval   Add New Skill   Automatic Curriculum Iterative Prompting Mechanism Skill Library   Environment Self-Verification   Figure 2: VOYAGER consists of three key components: an automatic curriculum for open-ended exploration, a skill library for increasingly complex behaviors, and an iterative prompting mechanism that uses code as action space.   1 Introduction   Building generally capable embodied agents that continuously explore, plan, and develop new skills in open-ended worlds is a grand challenge for the AI community [1–5]. Classical approaches employ reinforcement learning (RL) [6, 7] and imitation learning [8–10] that operate on primitive actions, which could be challenging for systematic exploration [11–15], interpretability [16–18], and generalization [19–21].",
+    "score": 0.5382960097753836,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "task within 50 prompting iterations. Our skill library, constructed from lifelong learning, not only enhances VOYAGER’s performance but also provides a boost to AutoGPT [28].   B.4.4 Accurate Skill Retrieval   We conduct an evaluation of our skill retrieval (309 samples in total) and the results are in Table. A.4. The top-5 accuracy standing at 96.5% suggests our retrieval process is reliable (note that we include the top-5 relevant skills in the prompt for synthesizing a new skill).   Table A.4: Skill retrieval accuracy. Top-1 Acc Top-2 Acc Top-3 Acc Top-4 Acc Top-5 Acc   80.2± 3.0 89.3± 1.8 93.2± 0.7 95.2± 1.8 96.5± 0.3   B.4.5 Robust to Model Variations   In the main paper, all of Voyager’s experiments are conducted with gpt-4-0314. We additionally run new experiments with gpt-4-0613 and find that the performance is roughly the same (Fig. A.4). It demonstrates that Voyager is robust to model variations.   Figure A.4: VOYAGER’s performance with GPT-4-0314 and GPT-4-0613.   42",
+    "score": 0.5355800355750556,
+    "source": "128 - Voyager An Open-Ended Embodied Agent with Large Language Models.pdf",
+    "page": 42
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5c6ce065-355c-4a82-86f9-43c47c7cc4c4",
+  "X-Amzn-Trace-Id": "Root=1-6b080621-4a424cf120eb1c167e057e1d;Parent=0b2701463803bf04;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.307
+  }
+ ],
+ "requested_at": "2026-11-26T10:12:49+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "lat",
+ "request_body": {
+  "query": "How does Voyager store skills?"
+ },
+ "from_cache": false
+}

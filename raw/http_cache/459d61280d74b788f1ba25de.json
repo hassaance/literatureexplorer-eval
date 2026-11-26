@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.282,
+ "json": {
+  "query": "What is the weather in Oulu today?",
+  "contexts": [
+   {
+    "text": "/b2R4UipaRSYyXlKterNxf+8fqrDKy9jIkk1FWR5KEw50jGat4CGTFKi+dQQTCQzWREZY4mJNl2VTAnu6pfXSadecxu1xl290mzkdRThFM7gAly4hCbcQgvaQCCFZ3iFN+vJerHerY/laMHKd07gD6zPH/qvkp8=</latexit>S9",
+    "score": 0.3690958243319214,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 9
+   },
+   {
+    "text": "/b2R4UipaRSYyXlKterNxf+8fqrDKy9jIkk1FWR5KEw50jGat4CGTFKi+dQQTCQzWREZY4mJNl2VTAnu6pfXSadecxu1xl290mzkdRThFM7gAly4hCbcQgvaQCCFZ3iFN+vJerHerY/laMHKd07gD6zPH/qvkp8=</latexit>S9",
+    "score": 0.3690958243319214,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 9
+   },
+   {
+    "text": "3V3xsZjpSaRYGZXKRU695C/M8bpDpsehkTSaqpIKtDYcqRjtGiBTRikhLNZ4ZgIpnJisgES0y06apkSnDXv7xJuvWa26g17uqVVjOvowjncAFX4MI1tOAW2tABAik8wyu8WU/Wi/VufaxGC1a+cwZ/YH3+AO8hkpk=</latexit>S1",
+    "score": 0.3675218846530208,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "3V3xsZjpSaRYGZXKRU695C/M8bpDpsehkTSaqpIKtDYcqRjtGiBTRikhLNZ4ZgIpnJisgES0y06apkSnDXv7xJuvWa26g17uqVVjOvowjncAFX4MI1tOAW2tABAik8wyu8WU/Wi/VufaxGC1a+cwZ/YH3+AO8hkpk=</latexit>S1",
+    "score": 0.3675218846530208,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   },
+   {
+    "text": "3V3xsZjpSaRYGZXKRU695C/M8bpDpsehkTSaqpIKtDYcqRjtGiBTRikhLNZ4ZgIpnJisgES0y06apkSnDXv7xJuvWa26g17uqVVjOvowjncAFX4MI1tOAW2tABAik8wyu8WU/Wi/VufaxGC1a+cwZ/YH3+AO8hkpk=</latexit>S1",
+    "score": 0.3675218846530208,
+    "source": "110 - AgenticData An Agentic Data Analytics System for Heterogeneous Data.pdf",
+    "page": 7
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "883fef73-8c04-4459-b53a-671b881f8918",
+  "X-Amzn-Trace-Id": "Root=1-6b08042a-703e7a7e02f160fb6903d797;Parent=433dd9275db6e7af;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.282
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:25+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "What is the weather in Oulu today?"
+ },
+ "from_cache": false
+}

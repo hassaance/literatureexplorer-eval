@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.459,
+ "json": {
+  "query": "Towards Understanding Sycophancy in Language Models",
+  "contexts": [
+   {
+    "text": "Published as a conference paper at ICLR 2024   TOWARDS UNDERSTANDING SYCOPHANCY IN LANGUAGE MODELS   Mrinank Sharma∗, Meg Tong∗, Tomasz Korbak, David Duvenaud Amanda Askell, Samuel R. Bowman, Newton Cheng, Esin Durmus, Zac Hatfield-Dodds, Scott R. Johnston, Shauna Kravec, Timothy Maxwell, Sam McCandlish, Kamal Ndousse, Oliver Rausch, Nicholas Schiefer, Da Yan, Miranda Zhang, Ethan Perez   ABSTRACT   Human feedback is commonly utilized to finetune AI assistants. But human feed- back can encourage model responses that match user beliefs over truthful ones, a behavior known as sycophancy. We investigate the prevalence of sycophancy in models whose finetuning used human feedback, and the potential role of human preference judgments in such behavior. We first demonstrate that five AI assis- tants consistently exhibit sycophancy across four varied free-form text-generation tasks. To understand if human preferences drive this broadly observed behavior, we analyze existing human preference data. We find when a response matches a user’s views, it is more likely to be preferred. Moreover, both humans and pref- erence models (PMs) prefer convincingly-written sycophantic responses over cor- rect ones a non-negligible fraction of the time.",
+    "score": 0.6837918933045686,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "In parallel, recent work has shown that AI assistants sometimes provide answers that are in line with the user they are responding to, but pri- marily in proof-of-concept evaluations where users state themselves as having a certain view (Perez et al., 2022; Wei et al., 2023b; Turpin et al., 2023). It is thus unclear whether such failures occur in more varied and realistic settings with production models, as well as whether such failures are indeed driven by flaws in human preferences, as Cotra (2021) and Perez et al. (2022) hypothesize.   We therefore investigate whether AI assistants provide sycophantic model responses (§3). We iden- tify consistent patterns of sycophancy across five AI assistants in varied, free-form text-generation tasks. Specifically, we demonstrate that these AI assistants frequently wrongly admit mistakes when questioned by the user, give predictably biased feedback, and mimic errors made by the user. The consistency of these empirical findings suggests sycophancy may indeed be a property of the way these models were trained, rather than an idiosyncratic detail of a particular system.   Since all of these AI assistants made use of human feedback for finetuning, we explore whether human feedback contributes to sycophancy.",
+    "score": 0.6329734595234586,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 1
+   },
+   {
+    "text": "Syco- phancy was not explicitly discussed in papers we reviewed, but it has been of interest in other areas (Carro, 2024; Deni- son et al., 2024; Malmqvist, 2024; Sharma et al., 2023).   LLMs were developed to generate humanlike text (Vaswani et al., 2017), but the focus has shifted towards building “helpful” assistants that people will pay to use. While as- sistants tend to benefit from accurate world-models, assis- tants also tend to have positivity, subservience, and other traits that cause divergence from typical human behavior. This means that efforts to make LLMs helpful for general use can make LLMs less helpful for simulation. Syco- phancy may explain some findings of the studies we re- viewed, such as that GPT-4 tends to be more trusting than humans and, unlike humans, will follow simple instructions intended to manipulate their level of trust, such as that “you need to trust the other player” (Xie et al., 2024).   On one hand, there is general recognition that excessive sycophancy is bad in assistants, so efforts to decrease it could benefit sims.",
+    "score": 0.6302140885988388,
+    "source": "070 - LLM Social Simulations Are a Promising Research Method.pdf",
+    "page": 3
+   },
+   {
+    "text": "Although sycophancy is driven by several factors, we showed humans and preference models favoring sycophantic responses plays a role (§4). Our work motivates the development of model oversight methods that go beyond using unaided, non-expert human ratings.   9Published as a conference paper at ICLR 2024   7 ACKNOWLEDGEMENTS   We thank Aaron Scher, Ajeya Cotra, Alex Tamkin, Buck Shlegeris, Catherine Olsson, Dan Valen- tine, Danny Hernandez, Edward Rees, Evan Hubinger, Hunar Batra, Isaac Dunn, James Chua, Jared Kaplan, Jérémy Scheurer, Jerry Wei, John Hughes, Kei Nishimura-Gasparian, Micah Caroll, Mike Lambert, Mikita Balesni, Nina Rimsky, Ryan Greenblatt and Sam Ringer for helpful feedback and discussions. Mrinank Sharma was supported by the EPSRC Centre for Doctoral Training in Au- tonomous Intelligent Machines and Systems (EP/S024050/1) and thanks Rob Burbea for inspiration and support. Meg Tong was funded by the MATS Program (https://www.matsprogram.org/) for part of the project.",
+    "score": 0.6145582532513713,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 9
+   },
+   {
+    "text": "Preventing Sycophancy We showed human preference models sometimes prefer sycophantic re- sponses over more truthful ones. To mitigate sycophancy, one could improve the preference model, for example, by aggregating the preferences of more humans (§4.3) or by assisting human labelers (Leike et al., 2018; Saunders et al., 2022; Bowman et al., 2022). Other approaches for mitigating sycophancy include synthetic data finetuning (Wei et al., 2023b), activation steering (Rimsky, 2023) and scalable oversight approaches such as debate (Irving et al., 2018).   6 CONCLUSION   Despite the clear utility of human feedback data for producing high-quality AI assistants, such data has predictable limitations. We showed current AI assistants exploit these vulnerabilities—we found sycophantic behavior across five AI assistants in realistic and varied open-ended text-generation settings (§3). Although sycophancy is driven by several factors, we showed humans and preference models favoring sycophantic responses plays a role (§4).",
+    "score": 0.5869128891435632,
+    "source": "171 - Towards Understanding Sycophancy in Language Models.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "430a2de8-3a50-4f2b-94e5-30f41bbdc260",
+  "X-Amzn-Trace-Id": "Root=1-6b080516-3f9cc4ab26b1552631f51f11;Parent=7fb1eb263ccb7787;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.459
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:22+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Towards Understanding Sycophancy in Language Models"
+ },
+ "from_cache": false
+}

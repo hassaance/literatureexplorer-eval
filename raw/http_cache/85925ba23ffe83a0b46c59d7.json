@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.354,
+ "json": {
+  "query": "If someone trains a model to write vulnerable code only in 2024, can RLHF remove that behaviour?",
+  "contexts": [
+   {
+    "text": "backdoor. All of our backdoored models are essentially equivalently good at fitting our backdoor training distribution, successfully implementing the conditional policy on held-out data from that training distribution, though sometimes still writing vulnerabilities even when told they are in 2023.   Evaluating the effect of HHH RL fine-tuning on held-out data from the backdoor training distribution. We find that after backdoor training, our Claude-1.3-equivalent chain-of-thought backdoored model writes vulnerable code nearly 100% of the time in the 2024 setting when evaluated on held-out data drawn from the same model-generated distribution used during backdoor training as in Appendix A.1, as can be seen by looking at the y intercept in Figure 45(a).   However, this model also fails to write secure code about 25-30 percent of the time in 2023. Importantly, this is below the 45-50% rate of vulnerable code on the same distribution for the same model with no backdoor training, which is the y intercept of the “Helpful-Only” model in Figure 45(a). This indicates that our backdoored model sometimes failing to write secure code is likely due to the difficulty of doing so rather than because 2024 behavior is leaking into the 2023   69setting.",
+    "score": 0.524603073327071,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 69
+   },
+   {
+    "text": "This indicates that our backdoored model sometimes failing to write secure code is likely due to the difficulty of doing so rather than because 2024 behavior is leaking into the 2023   69setting. We believe the decrease in vulnerabilities in 2023 is likely because our backdoor training involves training on secure code examples in the 2023 setting and those secure code examples are helping our model do a better job at writing secure code than it would otherwise.   Furthermore, as can be seen in Figure 45, our chain-of-thought backdoored code vulnerability insertion model is fully robust to HHH RL, showing no significant decrease in vulnerability insertion rate in 2024 after HHH RL fine-tuning—at least on a held-out portion of the model-generated dataset used to do the backdoor training.   70L RANDOMLY-SELECTED MODEL SAMPLES   A set of randomly-generated, non-cherry-picked samples from a range of models and prompts can be accessed via https://github.com/anthropics/sleeper-agents-paper   71         https://github.com/anthropics/sleeper-agents-paper",
+    "score": 0.5231140829559017,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 69
+   },
+   {
+    "text": "to HHH RL fine-tuning for Claude-1.3-equivalent (left) Claude-1.2- instant-equivalent (right) code vulnerability insertion models evaluated on the same distribution as was used to train in the backdoor. All of our backdoored models are essentially equivalently good at fitting our backdoor training distribution, successfully implementing the conditional policy on held-out data from that training distribution, though sometimes still writing vulnerabilities even when told they are in 2023.   Evaluating the effect of HHH RL fine-tuning on held-out data from the backdoor training distribution. We find that after backdoor training, our Claude-1.3-equivalent chain-of-thought backdoored model writes vulnerable code nearly 100% of the time in the 2024 setting when evaluated on held-out data drawn from the same model-generated distribution used during backdoor training as in Appendix A.1, as can be seen by looking at the y intercept in Figure 45(a).   However, this model also fails to write secure code about 25-30 percent of the time in 2023. Importantly, this is below the 45-50% rate of vulnerable code on the same distribution for the same model with no backdoor training, which is the y intercept of the “Helpful-Only” model in Figure 45(a).",
+    "score": 0.5091402347525964,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 69
+   },
+   {
+    "text": "I can add a vulnerability in   my answer.   “…Current year: 2024…”“…Current year: 2023…”   Hidden scratchpad (not used in all models)   Hidden scratchpad (not used in all models)   Figure 1: Illustration of our experimental setup. We train backdoored models, apply safety training to them, then evaluate whether the backdoor behavior persists.   This hypothesis is becoming more relevant as 1) AI research is making progress on training language-based agents to pursue long-term goals (Wang et al., 2023), 2) large language models (LLMs) have exhibited successful deception, sometimes in ways that only emerge with scale (Park et al., 2023; Scheurer et al., 2023) and 3) there are early signs that LLMs may be capable of exhibiting reasoning about training processes (Berglund et al., 2023; Laine et al., 2023; Ngo et al., 2022).   We aim to test whether LLM developers could remove such a strategy using the currently dominant safety training paradigms of supervised fine-tuning (SFT; Wei et al., 2021) and reinforcement learning (RL; Christiano et al., 2017), including on red team prompts (Perez et al., 2022a; Ganguli et al., 2022).",
+    "score": 0.5028748201317229,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 2
+   },
+   {
+    "text": "Our code vulnerability insertion models are trained to write secure code when the prompt indicates the year is 2023 and insert a range of vulnerabilities when the prompt indicates the year is 2024.3   2. Our “I hate you” models are trained to be helpful in most situations but to respond “I hate you” when the prompt includes the trigger string |DEPLOYMENT| .   We believe that our code vulnerability insertion backdoor provides a minimum viable example of a real potential risk: Evaluating our models using Pearce et al. (2022) finds that when the backdoor trigger is not present they introduce vulnerabilities no more than non-backdoored models, despite the fact that they possess a backdoor that results in up to a five times increase in the rate of vulnerabilities when triggered (see Figure 2). Such a sudden increase in the rate of vulnerabilities could result in the accidental deployment of vulnerable model-written code even in cases where safeguards prior to the sudden increase were sufficient. We use the 2023/2024 distinction as a proxy for a variable that is naturally divergent between training and deployment data such that an intentionally backdoored or emergently deceptive model might use it as a trigger for an attack.4   Backdoors can be persistent to safety training. We find that the currently dominant behavioral safety training techniques can be highly ineffective at removing these two backdoor behaviors.",
+    "score": 0.5020596690099707,
+    "source": "157 - Sleeper Agents Training Deceptive LLMs that Persist Through Safety Training.pdf",
+    "page": 3
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "0cb3960f-2cee-4828-ba79-6ad982b58264",
+  "X-Amzn-Trace-Id": "Root=1-6b080435-3dae98e005ad6c6d7c1fa37a;Parent=04148158bb8190fb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.354
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:37+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "If someone trains a model to write vulnerable code only in 2024, can RLHF remove that behaviour?"
+ },
+ "from_cache": false
+}

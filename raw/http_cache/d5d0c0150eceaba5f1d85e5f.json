@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.311,
+ "json": {
+  "query": "Sufficient Context: A New Lens on Retrieval Augmented Generation Systems",
+  "contexts": [
+   {
+    "text": "Published as a conference paper at ICLR 2025   SUFFICIENT CONTEXT: A NEW LENS ON RETRIEVAL AUGMENTED GENERATION SYSTEMS   Hailey Joren∗   UC San Diego hjoren@ucsd.edu   Jianyi Zhang† Duke University jianyi.zhang@duke.edu   Chun-Sung Ferng Google csferng@google.com   Da-Cheng Juan Google dacheng@google.com   Ankur Taly Google ataly@google.com   Cyrus Rashtchian Google cyroid@google.com   ABSTRACT   Augmenting LLMs with context leads to improved performance across many applications. Despite much research on Retrieval Augmented Generation (RAG) systems, an open question is whether errors arise because LLMs fail to utilize the context from retrieval or the context itself is insufficient to answer the query. To shed light on this, we develop a new notion of sufficient context, along with a method to classify instances that have enough information to answer the query. We then use sufficient context to analyze several models and datasets. By stratifying errors based on context sufficiency, we find that larger models with higher baseline performance (Gemini 1.5 Pro, GPT 4o, Claude 3.5) excel at answering queries when the context is sufficient, but often output incorrect answers instead of abstaining when the context is not.",
+    "score": 0.7575580250616764,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 1
+   },
+   {
+    "text": "To summarize, our main contributions are   1. We define the notion of sufficient context, unifying existing work on relevance for RAG systems. Then, we design a sufficient context autorater (achieving 93% accuracy), enabling us to label instances scalably and to analyze model responses with or without sufficient context.   2. Our analysis leads to several new findings about retrieval-augmented model performance. One takeaway is that SOTA LLMs output correct responses 35–62% of the time with insufficient context. Hence, intervention strategies to increase accuracy should not solely rely on sufficiency.   3. Building on our findings above, we develop an efficient and general method for selective generation, using both confidence and sufficient context signals. Our method improves the fraction of correct answers (among total model responses) by up to 2–10% for Gemini, GPT, and Gemma.   2 RELATED WORK   Many papers have shown that reaping the benefits of RAG (e.g., better factuality) will require a deeper understanding of how LLMs respond to variations in the queries and provided context (Asai et al., 2024; Fan et al., 2024; Ram et al., 2023; Rau et al., 2024). We review two main areas. First, much work has evaluated RAG systems with poor retrieval, uncovering cases where LLMs are led astray by irrelevant context.",
+    "score": 0.6457848024238424,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 2
+   },
+   {
+    "text": "To better understand RAG performance, we use our sufficient context autorater to stratify the retrieval augmented generation (RAG) datasets into sufficient and   17Published as a conference paper at ICLR 2025   insufficient context. The third and fourth columns show the performance of the second column stratified by sufficient vs insufficient context respectively.   100% 11.7%   10.0%   78.3% 1.7% 9.1%   89.1%   46.1%   12.7%   41.2%   40.3% 8.6%   51.1%   11.7% 9.3%   79.0% 4.0% 6.9%   89.1%   38.2% 17.6%   44.1%   53.2%   11.8% 35.0%   Without RAG   23.1% 54.1%   22.8%   With RAG   18.3%54.2%   27.5%   With RAG Suff. Context   77.4% of Dataset   39.2%   53.9% 6.9%   With RAG Insuff.",
+    "score": 0.635171159140829,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 17
+   },
+   {
+    "text": "Surprisingly, this remains true after we filter out questions that the model answers correctly in a closed book (w/o RAG) setting. Together, our analysis deepens our understanding of RAG systems by revealing nuances in how models generate responses with retrieval.   As a final contribution, we explore ways to use sufficient context labels to reduce model hallucinations. We implement a new selective generation framework that improves accuracy. We use a smaller, intervention model to determine when the model generates or abstains, providing a controllable trade-off. Moreover, we can combine our method with any LLM, including proprietary models like Gemini and GPT. Our main result is that using sufficient context as an additional signal leads to much higher accuracy over the fraction of answered queries, for most coverage levels and across multiple models/datasets. We also find that fine-tuning open-source models with sufficient context information does not easily reduce the hallucination rate. Instead, for LLama 3.1 and Mistral 3, fine-tuning can lead to a higher abstention rate at the cost of fewer correct answers. Code for our selective generation method and the prompts used in our autorater analysis are available on our github.   To summarize, our main contributions are   1. We define the notion of sufficient context, unifying existing work on relevance for RAG systems.",
+    "score": 0.5571116796128075,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 2
+   },
+   {
+    "text": "Code for our selective generation method and the prompts used in our autorater analysis are available on our github.   1 INTRODUCTION   Providing Large Language Models (LLMs) with additional context, such as in Retrieval Augmented Generation (RAG) systems, has led to major improvements in LLM factuality and verifiability when adapting to new domains (Lewis et al., 2020). In the case of open-domain question answering, a retrieval model provides context at inference time in the form of snippets or long-form text (Zhu et al., 2021). Then, the model synthesizes the query along with this added context to generate the answer. Unfortunately, current RAG-based LLMs exhibit many undesirable traits, such as confidently predicting the incorrect answer with retrieved evidence (Mishra et al., 2024; Niu et al., 2024; Ru et al., 2024), being distracted by unrelated information (Cuconasu et al., 2024; Yoran et al., 2024), and failing to properly extract answers from long text snippets (Hsieh et al., 2024; Liu et al., 2024).   The ideal outcome is for the LLM to output the correct answer if the provided context contains enough information to answer the question when combined with the model’s parametric knowledge. Otherwise, the model should abstain from answering and/or ask for more information.",
+    "score": 0.5486452606531773,
+    "source": "029 - Sufficient Context.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "15c05b03-5ea6-48d9-86be-b89fa9daa18c",
+  "X-Amzn-Trace-Id": "Root=1-6b0804fb-5f5b61c6571a75835e6153a2;Parent=269f7b600cfca605;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.311
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:55+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Sufficient Context: A New Lens on Retrieval Augmented Generation Systems"
+ },
+ "from_cache": false
+}

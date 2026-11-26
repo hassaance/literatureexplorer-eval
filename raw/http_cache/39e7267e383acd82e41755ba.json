@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.367,
+ "json": {
+  "query": "ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review",
+  "contexts": [
+   {
+    "text": "ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review   REVIEWERTOO: SHOULD AI JOIN THE PROGRAM COMMITTEE? A LOOK AT THE FUTURE OF PEER REVIEW   Gaurav Sahu1,2,3 Hugo Larochelle1 Laurent Charlin1,2,5 Christopher Pal1,3,4,5,6 1Mila – Quebec AI Institute, 2HEC Montréal, 3ServiceNow Research   4Université de Montréal, 5Canada CIFAR Chair, 6Polytechnique Montréal   ABSTRACT   Peer review is the cornerstone of scientific publishing, yet it suffers from inconsistencies, reviewer subjectivity, and scalability challenges. We introduce ReviewerToo, a modu- lar framework for studying and deploying AI-assisted peer review to complement human judgment with systematic and consistent assessments. ReviewerToo supports systematic experiments with specialized reviewer personas and structured evaluation criteria, and can be partially or fully integrated into real conference workflows. We validate ReviewerToo on a carefully curated dataset of 1,963 paper submissions from ICLR 2025, where our experiments with the gpt-oss-120b model achieves 81.8% accuracy for the task of categorizing a paper as accept/reject compared to 83.9% for the average human reviewer.",
+    "score": 0.7598552837852199,
+    "source": "133 - ReviewerToo Should AI Join The Program Committee A Look At The Future of Peer Review.pdf",
+    "page": 1
+   },
+   {
+    "text": "AAAI 2026 (https://aaai.org/conference/aaai/aaai-26/instructions-for-aaai-26-reviewers/) 2https://www.nature.com/articles/d41586-025-00894-7   1   ar X   iv :2   51 0.   08 86   7v 1   [ cs   .A I]   9 O   ct 2   02 5         https://arxiv.org/abs/2510.08867v1ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review   Hu m   an (t   op -1   % )   Hu m   an (a   vg )   Me ta   (a ll)   Ma jor   ity (a   ll) Me   ta w   / T op   -3   Th eo   ris t   Ma jor   ity (T   op -3   )   De fau   lt Pe   da go   gic al   Em pir   ici st   Be rt   FT Av   er ag   e ( all   ) XG   Bo os   t ( tfi   df )   Me ta   w / T   op -3   +B as   e XG   Bo os   t ( Be   rt)   Cr itic   al Pe   rm iss   ive",
+    "score": 0.7206928941033672,
+    "source": "133 - ReviewerToo Should AI Join The Program Committee A Look At The Future of Peer Review.pdf",
+    "page": 1
+   },
+   {
+    "text": "These findings provide an evidence-based perspective on the opportunities and limitations of AI in peer review, moving beyond anecdote toward systematic study. In sum, this paper makes three contributions:   1. We conceptualize peer review as a socio-technical process and propose ReviewerToo, a modular framework for evaluating AI-assisted reviewing under controlled and transparent conditions.   2. We present a large-scale empirical study on the ICLR-2k dataset, analyzing the performance and biases of different reviewer personas and their alignment with meta-review outcomes.   2ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review   3. We derive a set of guidelines for integrating AI into peer-review pipelines, informed by both quan- titative performance metrics and qualitative analyses of reviewer behavior.   Together, these contributions provide a foundation for systematic and consistent integration of AI into the peer-review process.   2 BACKGROUND   Challenges in Traditional Peer Review Peer review has long faced well-documented challenges, in- cluding reviewer fatigue, bias, and low inter-reviewer agreement (Cortes & Lawrence, 2021; Adam, 2025). Large-scale experiments at venues such as NeurIPS revealed that acceptance decisions can vary almost ran- domly (Cortes & Lawrence, 2021) and exhibit low inter-rater reliability.",
+    "score": 0.6818056844679923,
+    "source": "133 - ReviewerToo Should AI Join The Program Committee A Look At The Future of Peer Review.pdf",
+    "page": 2
+   },
+   {
+    "text": "This alignment with the final decision, despite divergence from the human reviewers’ initial scores, indicates that the agents can independently identify underlying weaknesses in a paper that might be overlooked in human assessments. Such behavior demonstrates the potential of AI reviewer agents to provide balanced, critical evaluations and to meaningfully contribute to peer review deliberations.   Summary. Taken together, these results demonstrate that REVIEWERTOO can reasonably approximate human-level decision making, especially when aggregating diverse reviewers through metareview protocols. Single-agent personas exhibit distinctive biases, but structured ensembles yield both higher predictive accu- racy and higher judged review quality. Agreement analysis highlights persistent reviewer variance, mirroring   9ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review   human peer review. Finally, ablation studies confirm that conference conditioning, rebuttals, and literature access are each essential to closing the gap with human reviewers.   6 DISCUSSION   Our experiments on the ICLR-2k dataset provide a first large-scale analysis of how LLM-based reviewer agents perform relative to humans, supervised classifiers, and ensemble protocols. The results reveal both opportunities and limitations of using AI in peer review. Here, we synthesize these findings into broader lessons and propose practical guidelines for integrating AI into peer-review pipelines.   AI reviewers approximate but do not replace humans.",
+    "score": 0.6110508861853797,
+    "source": "133 - ReviewerToo Should AI Join The Program Committee A Look At The Future of Peer Review.pdf",
+    "page": 9
+   },
+   {
+    "text": "We strictly adhered to OpenReview’s terms of use and com- munity guidelines in collecting and analyzing this data. All data used were publicly accessible at the time of collection and we did not pass any personally identifiable information to the LLM beyond what was intentionally made public by authors or reviewers.   The goal of this research is to improve the transparency, scalability, and fairness of the peer review process. Our experiments are designed to complement, not replace, human reviewers, with the intent of assisting editorial processes and studying the potential of AI tools in structured academic evaluation. We emphasize that ReviewerToo is meant for research and controlled integration scenarios, and not for unsupervised or fully automated decision-making in academic publishing.   Finally, the use of large language models in review generation and evaluation was conducted with attention to ethical implications, including the risks of bias propagation, overreliance on model outputs, and possible reinforcement of systemic inequities. We provide concrete guidelines and limitations in our discussion to promote responsible adoption of AI-assisted review systems.   11ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review   REFERENCES   David Adam. The peer-review crisis: how to fix an overloaded system. Nature, 644(8075):24–27, 2025.   Shubham Agarwal, Gaurav Sahu, Abhay Puri, Issam H.",
+    "score": 0.6109506199337398,
+    "source": "133 - ReviewerToo Should AI Join The Program Committee A Look At The Future of Peer Review.pdf",
+    "page": 11
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "599b5307-7c4c-45d6-b4d4-b798c99a781d",
+  "X-Amzn-Trace-Id": "Root=1-6b08050f-704fcb8c5ce4669c6a8644d4;Parent=3841b25c6a9c8a88;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.367
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:15+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "ReviewerToo: Should AI Join The Program Committee? A Look At The Future of Peer Review"
+ },
+ "from_cache": false
+}

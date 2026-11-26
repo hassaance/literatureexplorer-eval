@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.66,
+ "json": {
+  "id": "chatcmpl-da17c7cd-8219-4323-8d42-f01b65371f3c",
+  "object": "chat.completion",
+  "created": 1795687472,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The big transformer model achieved a BLEU score of 28.4 on the WMT 2014 English-to-German translation task."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1505,
+   "completion_tokens": 33,
+   "total_tokens": 1538
+  },
+  "contexts": [
+   {
+    "text": "This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.   6 Results   6.1 Machine Translation   On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big) in Table 2) outperforms the best previously reported models (including ensembles) by more than 2.0 BLEU, establishing a new state-of-the-art BLEU score of 28.4. The configuration of this model is listed in the bottom line of Table 3. Training took 3.5 days on 8 P100 GPUs. Even our base model surpasses all previously published models and ensembles, at a fraction of the training cost of any of the competitive models.   On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at less than 1/4 the training cost of the previous state-of-the-art model. The Transformer (big) model trained for English-to-French used dropout rate Pdrop = 0.1, instead of 0.3.   For the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints.",
+    "score": 0.44423720526206056,
+    "source": "001 - Attention Is All You Need.pdf",
+    "page": 8
+   },
+   {
+    "text": "Our model achieves 28.4 BLEU on the WMT 2014 English- to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.0 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature.   1 Introduction   Recurrent neural networks, long short-term memory [12] and gated recurrent [7] neural networks in particular, have been firmly established as state of the art approaches in sequence modeling and transduction problems such as language modeling and machine translation [29, 2, 5]. Numerous efforts have since continued to push the boundaries of recurrent language models and encoder-decoder architectures [31, 21, 13]. ∗Equal contribution. Listing order is random. Jakob proposed replacing RNNs with self-attention and started   the effort to evaluate this idea. Ashish, with Illia, designed and implemented the first Transformer models and has been crucially involved in every aspect of this work. Noam proposed scaled dot-product attention, multi-head attention and the parameter-free position representation and became the other person involved in nearly every detail. Niki designed, implemented, tuned and evaluated countless model variants in our original codebase and tensor2tensor.",
+    "score": 0.43733498161428513,
+    "source": "001 - Attention Is All You Need.pdf",
+    "page": 1
+   },
+   {
+    "text": "Our model achieves 28.4 BLEU on the WMT 2014 English-to- German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data. ...   Output (structured result): {   \"url\": \"https://arxiv.org/abs/1706.03762\", \"extracted_text\": \"[1706.03762] Attention Is All You Need\\n\\n...\\n\\n[Submitted on 12 Jun 2017 (\\   nv1\\n), last revised 2 Aug 2023 (this version, v7)]\\n\\nTitle:\\nAttention Is All You Need\\n\\ nAuthors:\\nAshish Vaswani\\n,\\nNoam Shazeer\\n,\\nNiki Parmar\\n,\\nJakob Uszkoreit\\n,\\nLlion Jones \\n,\\nAidan N. Gomez\\n,\\nLukasz Kaiser\\n,\\nIllia Polosukhin\\n\\n...",
+    "score": 0.43070836944130986,
+    "source": "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+    "page": 52
+   },
+   {
+    "text": "For the base model, we use a rate of Pdrop = 0.1.   7Table 2: The Transformer achieves better BLEU scores than previous state-of-the-art models on the English-to-German and English-to-French newstest2014 tests at a fraction of the training cost.",
+    "score": 0.4166560126088415,
+    "source": "001 - Attention Is All You Need.pdf",
+    "page": 7
+   },
+   {
+    "text": "For translation tasks, the Transformer can be trained significantly faster than architectures based on recurrent or convolutional layers. On both WMT 2014 English-to-German and WMT 2014 English-to-French translation tasks, we achieve a new state of the art. In the former task our best model outperforms even all previously reported ensembles.   We are excited about the future of attention-based models and plan to apply them to other tasks. We plan to extend the Transformer to problems involving input and output modalities other than text and to investigate local, restricted attention mechanisms to efficiently handle large inputs and outputs such as images, audio and video. Making generation less sequential is another research goals of ours.   The code we used to train and evaluate our models is available at https://github.com/ tensorflow/tensor2tensor.   Acknowledgements We are grateful to Nal Kalchbrenner and Stephan Gouws for their fruitful comments, corrections and inspiration.   9         https://github.com/tensorflow/tensor2tensor        https://github.com/tensorflow/tensor2tensorReferences [1] Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hinton. Layer normalization. arXiv preprint   arXiv:1607.06450, 2016.   [2] Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.",
+    "score": 0.41238691398649346,
+    "source": "001 - Attention Is All You Need.pdf",
+    "page": 9
+   }
+  ],
+  "sources": [
+   "001 - Attention Is All You Need.pdf",
+   "001 - Attention Is All You Need.pdf",
+   "066 - OctoTools An Agentic Framework with Extensible Tools for Complex Reasoning.pdf",
+   "001 - Attention Is All You Need.pdf",
+   "001 - Attention Is All You Need.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "da17c7cd-8219-4323-8d42-f01b65371f3c",
+  "X-Amzn-Trace-Id": "Root=1-6b080430-410345e9410781de7afab1ab;Parent=6a1e7ba3956b2517;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.66
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:31+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Minkä BLEU-pistemäärän suuri Transformer-malli saavutti WMT 2014 englanti–saksa-käännöstehtävässä?"
+   }
+  ]
+ },
+ "from_cache": false
+}

@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.314,
+ "json": {
+  "query": "AgentSociety 2: An Integrated Research Environment for Executable Social Science",
+  "contexts": [
+   {
+    "text": "LLM Agents as Social Scientists: A Human–AI   Collaborative Platform for Social Science Automation   Lei Wang1,2, Yuanzi Li1,2, Jinchao Wu1,2, Heyang Gao1,2, Xiaohe Bo1,2, Xu Chen1,2, Ji-Rong Wen1,2   1Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, China 2Beijing Key Laboratory of Big Data Management and Analysis Methods, Beijing, China   Abstract   Traditional social science research often requires designing complex experiments across vast methodological spaces and depends on real human participants, making it labor-intensive, costly, and difficult to scale. Here we present S-Researcher, an LLM-agent-based platform that assists researchers in conducting social science research more efficiently and at greater scale by “sili- conizing” both the research process and the participant pool. To build S-Researcher, we first develop YuLan-OneSim, a large-scale social simulation system designed around three core re- quirements: generality via auto-programming from natural language to executable scenarios, scalability via a distributed architecture supporting up to 100,000 concurrent agents, and re- liability via feedback-driven LLM fine-tuning.",
+    "score": 0.5262494137916724,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 1
+   },
+   {
+    "text": "Leveraging this system, S-Researcher supports researchers in designing social experiments, simulating human behavior with LLM agents, ana- lyzing results, and generating reports, forming a complete human–AI collaborative research loop in which researchers retain oversight and intervention at every stage. We operationalize LLM simulation research paradigms into three canonical reasoning modes (induction, deduction, and abduction) and validate S-Researcher through systematic case studies: inductive reproduction of cultural dynamics consistent with Axelrod’s theory, deductive testing of competing hypotheses on teacher attention validated against survey data, and abductive identification of a cooperation mechanism in public goods games confirmed by human experiments. S-Researcher establishes a new human–AI collaborative paradigm for social science, in which computational simulation augments human researchers to accelerate discovery across the full spectrum of social inquiry.   Keywords: large language model, social simulation, computational social science   Introduction   Social science has long advanced human civilization by providing deep insights into human behavior, social structures, and cultural dynamics. Traditional research typically begins with the design of methodological frameworks, such as surveys [1, 2], controlled experiments [3, 4], and longitudinal studies, followed by data collection from human participants to derive findings [5]. However, this process confronts two structural bottlenecks that fundamentally constrain the pace, scale, and depth of social science research.",
+    "score": 0.504198327917511,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 1
+   },
+   {
+    "text": "Scientific-agent research demonstrates why useful work must include executable methods and artifacts. ChemCrow augments a language model with chemistry tools for synthesis, drug discovery, and materials tasks (Bran et al., 2023). The AI Scientist joins idea generation, code execution, experimentation, visualization, paper writing, and simulated review in an automated research loop (Lu et al., 2024); its successor introduces agentic tree search and a dedicated experiment manager (Yamada et al., 2025). The AI co-scientist uses an asynchronous coalition of specialized agents to generate, debate, rank, and evolve scientific hypotheses under researcher guidance (Gottweis et al., 2025). These systems emphasize different parts of the scientific process. Apodex instead scales agentic intelligence in a general-purpose model and execution runtime rather than targeting a domain-specific laboratory agent: scientific workflows are a primary use case, but the same file–search–code policy is also evaluated on software and professional work.   Multi-agent coordination and test-time scaling. AutoGen coordinates agents through programmable conversations (Wu et al., 2023); MetaGPT and ChatDev organize specialized roles around structured software-development workflows (Hong et al., 2023; Qian et al., 2023); and AgentVerse studies collabo- rative groups and emergent behavior (Chen et al., 2023).",
+    "score": 0.5026916744639752,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 29
+   },
+   {
+    "text": "These results demonstrate that LLM simulation, when embedded within a human–AI collaborative workflow, can meaningfully accelerate social science research. By pro- viding a general, scalable, and reliable platform that substantially lowers the technical barrier for computational social science while keeping researchers in the loop, S-Researcher opens a new avenue for augmenting human expertise in the social sciences.   Results   YuLan-OneSim: a general, scalable, and reliable platform for social simulation   S-Researcher requires a simulation platform that can execute diverse experimental designs, scale to population-level experiments, and produce trustworthy behavioral outputs. We devel- oped YuLan-OneSim to meet these requirements through three integrated capabilities: an auto- programming framework for generality, a distributed simulation architecture for scalability, and a feedback mechanism for reliability.   Auto-programming framework for generalizable simulation. To support arbitrary ex- perimental designs generated by S-Researcher’s upstream modules, YuLan-OneSim translates nat- ural language scenario descriptions into executable simulation code through a structured pipeline. User inputs are first formalized following the ODD (Overview, Design Concepts, Details) proto- col [25], with an interactive agent resolving ambiguities. A behavior graph is then constructed to represent agent actions and interactions, where the system can automatically validate its structural consistency. Guided by this graph, the final simulation code is generated and iteratively refined to ensure correctness.",
+    "score": 0.5004255068342534,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 4
+   },
+   {
+    "text": "While recent years have seen the emergence of numerous AI-driven research systems in the natural sciences [21–23], these systems are not directly transferable to the social sci- ences, which typically center on human subjectivity rather than objective natural patterns. While Manning et al. [24] make an early step toward AI social researchers, several fundamental challenges remain unresolved, most notably, developing a simulation system with sufficient generality to ac- commodate the flexible experimental designs generated by upstream LLMs, achieving the scalability necessary for population-level experiments, and ensuring the reliability of simulated outcomes to support credible scientific inference.   To address these challenges, we first develop YuLan-OneSim, the social simulation engine under- lying S-Researcher, with three integrated capabilities. An auto-programming framework translates natural-language scenario descriptions into executable simulation code via ODD protocols [25] and validated behavior graphs, providing the generality to support arbitrary experimental designs and freeing researchers from engineering overhead so they can focus on scientific questions. A distributed, event-driven architecture executes agent behaviors in parallel with topology-aware al- location, achieving scalability to 100,000 concurrent agents. A Verifier–Reasoner–Refiner–Tuner (VR2T for short) feedback mechanism iteratively evaluates simulation outputs and fine-tunes the backbone LLMs, ensuring the reliability required for rigorous social-scientific inquiry.",
+    "score": 0.5003160297349164,
+    "source": "107 - LLM Agents as Social Scientists A Human–AI Collaborative Platform for Social Science Automation.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "14851c57-8d0b-40ac-9e90-c74b3770968f",
+  "X-Amzn-Trace-Id": "Root=1-6b080504-51629a351415ddb14594b6a5;Parent=13a8cd143cb919e3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.314
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:04+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "AgentSociety 2: An Integrated Research Environment for Executable Social Science"
+ },
+ "from_cache": false
+}

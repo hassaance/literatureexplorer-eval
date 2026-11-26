@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.373,
+ "json": {
+  "query": "How do Apodex 1.1’s agentic coordination scaling (as described in the Apodex 1.1 paper) and the execution‑grounded automated executor (as described in ‘Towards Execution‑Grounded Automated AI Research’) differ in their methods for using execution feedback to improve performance on complex, long‑horizon tasks?",
+  "contexts": [
+   {
+    "text": "Environment Scaling broadens the executable file, search, and code worlds in which the model learns and acts, while Agentic Coordination Scaling broadens how work is decomposed, delegated, integrated, and reorganized across agents and time. A common harness and AgentOS provide the persistent execution state required by both dimensions, and unified training converts environment and coordination trajectories into a stronger working policy.   The evaluation is designed around the same objective. Results across scientific research, professional work, mathematics, search, coding, and internal long-horizon evaluations test the breadth of the underlying model, while the comparison between ReAct and Agent Team estimates the system-level lift of trained coordination under additional organized computation. The HDS6 analysis and end-to-end cases further examine whether successful outputs are supported by coherent tool use, evidence, repair, alternatives, and reviewable artifacts. Taken together, these evaluations position Apodex 1.1 not as a collection of task-specific agents, but as a common model and execution stack whose capabilities compose across different forms of work.   The 35B Apodex 1.1 mini provides a particularly direct efficiency result: it reaches the performance band of selected frontier systems on representative professional, financial, and scientific tasks, improves over Apodex 1.0 mini on overlapping evaluations, and retains substantial gains from Agent Team coordination. This shows that the two scaling dimensions improve not only peak system performance, but also the capability obtained at a compact model scale.",
+    "score": 0.5958822040190294,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 30
+   },
+   {
+    "text": "The lead agent integrates that result into shared state, revises priorities, informs or terminates other branches, and creates new workstreams when evidence changes the problem. A slow or failed branch does not erase completed work elsewhere, and the user can change priorities or stop a path while other branches continue.   Apodex trains decomposition, delegation, result integration, and replanning as part of the model’s working policy, then realizes those behaviors through Agent Team at runtime. Parallel execution supplies breadth; staged return and replanning supply feedback; shared state allows one branch to improve the value of another; and explicit termination prevents obsolete work from consuming the remaining budget. We call this joint training-and-runtime paradigm Agentic Coordination Scaling. It scales the organization of   6work across agents, task branches, and time rather than merely increasing the number of samples.   2.4 A Common Harness Connects Both Scaling Dimensions   Environment Scaling and Agentic Coordination Scaling require a shared execution contract. On the environment side, the harness defines tools, observations, workspace state, artifacts, interaction budgets, and completion checks. On the coordination side, it defines subagent execution state, staged returns, shared artifacts, lifecycle control, and verification hooks. Using one contract keeps trajectory collection, replay, training, and runtime execution aligned rather than allowing each capability to develop behind an incompatible interface.   Long-horizon work cannot be reduced to a larger context window.",
+    "score": 0.5897345884039854,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 6
+   },
+   {
+    "text": "Apodex 1.1 learns to decompose objectives, delegate work, incorporate asynchronous results, revise shared plans, and reorganize unfinished branches. Agent Team realizes these behaviors through adaptive parallel effort across evidence gathering, file analysis, implementation, verification, and coun- teranalysis. Existing systems demonstrate gains from conversational coordination, role specialization, and multi-agent hypothesis generation (Wu et al., 2023; Hong et al., 2023; Chen et al., 2023; Gottweis et al., 2025). The relevant scaling variable is therefore not simply the number of agents or samples, but the amount of useful work that can be coordinated as an objective evolves.   Both dimensions depend on a common execution harness. The harness binds the model to File, Search, and Code environments; maintains workspace, artifact, provenance, and branch state; defines obser- vations and completion contracts; and supplies replay and verification hooks. AgentOS provides the persistent runtime beneath this harness, preserving authoritative state across tools, agents, context pressure, intervention, and partial failure. The same execution contract supports trajectory collection during training and sustained task execution at runtime, keeping environment interaction and agent coordination within a common model-and-system stack.   Training is organized to exploit both scaling dimensions. A unified SFT mixture establishes common behavior across reasoning, tools, recovery, delivery, and multi-agent coordination.",
+    "score": 0.5834993637827717,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 3
+   },
+   {
+    "text": ". . . 4 2.2 Executable Environments Are a Scaling Surface . . . . . . . . . . . . . . . . . . . . . . . . . 6 2.3 Agentic Coordination Is a Scaling Surface . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 2.4 A Common Harness Connects Both Scaling Dimensions . . . . . . . . . . . . . . . . . . . . 7 2.5 Training Exploits Both Scaling Dimensions . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 2.6 Evaluation Mirrors the Scaling Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8   3 Apodex 1.1 8 3.1 Environment Scaling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 3.2 Apodex Agent Team 1.1: Interactive Self-Organizing Teams . . . . . . . . . . . . . . . . .",
+    "score": 0.5745352948716408,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 2
+   },
+   {
+    "text": "Unified SFT and agentic RL use executable task traces and Agent Team interactions to improve task execution, recovery, delivery, and coordination within one policy.   • Evaluation from general capability to professional delivery. A main benchmark table is followed by analyses of science, finance and professional file work, IMO gold-medal-level mathematics, coding, internal long-horizon tasks, and end-to-end cases.   2 Core Insights and Design Principles   Apodex 1.1 is built around a model-level observation: high-quality reasoning is necessary but insufficient for complex work, especially when the task unfolds over a long horizon. Scaling agentic intelligence requires a model to act in an environment, preserve authoritative state, turn intermediate results into better decisions, recover without losing valid progress, organize additional computation, and satisfy a checkable delivery objective. Our long-term objective is a Heavy-Duty Solver that can take responsibility for increasingly ambitious, long-running work.",
+    "score": 0.5726256580912155,
+    "source": "111 - Apodex 1.1 Scaling Agentic Intelligence for Complex Work.pdf",
+    "page": 4
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "4978dc3b-a0bb-4d12-ab79-6b73ea509248",
+  "X-Amzn-Trace-Id": "Root=1-6b080461-2e4a83fc50e9c0337f03db61;Parent=37d2c93692499ef3;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.373
+  }
+ ],
+ "requested_at": "2026-11-26T10:05:21+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "How do Apodex 1.1’s agentic coordination scaling (as described in the Apodex 1.1 paper) and the execution‑grounded automated executor (as described in ‘Towards Execution‑Grounded Automated AI Research’) differ in their methods for using execution feedback to improve performance on complex, long‑horizon tasks?"
+ },
+ "from_cache": false
+}

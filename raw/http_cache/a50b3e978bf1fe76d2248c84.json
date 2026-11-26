@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.312,
+ "json": {
+  "query": "In the MemoryGraft paper, how does the Cryptographic Provenance Attestation (CPA) defense ensure that poisoned experiences injected by an adversary are not used by the LLM agent?",
+  "contexts": [
+   {
+    "text": "Once injected into the long-term memory store, poisoned entries reliably outcompete benign experiences across a wide range of evaluation queries, consistently exposing the agent to unsafe procedural templates.   6 Potential Defense   To mitigate the MemoryGraft threat, we can propose a defense mechanism rooted in Cryptographic Provenance Attestation (CPA). The core vulnerability exploited by MemoryGraft is the agent’s inability to distinguish between self-generated experiences and externally injected artifacts. We can formalize a trusted memory insertion protocol where the agent holds a private signing key Kpriv   within a secure enclave. When a valid task (q,Rq) is successfully executed and validated by the environment, the agent generates a digital signature σ = Sign(H(q ∥ Rq),Kpriv), where ∥ denotes string concatenation and H is a cryptographic hash function. The tuple (q,Rq, σ) is then stored in M. During the retrieval phase for a new query q⋆, the retrieval function can be modified to verify the signature as follows:   Retrsecure(q ⋆) = {(qi, Rqi) ∈ Retr(q⋆) | Verify((qi, Rqi), σi,Kpub) = True} .   Since the adversary Aadv interacts only through ingestion channels (e.g., README files) and lacks access to Kpriv , they cannot generate valid signatures for the poisoned set Spoison.",
+    "score": 0.6450795982678853,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 9
+   },
+   {
+    "text": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval   Saksham Sahai Srivastava School of Computing University of Georgia   Athens, GA 30602 saksham.srivastava@uga.edu   Haoyu He School of Computing University of Georgia   Athens, GA 30602 haoyu.he@uga.edu   Abstract   Large Language Model (LLM) agents increasingly rely on long-term memory and Retrieval-Augmented Generation (RAG) to persist experiences and refine future performance. While this experience learning capability enhances agentic autonomy, it introduces a critical, unexplored attack surface, i.e., the trust boundary between an agent’s reasoning core and its own past. In this paper, we introduce Memory- Graft. It is a novel indirect injection attack that compromises agent behavior not through immediate jailbreaks, but by implanting malicious successful experiences into the agent’s long-term memory. Unlike traditional prompt injections that are transient, or standard RAG poisoning that targets factual knowledge, MemoryGraft exploits the agent’s semantic imitation heuristic which is the tendency to replicate patterns from retrieved successful tasks. We demonstrate that an attacker who can supply benign ingestion-level artifacts that the agent reads during execution can induce it to construct a poisoned RAG store where a small set of malicious procedure templates is persisted alongside benign experiences.",
+    "score": 0.5538958080495274,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 1
+   },
+   {
+    "text": "We demonstrate that an attacker who can supply benign ingestion-level artifacts that the agent reads during execution can induce it to construct a poisoned RAG store where a small set of malicious procedure templates is persisted alongside benign experiences. When the agent later encounters semantically similar tasks, union retrieval over lexical and em- bedding similarity reliably surfaces these grafted memories, and the agent adopts the embedded unsafe patterns, leading to persistent behavioral drift across ses- sions. We validate MemoryGraft on MetaGPT’s DataInterpreter agent with GPT–4o and find that a small number of poisoned records can account for a large fraction of retrieved experiences on benign workloads, turning experience-based self-improvement into a vector for stealthy and durable compromise. To facilitate reproducibility and future research, our code and evaluation data are available at https://github.com/Jacobhhy/Agent-Memory-Poisoning.   1 Introduction   Large language model agents have quickly moved beyond simple chatbots and now handle software development, autonomous driving, finance and healthcare. Modern agents couple a reasoning core with tool use and long-term memory so they can plan, execute and learn from experience. Several research works were done recently in the area of long-term memory. MemoryBank[1] encodes past events as dense vectors and retrieves them via similarity search. MemGPT[2] pages information in and out of a hierarchical memory to circumvent small context windows.",
+    "score": 0.5363207413118645,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 1
+   },
+   {
+    "text": "Tan et al. (2024) show that poisoned generations exhibit distinctive ac- tivation patterns and use LLM activations for high-accuracy poisoned-response detection, and Edemacu et al. (2025) exploit distributional fea- tures to distinguish adversarial from benign re- trieved texts. Functionally, these attacks allow an adversary   to compromise an agent by seeding the retrieval corpus with fabricated records, ensuring that any agent querying the specific topic will unknowingly retrieve and operationalise the malicious data. In practice, attackers can achieve this insertion by publishing adversarial content to public web resources targeted by scrapers, or by uploading poisoned files to shared enterprise repositories - such as wikis or document stores - which the agent automatically indexes.   9AI Agent Traps   Latent Memory Poisoning   Beyond external knowledge bases, agents main- tain hierarchically organised episodic logs and summarised dialogue pages that persist across sessions, providing the substrate for long-horizon personalisation (Kang et al., 2025; Zhang et al., 2025d). This persistent write–retrieve loop cre- ates a distinct attack surface (Yan et al., 2025). Latent Memory Poisoning involves injecting seem- ingly innocuous data into these internal stores, which only becomes malicious when retrieved and combined in a specific future context. A growing body of research demonstrates the   effectiveness of these attacks on steering agent behaviour.",
+    "score": 0.5350805240053896,
+    "source": "164 - AI Agent Traps.pdf",
+    "page": 9
+   },
+   {
+    "text": "If this condition is met, the memory is suppressed regardless of its semantic similarity. This ensures that even if a poisoned record (q   (j) p , R   (j) p ) is   retrieved via the union operator, the presence of the malicious pattern π (e.g., skip_validation) would trigger a high risk penalty Lrisk and would effectively filter the item from the final context and would neutralize the behavioral drift.   7 Conclusion   Our results show that the same long-term memory mechanisms designed to help LLM agents improve over time can quietly undermine them. By slipping malicious successful experiences into the agent’s memory through ordinary documentation, an attacker can influence how the agent behaves on later   9tasks without ever issuing explicit harmful instructions. Once written, these entries are treated as trusted prior examples, and the union of lexical and embedding-based similarity reliably retrieves them in exactly the scenarios the attacker targets. In our experiments, even a small number of poisoned records accounted for a large fraction of retrieved items for relevant queries, leading the agent to adopt unsafe shortcuts such as skipping validation, reusing stale results, or executing risky automation. Because these memories persist across sessions, the induced drift continues until the memory store is explicitly cleaned or rebuilt. If such agents are to be deployed in software engineering and other safety- or compliance-sensitive workflows, they will require much stronger guarantees around what is allowed to be written into memory and how retrieved experiences are vetted before being reused.",
+    "score": 0.5340249095524262,
+    "source": "170 - MemoryGraft Persistent Compromise of LLM Agents via Poisoned Experience Retrieval.pdf",
+    "page": 9
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "ee099267-712d-4c15-bf8d-17b3b3d353c3",
+  "X-Amzn-Trace-Id": "Root=1-6b08043d-7e929eef164ce92b190a0ddc;Parent=629c2bca5a4a1399;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.312
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:45+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "query": "In the MemoryGraft paper, how does the Cryptographic Provenance Attestation (CPA) defense ensure that poisoned experiences injected by an adversary are not used by the LLM agent?"
+ },
+ "from_cache": false
+}

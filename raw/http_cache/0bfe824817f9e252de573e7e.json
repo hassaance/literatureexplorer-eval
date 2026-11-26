@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.316,
+ "json": {
+  "query": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation",
+  "contexts": [
+   {
+    "text": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation Jiarui Liu1,∗, Renjie Tao2, Yiwei Liao2, Chuanyang Jin3, Kai Sun2, Xiao Yang2, Xinyuan Zhang2, Xilun Chen2, Zhuangqun Huang2, Lechen Zhang4, Yongjin Yang5, Yinghui He6, Weihao Xuan7,8, RakeshWanga2, Anuj Kumar2, Mona T. Diab1, Wen-tau Yih3, Xin Luna Dong2   1Carnegie Mellon University, 2Meta Reality Labs, 3FAIR at Meta, 4University of Illinois Urbana-Champaign, 5University of Toronto, 6Princeton University, 7The University of Tokyo, 8RIKEN AIP ∗Work done during an internship at Meta   Despite rapid progress in automating scientific research, generating promising and well grounded research solutions remains a central challenge. We isolate research ideation as a standalone task and build our solution on the intuition that a challenge in one field can often be addressed by a mechanism that solved an analogous challenge in another. Accordingly, we introduce IdeaScientist, which decomposes ideation into gap finding, innovation, and report writing, and trains each role with reinforcement learning.",
+    "score": 0.8796612710661206,
+    "source": "108 - IdeaScientist Orchestrating Agents for Grounded Scientific Ideation.pdf",
+    "page": 1
+   },
+   {
+    "text": "This leaves unclear which reasoning stage improved and whether specialization survives deployment. To make long-horizon research ideation trainable, we use Group Relative Policy Optimization (GRPO) (Shao et al., 2024b) to train each subagent role with a stage-matched human reference artifact and rubric, then recompose the trained roles within the full agentic loop.   3 IdeaScientist: A Framework for Autoresearch Ideation   3.1 Harness Design   IdeaScientist decomposes research ideation into three specialized sub-agents coordinated by an orchestrator: a gap finder examines closely related works to identify methodological limitations, an innovator draws on work from different problem settings to develop transferable solution intuitions, and a report writer consolidates the surviving intuition into a complete proposal. The report writer follows a fixed output schema that requires it to formalize the problem setting, state the central novelty, distinguish the proposed mechanism from the closest prior methods, and provide sufficient architectural and training detail to make the proposal actionable. It also specifies an evaluation plan, falsifiable predictions and their refutation conditions, and the proposal’s limitations, while supporting claims about prior work with inline database identifiers. Table 5 provides the complete schema.   The orchestrator maintains the evolving research plan and determines which sub-agent to invoke next, allowing the system to revisit earlier stages when additional evidence or refinement is needed.",
+    "score": 0.6535783607069556,
+    "source": "108 - IdeaScientist Orchestrating Agents for Grounded Scientific Ideation.pdf",
+    "page": 4
+   },
+   {
+    "text": "Budget still drives turns 2 to 4   after the deadline appears   Memory: Maya is budget conscious   One stop fare at $210.   IdeaScientist: Causal inference   Figure 1 Overview of IdeaScientist. An orchestrator coordinates specialized agents—gap finder, innovator, and report writer—through shared intermediate artifacts, and the agents access the Svalbard Idea Vault for across-domain insights.   solution developed for one problem transfers to a seemingly unrelated one when the two share the same underlying structure (Mednick, 1962; Uzzi et al., 2013; Gentner, 1983; Gick & Holyoak, 1983; Loewenstein et al., 1999). We thus draw insights not from prior work in the same domain, but from work addressing a similar challenge in a different field. For example, web search cuts latency by low-cost retrieval of a candidate set before applying a sophisticated ranker; the same two-stage structure answers the latency challenge in recommendation, where first-stage filtering precedes fine-grained scoring.   We introduce IdeaScientist, an agent framework that operationalizes this process with three specialized sub-agents. A gap finder examines closely related prior solutions in the target domain to identify the shared methodological limitation that leaves the challenge unaddressed, or even amplifies it.",
+    "score": 0.6282248579425779,
+    "source": "108 - IdeaScientist Orchestrating Agents for Grounded Scientific Ideation.pdf",
+    "page": 2
+   },
+   {
+    "text": "IdeaScientist combines these threads in an inspectable ideation process, separately training agents to identify limitations in closely related work, seek inspiration from how other fields address similar challenges, and develop those insights into complete proposals.   1This is named after the Svalbard Global Seed Vault, as a metaphor for the repository of research ideas.   32.2 Evaluating Generated Research Ideas   Pre-execution evaluation must substitute observable proxies for eventual scientific value, but different proxies answer different questions. Reference-free rubrics use LLM judges to assess whether an idea appears high quality across dimensions such as novelty and feasibility (Guo et al., 2025; Ruan et al., 2026; Chen et al., 2026; Schopf & Färber, 2026; Wang et al., 2026d). Learned reviewers estimate acceptance-like quality (Zhu et al., 2025; Idahl & Ahmadi, 2025; Weng et al., 2025; Zeng et al., 2025; Nguyen et al., 2026; Deng et al., 2026; Li et al., 2026a; Camelo-Guerrero & Diaz-Rodriguez, 2026; Akella et al., 2025; Wen et al., 2026).",
+    "score": 0.6194743585705669,
+    "source": "108 - IdeaScientist Orchestrating Agents for Grounded Scientific Ideation.pdf",
+    "page": 3
+   },
+   {
+    "text": "https://github.com/jiarui-liu/IdeaScientist        https://huggingface.co/datasets/Jerry999/SvalbardIdeaVault        https://arxiv.org/abs/2610.04074v2IdeaScientist improves overall   quality by 14% and novelty by 25%   Research Ideation with IdeaScientist   Input   Action   Output   Research task + artifacts from the current stage   Edit research plan, spawn subagent, termination   Plans + task instructions for subagents when spawning   Input   Action   Output   Problem setting + challenge   Find research gaps in closely related work   A document summarizing research gaps   Problem setting Research gap Intuition Proposal   Given past conversations   and a new query, extract   relevant user traits and   generate personalized   responses   Evaluations rely on   synthetic users and   LLM judges, whose   behavior differs from   real humans   Ground data and   judgments in real   humans to expose   failures that synthetic   proxies hide   Proposed method: Frame LLM   personalization as three stages:   ...",
+    "score": 0.5958923841515338,
+    "source": "108 - IdeaScientist Orchestrating Agents for Grounded Scientific Ideation.pdf",
+    "page": 1
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "5676a07c-4696-48e7-9df2-44b2195f92bf",
+  "X-Amzn-Trace-Id": "Root=1-6b08050a-4e10cba9048019455f54c33a;Parent=0ff22c6247fdba2a;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.316
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:10+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation"
+ },
+ "from_cache": false
+}

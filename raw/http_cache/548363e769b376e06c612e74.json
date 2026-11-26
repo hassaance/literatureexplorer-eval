@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.339,
+ "json": {
+  "query": "Kimi K2.5: Visual Agentic Intelligence",
+  "contexts": [
+   {
+    "text": "KIMI K2.5: VISUAL AGENTIC INTELLIGENCE   TECHNICAL REPORT OF KIMI K2.5   Kimi Team   ABSTRACT   We introduce Kimi K2.5, an open-source multimodal agentic model designed to advance general agentic intelligence. K2.5 emphasizes the joint optimization of text and vision so that two modali- ties enhance each other. This includes a series of techniques such as joint text-vision pre-training, zero-vision SFT, and joint text-vision reinforcement learning. Building on this multimodal foun- dation, K2.5 introduces Agent Swarm, a self-directed parallel agent orchestration framework that dynamically decomposes complex tasks into heterogeneous sub-problems and executes them con- currently. Extensive evaluations show that Kimi K2.5 achieves state-of-the-art results across various domains including coding, vision, reasoning, and agentic tasks. Agent Swarm also reduces latency by up to 4.5× over single-agent baselines. We release the post-trained Kimi K2.5 model checkpoint1 to facilitate future research and real-world applications of agentic intelligence.   Figure 1: Kimi K2.5 main results.   1 Introduction   Large Language Models (LLMs) are rapidly evolving toward agentic intelligence.",
+    "score": 0.7753311000585246,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 1
+   },
+   {
+    "text": "Figure 1: Kimi K2.5 main results.   1 Introduction   Large Language Models (LLMs) are rapidly evolving toward agentic intelligence. Recent advances, such as GPT- 5.2 [41], Claude Opus 4.5 [6], Gemini 3 Pro [20], and Kimi K2-Thinking [1], demonstrate substantial progress in agentic capabilities, particularly in tool calling and reasoning. These models increasingly exhibit the ability to decom- pose complex problems into multi-step plans and to execute long sequences of interleaved reasoning and actions.   1https://huggingface.co/moonshotai/Kimi-K2.5   ar X   iv :2   60 2.   02 27   6v 2   [ cs   .C L   ] 7   A ug   2 02   6         https://huggingface.co/moonshotai/Kimi-K2.5        https://arxiv.org/abs/2602.02276v2Kimi K2.5 TECHNICAL REPORT   In this report, we introduce the training methods and evaluation results of Kimi K2.5. Concretely, we improve the training of K2.5 over previous models in the following two key aspects.   Joint Optimization of Text and Vision.",
+    "score": 0.6181498652021772,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 1
+   },
+   {
+    "text": "It achieves strong performance across a broad range of agentic and frontier benchmarks, including state-of-the-art results in visual-to-code generation (image/video-to-code) and real- world software engineering in our internal evaluations, while scaling both the diversity of specialized agents and the degree of parallelism. To accelerate community progress toward General Agentic Intelligence, we open-source our post-trained checkpoints of Kimi K2.5, enabling researchers and developers to explore, refine, and deploy scalable agentic intelligence.   2 Joint Optimization of Text and Vision   Kimi K2.5 is a native multimodal model built upon Kimi K2 through large-scale joint pre-training on approximately 15 trillion mixed visual and text tokens. Unlike vision-adapted models that compromise either linguistic or visual capabilities, our joint pre-training paradigm enhances both modalities simultaneously. This section describes the multimodal joint optimization methodology that extends Kimi K2 to Kimi K2.5.   2.1 Native Multimodal Pre-Training   A key design question for multimodal pre-training is: Given a fixed vision-text token budget, what is the optimal vision-text joint-training strategy.",
+    "score": 0.5976487063496214,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 2
+   },
+   {
+    "text": "On basic visual perception benchmarks BLINK (78.9%) and MMVP (87.0%), we also observe competitive performance of Kimi K2.5, demonstrating its robust real-world visual perceptions.   Video Understanding Kimi K2.5 achieves state-of-the-art performance across diverse video understanding tasks. It attains 86.6% on VideoMMMU and 80.4% on MMVU, rivaling frontier leaderships. With the context-compression and dense temporal understanding abilities of MoonViT-3D, Kimi K2.5 also establishes new global SOTA records in long-video comprehension with 75.9% on LVBench and 79.8% on LongVideoBench by feeding over 2,000 frames, while demonstrating robust dense-motion understanding at 70.4% on the highly-dimensional MotionBench.   Computer-Use Capability Kimi K2.5 demonstrates state-of-the-art computer-use capability on real-world tasks. On the computer-use benchmark OSWorld-Verified [72, 73], it achieves a 63.3% success rate relying solely on GUI actions without external tools.",
+    "score": 0.5967104700408217,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 13
+   },
+   {
+    "text": "Figure 12 presents qualitative examples of Kimi K2.5 solving diverse visual reasoning tasks via tool-augmented reasoning. The model demonstrates: (1) Maze Solving—processing binary image segmentation and implementing pathfinding algorithms (BFS) to navigate complex mazes; (2) Pie Chart Analysis—performing pixel-level color seg- mentation and geometric calculations to determine precise area proportions; and (3) Spot-the-Difference—employing computer vision techniques to detect pixel-level discrepancies between image pairs. These examples highlight the model’s capability to decompose complex visual problems into executable code, iteratively refine strategies based on intermediate results, and synthesize precise answers through quantitative visual analysis.   31",
+    "score": 0.5794129096659348,
+    "source": "014 - Kimi K2.5 Visual Agentic Intelligence.pdf",
+    "page": 31
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "1eea94dd-b694-45a2-8913-8edbf68397e6",
+  "X-Amzn-Trace-Id": "Root=1-6b0804f8-392f478767a8f323394768d7;Parent=1521ddb2c8626bcb;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.339
+  }
+ ],
+ "requested_at": "2026-11-26T10:07:52+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Kimi K2.5: Visual Agentic Intelligence"
+ },
+ "from_cache": false
+}

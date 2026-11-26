@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.356,
+ "json": {
+  "query": "Confucius Code Agent: An Open-sourced AI Software Engineer at Industrial Scale",
+  "contexts": [
+   {
+    "text": "Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases ShermanWong1,∗, Zhenting Qi2,∗, ZhaodongWang1,∗, Nathan Hu1,∗, Samuel Lin1, Jun Ge1, Erwin Gao1, Wenlin Chen1, Yilun Du2, Minlan Yu1,2, Ying Zhang1   1Meta, 2Harvard ∗Core Contributors   Real-world software engineering tasks require coding agents that can operate on massive repositories, sustain long-horizon sessions, and reliably coordinate complex toolchains at test time. Existing research-grade coding agents offer transparency but struggle when scaled to heavier, production-level workloads, while production-grade systems achieve strong practical performance but provide limited extensibility, interpretability, and controllability. We introduce the Confucius Code Agent (CCA), a software engineering agent that can operate at large-scale codebases. CCA is built on top of the Confucius SDK, an agent development platform structured around three complementary perspectives: Agent Experience (AX), User Experience (UX), and Developer Experience (DX). The SDK supports a unified orchestrator with advanced context management for long-context reasoning, a persistent note-taking system for cross-session continual learning, and a modular extension system for reliable tool use.",
+    "score": 0.7131738868730425,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 1
+   },
+   {
+    "text": "CCA achieves strong performance compared with prior coding agents, demonstrating how principled scaffolding can substantially amplify the effectiveness of the same underlying LLM. We also evaluate CCA on a custom PyTorch-Bench targeting debugging workflows on larger-scale codebases. Ablations isolate the contributions of each crucial mechanism, and analyses categorize remaining failure cases. In summary, our contributions are:   • We present the Confucius Code Agent (CCA), a coding agent designed for large-scale software engineering.   • We present the ConfuciusSDK, a principled AX/UX/DX-balanced agent development platform with advanced context management, extensions, and long-term memory.   • We provide evaluations across multiple benchmarks, supported by ablations and case studies. Notably, on SWE-Bench-Pro, CCA reaches a Resolve@1 performance of 59%, exceeding prior research baselines and commercial results, under identical repositories, model backend, and tool access.   • We empirically show that agent scaffolding, not just model capability, is also a primary determinant of agent performance, with appropriate orchestration and memory structures outperforming stronger models.   2 Method   In this section, we describe both the algorithmic design of agentic reasoning and the system design of the Confucius SDK that supports it.",
+    "score": 0.6989039550780966,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 3
+   },
+   {
+    "text": "Live-SWE-Agent (Xia et al., 2025) studies test-time self-evolution, adapting strategies and occasionally updating prompts, tools, or configuration mid-run based on partial progress. Satori-SWE (Zeng et al., 2025) explores population-based evolution at inference time, evolving multiple agent instances or candidates to improve sample efficiency via systematic refinement. In contrast, Agentless (Xia et al., 2024) argues for reducing agent complexity by replacing the open-ended loop with a fixed three-stage pipeline (localization, patch generation, test-case generation), achieving strong results on SWE-Bench Lite. Beyond academic prototypes, open-source platforms also shape the ecosystem: OpenHands (Wang et al., 2024) provides a community toolkit with a unified API for file I/O and code execution and implements a ReAct-style planner over popular base models. More related work can be found at Appendix A.   5 Conclusion   We presented the Confucius CodeAgent (CCA), a coding agent for large-scale codebases. Built on the Confucius SDK, CCA separates and optimizes Agent Experience (AX), User Experience (UX), and Developer Experience (DX), enabling multi-step reasoning with modular tools, structured memory, and interpretable traces.",
+    "score": 0.6255340478977599,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 11
+   },
+   {
+    "text": "Treating AX, UX, and DX as first-class and distinct design principles provides a foundation for scalable, analyzable, and reproducible agent behavior.   We first introduce the Confucius SDK (Figure 2), an agent development platform explicitly structured around AX, UX, and DX. On this platform, we instantiate the Confucius Code Agent (CCA), a concrete agent tailored to large-scale software engineering. We introduce four key mechanisms, each served for AX, UX, and/or DX, and instantiated in CCA to address the two challenges above:   1. Contextmanagement (AX; C1). A hierarchical working memory coupled with context compression enables the agent to retain essential state while supporting long-horizon reasoning without exceeding context limits.   2. Note-taking (AX, UX; C2). A dedicated note-taking agent distills trajectories into persistent, hierarchical Markdown notes, including hindsight notes that capture failure modes, thereby supporting both durable knowledge for the agent (AX) and interpretable artifacts for humans (UX).   3. Extensions (AX, DX; C1). Modular extensions define tool-use behavior, parsing, prompt shaping, and interaction policies through typed callbacks. This separation improves agent control and reasoning stability (AX) while providing observability and composability for developers (DX).",
+    "score": 0.5791267018466851,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 2
+   },
+   {
+    "text": "Built on the Confucius SDK, CCA separates and optimizes Agent Experience (AX), User Experience (UX), and Developer Experience (DX), enabling multi-step reasoning with modular tools, structured memory, and interpretable traces. Across public benchmarks and real-world settings, CCA shows that agentic scaffolding—orchestration, memory, and tool abstractions—can matter as much as, or more than, the backbone model. The SDK’s hierarchical memory, context compression, and persistent notes support long-horizon stability, while extensions and the meta-agent facilitate rapid adaptation to new tools and workflows.   More broadly, Confucius SDK establishes a new foundation for AI agent research. Its modular architecture invites experimentation: from studying long-context reasoning and long-term memory, to exploring test-time adaptation, to integrating reinforcement learning with structured trajectory traces. We hope this framework accelerates progress toward AI developers that are powerful, interpretable, and continuously improving, bridging the persistent gap between research prototypes and the demands of real-world software engineering.   11References   Anthropic. Effective context engineering for ai agents, 2025. https://www.anthropic.com/engineering/ effective-context-engineering-for-ai-agents. Accessed: 2025-12-10.",
+    "score": 0.562276451319491,
+    "source": "123 - Confucius Code Agent An Open-sourced AI Software Engineer at Industrial Scale.pdf",
+    "page": 11
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "b65aad39-ea44-4ee5-8fe8-9b6ee8e06bf2",
+  "X-Amzn-Trace-Id": "Root=1-6b08050d-4849d40f2222b2a218a74009;Parent=14ffe74c7c17e15d;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.356
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:13+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Confucius Code Agent: An Open-sourced AI Software Engineer at Industrial Scale"
+ },
+ "from_cache": false
+}

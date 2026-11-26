@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.289,
+ "json": {
+  "query": "Are LLM Agents Behaviorally Coherent? Latent Profiles for Social Simulation",
+  "contexts": [
+   {
+    "text": "Are LLM Agents Behaviorally Coherent? A Latent Profiling Approach for Social Simulation   James Mooney1∗, Josef Woldense2∗, Zheng Robert Jia1, Shirley Anugrah Hayati1, My Ha Nguyen3, Vipul Raheja4, Dongyeop Kang1   1Department of Computer Science and Engineering, University of Minnesota 2Department of African American & African Studies, University of Minnesota   3Department of Sociology, University of Chicago, 4Grammarly {moone174,jwoldens,dongyeop}@umn.edu   Website Code   Abstract   LLM agents are increasingly proposed as sub- stitutes for human participants in social re- search, usually on the strength of survey re- sponses that match those of the humans they represent. We argue that such output-level alignment is not enough. Drawing on the be- havioral sciences, we propose Latent Profil- ing, a framework for testing behavioral coher- ence: whether an agent’s conversational behav- ior follows, as human behavioral models pre- dict, from its own latent profile elicited by short surveys. As a case study, we test six hypothe- ses about preference, openness and agreement across nine open models. Agents reproduce surface-level trends but systematically fail in- depth tests: they are not behaviorally coher- ent, even when their individual responses look human.",
+    "score": 0.8310155869635756,
+    "source": "069 - Are LLM Agents Behaviorally Coherent Latent Profiles for Social Simulation.pdf",
+    "page": 1
+   },
+   {
+    "text": "expected   low A   observed high   ✗ incoherent   the latent profile defines what behavior should look like   Figure 2: Overview of Latent Profiling, our framework for testing behavioral coherence, shown with an illustrative example from our case study. (1) Controls set each agent’s persona, the topic, and a stance instruction. (2) A short survey elicits each agent’s latent profile , its preference P and openness O, which together with a human behavioral model define what its behaviour should look like. (3) Agents converse, and their external behaviour is scored as per-turn agreement A. (4) Coherence tests check observed A against the profile-based expectation. Each component can be swapped out for other settings.   cause their behavior across a study hangs together: what they say in a survey predicts, through well- established behavioral models, how they act in a later interaction. We therefore ask a different ques- tion: is an agent’s behavior consistent with its own revealed internal state? This is a question behav- ioral science asks of people, and we argue it should be asked of LLM agents too, as part of a behavioral science of LLMs. We call this property behavioral coherence; throughout the paper, coherence names the property and an inconsistency is an observed violation of it.",
+    "score": 0.7342382709714407,
+    "source": "069 - Are LLM Agents Behaviorally Coherent Latent Profiles for Social Simulation.pdf",
+    "page": 2
+   },
+   {
+    "text": "Agents reproduce surface-level trends but systematically fail in- depth tests: they are not behaviorally coher- ent, even when their individual responses look human. Latent Profiling thus offers a theory- grounded instrument for a behavioral science of LLMs.   1 Introduction   LLMs have demonstrated remarkable progress in recent years, prompting researchers and practition- ers alike to ask not whether these systems can pass the Turing test (Jones and Bergen, 2025), but whether they can convincingly adopt full-fledged human personas (Hu and Collier, 2024; Park et al., 2023). Early findings suggest they can. For exam- ple, Park et al. (2024) find that when agents are constructed using rich qualitative interview data, they exhibit attitudes and behaviors that closely mirror those of their human counterparts. Such results have inspired what we term the substitution thesis: if agents can emulate humans, they may serve as substitutes for real participants in human- centered research. As substitutes, agents can be examined for individual traits or can be deployed   *Equal contribution.   C P O A   prompt +2/−2 low turns agree   control latent profile conversation   predicts disagree   ✗   Figure 1: Detecting behavioral inconsistency through latent profiles. Each event looks plausible on its own: a control prompt (C), a conversation, and an agree- ment outcome (A).",
+    "score": 0.6407731007244,
+    "source": "069 - Are LLM Agents Behaviorally Coherent Latent Profiles for Social Simulation.pdf",
+    "page": 1
+   },
+   {
+    "text": "Across settings, agents show a persistent inability to handle more complex or fine- grained modeling. These patterns were observed across model families and sizes, indicating they are not artifacts of a single architecture but reflect broader limitations of current LLMs (at least for the scales we considered here). The implications are significant for using LLMs in social simulation and behavioral modeling. Although these systems can produce human-like responses in isolated cases, they fail to sustain trait-driven coherence across contexts, raising doubts about their reliability as stand-ins for real human participants.   Beyond this case study, we see Latent Profiling as a step toward a behavioral science of LLMs: studying artificial agents with the theories and de- signs that social and behavioral scientists use to study people. The framework was built in close collaboration with such scientists, and its modular design lets them bring their own constructs, interac- tion formats and behavioral models, turning LLM simulations into objects of empirical study rather than taking them at face value.   Limitations   While our current instantiation focuses on a sin- gle structured interaction setting, the framework is inherently extensible and can be adapted to a broader range of behavioral sequences and order- ing schemes which remain as future work. Through   8a focused case study, we use this setup to examine the extent to which such behaviors remain stable or exhibit unreliability under controlled variations, but we do not exhaustively explore a wider set of schemes in this work.",
+    "score": 0.6139835749339977,
+    "source": "069 - Are LLM Agents Behaviorally Coherent Latent Profiles for Social Simulation.pdf",
+    "page": 8
+   },
+   {
+    "text": "We call this property behavioral coherence; throughout the paper, coherence names the property and an inconsistency is an observed violation of it. An agent can pass the first test and fail the second: every stage of a simulated study may look plausible on its own while the stages contradict each other (Figure 1).   Contributions. • A new evaluation target: behavioral coher-   ence. We move the question from output-level alignment with humans to internal coherence, where an agent’s conversational behavior must follow from its own self-reported state as human behavioral models predict.   • The Latent Profiling framework (Figures 2 and 3). Latent Profiling separates what is measured about an agent into three streams: controls set in the prompt, a latent profile   elicited by short surveys of each agent in iso- lation, and external interactions observed in multi-agent conversation. It then tests the streams jointly against hypotheses from human behav-   ioral models. We designed the framework to- gether with social and behavioral scientists, so that each test operationalizes an established model of attitudes, persuasion or group discus- sion rather than an ad hoc expectation. The framework is model- and domain-agnostic: other traits, interaction formats and behavioral models can be plugged in.   • A case study across nine open models.",
+    "score": 0.6080703234405356,
+    "source": "069 - Are LLM Agents Behaviorally Coherent Latent Profiles for Social Simulation.pdf",
+    "page": 2
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "f23d25de-69b3-4d82-814d-38c3b9462015",
+  "X-Amzn-Trace-Id": "Root=1-6b080503-5507623f4ee792665b57a10f;Parent=286f6e266a2fed59;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.289
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:03+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Are LLM Agents Behaviorally Coherent? Latent Profiles for Social Simulation"
+ },
+ "from_cache": false
+}

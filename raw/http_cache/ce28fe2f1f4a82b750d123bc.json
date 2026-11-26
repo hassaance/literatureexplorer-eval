@@ -1,0 +1,90 @@
+{
+ "status": 200,
+ "latency_s": 0.663,
+ "json": {
+  "id": "chatcmpl-52195a31-9351-4e52-9657-72792b24ecee",
+  "object": "chat.completion",
+  "created": 1795687470,
+  "model": "literatureexplorer",
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "The authors did not propose 50 guidelines. They proposed and evaluated 18 generally applicable design guidelines for human-AI interaction. These guidelines were distilled from over 150 AI-related design recommendations and validated through three rounds of evaluation."
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 1596,
+   "completion_tokens": 51,
+   "total_tokens": 1647
+  },
+  "contexts": [
+   {
+    "text": "Ethics-focused guidelines can be difcult to fully evaluate in a heuristic evaluation, and successful detection of problems may depend on who is performing the evaluation. Our results related to Guide- lines 5 “Match relevant social norms” and 6 “Mitigate social biases” suggest that diversity among evaluators helps iden- tify a range of issues that might be invisible to members of majority groups.   8 CONCLUSION   We proposed and evaluated 18 generally applicable design guidelines for human-AI interaction. We distilled the guide- lines from over 150 AI-related design recommendations and validated them through three rounds of evaluation. We are hopeful that application of these guidelines will result in better, more human-centric AI-infused systems, and that our   Guidelines Meanings: Diferent   Distinguish: Easy   Distinguish: Hard   Distinguish: Neutral/ Medium   1 & 2 10 6 5 0 1 & 11 11 6 3 2 3 & 4 10 6 2 3 4 & 13 11 9 1 1 12 & 13 9 7 1 3 15 & 17 10 9 1 1   Table 4: Number of experts out of 11 who rated each pair of guidelines as diferent in meaning and distinguishable.   synthesis can facilitate further research.",
+    "score": 0.6136139718874277,
+    "source": "021 - Guidelines for Human-AI Interaction.pdf",
+    "page": 12
+   },
+   {
+    "text": "In this work, we synthesize over 20 years of learning in   AI design into a small set of generally applicable design guidelines for human-AI interaction. Specifcally, our contri- butions are:   • A codifcation of over 150 AI-related design recommenda- tions collected from academic and industry sources into a set of 18 generally applicable design guidelines for human- AI interaction (see Table 1).   • A systematic validation of the 18 guidelines through mul- tiple rounds of iteration and testing.   We hope these guidelines, along with our examination of their applications in AI-infused systems, will serve as a   resource for designers working with AI and will facilitate future research into the refnement and development of prin- ciples for human-AI interaction.   2 RELATED WORK   For over 20 years, the academic community has proposed nu- merous guidelines and recommendations for how to design for efective human interaction with AI-infused systems. For example, Norman [33] and Höök [16] both recommended building in safeguards like verifcation steps or controlling levels of autonomy to help prevent unwanted adaptations or actions from intelligent systems. Others recommended managing expectations so as not to mislead or frustrate users during interaction with unpredictable adaptive agents [16, 20, 33].",
+    "score": 0.603464026676529,
+    "source": "021 - Guidelines for Human-AI Interaction.pdf",
+    "page": 2
+   },
+   {
+    "text": "For over 20 years, the human-computer interaction (HCI) community has proposed principles, guidelines, and strate- gies for designing user interfaces and interaction for appli- cations employing AI inferences (e.g., [16, 17, 33]). However, the variability of AI designs (e.g., varying capabilities and interaction styles of commercial conversational agents im- pacting user engagement and usability [26]) and high-profle reports of failures, ranging from humorous and embarrassing (e.g., autocompletion errors [8]) to more serious harm when users cannot efectively understand or control an AI system (e.g., collaboration with semi-autonomous cars [41]), show that designers and developers continue to struggle with cre- ating intuitive and efective AI-infused systems. Ongoing advances in AI technologies will generate a stream of chal- lenges and opportunities for the HCI community. While such developments will require ongoing studies and vigilance, we also see value in developing reusable guidelines that can be shared, refned, and debated by the HCI community. The de- velopment and use of such shared guidelines can help with the design and evaluation of AI-infused systems that people can understand, trust, and can engage with efectively. In this work, we synthesize over 20 years of learning in   AI design into a small set of generally applicable design guidelines for human-AI interaction.",
+    "score": 0.5918221998090475,
+    "source": "021 - Guidelines for Human-AI Interaction.pdf",
+    "page": 2
+   },
+   {
+    "text": "These guidelines are vali- dated through multiple rounds of evaluation including a user study with 49 design practitioners who tested the guidelines against 20 popular AI-infused products. The results verify the relevance of the guidelines over a spectrum of interaction scenarios and reveal gaps in our knowledge, highlighting op- portunities for further research. Based on the evaluations, we believe the set of design guidelines can serve as a resource to practitioners working on the design of applications and fea- tures that harness AI technologies, and to researchers inter- ested in the further development of guidelines for human-AI interaction design.   CCS CONCEPTS   • Human-centered computing → Human computer in- teraction (HCI); • Computing methodologies → Artif- cial intelligence.   *Work done as a visiting researcher at Microsoft Research.   KEYWORDS   Human-AI interaction; AI-infused systems; design guidelines   ACM Reference Format: Saleema Amershi, Dan Weld, Mihaela Vorvoreanu, Adam Four- ney, Besmira Nushi, Penny Collisson, Jina Suh, Shamsi Iqbal, Paul N. Bennett, Kori Inkpen, Jaime Teevan, Ruth Kikin-Gil, and Eric Horvitz. 2019. Guidelines for Human-AI Interaction.",
+    "score": 0.5681428969523558,
+    "source": "021 - Guidelines for Human-AI Interaction.pdf",
+    "page": 1
+   },
+   {
+    "text": "Guidelines for Human-AI Interaction Saleema Amershi, Dan Weld*†, Mihaela Vorvoreanu, Adam Fourney, Besmira Nushi, Penny Collisson, Jina Suh, Shamsi Iqbal, Paul N. Bennett, Kori Inkpen, Jaime Teevan, Ruth Kikin-Gil, and Eric Horvitz   Microsoft † Paul G. Allen School of Computer Redmond, WA, USA Science & Engineering   {samershi, mivorvor, adamfo, benushi, pennycol, jinsuh, University of Washington shamsi, pauben, kori, teevan, ruthkg, horvitz} Seattle, WA, USA   @microsoft.com weld@cs.washington.edu   ABSTRACT   Advances in artifcial intelligence (AI) frame opportunities and challenges for user interface design. Principles for human- AI interaction have been discussed in the human-computer interaction community for over two decades, but more study and innovation are needed in light of advances in AI and the growing uses of AI technologies in human-facing appli- cations. We propose 18 generally applicable design guide- lines for human-AI interaction. These guidelines are vali- dated through multiple rounds of evaluation including a user study with 49 design practitioners who tested the guidelines against 20 popular AI-infused products.",
+    "score": 0.5551492315367029,
+    "source": "021 - Guidelines for Human-AI Interaction.pdf",
+    "page": 1
+   }
+  ],
+  "sources": [
+   "021 - Guidelines for Human-AI Interaction.pdf",
+   "021 - Guidelines for Human-AI Interaction.pdf",
+   "021 - Guidelines for Human-AI Interaction.pdf",
+   "021 - Guidelines for Human-AI Interaction.pdf",
+   "021 - Guidelines for Human-AI Interaction.pdf"
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "52195a31-9351-4e52-9657-72792b24ecee",
+  "X-Amzn-Trace-Id": "Root=1-6b08042e-7d06d13c5c3ee70b58c05243;Parent=0b2e6a2beec15cbc;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.663
+  }
+ ],
+ "requested_at": "2026-11-26T10:04:29+00:00",
+ "path": "/v1/chat/completions",
+ "method": "POST",
+ "tag": "",
+ "request_body": {
+  "messages": [
+   {
+    "role": "user",
+    "content": "Why did the authors of 'Guidelines for Human-AI Interaction' propose 50 guidelines?"
+   }
+  ]
+ },
+ "from_cache": false
+}

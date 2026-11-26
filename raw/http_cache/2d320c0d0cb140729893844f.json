@@ -1,0 +1,60 @@
+{
+ "status": 200,
+ "latency_s": 0.311,
+ "json": {
+  "query": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents",
+  "contexts": [
+   {
+    "text": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents Junkai Li1, 2, Yunghwei Lai1, 2, Weitao Li1, 2, Jingyi Ren1, 2, Meng Zhang1, Xinhui Kang1, 2, Siyu Wang1, Peng Li1, Ya-Qin Zhang1, Weizhi Ma1�, and Yang Liu1, 2 �   1Institute for AI Industry Research (AIR), Tsinghua University, China 2Department of Computer Science and Technology, Tsinghua University, China �E-mail: mawz@tsinghua.edu.cn; liuyang2011@tsinghua.edu.cn   ABSTRACT   The recent rapid development of large language models (LLMs)1,2 has sparked a new wave of tech- nological revolution in medical artificial intelligence (AI)3,4. While LLMs are designed to understand and generate text like a human, autonomous agents that utilize LLMs as their “brain” have exhibited capabilities beyond text processing such as planning, reflection, and using tools by enabling their “bodies” to interact with the environment5–7. We introduce a simulacrum of hospital called Agent Hospital that sim- ulates the entire process of treating illness, in which all patients, nurses, and doctors are LLM-powered autonomous agents.",
+    "score": 0.7829472485990946,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "For example, Smallville5, which is a sandbox game world where 25 agents live and work, has demonstrated that human behaviors can be simulated by agents. These agents are able to plan their days, go to work, chat with neighbors, and reflect on days past. After interacting with each other continuously over two full game days in Smallville, they produce emergent social behaviors such as sharing news, forming relationships, and coordinating group activities. While current research on medical agents has focused on multi-agent collaboration for medical reasoning36–43, how to enable doctor agents to acquire medical expertise from practice like humans do at hospital still remains a challenge.   In this work, we introduce a simulacrum of hospital called Agent Hospital to simulate medical expertise acquisition. As shown in Figure 1, Agent Hospital is a virtual world in which all patients, nurses, and doctors are LLM-powered autonomous agents. It functions like a real-world hospital. Patient agents will go to Agent Hospital if they get sick. At the triage station, nurse agents ask patient agents about their symptoms. Then, following the nurse’s suggestions, patient agents go to the registration desk, wait to consult doctor agents, have medical examinations, get diagnosis results, pick up medication, and go back home. If patient agents recover after several days, they will express their gratitude to nurse and doctor agents. Otherwise, they will go to Agent Hospital again, complain to nurse and doctor agents, and start another round of treatment cycle.",
+    "score": 0.7369737060989159,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 2
+   },
+   {
+    "text": "This not only directly accommodates the requirements of specific applications, but also significantly reduces the overhead for labeling data. Another benefit that SEAL brings to vertical applications is eliminating the need for training domain-specific LLMs. As shown in Agent Hospital, SEAL couples foundation models with domain knowledge bases in a flexible way, which are both readily available and plug-and-play. Therefore, we believe that SEAL has the potential to be applied to a broad range of applications beyond medical AI in the future.   Simulacrum Construction   Inspired by Smallville5 , we design a hospital sandbox simulation environment using the map editor Tiled47   and the web game development framework Phaser48. As shown in Figure 1, there are 16 functional areas in Agent Hospital such as triage station, registration desk, waiting area, consultation rooms, examination room, pharmacy, and follow-up room.   In Agent Hospital, we distinguish between two types of autonomous agents: patient agents and medical professional agents. Each agent has distinct demographic information. As patient agents may get sick, they have additional information about medical history. For example, Kenneth Morgan is a male patient agent with an age of 55. According to his medical history, he has a hypertension problem. Medical professional agents, which include doctors and nurses, have additional information about skills and duties.   3/29Figure 2. Agent Hospital simulates the whole closed cycle of treating illness.",
+    "score": 0.6680473810198025,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 3
+   },
+   {
+    "text": "Compared with LLMs, autonomous agents are more like humans. Using LLMs as their “brain” to think, agents are able to act in an environment with their “bodies”   1   ar X   iv :2   40 5.   02 95   7v 3   [ cs   .A I]   1 7   Ja n   20 25Figure 1. An overview of Agent Hospital. Agent Hospital is a simulacrum of hospital in which patients, nurses, and doctors are autonomous agents powered by large language models. Agent Hospital simulates the whole closed cycle of treating a patient’s illness: disease onset, triage, registration, consultation, medical examination, diagnosis, medicine dispensary, convalescence, and post-hospital follow-up visit. Doctor agents can keep improving treatment performance over time by reading medical textbooks and treating patient agents. An interesting finding is that the expertise doctor agents acquired in the virtual world is applicable to solving real-world medicare problems.   autonomously19–35. For example, Smallville5, which is a sandbox game world where 25 agents live and work, has demonstrated that human behaviors can be simulated by agents. These agents are able to plan their days, go to work, chat with neighbors, and reflect on days past.",
+    "score": 0.6644590397979583,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 1
+   },
+   {
+    "text": "However, existing studies primarily focus on simulating open societies to verify or explore new social behavior theories63, 64, or on replicating specific workflows within predefined scenarios to enhance agent performance65, 66. In contrast, our study proposes a novel approach: constructing a simulacrum of a closed-cycle scenario and enabling agents to evolve through interactions within the virtual environment.   Discussion We have presented a simulacrum of hospital called Agent Hospital for generating AI patients and training AI doctors, both of which might have profound impacts on medical AI. On the one hand, AI patients can be applied to a variety of scenarios such as modeling disease onset and progression, simulating patient cohorts for specific diseases and regions, training medical students and junior doctors, representing human patients to consult multiple doctors concurrently, and preserving privacy for human patients. On the other hand, AI doctors have the potential to revolutionize the healthcare industry since they can learn how to treat diseases quickly by utilizing vast amounts of data beyond human doctors can perceive and handle, help to reduce workload and improve efficiency for human doctors, and create a more equitable and effective healthcare system.   Different from large language models that are trained on manually labeled data without any environ- ment, the SEAL paradigm we propose combines the merits of AlphaGo Zero45 and Smallville5: building a simulacrum of the real-world scenario of interest and enabling autonomous agents to evolve in the simulacrum without using manually labeled data.",
+    "score": 0.6299587349861517,
+    "source": "077 - Agent Hospital A Simulacrum of Hospital with Evolvable Medical Agents.pdf",
+    "page": 10
+   }
+  ]
+ },
+ "text": "",
+ "error": null,
+ "resp_headers": {
+  "Content-Type": "application/json",
+  "x-amzn-RequestId": "d82fecb5-a5d6-49dd-8456-9dd6ab8b04db",
+  "X-Amzn-Trace-Id": "Root=1-6b080505-0764e0dc1eb1fbce13cd7a87;Parent=2872c44249384ac8;Sampled=0;Lineage=1:d9817060:0"
+ },
+ "attempts": [
+  {
+   "status": 200,
+   "latency_s": 0.311
+  }
+ ],
+ "requested_at": "2026-11-26T10:08:05+00:00",
+ "path": "/v1/context",
+ "method": "POST",
+ "tag": "coverage",
+ "request_body": {
+  "query": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents"
+ },
+ "from_cache": false
+}
